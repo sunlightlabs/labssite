@@ -266,7 +266,7 @@ body.home div#whatWeDo{
 	border-bottom: 1px solid;
 }
 
-div#whatWeDo dt a:link{
+div#whatWeDo dt a {
 	float: left;
 	display: block;
 	font-weight: bold;
