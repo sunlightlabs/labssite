@@ -1,0 +1,564 @@
+/*
+ * YUI Resect CSS version: 2.2.2 
+ * Copyright (c) 2007, Yahoo! Inc. All rights reserved.
+ * Licensed under the BSD License: http://developer.yahoo.net/yui/license.txt
+ */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,optgroup,button,p,blockquote,th,td{margin:0;padding:0;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}table{border-collapse:collapse;border-spacing:0;}caption,th{text-align:left;}ol,ul{list-style:none;}fieldset,img{border:0;}input,textarea,select,optgroup,option,button{font-family:inherit;font-size:100%;}button,input {width: auto;overflow: visible;}optgroup,address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;}
+dl li{list-style: none;}
+
+body{
+	color:#433735;
+	background: #fff;
+	font-size: 76%;
+  	line-height: 22px;
+  	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+div#headerWrapper{
+	background: url(/images/wrapperBg4.jpg) top center repeat-x;
+}
+
+div#pageMain{
+	margin: 0 auto 0 auto;
+	width: 960px;
+	padding: 0 72px 0 72px;
+}
+
+div#feature{
+	background: url(/images/featureBar.jpg) top center repeat-x;
+	width: 960px;
+	height: 59px;
+	margin: 0 auto 0 auto;
+}
+
+div#pageMain{
+	background: url(/images/mainBg6.jpg) top center no-repeat;
+	margin: 0 auto 0 auto;
+	width: 959;
+}
+
+div#header{
+	height: 146px;
+}
+
+div#header h1{
+	float: left;
+	width: 257px;
+	height: 97px;
+	margin-top: 20px;
+	margin-left: 60px;
+}
+
+div#header h1 a{
+	display: block;
+	text-indent: -9999em;
+	width: 308px;
+	height: 97px;
+	background: url(/images/logo2.png) top left no-repeat;
+	
+}
+
+div#nav{
+	margin-left: 510px;
+}
+
+div#nav li{
+	float: left;
+	margin-top: 100px;
+}
+
+div#nav li a{
+	display: block;
+	text-indent: -9999em;
+	height: 35px;
+}
+
+li#nav_blog{
+	width: 93px;
+	background: url(/images/blogNav.png) left top no-repeat;
+}
+
+li#nav_blog a:hover{
+	width: 93px;
+	background: url(/images/blogNav.png) left bottom no-repeat;
+}
+
+li#nav_projects{
+	width: 130px;
+	background: url(/images/projectsNav.png) left top no-repeat;
+}
+
+li#nav_projects a:hover{
+	width: 130px;
+	background: url(/images/projectsNav.png) left bottom no-repeat;
+}
+
+li#nav_about{
+	width: 130px;
+	background: url(/images/aboutNav.png) left top no-repeat;
+}
+
+li#nav_about a:hover{
+	width: 130px;
+	background: url(/images/aboutNav.png) left bottom no-repeat;
+}
+
+div#paperEdge{
+	background: url(/images/paperCorner.png) left top no-repeat;
+	width: 250px;
+	height: 35px;
+	margin-left: 40px;
+	margin-top: -35px;
+}
+
+div#mainContent{
+	padding-left: 72px;
+	background: url(/images/mainPaper_header.jpg) left top no-repeat;
+}
+
+div#ltColumn{
+	width: 440px;
+	float: left;
+}
+
+div#featureBox{
+	height: 212px;
+	padding-top: 80px;
+	padding-bottom: 15px;
+}
+
+div#featureBox h2{
+	text-indent: -9999em;
+	display: block;
+	height: 30px;
+	width: 447px;
+	margin-left: 20px;
+}
+
+body.home h2{
+	background: url(/images/featureTitle.png) top left no-repeat;
+}
+
+body.blog h2{
+	background: url(/images/blogTitle.png) top left no-repeat;
+}
+
+body.about h2{
+	background: url(/images/aboutTitle.png) top left no-repeat;
+}
+
+body.projects h2{
+	background: url(/images/projectsTitle.png) top left no-repeat;
+	z-index: 2;
+	position: absolute;
+}
+
+div#projectsImage{
+	background: url(/images/projectsHeader.png) bottom left no-repeat;
+	height: 214px;
+	width: 630px;
+	margin-top: -14px;
+	margin-left: 110px;
+}
+
+div#aboutImage{
+	background: url(/images/aboutHeader.png) bottom left no-repeat;
+	height: 214px;
+	width: 630px;
+	margin-top: -46px;
+}
+
+div#whoWeAre h3{
+	background: url(/images/whoWeAre.png) bottom left no-repeat;
+	text-indent: -9999em;
+	margin-bottom: 10px;
+}
+
+div#featuredProjects h3{
+	background: url(/images/featuredProjects.png) bottom left no-repeat;
+	text-indent: -9999em;
+	width: 93px;
+	height: 45px;
+	margin-left: 92px;
+	padding-top: 23px;
+	display: block;
+}
+
+div#featuredHeader{
+	background: url(/images/featureArrow.png) bottom left no-repeat;
+	width: 400px;
+	height: 75px;
+	padding-bottom: 8px;
+}
+
+div#featuredProjects{
+	border-bottom: 1px solid #625553;
+	padding-bottom: 30px;
+}
+
+div#featuredProjects p{
+	padding-bottom: 10px;
+}
+
+div#featuredProjects ul{
+	padding-left: 92px;
+}
+
+div#featuredProjects h4 a{
+	color: #32211E;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+div#featureBox ul{
+	padding-left: 30px;
+}
+
+div#featureBox li{
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+li#idea {
+	text-indent: -9999em;
+	display: block;
+	height: 165px;
+	width: 124px;
+	background: url(/images/drawing1.png) top left no-repeat;
+}
+
+li#mess {
+	text-indent: -9999em;
+	display: block;
+	height: 165px;
+	width: 141px;
+	background: url(/images/drawing2.png) top left no-repeat;
+}
+
+li#developer {
+	text-indent: -9999em;
+	display: block;
+	height: 165px;
+	width: 267px;
+	background: url(/images/drawing3.png) top left no-repeat;
+}
+
+li#sunlight {
+	text-indent: -9999em;
+	display: block;
+	height: 165px;
+	width: 129px;
+	background: url(/images/drawing4.png) top left no-repeat;
+}
+
+li#api{
+	padding-left: 90px;
+	background: url(/images/api_icon.png) top left no-repeat;
+}
+
+li#api h3{
+	background: url(/images/APIs_title.png) top left no-repeat;
+	text-indent: -9999em;
+}
+
+body.home div#whatWeDo{
+	padding-bottom: 40px;
+	border-bottom: 1px solid;
+}
+
+div#whatWeDo dt a:link{
+	float: left;
+	display: block;
+	font-weight: bold;
+	color: #32211e;
+	text-decoration: none;
+}
+
+div#whatWeDo h3{
+	padding-bottom: 10px;
+}
+
+div#whatWeDo li{
+	padding-bottom: 25px;
+}
+
+div#whatWeDo dd{
+	padding-bottom: 4px;
+}
+
+li#open_source{
+	padding-left: 90px;
+	background: url(/images/open_icon.png) top left no-repeat;
+}
+
+li#open_source h3{
+	background: url(/images/opensource_title.png) top left no-repeat;
+	text-indent: -9999em;
+}
+
+li#data_dumps{
+	padding-left: 90px;
+	background: url(/images/data_icon.png) top left no-repeat;
+}
+
+li#data_dumps h3{
+	background: url(/images/datadumps_title.png) top left no-repeat;
+	text-indent: -9999em;
+}
+
+body.home div#blog{
+	padding-top: 30px;
+}
+
+div#blog h2{
+	margin: 0 0 20px 155px;
+	text-indent: -9999em;
+	width: 124px;
+	height: 25px;
+	background: url(/images/recentPosts.png) top center no-repeat;
+}
+
+div#blog h2 a{
+	display: block;
+	width: 124px;
+	height: 25px;
+}
+
+div#blog h3{
+	float: left;
+}
+
+div#blog h3 a{
+	margin-left: 10px;
+	text-decoration: none;
+	color: #32211e;
+	font-size: 110%;
+	font-weight: bold;
+}
+
+div#blogArchive{
+	padding-top: 22px;
+	width: 295px;
+	padding-left: 472px;
+}
+
+div#blogArchive h3{
+	text-indent: -9999em;
+	background: url(/images/morePosts.png) top center no-repeat;
+	padding-bottom: 5px;
+}
+
+div#blogArchive li{
+	border-bottom: 1px solid #e9e6db;
+	margin: 10px 8px 10px 0;
+}
+
+div#blogArchive li a{
+	text-decoration: none;
+	color: #0f2557;
+}
+
+div#blogArchive span.date{
+	color: ##7A6764;
+	font-size: 85%;
+	font-style: oblique;
+}
+
+div.commentsMetaData span.type{
+	text-indent: -9999em;
+	float: left;
+}
+
+div.commentsMetaData span.value a{
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	margin-left: 400px;
+	color: #32211e;
+	width: 25px;
+	height: 28px;
+	background: url(/images/commentBox.png) right center no-repeat;
+}
+
+div.commentsMetaData span.value{
+	display: block;
+}
+
+div.commentsMetaData{
+	background: url(/images/blogLine.png) bottom left no-repeat;
+	width: 443px;
+	padding-bottom: 5px;
+}
+
+div.authorMetaData{
+	font-style: oblique;
+	float: left;
+	color: #312422;
+	font-size: 85%;
+	margin: -2px 5px 0 10px;
+}
+
+div.updatedMetaData span.type{
+	float: left;
+	text-indent: -9999em;
+}
+
+div.updatedMetaData span.value{
+	display: block;
+	font-style: oblique;
+	color: #7a6764;
+	font-size: 85%;
+	margin-top: -2px;
+	margin-left: 150px;
+}
+
+div.entry p{
+	margin: 6px 0 13px 10px;
+}
+
+div.readMore{
+	width: 77px;
+	height: 14px;
+}
+
+div.readMore a{
+	text-indent: -9999em;
+	background: url(/images/readMore.png) bottom left no-repeat;
+	width: 77px;
+	height: 14px;
+	display: block;
+	margin-left: 10px;
+}
+
+
+div.entry{
+	margin-bottom: 40px;
+}
+
+
+
+div#helpBox{
+	margin-top: -15px;
+	margin-left: 452px;
+	text-indent: -9999em;
+	width: 325px;
+	height: 260px;
+	background: url(/images/helpBox.png) top left no-repeat;
+}
+
+div#helpBox a{
+	margin: 165px 0 0 75px;
+	display: block;
+	background: url(/images/signup_title.png) bottom left no-repeat;
+}
+
+div#workBox{
+	width: 366px;
+	height: 354px;
+	text-indent: -9999em;
+	background: url(/images/postit_notes.png) bottom left no-repeat;
+	margin: 20px 0 0 525px;
+}
+
+div#heroes{
+	width: 295px;
+	margin-left: 472px;
+	margin-top: 20px;
+}
+
+div#heroes li{
+	height: 87px;
+	border-bottom: 1px solid #e9e6db;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+div#heroes h3{
+	background: url(/images/heroesTitle.png) bottom center no-repeat;
+	text-indent: -9999em;
+	margin-bottom: 20px;
+}
+
+div#heroes span{
+	display: block;
+}
+
+img.smImage{
+	float: left;
+	padding-right: 10px;
+}
+
+span.name{
+	padding-top: 12px;
+	font-weight: bold;
+	font-size: 105%;
+	line-height: 10px;
+}
+
+span.location{
+	font-style: oblique;
+}
+
+li.emptyPhoto{
+	padding-left: 100px;
+}
+
+span.organization a{
+	text-decoration: none;
+	color: #0f2557;
+}
+
+
+div#footerWrapper{
+	background: url(/images/footerWrapper.jpg) bottom center repeat-x;
+	height: 400px;
+}
+
+div#footerMain{
+	background: url(/images/footerMain.jpg) bottom center no-repeat;
+	margin: 0 auto 0 auto;
+	height: 400px;
+	width: 960px;
+}
+
+div#footerMain h3{
+	text-indent: -9999em;
+	background: url(/images/footerTitle.png) bottom left no-repeat;
+	padding-top: 175px;
+	display: block;
+	width: 301px;
+	height: 29px;
+}
+
+div#footerMain li{
+	float: left;
+	display: block;
+	padding: 15px 44px 0 0;
+}
+
+div#footerMain h4{
+	color: #fff;
+	font-weight: bold;
+	font-size: 120%;
+	padding-bottom: 10px;
+}
+
+div#footerMain a{
+	color: #a3a0a0;
+	font-size: 110%;
+	text-decoration: none;
+}
+
+div.footerVcard{
+	color: #a3a0a0;
+	font-size: 110%;
+}
+
+div#footerContent{
+	padding-left: 35px;
+}
+
+.clear{
+	clear: both;
+}
+

@@ -1,14 +1,121 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-    "http://www.w3.org/TR/html4/strict.dtd">
-
-<html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>{% block title %}{% endblock %}</title>
-</head>
-<body>
-    <div id="content">
-        {% block content %}{% endblock %}
-    </div>
-</body>
-</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Sunlight Labs</title>
+		{% comment %}
+		<link rel="stylesheet" href="main.css" type="text/css" media="screen" />
+		<!--[if IE 6]><link rel="stylesheet" href="/styles/ie6" type="text/css" media="screen" /><![endif]-->
+		{% endcomment %}
+		{% comment %}<script src="http://services.sunlightlabs.com/brandingbar/hat_js/labs/" type="text/javascript"></script>{% endcomment %}
+		<style type="text/css" media="screen">
+			{% include "main.css" %}
+		</style>
+	</head>
+	<body class="{% block body %}sunlightlabs{% endblock %}">
+		<div id="headerWrapper">
+			<div id="pageMain">
+				<div id="header">
+					<div id="mainHeader">
+						<h1><a href="/">sunlight labs</a></h1>
+						<div id="nav">
+							<ul>
+								<li id="nav_blog"><a href="{% url blog %}">blog</a></li>
+								<li id="nav_projects"><a href="{% url projects %}">projects</a></li>
+								<li id="nav_about"><a href="{% url about %}">about</a></li>
+							</ul>	
+						</div>	
+					</div>	
+				</div>
+				<div id="paperEdge"></div>
+				<div id="mainContent">
+					<div id="featureBox">
+						{% block feature %}{% endblock %}
+					</div>
+					<div id="ltColumn">
+						{% block content %}{% endblock %}
+					</div>
+					<div id="rtColumn">
+						<div id="helpBox">
+							<h3>What to Help?</h3>
+							<p>Join Sunlight's growing list of open source civic coders that are helping make government more transparent. It is a big mission and we need as much help as we can get.</p>
+							<a href="/#">Sign up to our google group</a>
+						</div>
+						{% block sidebar %}{% endblock %}	
+					</div>
+					<div class="clear"></div>	
+				</div>
+			</div>		
+		</div>
+		<div id="footerWrapper">
+			<div id="footerMain">
+				<div id="footerContent">
+					<h3>What We're A Part Of</h3>
+					<ul>
+						<li>
+							<h4>Contact</h4>
+							<div class="footerVcard">
+								<div class="vcard">
+									<div class="orgName">Sunlight Foundation</div>
+									<div class="adr">
+										<div class="street-address">1818 N Street NW, Suite 410</div>
+										<span class="locality">Washington</span>
+										<abbr class="region" title="District of Columbia">DC</abbr>
+										<span class="postal-code">22036</span>
+										
+									</div>
+									<div class="phone">Phone:
+										<span class="tel">202.742.1520</span>
+									</div>	
+								</div>
+							</div>
+							<div class="sendEmail"><a href="http://sunlightfoundation.com/contact/">Send Us An Email</a></div>
+						</li>
+						<li>
+							<h4>About Sunlight</h4>
+							<dl>
+								<dd><a href="http://www.sunlightfoundation.com/mission/">Mission Statement</a></dd>
+								<dd><a href="http://www.sunlightfoundation.com/board_of_directors/">Board and Advisory Board</a></dd>
+								<dd><a href="http://www.sunlightfoundation.com/people/">Staff Bios</a></dd>
+								<dd><a href="http://www.sunlightfoundation.com/funding/">Our Funding</a></dd>
+								<dd><a href="http://www.sunlightfoundation.com/privacy/">Privacy Policy</a></dd>
+							</dl>
+						</li>
+						<li>
+							<h4>Communications</h4>
+							<dl>
+								<dd><a href="http://blog.sunlightfoundation.com/">Our Blog</a></dd>
+								<dd><a href="http://www.sunlightfoundation.com/presscenter/releases/">Press Releases</a></dd>
+								<dd><a href="http://www.sunlightfoundation.com/presscenter/articles/">Press Articles</a></dd>
+								<dd><a href="http://delicious.com/Sunlight_Foundation">Web Mentions</a></dd>
+								<dd><a href="http://www.sunlightfoundation.com/logos/">Logos for Print/Web</a></dd>
+							</dl>
+						</li>
+						<li>
+							<h4>Useful Sites</h4>
+							<dl>
+								<dd><a href="http://congresspedia.org/">Congresspedia.org</a></dd>
+								<dd><a href="http://www.opencongress.org/">OpenCongress.org</a></dd>
+								<dd><a href="http://www.opensecrets.org/">OpenSecrets.org</a></dd>
+								<dd><a href="http://maplight.org/">MAPLight.org</a></dd>
+								<dd><a href="http://www.sunlightfoundation.com/resources/">View All</a></dd>
+							</dl>
+						</li>
+						<li>
+							<h4>We're Social</h4>
+							<dl>
+								<dd><a href="http://twitter.com/sunlightnetwork">Twitter</a></dd>
+								<dd><a href="http://apps.facebook.com/causes/303">Facebook</a></dd>
+								<dd><a href="http://www.myspace.com/sunlightfoundation">Myspace</a></dd>
+								<dd><a href="http://www.flickr.com/photos/sunlightfoundation">Flickr</a></dd>
+								<dd><a href="http://www.youtube.com/sunlighters">YouTube</a></dd>
+							</dl>	
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>		

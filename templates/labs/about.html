@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block body %}about{% endblock %}
+
+{% block feature %}
+	<h2 class="about">A Group Effort to Clean Up</h2>
+	<div id="aboutImage"></div>
+{% endblock %}
+
+{% block sidebar %}
+	{% if heroes %}
+		<div id="heroes">
+			<h3>Our Transparency Heroes</h3>
+			<ul>
+				{% for hero in heroes %}
+					<li class="vcard">
+						<img class="smImage" src="/images/heroesPhoto.png" alt="Photo of Name of Person"/>
+						<span class="name fn">{{ hero.name }}</span>
+						{% if hero.location %}<span class="location">{{ hero.location }}</span>{% endif %}
+						{% if hero.organization %}
+							<span class="organization">
+								{% if hero.organization_url %}
+									<a href="{{ hero.organization_url }}">{{ hero.organization }}</a>
+								{% else %}
+									{{ hero.organization }}
+								{% endif %}
+							</span>
+						{% endif %}
+						http://assets.sunlightlabs.com/images/heroes/{{ hero.slug }}.jpg
+					</li>
+				{% endfor %}
+				{% comment %}
+				<li class="emptyPhoto">
+					<span class="name">Name of Person</span>
+					<span class="location">Location</span>
+					<span class="organization"><a href="/#">Name of Organization</a></span>
+				</li>
+				{% endcomment %}
+			</ul>		
+		</div>
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+	<div id="whoWeAre">
+		<h3>Who We Are</h3>
+		<p>Text that Clay will provide on who are are.</p>
+	</div>
+{% endblock %}

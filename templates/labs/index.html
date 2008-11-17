@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block body %}home{% endblock %}
+
+{% block feature %}
+	<h2>Turning Government Data Into</h2>
+	<ul>
+		<li id="idea">idea is born</li>
+		<li id="mess">government data is a mess</li>
+		<li id="developer">developer takes messy data and converts it into user friendly code</li>
+		<li id="sunlight">our products are put back out for the public to see and use</li>
+	</ul>
+{% endblock %}
+
+{% block sidebar %}
+	<div id="workBox">
+		<h3>What We're Working On</h3>
+		<dl>
+			<dt>jroo:</dt>
+			<dd>Working on CapitolWords 2.0</dd>
+			<dt>jamespturk:</dt>
+			<dd>Sauce Brushing</dd>
+			<dt>jeremy carbaugh:</dt>
+			<dd>GeoDjango!</dd>
+	</div>
+{% endblock %}
+
+{% block content %}
+	{% if featured_projects %}
+		<div id="featuredProjects">
+			<div id="featuredHeader">
+				<h3>Featured Projects</h3>
+			</div>
+			<ul>
+				{% for project in featured_projects %}
+				<li>
+					<h4><a href="{{ project.url }}">{{ project.name }}</a></h4>
+					<p>{{ project.description }}</p>
+				</li>
+				{% endfor %}
+			</ul>	
+		</div>
+	{% endif %}
+	<div id="blog">
+		<h2>Recent Posts</h2>
+		<div class="entry">
+			<ol class="entries hfeed">
+				<li class="hentry">
+					<div class="entryMetadata">
+						<h3 class="entry_title"><a href="/#">Welcome</a></h3>
+						<div class="commentsMetaData">
+							<span class="type">Comments:</span>
+							<span class="value">
+								<a href="/#">12</a>
+							</span>
+						</div>
+						<div class="authorMetaData vcard">
+							<span class="type">Written by </span>
+							<span class="value fnn">Jeremy Carbaugh</span>
+						</div>
+						<div class="updatedMetaData">
+							<span class="type">Date:</span>
+							<span class="value">10/20/08</span>
+						</div>
+					</div>	
+					<p>This is a short exerpt of the first blog post that will be written for the Sunlight labs website. It will probably be the first two sentences of a post.</p>
+					<div class="readMore"><a href="/#">Read More</a></div>
+				</li>	
+			</ol>	
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block body %}projects{% endblock %}
+
+{% block feature %}
+	<h2 class="projects">We Build Wonders Out of Rubble</h2>
+	<div id="projectsImage"></div>
+{% endblock %}
+
+{% block sidebar %}
+	<div id="workBox">
+		<h3>What We're Working On</h3>
+		<dl>
+			<dt>jroo:</dt>
+			<dd>Working on CapitolWords 2.0</dd>
+			<dt>jamespturk:</dt>
+			<dd>Sauce Brushing</dd>
+			<dt>jeremy carbaugh:</dt>
+			<dd>GeoDjango!</dd>
+	</div>
+{% endblock %}
+
+{% block content %}
+	<div id="whatWeDo">
+		<ul>
+			{% if api_projects %}
+				<li id="api">
+					<h3>APIs</h3>
+					<dl>
+						{% for project in api_projects %}
+						<dt><a href="{{ project.url }}">{{ project.name }}&nbsp;-&nbsp;</a></dt>
+						<dd>{{ project.description }}</dd>
+						{% endfor %}
+					</dl>	
+				</li>
+			{% endif %}
+			{% if opensource_projects %}
+				<li id="open_source">
+					<h3>open source projects</h3>
+					<dl>
+						{% for project in opensource_projects %}
+						<dt><a href="{{ project.url }}">{{ project.name }}&nbsp;-&nbsp;</a></dt>
+						<dd>{{ project.description }}</dd>
+						{% endfor %}
+					</dl>
+				</li>
+			{% endif %}
+			<li id="data_dumps">
+				<h3>data dumps</h3>
+				{% if data_projects %}
+				<dl>
+					{% for project in data_dumps %}
+					<dt><a href="{{ project.url }}">{{ project.name }}&nbsp;-&nbsp;</a></dt>
+					<dd>{{ project.description }}</dd>
+					{% endfor %}
+				</dl>
+				{% else %}
+				<p>Stay tuned, we'll be adding some data projects soon!</p>
+				{% endif %}
+			</li>
+		</ul>
+	</div>
+{% endblock %}
