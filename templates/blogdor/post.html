@@ -1,0 +1,20 @@
+{% load markup %}
+
+<div class="entryMetadata">
+	{% block entry_title %}<h3 class="entry_title">{{ post.title }}</h3>{% endblock %}
+	<div class="commentsMetaData">
+		<span class="type">Comments:</span>
+		<span class="value">
+			<a href="/#">{{ post.comment_count }}</a>
+		</span>
+	</div>
+	<div class="authorMetaData vcard">
+		<span class="type">Written by </span>
+		<span class="value fnn">{{ post.author.first_name }}</span>
+	</div>
+	<div class="updatedMetaData">
+		<span class="type">Date:</span>
+		<span class="value">{{ post.date_published|date:"F j Y" }}</span>
+	</div>
+</div>	
+{% block entry_content %}{{ post.excerpt|markdown|safe }}{% endblock %}

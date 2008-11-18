@@ -1,0 +1,7 @@
+{% load markup %}
+
+{% block entry_title %}<h3 class="entry_title"><a href="/#">{{ post.title }}</a></h3>{% endblock %}
+{% block entry_content %}
+    {{ post.excerpt|markdown|safe }}
+    <div class="readMore"><a href="/#">Read More</a></div>
+{% endblock %}

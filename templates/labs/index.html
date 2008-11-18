@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load markup %}
 
 {% block body %}home{% endblock %}
 
@@ -45,27 +46,29 @@
 		<h2>Recent Posts</h2>
 		<div class="entry">
 			<ol class="entries hfeed">
-				<li class="hentry">
-					<div class="entryMetadata">
-						<h3 class="entry_title"><a href="/#">Welcome</a></h3>
-						<div class="commentsMetaData">
-							<span class="type">Comments:</span>
-							<span class="value">
-								<a href="/#">12</a>
-							</span>
-						</div>
-						<div class="authorMetaData vcard">
-							<span class="type">Written by </span>
-							<span class="value fnn">Jeremy Carbaugh</span>
-						</div>
-						<div class="updatedMetaData">
-							<span class="type">Date:</span>
-							<span class="value">10/20/08</span>
-						</div>
-					</div>	
-					<p>This is a short exerpt of the first blog post that will be written for the Sunlight labs website. It will probably be the first two sentences of a post.</p>
-					<div class="readMore"><a href="/#">Read More</a></div>
-				</li>	
+			    {% for post in recent_posts %}
+				    <li class="hentry">
+    					<div class="entryMetadata">
+    						<h3 class="entry_title"><a href="/#">{{ post.title }}</a></h3>
+    						<div class="commentsMetaData">
+    							<span class="type">Comments:</span>
+    							<span class="value">
+    								<a href="/#">{{ post.comment_count }}</a>
+    							</span>
+    						</div>
+    						<div class="authorMetaData vcard">
+    							<span class="type">Written by </span>
+    							<span class="value fnn">{{ post.author.first_name }}</span>
+    						</div>
+    						<div class="updatedMetaData">
+    							<span class="type">Date:</span>
+    							<span class="value">{{ post.date_published|date:"F j Y" }}</span>
+    						</div>
+    					</div>	
+    					<p>{{ post.excerpt|markdown|safe }}</p>
+    					<div class="readMore"><a href="/#">Read More</a></div>
+    				</li>
+				{% endfor %}
 			</ol>	
 		</div>
 	</div>

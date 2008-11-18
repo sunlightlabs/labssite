@@ -1,11 +1,14 @@
+from blogdor.models import Post
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from sunlightlabs.labs.models import Hero, Project
 
 def index(request):
     featured_projects = Project.objects.filter(is_enabled=True, is_featured=True)
+    recent_posts = Post.objects.public()[:3]
     data = {
         "featured_projects": featured_projects,
+        "recent_posts": recent_posts,
     }
     return render_to_response("labs/index.html", data)
 

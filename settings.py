@@ -62,12 +62,13 @@ ROOT_URLCONF = 'sunlightlabs.urls'
 INSTALLED_APPS = (
 	'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.comments',
     'django.contrib.contenttypes',
+    'django.contrib.markup',
     'django.contrib.sessions',
     'django.contrib.sites',
     'djitter',
     'blogdor',
-    'wordpress',
     'sunlightlabs.labs',
 )
 

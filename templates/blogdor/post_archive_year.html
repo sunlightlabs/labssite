@@ -1,0 +1,9 @@
+{% extends "base_blog.html" %}
+
+{% block blog_content %}
+    <ol>
+    	{% for date in date_list %}
+    		<li><a href="{% url blog_archive_month date.year,date.month %}">{{ date|date:"F Y" }}</a></li>
+    	{% endfor %}
+    </ol>
+{% endblock %}
