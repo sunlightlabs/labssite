@@ -66,6 +66,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'djitter',
+    'blogdor',
     'wordpress',
     'sunlightlabs.labs',
 )
