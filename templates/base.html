@@ -5,11 +5,27 @@
 		<meta name="description" content="" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Sunlight Labs</title>
-		{% comment %}
+		<link rel="alternate" type="application/rss+xml" title="Sunlight Foundation Transparency Ecosystem" href="http://sunlightlabs.com/blog/feeds/latest/" />
+        <link rel="shortcut icon" href="http://sunlightfoundation.com/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="http://sunlightfoundation.com/favicon.ico" type="image/x-icon">
+        {% comment %}
 		<link rel="stylesheet" href="main.css" type="text/css" media="screen" />
 		<!--[if IE 6]><link rel="stylesheet" href="/styles/ie6" type="text/css" media="screen" /><![endif]-->
 		{% endcomment %}
 		{% comment %}<script src="http://services.sunlightlabs.com/brandingbar/hat_js/labs/" type="text/javascript"></script>{% endcomment %}
+		<script type="text/javascript" charset="utf-8" src="http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+            var max_width = 400;
+	        $(function() {
+	            $('.post_content img').load(function(i) {
+	                var elem = $(this);
+	                if (elem.width() > max_width) {
+    	                var r = elem.width() / elem.height();
+    	                elem.width(max_width).height(max_width / r);
+    	            }
+	            });
+	        });
+		</script>
 		<style type="text/css" media="screen">
 			{% include "main.css" %}
 		</style>
@@ -58,16 +74,17 @@
 							<h4>Contact</h4>
 							<div class="footerVcard">
 								<div class="vcard">
-									<div class="orgName">Sunlight Foundation</div>
+									<div class="orgName fn org">Sunlight Foundation</div>
 									<div class="adr">
 										<div class="street-address">1818 N Street NW, Suite 410</div>
 										<span class="locality">Washington</span>
 										<abbr class="region" title="District of Columbia">DC</abbr>
 										<span class="postal-code">22036</span>
-										
 									</div>
 									<div class="phone">Phone:
-										<span class="tel">202.742.1520</span>
+										<span class="tel">
+										    <abbr title="+12027421520">202.742.1520</abbr>
+										</span>
 									</div>	
 								</div>
 							</div>

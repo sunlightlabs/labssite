@@ -7,11 +7,11 @@
 		    {% for post in posts %}
 			<li class="hentry">
 				<div class="entryMetadata">
-					<h3 class="entry_title"><a href="/#">{{ post.title }}</a></h3>
+					<h3 class="entry_title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
 					<div class="commentsMetaData">
 						<span class="type">Comments:</span>
 						<span class="value">
-							<a href="/#">{{ post.comment_count }}</a>
+							<a href="{{ post.get_absolute_url }}#comments">{{ post.comment_count }}</a>
 						</span>
 					</div>
 					<div class="authorMetaData vcard">
@@ -24,7 +24,7 @@
 					</div>
 				</div>	
 				<p>This is a short exerpt of the first blog post that will be written for the Sunlight labs website. It will probably be the first two sentences of a post.</p>
-				<div class="readMore"><a href="/#">Read More</a></div>
+				<div class="readMore"><a href="{{ post.get_absolute_url }}">Read More</a></div>
 			</li>	
 			{% endfor %}
 		</ol>	
