@@ -72,6 +72,11 @@ INSTALLED_APPS = (
     'sunlightlabs.labs',
 )
 
+EMAIL_HOST = "smtp.sunlightlabs.com"
+EMAIL_PORT = "25"
+EMAIL_HOST_USER = "***REMOVED***"
+EMAIL_HOST_PASSWORD = "***REMOVED***"
+EMAIL_USE_TLS = True
 
 #
 # Place custom project and application settings here

@@ -358,10 +358,14 @@ div#blogArchive li a{
 	color: #0f2557;
 }
 
-div#blogArchive span.date{
+div#blogArchive .published{
 	color: ##7A6764;
 	font-size: 85%;
 	font-style: oblique;
+}
+
+div#blogArchive .author{
+    display: none;
 }
 
 div.commentsMetaData span.type{

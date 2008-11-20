@@ -1,6 +1,14 @@
 {% extends "base_blog.html" %}
+{% load blog %}
 {% load comments %}
 {% load markup %}
+
+{% block sidebar %}
+    <div id="blogArchive">
+    	<h3>More Posts</h3>
+        {% recent_posts 3 %}
+    </div>
+{% endblock %}
 
 {% block blog_content %}
     <div class="entryMetadata">

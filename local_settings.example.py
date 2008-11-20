@@ -9,3 +9,6 @@ DATABASE_PORT = ''
 TEMPLATE_DIRS = (
     '/path/to/project/templates/',
 )
+
+FONT_PATH = '/path/to/font.ttf'
+
