@@ -6,12 +6,21 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,optgroup,button,p,blockquote,th,td{margin:0;padding:0;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}table{border-collapse:collapse;border-spacing:0;}caption,th{text-align:left;}ol,ul{list-style:none;}fieldset,img{border:0;}input,textarea,select,optgroup,option,button{font-family:inherit;font-size:100%;}button,input {width: auto;overflow: visible;}optgroup,address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;}
 dl li{list-style: none;}
 
+a:link{outline: none; color: #465a72;}
+a:visited{outline: none; color: #465a72}
+a:hover{outline: none; color: #465a72}
+a:active{outline: none; color: #465a72}
+
 body{
 	color:#433735;
 	background: #fff;
 	font-size: 76%;
   	line-height: 22px;
   	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+div#ltColumn p{
+  margin-bottom: 1em;
 }
 
 div#headerWrapper{
@@ -73,32 +82,32 @@ div#nav li a{
 	height: 35px;
 }
 
-li#nav_blog{
+li#nav_blog a{
 	width: 93px;
 	background: url(/images/blogNav.png) left top no-repeat;
 }
 
-li#nav_blog a:hover{
+li#nav_blog a:hover, body.blog li#nav_blog a{
 	width: 93px;
 	background: url(/images/blogNav.png) left bottom no-repeat;
 }
 
-li#nav_projects{
+li#nav_projects a{
 	width: 130px;
 	background: url(/images/projectsNav.png) left top no-repeat;
 }
 
-li#nav_projects a:hover{
+li#nav_projects a:hover, body.projects li#nav_projects a{
 	width: 130px;
 	background: url(/images/projectsNav.png) left bottom no-repeat;
 }
 
-li#nav_about{
+li#nav_about a{
 	width: 130px;
 	background: url(/images/aboutNav.png) left top no-repeat;
 }
 
-li#nav_about a:hover{
+li#nav_about a:hover, body.about li#nav_about a{
 	width: 130px;
 	background: url(/images/aboutNav.png) left bottom no-repeat;
 }
@@ -161,6 +170,14 @@ div#projectsImage{
 	margin-left: 110px;
 }
 
+div#blogImage{
+	background: url(/images/blogHeader.png) bottom left no-repeat;
+	height: 214px;
+	width: 630px;
+	margin-top: -45px;
+	margin-left: 140px;
+}
+
 div#aboutImage{
 	background: url(/images/aboutHeader.png) bottom left no-repeat;
 	height: 214px;
@@ -169,7 +186,7 @@ div#aboutImage{
 }
 
 div#whoWeAre h3{
-	background: url(/images/whoWeAre.png) bottom left no-repeat;
+	background: url(/images/whoWeAre.png) bottom center no-repeat;
 	text-indent: -9999em;
 	margin-bottom: 10px;
 }
@@ -180,15 +197,16 @@ div#featuredProjects h3{
 	width: 93px;
 	height: 45px;
 	margin-left: 92px;
-	padding-top: 23px;
+	/*padding-top: 23px;*/
 	display: block;
+	top: 15px;
+	position: relative;
 }
 
 div#featuredHeader{
 	background: url(/images/featureArrow.png) bottom left no-repeat;
 	width: 400px;
 	height: 75px;
-	padding-bottom: 8px;
 }
 
 div#featuredProjects{
@@ -266,7 +284,7 @@ body.home div#whatWeDo{
 	border-bottom: 1px solid;
 }
 
-div#whatWeDo dt a {
+div#whatWeDo dt a:link, div#whatWeDo dt a:visited, div#whatWeDo dt a:hover, div#whatWeDo dt a:active{
 	float: left;
 	display: block;
 	font-weight: bold;
@@ -324,7 +342,7 @@ div#blog h2 a{
 	height: 25px;
 }
 
-div#blog h3{
+div#blog h3.entry_title{
 	float: left;
 }
 
@@ -333,6 +351,10 @@ div#blog h3 a{
 	text-decoration: none;
 	color: #32211e;
 	font-size: 110%;
+	font-weight: bold;
+}
+
+div#ltColumn h4{
 	font-weight: bold;
 }
 
@@ -358,14 +380,10 @@ div#blogArchive li a{
 	color: #0f2557;
 }
 
-div#blogArchive .published{
+div#blogArchive span.date{
 	color: ##7A6764;
 	font-size: 85%;
 	font-style: oblique;
-}
-
-div#blogArchive .author{
-    display: none;
 }
 
 div.commentsMetaData span.type{
@@ -377,7 +395,6 @@ div.commentsMetaData span.value a{
 	text-align: center;
 	display: block;
 	text-decoration: none;
-	margin-left: 400px;
 	color: #32211e;
 	width: 25px;
 	height: 28px;
@@ -389,10 +406,13 @@ div.commentsMetaData span.value{
 }
 
 div.commentsMetaData{
-	background: url(/images/blogLine.png) bottom left no-repeat;
-	width: 443px;
-	padding-bottom: 5px;
+	float: right;
+	width: 35px;
 }
+
+div.hr { clear: both; background: url(/images/blogLine.png) bottom left no-repeat; height: 7px; }
+div.hr hr { display: none; }
+
 
 div.authorMetaData{
 	font-style: oblique;
@@ -420,6 +440,10 @@ div.entry p{
 	margin: 6px 0 13px 10px;
 }
 
+div.post_content{
+	margin: 6px 0 40px 10px;
+}
+
 div.readMore{
 	width: 77px;
 	height: 14px;
@@ -435,10 +459,14 @@ div.readMore a{
 }
 
 
-div.entry{
+li.hentry{
 	margin-bottom: 40px;
 }
 
+div.post_content img{
+	margin: 5px 0 5px 0;
+	border: 3px solid #d7d5d5;
+}
 
 
 div#helpBox{
@@ -566,3 +594,37 @@ div#footerContent{
 	clear: both;
 }
 
+div.updatedMetaData { display: inline; }
+div.updatedMetaData span.type { display: none; }
+div.authorMetaData { display: inline; float: none; }
+div.updatedMetaData span.value { display: inline; margin: 0; }
+
+div#comments h3{
+	display: block;
+}
+
+form { margin: 1em; }
+form p { margin-bottom: 10px; }
+form p label { width: 80px; float: left; text-align: right; padding-right: 15px;}
+input#id_name, input#id_email, input#id_url, textarea { background: #f3f1ec !important; border: 1px dashed #c3c0b5; padding: .5em; color: #413b3b; width: 280px; }
+
+form textarea#id_comment{
+	margin-bottom: 20px;
+}
+
+p.submit input{
+	width: 85px;
+	height: 27px;
+	border: 0 none;
+	text-indent: -9999em;
+}
+
+input.submit-post{ 
+	background: url(/images/postBtn.png) bottom right no-repeat;
+	float: right;
+}
+
+input.submit-preview{ 
+	background: url(/images/previewBtn.png) bottom right no-repeat;
+	margin-left: 230px;
+}
