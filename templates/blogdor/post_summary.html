@@ -1,0 +1,11 @@
+{% if posts %}
+<ul class="hfeed">
+    {% for post in posts %}
+    <li class="hentry">
+        <a href="{{ post.get_absolute_url }}" class="entry-title" rel="bookmark">{{ post.title|safe }}</a>
+        <abbr class="published" title="{{ entry.date_published.isoformat }}"> {{ post.date_published|date:"F j, Y" }}</abbr>
+        <span class="vcard author"><span class="fn">{{ post.author.get_full_name }}</span></span>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
