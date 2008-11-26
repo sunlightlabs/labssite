@@ -22,13 +22,14 @@
 							<a href="{{ post.get_absolute_url }}#comments">{{ post.comment_count }}</a>
 						</span>
 					</div>
+					<div class="hr"><hr /></div>
 					<div class="authorMetaData vcard">
 						<span class="type">Written by </span>
 						<span class="value fnn">{{ post.author.first_name }}</span>
 					</div>
 					<div class="updatedMetaData">
 						<span class="type">Date:</span>
-						<span class="value">10/20/08</span>
+						<span class="value">{{ post.date_published|date:"F j Y" }}</span>
 					</div>
 				</div>	
 				<p>This is a short exerpt of the first blog post that will be written for the Sunlight labs website. It will probably be the first two sentences of a post.</p>

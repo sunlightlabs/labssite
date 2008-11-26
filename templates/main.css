@@ -468,6 +468,20 @@ div.post_content img{
 	border: 3px solid #d7d5d5;
 }
 
+div#comments{
+	margin-left: 10px;
+}
+
+div#comments form{
+	margin-top: 40px;
+}
+
+div#comments li{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #b5b3b1;
+	margin-top: 5px;
+}
+
 
 div#helpBox{
 	margin-top: -15px;
@@ -601,6 +615,10 @@ div.updatedMetaData span.value { display: inline; margin: 0; }
 
 div#comments h3{
 	display: block;
+	font-size: 120%;
+	color: #273451;
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 
 form { margin: 1em; }
