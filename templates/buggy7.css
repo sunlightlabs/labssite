@@ -1,0 +1,52 @@
+div#header h1 a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/logo2.png", sizingMethod="crop"); }
+
+li#nav_about a{  background: url("images/aboutNav_8.png") top left no-repeat; }
+li#nav_about a:hover {  background: url("images/aboutNav_8.png") bottom left no-repeat; }
+li#nav_projects a{  background: url("images/projectsNav_8.png") top left no-repeat; }
+li#nav_projects a:hover {  background: url("images/projectsNav_8.png") bottom left no-repeat; }
+li#nav_blog a{  background: url("images/blogNav_8.png") top left no-repeat; }
+li#nav_blog a:hover {  background: url("images/blogNav_8.png") bottom left no-repeat; }
+
+body.home h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/featureTitle.png", sizingMethod="crop"); }
+body.blog h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/blogTitle.png", sizingMethod="crop"); }
+body.projects h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/projectsTitle.png", sizingMethod="crop"); }
+body.about h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/aboutTitle.png", sizingMethod="crop"); }
+
+li#idea {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/drawing1.png", sizingMethod="crop"); }
+li#mess {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/drawing2.png", sizingMethod="crop"); }
+li#developer {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/drawing3.png", sizingMethod="crop"); }
+li#sunlight {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/drawing4.png", sizingMethod="crop"); }
+
+div#blogImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/blogHeader.png", sizingMethod="crop"); }
+div#projectsImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/projectsHeader.png", sizingMethod="crop"); }
+div#aboutImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/aboutHeader.png", sizingMethod="crop"); }
+
+div#helpBox {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/helpBox.png", sizingMethod="crop"); }
+div#blog div.entry div.hr {  background: url("images/blogLine_8.png") bottom left no-repeat; }
+div#helpBox a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/signup_title.png", sizingMethod="crop"); }
+div#blog h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/recentPosts.png", sizingMethod="crop"); width: 124px; margin: 0 auto 20px auto;}
+div#paperEdge {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/paperCorner.png", sizingMethod="crop"); }
+div.readMore a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/readMore.png", sizingMethod="crop"); }
+div#workBox {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/postit_notes.png", sizingMethod="crop"); }
+div.commentsMetaData span.value a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/commentBox.png", sizingMethod="crop"); }
+div#featuredProjects h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/featuredProjects.png", sizingMethod="crop"); }
+div#featuredHeader {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/featureArrow.png", sizingMethod="crop"); }
+div#footerMain h3 {  background: url("images/footerTitle_8.png") bottom left no-repeat; }
+
+div#mainContent { zoom: 1; }
+div#workBox { margin-left: 518px; }
+div#helpBox a { height: 25px; }
+
+li#data_dumps {  background: url("images/data_icon_8.png") top left no-repeat; }
+li#api {  background: url("images/api_icon_8.png") top left no-repeat; }
+li#open_source {  background: url("images/open_icon_8.png") top left no-repeat; }
+
+li#api h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/APIs_title.png", sizingMethod="crop"); height: 25px;}
+li#open_source h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/opensource_title.png", sizingMethod="crop"); height: 25px;}
+li#data_dumps h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/datadumps_title.png", sizingMethod="crop"); height: 25px;}
+
+body.projects div#featureBox h2{ margin-left: -90px; margin-top: 15px; }
+body.projects div#featureBox { padding-top: 66px; }
+body.about div#aboutImage { margin-top: -14px; }
+
+div#blogArchive { margin-left: 465px; padding-left: 0;}

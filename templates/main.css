@@ -482,6 +482,10 @@ div#comments li{
 	margin-top: 5px;
 }
 
+li.hentry abbr, li.hentry span{
+	font-size: 95%;
+}
+
 
 div#helpBox{
 	margin-top: -15px;
