@@ -1,10 +1,15 @@
 {% extends "base.html" %}
+{% load labs %}
 
 {% block body %}contact{% endblock %}
 
 {% block feature %}
 	<h2 class="projects">We Build Wonders Out of Rubble</h2>
 	<div id="contactImage"></div>
+{% endblock %}
+
+{% block sidebar %}
+    {% recent_tweets 2 %}
 {% endblock %}
 
 {% block content %}
@@ -15,16 +20,4 @@
             <li class="submit"><input class="submit-send" type="submit" value="Send" /></li>
         </ul>
     </form>
-{% endblock %}
-{% block sidebar %}
-	<div id="workBox">
-		<h3>What We're Working On</h3>
-		<dl>
-			<dt>jroo:</dt>
-			<dd>Working on CapitolWords 2.0</dd>
-			<dt>jamespturk:</dt>
-			<dd>Sauce Brushing</dd>
-			<dt>jeremy carbaugh:</dt>
-			<dd>GeoDjango!</dd>
-	</div>
 {% endblock %}
