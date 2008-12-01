@@ -78,6 +78,8 @@ EMAIL_HOST_USER = "***REMOVED***"
 EMAIL_HOST_PASSWORD = "***REMOVED***"
 EMAIL_USE_TLS = True
 
+ALLOWED_TO_DM = ['cjoh','felskia','gregelin','jamesturk','jcarbaugh','jroo','timball']
+
 #
 # Place custom project and application settings here
 #
