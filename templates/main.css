@@ -150,7 +150,7 @@ div#featureBox h2{
 	text-indent: -9999em;
 	display: block;
 	height: 30px;
-	width: 447px;
+	width: 498px;
 	margin-left: 20px;
 }
 
@@ -185,11 +185,11 @@ div#projectsImage{
 }
 
 div#contactImage{
-	//background: url(/images/projectsHeader.png) bottom left no-repeat;
-	height: 214px;
-	width: 630px;
-	margin-top: -14px;
-	margin-left: 110px;
+	background: url(/images/contactImage.png) bottom left no-repeat;
+	height: 160px;
+	width: 538px;
+	margin-top: 15px;
+	margin-left: 190px;
 }
 
 div#blogImage{
