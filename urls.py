@@ -1,15 +1,27 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
+from django import forms
 from blogdor.feeds import LatestPosts
 from contact_form.forms import ContactForm
 
 admin.autodiscover()
 
 class LabsContactForm(ContactForm):
+    
+    attrs_dict = { 'class': 'required' }
+    
     from_email = "bounce@sunlightfoundation.com"
     recipient_list = ['swells@sunlightfoundation.com','cjohnson@sunlightfoundation.com','jcarbaugh@sunlightfoundation.com']
     subject = "[SunlightLabs.com] Contact"
+    
+    name = forms.CharField(max_length=100,
+                widget=forms.TextInput(attrs=attrs_dict),
+                label=u'Name')
+    email = forms.EmailField(widget=forms.TextInput(attrs=dict(attrs_dict, maxlength=200)),
+                label=u'Email Address')
+    body = forms.CharField(widget=forms.Textarea(attrs=attrs_dict),
+                label=u'Comment')
 
 class LabsLatestPosts(LatestPosts):
     title = "Sunlight Labs Blog"
