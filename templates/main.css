@@ -68,7 +68,7 @@ div#header h1 a{
 }
 
 div#nav{
-	margin-left: 510px;
+	margin-left: 480px;
 }
 
 div#nav li{
@@ -110,6 +110,16 @@ li#nav_about a{
 li#nav_about a:hover, body.about li#nav_about a{
 	width: 130px;
 	background: url(/images/aboutNav.png) left bottom no-repeat;
+}
+
+li#nav_contact a{
+	width: 130px;
+	background: url(/images/contactNav.png) left top no-repeat;
+}
+
+li#nav_contact a:hover, body.contact li#nav_contact a{
+	width: 130px;
+	background: url(/images/contactNav.png) left bottom no-repeat;
 }
 
 div#paperEdge{
@@ -484,6 +494,12 @@ div#comments li{
 
 li.hentry abbr, li.hentry span{
 	font-size: 95%;
+}
+
+div.sendEmail a{
+	display: block;
+	padding-top: 3px;
+	font-weight: bold;
 }
 
 
