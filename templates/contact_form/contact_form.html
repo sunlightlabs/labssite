@@ -1,11 +1,30 @@
 {% extends "base.html" %}
 
+{% block body %}contact{% endblock %}
+
+{% block feature %}
+	<h2 class="projects">We Build Wonders Out of Rubble</h2>
+	<div id="contactImage"></div>
+{% endblock %}
+
 {% block content %}
 	<h3 class="contact">We'd Like to Hear From You</h3>
     <form action="." method="post">
         <ul>
             {{ form.as_ul }}
-            <li><input type="submit" value="Send" /></li>
+            <li class="submit"><input class="submit-send" type="submit" value="Send" /></li>
         </ul>
     </form>
+{% endblock %}
+{% block sidebar %}
+	<div id="workBox">
+		<h3>What We're Working On</h3>
+		<dl>
+			<dt>jroo:</dt>
+			<dd>Working on CapitolWords 2.0</dd>
+			<dt>jamespturk:</dt>
+			<dd>Sauce Brushing</dd>
+			<dt>jeremy carbaugh:</dt>
+			<dd>GeoDjango!</dd>
+	</div>
 {% endblock %}

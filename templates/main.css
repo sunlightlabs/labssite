@@ -166,6 +166,10 @@ body.about h2{
 	background: url(/images/aboutTitle.png) top left no-repeat;
 }
 
+body.contact h2{
+	background: url(/images/contactHeader.png) top left no-repeat;
+}
+
 body.projects h2{
 	background: url(/images/projectsTitle.png) top left no-repeat;
 	z-index: 2;
@@ -174,6 +178,14 @@ body.projects h2{
 
 div#projectsImage{
 	background: url(/images/projectsHeader.png) bottom left no-repeat;
+	height: 214px;
+	width: 630px;
+	margin-top: -14px;
+	margin-left: 110px;
+}
+
+div#contactImage{
+	//background: url(/images/projectsHeader.png) bottom left no-repeat;
 	height: 214px;
 	width: 630px;
 	margin-top: -14px;
@@ -486,7 +498,7 @@ div#ltColumn form {
 	margin-top: 40px;
 }
 
-form li{
+div#comments ol li{
 	padding-bottom: 5px;
 	border-bottom: 1px solid #b5b3b1;
 	margin-top: 5px;
@@ -496,7 +508,7 @@ h3.contact{
 	background: url(/images/contactTitle.png) bottom center no-repeat;
 	width: 241px;
 	text-indent: -9999em;
-	display: block;
+	margin: 0 0 20px 105px
 }
 
 li.hentry abbr, li.hentry span{
@@ -650,18 +662,23 @@ div#comments h3{
 
 form { margin: 1em; }
 form p, form li { margin-bottom: 10px; }
-form p label, form li label { width: 80px; float: left; text-align: right; padding-right: 15px;}
+form p label, form li label { width: 90px; float: left; text-align: right; padding-right: 15px;}
 input#id_name, input#id_email, input#id_url, textarea { background: #f3f1ec !important; border: 1px dashed #c3c0b5; padding: .5em; color: #413b3b; width: 280px; }
 
 form textarea#id_comment{
 	margin-bottom: 20px;
 }
 
-p.submit input{
+p.submit input, li.submit input{
 	width: 85px;
 	height: 27px;
 	border: 0 none;
 	text-indent: -9999em;
+}
+
+input.submit-send{ 
+	background: url(/images/submitBtn.png) bottom right no-repeat;
+	margin-left: 330px;
 }
 
 input.submit-post{ 
