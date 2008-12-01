@@ -22,14 +22,15 @@ class Command(BaseCommand):
         top_margin = 30
         left_margin = 40
         
-        height = width = 300
+        height = 220
+        width = 300
         line_height = 15
         
         background_color = (0,0,0,0)
         font_color_dark = (0,0,0)
         font_color_light = (100,100,100)
         
-        block_height = (height - (top_margin * 2)) / 3
+        block_height = (height - (top_margin * 2)) / 2
         
         wpid_lookup = {}
         
@@ -44,7 +45,7 @@ class Command(BaseCommand):
         message = "What Twitter has taught me is that you can really cram an awful lot of stuff into 140 characters. What has Twitter taught you?"
         #message = "What Twitter has taught me is that you can really cram?"
         
-        for i in range(0, 3):
+        for i in range(0, 2):
         
             top_offset = (block_height * i) + top_margin
             

@@ -7,7 +7,6 @@ from sunlightlabs.labs.models import Hero, Project
 def index(request):
 
     account = Account.objects.get(username='jcarbaugh')
-    dms = account.direct_messages()[:3]
     
     featured_projects = Project.objects.filter(is_enabled=True, is_featured=True)
     recent_posts = Post.objects.public()[:3]
@@ -15,7 +14,6 @@ def index(request):
     data = {
         "featured_projects": featured_projects,
         "recent_posts": recent_posts,
-        "dms": dms,
     }
     return render_to_response("labs/index.html", data)
 
@@ -27,7 +25,6 @@ def about(request):
 def projects(request):
 
     account = Account.objects.get(username='jcarbaugh')
-    dms = account.direct_messages()[:3]
     
     project_dict = {}
     projects = Project.objects.filter(is_enabled=True, type__in=('api','data','os'))
@@ -40,7 +37,6 @@ def projects(request):
         "api_projects": project_dict.get('api', None),
         "data_projects": project_dict.get('data', None),
         "opensource_projects": project_dict.get('os', None),
-        "dms": dms,
     }
     
     return render_to_response("labs/projects.html", data)

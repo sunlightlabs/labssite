@@ -1,16 +1,9 @@
 {% extends "base.html" %}
+{% load labs %}
 {% load markup %}
 
 {% block sidebar %}
-	<div id="workBox">
-		<h3>What We're Working On</h3>
-		<dl>
-		    {% for dm in dms %}
-			<dt>{{ dm.sender }}:</dt>
-			<dd>{{ dm.message }}</dd>
-			{% endfor %}
-		</dl>
-	</div>
+    {% recent_tweets 2 %}
 {% endblock %}
 
 {% block content %}

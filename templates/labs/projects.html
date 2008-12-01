@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load labs %}
 
 {% block body %}projects{% endblock %}
 
@@ -8,16 +9,7 @@
 {% endblock %}
 
 {% block sidebar %}
-	<div id="workBox">
-		<h3>What We're Working On</h3>
-		<dl>
-			<dt>jroo:</dt>
-			<dd>Working on CapitolWords 2.0</dd>
-			<dt>jamespturk:</dt>
-			<dd>Sauce Brushing</dd>
-			<dt>jeremy carbaugh:</dt>
-			<dd>GeoDjango!</dd>
-	</div>
+    {% recent_tweets 2 %}
 {% endblock %}
 
 {% block content %}
