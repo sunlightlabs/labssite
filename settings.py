@@ -34,7 +34,10 @@ MEDIA_ROOT = ''
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+if DEBUG:
+    MEDIA_URL = '/'
+else:
+    MEDIA_URL = 'http://assets.sunlightlabs.com/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -67,6 +70,7 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'sunlightcore',
     'djitter',
     'blogdor',
     'sunlightlabs.labs',
@@ -83,7 +87,6 @@ ALLOWED_TO_DM = ['cjoh','felskia','gregelin','jamesturk','jcarbaugh','jroo','tim
 #
 # Place custom project and application settings here
 #
-
 
 try:
     from local_settings import *

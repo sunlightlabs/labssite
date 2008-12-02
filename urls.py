@@ -46,4 +46,5 @@ urlpatterns = patterns('',
 if (settings.DEBUG):
     urlpatterns += patterns('',
         url(r'^images/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT + "images/"}),
+        url(r'^(?P<filename>.*)\.(?P<extension>css|js)$', 'sunlightcore.views.static'),
     )
