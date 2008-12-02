@@ -1,16 +1,19 @@
 div#header h1 a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/logo2.png", sizingMethod="crop"); }
 
 li#nav_about a{  background: url("/images/aboutNav_8.png") top left no-repeat; }
-li#nav_about a:hover, li#nav_about a:active {  background: url("/images/aboutNav_8.png") bottom left no-repeat; }
+li#nav_about a:hover, body.about li#nav_about a {  background: url("/images/aboutNav_8.png") bottom left no-repeat; }
 li#nav_projects a{  background: url("/images/projectsNav_8.png") top left no-repeat; }
-li#nav_projects a:hover, li#nav_projects a:active {  background: url("/images/projectsNav_8.png") bottom left no-repeat; }
+li#nav_projects a:hover, body.projects li#nav_projects a {  background: url("/images/projectsNav_8.png") bottom left no-repeat; }
 li#nav_blog a{  background: url("/images/blogNav_8.png") top left no-repeat; }
-li#nav_blog a:hover, li#nav_blog a:active {  background: url("/images/blogNav_8.png") bottom left no-repeat; }
+li#nav_blog a:hover, body.blog li#nav_blog a {  background: url("/images/blogNav_8.png") bottom left no-repeat; }
+li#nav_contact a{  background: url("/images/contactNav_8.png") top left no-repeat; }
+li#nav_contact a:hover, body.contact li#nav_contact a {  background: url("/images/contactNav_8.png") bottom left no-repeat; }
 
 body.home h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/featureTitle.png", sizingMethod="crop"); }
 body.blog h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/blogTitle.png", sizingMethod="crop"); }
 body.projects h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/projectsTitle.png", sizingMethod="crop"); }
 body.about h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/aboutTitle.png", sizingMethod="crop"); }
+body.contact h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/contactHeader.png", sizingMethod="crop"); }
 
 li#idea {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/drawing1.png", sizingMethod="crop"); }
 li#mess {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/drawing2.png", sizingMethod="crop"); }
@@ -20,6 +23,7 @@ li#sunlight {  background: none; filter: progid:DXImageTransform.Microsoft.Alpha
 div#blogImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/blogHeader.png", sizingMethod="crop"); }
 div#projectsImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/projectsHeader.png", sizingMethod="crop"); }
 div#aboutImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/aboutHeader.png", sizingMethod="crop"); }
+div#contactImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/contactImage.png", sizingMethod="crop"); }
 
 div#helpBox {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/helpBox.png", sizingMethod="crop"); }
 div#blog div.entry div.hr {  background: url("/images/blogLine_8.png") bottom left no-repeat; }
@@ -48,6 +52,7 @@ div#blogArchive h3 {  background: none; filter: progid:DXImageTransform.Microsof
 
 div#heroes h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/heroesTitle.png", sizingMethod="crop"); width: 234px; margin: 0 auto;}
 div#whoWeAre h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/whoWeAre.png", sizingMethod="crop"); width: 109px; margin: 0 auto;}
+h3.contact {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/contactTitle.png", sizingMethod="crop"); width: 241px; margin: 0 auto;}
 
 body.projects div#featureBox h2{ margin-left: -90px; margin-top: 15px; }
 body.projects div#featureBox { padding-top: 66px; }
@@ -55,4 +60,4 @@ body.about div#aboutImage { margin-top: -14px; }
 
 div#blogArchive { margin-left: 465px; padding-left: 0;}
 
-img { behavior: url(/iepngfix.htc) }
+img { behavior: url(http://www.sunlightlabs.com/style/iepngfix.htc) }
