@@ -1,11 +1,11 @@
 div#header h1 a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/logo2.png", sizingMethod="crop"); }
 
 li#nav_about a{  background: url("/images/aboutNav_8.png") top left no-repeat; }
-li#nav_about a:hover {  background: url("/images/aboutNav_8.png") bottom left no-repeat; }
+li#nav_about a:hover, li#nav_about a:active {  background: url("/images/aboutNav_8.png") bottom left no-repeat; }
 li#nav_projects a{  background: url("/images/projectsNav_8.png") top left no-repeat; }
-li#nav_projects a:hover {  background: url("/images/projectsNav_8.png") bottom left no-repeat; }
+li#nav_projects a:hover, li#nav_projects a:active {  background: url("/images/projectsNav_8.png") bottom left no-repeat; }
 li#nav_blog a{  background: url("/images/blogNav_8.png") top left no-repeat; }
-li#nav_blog a:hover {  background: url("/images/blogNav_8.png") bottom left no-repeat; }
+li#nav_blog a:hover, li#nav_blog a:active {  background: url("/images/blogNav_8.png") bottom left no-repeat; }
 
 body.home h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/featureTitle.png", sizingMethod="crop"); }
 body.blog h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/blogTitle.png", sizingMethod="crop"); }
