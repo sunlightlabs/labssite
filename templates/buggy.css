@@ -55,4 +55,4 @@ body.about div#aboutImage { margin-top: -14px; }
 
 div#blogArchive { margin-left: 465px; padding-left: 0;}
 
-img { behavior: url(iepngfix.htc) }
+img { behavior: url(/iepngfix.htc) }
