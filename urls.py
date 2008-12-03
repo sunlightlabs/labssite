@@ -33,7 +33,7 @@ blog_feeds = {
 }
 
 urlpatterns = patterns('',
-    url(r'^about/$', 'sunlightlabs.labs.views.about', name="about"),
+    #url(r'^about/$', 'sunlightlabs.labs.views.about', name="about"),
     url(r'^admin/(.*)', admin.site.root, name='admin'),
     url(r'^blog/comments/', include('django.contrib.comments.urls')),
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}),

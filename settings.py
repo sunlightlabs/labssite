@@ -58,6 +58,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'sunlightlabs.urls'
@@ -67,6 +68,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.comments',
     'django.contrib.contenttypes',
+    'django.contrib.flatpages',
     'django.contrib.markup',
     'django.contrib.sessions',
     'django.contrib.sites',

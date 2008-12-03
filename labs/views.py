@@ -17,11 +17,6 @@ def index(request):
     }
     return render_to_response("labs/index.html", data)
 
-def about(request):
-    heroes = Hero.objects.filter(is_enabled=True)
-    data = { "heroes": heroes }
-    return render_to_response("labs/about.html", data)
-
 def projects(request):
 
     account = Account.objects.get(username='jcarbaugh')
