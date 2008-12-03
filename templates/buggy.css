@@ -1,59 +1,59 @@
-div#header h1 a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/logo2.png", sizingMethod="crop"); }
+div#header h1 a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/logo2.png", sizingMethod="crop"); }
 
-li#nav_about a{  background: url("/images/aboutNav_8.png") top left no-repeat; }
-li#nav_about a:hover, body.about li#nav_about a {  background: url("/images/aboutNav_8.png") bottom left no-repeat; }
-li#nav_projects a{  background: url("/images/projectsNav_8.png") top left no-repeat; }
-li#nav_projects a:hover, body.projects li#nav_projects a {  background: url("/images/projectsNav_8.png") bottom left no-repeat; }
-li#nav_blog a{  background: url("/images/blogNav_8.png") top left no-repeat; }
-li#nav_blog a:hover, body.blog li#nav_blog a {  background: url("/images/blogNav_8.png") bottom left no-repeat; }
-li#nav_contact a{  background: url("/images/contactNav_8.png") top left no-repeat; }
-li#nav_contact a:hover, body.contact li#nav_contact a {  background: url("/images/contactNav_8.png") bottom left no-repeat; }
+li#nav_about a{  background: url("/media/images/aboutNav_8.png") top left no-repeat; }
+li#nav_about a:hover, body.about li#nav_about a {  background: url("/media/images/aboutNav_8.png") bottom left no-repeat; }
+li#nav_projects a{  background: url("/media/images/projectsNav_8.png") top left no-repeat; }
+li#nav_projects a:hover, body.projects li#nav_projects a {  background: url("/media/images/projectsNav_8.png") bottom left no-repeat; }
+li#nav_blog a{  background: url("/media/images/blogNav_8.png") top left no-repeat; }
+li#nav_blog a:hover, body.blog li#nav_blog a {  background: url("/media/images/blogNav_8.png") bottom left no-repeat; }
+li#nav_contact a{  background: url("/media/images/contactNav_8.png") top left no-repeat; }
+li#nav_contact a:hover, body.contact li#nav_contact a {  background: url("/media/images/contactNav_8.png") bottom left no-repeat; }
 
-body.home h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/featureTitle.png", sizingMethod="crop"); }
-body.blog h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/blogTitle.png", sizingMethod="crop"); }
-body.projects h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/projectsTitle.png", sizingMethod="crop"); }
-body.about h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/aboutTitle.png", sizingMethod="crop"); }
-body.contact h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/contactHeader.png", sizingMethod="crop"); }
+body.home h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/featureTitle.png", sizingMethod="crop"); }
+body.blog h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/blogTitle.png", sizingMethod="crop"); }
+body.projects h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/projectsTitle.png", sizingMethod="crop"); }
+body.about h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/aboutTitle.png", sizingMethod="crop"); }
+body.contact h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/contactHeader.png", sizingMethod="crop"); }
 
-li#idea {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/drawing1.png", sizingMethod="crop"); }
-li#mess {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/drawing2.png", sizingMethod="crop"); }
-li#developer {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/drawing3.png", sizingMethod="crop"); }
-li#sunlight {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/drawing4.png", sizingMethod="crop"); }
+li#idea {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/drawing1.png", sizingMethod="crop"); }
+li#mess {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/drawing2.png", sizingMethod="crop"); }
+li#developer {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/drawing3.png", sizingMethod="crop"); }
+li#sunlight {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/drawing4.png", sizingMethod="crop"); }
 
-div#blogImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/blogHeader.png", sizingMethod="crop"); }
-div#projectsImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/projectsHeader.png", sizingMethod="crop"); }
-div#aboutImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/aboutHeader.png", sizingMethod="crop"); }
-div#contactImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/contactImage.png", sizingMethod="crop"); }
+div#blogImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/blogHeader.png", sizingMethod="crop"); }
+div#projectsImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/projectsHeader.png", sizingMethod="crop"); }
+div#aboutImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/aboutHeader.png", sizingMethod="crop"); }
+div#contactImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/contactImage.png", sizingMethod="crop"); }
 
-div#helpBox {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/helpBox.png", sizingMethod="crop"); }
-div#blog div.entry div.hr {  background: url("/images/blogLine_8.png") bottom left no-repeat; }
-div#helpBox a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/signup_title.png", sizingMethod="crop"); }
-div#blog h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/recentPosts.png", sizingMethod="crop"); width: 124px; margin: 0 auto 20px auto;}
-div#paperEdge {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/paperCorner.png", sizingMethod="crop"); }
-div.readMore a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/readMore.png", sizingMethod="crop"); }
-div#workBoxWrapper {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/postit_notes.png", sizingMethod="crop"); overflow: hidden;}
+div#helpBox {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/helpBox.png", sizingMethod="crop"); }
+div#blog div.entry div.hr {  background: url("/media/images/blogLine_8.png") bottom left no-repeat; }
+div#helpBox a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/signup_title.png", sizingMethod="crop"); }
+div#blog h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/recentPosts.png", sizingMethod="crop"); width: 124px; margin: 0 auto 20px auto;}
+div#paperEdge {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/paperCorner.png", sizingMethod="crop"); }
+div.readMore a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/readMore.png", sizingMethod="crop"); }
+div#workBoxWrapper {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/postit_notes.png", sizingMethod="crop"); overflow: hidden;}
 div#workBox{ background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://assets.sunlightlabs.com/tweets.png", sizingMethod="crop"); overflow: hidden; margin-top: 80px;}
-div.commentsMetaData span.value a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/commentBox.png", sizingMethod="crop"); }
-div#featuredProjects h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/featuredProjects.png", sizingMethod="crop"); }
-div#featuredHeader {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/featureArrow.png", sizingMethod="crop"); }
-div#footerMain h3 {  background: url("/images/footerTitle_8.png") bottom left no-repeat; }
+div.commentsMetaData span.value a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/commentBox.png", sizingMethod="crop"); }
+div#featuredProjects h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/featuredProjects.png", sizingMethod="crop"); }
+div#featuredHeader {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/featureArrow.png", sizingMethod="crop"); }
+div#footerMain h3 {  background: url("/media/images/footerTitle_8.png") bottom left no-repeat; }
 
 div#mainContent { zoom: 1; }
 div#workBoxWrapper { margin-left: 517px; }
 div#helpBox a { height: 25px; }
 
-li#data_dumps {  background: url("/images/data_icon_8.png") top left no-repeat; }
-li#api {  background: url("/images/api_icon_8.png") top left no-repeat; }
-li#open_source {  background: url("/images/open_icon_8.png") top left no-repeat; }
+li#data_dumps {  background: url("/media/images/data_icon_8.png") top left no-repeat; }
+li#api {  background: url("/media/images/api_icon_8.png") top left no-repeat; }
+li#open_source {  background: url("/media/images/open_icon_8.png") top left no-repeat; }
 
-li#api h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/APIs_title.png", sizingMethod="crop"); height: 25px;}
-li#open_source h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/opensource_title.png", sizingMethod="crop"); height: 25px;}
-li#data_dumps h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/datadumps_title.png", sizingMethod="crop"); height: 25px;}
-div#blogArchive h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/morePosts.png", sizingMethod="crop"); width: 102px; margin: 0 auto;}
+li#api h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/APIs_title.png", sizingMethod="crop"); height: 25px;}
+li#open_source h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/opensource_title.png", sizingMethod="crop"); height: 25px;}
+li#data_dumps h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/datadumps_title.png", sizingMethod="crop"); height: 25px;}
+div#blogArchive h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/morePosts.png", sizingMethod="crop"); width: 102px; margin: 0 auto;}
 
-div#heroes h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/heroesTitle.png", sizingMethod="crop"); width: 234px; margin: 0 auto;}
-div#whoWeAre h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/whoWeAre.png", sizingMethod="crop"); width: 109px; margin: 0 auto;}
-h3.contact {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/contactTitle.png", sizingMethod="crop"); width: 241px; margin: 0 auto;}
+div#heroes h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/heroesTitle.png", sizingMethod="crop"); width: 234px; margin: 0 auto;}
+div#whoWeAre h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/whoWeAre.png", sizingMethod="crop"); width: 109px; margin: 0 auto;}
+h3.contact {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/contactTitle.png", sizingMethod="crop"); width: 241px; margin: 0 auto;}
 
 body.projects div#featureBox h2{ margin-left: -90px; margin-top: 15px; }
 body.projects div#featureBox { padding-top: 66px; }

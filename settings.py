@@ -35,7 +35,7 @@ MEDIA_ROOT = ''
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 if DEBUG:
-    MEDIA_URL = '/'
+    MEDIA_URL = '/media/'
 else:
     MEDIA_URL = 'http://assets.sunlightlabs.com/'
 
