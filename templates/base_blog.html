@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load labs %}
 
 {% block body %}blog{% endblock %}
 
@@ -7,9 +8,12 @@
 	<div id="blogImage"></div>
 {% endblock %}
 
+{% block sidebar %}
+    {% recent_tweets %}
+{% endblock %}
+
 {% block content %}
 	<div id="blog">
-		{% block blog_content %}
-		{% endblock %}
+		{% block blog_content %}{% endblock %}
 	</div>
 {% endblock %}
