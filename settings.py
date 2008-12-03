@@ -1,6 +1,7 @@
 # Django settings for sunlightlabs project.
+import os
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -37,7 +38,7 @@ MEDIA_ROOT = ''
 if DEBUG:
     MEDIA_URL = '/media/'
 else:
-    MEDIA_URL = 'http://assets.sunlightlabs.com/'
+    MEDIA_URL = 'http://assets.sunlightlabs.com/site/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -88,9 +89,10 @@ EMAIL_USE_TLS = True
 
 ALLOWED_TO_DM = ['cjoh','felskia','gregelin','jamesturk','jcarbaugh','jroo','timball']
 
-#
-# Place custom project and application settings here
-#
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+
+MEDIASYNC_AWS_KEY = '***REMOVED***'
+MEDIASYNC_AWS_SECRET = '***REMOVED***'
 
 try:
     from local_settings import *
