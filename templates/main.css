@@ -537,12 +537,20 @@ div#helpBox a{
 	background: url(/images/signup_title.png) bottom left no-repeat;
 }
 
-div#workBox{
+div#workBoxWrapper{
 	width: 366px;
 	height: 354px;
 	text-indent: -9999em;
 	background: url(/images/postit_notes.png) bottom left no-repeat;
 	margin: 20px 0 0 525px;
+}
+
+div#workBox{
+	background: url(http://assets.sunlightlabs.com/tweets.png) bottom left no-repeat;
+	width: 300px;
+	height: 220px;
+	padding-top: 80px;
+	margin-left: 20px;
 }
 
 div#heroes{

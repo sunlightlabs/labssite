@@ -31,14 +31,15 @@ div#helpBox a {  background: none; filter: progid:DXImageTransform.Microsoft.Alp
 div#blog h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/recentPosts.png", sizingMethod="crop"); width: 124px; margin: 0 auto 20px auto;}
 div#paperEdge {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/paperCorner.png", sizingMethod="crop"); }
 div.readMore a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/readMore.png", sizingMethod="crop"); }
-div#workBox {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/postit_notes.png", sizingMethod="crop"); }
+div#workBoxWrapper {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/postit_notes.png", sizingMethod="crop"); overflow: hidden;}
+div#workBox{ background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://assets.sunlightlabs.com/tweets.png", sizingMethod="crop"); overflow: hidden; margin-top: 80px;}
 div.commentsMetaData span.value a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/commentBox.png", sizingMethod="crop"); }
 div#featuredProjects h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/featuredProjects.png", sizingMethod="crop"); }
 div#featuredHeader {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/featureArrow.png", sizingMethod="crop"); }
 div#footerMain h3 {  background: url("/images/footerTitle_8.png") bottom left no-repeat; }
 
 div#mainContent { zoom: 1; }
-div#workBox { margin-left: 518px; }
+div#workBoxWrapper { margin-left: 517px; }
 div#helpBox a { height: 25px; }
 
 li#data_dumps {  background: url("/images/data_icon_8.png") top left no-repeat; }
@@ -59,5 +60,6 @@ body.projects div#featureBox { padding-top: 66px; }
 body.about div#aboutImage { margin-top: -14px; }
 
 div#blogArchive { margin-left: 465px; padding-left: 0;}
+div#header h1{ margin-left: 30px;}
 
 img { behavior: url(http://www.sunlightlabs.com/style/iepngfix.htc) }
