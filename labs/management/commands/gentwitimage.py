@@ -1,8 +1,5 @@
-from blogdor.models import Post
+from djitter.models import Account
 from django.conf import settings
-from django.contrib.auth.models import User
-from django.contrib.comments.models import Comment
-from django.contrib.sites.models import Site
 from django.core.management.base import BaseCommand, CommandError
 import Image, ImageDraw, ImageFont
 import MySQLdb
@@ -40,19 +37,25 @@ class Command(BaseCommand):
         img = Image.new("RGBA", (width, height), background_color)
         draw = ImageDraw.Draw(img)
         
-        font = ImageFont.truetype(settings.FONT_PATH, 10)
+        font = ImageFont.truetype(settings.FONT_PATH, 11)
         
-        message = "What Twitter has taught me is that you can really cram an awful lot of stuff into 140 characters. What has Twitter taught you?"
-        #message = "What Twitter has taught me is that you can really cram?"
+        account = Account.objects.get(username='sunlightlabs')
+        dms = account.direct_messages().filter(sender__username__in=settings.ALLOWED_TO_DM)[:2]
         
-        for i in range(0, 2):
+        i = 0
+        
+        for dm in dms:
+            
+            message = dm.message
         
             top_offset = (block_height * i) + top_margin
             
-            draw.text((left_margin - 10, top_offset), "jcarbaugh", fill=font_color_dark, font=font)
+            draw.text((left_margin - 10, top_offset), dm.sender.username, fill=font_color_dark, font=font)
             for line in textwrap.wrap(message, 40):
                 top_offset += line_height
                 draw.text((left_margin, top_offset), line, fill=font_color_light, font=font)
+            
+            i += 1
                 
         img = img.rotate(-10, Image.BICUBIC)
         img.save(open(path, "w"), "PNG")
