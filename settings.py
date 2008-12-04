@@ -1,7 +1,7 @@
 # Django settings for sunlightlabs project.
 import os
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -93,6 +93,8 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 MEDIASYNC_AWS_KEY = '***REMOVED***'
 MEDIASYNC_AWS_SECRET = '***REMOVED***'
+MEDIASYNC_AWS_BUCKET = 'assets.sunlightlabs.com'
+MEDIASYNC_AWS_PREFIX = 'site'
 
 try:
     from local_settings import *
