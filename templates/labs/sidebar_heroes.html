@@ -1,9 +1,10 @@
+{% load media %}
 <div id="heroes">
 	<h3>Our Transparency Heroes</h3>
 	<ul>
 		{% for hero in heroes %}
 			<li class="vcard">
-				<img class="smImage" src="/media/images/heroesPhoto.png" alt="Photo of Name of Person"/>
+				<img class="smImage" src="{% media_url %}/images/heroesPhoto.png" alt="Photo of Name of Person"/>
 				<span class="name fn">{{ hero.name }}</span>
 				{% if hero.location %}<span class="location">{{ hero.location }}</span>{% endif %}
 				{% if hero.organization %}
