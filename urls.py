@@ -4,7 +4,6 @@ from django.contrib import admin
 from django import forms
 from blogdor.feeds import LatestPosts
 from contact_form.forms import ContactForm
-
 admin.autodiscover()
 
 class LabsContactForm(ContactForm):
@@ -38,6 +37,7 @@ urlpatterns = patterns('',
     url(r'^blog/comments/', include('django.contrib.comments.urls')),
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}),
     url(r'^blog/', include('blogdor.urls')),
+    url(r'^contact/sent/$', 'sunlightlabs.labs.views.contact_sent', {"form_class": LabsContactForm}),
     url(r'^contact/', include('contact_form.urls'), {"form_class": LabsContactForm, "fail_silently": False}),
     url(r'^projects/$', 'sunlightlabs.labs.views.projects', name="projects"),
     url(r'^$', 'sunlightlabs.labs.views.index', name='index'),

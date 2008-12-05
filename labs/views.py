@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from djitter.models import Account
 from sunlightlabs.labs.models import Hero, Project
+from contact_form.views import contact_form
 
 def index(request):
 
@@ -36,5 +37,5 @@ def projects(request):
     
     return render_to_response("labs/projects.html", data)
 
-def blog(request):
-    return render_to_response("labs/blog.html")
+def contact_sent(request, form_class):
+    return contact_form(request, form_class, template_name='contact_form/contact_form_sent.html')
