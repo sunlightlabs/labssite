@@ -46,7 +46,7 @@ else:
 if DEBUG:
     ADMIN_MEDIA_PREFIX = '/media/admin/'
 else:
-    ADMIN_MEDIA_PREFIX = 'https://assets.sunlightfoundation.com/admin/8961/'
+    ADMIN_MEDIA_PREFIX = '***REMOVED***'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '***REMOVED***'
