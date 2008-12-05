@@ -698,3 +698,9 @@ input.submit-preview{
 	background: url(/media/images/previewBtn.png) bottom right no-repeat;
 	margin-left: 230px;
 }
+
+body.contact div#ltColumn p{
+	font-size: 130%;
+	font-weight: bold;
+	text-align: center;
+}

@@ -1,5 +1,24 @@
 {% extends "base.html" %}
+{% load labs %}
+
+{% block body %}contact{% endblock %}
+
+{% block feature %}
+	<h2 class="projects">We Build Wonders Out of Rubble</h2>
+	<div id="contactImage"></div>
+{% endblock %}
 
 {% block content %}
-    <p>Thanks for your message!</p>
+	<h3 class="contact">We'd Like to Hear From You</h3>
+	<p>Thanks for your message!</p>
+    <form action="." method="post">
+        <ul>
+            {{ form.as_ul }}
+            <li class="submit"><input class="submit-send" type="submit" value="Send" /></li>
+        </ul>
+    </form>
+{% endblock %}
+
+{% block sidebar %}
+    {% recent_tweets 2 %}
 {% endblock %}
