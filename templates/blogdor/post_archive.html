@@ -1,5 +1,6 @@
 {% extends "base_blog.html" %}
 {% load blog %}
+{% load markup %}
 
 {% block sidebar %}
     <div id="blogArchive">
@@ -31,8 +32,8 @@
 						<span class="type">Date:</span>
 						<span class="value">{{ post.date_published|date:"F j Y" }}</span>
 					</div>
-				</div>	
-				<p>This is a short exerpt of the first blog post that will be written for the Sunlight labs website. It will probably be the first two sentences of a post.</p>
+				</div>	    
+				<p>{{ post.excerpt|markdown|safe }}</p>
 				<div class="readMore"><a href="{{ post.get_absolute_url }}">Read More</a></div>
 			</li>	
 			{% endfor %}

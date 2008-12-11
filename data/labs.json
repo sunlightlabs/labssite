@@ -1,1 +1,59 @@
-[{"pk": 2, "model": "labs.project", "fields": {"is_enabled": true, "is_featured": false, "name": "Capitol Words API", "url": "http://capitolwords.org/api/", "type": "api", "description": "Word popularity for each day Congress is in session."}}, {"pk": 3, "model": "labs.project", "fields": {"is_enabled": true, "is_featured": true, "name": "SauceBrush", "url": "http://code.google.com/p/saucebrush/", "type": "os", "description": "Data transformation pipeline."}}, {"pk": 1, "model": "labs.project", "fields": {"is_enabled": true, "is_featured": false, "name": "Sunlight Labs API", "url": "http://services.sunlightlabs.com/api/", "type": "api", "description": "Integrate Congressional data into your application."}}, {"pk": 3, "model": "labs.hero", "fields": {"is_enabled": true, "name": "Alvar Hanso", "location": "Netherlands", "organization": "Hanso Foundation", "organization_url": "http://hansofoundation.org/", "slug": "alvar-hanso"}}, {"pk": 2, "model": "labs.hero", "fields": {"is_enabled": true, "name": "Hiro Nakamura", "location": "Okasaka, Japan", "organization": "", "organization_url": "", "slug": "hiro-nakamura"}}, {"pk": 1, "model": "labs.hero", "fields": {"is_enabled": true, "name": "Larry Makinson", "location": "Elsewhere, Oregon?", "organization": "", "organization_url": "", "slug": "larry-makinson"}}]
+
+[
+    {
+        "pk": 2,
+         "model": "labs.project",
+         "fields": 
+        {
+            "is_enabled": true,
+             "is_featured": false,
+             "name": "Capitol Words API",
+             "url": "http://capitolwords.org/api/",
+             "type": "api",
+             "description": "Programmatic access to the data that drives Capitol Words: daily updates of words used by Congress and lawmakers."
+        }
+    },
+     
+    {
+        "pk": 1,
+         "model": "labs.project",
+         "fields": 
+        {
+            "is_enabled": true,
+             "is_featured": true,
+             "name": "Sunlight Labs API",
+             "url": "http://services.sunlightlabs.com/api/",
+             "type": "api",
+             "description": "Basic information on Members of Congress, legislator IDs used by various websites, and lookups between places and the politicians that represent them to facilitate mashups involving politicians and the various other APIs that are out there."
+        }
+    },
+     
+    {
+        "pk": 2,
+         "model": "labs.hero",
+         "fields": 
+        {
+            "is_enabled": true,
+             "name": "Hiro Nakamura",
+             "location": "Okasaka, Japan",
+             "organization": "",
+             "organization_url": "",
+             "slug": "hiro-nakamura"
+        }
+    },
+     
+    {
+        "pk": 1,
+         "model": "labs.hero",
+         "fields": 
+        {
+            "is_enabled": true,
+             "name": "Steven Aftergood",
+             "location": "",
+             "organization": "Project on Government Secrecy",
+             "organization_url": "http://www.fas.org/sgp/",
+             "slug": "steven-aftergood"
+        }
+    }
+]
+
