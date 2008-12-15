@@ -614,6 +614,23 @@ span.organization a{
 	color: #0f2557;
 }
 
+div#contestBox{
+	text-indent: -9999em;
+	background: url(/media/images/appsAmericaTile.png) bottom left no-repeat;
+	width: 294px;
+	height: 131px;
+	margin-left: 468px;
+}
+
+
+div#contestBox a{
+	display: block;
+	background: url(/media/images/contestSignUp.png) bottom left no-repeat;
+	text-indent: -9999em;
+	width: 154px;
+	margin: 75px 0 0 75px;
+}
+
 
 div#footerWrapper{
 	background: url(/media/images/footerWrapper.jpg) bottom center repeat-x;
