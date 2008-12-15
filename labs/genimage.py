@@ -68,7 +68,7 @@ def generate_image(username=None, path=None):
 def s3_upload(content):
     
     bucket = settings.AWS_BUCKET
-    path = '/tweets.png'
+    path = '/site/images/labstweets.png'
     
     now = datetime.datetime.utcnow()
     rfc_now = now.strftime("%a, %d %b %Y %X GMT")
