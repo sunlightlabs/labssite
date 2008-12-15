@@ -91,10 +91,16 @@ ALLOWED_TO_DM = ['cjoh','felskia','gregelin','jamesturk','jcarbaugh','jroo','tim
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
-MEDIASYNC_AWS_KEY = '***REMOVED***'
-MEDIASYNC_AWS_SECRET = '***REMOVED***'
+AWS_KEY = '***REMOVED***'
+AWS_SECRET = '***REMOVED***'
+AWS_BUCKET = 'assets.sunlightlabs.com'
+
+MEDIASYNC_AWS_KEY = AWS_KEY
+MEDIASYNC_AWS_SECRET = AWS_SECRET
 MEDIASYNC_AWS_BUCKET = 'assets.sunlightlabs.com'
 MEDIASYNC_AWS_PREFIX = 'site'
+
+TWITTER_USERNAME = 'sunlightlabs'
 
 try:
     from local_settings import *

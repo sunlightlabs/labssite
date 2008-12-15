@@ -1,4 +1,6 @@
 from django.db import models
+from djitter.models import account_updated
+from sunlightlabs.labs import genimage
 
 PROJECT_TYPE_CHOICES = (
     ('api', 'API'),
@@ -35,3 +37,8 @@ class Hero(models.Model):
     
     def __unicode__(self):
         return self.name
+
+def tweet_callback(sender, **kwargs):
+    account = kwargs['account']
+    genimage.generate_image()
+account_updated.connect(tweet_callback)
