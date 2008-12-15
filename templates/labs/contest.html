@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load labs %}
+{% load markup %}
+
+{% block title %}{{ flatpage.title }}{% endblock %}
+
+{% block body %}contest{% endblock %}
+
+{% block feature %}
+	<h2 class="about">Labs Contest</h2>
+	<div id="aboutImage"></div>
+{% endblock %}
+
+{% block sidebar %}
+	{% heroes %}
+{% endblock %}
+
+{% block content %}
+	<div id="whoWeAre">
+		<h3>Contest</h3>
+		{{ flatpage.content|markdown }}
+	</div>
+{% endblock %}
