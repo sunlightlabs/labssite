@@ -202,13 +202,26 @@ div#blogImage{
 
 div#aboutImage{
 	background: url(/media/images/aboutHeader.png) bottom left no-repeat;
-	height: 214px;
+	height: 165px;
 	width: 630px;
 	margin-top: -46px;
 }
 
+div#contestImage{
+	background: url(/media/images/contestImage.png) bottom left no-repeat;
+	height: 214px;
+	width: 530px;
+	margin: -65px 0 0 110px;
+}
+
 div#whoWeAre h3{
 	background: url(/media/images/whoWeAre.png) bottom center no-repeat;
+	text-indent: -9999em;
+	margin-bottom: 10px;
+}
+
+div#contestPage h3{
+	background: url(/media/images/contestTitle.png) bottom center no-repeat;
 	text-indent: -9999em;
 	margin-bottom: 10px;
 }

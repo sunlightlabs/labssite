@@ -3,8 +3,8 @@
 	<h3>Our Transparency Heroes</h3>
 	<ul>
 		{% for hero in heroes %}
-			<li class="vcard">
-				<img class="smImage" src="{% media_url %}/images/heroes/{{ hero.slug }}.png" alt="Photo of Name of Person"/>
+			<li class="vcard{% if not hero.has_photo %} emptyPhoto{% endif %}">
+				{% if hero.has_photo %}<img class="smImage" src="{% media_url %}/images/heroes/{{ hero.slug }}.png" alt="Photo of Name of Person"/>{% endif %}
 				<span class="name fn">{{ hero.name }}</span>
 				{% if hero.location %}<span class="location">{{ hero.location }}</span>{% endif %}
 				{% if hero.organization %}
