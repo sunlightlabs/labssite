@@ -5,12 +5,12 @@ import cStringIO
 import datetime
 import httplib
 import hmac
-import Image, ImageDraw, ImageFont
 import md5
 import sha
 import textwrap
 
 def generate_image(username=None, path=None):
+    import Image, ImageDraw, ImageFont
     
     assert hasattr(settings, 'FONT_PATH')
     
