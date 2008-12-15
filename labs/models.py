@@ -30,6 +30,7 @@ class Hero(models.Model):
     organization = models.CharField(max_length=128, blank=True, null=True)
     organization_url = models.URLField(verify_exists=False, blank=True, null=True)
     is_enabled = models.BooleanField(default=False, db_index=True)
+    has_photo = models.BooleanField(default=False, db_index=True)
     timestamp = models.DateTimeField(auto_now_add=True, db_index=True)
     
     class Meta:

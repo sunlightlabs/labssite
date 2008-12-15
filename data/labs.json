@@ -34,6 +34,7 @@
          "fields": 
         {
             "is_enabled": true,
+            "has_photo": true,
              "name": "Hiro Nakamura",
              "location": "",
              "organization": "Yamagato Industries",
@@ -48,6 +49,7 @@
          "fields": 
         {
             "is_enabled": true,
+            "has_photo": false,
              "name": "Steven Aftergood",
              "location": "",
              "organization": "Project on Government Secrecy",
