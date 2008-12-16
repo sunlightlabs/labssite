@@ -226,7 +226,11 @@ div#contestPage h2{
 	margin-bottom: 10px;
 }
 
-div#featuredProjects h3{
+div#contestPage{
+	
+}
+
+div#featuredProjects h2{
 	background: url(/media/images/featuredProjects.png) bottom left no-repeat;
 	text-indent: -9999em;
 	width: 93px;
@@ -389,7 +393,7 @@ div#blog h3 a{
 	font-weight: bold;
 }
 
-div#ltColumn h4{
+div#ltColumn h4, div#ltColumn h3{
 	font-weight: bold;
 }
 
@@ -627,7 +631,7 @@ div#contestPage ul{
 }
 
 div#contestPage ol{
-	list-style-type: decimal
+	list-style-type: decimal;
 }
 
 
