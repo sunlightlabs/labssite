@@ -202,9 +202,9 @@ div#blogImage{
 
 div#aboutImage{
 	background: url(/media/images/aboutHeader.png) bottom left no-repeat;
-	height: 165px;
-	width: 630px;
-	margin-top: -46px;
+	height: 182px;
+	width: 689px;
+	margin-top: -13px;
 }
 
 div#contestImage{
@@ -626,13 +626,13 @@ div#contestBox{
 	margin-left: 468px;
 }
 
-div#contestPage ul{
+div#contestPage ul, div.post_content ul{
 	list-style-type: circle;
 	margin-left: 20px;
 	margin-bottom: 15px;
 }
 
-div#contestPage ol{
+div#contestPage ol, div.post_content ol{
 	list-style-type: decimal;
 	margin-left: 20px;
 	margin-bottom: 15px;
