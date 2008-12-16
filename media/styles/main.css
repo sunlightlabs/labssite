@@ -220,7 +220,7 @@ div#whoWeAre h3{
 	margin-bottom: 10px;
 }
 
-div#contestPage h3{
+div#contestPage h2{
 	background: url(/media/images/contestTitle.png) bottom center no-repeat;
 	text-indent: -9999em;
 	margin-bottom: 10px;
@@ -620,6 +620,14 @@ div#contestBox{
 	width: 294px;
 	height: 131px;
 	margin-left: 468px;
+}
+
+div#contestPage ul{
+	list-style-type: circle;
+}
+
+div#contestPage ol{
+	list-style-type: decimal
 }
 
 
