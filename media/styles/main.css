@@ -628,12 +628,12 @@ div#contestBox{
 
 div#contestPage ul{
 	list-style-type: circle;
-	margin-left: 10px;
+	margin-left: 20px;
 }
 
 div#contestPage ol{
 	list-style-type: decimal;
-	margin-left: 10px;
+	margin-left: 20px;
 }
 
 
