@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load labs %}
+{% load markup %}
 
 {% block body %}projects{% endblock %}
 
@@ -21,7 +22,7 @@
 					<dl>
 						{% for project in api_projects %}
 						<dt><a href="{{ project.url }}">{{ project.name }}&nbsp;-&nbsp;</a></dt>
-						<dd>{{ project.description|safe }}</dd>
+						<dd>{{ project.description|markdown }}</dd>
 						{% endfor %}
 					</dl>	
 				</li>
@@ -32,7 +33,7 @@
 					<dl>
 						{% for project in opensource_projects %}
 						<dt><a href="{{ project.url }}">{{ project.name }}&nbsp;-&nbsp;</a></dt>
-						<dd>{{ project.description|safe }}</dd>
+						<dd>{{ project.description|markdown }}</dd>
 						{% endfor %}
 					</dl>
 				</li>
@@ -43,7 +44,7 @@
 				<dl>
 					{% for project in data_projects %}
 					<dt><a href="{{ project.url }}">{{ project.name }}&nbsp;-&nbsp;</a></dt>
-					<dd>{{ project.description|safe }}</dd>
+					<dd>{{ project.description|markdown }}</dd>
 					{% endfor %}
 				</dl>
 				{% else %}
