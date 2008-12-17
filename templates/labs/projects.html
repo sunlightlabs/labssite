@@ -21,7 +21,7 @@
 					<dl>
 						{% for project in api_projects %}
 						<dt><a href="{{ project.url }}">{{ project.name }}&nbsp;-&nbsp;</a></dt>
-						<dd>{{ project.description }}</dd>
+						<dd>{{ project.description|safe }}</dd>
 						{% endfor %}
 					</dl>	
 				</li>
@@ -32,7 +32,7 @@
 					<dl>
 						{% for project in opensource_projects %}
 						<dt><a href="{{ project.url }}">{{ project.name }}&nbsp;-&nbsp;</a></dt>
-						<dd>{{ project.description }}</dd>
+						<dd>{{ project.description|safe }}</dd>
 						{% endfor %}
 					</dl>
 				</li>
@@ -43,7 +43,7 @@
 				<dl>
 					{% for project in data_projects %}
 					<dt><a href="{{ project.url }}">{{ project.name }}&nbsp;-&nbsp;</a></dt>
-					<dd>{{ project.description }}</dd>
+					<dd>{{ project.description|safe }}</dd>
 					{% endfor %}
 				</dl>
 				{% else %}
