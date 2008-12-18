@@ -548,10 +548,18 @@ div#helpBox{
 	background: url(/media/images/helpBox.png) top left no-repeat;
 }
 
+div#helpBox h3{
+	float: left;
+}
+
+div#helpBox p{
+	float: left;
+}
+
 div#helpBox a{
-	margin: 165px 0 0 75px;
 	display: block;
-	background: url(/media/images/signup_title.png) bottom left no-repeat;
+	width: 325px;
+	height: 260px;
 }
 
 div#workBoxWrapper{
@@ -619,11 +627,21 @@ span.organization a{
 }
 
 div#contestBox{
-	text-indent: -9999em;
 	background: url(/media/images/appsAmericaTile.png) bottom left no-repeat;
 	width: 294px;
 	height: 131px;
 	margin-left: 468px;
+	text-indent: -9999em;
+}
+
+div#contestBox a{
+	display: block;
+	width: 294px;
+	height: 131px;
+}
+
+div#contestBox h3{
+	float: left;
 }
 
 div#contestPage ul, div.post_content ul{
@@ -636,15 +654,6 @@ div#contestPage ol, div.post_content ol{
 	list-style-type: decimal;
 	margin-left: 20px;
 	margin-bottom: 15px;
-}
-
-
-div#contestBox a{
-	display: block;
-	background: url(/media/images/contestSignUp.png) bottom left no-repeat;
-	text-indent: -9999em;
-	width: 154px;
-	margin: 75px 0 0 75px;
 }
 
 
