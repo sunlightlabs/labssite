@@ -32,8 +32,20 @@
 						<span class="type">Date:</span>
 						<span class="value">{{ post.date_published|date:"F j Y" }}</span>
 					</div>
-				</div>	    
-				<p>{{ post.excerpt|markdown|safe }}</p>
+				</div>
+				{% ifequal post.markup 'markdown' %}
+                    <p>{{ post.excerpt|markdown|safe }}</p>
+                {% else %}
+                    {% ifequal post.markup 'textile' %}
+                        <p>{{ post.excerpt|textile|safe }}</p>
+                    {% else %}                
+                        {% ifequal post.markup 'restructuredtext' %}
+                            <p>{{ post.excerpt|restructuredtext|safe }}</p>
+                        {% else %}
+                            <p>{{ post.excerpt|safe }}</p>
+                        {% endifequal %}
+                    {% endifequal %}
+                {% endifequal %}
 				<div class="readMore"><a href="{{ post.get_absolute_url }}">Read More</a></div>
 			</li>	
 			{% endfor %}
