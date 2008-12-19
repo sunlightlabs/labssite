@@ -559,7 +559,7 @@ div#helpBox p{
 div#helpBox a{
 	display: block;
 	width: 325px;
-	height: 260px;
+	height: 240px;
 }
 
 div#workBoxWrapper{
@@ -732,26 +732,44 @@ form textarea#id_comment{
 	margin-bottom: 20px;
 }
 
-p.submit input, li.submit input{
+/*p.submit input{
 	width: 85px;
 	height: 27px;
 	border: 0 none;
 	text-indent: -9999em;
-}
+}*/
 
-input.submit-send{ 
-	background: url(/media/images/submitBtn.png) bottom right no-repeat;
+button.submit-send{
 	margin-left: 330px;
+	background: url(/media/images/submitBtn.png) bottom right no-repeat;
+	border: none;
+	text-indent: -9999em;
+	display: block;
+	width: 85px;
+	height: 27px;
+	cursor: pointer;
 }
 
-input.submit-post{ 
+button.submit-post{ 
 	background: url(/media/images/postBtn.png) bottom right no-repeat;
+	border: none;
+	text-indent: -9999em;
+	display: block;
+	width: 85px;
+	height: 27px;
 	float: right;
+	cursor: pointer;
 }
 
-input.submit-preview{ 
+button.submit-preview{ 
+	border: none;
+	width: 85px;
+	height: 27px;
+	text-indent: -9999em;
+	display: block;
 	background: url(/media/images/previewBtn.png) bottom right no-repeat;
 	margin-left: 230px;
+	cursor: pointer;
 }
 
 body.contact div#ltColumn p{

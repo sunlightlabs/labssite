@@ -50,3 +50,10 @@ body.projects div#featureBox { padding-top: 66px; }
 body.about div#aboutImage { margin-top: -14px; }
 
 div#blogArchive { margin-left: 465px; padding-left: 0;}
+
+div#helpBox a{
+	position: relative;
+	display: block;
+	width: 325px;
+	height: 240px;
+}

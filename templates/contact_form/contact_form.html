@@ -17,7 +17,9 @@
     <form action="." method="post">
         <ul>
             {{ form.as_ul }}
-            <li class="submit"><input class="submit-send" type="submit" value="Send" /></li>
+            <li class="submit">
+				<button class="submit-send" type="submit"><span>Send</span></button>
+			</li>
         </ul>
     </form>
 {% endblock %}
