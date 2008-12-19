@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 from djitter.models import account_updated
 from sunlightlabs.labs import genimage
@@ -41,9 +42,10 @@ class Hero(models.Model):
         return self.name
 
 def tweet_callback(sender, **kwargs):
-    account = kwargs['account']
-    for tweet in reversed(kwargs['tweets']):
-        message = "@%s says: %s" % (tweet.sender.username, tweet.message)
-        djitter.post(account, message[:140])
+    if not settings.DEBUG:
+        account = kwargs['account']
+        for tweet in reversed(kwargs['tweets']):
+            message = "@%s says: %s" % (tweet.sender.username, tweet.message)
+            djitter.post(account, message[:140])
     genimage.generate_image()
 account_updated.connect(tweet_callback)
