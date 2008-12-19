@@ -6,3 +6,5 @@ django-sunlightcore
 django-contact-form
 python-twitter
 simplejson
+markdown
+textile
