@@ -1,4 +1,4 @@
-from django.db import models=
+from django.db import models
 from djitter.models import account_updated
 from sunlightlabs.labs import genimage
 import djitter
