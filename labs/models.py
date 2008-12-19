@@ -1,6 +1,7 @@
-from django.db import models
+from django.db import models=
 from djitter.models import account_updated
 from sunlightlabs.labs import genimage
+import djitter
 
 PROJECT_TYPE_CHOICES = (
     ('api', 'API'),
@@ -41,5 +42,8 @@ class Hero(models.Model):
 
 def tweet_callback(sender, **kwargs):
     account = kwargs['account']
+    for tweet in kwargs['tweets']:
+        message = "@%s says: %s" % (tweet.sender.username, tweet.message)
+        djitter.post(account, message[:140])
     genimage.generate_image()
 account_updated.connect(tweet_callback)
