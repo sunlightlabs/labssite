@@ -777,3 +777,13 @@ body.contact div#ltColumn p{
 	font-weight: bold;
 	text-align: center;
 }
+
+div#ltColumn h3#errorTitle{
+	text-align: center;
+}
+
+ul.errorlist li{
+	font-style: oblique;
+	color: #d04828;
+	margin-left: 110px;
+}
