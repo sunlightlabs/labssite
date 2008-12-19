@@ -1,11 +1,13 @@
 <div id="workBoxWrapper">
-	<div id="workBox">
-		<h3>What We're Working On</h3>
-		<dl>
-	    	{% for dm in dms %}
-			<dt>{{ dm.sender.username }}:</dt>
-			<dd>{{ dm.message }}</dd>
-			{% endfor %}
-		</dl>
-	</div>
+	<a href="http://twitter.com/sunlightlabs/">
+	    <div id="workBox">
+		    <h3>What We're Working On</h3>
+    		<dl>
+    	    	{% for dm in dms %}
+    			<dt>{{ dm.sender.username }}:</dt>
+    			<dd>{{ dm.message }}</dd>
+    			{% endfor %}
+    		</dl>
+    	</div>
+    </a>
 </div>
