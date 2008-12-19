@@ -42,7 +42,7 @@ class Hero(models.Model):
 
 def tweet_callback(sender, **kwargs):
     account = kwargs['account']
-    for tweet in kwargs['tweets']:
+    for tweet in reversed(kwargs['tweets']):
         message = "@%s says: %s" % (tweet.sender.username, tweet.message)
         djitter.post(account, message[:140])
     genimage.generate_image()
