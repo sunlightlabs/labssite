@@ -1,4 +1,5 @@
 from blogdor.models import Post
+from blogdor.views import archive_index
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from djitter.models import Account
@@ -17,7 +18,12 @@ def index(request):
         "recent_posts": recent_posts,
     }
     return render_to_response("labs/index.html", data)
-
+    
+def blog_wrapper(request):
+    if 'feed' in request.GET:
+        return HttpResponseRedirect('/blog/feeds/latest')
+    return archive_index(request)
+    
 def projects(request):
 
     account = Account.objects.get(username='jcarbaugh')
