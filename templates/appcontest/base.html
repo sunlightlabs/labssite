@@ -2,8 +2,6 @@
 {% load labs %}
 {% load markup %}
 
-{% block title %}{{ flatpage.title }}{% endblock %}
-
 {% block body %}contest{% endblock %}
 
 {% block feature %}
@@ -13,11 +11,4 @@
 
 {% block sidebar %}
 	{% heroes %}
-{% endblock %}
-
-{% block content %}
-	<div id="contestPage">
-		<h2>Contest</h2>
-		{{ flatpage.content|markdown }}
-	</div>
 {% endblock %}

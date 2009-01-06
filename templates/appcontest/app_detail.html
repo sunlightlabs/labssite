@@ -1,0 +1,24 @@
+{% extends "appcontest/base.html" %}
+{% load markup %}
+
+{% block content %}
+    <div class="app">
+        <h1>{{ app.name }}</h1>
+        {% if app.logo_url %}
+            <p><img src="{{ app.logo_url }}" alt="application logo" /></p>
+        {% endif %}
+        <dl>
+            
+            <dt>App URL</dt>
+            <dd><a href="{{ app.url }}">{{ app.url }}</a></dd>
+            
+            <dt>Source URL</dt>
+            <dd><a href="{{ app.source_url }}" rel="source">{{ app.source_url }}</a></dd>
+            
+            <dt>Description</dt>
+            <dd>{{ app.description|markdown }}</dd>
+            
+        </dl>
+        <p>This application was submitted by {{ app.contact_display }} on {{ app.timestamp|date:"F j, Y" }}</p>
+    </div>
+{% endblock %}

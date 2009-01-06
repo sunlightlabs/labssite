@@ -1,0 +1,54 @@
+{% extends "appcontest/base.html" %}
+
+{% block content %}
+    <p>All of the fields below are required. We will keep your email address private.</p>
+    <form action="{% url appcontest_submit %}" method="post">
+        <p>We need some information about your app.</p>
+        <ul>
+            <li>
+                {{ form.name.errors }}
+                <label for="id_name">Application Name</label>
+                {{ form.name }}
+            </li>
+            <li>
+                {{ form.url.errors }}
+                <label for="id_url">URL where your app can be viewed</label>
+                {{ form.url }}
+            </li>
+            <li>
+                {{ form.logo_url.errors }}
+                <label for="id_logo_url">URL to you app's logo</label>
+                {{ form.logo_url }}
+            </li>
+            <li>
+                {{ form.source_url.errors }}
+                <label for="id_source_url">URL to you app's source code</label>
+                {{ form.source_url }}
+            </li>
+            <li>
+                {{ form.description.errors }}
+                <label for="id_description">Describe your application. <a href="http://daringfireball.net/projects/markdown/syntax" rel="documentation">Markdown syntax</a> is supported.</label>
+                {{ form.description }}
+            </li>
+        </ul>
+        <p>And we need some information about you too.</p>
+        <ul>
+            <li>
+                {{ form.contact_display.errors }}
+                <label for="id_contact_display">Name of you or your organization to display to the public.</label>
+                {{ form.contact_display }}
+            </li>
+            <li>
+                {{ form.contact_name.errors }}
+                <label for="id_contact_name">Your name that we can use to refer to you in private communications.</label>
+                {{ form.contact_name }}
+            </li>
+            <li>
+                {{ form.contact_email.errors }}
+                <label for="id_contact_email">You email address, which will be kept private.</label>
+                {{ form.contact_email }}
+            </li>
+        </ul>
+        <input type="submit" value="Submit you app" />
+    </form>
+{% endblock %}
