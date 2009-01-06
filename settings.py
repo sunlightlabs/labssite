@@ -62,6 +62,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'gatekeeper.middleware.GatekeeperMiddleware',
 )
 
 ROOT_URLCONF = 'sunlightlabs.urls'
@@ -76,9 +77,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'sunlightcore',
+    'gatekeeper',
     'djitter',
     'blogdor',
     'sunlightlabs.labs',
+    'sunlightlabs.appcontest',
 )
 
 EMAIL_HOST = "smtp.sunlightlabs.com"

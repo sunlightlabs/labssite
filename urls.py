@@ -33,13 +33,16 @@ blog_feeds = {
 
 urlpatterns = patterns('',
     #url(r'^about/$', 'sunlightlabs.labs.views.about', name="about"),
+    url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
     url(r'^admin/(.*)', admin.site.root, name='admin'),
+    url(r'^appsforamerica/', include('sunlightlabs.appcontest.urls')),
     url(r'^blog/comments/', include('django.contrib.comments.urls')),
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="latest_blog_feed"),
     url(r'^blog/$', 'sunlightlabs.labs.views.blog_wrapper'),
     url(r'^blog/', include('blogdor.urls')),
     url(r'^contact/sent/$', 'sunlightlabs.labs.views.contact_sent', {"form_class": LabsContactForm}),
     url(r'^contact/', include('contact_form.urls'), {"form_class": LabsContactForm, "fail_silently": False}),
+    url(r'^contest/$', 'django.views.generic.simple.redirect_to', {'url': '/appsforamerica/'}),
     url(r'^projects/$', 'sunlightlabs.labs.views.projects', name="projects"),
     url(r'^$', 'sunlightlabs.labs.views.index', name='index'),
 )
