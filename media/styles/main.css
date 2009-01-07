@@ -412,6 +412,8 @@ div#ltColumn h4, div#ltColumn h3{
 div#blogArchive{
 	width: 295px;
 	padding-left: 472px;
+	margin-bottom: 30px;
+	margin-top: 5px;
 }
 
 div#blogArchive h3{
@@ -421,7 +423,7 @@ div#blogArchive h3{
 }
 
 div#blogArchive li{
-	border-bottom: 1px solid #e9e6db;
+	border-bottom: 1px solid #8695a3;
 	margin: 10px 8px 10px 0;
 }
 
