@@ -49,16 +49,10 @@
     						{% block content %}{% endblock %}
     					</div>
     					<div id="rtColumn">
-    						<div id="helpBox">
-    							<h3>Want to Help?</h3>
-    							<p>Join Sunlight's growing list of open source civic coders that are helping make government more transparent. It is a big mission and we need as much help as we can get.</p>
-    							<a href="http://groups.google.com/group/sunlightlabs">Sign up to our google group</a>
-    						</div>
-    						<div id="contestBox">
-    							<h3>Apps for America</h3>
-    							<a href="/contest/">Sign up for our contest</a>
-    						</div>
-    						{% block sidebar %}{% endblock %}	
+    					    {% block sidebar %}
+    					        {% include "labs/sidebar_helpus.html" %}
+        						{% include "labs/sidebar_contest.html" %}
+    						{% endblock %}	
     					</div>
     					<div class="clear"></div>
     				{% endblock %}	
