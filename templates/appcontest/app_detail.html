@@ -3,11 +3,11 @@
 
 {% block content %}
     <div class="app">
-        <h1>{{ app.name }}</h1>
+        <h2 id="appName">{{ app.name }}</h2>
         {% if app.logo_url %}
             <p><img src="{{ app.logo_url }}" alt="application logo" /></p>
         {% endif %}
-        <dl>
+        <dl id="appDescriptions">
             
             <dt>App URL</dt>
             <dd><a href="{{ app.url }}">{{ app.url }}</a></dd>

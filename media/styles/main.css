@@ -220,15 +220,21 @@ div#whoWeAre h2{
 	margin-bottom: 10px;
 }
 
+h2#appTitles{
+	background: url(/media/images/submittedAppsTitle.png) bottom center no-repeat;
+	text-indent: -9999em;
+	margin-bottom: 10px;
+}
+
 div#contestPage h2{
 	background: url(/media/images/contestTitle.png) bottom center no-repeat;
 	text-indent: -9999em;
 	margin-bottom: 10px;
 }
 
-div#submitApp h2{
+h2#submitApp {
 	background: url(/media/images/submitAppBtn.png) top center no-repeat;
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 	text-indent: -9999em;
 }
 
@@ -646,10 +652,18 @@ div#contestBox h3{
 	float: left;
 }
 
-div#contestPage ul, div.post_content ul{
+div#contestPage ul, div.post_content ul, ul#contestList {
 	list-style-type: circle;
 	margin-left: 20px;
 	margin-bottom: 15px;
+}
+
+dl#appDescriptions dt{
+	font-weight: bold;
+}
+
+dl#appDescriptions dd{
+	margin-bottom: 18px;
 }
 
 div#contestPage ol, div.post_content ol{
@@ -792,9 +806,10 @@ button.submit-app{
 	height: 27px;
 	text-indent: -9999em;
 	display: block;
-	background: url(/media/images/previewBtn.png) bottom right no-repeat;
+	background: url(/media/images/submitAppBtn.jpg) bottom right no-repeat;
 	margin-left: 420px;
 	cursor: pointer;
+	margin-top: 30px;
 }
 
 body.contact div#ltColumn p{
@@ -822,6 +837,12 @@ div#ltColumn h2.contact{
 	width: 241px;
 	text-indent: -9999em;
 	margin: 0 0 20px 105px
+}
+
+h2#appName{
+	font-weight: bold;
+	font-size: 120%;
+	margin-bottom: 15px;
 }
 
 h3.formh3{

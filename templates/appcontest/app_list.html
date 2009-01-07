@@ -2,7 +2,8 @@
 {% load markup %}
 
 {% block content %}
-    <ul>
+	<h2 id="appTitles">Submitted Apps</h2>
+    <ul id="contestList">
         {% for app in apps %}
             <li><a href="{% url appcontest_app_detail app.slug %}">{{ app.name }}</a></li>
         {% endfor %}
