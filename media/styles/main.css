@@ -170,7 +170,7 @@ body.contact h2{
 	background: url(/media/images/contactHeader.png) top left no-repeat;
 }
 
-body.projects h2{
+body.projects h2.projects{
 	background: url(/media/images/projectsTitle.png) top left no-repeat;
 	z-index: 2;
 	position: absolute;
@@ -214,7 +214,7 @@ div#contestImage{
 	margin: -65px 0 0 110px;
 }
 
-div#whoWeAre h3{
+div#whoWeAre h2{
 	background: url(/media/images/whoWeAre.png) bottom center no-repeat;
 	text-indent: -9999em;
 	margin-bottom: 10px;
@@ -224,6 +224,12 @@ div#contestPage h2{
 	background: url(/media/images/contestTitle.png) bottom center no-repeat;
 	text-indent: -9999em;
 	margin-bottom: 10px;
+}
+
+div#submitApp h2{
+	background: url(/media/images/submitAppBtn.png) top center no-repeat;
+	margin-bottom: 10px;
+	text-indent: -9999em;
 }
 
 div#contestPage{
@@ -313,7 +319,7 @@ li#api{
 	background: url(/media/images/api_icon.png) top left no-repeat;
 }
 
-li#api h3{
+li#api h2{
 	background: url(/media/images/APIs_title.png) top left no-repeat;
 	text-indent: -9999em;
 }
@@ -331,7 +337,7 @@ div#whatWeDo dt a:link, div#whatWeDo dt a:visited, div#whatWeDo dt a:hover, div#
 	text-decoration: none;
 }
 
-div#whatWeDo h3{
+div#whatWeDo h2{
 	padding-bottom: 10px;
 }
 
@@ -348,7 +354,7 @@ li#open_source{
 	background: url(/media/images/open_icon.png) top left no-repeat;
 }
 
-li#open_source h3{
+li#open_source h2{
 	background: url(/media/images/opensource_title.png) top left no-repeat;
 	text-indent: -9999em;
 }
@@ -358,7 +364,7 @@ li#data_dumps{
 	background: url(/media/images/data_icon.png) top left no-repeat;
 }
 
-li#data_dumps h3{
+li#data_dumps h2{
 	background: url(/media/images/datadumps_title.png) top left no-repeat;
 	text-indent: -9999em;
 }
@@ -398,7 +404,6 @@ div#ltColumn h4, div#ltColumn h3{
 }
 
 div#blogArchive{
-	padding-top: 22px;
 	width: 295px;
 	padding-left: 472px;
 }
@@ -419,7 +424,7 @@ div#blogArchive li a{
 	color: #0f2557;
 }
 
-div#blogArchive span.date{
+div#blogArchive span.date {
 	color: ##7A6764;
 	font-size: 85%;
 	font-style: oblique;
@@ -521,12 +526,7 @@ div#comments ol li{
 	margin-top: 5px;
 }
 
-h3.contact{
-	background: url(/media/images/contactTitle.png) bottom center no-repeat;
-	width: 241px;
-	text-indent: -9999em;
-	margin: 0 0 20px 105px
-}
+
 
 li.hentry abbr, li.hentry span{
 	font-size: 95%;
@@ -546,6 +546,7 @@ div#helpBox{
 	width: 325px;
 	height: 260px;
 	background: url(/media/images/helpBox.png) top left no-repeat;
+	margin-bottom: 20px;
 }
 
 div#helpBox h3{
@@ -632,6 +633,7 @@ div#contestBox{
 	height: 131px;
 	margin-left: 468px;
 	text-indent: -9999em;
+	margin-bottom: 30px;
 }
 
 div#contestBox a{
@@ -726,10 +728,22 @@ div#comments h3{
 form { margin: 1em; }
 form p, form li { margin-bottom: 10px; }
 form p label, form li label { width: 90px; float: left; text-align: right; padding-right: 15px;}
-input#id_name, input#id_email, input#id_url, textarea { background: #f3f1ec !important; border: 1px dashed #c3c0b5; padding: .5em; color: #413b3b; width: 280px; }
+input#id_name, input#id_email, input#id_url, input#id_logo_url, input#id_source_url, input#id_contact_display, input#id_contact_name, input#id_contact_email, textarea { background: #f3f1ec !important; border: 1px dashed #c3c0b5; padding: .5em; color: #413b3b; width: 280px; }
+
+form ul#contestForm p, form ul#contestForm li, form ul#personalForm p, form ul#personalForm li { margin-bottom: 18px; }
+form ul#contestForm p label, form ul#contestForm li label, form ul#personalForm p label, form ul#personalForm li label { width: 200px; line-height: 18px;}
+ul#contestForm input#id_name, ul#contestForm input#id_email, ul#contestForm input#id_url, ul#contestForm input#id_logo_url, ul#contestForm input#id_source_url, ul#contestForm input#id_contact_display, ul#contestForm input#id_contact_name, ul#contestForm input#id_contact_email, ul#contestForm textarea, ul#personalForm input#id_name, ul#personalForm input#id_email, ul#personalForm input#id_url, ul#personalForm input#id_logo_url, ul#personalForm input#id_source_url, ul#personalForm input#id_contact_display, ul#personalForm input#id_contact_name, ul#personalForm input#id_contact_email, ul#personalForm textarea { width: 330px; }
+
 
 form textarea#id_comment{
 	margin-bottom: 20px;
+}
+
+div.tip{
+	font-size: 85%;
+	font-style: oblique;
+	text-align: center;
+	margin-bottom: 15px;
 }
 
 /*p.submit input{
@@ -772,6 +786,17 @@ button.submit-preview{
 	cursor: pointer;
 }
 
+button.submit-app{ 
+	border: none;
+	width: 152px;
+	height: 27px;
+	text-indent: -9999em;
+	display: block;
+	background: url(/media/images/previewBtn.png) bottom right no-repeat;
+	margin-left: 420px;
+	cursor: pointer;
+}
+
 body.contact div#ltColumn p{
 	font-size: 130%;
 	font-weight: bold;
@@ -786,4 +811,25 @@ ul.errorlist li{
 	font-style: oblique;
 	color: #d04828;
 	margin-left: 110px;
+}
+
+strong{
+	font-weight: bold;
+}
+
+div#ltColumn h2.contact{
+	background: url(/media/images/contactTitle.png) bottom center no-repeat;
+	width: 241px;
+	text-indent: -9999em;
+	margin: 0 0 20px 105px
+}
+
+h3.formh3{
+	font-weight: bold;
+	text-align: center;
+	font-size: 110%;
+}
+
+div#fullColumn{
+	width: 765px;
 }

@@ -41,9 +41,9 @@ li#data_dumps {  background: url("/media/images/data_icon_8.png") top left no-re
 li#api {  background: url("/media/images/api_icon_8.png") top left no-repeat; }
 li#open_source {  background: url("/media/images/open_icon_8.png") top left no-repeat; }
 
-li#api h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/APIs_title.png", sizingMethod="crop"); height: 25px;}
-li#open_source h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/opensource_title.png", sizingMethod="crop"); height: 25px;}
-li#data_dumps h3 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/datadumps_title.png", sizingMethod="crop"); height: 25px;}
+li#api h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/APIs_title.png", sizingMethod="crop"); height: 25px;}
+li#open_source h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/opensource_title.png", sizingMethod="crop"); height: 25px;}
+li#data_dumps h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/datadumps_title.png", sizingMethod="crop"); height: 25px;}
 
 body.projects div#featureBox h2{ margin-left: -90px; margin-top: 15px; }
 body.projects div#featureBox { padding-top: 66px; }

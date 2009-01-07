@@ -1,10 +1,11 @@
 {% extends "appcontest/base.html" %}
 
 {% block content %}
-    <p>All of the fields below are required. We will keep your email address private.</p>
+	<h2 id="submitApp">Submit Your App</h2>
+	<h3 class="formh3">App Information</h3>
+	<div class="tip">* All of the fields below are required.</div>
     <form action="{% url appcontest_submit %}" method="post">
-        <p>We need some information about your app.</p>
-        <ul>
+        <ul id="contestForm">
             <li>
                 {{ form.name.errors }}
                 <label for="id_name">Application Name</label>
@@ -12,43 +13,47 @@
             </li>
             <li>
                 {{ form.url.errors }}
-                <label for="id_url">URL where your app can be viewed</label>
+                <label for="id_url">URL (your app)</label>
                 {{ form.url }}
             </li>
             <li>
                 {{ form.logo_url.errors }}
-                <label for="id_logo_url">URL to you app's logo</label>
+                <label for="id_logo_url">URL (app's logo)</label>
                 {{ form.logo_url }}
             </li>
             <li>
                 {{ form.source_url.errors }}
-                <label for="id_source_url">URL to you app's source code</label>
+                <label for="id_source_url">URL (app's source code)</label>
                 {{ form.source_url }}
             </li>
             <li>
                 {{ form.description.errors }}
-                <label for="id_description">Describe your application. <a href="http://daringfireball.net/projects/markdown/syntax" rel="documentation">Markdown syntax</a> is supported.</label>
+                <label for="id_description">Describe your application <br />(<a href="http://daringfireball.net/projects/markdown/syntax" rel="documentation">Markdown syntax</a> is supported)</label>
                 {{ form.description }}
             </li>
         </ul>
-        <p>And we need some information about you too.</p>
-        <ul>
+        <h3 class="formh3">Personal Information</h3>
+		<div class="tip">(We will keep your email address private)</div>
+		
+        <ul id="personalForm">
             <li>
                 {{ form.contact_display.errors }}
-                <label for="id_contact_display">Name of you or your organization to display to the public.</label>
+                <label for="id_contact_display">Your name or organization (public)</label>
                 {{ form.contact_display }}
             </li>
             <li>
                 {{ form.contact_name.errors }}
-                <label for="id_contact_name">Your name that we can use to refer to you in private communications.</label>
+                <label for="id_contact_name">Username (private)</label>
                 {{ form.contact_name }}
             </li>
             <li>
                 {{ form.contact_email.errors }}
-                <label for="id_contact_email">You email address, which will be kept private.</label>
+                <label for="id_contact_email">Email Address</label>
                 {{ form.contact_email }}
             </li>
+			<li>
+				<button class="submit-app" type="submit"><span>Submit Your App</span></button>
+			</li>	
         </ul>
-        <input type="submit" value="Submit you app" />
     </form>
 {% endblock %}
