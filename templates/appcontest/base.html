@@ -2,6 +2,8 @@
 {% load labs %}
 {% load markup %}
 
+{% block title %}Apps for America Contest{% endblock %}
+
 {% block body %}contest{% endblock %}
 
 {% block feature %}
@@ -10,6 +12,6 @@
 {% endblock %}
 
 {% block sidebar %}
-    {{ block.super }}
+    {% include "labs/sidebar_helpus.html" %}
 	{% heroes %}
 {% endblock %}
