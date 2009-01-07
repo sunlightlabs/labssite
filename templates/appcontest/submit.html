@@ -1,4 +1,12 @@
-{% extends "appcontest/base.html" %}
+{% extends "base_full.html" %}
+{% load markup %}
+
+{% block body %}contest{% endblock %}
+
+{% block feature %}
+	<h2 class="contest">Labs Contest</h2>
+	<div id="contestImage"></div>
+{% endblock %}
 
 {% block content %}
 	<h2 id="submitApp">Submit Your App</h2>

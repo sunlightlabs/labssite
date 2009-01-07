@@ -1,4 +1,4 @@
-{% extends "base_full.html" %}
+{% extends "base.html" %}
 {% load labs %}
 {% load markup %}
 
@@ -10,5 +10,6 @@
 {% endblock %}
 
 {% block sidebar %}
+    {{ block.super }}
 	{% heroes %}
 {% endblock %}
