@@ -105,6 +105,8 @@ MEDIASYNC_AWS_PREFIX = 'site'
 
 TWITTER_USERNAME = 'sunlightlabs'
 
+GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com']
+
 try:
     from local_settings import *
 except ImportError, exp:
