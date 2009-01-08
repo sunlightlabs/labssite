@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load appcontest %}
 {% load labs %}
 {% load markup %}
 
@@ -12,6 +13,11 @@
 {% endblock %}
 
 {% block sidebar %}
+    <div>
+        <h3>Recently Submitted Apps</h3>
+        {% recent_apps 3 %}
+        <a href="{% url appcontest_app_list %}">See all submitted apps</a>
+    </div>
     {% include "labs/sidebar_helpus.html" %}
 	{% heroes %}
 {% endblock %}

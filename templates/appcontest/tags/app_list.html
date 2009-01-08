@@ -1,0 +1,15 @@
+{% if apps %}
+    <ol class="hfeed">
+        {% for app in apps %}
+            <li class="hentry">
+                <a href="{% url appcontest_app_detail app.slug %}" class="entry-title" rel="bookmark">{{ app.name }}</a>
+                <p class="entry-summary">{{ app.quick_description }}</p>
+                Submitted <abbr class="published" title="{{ app.timestamp|date:"Y-m-d\TH:i:sO" }}">{{ app.timestamp|date:"F j, Y" }}</abbr>
+                by <address class="vcard author"><span class="fn">{{ app.contact_display }}</span></address>
+            </li>
+        {% endfor %}
+    </ol>
+{% else %}
+    <p>Sadly, no apps have been submitted yet.</p>
+    <p>You should <a href="{% url appcontest_submit %}">submit one</a>!</p>
+{% endif %}

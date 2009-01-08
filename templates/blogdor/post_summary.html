@@ -3,7 +3,7 @@
     {% for post in posts %}
     <li class="hentry">
         <a href="{{ post.get_absolute_url }}" class="entry-title" rel="bookmark">{{ post.title|safe }}</a>
-        <abbr class="published" title="{{ entry.date_published.isoformat }}"> {{ post.date_published|date:"m/d/y" }}</abbr>
+        <abbr class="published" title="{{ post.date_published|date:"Y-m-d\TH:i:sO" }}">{{ post.date_published|date:"m/d/y" }}</abbr>
     </li>
     {% endfor %}
 </ul>
