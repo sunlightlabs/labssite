@@ -1,6 +1,7 @@
 {% extends "base_blog.html" %}
 {% load comments %}
 {% load i18n %}
+{% load markup %}
 
 {% block blog_content %}
     <form action="{% comment_form_target %}" method="post">
@@ -8,7 +9,7 @@
             <h3 id="errorTitle">{% blocktrans count form.errors|length as counter %}Please correct the error below{% plural %}Please correct the errors below{% endblocktrans %}</h3>
         {% else %}
             <h3>{% trans "Preview your comment" %}</h3>
-            <blockquote>{{ comment|linebreaks }}</blockquote>
+            <blockquote>{{ comment|markdown }}</blockquote>
             <p>
                 {% trans "and" %} <input type="submit" name="submit" class="submit-post" value="{% trans "Post your comment" %}" id="submit" /> {% trans "or make changes" %}:
             </p>

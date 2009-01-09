@@ -755,7 +755,7 @@ form textarea#id_comment{
 	margin-bottom: 20px;
 }
 
-div.tip{
+div.tip, p.tip {
 	font-size: 85%;
 	font-style: oblique;
 	text-align: center;

@@ -57,7 +57,7 @@
                         {% else %}
                             <p>{{ comment.user_name }}</p>
                         {% endif %}
-                        <p>{{ comment.comment }}</p>
+                        <p>{{ comment.comment|markdown }}</p>
                     </li>
                 {% endfor %}
             </ol>
