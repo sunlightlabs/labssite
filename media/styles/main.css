@@ -220,6 +220,12 @@ div#whoWeAre h2{
 	margin-bottom: 10px;
 }
 
+h2#previewSubmit{
+	background: url(/media/images/previewAppSubmit.png) bottom center no-repeat;
+	text-indent: -9999em;
+	margin-bottom: 10px;
+}
+
 h2#appTitles{
 	background: url(/media/images/submittedAppsTitle.png) bottom center no-repeat;
 	text-indent: -9999em;
@@ -587,10 +593,17 @@ div#workBox{
 	margin-left: 20px;
 }
 
-div#heroes{
+div#heroes, div#recentlySubmitted{
 	width: 295px;
 	margin-left: 472px;
+}
+
+div#heroes{
 	margin-top: 20px;
+}
+
+div#recentlySubmitted{
+	margin-bottom: 30px;
 }
 
 div#heroes li{
@@ -602,6 +615,12 @@ div#heroes li{
 
 div#heroes h3{
 	background: url(/media/images/heroesTitle.png) bottom center no-repeat;
+	text-indent: -9999em;
+	margin-bottom: 20px;
+}
+
+div#recentlySubmitted h3{
+	background: url(/media/images/recentSubmitsBtn.png) bottom center no-repeat;
 	text-indent: -9999em;
 	margin-bottom: 20px;
 }
@@ -744,11 +763,11 @@ div#comments h3{
 form { margin: 1em; }
 form p, form li { margin-bottom: 10px; }
 form p label, form li label { width: 90px; float: left; text-align: right; padding-right: 15px;}
-input#id_name, input#id_email, input#id_url, input#id_logo_url, input#id_source_url, input#id_contact_display, input#id_contact_name, input#id_contact_email, textarea { background: #f3f1ec !important; border: 1px dashed #c3c0b5; padding: .5em; color: #413b3b; width: 280px; }
+input#id_name, input#id_email, input#id_url, input#id_logo_url, input#id_source_url, input#id_contact_display, input#id_contact_name, input#id_contact_email, textarea, input#id_quick_description, input#id_contact_url { background: #f3f1ec !important; border: 1px dashed #c3c0b5; padding: .5em; color: #413b3b; width: 280px; }
 
 form ul#contestForm p, form ul#contestForm li, form ul#personalForm p, form ul#personalForm li { margin-bottom: 18px; }
-form ul#contestForm p label, form ul#contestForm li label, form ul#personalForm p label, form ul#personalForm li label { width: 200px; line-height: 18px;}
-ul#contestForm input#id_name, ul#contestForm input#id_email, ul#contestForm input#id_url, ul#contestForm input#id_logo_url, ul#contestForm input#id_source_url, ul#contestForm input#id_contact_display, ul#contestForm input#id_contact_name, ul#contestForm input#id_contact_email, ul#contestForm textarea, ul#personalForm input#id_name, ul#personalForm input#id_email, ul#personalForm input#id_url, ul#personalForm input#id_logo_url, ul#personalForm input#id_source_url, ul#personalForm input#id_contact_display, ul#personalForm input#id_contact_name, ul#personalForm input#id_contact_email, ul#personalForm textarea { width: 330px; }
+form ul#contestForm p label, form ul#contestForm li label, form ul#personalForm p label, form ul#personalForm li label { width: 210px; line-height: 18px;}
+ul#contestForm input#id_name, ul#contestForm input#id_email, ul#contestForm input#id_url, ul#contestForm input#id_logo_url, ul#contestForm input#id_source_url, ul#contestForm input#id_contact_display, ul#contestForm input#id_contact_name, ul#contestForm input#id_contact_email, ul#contestForm textarea, ul#contestForm input#id_quick_description, ul#personalForm input#id_name, ul#personalForm input#id_email, ul#personalForm input#id_url, ul#personalForm input#id_logo_url, ul#personalForm input#id_source_url, ul#personalForm input#id_contact_display, ul#personalForm input#id_contact_name, ul#personalForm input#id_contact_email, ul#personalForm textarea, ul#personalForm input#id_contact_url { width: 330px; }
 
 
 form textarea#id_comment{
@@ -808,8 +827,20 @@ button.submit-app{
 	height: 27px;
 	text-indent: -9999em;
 	display: block;
-	background: url(/media/images/submitAppBtn.jpg) bottom right no-repeat;
-	margin-left: 420px;
+	background: url(/media/images/submitApp.png) bottom right no-repeat;
+	margin-left: 275px;
+	cursor: pointer;
+	margin-top: 30px;
+}
+
+button.preview-app{ 
+	border: none;
+	width: 176px;
+	height: 27px;
+	text-indent: -9999em;
+	display: block;
+	background: url(/media/images/previewAppBtn.png) bottom right no-repeat;
+	margin-left: 400px;
 	cursor: pointer;
 	margin-top: 30px;
 }
@@ -828,6 +859,11 @@ ul.errorlist li{
 	font-style: oblique;
 	color: #d04828;
 	margin-left: 110px;
+}
+
+ul#contestForm ul.errorlist li{
+	text-align: center;
+	margin-left: 0;
 }
 
 strong{
@@ -851,6 +887,11 @@ h3.formh3{
 	font-weight: bold;
 	text-align: center;
 	font-size: 110%;
+}
+
+h3#personalHeader{
+	margin-top: 35px;
+	margin-bottom: 15px;
 }
 
 div#fullColumn{

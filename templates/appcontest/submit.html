@@ -37,7 +37,7 @@
             </li>
             <li>
                 {{ form.quick_description.errors }}
-                <label for="id_quick_description">One line summary of your app<br />(255 character limit)</label>
+                <label for="id_quick_description">One line summary (255 character limit)</label>
                 {{ form.quick_description }}
             </li>
             <li>
@@ -46,7 +46,7 @@
                 {{ form.description }}
             </li>
         </ul>
-        <h3 class="formh3">Personal Information</h3>
+        <h3 class="formh3" id="personalHeader">Personal Information</h3>
         <ul id="personalForm">
             <li>
                 {{ form.contact_display.errors }}
@@ -70,7 +70,7 @@
                 {{ form.contact_email }}
             </li>
 			<li>
-				<button class="submit-app" type="submit"><span>Preview your submission</span></button>
+				<button class="preview-app" type="submit"><span>Preview your submission</span></button>
 			</li>	
         </ul>
     </form>

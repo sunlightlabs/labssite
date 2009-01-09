@@ -2,7 +2,7 @@
 {% load markup %}
 
 {% block content %}
-    <h2>Preview your app submission</h2>
+    <h2 id="previewSubmit">Preview your app submission</h2>
     {{ block.super }}
     <form action="{% url appcontest_submit %}" method="post">
         <input type="hidden" name="save" value="true" />
@@ -16,7 +16,7 @@
         <input type="hidden" name="contact_url" value="{{ app.contact_url }}" />
         <input type="hidden" name="contact_name" value="{{ app.contact_name }}" />
         <input type="hidden" name="contact_email" value="{{ app.contact_email }}" />
-        <input type="submit" value="Submit your app" />
+        <button class="submit-app" type="submit"><span>Submit Your App</span></button>
     </form>
 {% endblock %}
 
