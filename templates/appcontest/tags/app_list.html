@@ -14,7 +14,8 @@
                 </address>
             </li>
         {% endfor %}
-    </ol>
+    </ol>    
+    <a href="{% url appcontest_app_list %}">See all submitted apps</a>
 {% else %}
     <p>Sadly, no apps have been submitted yet.</p>
     <p>You should <a href="{% url appcontest_submit %}">submit one</a>!</p>
