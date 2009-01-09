@@ -1,11 +1,17 @@
 {% if apps %}
-    <ol class="hfeed">
+    <ol class="hfeed" id="app_list">
         {% for app in apps %}
-            <li class="hentry">
+            <li class="hentry app">
                 <a href="{% url appcontest_app_detail app.slug %}" class="entry-title" rel="bookmark">{{ app.name }}</a>
                 <p class="entry-summary">{{ app.quick_description }}</p>
-                Submitted <abbr class="published" title="{{ app.timestamp|date:"Y-m-d\TH:i:sO" }}">{{ app.timestamp|date:"F j, Y" }}</abbr>
-                by <address class="vcard author"><span class="fn">{{ app.contact_display }}</span></address>
+                Submitted <abbr class="published" title="{{ app.timestamp|date:"Y-m-d\TH:i:sO" }}">{{ app.timestamp|date:"F j, Y" }}</abbr> by
+                <address class="vcard author">
+                    {% if app.contact_url %}
+                        <a href="{{ app.contact_url }}" class="fn url">{{ app.contact_display }}</a>
+                    {% else %}
+                        <span class="fn">{{ app.contact_display }}</span>
+                    {% endif %}
+                </address>
             </li>
         {% endfor %}
     </ol>

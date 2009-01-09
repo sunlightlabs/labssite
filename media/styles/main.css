@@ -883,6 +883,10 @@ h2#appName{
 	margin-bottom: 15px;
 }
 
+#app_list li.app .entry-title { font-weight: bold; }
+#app_list li.app p.entry-summary { margin-bottom: 0; }
+#app_list li.app address { display: inline; }
+
 h3.formh3{
 	font-weight: bold;
 	text-align: center;
