@@ -468,6 +468,13 @@ div.commentsMetaData{
 	width: 35px;
 }
 
+div#commentHeader{
+	float: left;
+	width: 100px;
+	margin-right: 5px;
+	display: block;
+}
+
 div.hr { clear: both; background: url(/media/images/blogLine.png) bottom left no-repeat; height: 7px; }
 div.hr hr { display: none; }
 
@@ -538,6 +545,8 @@ div#comments ol li{
 	padding-bottom: 5px;
 	border-bottom: 1px solid #b5b3b1;
 	margin-top: 5px;
+	height: auto !important;
+	min-height: 65px;
 }
 
 

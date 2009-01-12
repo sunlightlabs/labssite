@@ -60,6 +60,7 @@
                 <ol>
                     {% for comment in comment_list %}
                         <li>
+							<div id="commentHeader">
                             {% if comment.email %}
                                 {% gravatar comment.email %}
                             {% endif %}
@@ -68,6 +69,7 @@
                             {% else %}
                                 <p>{{ comment.user_name }}</p>
                             {% endif %}
+							</div>
                             <p>{{ comment.comment|markdown }}</p>
                         </li>
                     {% endfor %}
