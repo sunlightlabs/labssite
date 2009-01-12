@@ -106,6 +106,8 @@ TWITTER_USERNAME = 'sunlightlabs'
 
 GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com']
 
+GRAVATAR_SIZE = 40
+
 try:
     from local_settings import *
 except ImportError, exp:
