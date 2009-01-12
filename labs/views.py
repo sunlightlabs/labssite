@@ -11,7 +11,7 @@ def index(request):
     account = Account.objects.get(username='jcarbaugh')
     
     featured_projects = Project.objects.filter(is_enabled=True, is_featured=True)
-    recent_posts = Post.objects.public()[:3]
+    recent_posts = Post.objects.public()[:2]
     
     data = {
         "featured_projects": featured_projects,
