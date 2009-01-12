@@ -13,6 +13,9 @@
 
 {% block blog_content %}
     <div class="entryMetadata">
+        {% ifnotequal post.status "public" %}
+            <p>POST STATUS: {{ post.status }}</p>
+        {% endifnotequal %}
     	<h3 class="entry_title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
     	<div class="commentsMetaData">
     		<span class="type">Comments:</span>
