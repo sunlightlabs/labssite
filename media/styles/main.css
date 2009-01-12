@@ -14,8 +14,8 @@ a:active{outline: none; color: #465a72}
 body{
 	color:#433735;
 	background: #fff;
-	font-size: 76%;
-  	line-height: 22px;
+	font-size: 80%;
+  	line-height: 23px;
   	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -468,7 +468,7 @@ div.commentsMetaData{
 	width: 35px;
 }
 
-div#commentHeader{
+li.commentGravatar div#commentHeader{
 	float: left;
 	width: 100px;
 	margin-right: 5px;
@@ -549,11 +549,9 @@ div#comments ol li{
 	min-height: 65px;
 }
 
-div#comments ol#comments p{
-	margin-right: 105px;
+div#comments ol#comments li.commentGravatar p.entry-content{
+	margin-left: 105px;
 }
-
-
 
 li.hentry abbr, li.hentry span{
 	font-size: 95%;
