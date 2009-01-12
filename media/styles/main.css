@@ -549,6 +549,10 @@ div#comments ol li{
 	min-height: 65px;
 }
 
+div#comments ol#comments p{
+	margin-right: 105px;
+}
+
 
 
 li.hentry abbr, li.hentry span{

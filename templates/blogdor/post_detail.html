@@ -57,7 +57,7 @@
         <div id="comments">
             <h3>Comments</h3>
             {% if comment_list %}
-                <ol>
+                <ol id="comments">
                     {% for comment in comment_list %}
                         <li>
 							<div id="commentHeader">
@@ -71,6 +71,7 @@
                             {% endif %}
 							</div>
                             <p>{{ comment.comment|markdown }}</p>
+							<div class="clear"></div>
                         </li>
                     {% endfor %}
                 </ol>
