@@ -106,7 +106,7 @@ TWITTER_USERNAME = 'sunlightlabs'
 
 GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com']
 
-GRAVATAR_SIZE = 40
+GRAVATAR_SIZE = 60
 
 try:
     from local_settings import *

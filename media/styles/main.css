@@ -549,7 +549,7 @@ div#comments ol li{
 	min-height: 65px;
 }
 
-div#comments ol#comments li.commentGravatar p.entry-content{
+div#comments ol#comments li.commentGravatar div.entry-content{
 	margin-left: 105px;
 }
 
