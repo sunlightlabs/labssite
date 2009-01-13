@@ -472,8 +472,11 @@ li.commentGravatar div#commentHeader{
 	float: left;
 	width: 100px;
 	margin-right: 5px;
+	line-height: 18px;
 	display: block;
 }
+
+li.commentGravatar div#commentHeader img { margin-bottom: 10px; }
 
 div.hr { clear: both; background: url(/media/images/blogLine.png) bottom left no-repeat; height: 7px; }
 div.hr hr { display: none; }
