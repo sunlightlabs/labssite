@@ -106,6 +106,7 @@ TWITTER_USERNAME = 'sunlightlabs'
 
 GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com']
 
+GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site/images/avatar_new.jpg"
 GRAVATAR_SIZE = 60
 
 try:
