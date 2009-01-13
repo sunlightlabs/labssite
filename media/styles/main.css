@@ -244,10 +244,6 @@ h2#submitApp {
 	text-indent: -9999em;
 }
 
-div#contestPage{
-	
-}
-
 div#featuredProjects h2{
 	background: url(/media/images/featuredProjects.png) bottom left no-repeat;
 	text-indent: -9999em;
@@ -407,8 +403,9 @@ div#blog h3 a{
 	margin-left: 10px;
 	text-decoration: none;
 	color: #32211e;
-	font-size: 110%;
+	font-size: 115%;
 	font-weight: bold;
+	width: 400px;
 }
 
 div#ltColumn h4, div#ltColumn h3{
@@ -739,7 +736,7 @@ div#footerMain h4{
 	color: #fff;
 	font-weight: bold;
 	font-size: 120%;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 }
 
 div#footerMain a{
@@ -794,13 +791,6 @@ div.tip, p.tip {
 	text-align: center;
 	margin-bottom: 15px;
 }
-
-/*p.submit input{
-	width: 85px;
-	height: 27px;
-	border: 0 none;
-	text-indent: -9999em;
-}*/
 
 button.submit-send{
 	margin-left: 330px;
@@ -914,4 +904,12 @@ h3#personalHeader{
 
 div#fullColumn{
 	width: 765px;
+}
+
+div.orgName{
+	text-indent: -9999em;
+	background: url(/media/images/sunlightfoundation_logo.png) bottom center no-repeat;
+	width: 90px;
+	height: 44px;
+	margin-bottom: 3px;
 }
