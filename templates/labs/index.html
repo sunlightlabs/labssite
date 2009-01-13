@@ -17,7 +17,7 @@
 				{% for project in featured_projects %}
 				<li>
 					<h3><a href="{{ project.url }}">{{ project.name }}</a></h3>
-					<p>{{ project.description|markdown }}</p>
+					{{ project.description|markdown }}
 				</li>
 				{% endfor %}
 			</ul>	
@@ -48,7 +48,7 @@
     						</div>
     					</div>
     					{% ifequal post.markup 'markdown' %}
-                            <p>{{ post.excerpt|markdown|safe }}</p>
+                            {{ post.excerpt|markdown|safe }}
                         {% else %}
                             {% ifequal post.markup 'textile' %}
                                 <p>{{ post.excerpt|textile|safe }}</p>
