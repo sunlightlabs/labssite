@@ -913,3 +913,11 @@ div.orgName{
 	height: 44px;
 	margin-bottom: 3px;
 }
+
+ol.pagination {
+    text-align: center;
+}
+
+ol.pagination li {
+    display: inline;
+}

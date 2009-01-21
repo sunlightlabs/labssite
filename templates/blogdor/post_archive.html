@@ -50,6 +50,7 @@
 				<div class="readMore"><a href="{{ post.get_absolute_url }}">Read More</a></div>
 			</li>	
 			{% endfor %}
-		</ol>	
-	</div>
+		</ol>
+	</div>    
+	<p>Read more posts in our <a href="{% url blog_object_list %}">blog archive</a>.</p>
 {% endblock %}

@@ -2,10 +2,8 @@
 {% load markup %}
 
 {% block blog_content %}
-	
     <div id="blog">
     	<h2>Recent Posts</h2>
-    	<h3>Here are all of our posts that we wrote in {{ month|date:"F Y" }}.</h3>
 		<ol class="entries hfeed">
 		    {% for post in post_list %}
 			    <li class="hentry">
@@ -46,9 +44,20 @@
 				</li>
 			{% endfor %}
 		</ol>
-		<a href="{% url blog_archive_month previous_month.year, previous_month.month %}">{{ previous_month|date:"F Y" }}</a>
-		{% if next_month %}
-		    <a href="{% url blog_archive_month next_month.year, next_month.month %}">{{ next_month|date:"F Y" }}</a>
-		{% endif %}
+		<ol class="pagination">
+		    {% if page_obj.has_previous %}
+    		    <li><a href="{% url blog_object_list_page page_obj.previous_page_number %}">Previous</a></li>
+		    {% endif %}
+		    {% for page in paginator.page_range %}
+		        {% ifequal page page_obj.number %}
+    		        <li class="current">{{ page }}</li>
+    		    {% else %}
+    		        <li><a href="{% url blog_object_list_page page %}">{{ page }}</a></li>
+    		    {% endifequal %}
+		    {% endfor %}
+		    {% if page_obj.has_next %}
+    		    <li><a href="{% url blog_object_list_page page_obj.next_page_number %}">Next</a></li>
+		    {% endif %}
+		</ol>
 	</div>
 {% endblock %}

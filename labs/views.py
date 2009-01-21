@@ -17,6 +17,7 @@ def index(request):
         "featured_projects": featured_projects,
         "recent_posts": recent_posts,
     }
+    
     return render_to_response("labs/index.html", data)
     
 def blog_wrapper(request):
