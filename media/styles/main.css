@@ -83,42 +83,52 @@ div#nav li a{
 }
 
 li#nav_blog a{
-	width: 93px;
+	width: 77px;
 	background: url(/media/images/blogNav.png) left top no-repeat;
 }
 
 li#nav_blog a:hover, body.blog li#nav_blog a{
-	width: 93px;
+	width: 77px;
 	background: url(/media/images/blogNav.png) left bottom no-repeat;
 }
 
 li#nav_projects a{
-	width: 130px;
+	width: 112px;
 	background: url(/media/images/projectsNav.png) left top no-repeat;
 }
 
 li#nav_projects a:hover, body.projects li#nav_projects a{
-	width: 130px;
+	width: 112px;
 	background: url(/media/images/projectsNav.png) left bottom no-repeat;
 }
 
+li#nav_wiki a{
+	width: 77px;
+	background: url(/media/images/wikiNav.png) left top no-repeat;
+}
+
+li#nav_wiki a:hover{
+	width: 77px;
+	background: url(/media/images/wikiNav.png) left bottom no-repeat;
+}
+
 li#nav_about a{
-	width: 130px;
+	width: 114px;
 	background: url(/media/images/aboutNav.png) left top no-repeat;
 }
 
 li#nav_about a:hover, body.about li#nav_about a{
-	width: 130px;
+	width: 114px;
 	background: url(/media/images/aboutNav.png) left bottom no-repeat;
 }
 
 li#nav_contact a{
-	width: 130px;
+	width: 110px;
 	background: url(/media/images/contactNav.png) left top no-repeat;
 }
 
 li#nav_contact a:hover, body.contact li#nav_contact a{
-	width: 130px;
+	width: 110px;
 	background: url(/media/images/contactNav.png) left bottom no-repeat;
 }
 

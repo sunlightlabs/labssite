@@ -6,6 +6,8 @@ li#nav_projects a{  background: url("/media/images/projectsNav_8.png") top left 
 li#nav_projects a:hover, body.projects li#nav_projects a {  background: url("/media/images/projectsNav_8.png") bottom left no-repeat; }
 li#nav_blog a{  background: url("/media/images/blogNav_8.png") top left no-repeat; }
 li#nav_blog a:hover, body.blog li#nav_blog a {  background: url("/media/images/blogNav_8.png") bottom left no-repeat; }
+li#nav_wiki a{  background: url("/media/images/wikiNav_8.png") top left no-repeat; }
+li#nav_wiki a:hover{  background: url("/media/images/wikiNav_8.png") bottom left no-repeat; }
 li#nav_contact a{  background: url("/media/images/contactNav_8.png") top left no-repeat; }
 li#nav_contact a:hover, body.contact li#nav_contact a {  background: url("/media/images/contactNav_8.png") bottom left no-repeat; }
 
