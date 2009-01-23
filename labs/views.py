@@ -49,6 +49,6 @@ def contact_sent(request, form_class):
     return contact_form(request, form_class, template_name='contact_form/contact_form_sent.html')
     
 def image_wrapper(request, image_path):
-    image_path = "%s/images/%s" % (settings.MEDIA_URL, image_path)
+    image_path = "%simages/%s" % (settings.MEDIA_URL, image_path)
     data = {"image_path": image_path}
     return render_to_response("labs/image_wrapper.html", data)
