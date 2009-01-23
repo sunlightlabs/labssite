@@ -529,7 +529,7 @@ li.hentry{
 }
 
 div.post_content img{
-	margin: 5px 0 5px 0;
+	margin: 15px 0 15px 0;
 	border: 3px solid #d7d5d5;
 }
 
@@ -920,4 +920,8 @@ ol.pagination {
 
 ol.pagination li {
     display: inline;
+}
+
+div.post_content h3, div.post_content h4{
+	margin-top: 30px;
 }
