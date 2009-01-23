@@ -3,6 +3,8 @@
 {% load comments %}
 {% load markup %}
 
+{% block title %}{{ block.super }} - {{ post.title }}{% endblock %}
+
 {% block sidebar %}
     <div id="blogArchive">
     	<h3>More Posts</h3>
