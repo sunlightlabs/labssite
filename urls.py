@@ -43,6 +43,7 @@ urlpatterns = patterns('',
     url(r'^contact/sent/$', 'sunlightlabs.labs.views.contact_sent', {"form_class": LabsContactForm}),
     url(r'^contact/', include('contact_form.urls'), {"form_class": LabsContactForm, "fail_silently": False}),
     url(r'^contest/$', 'django.views.generic.simple.redirect_to', {'url': '/appsforamerica/'}),
+    url(r'^images/(?P<image_path>.*)$', 'sunlightlabs.labs.views.image_wrapper', name="image_wrapper"),
     url(r'^projects/$', 'sunlightlabs.labs.views.projects', name="projects"),
     url(r'^$', 'sunlightlabs.labs.views.index', name='index'),
 )
