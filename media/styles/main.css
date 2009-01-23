@@ -533,6 +533,11 @@ div.post_content img{
 	border: 3px solid #d7d5d5;
 }
 
+div.entry-summary img{
+	margin: 15px 0 15px 0;
+	border: 3px solid #d7d5d5;
+}
+
 div#comments{
 	margin-left: 10px;
 }
