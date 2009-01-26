@@ -104,6 +104,8 @@ MEDIASYNC_AWS_PREFIX = 'site'
 
 TWITTER_USERNAME = 'sunlightlabs'
 
+BLOGDOR_NOTIFY_ON_COMMENT = True
+
 GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com']
 
 GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site/images/avatar_new.jpg"
