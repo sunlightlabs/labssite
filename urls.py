@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
 from django import forms
-from blogdor.feeds import LatestPosts
+from blogdor.feeds import LatestComments, LatestPosts
 from contact_form.forms import ContactForm
 admin.autodiscover()
 
@@ -27,8 +27,14 @@ class LabsLatestPosts(LatestPosts):
     link = "/blog/feeds/latest/"
     description = "Latest blog updates from the nerds at Sunlight Labs"
 
+class LabsLatestComments(LatestComments):
+    title = "Sunlight Labs Blog Comments"
+    link = "/blog/feeds/comments/"
+    description = "Latest comments from the nerds that read the Sunlight Labs blog"
+    
 blog_feeds = {
     'latest': LabsLatestPosts,
+    'comments': LabsLatestComments,
 }
 
 urlpatterns = patterns('',
