@@ -1,5 +1,6 @@
 Created using Django r1.0-final-SVN-8961
 
+akismet
 django-blogdor
 django-gatekeeper
 django-twitter
