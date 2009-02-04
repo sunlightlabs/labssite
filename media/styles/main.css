@@ -166,6 +166,7 @@ div#featureBox h2{
 
 body.home h2{
 	background: url(/media/images/featureTitle.png) top left no-repeat;
+	width: 577px;
 }
 
 body.blog h2{
