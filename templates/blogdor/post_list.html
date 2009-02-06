@@ -46,6 +46,7 @@
     			{% endfor %}
     		</ol>
 		</div>
+		{% if page.has_other_pages %}
 		<ol class="pagination">
 		    {% if page_obj.has_previous %}
     		    <li><a href="{% url blog_object_list_page page_obj.previous_page_number %}">Previous</a></li>
@@ -61,5 +62,6 @@
     		    <li><a href="{% url blog_object_list_page page_obj.next_page_number %}">Next</a></li>
 		    {% endif %}
 		</ol>
+		{% endif %}
 	</div>
 {% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base_blog.html" %}
+
+{% block blog_content %}
+    <p>Tags</p>
+    <ol id="tags">
+        {% for tag in tag_list %}
+            <li><a href="{% url blog_tag_list tag.name %}" rev="tag">{{ tag.name }}</a></li>
+        {% endfor %}
+    </ol>
+{% endblock %}
