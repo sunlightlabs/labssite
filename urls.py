@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
 from django import forms
-from blogdor.feeds import LatestComments, LatestPosts
+from blogdor.feeds import LatestComments, LatestPosts, LatestByTag
 from contact_form.forms import ContactForm
 admin.autodiscover()
 
@@ -23,27 +23,29 @@ class LabsContactForm(ContactForm):
                 label=u'Comment')
 
 class LabsLatestPosts(LatestPosts):
-    title = "Sunlight Labs Blog"
-    link = "/blog/feeds/latest/"
-    description = "Latest blog updates from the nerds at Sunlight Labs"
+    feed_title = "Sunlight Labs blog"
+    feed_description = "Latest blog updates from the nerds at Sunlight Labs"
 
 class LabsLatestComments(LatestComments):
-    title = "Sunlight Labs Blog Comments"
-    link = "/blog/feeds/comments/"
-    description = "Latest comments from the nerds that read the Sunlight Labs blog"
+    feed_title = "Sunlight Labs blog comments"
+    feed_description = "Latest comments from the nerds that read the Sunlight Labs blog"
+
+class LabsLatestByTag(LatestByTag):
+    feed_title = "Sunlight Labs loves %s"
+    feed_description = "Posts from the Sunlight Labs blog tagged with '%s'"
     
 blog_feeds = {
     'latest': LabsLatestPosts,
     'comments': LabsLatestComments,
+    'tag': LabsLatestByTag,
 }
 
 urlpatterns = patterns('',
-    #url(r'^about/$', 'sunlightlabs.labs.views.about', name="about"),
     url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
     url(r'^admin/(.*)', admin.site.root, name='admin'),
     url(r'^appsforamerica/', include('sunlightlabs.appcontest.urls')),
     url(r'^blog/comments/', include('django.contrib.comments.urls')),
-    url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="latest_blog_feed"),
+    url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="blogdor_feeds"),
     url(r'^blog/$', 'sunlightlabs.labs.views.blog_wrapper'),
     url(r'^blog/', include('blogdor.urls')),
     url(r'^contact/sent/$', 'sunlightlabs.labs.views.contact_sent', {"form_class": LabsContactForm}),

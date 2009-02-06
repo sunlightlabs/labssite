@@ -75,6 +75,7 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'tagging',
     'sunlightcore',
     'gatekeeper',
     'djitter',
@@ -111,6 +112,7 @@ GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlig
 
 GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site/images/avatar_new.jpg"
 GRAVATAR_SIZE = 60
+FORCE_LOWERCASE_TAGS = True
 
 try:
     from local_settings import *
