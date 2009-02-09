@@ -38,11 +38,11 @@
         		<span class="value">{{ post.date_published|date:"F j Y" }}</span>
         	</div>    
     	{% endif %}
-        {% with post.tags as tags %}
+        {% with post.get_tags as tags %}
             {% if tags %}
                 &nbsp;&nbsp;&nbsp;<span class="type">Tags:</span>
                 {% for tag in tags %}
-                <a href="{% url blog_tag_list tag.name %}" rel="tag">{{ tag.name }}</a>&nbsp;
+                    <a href="{% url blog_tag_list tag.name %}" rel="tag">{{ tag.name }}</a>&nbsp;
                 {% endfor %}
                 {% comment %}
                 <div class="tags">
