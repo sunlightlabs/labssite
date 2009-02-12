@@ -24,7 +24,7 @@ div#ltColumn p{
 }
 
 div#headerWrapper{
-	background: url(/media/images/wrapperBg4.jpg) top center repeat-x;
+	background: url(/media/images/wrapperBg5.jpg) top center repeat-x;
 }
 
 div#pageMain{
@@ -41,20 +41,20 @@ div#feature{
 }
 
 div#pageMain{
-	background: url(/media/images/mainBg6.jpg) top center no-repeat;
+	background: url(/media/images/mainBg7.jpg) top center no-repeat;
 	margin: 0 auto 0 auto;
 	width: 959;
 }
 
 div#header{
-	height: 146px;
+	height: 155px;
 }
 
 div#header h1{
 	float: left;
-	width: 257px;
+	width: 308px;
 	height: 97px;
-	margin-top: 20px;
+	margin-top: 30px;
 	margin-left: 60px;
 }
 
@@ -73,7 +73,7 @@ div#nav{
 
 div#nav li{
 	float: left;
-	margin-top: 100px;
+	margin-top: 115px;
 }
 
 div#nav li a{
@@ -141,582 +141,41 @@ div#paperEdge{
 }
 
 div#mainContent{
-	padding-left: 72px;
-	background: url(/media/images/mainPaper_header.jpg) left top no-repeat;
+	padding-left: 85px;
+	background: url(/media/images/mainPaper_header2.jpg) left top no-repeat;
 }
 
 div#ltColumn{
-	width: 440px;
+	width: 410px;
 	float: left;
+}
+
+div#rtColumn{
+	margin-left: 445px;
+	width: 290px;
 }
 
 div#featureBox{
-	height: 212px;
-	padding-top: 80px;
-	padding-bottom: 15px;
-}
-
-div#featureBox h2{
-	text-indent: -9999em;
-	display: block;
-	height: 30px;
-	width: 577px;
-	margin-left: 20px;
-}
-
-body.home h2{
-	background: url(/media/images/featureTitle.png) top left no-repeat;
-}
-
-body.blog h2{
-	background: url(/media/images/blogTitle.png) top left no-repeat;
-}
-
-body.about h2{
-	background: url(/media/images/aboutTitle.png) top left no-repeat;
-}
-
-body.contact h2{
-	background: url(/media/images/contactHeader.png) top left no-repeat;
-}
-
-body.projects h2.projects{
-	background: url(/media/images/projectsTitle.png) top left no-repeat;
-	z-index: 2;
-	position: absolute;
-}
-
-div#projectsImage{
-	background: url(/media/images/projectsHeader.png) bottom left no-repeat;
-	height: 214px;
-	width: 630px;
-	margin-top: -14px;
-	margin-left: 110px;
-}
-
-div#contactImage{
-	background: url(/media/images/contactImage.png) bottom left no-repeat;
-	height: 160px;
-	width: 538px;
-	margin-top: 15px;
-	margin-left: 190px;
-}
-
-div#blogImage{
-	background: url(/media/images/blogHeader.png) bottom left no-repeat;
-	height: 214px;
-	width: 630px;
-	margin-top: -45px;
-	margin-left: 140px;
-}
-
-div#aboutImage{
-	background: url(/media/images/aboutHeader.png) bottom left no-repeat;
-	height: 182px;
-	width: 689px;
-	margin-top: -13px;
-}
-
-div#contestImage{
-	background: url(/media/images/contestImage.png) bottom left no-repeat;
-	height: 214px;
-	width: 530px;
-	margin: -65px 0 0 110px;
-}
-
-div#whoWeAre h2{
-	background: url(/media/images/whoWeAre.png) bottom center no-repeat;
-	text-indent: -9999em;
-	margin-bottom: 10px;
-}
-
-h2#previewSubmit{
-	background: url(/media/images/previewAppSubmit.png) bottom center no-repeat;
-	text-indent: -9999em;
-	margin-bottom: 10px;
-}
-
-h2#appTitles{
-	background: url(/media/images/submittedAppsTitle.png) bottom center no-repeat;
-	text-indent: -9999em;
-	margin-bottom: 10px;
-}
-
-div#contestPage h2{
-	background: url(/media/images/contestTitle.png) bottom center no-repeat;
-	text-indent: -9999em;
-	margin-bottom: 10px;
-}
-
-h2#submitApp {
-	background: url(/media/images/submitAppBtn.png) top center no-repeat;
-	margin-bottom: 25px;
-	text-indent: -9999em;
-}
-
-div#featuredProjects h2{
-	background: url(/media/images/featuredProjects.png) bottom left no-repeat;
-	text-indent: -9999em;
-	width: 93px;
-	height: 45px;
-	margin-left: 92px;
-	/*padding-top: 23px;*/
-	display: block;
-	top: 15px;
-	position: relative;
-}
-
-div#featuredHeader{
-	background: url(/media/images/featureArrow.png) bottom left no-repeat;
-	width: 400px;
-	height: 75px;
-}
-
-div#featuredProjects{
-	border-bottom: 1px solid #625553;
+	width: 730px;
+	margin-bottom: 50px;
 	padding-bottom: 30px;
+	border-bottom: 1px solid #07214c;
 }
 
-div#featuredProjects p{
-	padding-bottom: 10px;
-}
-
-div#featuredProjects ul{
-	padding-left: 92px;
-}
-
-div#featuredProjects h4 a{
-	color: #32211E;
+h2#secondLogo{
+	margin-bottom: 20px;
 	font-weight: bold;
-	text-decoration: none;
-}
-
-div#featureBox ul{
-	padding-left: 30px;
-}
-
-div#featureBox li{
-	float: left;
-	margin: 0 10px 0 0;
-}
-
-li#idea {
-	text-indent: -9999em;
-	display: block;
-	height: 165px;
-	width: 124px;
-	background: url(/media/images/drawing1.png) top left no-repeat;
-}
-
-li#mess {
-	text-indent: -9999em;
-	display: block;
-	height: 165px;
-	width: 141px;
-	background: url(/media/images/drawing2.png) top left no-repeat;
-}
-
-li#developer {
-	text-indent: -9999em;
-	display: block;
-	height: 165px;
-	width: 267px;
-	background: url(/media/images/drawing3.png) top left no-repeat;
-}
-
-li#sunlight {
-	text-indent: -9999em;
-	display: block;
-	height: 165px;
-	width: 129px;
-	background: url(/media/images/drawing4.png) top left no-repeat;
-}
-
-li#api{
-	padding-left: 90px;
-	background: url(/media/images/api_icon.png) top left no-repeat;
-}
-
-li#api h2{
-	background: url(/media/images/APIs_title.png) top left no-repeat;
-	text-indent: -9999em;
-}
-
-body.home div#whatWeDo{
-	padding-bottom: 40px;
-	border-bottom: 1px solid;
-}
-
-div#whatWeDo dt a:link, div#whatWeDo dt a:visited, div#whatWeDo dt a:hover, div#whatWeDo dt a:active{
-	float: left;
-	display: block;
-	font-weight: bold;
-	color: #32211e;
-	text-decoration: none;
-}
-
-div#whatWeDo h2{
-	padding-bottom: 10px;
-}
-
-div#whatWeDo li{
-	padding-bottom: 25px;
-}
-
-div#whatWeDo dd{
-	padding-bottom: 4px;
-}
-
-li#open_source{
-	padding-left: 90px;
-	background: url(/media/images/open_icon.png) top left no-repeat;
-}
-
-li#open_source h2{
-	background: url(/media/images/opensource_title.png) top left no-repeat;
-	text-indent: -9999em;
-}
-
-li#data_dumps{
-	padding-left: 90px;
-	background: url(/media/images/data_icon.png) top left no-repeat;
-}
-
-li#data_dumps h2{
-	background: url(/media/images/datadumps_title.png) top left no-repeat;
-	text-indent: -9999em;
-}
-
-body.home div#blog{
-	padding-top: 30px;
-}
-
-div#blog h2{
-	margin: 0 0 20px 155px;
-	text-indent: -9999em;
-	width: 124px;
-	height: 25px;
-	background: url(/media/images/recentPosts.png) top center no-repeat;
-}
-
-div#blog h2 a{
-	display: block;
-	width: 124px;
-	height: 25px;
-}
-
-div#blog h3.entry_title{
-	float: left;
-}
-
-div#blog h3 a{
-	margin-left: 10px;
-	text-decoration: none;
-	color: #32211e;
-	font-size: 115%;
-	font-weight: bold;
-	width: 400px;
+	font-size: 180%;
+	padding-top: 80px;
 }
 
 div#ltColumn h4, div#ltColumn h3{
 	font-weight: bold;
 }
 
-div#blogArchive{
-	width: 295px;
-	padding-left: 472px;
-	margin-bottom: 30px;
-	margin-top: 5px;
-}
-
-div#blogArchive h3{
-	text-indent: -9999em;
-	background: url(/media/images/morePosts.png) top center no-repeat;
-	padding-bottom: 5px;
-}
-
-div#blogArchive li{
-	border-bottom: 1px solid #8695a3;
-	margin: 10px 8px 10px 0;
-}
-
-div#blogArchive li a{
-	text-decoration: none;
-	color: #0f2557;
-}
-
-div#blogArchive span.date {
-	color: ##7A6764;
-	font-size: 85%;
-	font-style: oblique;
-}
-
-div.commentsMetaData span.type{
-	text-indent: -9999em;
-	float: left;
-}
-
-div.commentsMetaData span.value a{
-	text-align: center;
-	display: block;
-	text-decoration: none;
-	color: #32211e;
-	width: 25px;
-	height: 28px;
-	background: url(/media/images/commentBox.png) right center no-repeat;
-}
-
-div.commentsMetaData span.value{
-	display: block;
-}
-
-div.commentsMetaData{
-	float: right;
-	width: 35px;
-}
-
-li.commentGravatar div#commentHeader{
-	float: left;
-	width: 100px;
-	margin-right: 5px;
-	line-height: 18px;
-	display: block;
-}
-
-li.commentGravatar div#commentHeader img { margin-bottom: 10px; }
-
-div.hr { clear: both; background: url(/media/images/blogLine.png) bottom left no-repeat; height: 7px; }
-div.hr hr { display: none; }
-
-
-div.authorMetaData{
-	font-style: oblique;
-	float: left;
-	color: #312422;
-	font-size: 85%;
-	margin: -2px 5px 0 10px;
-}
-
-div.updatedMetaData span.type{
-	float: left;
-	text-indent: -9999em;
-}
-
-div.updatedMetaData span.value{
-	display: block;
-	font-style: oblique;
-	color: #7a6764;
-	font-size: 85%;
-	margin-top: -2px;
-	margin-left: 150px;
-}
-
-div.entry p{
-	margin: 6px 0 13px 10px;
-}
-
-div.post_content{
-	margin: 6px 0 40px 10px;
-}
-
-div.readMore{
-	width: 77px;
-	height: 14px;
-}
-
-div.readMore a{
-	text-indent: -9999em;
-	background: url(/media/images/readMore.png) bottom left no-repeat;
-	width: 77px;
-	height: 14px;
-	display: block;
-	margin-left: 10px;
-}
-
-
-li.hentry{
-	margin-bottom: 40px;
-}
-
-div.post_content img{
-	margin: 8px 0 15px 0;
-	border: 3px solid #d7d5d5;
-}
-
-div.entry-summary img{
-	margin: 15px 0 15px 0;
-	border: 3px solid #d7d5d5;
-}
-
-div#comments{
-	margin-left: 10px;
-}
 
 div#ltColumn form {
-	margin-top: 40px;
-}
-
-div#comments ol li{
-	padding-bottom: 5px;
-	border-bottom: 1px solid #b5b3b1;
-	margin-top: 5px;
-	height: auto !important;
-	min-height: 65px;
-}
-
-div#comments ol#comments li.commentGravatar div.entry-content{
-	margin-left: 105px;
-}
-
-li.hentry abbr, li.hentry span{
-	font-size: 95%;
-}
-
-div.sendEmail a{
-	display: block;
-	padding-top: 3px;
-	font-weight: bold;
-}
-
-
-div#helpBox{
-	margin-top: -15px;
-	margin-left: 452px;
-	text-indent: -9999em;
-	width: 325px;
-	height: 260px;
-	background: url(/media/images/helpBox.png) top left no-repeat;
-	margin-bottom: 20px;
-}
-
-div#helpBox h3{
-	float: left;
-}
-
-div#helpBox p{
-	float: left;
-}
-
-div#helpBox a{
-	display: block;
-	width: 325px;
-	height: 240px;
-}
-
-div#workBoxWrapper{
-	width: 366px;
-	height: 354px;
-	text-indent: -9999em;
-	background: url(/media/images/postit_notes.png) bottom left no-repeat;
-	margin: 20px 0 0 525px;
-}
-
-div#workBox{
-	background: url(http://assets.sunlightlabs.com/site/images/labstweets.png) bottom left no-repeat;
-	width: 300px;
-	height: 220px;
-	padding-top: 80px;
-	margin-left: 20px;
-}
-
-div#heroes, div#recentlySubmitted{
-	width: 295px;
-	margin-left: 472px;
-}
-
-div#heroes{
 	margin-top: 20px;
-}
-
-div#recentlySubmitted{
-	margin-bottom: 30px;
-}
-
-div#heroes li{
-	height: 87px;
-	border-bottom: 1px solid #e9e6db;
-	padding-bottom: 10px;
-	padding-top: 10px;
-}
-
-div#heroes h3{
-	background: url(/media/images/heroesTitle.png) bottom center no-repeat;
-	text-indent: -9999em;
-	margin-bottom: 20px;
-}
-
-div#recentlySubmitted h3{
-	background: url(/media/images/recentSubmitsBtn.png) bottom center no-repeat;
-	text-indent: -9999em;
-	margin-bottom: 20px;
-}
-
-div#heroes span{
-	display: block;
-}
-
-img.smImage{
-	float: left;
-	padding-right: 10px;
-}
-
-span.name{
-	padding-top: 12px;
-	font-weight: bold;
-	font-size: 105%;
-	line-height: 10px;
-}
-
-span.location{
-	font-style: oblique;
-}
-
-li.emptyPhoto{
-	padding-left: 100px;
-}
-
-span.organization a{
-	text-decoration: none;
-	color: #0f2557;
-}
-
-div#contestBox{
-	background: url(/media/images/appsAmericaTile.png) bottom left no-repeat;
-	width: 294px;
-	height: 131px;
-	margin-left: 468px;
-	text-indent: -9999em;
-	margin-bottom: 30px;
-}
-
-div#contestBox a{
-	display: block;
-	width: 294px;
-	height: 131px;
-}
-
-div#contestBox h3{
-	float: left;
-}
-
-div#contestPage ul, div.post_content ul, ul#contestList {
-	list-style-type: circle;
-	margin-left: 20px;
-	margin-bottom: 15px;
-}
-
-dl#appDescriptions dt{
-	font-weight: bold;
-}
-
-dl#appDescriptions dd{
-	margin-bottom: 18px;
-}
-
-div#contestPage ol, div.post_content ol{
-	list-style-type: decimal;
-	margin-left: 20px;
-	margin-bottom: 15px;
 }
 
 
@@ -783,22 +242,28 @@ div#comments h3{
 	font-size: 120%;
 	color: #273451;
 	font-weight: bold;
-	margin-bottom: 10px;
+	text-align: center;
 }
 
-form { margin: 1em; }
-form p, form li { margin-bottom: 10px; }
-form p label, form li label { width: 90px; float: left; text-align: right; padding-right: 15px;}
-input#id_name, input#id_email, input#id_url, input#id_logo_url, input#id_source_url, input#id_contact_display, input#id_contact_name, input#id_contact_email, textarea, input#id_quick_description, input#id_contact_url { background: #f3f1ec !important; border: 1px dashed #c3c0b5; padding: .5em; color: #413b3b; width: 280px; }
 
-form ul#contestForm p, form ul#contestForm li, form ul#personalForm p, form ul#personalForm li { margin-bottom: 18px; }
-form ul#contestForm p label, form ul#contestForm li label, form ul#personalForm p label, form ul#personalForm li label { width: 210px; line-height: 18px;}
-ul#contestForm input#id_name, ul#contestForm input#id_email, ul#contestForm input#id_url, ul#contestForm input#id_logo_url, ul#contestForm input#id_source_url, ul#contestForm input#id_contact_display, ul#contestForm input#id_contact_name, ul#contestForm input#id_contact_email, ul#contestForm textarea, ul#contestForm input#id_quick_description, ul#personalForm input#id_name, ul#personalForm input#id_email, ul#personalForm input#id_url, ul#personalForm input#id_logo_url, ul#personalForm input#id_source_url, ul#personalForm input#id_contact_display, ul#personalForm input#id_contact_name, ul#personalForm input#id_contact_email, ul#personalForm textarea, ul#personalForm input#id_contact_url { width: 330px; }
+div#ltColumn form p label, div#ltColumn form li label { float: left; text-align: right; padding-right: 15px;}
+
+form p, form li { margin-bottom: 10px; }
+form p label, form li label { width: 90px; display: block;}
+input#id_name, input#id_email, input#title, input#id_url, textarea { background: #f3f1ec !important; border: 1px dashed #c3c0b5; padding: .5em; color: #413b3b; width: 280px; }
 
 
 form textarea#id_comment{
 	margin-bottom: 20px;
 }
+
+div#rtColumn h3{
+	margin-bottom: 15px;
+	font-weight: bold;
+	font-size: 120%;
+	text-align: center;
+}
+
 
 div.tip, p.tip {
 	font-size: 85%;
@@ -807,8 +272,9 @@ div.tip, p.tip {
 	margin-bottom: 15px;
 }
 
-button.submit-send{
-	margin-left: 330px;
+div#rtColumn button.btnSubmit, div#ltColumn button.btnSubmit{
+	margin-top: 20px;
+	margin-left: 210px;
 	background: url(/media/images/submitBtn.png) bottom right no-repeat;
 	border: none;
 	text-indent: -9999em;
@@ -818,51 +284,10 @@ button.submit-send{
 	cursor: pointer;
 }
 
-button.submit-post{ 
-	background: url(/media/images/postBtn.png) bottom right no-repeat;
-	border: none;
-	text-indent: -9999em;
-	display: block;
-	width: 85px;
-	height: 27px;
-	float: right;
-	cursor: pointer;
+div#ltColumn button.btnSubmit{
+	margin-left: 310px;
 }
 
-button.submit-preview{ 
-	border: none;
-	width: 85px;
-	height: 27px;
-	text-indent: -9999em;
-	display: block;
-	background: url(/media/images/previewBtn.png) bottom right no-repeat;
-	margin-left: 230px;
-	cursor: pointer;
-}
-
-button.submit-app{ 
-	border: none;
-	width: 152px;
-	height: 27px;
-	text-indent: -9999em;
-	display: block;
-	background: url(/media/images/submitApp.png) bottom right no-repeat;
-	margin-left: 275px;
-	cursor: pointer;
-	margin-top: 30px;
-}
-
-button.preview-app{ 
-	border: none;
-	width: 176px;
-	height: 27px;
-	text-indent: -9999em;
-	display: block;
-	background: url(/media/images/previewAppBtn.png) bottom right no-repeat;
-	margin-left: 400px;
-	cursor: pointer;
-	margin-top: 30px;
-}
 
 body.contact div#ltColumn p{
 	font-size: 130%;
@@ -896,16 +321,6 @@ div#ltColumn h2.contact{
 	margin: 0 0 20px 105px
 }
 
-h2#appName{
-	font-weight: bold;
-	font-size: 120%;
-	margin-bottom: 15px;
-}
-
-#app_list li.app .entry-title { font-weight: bold; }
-#app_list li.app p.entry-summary { margin-bottom: 0; }
-#app_list li.app address { display: inline; }
-
 h3.formh3{
 	font-weight: bold;
 	text-align: center;
@@ -917,9 +332,6 @@ h3#personalHeader{
 	margin-bottom: 15px;
 }
 
-div#fullColumn{
-	width: 765px;
-}
 
 div.orgName{
 	text-indent: -9999em;
@@ -929,14 +341,54 @@ div.orgName{
 	margin-bottom: 3px;
 }
 
-ol.pagination {
+div#pagination {
     text-align: center;
 }
 
-ol.pagination li {
-    display: inline;
+
+div.btnVote {
+	background: url(/media/images/voteBtn.png) bottom center no-repeat;
+	float:left;
+	height:86px;
+	margin-top:6px;
+	width:64px;
 }
 
-div.post_content h3, div.post_content h4{
-	margin-top: 30px;
+div.btnVote a {
+	display:block;
+	height:63px;
+	text-indent:-9999em;
+	width:64px;
 }
+
+div.voteContent {
+	height: auto !important;
+	margin-left: 80px;
+	min-height: 100px;
+}
+
+div.btnVote div.votesCounted {
+	color:#303132;
+	text-align:center;
+	width:64px;
+	font-size: 85%;
+}
+
+div.commentMeta{
+	font-size: 85%;
+	font-style: oblique;
+	margin-bottom: 10px;
+	display: block;
+}
+
+div#idea p, div#idea{
+	margin-bottom: 30px;
+	display: block;
+}
+
+div#ideas li{
+	margin-bottom: 20px;
+}
+
+
+li{list-style: none;}
