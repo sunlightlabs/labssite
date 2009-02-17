@@ -937,6 +937,15 @@ ol.pagination li {
     display: inline;
 }
 
+div.post_content h1 {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+div.post_content h2 {
+    font-weight: bold;
+}
+
 div.post_content h3, div.post_content h4{
 	margin-top: 30px;
 }
