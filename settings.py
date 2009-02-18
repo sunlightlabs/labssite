@@ -80,6 +80,7 @@ INSTALLED_APPS = (
     'gatekeeper',
     'djitter',
     'blogdor',
+    'showcase',
     'sunlightlabs.labs',
     'sunlightlabs.appcontest',
 )

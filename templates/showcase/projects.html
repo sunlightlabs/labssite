@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load labs %}
+{% load markup %}
+
+{% block body %}projects{% endblock %}
+
+{% block feature %}
+    <h2 class="projects">We Build Wonders Out of Rubble</h2>
+    <div id="projectsImage"></div>
+{% endblock %}
+
+{% block sidebar %}
+    {{ block.super }}
+    {% recent_tweets 2 %}
+{% endblock %}
+
+{% block content %}
+    {% regroup project_list by category as projects %}
+
+    <div id="whatWeDo">
+        <ul>
+            {% for pg in projects %}
+                <li id="{{pg.grouper.slug}}">
+                <h2>{{pg.grouper.name}}</h2>
+                <dl>
+                    {% for proj in pg.list %}
+                    <dt><a href="{{ proj.get_absolute_url }}">{{ proj.name }}&nbsp;-&nbsp;</a></dt>
+                    <dd>{{ proj.short_description|markdown }}</dd>
+                    {% endfor %}
+                </dl>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
