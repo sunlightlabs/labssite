@@ -17,7 +17,7 @@
 				{% for project in featured_projects %}
 				<li>
 					<h3><a href="{{ project.url }}">{{ project.name }}</a></h3>
-					{{ project.description|markdown }}
+					{{ project.short_description|markdown }}
 				</li>
 				{% endfor %}
 			</ul>	
