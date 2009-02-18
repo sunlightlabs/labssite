@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load labs %}
+{% load markup %}
+
+{% block title %} {{block.super}} - {{project.name}} {% endblock title %}
+
+{% block body %}projects{% endblock %}
+
+{% block sidebar %}
+    {{ block.super }}
+    {% recent_tweets 2 %}
+{% endblock %}
+
+{% block content %}
+    <div id="project_detail">
+        <h1>{{ project.name }} </h1>
+
+        <p>{{ project.description }}</p>
+
+        {% if project.links.count %}
+            <ul>
+            {% for link in project.links.all %}
+                <li><a class="{{ link.link_type }}_link" href="{{ link.url }}">{{ link.name }}</a></li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if latest_commits %}
+            <ul>
+            {% for commit in latest_commits %}
+                <li><a href="{{ commit.url }}">{{ commit.short_id }}</a>: {{commit.message}}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endblock %}
