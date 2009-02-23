@@ -34,6 +34,7 @@
 						<span class="value">{{ post.date_published|date:"F j Y" }}</span>
 					</div>
 				</div>
+				<div class="entry-summary">
 				{% ifequal post.markup 'markdown' %}
                     <p>{{ post.excerpt|markdown|safe }}</p>
                 {% else %}
@@ -47,6 +48,7 @@
                         {% endifequal %}
                     {% endifequal %}
                 {% endifequal %}
+				</div>
 				<div class="readMore"><a href="{{ post.get_absolute_url }}">Read More</a></div>
 			</li>	
 			{% endfor %}
