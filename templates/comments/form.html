@@ -1,6 +1,5 @@
 {% load comments %}
 <form action="{% comment_form_target %}" method="POST">
-<p class="tip"><a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a> is supported in comments.</p>
   {% for field in form %}
     {% if field.is_hidden %}
       {{ field }}
