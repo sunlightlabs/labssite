@@ -3,7 +3,6 @@ from django.forms.util import ErrorList
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render_to_response
 from sunlightlabs.appcontest.models import Entry, EntryForm
-import gatekeeper
 
 def index(request):
     pass
@@ -39,13 +38,13 @@ def submit(request):
     return render_to_response("appcontest/submit.html", {"form": form, "message": message})
 
 def app_list(request):
-    apps = gatekeeper.approved(Entry.objects.all())
+    apps = Entry.objects.all().approved()
     return render_to_response("appcontest/app_list.html", {"apps": apps})
 
 def app_detail(request, slug):
     try:
         app = Entry.objects.get(slug=slug)
-        if not request.user.is_superuser and not gatekeeper.approved(app):
+        if not request.user.is_superuser and not app.moderation_status == 1:
            raise Entry.DoesNotExist
         return render_to_response("appcontest/app_detail.html", {"app": app})
     except Entry.DoesNotExist:
