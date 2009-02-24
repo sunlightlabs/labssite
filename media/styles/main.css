@@ -425,7 +425,7 @@ div#ltColumn h4, div#ltColumn h3{
 div#blogArchive{
 	width: 295px;
 	padding-left: 472px;
-	margin-bottom: 30px;
+	margin-bottom: 45px;
 	margin-top: 5px;
 }
 
@@ -435,14 +435,53 @@ div#blogArchive h3{
 	padding-bottom: 5px;
 }
 
-div#blogArchive li{
+div#blogNav{
+	height: 32px;
+	padding-bottom: 12px;
+	background: url(/media/images/blogNav_line.png) bottom center no-repeat;
+}
+
+div#blogNav li{
+	float: left;
+	width: 111px;
+	height: 32px;
+	margin-left: 10px;
+}
+
+div#blogNav li a{
+	text-indent: -9999em;
+	width: 111px;
+	height: 32px;
+	display: block;
+}
+
+div#blogNav li#popular a{
+	background: url(/media/images/navPopular.png) top left no-repeat;
+}
+
+div#blogNav li#popular a:hover{
+	background: url(/media/images/navPopular.png) bottom left no-repeat;
+}
+
+div#blogNav li#favorites a{
+	background: url(/media/images/navFavorites.png) top left no-repeat;
+}
+
+div#blogNav li#favorites a:hover{
+	background: url(/media/images/navFavorites.png) bottom left no-repeat;
+}
+
+div#postsArchive li{
 	border-bottom: 1px solid #8695a3;
 	margin: 10px 8px 10px 0;
 }
 
+div#postsArchive{
+	margin: 0 7px;
+}
+
 div#blogArchive li a{
 	text-decoration: none;
-	color: #0f2557;
 }
 
 div#blogArchive span.date {
@@ -783,18 +822,19 @@ div#comments h3{
 	font-size: 120%;
 	color: #273451;
 	font-weight: bold;
-	margin-bottom: 10px;
 }
 
 form { margin: 1em;}
 body.contact form {background: url(/media/images/commentLines.png) bottom right no-repeat; height:350px;}
+div#comments form {background: url(/media/images/commentLines.png) 89px -30px no-repeat; height:390px;}
 
 form p, form li { margin-bottom: 10px; }
 form p label, form li label { width: 90px; float: left; text-align: right; padding-right: 15px;}
 input#id_name, input#id_email, textarea, input#id_url, input#id_logo_url, input#id_source_url, input#id_contact_display, input#id_contact_name, input#id_contact_email, input#id_quick_description, input#id_contact_url { background: #f3f1ec !important; border: 1px dashed #c3c0b5; padding: .5em; color: #413b3b; width: 280px; }
-body.contact form li{ border-bottom: dashed 1px #918f8f; border-top: dashed 1px #918f8f;}
-body.contact form li.submit{ border: none;}
-body.contact input#id_name, body.contact input#id_email, body.contact textarea{ background: #f5f4f2 !important; padding: .5em; color: #413b3b; width: 280px; border: none; margin-left: 4px;}
+body.contact form li, body.blog div#comments form p{ border-bottom: dashed 1px #918f8f; border-top: dashed 1px #918f8f;}
+body.contact form li.submit, body.blog div#comments form p.submit, body.blog div#comments form p.tip{ border: none;}
+body.contact input#id_name, body.contact input#id_email, body.contact textarea { background: #f5f4f2 !important; padding: .5em; color: #413b3b; width: 278px; border: none; margin-left: 6px;}
+body.blog input#id_name, body.blog input#id_email, body.blog input#id_url, body.blog textarea{ background: #f5f4f2 !important; padding: .5em; color: #413b3b; width: 278px; border: none; margin-left: 3px;}
 body.contact form ul{ padding-top: 5px;}
 
 form ul#contestForm p, form ul#contestForm li, form ul#personalForm p, form ul#personalForm li { margin-bottom: 18px; }
@@ -802,15 +842,15 @@ form ul#contestForm p label, form ul#contestForm li label, form ul#personalForm 
 ul#contestForm input#id_name, ul#contestForm input#id_email, ul#contestForm input#id_url, ul#contestForm input#id_logo_url, ul#contestForm input#id_source_url, ul#contestForm input#id_contact_display, ul#contestForm input#id_contact_name, ul#contestForm input#id_contact_email, ul#contestForm textarea, ul#contestForm input#id_quick_description, ul#personalForm input#id_name, ul#personalForm input#id_email, ul#personalForm input#id_url, ul#personalForm input#id_logo_url, ul#personalForm input#id_source_url, ul#personalForm input#id_contact_display, ul#personalForm input#id_contact_name, ul#personalForm input#id_contact_email, ul#personalForm textarea, ul#personalForm input#id_contact_url { width: 330px; }
 
 
-form textarea#id_comment{
-	margin-bottom: 20px;
-}
-
 div.tip, p.tip {
 	font-size: 85%;
 	font-style: oblique;
 	text-align: center;
 	margin-bottom: 15px;
+}
+
+div#comments p.tip{
+	text-align: left;
 }
 
 button.submit-send{
@@ -833,6 +873,7 @@ button.submit-post{
 	height: 27px;
 	float: right;
 	cursor: pointer;
+	margin-right: 13px;
 }
 
 button.submit-preview{ 
@@ -842,7 +883,7 @@ button.submit-preview{
 	text-indent: -9999em;
 	display: block;
 	background: url(/media/images/previewBtn.png) bottom right no-repeat;
-	margin-left: 230px;
+	margin-left: 205px;
 	cursor: pointer;
 }
 
@@ -968,4 +1009,22 @@ div.tags{
 div.tags li, div.tags span{
 	float: left;
 	padding-right: 10px;
+}
+
+div#project_detail li{
+	margin-bottom: 5px;
+	padding-left: 30px;
+	height: 22px;
+}
+
+div#project_detail li.source{
+	background: url(/media/images/sourceIcon.png) bottom left no-repeat;
+}
+
+div#project_detail li.documentation{
+	background: url(/media/images/documentationIcon.png) bottom left no-repeat;
+}
+
+div#project_detail li.download{
+	background: url(/media/images/downloadIcon.png) bottom left no-repeat;
 }
