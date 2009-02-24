@@ -20,7 +20,7 @@
         {% if project.links.count %}
             <ul>
             {% for link in project.links.all %}
-                <li><a class="{{ link.link_type }}_link" href="{{ link.url }}">{{ link.name }}</a></li>
+                <li class="{{ link.get_link_type_display }}"><a href="{{ link.url }}">{{ link.name }}</a></li>
             {% endfor %}
             </ul>
         {% endif %}

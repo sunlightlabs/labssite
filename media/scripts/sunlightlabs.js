@@ -1,5 +1,5 @@
 var max_width = 400;
-$(function() {
+$().reader(function() {
     $.getScript('http://services.sunlightlabs.com/brandingbar/hat_js/labs/');
     $('.post_content img').load(function(i) {
         var elem = $(this);
@@ -8,4 +8,5 @@ $(function() {
             elem.width(max_width).height(max_width / r);
         }
     });
+    $('')
 });
