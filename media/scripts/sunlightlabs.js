@@ -8,5 +8,4 @@ $().reader(function() {
             elem.width(max_width).height(max_width / r);
         }
     });
-    $('')
 });
