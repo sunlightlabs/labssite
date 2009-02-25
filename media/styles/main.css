@@ -408,14 +408,14 @@ div#blog h2 a{
 
 div#blog h3.entry_title{
 	float: left;
+	margin-left: 10px;
+	width: 380px;
 }
 
 div#blog h3 a{
-	margin-left: 10px;
 	text-decoration: none;
 	font-size: 115%;
 	font-weight: bold;
-	width: 400px;
 }
 
 div#ltColumn h4, div#ltColumn h3{
