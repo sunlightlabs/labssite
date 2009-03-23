@@ -81,8 +81,10 @@ INSTALLED_APPS = (
     'djitter',
     'blogdor',
     'showcase',
+    'simplesurvey',
     'sunlightlabs.labs',
     'sunlightlabs.appcontest',
+    'sunlightlabs.appjudging',
 )
 
 EMAIL_HOST = "smtp.sunlightlabs.com"
@@ -114,6 +116,8 @@ GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlig
 GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site/images/avatar_new.jpg"
 GRAVATAR_SIZE = 60
 FORCE_LOWERCASE_TAGS = True
+
+SIMPLESURVEY_COMPLETE_REDIRECT = "/judgeforamerica/"
 
 try:
     from local_settings import *

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load appcontest %}
+{% load labs %}
+{% load markup %}
+
+{% block title %}Judge for America{% endblock %}
+
+{% block body %}contest{% endblock %}
+
+{% block feature %}
+    <a href="/appsforamerica/">
+	    <h2 class="contest">Labs Contest</h2>
+	    <div id="contestImage"></div>
+    </a>
+{% endblock %}
+
+{% block sidebar %}
+    {% include "labs/sidebar_helpus.html" %}
+	{% heroes %}
+{% endblock %}

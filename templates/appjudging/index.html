@@ -1,0 +1,10 @@
+{% extends "appjudging/base.html" %}
+
+{% block content %}
+{{ judged_ids }}
+<ul>
+	{% for app in apps %}
+		<li><a href="{% url appjudging_app app.pk %}">{{ app }}</a>{% if app.judged %} &#x2713;{% endif %}</li>
+	{% endfor %}
+</ul>
+{% endblock %}
