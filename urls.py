@@ -56,6 +56,11 @@ urlpatterns = patterns('',
     url(r'^$', 'sunlightlabs.labs.views.index', name='index'),
 )
 
+urlpatterns += patterns('django.contrib.auth.views',
+    url(r'^login/$', 'login', name='login'),
+    url(r'^logout/$', 'logout_then_login', name='logout'),
+)
+
 if (settings.DEBUG):
     urlpatterns += patterns('',
         url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
