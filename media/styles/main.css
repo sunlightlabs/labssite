@@ -1028,3 +1028,9 @@ div#project_detail li.documentation{
 div#project_detail li.download{
 	background: url(/media/images/downloadIcon.png) bottom left no-repeat;
 }
+
+div#login h3 { font-size: 20px; }
+div#login ul li.submit { padding: 15px 0 0 100px; }
+
+ul#apps li { padding: 20px; }
+ul#apps li p { margin: 0; }

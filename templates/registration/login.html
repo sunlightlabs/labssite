@@ -2,23 +2,33 @@
 
 {% block content %}
 
-    {% if form.errors %}
-        <p>Your username and password didn't match. Please try again.</p>
-    {% endif %}
+    <div id="login">
 
-    <form method="post" action=".">
-        <table>
-            <tr>
-                <td>{{ form.username.label_tag }}</td>
-                <td>{{ form.username }}</td>
-            </tr>
-            <tr>
-                <td>{{ form.password.label_tag }}</td>
-                <td>{{ form.password }}</td>
-            </tr>
-        </table>
-        <input type="submit" value="login" />
-        <input type="hidden" name="next" value="{{ next }}" />
-    </form>
+        <h3>Hello, friend!</h3>
+        
+        <p>Would you be so kind as to login?</p>
+
+        {% if form.errors %}
+            <p>Your username and password didn't match. Please try again.</p>
+        {% endif %}
+
+        <form method="post" action=".">
+            <ul>
+                <li>
+                    {{ form.username.label_tag }}
+                    {{ form.username }}
+                </li>
+                <li>
+                    {{ form.password.label_tag }}
+                    {{ form.password }}
+                </li>
+                <li class="submit">
+                    <input type="submit" value="Let's give it a whirl..." />
+                    <input type="hidden" name="next" value="{{ next }}" />
+                </li>
+            </ul>
+        </form>
+    
+    </div>
 
 {% endblock %}

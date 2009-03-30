@@ -5,8 +5,26 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>{{ app.name }}</title>
+	<style type="text/css" media="screen">
+	    body { font-family: sans-serif; font-size: 86.7%; padding: 10px; }
+	    h1 { font-size: 16px; }
+	    ul { list-style: none; margin: 0; padding: 0; }
+	    ul li { margin: 30px 0; }
+	    label { display: block; margin: 0 0 10px 0; }
+	    p.description {
+            border-bottom: 1px solid #000;
+	        border-top: 1px solid #000;
+	        padding: 15px 0;
+	    }
+	</style>
 </head>
 <body>
+    <h1>{{ app.name }}</h1>
+    <p>
+        {% if app.url %}<a href="{{ app.url }}" target="_blank">App</a>{% endif %}
+        {% if app.source_url %}<a href="{{ app.source_url }}" target="_blank">Source</a>{% endif %}
+    </p>
+    <p class="description">{{ app.quick_description }}<br /><br /><a href="{% url appcontest_app_detail app.slug %}" target="_blank">Full description...</a></p>
 	<form action="{% url appjudging_submit %}" method="post" target="_top">
 		<ul>
 			{{ form.as_ul }}

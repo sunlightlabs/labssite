@@ -1,10 +1,14 @@
 {% extends "appjudging/base.html" %}
 
 {% block content %}
+    <h3>Submitted Applications</h3>
     {% if apps %}
-        <ul>
+        <ul id="apps">
         	{% for app in apps %}
-        		<li><a href="{% url appjudging_app app.pk %}">{{ app }}</a>{% if app.judged %} &#x2713;{% endif %}</li>
+        		<li>
+        		    <p><a href="{% url appjudging_app app.pk %}">{{ app }}</a>{% if app.judged %} &#x2713;{% endif %}</p>
+        		    <p>{{ app.quick_description }}</p>
+        		</li>
         	{% endfor %}
         </ul>
     {% else %}
