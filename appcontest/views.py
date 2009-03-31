@@ -27,7 +27,7 @@ def submit(request):
             else:
                 if "save" in request.POST:
                     form.save()
-                    return HttpResponseRedirect('/contest/')
+                    return HttpResponseRedirect('/appsforamerica/thanks/')
                 else:
                     app = form.cleaned_data
                     return render_to_response("appcontest/preview.html", {"form": form, "app": app})
