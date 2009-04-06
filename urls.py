@@ -62,6 +62,14 @@ urlpatterns += patterns('django.contrib.auth.views',
     url(r'^logout/$', 'logout_then_login', name='logout'),
 )
 
+#
+# redirects
+#
+
+urlpatterns += patterns('django.views.generic.simple',
+    url(r'^visualizingearmarks/$', 'redirect_to', {'url': 'http://blog.sunlightfoundation.com/projects/earmarks06/'}),
+)
+
 if (settings.DEBUG):
     urlpatterns += patterns('',
         url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
