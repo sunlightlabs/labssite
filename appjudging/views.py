@@ -25,7 +25,7 @@ def app_scorecard(request, app_id):
     qs = QuestionSet.objects.get(slug="appcontest")
 
     try:
-        aset = AnswerSet.objects.for_model(Entry).get(question_set=qs, user=request.user)
+        aset = AnswerSet.objects.for_model(Entry).get(question_set=qs, user=request.user, object_id=app.pk)
     except AnswerSet.DoesNotExist:
         aset = None
 
