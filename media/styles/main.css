@@ -720,9 +720,9 @@ span.organization a{
 }
 
 div#contestBox{
-	background: url(/media/images/appsAmericaTile.png) bottom left no-repeat;
-	width: 294px;
-	height: 131px;
+	background: url(/media/images/appsAmericaTile_2.png) bottom left no-repeat;
+	width: 295px;
+	height: 152px;
 	margin-left: 468px;
 	text-indent: -9999em;
 	margin-bottom: 30px;
@@ -730,8 +730,8 @@ div#contestBox{
 
 div#contestBox a{
 	display: block;
-	width: 294px;
-	height: 131px;
+	width: 295px;
+	height: 152px;
 }
 
 div#contestBox h3{
