@@ -40,7 +40,7 @@ blog_feeds = {
     'tag': LabsLatestByTag,
 }
 
-urlpatterns = patterns('',
+urlpatterns += patterns('',
     url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
     url(r'^admin/(.*)', admin.site.root, name='admin'),
     url(r'^appsforamerica/', include('sunlightlabs.appcontest.urls')),
@@ -67,6 +67,8 @@ urlpatterns += patterns('django.contrib.auth.views',
 #
 
 urlpatterns += patterns('django.views.generic.simple',
+    url(r'^research/familybusiness/$', 'redirect_to', {'url': 'http://research.sunlightprojects.org/research/familybusiness/'}),
+    url(r'^research/sites/$', 'redirect_to', {'url': 'http://research.sunlightprojects.org/research/sites/'}),
     url(r'^visualizingearmarks/$', 'redirect_to', {'url': 'http://blog.sunlightfoundation.com/projects/earmarks06/'}),
 )
 
