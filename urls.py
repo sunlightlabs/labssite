@@ -40,7 +40,7 @@ blog_feeds = {
     'tag': LabsLatestByTag,
 }
 
-urlpatterns += patterns('',
+urlpatterns = patterns('',
     url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
     url(r'^admin/(.*)', admin.site.root, name='admin'),
     url(r'^appsforamerica/', include('sunlightlabs.appcontest.urls')),
