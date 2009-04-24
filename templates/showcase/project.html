@@ -15,7 +15,7 @@
     <div id="project_detail">
         <h2 id="projectName">{{ project.name }}</h2>
 
-        <p>{{ project.description }}</p>
+        <p>{{ project.description|restructuredtext }}</p>
 
         {% if project.links.count %}
             <ul>
