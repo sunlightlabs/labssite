@@ -1,12 +1,8 @@
 from djitter.models import Account
 from django.conf import settings
-import base64
 import cStringIO
 import datetime
 import httplib
-import hmac
-import md5
-import sha
 import textwrap
 
 def generate_image(username=None, path=None):
@@ -66,6 +62,11 @@ def generate_image(username=None, path=None):
         imgbuffer.close()
 
 def s3_upload(content):
+    
+    import base64
+    import hmac
+    import md5
+    import sha
     
     bucket = settings.AWS_BUCKET
     path = '/site/images/labstweets.png'

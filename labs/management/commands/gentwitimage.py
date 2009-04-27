@@ -1,9 +1,6 @@
-from djitter.models import Account
 from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 from sunlightlabs.labs import genimage
-import Image, ImageDraw, ImageFont
-import textwrap
  
 class Command(BaseCommand):
     
