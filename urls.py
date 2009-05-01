@@ -69,7 +69,7 @@ urlpatterns += patterns('django.contrib.auth.views',
 urlpatterns += patterns('django.views.generic.simple',
     url(r'^research/familybusiness/$', 'redirect_to', {'url': 'http://research.sunlightprojects.org/research/familybusiness/'}),
     url(r'^research/sites/$', 'redirect_to', {'url': 'http://research.sunlightprojects.org/research/sites/'}),
-    url(r'^visualizingearmarks/$', 'redirect_to', {'url': 'http://blog.sunlightfoundation.com/projects/earmarks06/'}),
+    url(r'^visualizingearmarks/$', 'redirect_to', {'url': 'http://research.sunlightprojects.org/visualizingearmarks'}),
 )
 
 if (settings.DEBUG):
