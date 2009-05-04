@@ -9,12 +9,9 @@ from contact_form.views import contact_form
 from showcase.models import Project, FEATURED
 
 def index(request):
-
-    account = Account.objects.get(username='jcarbaugh')
-    
     featured_projects = Project.objects.filter(status=FEATURED)
     recent_posts = Post.objects.public()[:2]
-    
+
     data = {
         "featured_projects": featured_projects,
         "recent_posts": recent_posts,
