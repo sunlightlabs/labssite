@@ -968,7 +968,8 @@ div#fullColumn{
 	width: 765px;
 }
 
-div.orgName{
+a.orgName{
+    display: block;
 	text-indent: -9999em;
 	background: url(/media/images/sunlightfoundation_logo.png) bottom center no-repeat;
 	width: 90px;
