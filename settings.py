@@ -64,7 +64,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'sunlightlabs.urls'
 
 INSTALLED_APPS = (
-	'django.contrib.admin',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.comments',
     'django.contrib.contenttypes',
@@ -73,13 +73,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'tagging',
-    #'sunlightcore',
     'mediasync',
     'gatekeeper',
     'djitter',
     'blogdor',
     'showcase',
     'simplesurvey',
+    'registration',
     'sunlightlabs.labs',
     'sunlightlabs.appcontest',
     'sunlightlabs.appjudging',
@@ -116,6 +116,8 @@ GRAVATAR_SIZE = 60
 FORCE_LOWERCASE_TAGS = True
 
 SIMPLESURVEY_COMPLETE_REDIRECT = "/judgeforamerica/"
+
+ACCOUNT_ACTIVATION_DAYS = 7
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
