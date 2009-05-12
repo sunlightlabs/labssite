@@ -80,6 +80,7 @@ INSTALLED_APPS = (
     'showcase',
     'simplesurvey',
     'registration',
+    'newsfeed',
     'sunlightlabs.labs',
     'sunlightlabs.appcontest',
     'sunlightlabs.appjudging',
