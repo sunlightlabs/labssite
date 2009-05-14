@@ -26,7 +26,7 @@ def tweet_callback(sender, **kwargs):
     if not settings.DEBUG:
         account = kwargs['account']
         for tweet in reversed(kwargs['tweets']):
-            message = "%s (via %s)" % (tweet.message, tweet.sender.username)
+            message = "%s (via @%s)" % (tweet.message, tweet.sender.username)
             djitter.post(account, message[:140])
     genimage.generate_image()
 account_updated.connect(tweet_callback)
