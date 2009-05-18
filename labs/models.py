@@ -46,7 +46,7 @@ def validate_comment(sender, comment, request, **kwargs):
         'comment_author_url': comment.user_url,
         'comment_type': 'comment',
     }
-    is_spam = a.comment_check(comment.comment, akismet_data)
+    is_spam = a.comment_check(comment.comment.encode('ascii','ignore'), akismet_data)
     if is_spam:
         comment.is_public = False
 comment_will_be_posted.connect(validate_comment, sender=Comment)
