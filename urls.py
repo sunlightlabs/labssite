@@ -43,7 +43,7 @@ blog_feeds = {
 urlpatterns = patterns('',
     url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
     url(r'^admin/(.*)', admin.site.root, name='admin'),
-    url(r'^contest/', include('sunlightlabs.appcontest.urls')),
+    url(r'^contests/', include('sunlightlabs.appcontest.urls')),
     url(r'^blog/comments/', include('django.contrib.comments.urls')),
     url(r'^projects/', include('showcase.urls')),
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="blogdor_feeds"),
