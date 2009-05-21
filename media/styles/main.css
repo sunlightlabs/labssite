@@ -725,6 +725,16 @@ span.organization a{
 	color: #0f2557;
 }
 
+
+div#contestBox{
+	background: url(/media/images/appsAmericaTile_2.png) bottom left no-repeat;
+	width: 295px;
+	height: 174px;
+	margin-left: 468px;
+	text-indent: -9999em;
+	margin-bottom: 30px;
+}
+
 div#contestBox2{
 	background: url(/media/images/appsAmerica2_btn.png) bottom left no-repeat;
 	width: 295px;
@@ -734,13 +744,13 @@ div#contestBox2{
 	margin-bottom: 30px;
 }
 
-div#contestBox2 a{
+div#contestBox a, div#contestBox2 a{
 	display: block;
 	width: 295px;
 	height: 152px;
 }
 
-div#contestBox2 h3{
+div#contestBox h3, div#contestBox2 h3{
 	float: left;
 }
 

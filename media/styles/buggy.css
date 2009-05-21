@@ -63,6 +63,7 @@ body.about div#aboutImage { margin-top: -14px; }
 div#blogArchive { margin-left: 465px; padding-left: 0;}
 div#header h1{ margin-left: 30px;}
 
+div#contestBox {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/appsAmericaTile_2.png", sizingMethod="crop"); }
 div#contestBox2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/appsAmerica2_btn.png", sizingMethod="crop"); }
 
 div#contestPage h2 { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/contestTitle.png", sizingMethod="crop"); width: 75px; margin: 0 auto;}
@@ -80,11 +81,11 @@ div#helpBox a{
 	height: 240px;
 }
 
-div#contestBox2 h3{
+div#contestBox h3, div#contestBox2 h3{
 	float: left;
 }
 
-div#contestBox2 a{
+div#contestBox a, div#contestBox2 a{
 	position: relative;
 	display: block;
 	width: 294px;
