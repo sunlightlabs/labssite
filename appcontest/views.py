@@ -2,20 +2,20 @@ from django.template.defaultfilters import slugify
 from django.forms.util import ErrorList
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect, Http404
-from django.shortcuts import render_to_response
+from django.shortcuts import get_object_or_404, render_to_response
 from sunlightlabs.appcontest.models import Contest, Entry, EntryForm
 
 def index(request, contest):
-    contest = Contest.objects.get(slug=contest)
+    contest = get_object_or_404(Contest, slug=contest)
     return render_to_response('appcontest/index.html', {'contest':contest})
 
 def thanks(request, contest):
-    contest = Contest.objects.get(slug=contest)
+    contest = get_object_or_404(Contest, slug=contest)
     return render_to_response('appcontest/thanks.html', {'contest':contest})
 
 def submit(request, contest):
     message = None
-    contest = Contest.objects.get(slug=contest)
+    contest = get_object_or_404(Contest, slug=contest)
 
     if request.method == "POST" and contest.is_open():
         form = EntryForm(request.POST)
@@ -42,13 +42,13 @@ def submit(request, contest):
     return render_to_response("appcontest/submit.html", {"contest": contest, "form": form, "message": message})
 
 def app_list(request, contest):
-    contest = Contest.objects.get(slug=contest)
+    contest = get_object_or_404(Contest, slug=contest)
     apps = contest.entries.all().approved()
     return render_to_response("appcontest/app_list.html", {"contest": contest,
                                                            "apps": apps})
 
 def app_detail(request, contest, slug):
-    contest = Contest.objects.get(slug=contest)
+    contest = get_object_or_404(Contest, slug=contest)
     try:
         app = Entry.objects.get(slug=slug)
         if not request.user.is_superuser and app.moderation_status != 1:
