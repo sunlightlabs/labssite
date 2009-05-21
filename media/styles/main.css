@@ -725,7 +725,7 @@ span.organization a{
 	color: #0f2557;
 }
 
-div#contestBox{
+div#contestBox2{
 	background: url(/media/images/appsAmerica2_btn.png) bottom left no-repeat;
 	width: 295px;
 	height: 174px;
@@ -734,13 +734,13 @@ div#contestBox{
 	margin-bottom: 30px;
 }
 
-div#contestBox a{
+div#contestBox2 a{
 	display: block;
 	width: 295px;
 	height: 152px;
 }
 
-div#contestBox h3{
+div#contestBox2 h3{
 	float: left;
 }
 
