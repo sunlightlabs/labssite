@@ -1,17 +1,85 @@
 {% extends "base_full.html" %}
 {% load markup %}
 
-{% block body %}contest{% endblock %}
-
 {% block feature %}
-    <a href="/appsforamerica/">
-	    <h2 class="contest">Labs Contest</h2>
-	    <div id="contestImage"></div>
+    <a href="/contest/{{ contest.slug }}/">
+        <h2 class="contest">Labs Contest</h2>
+        <div id="contestImage-{{contest.slug}}"></div>
     </a>
 {% endblock %}
 
+{% block body %}contest{% endblock %}
+
 {% block content %}
-	<h2 id="submitApp">Submit Your App</h2>
-	<h3 class="formh3">Thank you to all who entered!</h3>
-	<p style="text-align: center; padding-bottom: 400px;">The contest submission deadline has passed. Check out all of the <a href="/appsforamerica/apps/">great entries</a>.</p>
+    <h2 id="submitApp">Submit Your App</h2>
+    <h3 class="formh3">App Information</h3>
+    <div class="tip">Unless otherwise noted, all fields are required.</div>
+    <form action="{% url appcontest_submit contest.slug %}" method="post">
+        <input type="hidden" name="preview" value="true" />
+        <ul id="contestForm">
+            <li>
+                {{ form.name.errors }}
+                <label for="id_name">Application name</label>
+                {{ form.name }}
+            </li>
+            <li>
+                {{ form.url.errors }}
+               <label for="id_url">Your app's URL</label>
+                {{ form.url }}
+            </li>
+            <li>
+                {{ form.source_url.errors }}
+                <label for="id_source_url">URL to the app's source code</label>
+                {{ form.source_url }}
+            </li>
+            <li>
+                {{ form.logo_url.errors }}
+                <label for="id_logo_url">URL to the app's logo (optional)</label>
+                {{ form.logo_url }}
+            </li>
+            <li>
+                {{ form.quick_description.errors }}
+                <label for="id_quick_description">One line summary (255 character limit)</label>
+                {{ form.quick_description }}
+            </li>
+            <li>
+                {{ form.description.errors }}
+                <label for="id_description">Detailed description of<br />your application<br />(<a href="http:/    /daringfireball.net/projects/markdown/syntax" rel="documentation">Markdown syntax</a> is supported)</label>
+                {{ form.description }}
+            </li>
+        </ul>
+        <h3 class="formh3" id="personalHeader">Personal Information</h3>
+        <ul id="personalForm">
+            <li>
+                {{ form.contact_display.errors }}
+                <label for="id_contact_display">Your name or organization</label>
+                {{ form.contact_display }}
+            </li>
+            <li>
+                {{ form.contact_url.errors }}
+                <label for="id_contact_url">Your URL (optional)</label>
+                {{ form.contact_url }}
+            </li>
+            <li>
+                <div class="tip">The following information will be kept private, but is required.</div>
+                {{ form.contact_name.errors }}
+                <label for="id_contact_name">Name of person submitting app</label>
+                {{ form.contact_name }}
+            </li>
+            <li>
+                {{ form.contact_email.errors }}
+                <label for="id_contact_email">Contact email address</label>
+                {{ form.contact_email }}
+            </li>
+           <li>
+               <button class="preview-app" type="submit"><span>Preview your submission</span></butt
+           </li>   
+        </ul>
+    </form>
 {% endblock %}
+
+{% comment %}
+    <h3 class="formh3">Thank you to all who entered!</h3>
+    <p style="text-align: center; padding-bottom: 400px;">The contest submission deadline has passed. Check out all of the <a href="//appsforamerica/apps/">great entries</a>.</p>
+{% endblock %}
+{% endcomment %}

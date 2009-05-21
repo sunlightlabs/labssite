@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load appcontest %}
+{% load labs %}
+{% load markup %}
+
+{% block title %}{{contest.name}}{% endblock %}
+
+{% block body %}contest{% endblock %}
+
+{% block feature %}
+    <a href="/contest/{{ contest.slug }}/">
+        <h2 class="contest">Labs Contest</h2>
+        <div id="contestImage-{{contest.slug}}"></div>
+    </a>
+{% endblock %}
+
+{% block sidebar %}
+    <div id="recentlySubmitted">
+        <h3>Recently Submitted Apps</h3>
+        {% recent_apps contest 3 %}
+    </div>
+    <!--
+    these images need to go here, let Ali know
+    <img src="/media/images/sponsors/oreilly.gif" />
+    <img src="/media/images/sponsors/google.jpg" />
+    -->
+    {% include "labs/sidebar_helpus.html" %}
+    {% heroes %}
+{% endblock %}

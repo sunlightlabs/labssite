@@ -217,11 +217,17 @@ div#aboutImage{
 	margin-top: -13px;
 }
 
-div#contestImage{
+div#contestImage-appsforamerica{
 	background: url(/media/images/contestImage.png) bottom left no-repeat;
 	height: 214px;
 	width: 530px;
 	margin: -65px 0 0 110px;
+}
+div#contestImage-appsforamerica2{
+	background: url(/media/images/contestImage2.png) bottom left no-repeat;
+	height: 207px;
+	width: 697px;
+	margin: -35px 0 0 27px;
 }
 
 div#whoWeAre h2{

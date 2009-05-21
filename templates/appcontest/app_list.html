@@ -1,14 +1,14 @@
-{% extends "appcontest/base.html" %}
+{% extends contest.template_name %}
 {% load appcontest %}
 {% load labs %}
 {% load markup %}
 
 {% block sidebar %}
     {% include "labs/sidebar_helpus.html" %}
-	{% heroes %}
+    {% heroes %}
 {% endblock %}
 
 {% block content %}
-	<h2 id="appTitles">Submitted Apps</h2>
-    {% recent_apps 1000 %}
+    <h2 id="appTitles">Submitted Apps</h2>
+    {% recent_apps contest 1000 %}
 {% endblock %}

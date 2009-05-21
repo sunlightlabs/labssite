@@ -2,8 +2,19 @@ from django.db import models
 from django.forms import ModelForm
 import gatekeeper
 
+class Contest(models.Model):
+    name = models.CharField("Contest Name", max_length=128)
+    slug = models.SlugField(max_length=128, unique=True)
+    body = models.TextField()
+    template_name = models.CharField(max_length=128)
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
+
+    def __unicode__(self):
+        return self.name
+
 class Entry(models.Model):
-    
+
     name = models.CharField("Your apps name", max_length=128)
     slug = models.SlugField(unique=True)
     contact_display = models.CharField(max_length=128)
@@ -16,26 +27,28 @@ class Entry(models.Model):
     quick_description = models.CharField(max_length=255)
     description = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
-    
+
+    contest = models.ForeignKey(Contest, related_name='entries')
+
     class Meta:
         ordering = ('-timestamp',)
-    
+
     def __unicode__(self):
         return self.name
-        
+
     @models.permalink
     def get_absolute_url(self):
         return ('appcontest_app_detail', [self.slug])
-        
+
 class EntryForm(ModelForm):
     class Meta:
         model = Entry
-        exclude = ('slug','timestamp')
+        exclude = ('slug','timestamp', 'contest')
 
 class Vote(models.Model):
     entry = models.ForeignKey(Entry)
     ip = models.IPAddressField()
-    
+
     def __unicode__(self):
         return u"%s %s" % (self.ip, str(self.entry))
 

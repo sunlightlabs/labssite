@@ -4,7 +4,7 @@
 {% block content %}
     <h2 id="previewSubmit">Preview your app submission</h2>
     {{ block.super }}
-    <form action="{% url appcontest_submit %}" method="post">
+    <form action="{% url appcontest_submit contest.slug %}" method="post">
         <input type="hidden" name="save" value="true" />
         <input type="hidden" name="name" value="{{ app.name }}" />
         <input type="hidden" name="url" value="{{ app.url }}" />
@@ -18,31 +18,5 @@
         <input type="hidden" name="contact_email" value="{{ app.contact_email }}" />
         <button class="submit-app" type="submit"><span>Submit Your App</span></button>
     </form>
-{% endblock %}
 
-{% block contentxxxx %}
-	<h2 id="submitApp">Preview Your App</h2>
-	<div class="app">
-        <h2 id="appName">{{ app.name }}</h2>
-        {% if app.logo_url %}
-            <p><a href="{{ app.url }}"><img src="{{ app.logo_url }}" alt="application logo" /></a></p>
-        {% endif %}
-        <dl id="appDescriptions">
-            
-            <dt>App URL</dt>
-            <dd><a href="{{ app.url }}">{{ app.url }}</a></dd>
-            
-            <dt>Source URL</dt>
-            <dd><a href="{{ app.source_url }}" rel="source">{{ app.source_url }}</a></dd>
-            
-            <dt>Description</dt>
-            <dd>{{ app.description|markdown }}</dd>
-            
-        </dl>
-        {% if app.contact_url %}
-            <p>This application was submitted by <a href="{{ app.contact_url }}">{{ app.contact_display }}</a> on {{ app.timestamp|date:"F j, Y" }}</p>
-        {% else %}
-            <p>This application was submitted by {{ app.contact_display }} on {{ app.timestamp|date:"F j, Y" }}</p>
-        {% endif %}
-    </div>
 {% endblock %}

@@ -1,0 +1,9 @@
+{% extends contest.template_name %}
+{% load markup %}
+
+{% block content %}
+    <div id="contestPage">
+        <h2>{{contest.name}}</h2>
+        {{contest.body|markdown}}
+    </div>
+{% endblock %}
