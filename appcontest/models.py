@@ -18,6 +18,10 @@ class Contest(models.Model):
     def __unicode__(self):
         return self.name
 
+    @models.permalink
+    def get_absolute_url(self):
+        return ('appcontest_index', [self.slug])
+
 class Entry(models.Model):
 
     name = models.CharField("Your apps name", max_length=128)
