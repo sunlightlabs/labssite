@@ -1,8 +1,10 @@
 {% extends contest.template_name %}
+{% load appcontest %}
 
 {% block content %}
     <h3>Thanks for your submission!</h3>
-    <p>Return to <a href="{% url appcontest_index contest %}">{{contest.name}}</a></p>
+    <p>Your submission has entered the moderation queue and will take some time before it shows up on the website.</p>
+    <p>Return to <a href="{% url appcontest_index contest.slug %}">{{contest.name}}</a></p>
 {% endblock %}
 
 {% block sidebar %}
