@@ -2,7 +2,7 @@
 
 {% block content %}
     <h3>Thanks for your submission!</h3>
-    <p><a href="..">Return to Apps for America.</a></p>
+    <p>Return to <a href="{% url appcontest_index contest %}">{{contest.name}}</a></p>
 {% endblock %}
 
 {% block sidebar %}

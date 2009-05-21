@@ -8,7 +8,7 @@
 {% block body %}contest{% endblock %}
 
 {% block feature %}
-    <a href="/contest/{{ contest.slug }}/">
+    <a href="{% url appcontest_index contest.slug %}/">
         <h2 class="contest">Labs Contest</h2>
         <div id="contestImage-{{contest.slug}}"></div>
     </a>

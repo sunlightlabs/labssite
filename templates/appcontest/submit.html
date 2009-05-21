@@ -2,7 +2,7 @@
 {% load markup %}
 
 {% block feature %}
-    <a href="/contest/{{ contest.slug }}/">
+    <a href="{% url appcontest_index contest.slug %}/">
         <h2 class="contest">Labs Contest</h2>
         <div id="contestImage-{{contest.slug}}"></div>
     </a>
@@ -44,7 +44,7 @@
             </li>
             <li>
                 {{ form.description.errors }}
-                <label for="id_description">Detailed description of<br />your application<br />(<a href="http:/    /daringfireball.net/projects/markdown/syntax" rel="documentation">Markdown syntax</a> is supported)</label>
+                <label for="id_description">Detailed description of<br />your application<br />(<a href="http://daringfireball.net/projects/markdown/syntax" rel="documentation">Markdown syntax</a> is supported)</label>
                 {{ form.description }}
             </li>
         </ul>
@@ -79,6 +79,7 @@
 {% endblock %}
 
 {% comment %}
+    for when submission is closed
     <h3 class="formh3">Thank you to all who entered!</h3>
     <p style="text-align: center; padding-bottom: 400px;">The contest submission deadline has passed. Check out all of the <a href="//appsforamerica/apps/">great entries</a>.</p>
 {% endblock %}
