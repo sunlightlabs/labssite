@@ -745,6 +745,16 @@ a#oreillyLogo {
     display: block;
 }
 
+a#craignewmark {
+    color:#000000;
+    display:block;
+    font-size:180%;
+    font-weight:bold;
+    margin-bottom:30px;
+    margin-left:515px;
+    text-decoration:none;
+}
+
 div#contestBox{
 	background: url(/media/images/appsAmericaTile_2.png) bottom left no-repeat;
 	width: 295px;
