@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 from django.forms import ModelForm
 import gatekeeper
@@ -9,6 +10,10 @@ class Contest(models.Model):
     template_name = models.CharField(max_length=128)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
+
+    def is_open(self):
+        """ check if the contest is currently open """
+        return self.start_date < datetime.datetime.now() < self.end_date
 
     def __unicode__(self):
         return self.name
@@ -44,12 +49,5 @@ class EntryForm(ModelForm):
     class Meta:
         model = Entry
         exclude = ('slug','timestamp', 'contest')
-
-class Vote(models.Model):
-    entry = models.ForeignKey(Entry)
-    ip = models.IPAddressField()
-
-    def __unicode__(self):
-        return u"%s %s" % (self.ip, str(self.entry))
 
 gatekeeper.register(Entry)

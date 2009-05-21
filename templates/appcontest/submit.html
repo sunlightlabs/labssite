@@ -11,6 +11,7 @@
 {% block body %}contest{% endblock %}
 
 {% block content %}
+{% if contest.is_open %}
     <h2 id="submitApp">Submit Your App</h2>
     <h3 class="formh3">App Information</h3>
     <div class="tip">Unless otherwise noted, all fields are required.</div>
@@ -76,11 +77,9 @@
            </li>   
         </ul>
     </form>
-{% endblock %}
-
-{% comment %}
-    for when submission is closed
+{% else %}
     <h3 class="formh3">Thank you to all who entered!</h3>
-    <p style="text-align: center; padding-bottom: 400px;">The contest submission deadline has passed. Check out all of the <a href="//appsforamerica/apps/">great entries</a>.</p>
+    <p style="text-align: center; padding-bottom: 400px;">The contest submission deadline has passed. Check out all of the <a href="{% url appcontest_app_list contest.slug %}">great entries</a>.</p>
+{% endif %}
+
 {% endblock %}
-{% endcomment %}

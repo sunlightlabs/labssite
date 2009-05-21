@@ -17,7 +17,7 @@ def submit(request, contest):
     message = None
     contest = Contest.objects.get(slug=contest)
 
-    if request.method == "POST":
+    if request.method == "POST" and contest.is_open():
         form = EntryForm(request.POST)
 
         if form.is_valid():
