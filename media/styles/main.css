@@ -765,6 +765,16 @@ a#gov2Logo {
     text-indent: -9999em;
 }
 
+a#techwebLogo {
+    background: url(/media/images/sponsors/techwebLogo.png) bottom center no-repeat;
+    display:block;
+    width: 204px;
+    height: 65px;
+    margin-bottom:30px;
+    margin-left:502px;
+    text-indent: -9999em;
+}
+
 div#contestBox{
 	background: url(/media/images/appsAmericaTile_2.png) bottom left no-repeat;
 	width: 295px;
