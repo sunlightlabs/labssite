@@ -1080,3 +1080,6 @@ div#login ul li.submit { padding: 15px 0 0 100px; }
 
 ul#apps li { padding: 20px; }
 ul#apps li p { margin: 0; }
+
+div.app img { max-width: 100%; }
+
