@@ -755,6 +755,16 @@ a#craignewmark {
     text-decoration:none;
 }
 
+a#gov2Logo {
+    background: url(/media/images/sponsors/gov2_logo.png) bottom center no-repeat;
+    display:block;
+    width: 168px;
+    height: 103px;
+    margin-bottom:30px;
+    margin-left:515px;
+    text-indent: -9999em;
+}
+
 div#contestBox{
 	background: url(/media/images/appsAmericaTile_2.png) bottom left no-repeat;
 	width: 295px;
