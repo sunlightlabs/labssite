@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div id="register">
+
+        <h3>Hello, friend!</h3>
+
+        <p>Would you be so kind as to login?</p>
+
+        <form method="post" action=".">
+                {{ form.as_ul }}
+                <li class="submit">
+                    <input type="submit" value="Register" />
+                    <input type="hidden" name="next" value="{{ next }}" />
+                </li>
+            </ul>
+        </form>
+    
+    </div>
+
+{% endblock %}

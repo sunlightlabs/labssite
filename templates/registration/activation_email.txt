@@ -1,0 +1,2 @@
+
+Thank you for joining Sunlight Labs -- please visit {% url registration_activate activation_key %} in the next {{expiration_days}} days to activate your account.
