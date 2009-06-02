@@ -1103,5 +1103,6 @@ ul#apps li p { margin: 0; }
 
 div.app img { max-width: 100%; }
 
-img.court_pic, img#court_introPic{ float: left; margin-right: 20px;}
+div.post_content img.court_pic, div.post_content img#court_introPic{ float: left; margin-right: 20px;}
+
 
