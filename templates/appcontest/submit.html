@@ -39,6 +39,11 @@
                 {{ form.logo_url }}
             </li>
             <li>
+            {{ form.data_source.errors }}
+            <label for="id_data_source">Link to Data.gov data source<br />(eg. http://www.data.gov/details/90/)</label>
+            {{form.data_source}}
+            </li>
+            <li>
                 {{ form.quick_description.errors }}
                 <label for="id_quick_description">One line summary (255 character limit)</label>
                 {{ form.quick_description }}
