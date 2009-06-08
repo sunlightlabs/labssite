@@ -895,7 +895,7 @@ div#comments form {background: url(/media/images/commentLines.png) 89px -30px no
 
 form p, form li { margin-bottom: 10px; }
 form p label, form li label { width: 90px; float: left; text-align: right; padding-right: 15px;}
-input#id_name, input#id_email, textarea, input#id_url, input#id_logo_url, input#id_source_url, input#id_contact_display, input#id_contact_name, input#id_contact_email, input#id_quick_description, input#id_contact_url { background: #f3f1ec !important; border: 1px dashed #c3c0b5; padding: .5em; color: #413b3b; width: 280px; }
+input#id_name, input#id_email, textarea, input#id_url, input#id_logo_url, input#id_source_url, input#id_data_source, input#id_contact_display, input#id_contact_name, input#id_contact_email, input#id_quick_description, input#id_contact_url { background: #f3f1ec !important; border: 1px dashed #c3c0b5; padding: .5em; color: #413b3b; width: 280px; }
 body.contact form li, body.blog div#comments form p{ border-bottom: dashed 1px #918f8f; border-top: dashed 1px #918f8f;}
 body.contact form li.submit, body.blog div#comments form p.submit, body.blog div#comments form p.tip{ border: none;}
 body.contact input#id_name, body.contact input#id_email, body.contact textarea { background: #f5f4f2 !important; padding: .5em; color: #413b3b; width: 278px; border: none; margin-left: 6px;}
@@ -904,7 +904,7 @@ body.contact form ul{ padding-top: 5px;}
 
 form ul#contestForm p, form ul#contestForm li, form ul#personalForm p, form ul#personalForm li { margin-bottom: 18px; }
 form ul#contestForm p label, form ul#contestForm li label, form ul#personalForm p label, form ul#personalForm li label { width: 210px; line-height: 18px;}
-ul#contestForm input#id_name, ul#contestForm input#id_email, ul#contestForm input#id_url, ul#contestForm input#id_logo_url, ul#contestForm input#id_source_url, ul#contestForm input#id_contact_display, ul#contestForm input#id_contact_name, ul#contestForm input#id_contact_email, ul#contestForm textarea, ul#contestForm input#id_quick_description, ul#personalForm input#id_name, ul#personalForm input#id_email, ul#personalForm input#id_url, ul#personalForm input#id_logo_url, ul#personalForm input#id_source_url, ul#personalForm input#id_contact_display, ul#personalForm input#id_contact_name, ul#personalForm input#id_contact_email, ul#personalForm textarea, ul#personalForm input#id_contact_url { width: 330px; }
+ul#contestForm input#id_name, ul#contestForm input#id_email, ul#contestForm input#id_url, ul#contestForm input#id_logo_url, ul#contestForm input#id_source_url, ul#contestForm input#id_data_source, ul#contestForm input#id_contact_display, ul#contestForm input#id_contact_name, ul#contestForm input#id_contact_email, ul#contestForm textarea, ul#contestForm input#id_quick_description, ul#personalForm input#id_name, ul#personalForm input#id_email, ul#personalForm input#id_url, ul#personalForm input#id_logo_url, ul#personalForm input#id_source_url, ul#personalForm input#id_contact_display, ul#personalForm input#id_contact_name, ul#personalForm input#id_contact_email, ul#personalForm textarea, ul#personalForm input#id_contact_url { width: 330px; }
 
 
 div.tip, p.tip {
@@ -1102,4 +1102,7 @@ ul#apps li { padding: 20px; }
 ul#apps li p { margin: 0; }
 
 div.app img { max-width: 100%; }
+
+div.post_content img.court_pic, div.post_content img#court_introPic{ float: left; margin-right: 20px;}
+
 

@@ -1,6 +1,6 @@
 import datetime
 from django.db import models
-from django.forms import ModelForm
+from django.forms import ModelForm, ValidationError
 import gatekeeper
 
 class Contest(models.Model):
@@ -33,6 +33,7 @@ class Entry(models.Model):
     logo_url = models.URLField(verify_exists=False, blank=True, null=True)
     url = models.URLField(verify_exists=False)
     source_url = models.URLField(verify_exists=False)
+    data_source =  models.URLField(verify_exists=False)
     quick_description = models.CharField(max_length=255)
     description = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
@@ -50,6 +51,12 @@ class Entry(models.Model):
         return ('appcontest_app_detail', [self.slug])
 
 class EntryForm(ModelForm):
+    def clean_data_source(self):
+        data = self.cleaned_data['data_source']
+        if 'data.gov' not in data:
+            raise ValidationError("Data source must be a data.gov URL")
+        return data
+
     class Meta:
         model = Entry
         exclude = ('slug','timestamp', 'contest')
