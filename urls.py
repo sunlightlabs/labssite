@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
-from django.contrib import admin
+from django.contrib.gis import admin
 from django import forms
 from blogdor.feeds import LatestComments, LatestPosts, LatestByTag
 from contact_form.forms import ContactForm
@@ -53,6 +53,7 @@ urlpatterns = patterns('',
     url(r'^images/(?P<image_path>.*)$', 'sunlightlabs.labs.views.image_wrapper', name="image_wrapper"),
     url(r'^judgeforamerica/', include('sunlightlabs.appjudging.urls')),
     url(r'^accounts/', include('registration.urls')),
+    url(r'^users/', include('anthill.people.urls')),
     url(r'^projects/', include('showcase.urls')),
     url(r'^$', 'sunlightlabs.labs.views.index', name='index'),
 )
@@ -75,5 +76,5 @@ urlpatterns += patterns('django.views.generic.simple',
 if (settings.DEBUG):
     urlpatterns += patterns('',
         url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
-#        url(r'^(?P<filename>.*)\.(?P<extension>css|js)$', 'sunlightcore.views.static'),
+        url(r'^(?P<filename>.*)\.(?P<extension>css|js)$', 'mediasync.views.static'),
     )

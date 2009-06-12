@@ -12,6 +12,8 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+EMAIL_SUBJECT_PREFIX = '[sunlightlabs.com] '
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -72,6 +74,7 @@ INSTALLED_APPS = (
     'django.contrib.comments',
     'django.contrib.contenttypes',
     'django.contrib.flatpages',
+    'django.contrib.gis',
     'django.contrib.markup',
     'django.contrib.redirects',
     'django.contrib.sessions',
@@ -88,7 +91,10 @@ INSTALLED_APPS = (
     'sunlightlabs.labs',
     'sunlightlabs.appcontest',
     'sunlightlabs.appjudging',
+    'anthill.people'
 )
+
+AUTH_PROFILE_MODULE = 'people.Profile'
 
 EMAIL_HOST = "smtp.sunlightlabs.com"
 EMAIL_PORT = "25"
@@ -114,7 +120,8 @@ TWITTER_USERNAME = 'sunlightlabs'
 BLOGDOR_NOTIFY_ON_COMMENT = True
 AKISMET_KEY = '54f2d2830563'
 
-GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com']
+GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com',
+                            'jturk@sunlightfoundation.com']
 
 GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site/images/avatar_new.jpg"
 GRAVATAR_SIZE = 60
@@ -125,7 +132,7 @@ SIMPLESURVEY_COMPLETE_REDIRECT = "/judgeforamerica/"
 ACCOUNT_ACTIVATION_DAYS = 7
 
 LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/users/edit_profile/'
 
 try:
     from local_settings import *
