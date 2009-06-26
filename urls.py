@@ -7,13 +7,13 @@ from contact_form.forms import ContactForm
 admin.autodiscover()
 
 class LabsContactForm(ContactForm):
-    
+
     attrs_dict = { 'class': 'required' }
-    
+
     from_email = "bounce@sunlightfoundation.com"
     recipient_list = ['swells@sunlightfoundation.com','cjohnson@sunlightfoundation.com','jcarbaugh@sunlightfoundation.com']
     subject = "[SunlightLabs.com] Contact"
-    
+
     name = forms.CharField(max_length=100,
                 widget=forms.TextInput(attrs=attrs_dict),
                 label=u'Name')
@@ -33,7 +33,7 @@ class LabsLatestComments(LatestComments):
 class LabsLatestByTag(LatestByTag):
     feed_title = "Sunlight Labs loves %s"
     feed_description = "Posts from the Sunlight Labs blog tagged with '%s'"
-    
+
 blog_feeds = {
     'latest': LabsLatestPosts,
     'comments': LabsLatestComments,
@@ -41,26 +41,34 @@ blog_feeds = {
 }
 
 urlpatterns = patterns('',
+    # admin
     url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
     url(r'^admin/(.*)', admin.site.root, name='admin'),
+
+    # contests
     url(r'^contests/', include('sunlightlabs.appcontest.urls')),
+    url(r'^judgeforamerica/', include('sunlightlabs.appjudging.urls')),
+
+    # blog/blogdor
     url(r'^blog/comments/', include('django.contrib.comments.urls')),
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="blogdor_feeds"),
     url(r'^blog/$', 'sunlightlabs.labs.views.blog_wrapper'),
     url(r'^blog/', include('blogdor.urls')),
+
+    # contact-form
     url(r'^contact/sent/$', 'sunlightlabs.labs.views.contact_sent', {"form_class": LabsContactForm}),
     url(r'^contact/', include('contact_form.urls'), {"form_class": LabsContactForm, "fail_silently": False}),
-    url(r'^images/(?P<image_path>.*)$', 'sunlightlabs.labs.views.image_wrapper', name="image_wrapper"),
-    url(r'^judgeforamerica/', include('sunlightlabs.appjudging.urls')),
+
+    # users
     url(r'^accounts/', include('registration.urls')),
     url(r'^users/', include('anthill.people.urls')),
-    url(r'^projects/', include('showcase.urls')),
-    url(r'^$', 'sunlightlabs.labs.views.index', name='index'),
-)
 
-urlpatterns += patterns('django.contrib.auth.views',
-    url(r'^login/$', 'login', name='login'),
-    url(r'^logout/$', 'logout_then_login', name='logout'),
+    url(r'^ideas/', include('anthill.ideas.urls')),
+    url(r'^projects/', include('showcase.urls')),
+
+    # labs specific
+    url(r'^images/(?P<image_path>.*)$', 'sunlightlabs.labs.views.image_wrapper', name="image_wrapper"),
+    url(r'^$', 'sunlightlabs.labs.views.index', name='index'),
 )
 
 #
@@ -73,7 +81,7 @@ urlpatterns += patterns('django.views.generic.simple',
     url(r'^visualizingearmarks/$', 'redirect_to', {'url': 'http://research.sunlightprojects.org/visualizingearmarks'}),
 )
 
-if (settings.DEBUG):
+if settings.DEBUG:
     urlpatterns += patterns('',
         url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
         url(r'^(?P<filename>.*)\.(?P<extension>css|js)$', 'mediasync.views.static'),

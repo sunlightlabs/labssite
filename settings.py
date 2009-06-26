@@ -91,7 +91,8 @@ INSTALLED_APPS = (
     'sunlightlabs.labs',
     'sunlightlabs.appcontest',
     'sunlightlabs.appjudging',
-    'anthill.people'
+    'anthill.people',
+    'anthill.ideas',
 )
 
 AUTH_PROFILE_MODULE = 'people.Profile'
