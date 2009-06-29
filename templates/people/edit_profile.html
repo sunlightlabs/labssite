@@ -1,15 +1,111 @@
-<html>
-<head>
-    <script type="text/javascript">
-    </script>
-</head>
-<body>
-<span>{{ messages.0 }}</span>
-<form method="POST">
-<ul>
-    {{form.as_ul}}
-</ul>
-<input type="submit" value="Save Changes">
-</form>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+<div id="ideas" class="module">
+    <div class="contentHeader">
+        <h2>Account Information</h2>
+    </div>	
+    <div class="module">
+        <p class="tip">Let the labs community know more about you.</p>
+        <form id="accountForm">
+            <ul>
+                <li>
+                    <label>Name</label>
+                    <input id="name" type="text" name="word" maxlength="30" />
+                </li>	
+                <li>
+                    <label>Email</label>
+                    <input id="email" type="text" name="word" maxlength="30" />
+                </li>
+                <li>
+                    <label>Current Avatar</label>
+                    <input id="avatar" type="text" name="word" maxlength="30" />
+                </li>
+                <li>
+                    <label>Upload A New Avatar</label>
+                    <input id="upload" type="text" name="word" maxlength="30" />
+                </li>
+                <li>
+                    <label>Personal URL</label>
+                    <input id="url" type="text" name="word" maxlength="30" />
+                </li>
+                <li>
+                    <label>Position</label>
+                    <select name="position" class="positionDropdown">
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                        <option value="developer and designer">Developer and Designer</option>
+                        <option value="other">Other</option>
+                    </select>
+                </li>	
+                <li>
+                    <label>Location</label>
+                    <input id="location" type="text" name="word" maxlength="30" />
+                </li>
+                <li>
+                    <label>Skills</label>
+                    <p><a href="#">Show Common Skills List</a></p>
+                    <input id="skills" type="text" name="word" maxlength="30" />
+                    <button class="addBtn">
+                        <span>Add Skill</span>
+                    </button>
+                    <div id="yourSkills">
+                        <ul>
+                            <li>
+                                <span class="delete">delete</span>
+                                Python
+                            </li>
+                            <li>
+                                <span class="delete">delete</span>
+                                Design
+                            </li>
+                            <li>
+                                <span class="delete">delete</span>
+                                Ruby
+                            </li>
+                            <li>
+                                <span class="delete">delete</span>
+                                CSS
+                            </li>
+                        </ul>
+                        <div class="clear"></div>	
+                    </div>
+                </li>
+                <li>
+                    <label>About You</label>
+                    <textarea id="text" class="textarea" name="text" cols="32" rows="5"></textarea>
+                </li>
+                <button class="saveBtn">
+                    <span>Save Changes</span>
+                </button>	
+            </ul>	
+        </form>		
+    </div>
+</div>		
+{% endblock %}
+
+{% block sidebar %}
+<h3 class="space">Log In Information</h3>
+<div class="module">
+    <form>
+        <ul>
+            <li>
+                <label>Username</label>
+                <input id="name" type="text" name="word" maxlength="30" />
+            </li>
+            <li>
+                <label>Password</label>
+                <input id="name" type="text" name="word" maxlength="30" />
+            </li>	
+            <li>
+                <label>Confirm Password</label>
+                <input id="name" type="text" name="word" maxlength="30" />
+            </li>
+            <button class="submitBtn">
+                <span>Save Changes</span>
+            </button>
+        </ul>
+    </form>
+</div>
+<div class="clear"></div>
+{% endblock %}
