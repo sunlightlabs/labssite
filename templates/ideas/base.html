@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+<h3>Submit An Idea</h3>
+<div id="submitIdea" class="module">
+    <p class="tip">Have a great idea, <strong>tell us about it using the form below</strong>!</p>
+    <form>
+        <ul>
+            <li>
+                <label>Title</label>
+                <input id="name" type="text" name="word" maxlength="30" />
+            </li>
+            <li>
+                <label>Description</label>
+                <textarea id="text" class="textarea" name="text" cols="32" rows="5"></textarea>
+            </li>	
+            <button class="submitBtn">
+                <span>Submit</span>
+            </button>	
+        </ul>	
+    </form>	
+</div>
+<hr></hr>
+<h3 class="space">How Our Process Works</h3>
+<div id="process" class="module">	
+    <ol>
+        <li>
+            <span id="mess">Mess</span>
+            <p>Disorganized government data needs your help.</p>
+        </li>
+        <li>
+            <span id="ideas">Ideas</span>
+            <p>Ideas are born on how to make government data more useful and accessible.</p>
+        </li>
+        <li>
+            <span id="community">Community</span>
+            <p>The community contributes to these ideas to make them reality.</p>
+        </li>	
+        <li>
+            <span id="transparency">Transparency</span>
+            <p>We're one step closer to government transparency.</p>
+        </li>
+        <a class="learnBtn" href="#">Learn More</a>
+    </ol>	
+</div>	
+<div class="clear"></div>
+{% endblock %}

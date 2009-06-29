@@ -1,0 +1,67 @@
+{% extends "ideas/base.html" %}
+
+{% block content %}
+<div id="ideas" class="module">
+    <div class="contentHeader">
+        <h2 class="ideas">IDEA: Name of Idea</h2>
+    </div>	
+    <div class="module">
+        <dl class="entryMetadata">
+            <dt>Posted by</dt>
+            <dd><a href="#">Jeremy</a></dd>
+            <dt>Date</dt>
+            <dd>May 15, 2009</dd>
+        </dl>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
+        <button class="helpBtn">
+            <span>Help On This Project</span>
+        </button>
+        <button class="leadBtn">
+            <span>Lead This Project</span>
+        </button>
+        <div class="clear"></div>
+        <div id="leadBox">
+            <h3>Are you sure you want to lead this project?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="agreeBtn">
+                <span>I Agree</span>
+            </button>
+        </div>
+
+        <div id="commentBox">
+            <h3>Discussion</h3>
+            <ol id="comments">
+                <li>
+                    <span class="commentMetaAuthor"><a href="#">Name</a></span>
+                    <span class="commentMetaDate">03/30/09 12:03 am</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+                <li>
+                    <span class="commentMetaAuthor"><a href="#">Name</a></span>
+                    <span class="commentMetaDate">03/30/09 12:03 am</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+            </ol>
+
+            <h3 class="h3tip">What are Your Thoughts?</h3>
+            <p class="tip">Have additional feedback or ideas on how this project could be better, comment below.</p>
+            <div id="commentBlock">
+                <a class="userPhoto" href="#">
+                    <img src="images/avatar_male.jpg"/>
+                </a>
+                <form id="comment">
+                    <textarea id="text" class="textarea" name="text" cols="32" rows="5"></textarea>
+                    <div id="subscribe">
+                        <input type="checkbox" value="1" name="subscribe"/>
+                        <label>Subscribe to this stream</label>
+                    </div>
+                    <button class="postBtn">
+                        <span>Post!</span>
+                    </button>
+                </form>	
+            </div>
+            <div class="clear"></div>	
+        </div>
+    </div>
+</div>
+{% endblock %}

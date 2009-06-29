@@ -1,1 +1,81 @@
-{{profile}}
+{% extends "base.html" %}
+{% block content %}
+<div id="person" class="module">
+    <div id="personPic">
+        <img src="images/avatar_male.jpg"/>
+    </div>
+    <div id="personDetails">
+        <div id="personHeader">
+            <h2>Jeremy Carbaugh</h2>
+            <span id="personIdentifier">Developer</span>
+        </div>	
+        <div class="module">
+            <dl>
+                <dt>Website:</dt>	
+                <dd><a href="#">http://www.sunlightlabs.com</a></dd>
+
+                <dt>Location:</dt>	
+                <dd>Washington, DC</dd>
+                <div class="clear"></div>
+
+                <dt>Skills:</dt>	
+                <dd>Python, XML firewalls</dd>
+
+            </dl>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
+            <a id="contactBtn" href="#">Contact</a>
+        </div>
+    </div>
+    <div id="personProject">
+        <h3 class="leftH3">Jeremy's Projects</h3>
+        <div id="projectModule" class="module">
+            <div id="leadProjects">
+                <h4>Lead</h4>
+                <ul>
+                    <li><a href="#">Project Name</a></li>
+                </ul>	
+            </div>
+            <div id="helpedProjects">
+                <h4>Helped</h4>
+                <ul>
+                    <li><a href="#">Project Name</a></li>
+                    <li><a href="#">Project Name</a></li>
+                    <li><a href="#">Project Name</a></li>
+                    <li><a href="#">Project Name</a></li>
+                </ul>	
+            </div>	
+        </div>
+    </div>
+    <div id="sunlightPost">	
+        <h3 class="leftH3">Jeremy's Posts</h3>
+        <div class="module">
+            <div class="smPost">
+                <h4><a href="#">Title of Post</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper.</p>
+                <p class="continueLink"><a href="#">Continue Reading</a></p>
+            </div>	
+            <div class="smPost">
+                <h4><a href="#">Title of Post</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper.</p>
+                <p class="continueLink"><a href="#">Continue Reading</a></p>
+            </div>
+            <div class="smPost">
+                <h4><a href="#">Title of Post</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper.</p>
+                <p class="continueLink"><a href="#">Continue Reading</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block sidebar %}
+<h3 class="space">Jeremy's Location</h3>
+<div id="submitIdea" class="module">
+</div>
+<hr></hr>
+<h3 class="space">Jeremy's Tweets</h3>
+<div id="projectJoin" class="module">
+</div>
+<div class="clear"></div>
+{% endblock sidebar %}
