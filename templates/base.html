@@ -2,136 +2,64 @@
 {% load media %}
 <html xmlns="http://www.w3.org/1999/xhtml" >
     <head>
-        <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
-		<meta name="keywords" content="" />
-		<meta name="description" content="" />
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="verify-v1" content="VBZfOR+HlhxUU04nfdhCPi//DwGi2QbcNL6jUHGFGis=" />
-		<title>{% block title %}Sunlight Labs{% endblock %}</title>
-		<link rel="alternate" type="application/rss+xml" title="Sunlight Labs recent blog posts" href="http://sunlightlabs.com/blog/feeds/latest/" />
-		<link rel="alternate" type="application/rss+xml" title="Recent comments to the Sunlight Labs blog" href="http://sunlightlabs.com/blog/feeds/comments/" />
-        <link rel="shortcut icon" href="http://assets.sunlightfoundation.com/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="http://assets.sunlightfoundation.com/favicon.ico" type="image/x-icon">
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{% block title %}Sunlight Labs{% endblock title %}</title>
+
         {% css "main.css" %}
-        {% css_ie6 "buggy.css" %}
-        {% css_ie7 "buggy7.css" %}
         {% js "jquery-1.3.2.min.js" %}
-        {% js "sunlightlabs.js" %}
-	</head>
-	<body class="{% block body %}home{% endblock %}">
-		<div id="headerWrapper">
-			<div id="pageMain">
-				<div id="header">
-					<div id="mainHeader">
-						<h1><a href="/">sunlight labs</a></h1>
-						<div id="nav">
-							<ul>
-								<li id="nav_blog"><a href="{% url blog_archive_index %}">blog</a></li>
-								<li id="nav_projects"><a href="{% url projects %}">projects</a></li>
-								<li id="nav_wiki"><a href="http://wiki.sunlightlabs.com">wiki</a></li>
-								<li id="nav_about"><a href="/about/">about</a></li>
-								<li id="nav_contact"><a href="{% url contact_form %}">contact us</a></li>
-							</ul>	
-						</div>	
-					</div>	
-				</div>
-				<div id="paperEdge"></div>
-				<div id="mainContent">
-				    {% block main_content %}
-					    <div id="featureBox">
-    						{% block feature %}
-    						<h2>Turning Government Data Into Usable Information</h2>
-                        	<ul>
-                        		<li id="idea">idea is born</li>
-                        		<li id="mess">government data is a mess</li>
-                        		<li id="developer">developer takes messy data and converts it into user friendly code</li>
-                        		<li id="sunlight">our products are put back out for the public to see and use</li>
-                        	</ul>
-                        	{% endblock %}
-    					</div>
-    					<div id="ltColumn">
-    						{% block content %}{% endblock %}
-    					</div>
-    					<div id="rtColumn">
-    					    {% block sidebar %}
-    					        {% include "labs/sidebar_helpus.html" %}
-        						{% include "labs/sidebar_contest.html" %}
-    						{% endblock %}	
-    					</div>
-    					<div class="clear"></div>
-    				{% endblock %}	
-				</div>
-			</div>		
-		</div>
-		<div id="footerWrapper">
-			<div id="footerMain">
-				<div id="footerContent">
-					<h3>What We're A Part Of</h3>
-					<ul>
-						<li>
-							<h4>Contact</h4>
-							<div class="footerVcard">
-								<div class="vcard">
-									<a href="http://sunlightfoundation.com" class="orgName fn org">Sunlight Foundation</a>
-									<div class="adr">
-										<div class="street-address">1818 N Street NW, Suite 410</div>
-										<span class="locality">Washington</span>
-										<abbr class="region" title="District of Columbia">DC</abbr>
-										<span class="postal-code">22036</span>
-									</div>
-									<div class="phone">Phone:
-										<span class="tel">
-										    <abbr title="+12027421520">202.742.1520</abbr>
-										</span>
-									</div>	
-								</div>
-							</div>
-							<div class="sendEmail"><a href="{% url contact_form %}">Send Us An Email</a></div>
-						</li>
-						<li>
-							<h4>About Sunlight</h4>
-							<dl>
-								<dd><a href="http://www.sunlightfoundation.com/mission/">Mission Statement</a></dd>
-								<dd><a href="http://www.sunlightfoundation.com/board_of_directors/">Board and Advisory Board</a></dd>
-								<dd><a href="http://www.sunlightfoundation.com/people/">Staff Bios</a></dd>
-								<dd><a href="http://www.sunlightfoundation.com/funding/">Our Funding</a></dd>
-								<dd><a href="http://www.sunlightfoundation.com/privacy/">Privacy Policy</a></dd>
-							</dl>
-						</li>
-						<li>
-							<h4>Communications</h4>
-							<dl>
-								<dd><a href="http://blog.sunlightfoundation.com/">Our Blog</a></dd>
-								<dd><a href="http://www.sunlightfoundation.com/presscenter/releases/">Press Releases</a></dd>
-								<dd><a href="http://www.sunlightfoundation.com/presscenter/articles/">Press Articles</a></dd>
-								<dd><a href="http://delicious.com/Sunlight_Foundation">Web Mentions</a></dd>
-								<dd><a href="http://www.sunlightfoundation.com/logos/">Logos for Print/Web</a></dd>
-							</dl>
-						</li>
-						<li>
-							<h4>Useful Sites</h4>
-							<dl>
-								<dd><a href="http://www.opencongress.org/">OpenCongress.org</a></dd>
-								<dd><a href="http://www.opensecrets.org/">OpenSecrets.org</a></dd>
-								<dd><a href="http://maplight.org/">MAPLight.org</a></dd>
-								<dd><a href="http://www.sunlightfoundation.com/resources/">View All</a></dd>
-							</dl>
-						</li>
-						<li>
-							<h4>We're Social</h4>
-							<dl>
-								<dd><a href="http://twitter.com/sunlightnetwork">Twitter</a></dd>
-								<dd><a href="http://apps.facebook.com/causes/303">Facebook</a></dd>
-								<dd><a href="http://www.myspace.com/sunlightfoundation">Myspace</a></dd>
-								<dd><a href="http://www.flickr.com/photos/sunlightfoundation">Flickr</a></dd>
-								<dd><a href="http://www.youtube.com/sunlighters">YouTube</a></dd>
-							</dl>	
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<script type="text/javascript">
+        {% js "labs.js" %}
+    </head>
+    <body class="home">
+        <div id="headerWrapper">
+            <div id="pageMain">
+                <div id="header">
+                    <div id="logo">
+                        <h1>
+                            <a href="/"><big>Sunlight Labs</big></a>
+                        </h1>
+                    </div>
+                    <div id="nav">
+                        <ul>
+                            <li id="nav_blog"><a href="/blog/{# url blogdor_archive #}">Blog</a></li>
+                            <li id="nav_people"><a href="#">People</a></li>
+                            <li id="nav_projects"><a href="#">Projects</a></li>
+                            <li id="nav_wiki"><a href="http://wiki.sunlightlabs.com/">Wiki</a></li>
+                            <li id="nav_about"><a href="/about/">About</a></li>
+                            <li id="nav_contact"><a href="{% url contact_form %}">Contact</a></li>
+                        </ul>
+                    </div>  
+                    <div class="clear"></div>
+                    <div id="pageNav">
+                        <ul>
+                            <li><a href="{% url registration_register %}">Join Us</a></li>
+                            <li><a href="{% url auth_login %}">Sign In</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="mainContent">
+                    <div id="ltColumn">
+                        {% block content %}
+                        {% endblock content %}
+                    </div>
+                    <div id="rtColumn">
+                        {% block sidebar %}
+                        {% endblock sidebar %}
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="footerWrapper">
+            <div id="footerMain">
+
+            </div>  
+        </div>
+
+        <!-- analytics scripts -->
+        <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
         </script>
@@ -140,9 +68,9 @@
             pageTracker._trackPageview();
         </script>
         <script type="text/javascript">
-        var cbjspath = "static.chartbeat.com/js/chartbeat.js?uid=980&domain=sunlightlabs.com";
-        var cbjsprotocol = (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://");
-        document.write(unescape("%3Cscript src='"+cbjsprotocol+cbjspath+"' type='text/javascript'%3E%3C/script%3E"))
+            var cbjspath = "static.chartbeat.com/js/chartbeat.js?uid=980&domain=sunlightlabs.com";
+            var cbjsprotocol = (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://");
+            document.write(unescape("%3Cscript src='"+cbjsprotocol+cbjspath+"' type='text/javascript'%3E%3C/script%3E"))
         </script>
-	</body>
+    </body>
 </html>

@@ -67,7 +67,6 @@ urlpatterns = patterns('',
     url(r'^projects/', include('showcase.urls')),
 
     # labs specific
-    url(r'^images/(?P<image_path>.*)$', 'sunlightlabs.labs.views.image_wrapper', name="image_wrapper"),
     url(r'^$', 'sunlightlabs.labs.views.index', name='index'),
 )
 

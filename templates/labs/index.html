@@ -1,72 +1,75 @@
 {% extends "base.html" %}
-{% load labs %}
-{% load markup %}
-
-{% block sidebar %}
-    {{ block.super }}
-    {% recent_tweets 2 %}
-{% endblock %}
 
 {% block content %}
-	{% if featured_projects %}
-		<div id="featuredProjects">
-			<div id="featuredHeader">
-				<h2>Featured Projects</h2>
-			</div>
-			<ul>
-				{% for project in featured_projects %}
-				<li>
-					<h3><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></h3>
-					{{ project.short_description|markdown }}
-				</li>
-				{% endfor %}
-			</ul>	
-		</div>
-	{% endif %}
-	<div id="blog">
-		<h2>Recent Posts</h2>
-		<div class="entry">
-			<ol class="entries hfeed">
-			    {% for post in recent_posts %}
-				    <li class="hentry">
-    					<div class="entryMetadata">
-    						<h3 class="entry_title entry-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
-    						<div class="commentsMetaData">
-    							<span class="type">Comments:</span>
-    							<span class="value">
-    								<a href="{{ post.get_absolute_url }}#comments">{{ post.comment_count }}</a>
-    							</span>
-    						</div>
-							<div class="hr"><hr /></div>
-    						<div class="authorMetaData author vcard">
-    							<span class="type">Written by </span>
-    							<span class="value fn">{{ post.author.first_name }}</span>
-    						</div>
-    						<div class="updatedMetaData">
-    							<span class="type">Date:</span>
-    							<span class="value"><abbr class="published" title="{{ post.date_published.isoformat }}">{{ post.date_published|date:"F j Y" }}</abbr></span>
-    						</div>
-    					</div>
-    					<div class="entry-summary">
-        					{% ifequal post.markup 'markdown' %}
-                                {{ post.excerpt|markdown|safe }}
-                            {% else %}
-                                {% ifequal post.markup 'textile' %}
-                                    <p>{{ post.excerpt|textile|safe }}</p>
-                                {% else %}                
-                                    {% ifequal post.markup 'restructuredtext' %}
-                                        <p>{{ post.excerpt|restructuredtext|safe }}</p>
-                                    {% else %}
-                                        <p>{{ post.excerpt|safe }}</p>
-                                    {% endifequal %}
-                                {% endifequal %}
-                            {% endifequal %}
-                        </div>
-    					<div class="readMore"><a href="{{ post.get_absolute_url }}" rel="bookmark">Read More</a></div>
-    				</li>
-				{% endfor %}
-			</ol>	
-		</div>
-		<p>Read more posts in our <a href="{% url blog_object_list %}">blog archive</a>.</p>
-	</div>
+<div id="featureBox_wrapper">
+    <div id="featureBox">
+        <h2>We're Opening America's Government</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
+        <a id="joinBtn" href="#">Join Us</a>
+        <div class="clear"></div>
+        <div id="alertBox">
+            <h3>[ Apps for America 2 has just launched ]</h3>
+        </div>
+    </div>      
+</div>
+<div class="contentHeader">
+    <h2 class="post">Recent Posts</h2>
+</div>  
+<div class="module">
+    <div class="post">
+        <h3><a href="#">Title of Post</a></h3>
+        <dl class="entryMetadata">
+            <dt>Written by</dt>
+            <dd><a href="#">Jeremy</a></dd>
+        
+            <dt>Date</dt>
+            <dd>May 15, 2009</dd>
+        </dl>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
+        <p class="continueLink"><a href="#">Continue Reading</a></p>
+        <div class="clear"></div>
+    </div>
+    <div class="post">
+        <h3><a href="#">Title of Post</a></h3>
+        <dl class="entryMetadata">
+            <dt>Written by</dt>
+            <dd><a href="#">Jeremy</a></dd>
+        
+            <dt>Date</dt>
+            <dd>May 15, 2009</dd>
+        </dl>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
+        <p class="continueLink"><a href="#">Continue Reading</a></p>
+        <div class="clear"></div>
+    </div>
+    <div class="post">
+        <h3><a href="#">Title of Post</a></h3>
+        <dl class="entryMetadata">
+            <dt>Written by</dt>
+            <dd><a href="#">Jeremy</a></dd>
+        
+            <dt>Date</dt>
+            <dd>May 15, 2009</dd>
+        </dl>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
+        <p class="continueLink"><a href="#">Continue Reading</a></p>
+        <div class="clear"></div>
+    </div>
+</div>  
+<div class="contentHeader">
+    <h2>What's Happening in the Sunlight Labs Community</h2>
+</div>
+<div id="timeline" class="module">
+    <ul>
+        <li id="idea">James has an idea for <a href="#">Data Commons</a></li>
+        <li>James has an idea for <a href="#">Data Commons</a></li>
+        <li>James has an idea for <a href="#">Data Commons</a></li>
+    </ul>
+</div>
+{% endblock content %}
+
+{% block sidebar %}
+<h3>Active Projects</h3>
+<div class="module">
+</div>
 {% endblock %}
