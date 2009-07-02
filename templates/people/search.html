@@ -7,7 +7,7 @@
 <div class="module" id="searchContent">
     <a id="advancedBtn"href="#">Advanced Search</a>	
     <form id="searchForm" method="GET" action=".">
-        <input id="zip_search" type="text" name="word" maxlength="30" value="Zip Code"/>
+        {{form.location}}
         <button class="searchBtn">
             <span>search</span>
         </button>
@@ -15,54 +15,29 @@
     <div id="advancedSearch">
         <form id="advancedSearch" method="GET" action=".">
             <ul>
-                <li>
-                    <label>Name</label>
-                    <input id="name" type="text" name="word" maxlength="30" />
-                </li>	
-                <li>
-                    <label>Position</label>
-                    <select name="position" class="positionDropdown">
-                        <option value="developer">Developer</option>
-                        <option value="designer">Designer</option>
-                        <option value="developer and designer">Developer and Designer</option>
-                        <option value="other">Other</option>
-                    </select>
-                </li>
-                <li>
-                    <label>Location Range</label>
-                    <select name="location" class="locationDropdown">
-                        <option value="five_miles">5 Miles</option>
-                        <option value="ten_miles">10 Miles</option>
-                        <option value="fifteen_miles">20 Miles</option>
-                        <option value="fifty_miles">50 Miles</option>
-                        <option value="onehundred_miles">100 Miles</option>
-                    </select>
-                </li>
+                <li> {{form.name.label_tag}} {{form.name}} </li>
+                <li> {{form.position.label_tag}} {{form.position}} </li>
+                <li> {{form.location_range.label_tag}} {{form.location_range}} </li>
                 <button class="advsearchBtn">
                     <span>search</span>
                 </button>
                 <div class="clear"></div>
-            </ul>	
-        </form>	
+            </ul>
+        </form>
     </div>
 </div>
+
 <div id="communityTimelineHeader" class="contentHeader">
-    <h3 id="h3Header">There are <span id="communityMembers">4,896</span> members of the Sunlight Labs community and growing.</h3>
+    <h3 id="h3Header">There are <span id="communityMembers">{{num_users}}</span> members of the Sunlight Labs community and growing.</h3>
 </div>
 <div id="timeline" class="module">
     <ul>
-        <li>
-            <a href="#">James</a> just joined from Michigan.
-        </li>
-        <li>
-            <a href="#">Jake</a> just joined from Fresno, CA.
-        </li>
-        <li>
-            <a href="#">Jack</a> just joined from New York, NY.
-        </li>
-        <li>
-            <a href="#">Jeremy</a> just joined from Portland, ME.
-        </li>
+        {% for u in latest_users %}
+            <li>
+            <a href="{% url user_profile u %}">{% firstof u.first_name u.username %}</a> just joined
+            {% if u.profile.location %}from {{u.profile.location}}{% endif %}
+            </li>
+        {% endfor %}
     </ul>
 </div>
 {% endblock %}

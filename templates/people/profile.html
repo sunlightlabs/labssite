@@ -7,8 +7,8 @@
     <div id="personDetails">
         <div id="personHeader">
             <h2>
-                {% if p_user.firstname %}
-                    {{p_user.firstname}} {{p_user.lastname}}
+                {% if p_user.first_name %}
+                    {{p_user.first_name}}
                 {% else %}
                     {{p_user.username}}
                 {% endif %}

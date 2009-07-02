@@ -7,42 +7,10 @@
     </div>
     <div class="module">
         <p class="tip">Let the labs community know more about you.</p>
-        <form id="accountForm">
+        <form id="accountForm" method="POST" action=".">
             <ul>
-                <li>
-                    <label>Name</label>
-                    <input id="name" type="text" name="word" maxlength="30" />
-                </li>	
-                <li>
-                    <label>Email</label>
-                    <input id="email" type="text" name="word" maxlength="30" />
-                </li>
-                <li>
-                    <label>Current Avatar</label>
-                    <input id="avatar" type="text" name="word" maxlength="30" />
-                </li>
-                <li>
-                    <label>Upload A New Avatar</label>
-                    <input id="upload" type="text" name="word" maxlength="30" />
-                </li>
-                <li>
-                    <label>Personal URL</label>
-                    <input id="url" type="text" name="word" maxlength="30" />
-                </li>
-                <li>
-                    <label>Position</label>
-                    <select name="position" class="positionDropdown">
-                        <option value="developer">Developer</option>
-                        <option value="designer">Designer</option>
-                        <option value="developer and designer">Developer and Designer</option>
-                        <option value="other">Other</option>
-                    </select>
-                </li>	
-                <li>
-                    <label>Location</label>
-                    <input id="location" type="text" name="word" maxlength="30" />
-                </li>
-                <li>
+                {{ form.as_ul }}
+                <!-- <li>
                     <label>Skills</label>
                     <p><a href="#">Show Common Skills List</a></p>
                     <input id="skills" type="text" name="word" maxlength="30" />
@@ -70,18 +38,15 @@
                         </ul>
                         <div class="clear"></div>	
                     </div>
-                </li>
-                <li>
-                    <label>About You</label>
-                    <textarea id="text" class="textarea" name="text" cols="32" rows="5"></textarea>
-                </li>
+                    </li>
+                    -->
                 <button class="saveBtn">
                     <span>Save Changes</span>
-                </button>	
-            </ul>	
-        </form>		
+                </button>
+            </ul>
+        </form>
     </div>
-</div>		
+</div>
 {% endblock %}
 
 {% block sidebar %}
@@ -96,7 +61,7 @@
             <li>
                 <label>Password</label>
                 <input id="name" type="text" name="word" maxlength="30" />
-            </li>	
+            </li>
             <li>
                 <label>Confirm Password</label>
                 <input id="name" type="text" name="word" maxlength="30" />
