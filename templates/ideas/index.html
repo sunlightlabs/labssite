@@ -3,104 +3,14 @@
 {% block content %}
 <div class="contentHeader">
     <h2 class="ideas">Ideas</h2>
-</div>	
+</div>
 <div id="ideas" class="module">
     <p class="tip">Want to help and are looking for a great project, <strong>claim one from the list below!</strong><br /> See something that's interesting but you don't have the time to help, <strong>vote it up</strong> so that other people find it and get to work!</p>
-    <div class="idea">
-        <div class="voteBox">
-            <a href="#">Vote</a>
-            <span class="voteTotal">128 Votes</span>
-        </div>	
-        <div class="ideaContent">
-            <h3><a href="#">Idea Name</a></h3>
-            <dl class="entryMetadata">
-                <dt>Posted by</dt>
-                <dd><a href="#">Jeremy</a></dd>
 
-                <dt>Date</dt>
-                <dd>May 15, 2009</dd>
-            </dl>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
-            <a class="interestedBtn" href="#">I'm Interested</a>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="idea">
-        <div class="voteBox">
-            <a href="#">Vote</a>
-            <span class="voteTotal">128 Votes</span>
-        </div>	
-        <div class="ideaContent">
-            <h3><a href="#">Idea Name</a></h3>
-            <dl class="entryMetadata">
-                <dt>Posted by</dt>
-                <dd><a href="#">Jeremy</a></dd>
+    {% for idea in ideas.object_list %}
+        {% include "ideas/idea.html" %}
+    {% endfor %}
 
-                <dt>Date</dt>
-                <dd>May 15, 2009</dd>
-            </dl>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
-            <a class="interestedBtn" href="#">I'm Interested</a>
-            <div class="clear"></div>
-        </div>	
-    </div>
-    <div class="idea">
-        <div class="voteBox">
-            <a href="#">Vote</a>
-            <span class="voteTotal">128 Votes</span>
-        </div>	
-        <div class="ideaContent">
-            <h3><a href="#">Idea Name</a></h3>
-            <dl class="entryMetadata">
-                <dt>Posted by</dt>
-                <dd><a href="#">Jeremy</a></dd>
-
-                <dt>Date</dt>
-                <dd>May 15, 2009</dd>
-            </dl>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
-            <a class="interestedBtn" href="#">I'm Interested</a>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="idea">
-        <div class="voteBox">
-            <a href="#">Vote</a>
-            <span class="voteTotal">128 Votes</span>
-        </div>	
-        <div class="ideaContent">
-            <h3><a href="#">Idea Name</a></h3>
-            <dl class="entryMetadata">
-                <dt>Posted by</dt>
-                <dd><a href="#">Jeremy</a></dd>
-
-                <dt>Date</dt>
-                <dd>May 15, 2009</dd>
-            </dl>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
-            <a class="interestedBtn" href="#">I'm Interested</a>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="idea">
-        <div class="voteBox">
-            <a href="#">Vote</a>
-            <span class="voteTotal">128 Votes</span>
-        </div>	
-        <div class="ideaContent">
-            <h3><a href="#">Idea Name</a></h3>
-            <dl class="entryMetadata">
-                <dt>Posted by</dt>
-                <dd><a href="#">Jeremy</a></dd>
-
-                <dt>Date</dt>
-                <dd>May 15, 2009</dd>
-            </dl>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
-            <a class="interestedBtn" href="#">I'm Interested</a>
-            <div class="clear"></div>
-        </div>
-    </div>
 </div>
 {% endblock %}
 

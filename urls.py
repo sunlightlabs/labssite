@@ -45,12 +45,13 @@ urlpatterns = patterns('',
     url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
     url(r'^admin/(.*)', admin.site.root, name='admin'),
 
+    url(r'^comments/', include('django.contrib.comments.urls')),
+
     # contests
     url(r'^contests/', include('sunlightlabs.appcontest.urls')),
     url(r'^judgeforamerica/', include('sunlightlabs.appjudging.urls')),
 
     # blog/blogdor
-    url(r'^blog/comments/', include('django.contrib.comments.urls')),
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="blogdor_feeds"),
     url(r'^blog/$', 'sunlightlabs.labs.views.blog_wrapper'),
     url(r'^blog/', include('blogdor.urls')),
