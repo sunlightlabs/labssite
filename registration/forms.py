@@ -40,7 +40,7 @@ class RegistrationForm(forms.Form):
         return self.cleaned_data
 
     def save(self):
-        print self.cleaned_data
-        User.objects.create_user(username=self.cleaned_data['username'],
-                                 email=self.cleaned_data['email'],
-                                 password=self.cleaned_data['password1'])
+        user = User.objects.create_user(username=self.cleaned_data['username'],
+                                        email=self.cleaned_data['email'],
+                                        password=self.cleaned_data['password1'])
+        return user

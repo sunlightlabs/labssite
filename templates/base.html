@@ -33,13 +33,29 @@
                     <div class="clear"></div>
                     <div id="pageNav">
                         <ul>
+                            {% if user.is_authenticated %}
+                            <li>Currently logged in as {{user}}. <a href="{% url auth_logout %}">Logout?</a></li>
+                            {% if user.is_staff %}
+                            <li><a href="/admin/">Admin</a></li>
+                            {% endif %}
+                            {% else %}
                             <li><a href="{% url registration_register %}">Join Us</a></li>
                             <li><a href="{% url auth_login %}">Sign In</a></li>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
                 <div id="mainContent">
                     <div id="ltColumn">
+
+                        {% if messages %}
+                        <ul id="messages_list">
+                            {% for message in messages %}
+                                <li> {{ message }} </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+
                         {% block content %}
                         {% endblock content %}
                     </div>

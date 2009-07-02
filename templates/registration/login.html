@@ -9,13 +9,13 @@
             <p class="tip">Come help open up the government by becoming a part of our community.</p>
             <div id="signin_nav">
                 <ul>
-                    <li id="signin_openid"><a class="active" href="#">OpenID</a></li>
+                    <!--<li id="signin_openid"><a class="active" href="#">OpenID</a></li>-->
                     <li id="signin_standard"><a href="#">Standard Sign In</a></li>
-                </ul>	
+                </ul>
                 <div class="clear"></div>
-            </div>	
+            </div>
             <div id="signupOptions">
-                <form id="openid_signinForm">
+                <!--<form id="openid_signinForm">
                     <ul>
                         <li>
                             <label>OpenID</label>
@@ -25,17 +25,10 @@
                             <span>Sign In</span>
                         </button>
                     </ul>
-                </form>
+                </form>-->
                 <form id="standard_signinForm" method="post" action=".">
                     <ul>
-                        <li>
-                            <label>Username</label>
-                            <input id="username" type="text" name="word" maxlength="30" />
-                        </li>
-                        <li>
-                            <label>Password</label>
-                            <input id="password" type="text" name="word" maxlength="30" />
-                        </li>
+                        {{ form.as_ul }}
                         <button class="signinBtn">
                             <span>Sign In</span>
                         </button>

@@ -132,8 +132,8 @@ SIMPLESURVEY_COMPLETE_REDIRECT = "/judgeforamerica/"
 
 ACCOUNT_ACTIVATION_DAYS = 7
 
-LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = '/users/edit_profile/'
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
 
 try:
     from local_settings import *
