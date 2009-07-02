@@ -2,32 +2,42 @@
 {% block content %}
 <div id="person" class="module">
     <div id="personPic">
-        <img src="images/avatar_male.jpg"/>
+        <img src="{{p_user.profile.photo}}"/>
     </div>
     <div id="personDetails">
         <div id="personHeader">
-            <h2>Jeremy Carbaugh</h2>
-            <span id="personIdentifier">Developer</span>
+            <h2>
+                {% if p_user.firstname %}
+                    {{p_user.firstname}} {{p_user.lastname}}
+                {% else %}
+                    {{p_user.username}}
+                {% endif %}
+            </h2>
+            {% ifequal user.id p_user.id %}
+                <a href="{% url edit_profile %}">(edit profile)</a>
+            {% endifequal %}
+            <span id="personIdentifier">{{p_user.profile.get_role_display|safe}}</span>
         </div>	
         <div class="module">
             <dl>
-                <dt>Website:</dt>	
-                <dd><a href="#">http://www.sunlightlabs.com</a></dd>
+                <dt>Website:</dt>
+                <dd><a href="{{p_user.profile.url|default:"#"}}">{{p_user.profile.url|default:"n/a"}}</a></dd>
 
-                <dt>Location:</dt>	
-                <dd>Washington, DC</dd>
+                <dt>Location:</dt>
+                <dd>{{p_user.profile.location|default:"n/a"}}</dd>
                 <div class="clear"></div>
 
-                <dt>Skills:</dt>	
-                <dd>Python, XML firewalls</dd>
-
+                <dt>Skills:</dt>
+                <dd>{{p_user.profile.skills|default:"n/a"}}</dd>
             </dl>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
-            <a id="contactBtn" href="#">Contact</a>
+            <p>
+            {{p_user.profile.about}}
+            </p>
+            {# <a id="contactBtn" href="#">Contact</a> #}
         </div>
     </div>
     <div id="personProject">
-        <h3 class="leftH3">Jeremy's Projects</h3>
+        <h3 class="leftH3">{{p_user.profile.possessive}} Projects</h3>
         <div id="projectModule" class="module">
             <div id="leadProjects">
                 <h4>Lead</h4>
@@ -42,12 +52,12 @@
                     <li><a href="#">Project Name</a></li>
                     <li><a href="#">Project Name</a></li>
                     <li><a href="#">Project Name</a></li>
-                </ul>	
-            </div>	
+                </ul>
+            </div>
         </div>
     </div>
     <div id="sunlightPost">	
-        <h3 class="leftH3">Jeremy's Posts</h3>
+        <h3 class="leftH3">{{p_user.profile.possessive}} Posts</h3>
         <div class="module">
             <div class="smPost">
                 <h4><a href="#">Title of Post</a></h4>
@@ -70,12 +80,13 @@
 {% endblock %}
 
 {% block sidebar %}
-<h3 class="space">Jeremy's Location</h3>
-<div id="submitIdea" class="module">
+<h3 class="space">{{p_user.profile.possessive}} Location</h3>
+<div class="module">
+    <img src="{{p_user.profile.static_google_map}}" />
 </div>
 <hr></hr>
-<h3 class="space">Jeremy's Tweets</h3>
-<div id="projectJoin" class="module">
+<h3 class="space">{{p_user.profile.possessive}} Tweets</h3>
+<div class="module">
 </div>
 <div class="clear"></div>
 {% endblock sidebar %}
