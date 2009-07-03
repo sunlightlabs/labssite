@@ -11,7 +11,7 @@
         {% js "jquery-1.3.2.min.js" %}
         {% js "labs.js" %}
     </head>
-    <body class="home">
+    <body class="{% block bodyclass %}home{% endblock %}">
         <div id="headerWrapper">
             <div id="pageMain">
                 <div id="header">
@@ -34,7 +34,7 @@
                     <div id="pageNav">
                         <ul>
                             {% if user.is_authenticated %}
-                            <li>Currently logged in as <a href="{% url user_profile user.username %}">{{user}}</a></li>
+                            <li>Hi, <a href="{% url user_profile user.username %}">{{user}}</a>.</li>
                             <li><a href="{% url auth_logout %}">Logout?</a></li>
                             {% if user.is_staff %}
                             <li><a href="/admin/">Admin</a></li>

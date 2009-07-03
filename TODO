@@ -1,0 +1,32 @@
+site-wide
+    deploy on staging
+    code audit
+
+front page
+    alertbox
+    recent posts
+    active projects
+    newsfeed
+blogdor integration
+contact form
+contest pages
+anthill.people
+    view profile
+        projects
+        posts
+        location
+        tweets
+    edit profile
+        change password
+        avatar
+        lat & long
+    search
+        make search work
+        community profile
+anthill.projects (write)
+anthill.events (write)
+anthill.ideas
+    pagination
+    join buttons
+    voting
+    comments
