@@ -1,15 +1,13 @@
-site-wide
-    deploy on staging
-    code audit
+blogdor integration [mon]
 
-front page
+anthill.projects [tue-thur]
+
+front page      [wed]
     alertbox
     recent posts
     active projects
     newsfeed
-blogdor integration
-contact form
-contest pages
+
 anthill.people
     view profile
         projects
@@ -23,8 +21,9 @@ anthill.people
     search
         make search work
         community profile
-anthill.projects (write)
-anthill.events (write)
+
+anthill.events  [fri]
+
 anthill.ideas
     pagination
     join buttons

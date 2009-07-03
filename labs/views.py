@@ -1,11 +1,8 @@
 from blogdor.models import Post
 from blogdor.views import archive_index
-from django.conf import settings
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from djitter.models import Account
-from sunlightlabs.labs.models import Hero
 from contact_form.views import contact_form
 from showcase.models import Project, FEATURED
 
