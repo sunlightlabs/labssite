@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib.gis import admin
 from django import forms
-from blogdor.feeds import LatestComments, LatestPosts, LatestByTag
+from blogdor.feeds import LatestComments, LatestPosts, LatestForTag, LatestForAuthor
 from contact_form.forms import ContactForm
 admin.autodiscover()
 
@@ -30,14 +30,19 @@ class LabsLatestComments(LatestComments):
     feed_title = "Sunlight Labs blog comments"
     feed_description = "Latest comments from the nerds that read the Sunlight Labs blog"
 
-class LabsLatestByTag(LatestByTag):
+class LabsLatestForTag(LatestForTag):
     feed_title = "Sunlight Labs loves %s"
     feed_description = "Posts from the Sunlight Labs blog tagged with '%s'"
+
+class LabsLatestForAuthor(LatestForAuthor):
+    feed_title = "Sunlight Labs' %s"
+    feed_description = "Posts written by %s for the Sunlight Labs blog"
 
 blog_feeds = {
     'latest': LabsLatestPosts,
     'comments': LabsLatestComments,
-    'tag': LabsLatestByTag,
+    'tag': LabsLatestForTag,
+    'author': LabsLatestForAuthor,
 }
 
 urlpatterns = patterns('',

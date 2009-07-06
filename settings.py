@@ -119,7 +119,8 @@ MEDIASYNC_AWS_PREFIX = 'site'
 TWITTER_USERNAME = 'sunlightlabs'
 
 BLOGDOR_NOTIFY_ON_COMMENT = True
-AKISMET_KEY = '54f2d2830563'
+BLOGDOR_ENABLE_FEEDS = False
+#AKISMET_KEY = '54f2d2830563'
 
 GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com',
                             'jturk@sunlightfoundation.com']

@@ -1,5 +1,5 @@
 from blogdor.models import Post
-from blogdor.views import archive_index
+from blogdor.views import archive
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -21,7 +21,7 @@ def index(request):
 def blog_wrapper(request):
     if 'feed' in request.GET:
         return HttpResponseRedirect('/blog/feeds/latest')
-    return archive_index(request)
+    return archive(request)
 
 def contact_sent(request, form_class):
     return contact_form(request, form_class, template_name='contact_form/contact_form_sent.html')
