@@ -1,0 +1,425 @@
+[
+ {
+  "pk": 1, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/"
+  }
+ }, 
+ {
+  "pk": 2, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/"
+  }
+ }, 
+ {
+  "pk": 5, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/beyond-the-bite/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/beyond-the-bite/"
+  }
+ }, 
+ {
+  "pk": 22, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/bill-track/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/bill-track/"
+  }
+ }, 
+ {
+  "pk": 19, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/buddy/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/buddy/"
+  }
+ }, 
+ {
+  "pk": 32, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/call-congress/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/call-congress/"
+  }
+ }, 
+ {
+  "pk": 23, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/capital-calls/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/capital-calls/"
+  }
+ }, 
+ {
+  "pk": 16, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/civx/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/civx/"
+  }
+ }, 
+ {
+  "pk": 27, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/communitycounts/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/communitycounts/"
+  }
+ }, 
+ {
+  "pk": 28, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/congress-bills/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/congress-bills/"
+  }
+ }, 
+ {
+  "pk": 38, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/congress-explorer/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/congress-explorer/"
+  }
+ }, 
+ {
+  "pk": 3, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/congresscal/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/congresscal/"
+  }
+ }, 
+ {
+  "pk": 40, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/congressional140/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/congressional140/"
+  }
+ }, 
+ {
+  "pk": 44, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/congressspacebook/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/congressspacebook/"
+  }
+ }, 
+ {
+  "pk": 6, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/defogger/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/defogger/"
+  }
+ }, 
+ {
+  "pk": 10, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/district-by-district-organizing-tool/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/district-by-district-organizing-tool/"
+  }
+ }, 
+ {
+  "pk": 7, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/e-papertrail/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/e-papertrail/"
+  }
+ }, 
+ {
+  "pk": 21, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/expendicus/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/expendicus/"
+  }
+ }, 
+ {
+  "pk": 13, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/filibusted/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/filibusted/"
+  }
+ }, 
+ {
+  "pk": 39, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/flashgraffer/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/flashgraffer/"
+  }
+ }, 
+ {
+  "pk": 41, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/geektrack/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/geektrack/"
+  }
+ }, 
+ {
+  "pk": 46, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/govpix/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/govpix/"
+  }
+ }, 
+ {
+  "pk": 45, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/hear-me-say-this/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/hear-me-say-this/"
+  }
+ }, 
+ {
+  "pk": 34, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/hello-congress/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/hello-congress/"
+  }
+ }, 
+ {
+  "pk": 42, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/ilegislator-iphone-application/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/ilegislator-iphone-application/"
+  }
+ }, 
+ {
+  "pk": 36, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/know-thy-congressman/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/know-thy-congressman/"
+  }
+ }, 
+ {
+  "pk": 15, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/legislator-book/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/legislator-book/"
+  }
+ }, 
+ {
+  "pk": 14, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/legislator-directory-and-social-media-profile-mash/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/legislator-directory-and-social-media-profile-mash/"
+  }
+ }, 
+ {
+  "pk": 31, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/legistalker/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/legistalker/"
+  }
+ }, 
+ {
+  "pk": 25, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/lobbylist/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/lobbylist/"
+  }
+ }, 
+ {
+  "pk": 17, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/localpoliticsin/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/localpoliticsin/"
+  }
+ }, 
+ {
+  "pk": 4, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/maps-for-america/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/maps-for-america/"
+  }
+ }, 
+ {
+  "pk": 12, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/my-legislators/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/my-legislators/"
+  }
+ }, 
+ {
+  "pk": 33, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/quizthebill/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/quizthebill/"
+  }
+ }, 
+ {
+  "pk": 47, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/representedby/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/representedby/"
+  }
+ }, 
+ {
+  "pk": 35, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/representme/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/representme/"
+  }
+ }, 
+ {
+  "pk": 29, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/speakforchange/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/speakforchange/"
+  }
+ }, 
+ {
+  "pk": 11, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/tellmypolitician/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/tellmypolitician/"
+  }
+ }, 
+ {
+  "pk": 20, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/the-extraordinaries-gov-action/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/the-extraordinaries-gov-action/"
+  }
+ }, 
+ {
+  "pk": 8, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/the-party-line/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/the-party-line/"
+  }
+ }, 
+ {
+  "pk": 18, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/the-petition-archives/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/the-petition-archives/"
+  }
+ }, 
+ {
+  "pk": 37, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/tweetcongress/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/tweetcongress/"
+  }
+ }, 
+ {
+  "pk": 9, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/where-the-money-goes/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/where-the-money-goes/"
+  }
+ }, 
+ {
+  "pk": 24, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/word-on-the-street/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/word-on-the-street/"
+  }
+ }, 
+ {
+  "pk": 26, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/words-vote/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/words-vote/"
+  }
+ }, 
+ {
+  "pk": 30, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/world-linked-wikis-mashup/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/world-linked-wikis-mashup/"
+  }
+ }, 
+ {
+  "pk": 43, 
+  "model": "redirects.redirect", 
+  "fields": {
+   "new_path": "/contests/appsforamerica/apps/yeas-nays/", 
+   "site": 1, 
+   "old_path": "/appsforamerica/apps/yeas-nays/"
+  }
+ }
+]
