@@ -1,67 +1,13 @@
-{% extends "base_blog.html" %}
-{% load markup %}
+{% extends "blogdor/base.html" %}
 
-{% block blog_content %}
-    <div id="blog">
-    	<h2>Recent Posts</h2>
-    	<div class="entry">
-    		<ol class="entries hfeed">
-    		    {% for post in post_list %}
-    			    <li class="hentry">
-    					<div class="entryMetadata">
-    						<h3 class="entry_title entry-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
-    						<div class="commentsMetaData">
-    							<span class="type">Comments:</span>
-    							<span class="value">
-    								<a href="{{ post.get_absolute_url }}#comments">{{ post.comment_count }}</a>
-    							</span>
-    						</div>
-    						<div class="hr"><hr /></div>
-    						<div class="authorMetaData author vcard">
-    							<span class="type">Written by </span>
-    							<span class="value fn">{{ post.author.first_name }}</span>
-    						</div>
-    						<div class="updatedMetaData">
-    							<span class="type">Date:</span>
-    							<span class="value"><abbr class="published" title="{{ post.date_published.isoformat }}">{{ post.date_published|date:"F j Y" }}</abbr></span>
-    						</div>
-    					</div>
-    					<div class="entry-summary">
-        					{% ifequal post.markup 'markdown' %}
-                                {{ post.excerpt|markdown|safe }}
-                            {% else %}
-                                {% ifequal post.markup 'textile' %}
-                                    <p>{{ post.excerpt|textile|safe }}</p>
-                                {% else %}                
-                                    {% ifequal post.markup 'restructuredtext' %}
-                                        <p>{{ post.excerpt|restructuredtext|safe }}</p>
-                                    {% else %}
-                                        <p>{{ post.excerpt|safe }}</p>
-                                    {% endifequal %}
-                                {% endifequal %}
-                            {% endifequal %}
-                        </div>
-    					<div class="readMore"><a href="{{ post.get_absolute_url }}" rel="bookmark">Read More</a></div>
-    				</li>
-    			{% endfor %}
-    		</ol>
-		</div>
-		{% if page_obj.has_other_pages %}
-		<ol class="pagination">
-		    {% if page_obj.has_previous %}
-    		    <li><a href="{% url blog_object_list_page page_obj.previous_page_number %}">Previous</a></li>
-		    {% endif %}
-		    {% for page in paginator.page_range %}
-		        {% ifequal page page_obj.number %}
-    		        <li class="current">{{ page }}</li>
-    		    {% else %}
-    		        <li><a href="{% url blog_object_list_page page %}">{{ page }}</a></li>
-    		    {% endifequal %}
-		    {% endfor %}
-		    {% if page_obj.has_next %}
-    		    <li><a href="{% url blog_object_list_page page_obj.next_page_number %}">Next</a></li>
-		    {% endif %}
-		</ol>
-		{% endif %}
-	</div>
+{% block content %}
+    <div class="contentHeader">
+        <h2 class="post">Recent Posts</h2>
+    </div>
+    <div class="module">
+        {% for post in post_list %}
+            {% include "blogdor/post_summary.html" %}
+        {% endfor %}
+        <a id="centered" href="#">« Older Posts</a>
+    </div>
 {% endblock %}

@@ -1,10 +1,13 @@
-{% if posts %}
-<ul class="hfeed">
-    {% for post in posts %}
-    <li class="hentry">
-        <a href="{{ post.get_absolute_url }}" class="entry-title" rel="bookmark">{{ post.title|safe }}</a>
-        <abbr class="published" title="{{ post.date_published|date:"Y-m-d\TH:i:sO" }}">{{ post.date_published|date:"m/d/y" }}</abbr>
-    </li>
-    {% endfor %}
-</ul>
-{% endif %}
+<div class="post">
+    <h3><a href="{{post.get_absolute_url}}">{{post.title}}</a></h3>
+    <dl class="entryMetadata">
+        <dt>Written by</dt>
+        <dd><a href="{{post.author.get_absolute_url}}">{{post.author}}</a></dd>
+
+        <dt>Date</dt>
+        <dd>{{post.date_published|date:"m d Y"}}</dd>
+    </dl>
+    <p>{{post.excerpt}}</p>
+    <p class="continueLink"><a href="{{post.get_absolute_url}}">Continue Reading</a></p>
+    <div class="clear"></div>
+</div>

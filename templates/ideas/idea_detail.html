@@ -31,40 +31,7 @@
                 <span>I Agree</span>
             </button>
         </div>
-
-        <div id="commentBox">
-            <h3>Discussion</h3>
-            <ol id="comments">
-                {% for comment in comments %}
-                    {% include "comment_li.html" %}
-                {% endfor %}
-            </ol>
-
-            <h3 class="h3tip">What are Your Thoughts?</h3>
-            <p class="tip">Have additional feedback or ideas on how this project could be better, comment below.</p>
-
-            <div id="commentBlock">
-                <a class="userPhoto" href="#">
-                    <img src="{{user.profile.photo}}"/>
-                </a>
-                {% get_comment_form for idea as form %}
-                <form id="comment" method="POST" action="{% comment_form_target %}">
-                    {{ form.comment }}
-                    {{ form.honeypot }}
-                    {% for field in form.hidden_fields %}
-                        {{ field }}
-                    {% endfor %}
-                    <div id="subscribe">
-                        <input type="checkbox" value="1" name="subscribe"/>
-                        <label>Subscribe to this stream</label>
-                    </div>
-                    <button class="postBtn">
-                        <span>Post!</span>
-                    </button>
-                </form>	
-            </div>
-            <div class="clear"></div>	
-        </div>
+        {% include "comment_box.html" %}
     </div>
 </div>
 {% endblock %}

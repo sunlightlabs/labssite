@@ -1,0 +1,30 @@
+<div id="commentBox">
+    <h3>Discussion</h3>
+    {% if comment_list %}
+    <ol id="comments">
+        {% for comment in comment_list %}
+            {% include "comment_li.html" %}
+        {% endfor %}
+    </ol>
+    {% endif %}
+
+    <h3 class="h3tip">What are Your Thoughts?</h3>
+    <p class="tip">Have thoughts that might fuel this discussion further, post them below.</p>
+    <p class="tip"><a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a> is supported in comments.</p>
+    <div id="commentBlock">
+        <a class="userPhoto" href="#">
+            <img src="images/avatar_male.jpg"/>
+        </a>
+        <form id="comment">
+            <textarea id="text" class="textarea" name="text" cols="32" rows="5"></textarea>
+            <div id="subscribe">
+                <input type="checkbox" value="1" name="subscribe"/>
+                <label>Subscribe to this stream</label>
+            </div>
+            <button class="postBtn">
+                <span>Post!</span>
+            </button>
+        </form>
+    </div>
+    <div class="clear"></div>
+</div>

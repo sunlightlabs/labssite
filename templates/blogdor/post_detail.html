@@ -1,110 +1,39 @@
-{% extends "base_blog.html" %}
-{% load blog %}
+{% extends "blogdor/base.html" %}
 {% load comments %}
-{% load markup %}
 
 {% block title %}{{ block.super }} - {{ post.title }}{% endblock %}
 
-{% block sidebar %}
-    <div id="blogArchive">
-		<div id="blogNav">
-			<ul>
-				<li id="popular">
-					<a href="#">Most Popular</a>
-				</li>
-				<li id="favorites">
-					<a href="#">Our Favorites</a>
-				</li>	
-			</ul>	
-		</div>
-		<div id="postsArchive">
-        	{% recent_posts 3 %}
-		</div>
+{% block content %}
+<div id="postTitle" class="contentHeader">
+    <h2 class="post">{{post.title}}</h2>
+</div>
+<div class="module" id="blog_detail">
+    <dl class="entryMetadata">
+        <dt>Written by</dt>
+        <dd><a href="{{post.author.get_absolute_url}}">{{post.author}}</a></dd>
+        <dt>Date</dt>
+        <dd>{{post.date_published}}</dd>
+    </dl>
+    <div class="postBody">
+        {{post.content}}
     </div>
-    {{ block.super }}
-{% endblock %}
-
-{% block blog_content %}
-    <div class="entryMetadata">
-        {% if not post.is_published %}
-            <p><strong>{{ post.status|upper }}</strong></p>
-        {% endif %}
-    	<h3 class="entry_title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
-    	{% if post.is_published %}
-        	<div class="commentsMetaData">
-        		<span class="type">Comments:</span>
-        		<span class="value">
-        			<a href="{{ post.get_absolute_url }}#comments">{{ post.comment_count }}</a>
-        		</span>
-        	</div>
-    	{% endif %}
-		<div class="hr"><hr /></div>
-    	<div class="authorMetaData vcard">
-    		<span class="type">Written by </span>
-    		<span class="value fnn">{{ post.author.first_name }}</span>
-    	</div>
-    	{% if post.is_published %}
-        	<div class="updatedMetaData">
-        		<span class="type">Date:</span>
-        		<span class="value">{{ post.date_published|date:"F j Y" }}</span>
-        	</div>    
-    	{% endif %}
-        
+    
+    {% if post.tags %}
+    <div id="tags">
+        <span>Tags:</span>
+        <ul>
+            {% for tag in tags %}
+            <li><a href="{% url blog_tag_list tag.name %}">{{ tag.name }}</a></li>
+            {% endfor %}
+        </ul>
+        <div class="clear"></div>
     </div>
-    <div class="post_content">
-        {% ifequal post.markup 'markdown' %}
-            {{ post.content|markdown|safe }}
-        {% else %}
-            {% ifequal post.markup 'textile' %}
-                {{ post.content|textile|safe }}
-            {% else %}                
-                {% ifequal post.markup 'restructuredtext' %}
-                    {{ post.content|restructuredtext|safe }}
-                {% else %}
-                    {{ post.content|safe }}
-                {% endifequal %}
-            {% endifequal %}
-        {% endifequal %}
-    </div>
-	{% with post.get_tags as tags %}
-        {% if tags %}
-            <div class="tags">
-                <span class="type">Tags:</span>
-                <ul class="value">
-                    {% for tag in tags %}
-                    <li><a href="{% url blog_tag_list tag.name %}">{{ tag.name }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>  
-        {% endif %}
-    {% endwith %}
-    {% if post.is_published %}
-        {% get_comment_list for post as comment_list %}
-        <div id="comments">
-            <h3>Comments</h3>
-			<p class="tip"><a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a> is supported in comments.</p>
-            {% if comment_list %}
-                <ol id="comments">
-                    {% for comment in comment_list %}
-                        <li class="{% if comment.email %}commentGravatar{% else %}commentNone{% endif %}" id="c{{ comment.pk }}">
-							
-                            <div id="commentHeader">
-								{% if comment.email %}
-									{% gravatar comment.email %}
-								{% endif %}
-                            	{% if comment.user_url %}
-	                                <p><a href="{{ comment.user_url }}">{{ comment.user_name }}</a></p>
-	                            {% else %}
-	                                <p>{{ comment.user_name }}</p>
-	                            {% endif %}
-							</div>
-                            <div class="entry-content"><p>{{ comment.comment|markdown }}</p></div>
-							<div class="clear"></div>
-                        </li>
-                    {% endfor %}
-                </ol>
-            {% endif %}
-            {% render_comment_form for post %}
-        </div>    
     {% endif %}
-{% endblock %}
+
+    {% if post.is_published %}
+    {% get_comment_list for post as comment_list %} 
+    {% include "comment_box.html" %}
+    {% endif %}
+
+</div>
+{% endblock content %}
