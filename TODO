@@ -30,3 +30,19 @@ anthill.ideas
     join buttons
     voting
     comments
+
+
+urls:
+    admin
+    admin/gatekeeper/
+    comments/
+    contests/
+    judgeforamerica/
+    blog/
+    contact/sent
+    contact/
+    accounts/
+    users/
+    ideas/
+    projects/
+    index
