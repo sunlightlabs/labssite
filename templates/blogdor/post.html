@@ -1,21 +1,13 @@
-{% load markup %}
+<div class="post">
+    <h3><a href="{{post.get_absolute_url}}">{{post.title}}</a></h3>
+    <dl class="entryMetadata">
+        <dt>Written by</dt>
+        <dd><a href="{{post.author.get_absolute_url}}">{{post.author}}</a></dd>
 
-<div class="entryMetadata">
-	{% block entry_title %}<h3 class="entry_title">{{ post.title }}</h3>{% endblock %}
-	<div class="commentsMetaData">
-		<span class="type">Comments:</span>
-		<span class="value">
-			<a href="/#">{{ post.comment_count }}</a>
-		</span>
-	</div>
-	<div class="hr"><hr /></div>
-	<div class="authorMetaData vcard">
-		<span class="type">Written by </span>
-		<span class="value fnn">{{ post.author.first_name }}</span>
-	</div>
-	<div class="updatedMetaData">
-		<span class="type">Date:</span>
-		<span class="value">{{ post.date_published|date:"F j Y" }}</span>
-	</div>
-</div>	
-{% block entry_content %}{{ post.excerpt|markdown|safe }}{% endblock %}
+        <dt>Date</dt>
+        <dd>{{post.date_published|date:"m d Y"}}</dd>
+    </dl>
+    <p>{{post.excerpt}}</p>
+    <p class="continueLink"><a href="{{post.get_absolute_url}}">Continue Reading</a></p>
+    <div class="clear"></div>
+</div>
