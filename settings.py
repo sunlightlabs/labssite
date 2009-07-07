@@ -97,11 +97,12 @@ INSTALLED_APPS = (
 
 AUTH_PROFILE_MODULE = 'people.Profile'
 
-EMAIL_HOST = "smtp.sunlightlabs.com"
-EMAIL_PORT = "25"
-EMAIL_HOST_USER = "***REMOVED***"
-EMAIL_HOST_PASSWORD = "***REMOVED***"
-EMAIL_USE_TLS = True
+if not DEBUG:
+    EMAIL_HOST = "smtp.sunlightlabs.com"
+    EMAIL_PORT = "25"
+    EMAIL_HOST_USER = "***REMOVED***"
+    EMAIL_HOST_PASSWORD = "***REMOVED***"
+    EMAIL_USE_TLS = True
 
 ALLOWED_TO_DM = ['cjoh','felskia','gregelin','jamesturk','jcarbaugh','jroo','timball']
 

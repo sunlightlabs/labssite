@@ -23,4 +23,4 @@ def post_callback(sender, instance, created, **kwargs):
                                 link=instance.get_absolute_url(),
                                 user=instance.author,
                                 item_type=ItemType.objects.all()[0])
-post_save.connect(post_callback, sender=Post)
+#post_save.connect(post_callback, sender=Post)
