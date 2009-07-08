@@ -1,18 +1,16 @@
-from blogdor.models import Post
-from blogdor.views import archive
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from contact_form.views import contact_form
-from showcase.models import Project, FEATURED
+from blogdor.models import Post
+from blogdor.views import archive
+from anthill.projects.models import Project
 
 def index(request):
-    featured_projects = Project.objects.filter(status=FEATURED)
-    recent_posts = Post.objects.public()[:2]
+    recent_posts = Post.objects.filter(is_published=True)[:3]
 
     data = {
-        "featured_projects": featured_projects,
-        "recent_posts": recent_posts,
+        "latest_posts": recent_posts,
     }
 
     return render_to_response("labs/index.html", data,

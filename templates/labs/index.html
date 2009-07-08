@@ -10,52 +10,18 @@
         <div id="alertBox">
             <h3>[ Apps for America 2 has just launched ]</h3>
         </div>
-    </div>      
+    </div>
 </div>
+
 <div class="contentHeader">
     <h2 class="post">Recent Posts</h2>
-</div>  
+</div>
 <div class="module">
-    <div class="post">
-        <h3><a href="#">Title of Post</a></h3>
-        <dl class="entryMetadata">
-            <dt>Written by</dt>
-            <dd><a href="#">Jeremy</a></dd>
-        
-            <dt>Date</dt>
-            <dd>May 15, 2009</dd>
-        </dl>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
-        <p class="continueLink"><a href="#">Continue Reading</a></p>
-        <div class="clear"></div>
-    </div>
-    <div class="post">
-        <h3><a href="#">Title of Post</a></h3>
-        <dl class="entryMetadata">
-            <dt>Written by</dt>
-            <dd><a href="#">Jeremy</a></dd>
-        
-            <dt>Date</dt>
-            <dd>May 15, 2009</dd>
-        </dl>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
-        <p class="continueLink"><a href="#">Continue Reading</a></p>
-        <div class="clear"></div>
-    </div>
-    <div class="post">
-        <h3><a href="#">Title of Post</a></h3>
-        <dl class="entryMetadata">
-            <dt>Written by</dt>
-            <dd><a href="#">Jeremy</a></dd>
-        
-            <dt>Date</dt>
-            <dd>May 15, 2009</dd>
-        </dl>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
-        <p class="continueLink"><a href="#">Continue Reading</a></p>
-        <div class="clear"></div>
-    </div>
-</div>  
+    {% for post in latest_posts %}
+        {% include "blogdor/post.html" %}
+    {% endfor %}
+</div>
+
 <div class="contentHeader">
     <h2>What's Happening in the Sunlight Labs Community</h2>
 </div>
@@ -66,6 +32,7 @@
         <li>James has an idea for <a href="#">Data Commons</a></li>
     </ul>
 </div>
+
 {% endblock content %}
 
 {% block sidebar %}
