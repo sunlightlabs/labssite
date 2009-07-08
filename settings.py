@@ -84,7 +84,6 @@ INSTALLED_APPS = (
     'gatekeeper',
     'djitter',
     'blogdor',
-    'showcase',
     'simplesurvey',
     'newsfeed',
     'sunlightlabs.labs',
@@ -93,6 +92,7 @@ INSTALLED_APPS = (
     'sunlightlabs.appjudging',
     'anthill.people',
     'anthill.ideas',
+    'anthill.projects',
 )
 
 AUTH_PROFILE_MODULE = 'people.Profile'

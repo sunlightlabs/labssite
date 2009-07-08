@@ -70,7 +70,7 @@ urlpatterns = patterns('',
     url(r'^users/', include('anthill.people.urls')),
 
     url(r'^ideas/', include('anthill.ideas.urls')),
-    url(r'^projects/', include('showcase.urls')),
+    url(r'^projects/', include('anthill.projects.urls')),
 
     # labs specific
     url(r'^$', 'sunlightlabs.labs.views.index', name='index'),

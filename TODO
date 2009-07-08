@@ -1,9 +1,13 @@
-blogdor integration
-    better commenting
+blogdor
+    pagination
+    archive views
 
-anthill.projects [tue-thur]
+anthill.projects
+    milestones
+    skills
+    links
 
-front page      [wed]
+front page
     alertbox
     recent posts
     active projects
@@ -23,14 +27,13 @@ anthill.people
         make search work
         community profile
 
-anthill.events  [fri]
+anthill.events
 
 anthill.ideas
     pagination
     join buttons
     voting
     comments
-
 
 urls:
     admin

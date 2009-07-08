@@ -1,0 +1,71 @@
+{% extends "ideas/base.html" %}
+
+{% block content %}
+<div id="projects" class="module">
+    <div class="contentHeader">
+        <h2 class="projects">{{project.name}}</h2>
+    </div>	
+    <div id="projectDetail" class="module">
+        <dl class="entryMetadata">
+            {% if project.official %}
+            <dt>This project is funded by</dt>
+            <dd><a href="#">Sunlight</a></dd>
+            {% endif %}
+
+            <dt>Became a project on</dt>
+            <dd>{{project.creation_date|date:"m d Y"}}</dd>
+        </dl>
+        <p id="projectDescription">{{project.description}}</p>
+        <div id="languages">
+            <h3>Skills</h3>
+            <ul>
+                {% for skill in project.skills %}
+                <li><a href="#">{{skill}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="timeline">
+            <h3>Milestones</h3>
+            <ul id="projectTimeline">
+                <li>Design comps have been uploaded by <a href="#">Ali</a></li>
+                <li><a href="#">Jeremy</a> was made lead</li>
+                <li>Project was created from idea: <a href="#">Data Commons</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block sidebar %}
+<h3 class="space">Project Participants</h3>
+<div class="module">
+    <h4>Lead</h4>
+    <a id="leadParticipant" href="{{project.lead.get_absolute_url}}">
+        <img src="{{project.lead.profile.photo}}" />
+        <span id="leadName">{{project.lead.username}}</span>
+        <span id="metadata">Sunlight Labs</span>
+    </a>
+    <div class="clear"></div>
+    <h4 id="teamHeader">Team</h4>
+    <ul id="teamParticipants">
+        {% for member in project.members.all.select_related %}
+        <li>
+            <a href="{{member.get_absolute_url}}"><img src="{{member.profile.photo}}"/>
+                <span>{{member}}</span>
+            </a>
+        </li>
+        {% endfor %}
+        <div class="clear"></div>
+    </ul>
+</div>
+
+<hr></hr>
+<h3 class="space">Want To Join This Project?</h3>
+<div id="projectJoin" class="module">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <button class="joinBtn">
+        <span>Join</span>
+    </button>
+</div>
+<div class="clear"></div>
+{% endblock %}
