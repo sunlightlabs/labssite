@@ -1,4 +1,5 @@
 {% extends "ideas/base.html" %}
+{% load tagging_tags %}
 
 {% block content %}
 <div id="projects" class="module">
@@ -16,10 +17,12 @@
             <dd>{{project.creation_date|date}}</dd>
         </dl>
         <p id="projectDescription">{{project.description}}</p>
+
+        {% tags_for_object project as skills %}
         <div id="languages">
             <h3>Skills</h3>
             <ul>
-                {% for skill in project.skills %}
+                {% for skill in skills %}
                 <li><a href="#">{{skill}}</a></li>
                 {% endfor %}
             </ul>
@@ -41,22 +44,29 @@
 <div class="module">
     <h4>Lead</h4>
     <a id="leadParticipant" href="{{project.lead.get_absolute_url}}">
-        <img src="{{project.lead.profile.photo}}" />
+        <img src="{{project.lead.profile.photo|default:"/media/images/avatar_male.jpg"}}" />
         <span id="leadName">{{project.lead.username}}</span>
         <span id="metadata">Sunlight Labs</span>
     </a>
     <div class="clear"></div>
+
+    {% with project.get_members as members %}
+    {% if members %}
     <h4 id="teamHeader">Team</h4>
     <ul id="teamParticipants">
-        {% for member in project.members.all.select_related %}
-        <li>
-            <a href="{{member.get_absolute_url}}"><img src="{{member.profile.photo}}"/>
-                <span>{{member}}</span>
-            </a>
-        </li>
+        {% for member in members %}
+            {% if not member.role.lead %}
+            <li>
+                <a href="{{member.get_absolute_url}}"><img src="{{member.profile.photo|default:"/media/images/avatar_male.jpg"}}"/>
+                    <span>{{member}}</span>
+                </a>
+            </li>
+            {% endif %}
         {% endfor %}
         <div class="clear"></div>
     </ul>
+    {% endif %}
+    {% endwith %}
 </div>
 
 <hr></hr>

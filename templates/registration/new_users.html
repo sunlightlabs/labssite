@@ -1,25 +1,12 @@
 <h3 class="space">Recent Members</h3>
 <div id="recentMembers" class="module">
     <ul>
+        {% for user in latest_users %}
+        {% endfor %}
         <li>
-            <img src="images/avatar_male.jpg"/>
-            <span id="leadName"><a href="#">Name</a></span>
-            <span id="metadata">Sunlight Labs</span>
-        </li>
-        <li>
-            <img src="images/avatar_male.jpg"/>
-            <span id="leadName"><a href="#">Name</a></span>
-            <span id="metadata">Sunlight Labs</span>
-        </li>	
-        <li>
-            <img src="images/avatar_male.jpg"/>
-            <span id="leadName"><a href="#">Name</a></span>
-            <span id="metadata">Sunlight Labs</span>
-        </li>	
-        <li>
-            <img src="images/avatar_male.jpg"/>
-            <span id="leadName"><a href="#">Name</a></span>
-            <span id="metadata">Sunlight Labs</span>
+        <img src="{{user.profile.photo|default:"/media/images/avatar_male.jpg"}}"/>
+            <span id="leadName"><a href="{{user.get_absolute_url}}">{{user}}</a></span>
+            <!--            <span id="metadata">Sunlight Labs</span>-->
         </li>
     </ul>
 </div>

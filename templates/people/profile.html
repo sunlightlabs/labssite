@@ -2,7 +2,7 @@
 {% block content %}
 <div id="person" class="module">
     <div id="personPic">
-        <img src="{{p_user.profile.photo}}"/>
+        <img src="{{p_user.profile.photo|default:"/media/images/avatar_male.jpg"}}"/>
     </div>
     <div id="personDetails">
         <div id="personHeader">
@@ -42,16 +42,17 @@
             <div id="leadProjects">
                 <h4>Lead</h4>
                 <ul>
-                    <li><a href="#">Project Name</a></li>
-                </ul>	
+                {% for project in p_user.projects_lead_on.all %}
+                    <li><a href="{{project.get_absolute_url}}">{{project}}</a></li>
+                {% endfor %}
+                </ul>
             </div>
             <div id="helpedProjects">
                 <h4>Helped</h4>
                 <ul>
-                    <li><a href="#">Project Name</a></li>
-                    <li><a href="#">Project Name</a></li>
-                    <li><a href="#">Project Name</a></li>
-                    <li><a href="#">Project Name</a></li>
+                    {% for project in helped_projects %}
+                        <li><a href="{{project.get_absolute_url}}">{{project}}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>

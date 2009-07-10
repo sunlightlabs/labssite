@@ -20,6 +20,9 @@ class Project(models.Model):
     def get_absolute_url(self):
         return reverse('project_detail', args=[self.slug])
 
+    def get_members(self):
+        return self.members.filter(project_roles__is_lead=False)
+
 ROLE_STATUSES = (
     ('P', 'Pending'),
     ('A', 'Active'),
