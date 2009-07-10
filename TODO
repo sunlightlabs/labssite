@@ -1,5 +1,3 @@
-newsfeed
-
 blogdor
     pagination
     archive views
@@ -16,11 +14,10 @@ front page
 
 anthill.people
     view profile
-        posts
+        posts - add tag to blogdor
         location
-        tweets
+        tweets - add twitter field and pull in via templatetag
     edit profile
-        change password
         avatar
         lat & long
     search
@@ -35,14 +32,11 @@ anthill.ideas
     voting
     comments
 
-urls:
-    admin
-    admin/gatekeeper/
+audit urls:
     comments/
     contests/
     judgeforamerica/
     blog/
-    contact/sent
     contact/
     accounts/
     users/

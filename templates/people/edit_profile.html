@@ -52,20 +52,9 @@
 {% block sidebar %}
 <h3 class="space">Log In Information</h3>
 <div class="module">
-    <form>
+    <form method="POST" action="{% url change_password %}">
         <ul>
-            <li>
-                <label>Username</label>
-                <input id="name" type="text" name="word" maxlength="30" />
-            </li>
-            <li>
-                <label>Password</label>
-                <input id="name" type="text" name="word" maxlength="30" />
-            </li>
-            <li>
-                <label>Confirm Password</label>
-                <input id="name" type="text" name="word" maxlength="30" />
-            </li>
+            {{ password_form.as_ul }}
             <button class="submitBtn">
                 <span>Save Changes</span>
             </button>

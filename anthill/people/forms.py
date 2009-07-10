@@ -26,3 +26,14 @@ class ProfileForm(forms.Form):
     location = forms.CharField(label='Location', required=False)
     skills = forms.CharField(label='Skills', required=False)
     about = forms.CharField(widget=forms.widgets.Textarea, label='About You', required=False)
+
+class PasswordForm(forms.Form):
+    password1 = forms.CharField(label='Password', 
+                                widget=forms.widgets.PasswordInput)
+    password2 = forms.CharField(label='Confirm Password', 
+                                widget=forms.widgets.PasswordInput)
+
+    def clean(self):
+        if self.cleaned_data.get('password1') != self.cleaned_data.get('password2'):
+            raise forms.ValidationError('Passwords must match')
+        return self.cleaned_data

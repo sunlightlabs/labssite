@@ -1,9 +1,9 @@
 from django.http import HttpResponse
 from django.template import RequestContext
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import redirect, render_to_response, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from forms import SearchForm, ProfileForm
+from anthill.people.forms import SearchForm, ProfileForm, PasswordForm
 
 def search(request):
     if request.GET:
@@ -23,8 +23,22 @@ def profile(request, username):
     return render_to_response('people/profile.html', {'p_user':user}, 
                              context_instance=RequestContext(request))
 
+def _user_to_profileform(user):
+    profile = user.profile
+    data = {'name': user.first_name,
+            'email': user.email,
+            'photo': profile.photo,
+            'url': profile.url, 
+            'position': profile.role,
+            'location': profile.location,
+            'skills': profile.skills,
+            'about': profile.about}
+    return ProfileForm(data)
+
 @login_required
 def edit_profile(request):
+    password_form = PasswordForm()
+
     if request.method == 'POST':
         form = ProfileForm(request.POST, request.FILES)
         if form.is_valid():
@@ -42,16 +56,21 @@ def edit_profile(request):
             profile.save()
             request.user.message_set.create(message='Saved profile changes.')
     else:
-        user = request.user
-        profile = user.profile
-        data = {'name': user.first_name,
-                'email': user.email,
-                'photo': profile.photo,
-                'url': profile.url, 
-                'position': profile.role,
-                'location': profile.location,
-                'skills': profile.skills,
-                'about': profile.about}
-        form = ProfileForm(data)
-    return render_to_response('people/edit_profile.html', {'form':form},
-                             context_instance=RequestContext(request))
+        form = _user_to_profileform(request.user)
+    return render_to_response('people/edit_profile.html', 
+                              {'form':form, 'password_form':password_form},
+                              context_instance=RequestContext(request))
+
+@login_required
+#@require_POST
+def change_password(request):
+    user = request.user
+    password_form = PasswordForm(request.POST)
+    form = _user_to_profileform(user)
+    if password_form.is_valid():
+        user.set_password(password_form.cleaned_data['password1'])
+        user.message_set.create(message='Password changed.')
+        password_form = PasswordForm()
+    else:
+        user.message_set.create(message='Passwords did not match.')
+    return redirect('edit_profile')
