@@ -31,6 +31,12 @@ h1 a{ background: url(/media/images/logo.png) bottom left no-repeat; width: 293p
 
 div#featureBox{ background: #fff; border: 1px solid #c7c8ba; padding: 25px; -moz-border-radius: 5px; -webkit-border-radius: 5px; margin-bottom: 50px;}
 div#featureBox h2{ margin-bottom: 20px; background: url(/media/images/feature_header.png) top left no-repeat; width: 323px; height: 83px; text-indent: -9999em;}
+div#featureBox { position: relative; margin: 0 10px 0 0; width: 94%; height: 94%; top: -10px; left: -10px;}
+div#featureBox_wrapper{ background: url(/media/images/feature_bg.png) bottom right no-repeat; padding: 0 10px 1px 0; margin: 0 10px 30px 15px;}
+div#ltColumn div#featureBox p{ float: left; width: 450px; margin-bottom: 25px;}
+div#featureBox a{ float: right; }
+
+div#ltColumn div#alertBox h3{ margin: 0;}
 
 div#nav{ background: url(/media/images/nav_bg.png) bottom right no-repeat; width: 544px; height: 65px; float: right; margin-top: 50px;}
 div#pageNav li{ float: left; margin-right: 15px;}
@@ -76,7 +82,7 @@ h2.post{ background: url(/media/images/icon_post.png) top left no-repeat; paddin
 h2.projects{ background: url(/media/images/icon_projects.png) top left no-repeat; padding: 5px 0 1px 35px; margin-left: 5px;}
 h2.ideas{ background: url(/media/images/icon_idea.png) top left no-repeat; padding: 10px 0 1px 35px; margin-left: 5px;}
 
-div.contentHeader{ background: url(/media/images/header_lines.png) center bottom no-repeat; padding-bottom: 15px; margin-bottom: 20px; width: 700px;}
+div.contentHeader, .h3line{ background: url(/media/images/header_lines.png) center bottom no-repeat; padding-bottom: 15px; margin-bottom: 20px; width: 700px;}
 div#postTitle{ margin-bottom: 3px;}
 body.projects div.contentHeader { margin-bottom: 3px;}
 
@@ -86,7 +92,7 @@ h3{ font-size: 180%; line-height: 25px; color:#1F1313;}
 h3.space { margin-bottom: 20px;}
 div#ltColumn h3.leftH3 { padding-left: 5px; background: url(/media/images/header_lineShorter.png) bottom left no-repeat; padding-bottom: 10px; margin-bottom: 10px;}
 
-div#ltColumn h3#h3Header{ margin-bottom: 0; padding-left: 5px;}
+div#ltColumn h3#h3Header{ margin-bottom: 0; padding-left: 5px; width: 673px;}
 span#communityMembers { font-size: 160%;}
 
 dl.entryMetadata dt { float: left; margin-right: 5px;}
@@ -98,19 +104,14 @@ p.continueLink{ margin-top: 15px;}
 p.continueLink a, a.viewAll{ font-size: 110%; color: #3d868d; font-style: oblique; font-weight: bold; background: url(/media/images/continue_arrow.png) right 4px no-repeat; padding: 0 20px 0 0; height: 18px;}
 div#ltColumn p.arrow { float: none; text-align: center; width: 680px; display: block; padding-right: 0px;}
 
-div#featureBox { position: relative; margin: 0 10px 0 0; width: 94%; height: 94%; top: -10px; left: -10px;}
-div#featureBox_wrapper{ background: url(/media/images/feature_bg.png) bottom right no-repeat; padding: 0 10px 1px 0; margin: 0 10px 30px 15px;}
-div#featureBox p{ float: left; width: 450px; margin-bottom: 25px;}
-div#featureBox a{ float: right; }
-
 div#searchContent{ background: #f0f0e5; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 20px; margin-left: 5px; border: 1px solid #d5d2c6; margin-right: 20px;}
 form#advancedSearch li{ float: left; margin-right: 20px;}
 form#advancedSearch label{ display: block; margin-bottom: 5px; font-weight: bold;}
 form#advancedSearch select{ padding: 2px 0; margin-top: 1px; margin-right: 10px;}
 
-form#accountForm, div#signupOptions{ border: 1px solid #D5D2C6; padding: 30px; background: #F0F0E5; -moz-border-radius: 3px; -webkit-border-radius: 3px; margin-right: 20px; }
-div#ltColumn form#accountForm label, div#signupOptions label { width: 200px; display: block; float: left; font-weight: bold; padding-top: 5px;}
-form#accountForm input, div#signupOptions input { width: 350px;}
+form#accountForm, div#signupOptions, form#contactForm{ border: 1px solid #D5D2C6; padding: 30px; background: #F0F0E5; -moz-border-radius: 3px; -webkit-border-radius: 3px; margin-right: 20px; }
+div#ltColumn form#accountForm label, div#signupOptions label, form#contactForm label { width: 200px; display: block; float: left; font-weight: bold; padding-top: 5px;}
+form#accountForm input, div#signupOptions input, form#contactForm input, form#contactForm textarea { width: 350px;}
 select { margin-bottom: 10px;}
 
 div#communityTimelineHeader { background: url(/media/images/line_space2.png) left top no-repeat; padding-top:50px;}
@@ -242,6 +243,10 @@ div#blog_detail img.fullimage { margin: 0 auto 20px; display: block; }
 div#blog_detail img.detailimage { float: left; margin-right: 20px;}
 div#blog_detail ul { list-style-type: disc; padding-left:40px;}
 
+ul#blogCategories { font-size: 110%; line-height: 30px;}
+span.category{ float: left;}
+span.categoryTotal { text-align: right; display: block; padding-right: 10px;}
+
 div.pullQuote { float: right; width: 265px;  border-bottom: 1px solid #c9d2c9; margin: 10px 20px; padding: 20px 10px; background: url(/media/images/line_quote.png) top center no-repeat;}
 div#ltColumn div.pullQuote p { text-align: center; font-size: 170%; font-style: oblique; margin: 0; padding: 0; line-height: 26px; color: #a7b3ab;}
 
@@ -288,6 +293,7 @@ a#contactBtn { background: url(/media/images/btn_contact.png) right bottom no-re
 button.joinBtn { background: url(/media/images/btn_join.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
 button.signupBtn { background: url(/media/images/btn_joinus_sm.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
 button.signinBtn { background: url(/media/images/btn_signin.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
+button.submit-send { background: url(/media/images/btn_submit.png) left top no-repeat; width: 113px; margin-left: 200px;}
 
 
 
@@ -314,3 +320,11 @@ li#kaitlin a{ background: url(/media/images/bot_kaitlin.png) top left no-repeat;
 
 ul#labsMembers li.memberRight{ margin-top: 12px;}
 ul#labsMembers li#jeremy { margin-top: 20px;}
+
+div#timeline li { height: 25px; padding-left: 35px; padding-top: 5px;}
+div#timeline li.idea { background: url(/media/images/iconSm_idea.png) left top no-repeat;}
+div#timeline li.project { background: url(/media/images/iconSm_project.png) top left no-repeat;}
+div#timeline li.event { background: url(/media/images/iconSm_event.png) top left no-repeat;}
+div#timeline li.person { background: url(/media/images/iconSm_people.png) top left no-repeat;}
+
+body.people div#timeline li { padding-left: 0;}
