@@ -95,6 +95,8 @@ INSTALLED_APPS = (
     'anthill.projects',
 )
 
+DATE_FORMAT = 'F j, Y'
+
 AUTH_PROFILE_MODULE = 'people.Profile'
 
 if not DEBUG:

@@ -9,7 +9,7 @@
             <dt>Posted by</dt>
             <dd><a href="{{idea.user.get_absolute_url}}">{% firstof idea.user.first_name idea.user.username %}</a></dd>
             <dt>Date</dt>
-            <dd>{{idea.submit_date|date:"m d Y"}}</dd>
+            <dd>{{idea.submit_date|date}}</dd>
         </dl>
         <p>{{idea.description}}</p>
         <a class="interestedBtn" href="#">I'm Interested</a>

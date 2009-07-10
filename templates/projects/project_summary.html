@@ -11,7 +11,7 @@
             <dt>Written by</dt>
             <dd><a href="{{project.lead.get_absolute_url}}">{{project.lead}}</a></dd>
             <dt>Date</dt>
-            <dd>{{project.creation_date|date:"m d Y"}}</dd>
+            <dd>{{project.creation_date|date}}</dd>
         </dl>
         <p>{{project.description}}</p>
         <p><a class="viewAll" href="{{project.get_absolute_url}}">More Details</a></p>
