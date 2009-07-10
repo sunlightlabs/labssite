@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2 class="contact">We'd Like to Hear From You</h2>
-    <form action="." method="post">
-        <ul>
-            {{ form.as_ul }}
-            <li class="submit">
-                <button class="submit-send" type="submit"><span>Send</span></button>
-            </li>
-        </ul>
-    </form>
+	<div class="contentHeader">
+    	<h2 class="contact">We'd Like to Hear From You</h2>
+	</div>
+	<div class="module">
+    	<form action="." method="post">
+        	<ul>
+            	{{ form.as_ul }}
+            	<li class="submit">
+                	<button class="submit-send" type="submit"><span>Send</span></button>
+            	</li>
+        	</ul>
+    	</form>
+	</div>
 {% endblock %}

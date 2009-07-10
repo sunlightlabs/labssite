@@ -116,7 +116,7 @@ select { margin-bottom: 10px;}
 div#communityTimelineHeader { background: url(/media/images/line_space2.png) left top no-repeat; padding-top:50px;}
 
 input, textarea { background: #fff; border: 1px solid #c4bdbd; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 5px 5px 6px; margin-bottom: 10px;}
-body.people input { float: left; margin-right: 10px;}
+input#id_location { float: left; margin-right: 10px;}
 form#searchForm { margin-bottom: 20px;}
 div#rtColumn label{ display: block;}
 div#ltColumn form label{ line-height: 15px;}
@@ -273,7 +273,7 @@ li#signin_standard a.active{ background: url(/media/images/standard_signin.png) 
 /*buttons*/
 button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
 button.searchBtn { background: url(/media/images/btn_search.png) left top no-repeat; width: 113px; }
-button.advsearchBtn { background: url(/media/images/btn_search.png) left top no-repeat; width: 113px; float: right; margin-top: 23px;}
+button.advsearchBtn { background: url(/media/images/btn_search.png) left top no-repeat; width: 113px; float: right; margin-top: 20px;}
 button.submitBtn { background: url(/media/images/btn_submit.png) left top no-repeat; width: 113px; }
 a.interestedBtn { background: url(/media/images/btn_interested.png) right bottom no-repeat; width: 148px;  margin: 15px 0;}
 a.learnBtn{ background: url(/media/images/btn_learnmore.png) right bottom no-repeat; width: 140px; }
@@ -288,3 +288,29 @@ a#contactBtn { background: url(/media/images/btn_contact.png) right bottom no-re
 button.joinBtn { background: url(/media/images/btn_join.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
 button.signupBtn { background: url(/media/images/btn_joinus_sm.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
 button.signinBtn { background: url(/media/images/btn_signin.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
+
+
+
+ul#labsMembers { background: url(/media/images/gear_bg.png) top left no-repeat; width: 220px;}
+ul#labsMembers li{ width: 105px; height: 100px; float: left; margin-top: -20px;}
+ul#labsMembers li a { width: 105px; height: 100px; text-indent: -9999em; display: block;}
+ul#labsMembers li#clay { margin: 20px auto 0; float: none; height: 115px;}
+ul#labsMembers li#clay a{ background: url(/media/images/bot_clay.png) 20px top no-repeat; height: 115px;}
+li#ali a{ background: url(/media/images/bot_ali.png) top left no-repeat;}
+li#david a{ background: url(/media/images/bot_david.png) top left no-repeat;}
+li#eric a{ background: url(/media/images/bot_eric.png) top left no-repeat;}
+
+ul#labsMembers li#garrett { height: 115px;}
+ul#labsMembers li#garrett a{ background: url(/media/images/bot_garrett.png) top left no-repeat; height: 115px;}
+li#james a{ background: url(/media/images/bot_james.png) top left no-repeat;}
+li#jeremy a{ background: url(/media/images/bot_jeremy.png) top left no-repeat;}
+li#josh a{ background: url(/media/images/bot_josh.png) top left no-repeat;}
+li#kevin a{ background: url(/media/images/bot_kevin.png) top left no-repeat;}
+li#luigi a{ background: url(/media/images/bot_luigi.png) top left no-repeat;}
+li#luke a{ background: url(/media/images/bot_luke.png) top left no-repeat;}
+li#tim a{ background: url(/media/images/bot_tim.png) top left no-repeat;}
+li#tom a{ background: url(/media/images/bot_tom.png) top left no-repeat;}
+li#kaitlin a{ background: url(/media/images/bot_kaitlin.png) top left no-repeat;}
+
+ul#labsMembers li.memberRight{ margin-top: 12px;}
+ul#labsMembers li#jeremy { margin-top: 20px;}

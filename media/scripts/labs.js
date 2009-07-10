@@ -1,45 +1,48 @@
 var GB_ANIMATION = true;
 $(document).ready(function(){
 
-$("div#leadBox").hide();
-$("div#favoritePosts").hide();
+    $("div#leadBox").hide();
+    $("div#favoritePosts").hide();
+    $("div#advancedSearch").hide();
 
 
-	$("td.delete a").click(function(){
-		$(this).parent().parent().fadeOut("slow", function () {
-			$(this).remove();
-			$("table tbody tr").removeClass("odd");
-			$("table tbody tr").removeClass("even");
-			$("table tbody tr").each(function (i) {
-				if(i%2==1){
-					$(this).addClass("even");
-				}else{
-					$(this).addClass("odd");
-				}				
-			});
-		});
-	});
-	
-	$("a#addLegislators").click(function(){
-		$("div#addLegislatorsForm").toggle("slow");
-	});
-	
-	$("a#addCensus").click(function(){
-		$("div#censusData").toggle("slow");
-	});
-	
-	$('input#name').click(function() {
-		this.value = '';		
-	});
-	
-	$("a#addVotes").facebox()
-	$(document).bind('reveal.facebox', function() {
-		$("div#facebox table").show();
-		$("div#facebox div.content a#bustedLink").click(function() {
-			$(document).trigger('close.facebox');
+    $("form#standard_signupForm").hide();
+    $("form#standard_signinForm").hide();
 
-			//This is whatever you want the button/link/whatever to do.  Submit a form, pull back data, adjust the DOM, etc.
-			$("table").hide("slow");
-		});
-	});
+    $("li#signup_standard a").click(function(){
+        $("form#openid_signupForm").hide();
+    	$("form#standard_signupForm").show();
+    });
+
+    $("li#signup_openid a").click(function(){
+        $("form#standard_signupForm").hide();
+    	$("form#openid_signupForm").show();
+    });
+
+    $("li#signin_standard a").click(function(){
+        $("form#openid_signinForm").hide();
+    	$("form#standard_signinForm").show();
+    });
+
+    $("li#signin_openid a").click(function(){
+        $("form#standard_signinForm").hide();
+    	$("form#openid_signinForm").show();
+    });
+
+    $("a#advancedBtn").click(function(){
+    	$("div#advancedSearch").toggle("slow");
+    });
+    
+    
+    $("li#favorites a").click(function(){
+       	$("div#popularPosts").hide();
+       	$("div#favoritePosts").show();
+    });
+    
+    $("li#popular a").click(function(){
+       	$("div#favoritePosts").hide();
+       	$("div#popularPosts").show();
+    });
+    
+
 });
