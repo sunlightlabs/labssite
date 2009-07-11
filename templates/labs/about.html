@@ -1,20 +1,9 @@
 {% extends "base.html" %}
-{% load labs %}
 {% load markup %}
 
 {% block title %}{{ flatpage.title }}{% endblock %}
 
 {% block body %}about{% endblock %}
-
-{% block feature %}
-	<h2 class="about">A Group Effort to Clean Up</h2>
-	<div id="aboutImage"></div>
-{% endblock %}
-
-{% block sidebar %}
-    {{ block.super }}
-	{% heroes %}
-{% endblock %}
 
 {% block content %}
 	<div id="whoWeAre">

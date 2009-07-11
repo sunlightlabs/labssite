@@ -1,3 +1,5 @@
+{% load comments %}
+
 <div id="commentBox">
     <h3>Discussion</h3>
     {% if comment_list %}
@@ -11,16 +13,26 @@
     <h3 class="h3tip">What are Your Thoughts?</h3>
     <p class="tip">Have thoughts that might fuel this discussion further, post them below. (<a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a> is supported in comments.)</p>
     <div id="commentBlock">
-        <a class="userPhoto" href="#">
-            <img src="images/avatar_male.jpg"/>
+        <a class="userPhoto" href="{{comment.user.get_absolute_url}}">
+            <img src="/media/images/avatar_male.jpg"/>
         </a>
-        <form id="comment">
+        <form id="comment" method="POST" action="{% comment_form_target %}">
+            {% for field in comment_form %}
+                {% if field.is_hidden %}
+                    {{ field }}
+                {% else %}
+                    {% if field.errors %}<p class="error">{{ field.errors }}</p>{% endif %}
+                        {% ifequal field.name "honeypot" %}
+                            <p style="display:none;">{{ field.label_tag }} {{ field }}</p>
+                        {% endifequal %}
+                {% endif %}
+            {% endfor %}
             <textarea id="text" class="textarea" name="text" cols="32" rows="5"></textarea>
             <div id="subscribe">
                 <input type="checkbox" value="1" name="subscribe"/>
                 <label>Subscribe to this stream</label>
             </div>
-            <button class="postBtn">
+            <button class="postBtn" name="submit" type="submit">
                 <span>Post!</span>
             </button>
         </form>

@@ -11,7 +11,7 @@
             <dt>Posted by</dt>
             <dd><a href="{{idea.user.get_absolute_url}}">{% firstof idea.user.first_name idea.user.username %}</a></dd>
             <dt>Date</dt>
-            <dd>{{idea.submit_date|date:"m d Y"}}</dd>
+            <dd>{{idea.submit_date|date}}</dd>
         </dl>
         <p>{{idea.description}}</p>
 
@@ -31,6 +31,8 @@
                 <span>I Agree</span>
             </button>
         </div>
+        {% get_comment_list for idea as comment_list %}
+        {% get_comment_form for idea as comment_form %}
         {% include "comment_box.html" %}
     </div>
 </div>
