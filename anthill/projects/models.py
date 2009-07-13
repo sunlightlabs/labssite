@@ -41,3 +41,21 @@ class Role(models.Model):
         if self.is_lead:
             self.project.lead = self.user
             self.project.save()
+
+SOURCE_LINK, DOCS_LINK, DOWNLOAD_LINK = range(3)
+LINK_TYPES = (
+    (SOURCE_LINK, 'source'),
+    (DOCS_LINK, 'documentation'),
+    (DOWNLOAD_LINK, 'download'),
+)
+
+class Link(models.Model):
+    name = models.CharField(max_length=100)
+    url = models.URLField()
+    link_type = models.PositiveSmallIntegerField(choices=LINK_TYPES)
+    order = models.PositiveSmallIntegerField()
+
+    project = models.ForeignKey(Project, related_name='links')
+
+    class Meta:
+        ordering = ['order']
