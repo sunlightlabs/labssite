@@ -2,7 +2,7 @@ import datetime
 from django.template import RequestContext
 from django.core.urlresolvers import reverse
 from django.shortcuts import get_object_or_404, render_to_response
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.comments.models import Comment
 from django.contrib.contenttypes.models import ContentType
 from django.views.generic import list_detail
@@ -15,12 +15,12 @@ def idea_list(request, ordering='-total_upvotes'):
     ordering_db = {'most_popular': '-score',
                    'latest': '-submit_date'}[ordering]
     return list_detail.object_list(request,
-        queryset=Idea.objects.select_related().order_by(ordering_db),
+        queryset=Idea.objects.with_user_vote(request.user).select_related().order_by(ordering_db),
         extra_context={'ordering': ordering}, paginate_by=10,
         template_object_name='idea')
 
 def idea_detail(request, id):
-    idea = get_object_or_404(Idea, pk=id)
+    idea = get_object_or_404(Idea.objects.with_user_vote(request.user), pk=id)
     return render_to_response('ideas/idea_detail.html',
                               {'idea': idea},
                               context_instance=RequestContext(request))
@@ -56,5 +56,10 @@ def submit_comment(request):
 @login_required
 def vote(request, idea_id, score):
     idea = get_object_or_404(Idea, pk=idea_id)
-    Vote.objects.create(person=request.user, idea=idea, value=score)
-    return HttpResponse("{'score':%d}" % idea.score+score)
+    score = int(score)
+    vote, created = Vote.objects.get_or_create(user=request.user, idea=idea,
+                                               defaults={'value':score})
+    if not created:
+        vote.value = score
+        vote.save()
+    return HttpResponse("{'score':%d}" % (idea.score+score))

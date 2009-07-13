@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% load media %}
+
+{% block extrahead %}
+    {% js "voting.js" %}
+{% endblock %}
 
 {% block sidebar %}
 

@@ -1,8 +1,5 @@
 <div class="idea">
-    <div class="voteBox">
-        <a href="#">Vote</a>
-        <span class="voteTotal">{{idea.score}} Votes</span>
-    </div>	
+    {% include "ideas/idea_vote.html" %}
     <div class="ideaContent">
         <h3><a href="{{idea.get_absolute_url}}">{{idea.title}}</a></h3>
         <dl class="entryMetadata">
