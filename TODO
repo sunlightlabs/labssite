@@ -1,6 +1,6 @@
 blogdor
     sidebar
-    style pagination on /blog/ pages
+    style pagination on /blog/
     style /blog/tag/
     style /blog/2009/
     style /blog/2009/05/ (links at bottom)
@@ -42,5 +42,4 @@ audit:
     accounts/
     users/
     ideas/
-    projects/
     index
