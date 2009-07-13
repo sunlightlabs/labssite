@@ -1,50 +1,39 @@
-blogdor
-    sidebar
+blogdor: most popular
+blogdor: our favorites
+blogdor: robot links
+blogdor: categories
+projects: feedinator
+projects: admin section
+registration: recent members sidebar
+registration: implement openid + clickpass
+index: alertbox
+index: active projects
+index: newsfeed
+ideas: join buttons
+ideas: related projects
+ideas: comments
+
+people: audit***
+people: location
+people: tweets
+people: avatar
+people: search
+people: community profile
+
+Ali:
     style pagination on /blog/
     style /blog/tag/
     style /blog/2009/
     style /blog/2009/05/ (links at bottom)
-
-anthill.projects
-    feeds
-    admin page
-    style links on projects pages (classes per type)
-
-registration
-    sidebar
-    openid/other options
+    /ideas/ button to toggle latest/most popular
+    style /ideas/ voting and add button to idea pages
+    style links on projects pages (includes classes per type)
     /accounts/password/reset/ (link to and style)
+    style contests
+    style contact
 
-index
-    alertbox
-    active projects
-    newsfeed
-
-anthill.ideas
-    style button to toggle latest/most popular
-    style voting
-    discuss what happens when you click join buttons
-    related projects
-    comments
-
----
-
-anthill.people
-    view profile
-        location
-        tweets - add twitter field and pull in via templatetag (feedinator)
-    edit profile
-        avatar
-        lat & long
-    search
-        make search work
-        community profile
-
-anthill.events
-
-audit:
-    contests/
-    judgeforamerica/
-    contact/
-    users/
-    ideas/
+general:
+    judgeforamerica
+    commenting
+    anthill.events
+    add body classes
