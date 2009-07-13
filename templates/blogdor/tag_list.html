@@ -1,10 +1,10 @@
-{% extends "base_blog.html" %}
+{% extends "blogdor/base.html" %}
 
-{% block blog_content %}
+{% block content %}
     <p>Tags</p>
     <ol id="tags">
         {% for tag in tag_list %}
-            <li><a href="{% url blog_tag_list tag.name %}">{{ tag.name }}</a></li>
+            <li><a href="{% url blogdor_tag tag.name %}">{{ tag.name }}</a></li>
         {% endfor %}
     </ol>
 {% endblock %}

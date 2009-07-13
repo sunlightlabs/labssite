@@ -1,9 +1,9 @@
-{% extends "base_blog.html" %}
+{% extends "blogdor/base.html" %}
 
-{% block blog_content %}
+{% block content %}
     <ol>
-    	{% for date in date_list %}
-    		<li><a href="{% url blog_archive_month date.year,date.month %}">{{ date|date:"F Y" }}</a></li>
-    	{% endfor %}
+        {% for date in date_list %}
+            <li><a href="{% url blogdor_archive_month date.year,date|date:"m" %}">{{ date|date:"F Y" }}</a></li>
+        {% endfor %}
     </ol>
 {% endblock %}

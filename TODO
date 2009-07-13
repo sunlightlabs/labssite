@@ -1,9 +1,12 @@
 blogdor
-    pagination
-    archive views
+    sidebar
+    style pagination on /blog/ pages
+    style /blog/tag/
+    style /blog/2009/
+    style /blog/2009/05/ (links at bottom)
 
 anthill.projects
-    feeds
+    feeds (feedinator)
     links
     admin page
 
@@ -14,9 +17,8 @@ front page
 
 anthill.people
     view profile
-        posts - add tag to blogdor
         location
-        tweets - add twitter field and pull in via templatetag
+        tweets - add twitter field and pull in via templatetag (feedinator)
     edit profile
         avatar
         lat & long
@@ -32,11 +34,10 @@ anthill.ideas
     voting
     comments
 
-audit urls:
+audit:
     comments/
     contests/
     judgeforamerica/
-    blog/
     contact/
     accounts/
     users/

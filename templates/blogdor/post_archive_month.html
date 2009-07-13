@@ -1,54 +1,19 @@
-{% extends "base_blog.html" %}
+{% extends "blogdor/base.html" %}
 {% load markup %}
 
-{% block blog_content %}
-	
-    <div id="blog">
-    	<h2>Recent Posts</h2>
-    	<h3>Here are all of our posts that we wrote in {{ month|date:"F Y" }}.</h3>
-		<ol class="entries hfeed">
-		    {% for post in post_list %}
-			    <li class="hentry">
-					<div class="entryMetadata">
-						<h3 class="entry_title entry-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
-						<div class="commentsMetaData">
-							<span class="type">Comments:</span>
-							<span class="value">
-								<a href="{{ post.get_absolute_url }}#comments">{{ post.comment_count }}</a>
-							</span>
-						</div>
-						<div class="hr"><hr /></div>
-						<div class="authorMetaData author vcard">
-							<span class="type">Written by </span>
-							<span class="value fn">{{ post.author.first_name }}</span>
-						</div>
-						<div class="updatedMetaData">
-							<span class="type">Date:</span>
-							<span class="value"><abbr class="published" title="{{ post.date_published.isoformat }}">{{ post.date_published|date:"F j Y" }}</abbr></span>
-						</div>
-					</div>
-					<div class="entry-summary">
-    					{% ifequal post.markup 'markdown' %}
-                            {{ post.excerpt|markdown|safe }}
-                        {% else %}
-                            {% ifequal post.markup 'textile' %}
-                                <p>{{ post.excerpt|textile|safe }}</p>
-                            {% else %}                
-                                {% ifequal post.markup 'restructuredtext' %}
-                                    <p>{{ post.excerpt|restructuredtext|safe }}</p>
-                                {% else %}
-                                    <p>{{ post.excerpt|safe }}</p>
-                                {% endifequal %}
-                            {% endifequal %}
-                        {% endifequal %}
-                    </div>
-					<div class="readMore"><a href="{{ post.get_absolute_url }}" rel="bookmark">Read More</a></div>
-				</li>
-			{% endfor %}
-		</ol>
-		<a href="{% url blog_archive_month previous_month.year, previous_month.month %}">{{ previous_month|date:"F Y" }}</a>
-		{% if next_month %}
-		    <a href="{% url blog_archive_month next_month.year, next_month.month %}">{{ next_month|date:"F Y" }}</a>
-		{% endif %}
-	</div>
+{% block content %}
+    <div class="contentHeader">
+        <h2 class="post">Posts from {{ month|date:"F Y" }}</h2>
+    </div>
+    <div class="module">
+        {% for post in post_list %}
+            {% include "blogdor/post.html" %}
+        {% endfor %}
+
+        <a href="{% url blogdor_archive_month previous_month.year, previous_month|date:"m" %}">{{ previous_month|date:"F Y" }}</a>
+        {% if next_month %}
+            <a href="{% url blogdor_archive_month next_month.year, next_month|date:"m" %}">{{ next_month|date:"F Y" }}</a>
+        {% endif %}
+    </div>
 {% endblock %}
+

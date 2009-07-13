@@ -6,8 +6,8 @@
     <ol id="comments">
         {% for comment in comment_list %}
             <li>
-            <span class="commentMetaAuthor"><a href="{{comment.user.get_absolute_url}}">{% firstof comment.user.first_name comment.user %}</a></span>
-            <span class="commentMetaDate">{{comment.submit_date|date:"m/d/Y h:m p"}}</span>
+            <span class="commentMetaAuthor"><a href="{% firstof comment.user_url comment.user.get_absolute_url %}">{% firstof comment.user_name comment.user.first_name comment.user %}</a></span>
+            <span class="commentMetaDate">{{comment.submit_date|date:"m/d/Y P"}}</span>
             <p>{{comment.comment}}</p>
             </li>
         {% endfor %}

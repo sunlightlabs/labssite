@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load blog %}
+
 {% block content %}
 <div id="person" class="module">
     <div id="personPic">
@@ -60,21 +62,8 @@
     <div id="sunlightPost">	
         <h3 class="leftH3">{{p_user.profile.possessive}} Posts</h3>
         <div class="module">
-            <div class="smPost">
-                <h4><a href="#">Title of Post</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper.</p>
-                <p class="continueLink"><a href="#">Continue Reading</a></p>
-            </div>	
-            <div class="smPost">
-                <h4><a href="#">Title of Post</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper.</p>
-                <p class="continueLink"><a href="#">Continue Reading</a></p>
-            </div>
-            <div class="smPost">
-                <h4><a href="#">Title of Post</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper.</p>
-                <p class="continueLink"><a href="#">Continue Reading</a></p>
-            </div>
+            {% user_posts p_user 3 %}
+            <a href="{% url blogdor_author p_user.username %}">See all of {{p_user.profile.possessive}} posts.</a>
         </div>
     </div>
 </div>

@@ -1,5 +1,6 @@
 {% extends "blogdor/base.html" %}
 {% load comments %}
+{% load tagging_tags %}
 
 {% block title %}{{ block.super }} - {{ post.title }}{% endblock %}
 
@@ -17,13 +18,14 @@
     <div class="postBody">
         {{post.content}}
     </div>
-    
-    {% if post.tags %}
+
+    {% tags_for_object post as tags %}
+    {% if tags %}
     <div id="tags">
         <span>Tags:</span>
         <ul>
             {% for tag in tags %}
-            <li><a href="{% url blog_tag_list tag.name %}">{{ tag.name }}</a></li>
+            <li><a href="{% url blogdor_tag tag.name %}">{{ tag.name }}</a></li>
             {% endfor %}
         </ul>
         <div class="clear"></div>
