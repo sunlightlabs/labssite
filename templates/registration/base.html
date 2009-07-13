@@ -1,13 +1,17 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
 <h3 class="space">Recent Members</h3>
 <div id="recentMembers" class="module">
     <ul>
         {% for user in latest_users %}
-        {% endfor %}
         <li>
         <img src="{{user.profile.photo|default:"/media/images/avatar_male.jpg"}}"/>
             <span id="leadName"><a href="{{user.get_absolute_url}}">{{user}}</a></span>
             <!--            <span id="metadata">Sunlight Labs</span>-->
         </li>
+        {% endfor %}
     </ul>
 </div>
 <div class="clear"></div>
+{% endblock %}

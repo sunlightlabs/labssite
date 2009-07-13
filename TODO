@@ -6,8 +6,17 @@ blogdor
     style /blog/2009/05/ (links at bottom)
 
 anthill.projects
-    feeds (feedinator)
+    feeds
     admin page
+    style links on projects pages (classes per type)
+
+registration
+    sidebar
+    openid/other options
+    /accounts/password/reset/ (link to and style)
+
+
+----
 
 front page
     alertbox
@@ -38,7 +47,6 @@ audit:
     contests/
     judgeforamerica/
     contact/
-    accounts/
     users/
     ideas/
     index
