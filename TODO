@@ -15,13 +15,19 @@ registration
     openid/other options
     /accounts/password/reset/ (link to and style)
 
-
-----
-
-front page
+index
     alertbox
     active projects
     newsfeed
+
+anthill.ideas
+    style button to toggle latest/most popular
+    discuss what happens when you click join buttons
+    related projects
+    voting
+    comments
+
+---
 
 anthill.people
     view profile
@@ -36,17 +42,9 @@ anthill.people
 
 anthill.events
 
-anthill.ideas
-    pagination
-    join buttons
-    voting
-    comments
-
 audit:
-    comments/
     contests/
     judgeforamerica/
     contact/
     users/
     ideas/
-    index
