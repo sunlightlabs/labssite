@@ -3,6 +3,7 @@ from django.template import RequestContext
 from django.shortcuts import redirect, render_to_response, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from anthill.people.models import Profile
 from anthill.people.forms import SearchForm, ProfileForm, PasswordForm
 
 def search(request):
@@ -10,12 +11,8 @@ def search(request):
         form = SearchForm(request.GET)
     else:
         form = SearchForm()
-    num_users = User.objects.all().count()
-    latest_users = User.objects.all().order_by('-date_joined')[0:5]
 
-    return render_to_response('people/search.html',
-                              {'form':form, 'num_users':num_users, 
-                               'latest_users':latest_users,},
+    return render_to_response('people/search.html', {'form':form},
                              context_instance=RequestContext(request))
 
 def profile(request, username):

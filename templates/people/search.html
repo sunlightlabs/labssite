@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load people %}
 
 {% block content %}
 <div class="contentHeader">
@@ -28,14 +29,15 @@
 </div>
 
 <div class="contentHeader">
-    <h3 id="h3Header">There are <span id="communityMembers">{{num_users}}</span> members of the Sunlight Labs community and growing.</h3>
+    <h3 id="h3Header">There are <span id="communityMembers">{% num_registered_users %}</span> members of the Sunlight Labs community and growing.</h3>
 </div>
 <div id="timeline" class="module">
     <ul>
-        {% for u in latest_users %}
+        {% get_latest_user_profiles as user_profiles %}
+        {% for up in user_profiles %}
             <li>
-            <a href="{% url user_profile u %}">{% firstof u.first_name u.username %}</a> just joined
-            {% if u.profile.location %}from {{u.profile.location}}{% endif %}
+            <a href="{{ up.user.get_absolute_url }}">{% firstof up.user.first_name up.user.username %}</a> just joined
+            {% if up.location %}from {{up.location}}{% endif %}
             </li>
         {% endfor %}
     </ul>

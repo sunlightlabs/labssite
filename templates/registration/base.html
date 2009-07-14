@@ -1,13 +1,17 @@
 {% extends "base.html" %}
+{% load people %}
 
 {% block sidebar %}
 <h3 class="space">Recent Members</h3>
 <div id="recentMembers" class="module">
     <ul>
-        {% for user in latest_users %}
+        {% get_latest_user_profiles as user_profiles %}
+        {% for up in user_profiles %}
         <li>
-        <img src="{{user.profile.photo|default:"/media/images/avatar_male.jpg"}}"/>
-            <span id="leadName"><a href="{{user.get_absolute_url}}">{{user}}</a></span>
+            <img src="{{up.photo|default:"/media/images/avatar_male.jpg"}}"/>
+            <span id="leadName"><a href="{{up.user.get_absolute_url}}">
+                    {% firstof up.user.first_name up.user.username %}</a>
+            </span>
             <!--            <span id="metadata">Sunlight Labs</span>-->
         </li>
         {% endfor %}
