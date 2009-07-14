@@ -51,35 +51,14 @@
 <hr></hr>
 <h3 class="space">Categories</h3>
 <div class="module">
-	<ul id="blogCategories">
-		<li>
-			<a href="#"><span class="category">Announcements</span></a>
-			<a href="#"><span class="categoryTotal">[ 20 ]</span></a>
-		</li>
-		<li>
-			<a href="#"<span class="category">Design</span></a>
-			<a href="#"><span class="categoryTotal">[ 5 ]</span></a>
-		</li>
-		<li>
-			<a href="#"<span class="category">Development</span></a>
-			<a href="#"><span class="categoryTotal">[ 10 ]</span></a>
-		</li>
-		<li>
-			<a href="#"<span class="category">Interview</span></a>
-			<a href="#"><span class="categoryTotal">[ 0 ]</span></a>
-		</li>
-		<li>
-			<a href="#"<span class="category">Policy</span>
-			<span class="categoryTotal">[ 8 ]</span></a>
-		</li>
-		<li>
-			<a href="#"<span class="category">Technology</span>
-			<span class="categoryTotal">[ 8 ]</span></a>
-		</li>
-		<li>
-			<a href="#"<span class="category">Transparency</span>
-			<span class="categoryTotal">[ 5 ]</span></a>
-		</li>
+    <ul id="blogCategories">
+        {% get_tag_counts fiftystates,tupaclives,announcements as tags %}
+        {% for tag in tags %}
+        <li>
+            <a href="{% url blogdor_tag tag %}"><span class="category">{{tag}}</span></a>
+            <a href="{% url blogdor_tag tag %}"><span class="categoryTotal">[ {{tag.count}} ]</span></a>
+        </li>
+        {% endfor %}
 	</ul>
 </div>
 <div class="clear"></div>
