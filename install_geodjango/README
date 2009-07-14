@@ -11,3 +11,6 @@ $ sudo ln -s /usr/share/postgresql-8.3-postgis/{lwpostgis,spatial_ref_sys}.sql /
 4) install gdal
 5) create spatial template
 6) create postgis database
+
+7) edit pg_hba.conf to allow db access
+8) add /usr/local/lib to /etc/ld.so.conf and run ldconfig

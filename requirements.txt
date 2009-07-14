@@ -1,5 +1,11 @@
 -e svn+http://code.djangoproject.com/svn/django/trunk/#egg=django
 
+# non-django dependencies
+python-twitter
+docutils
+markdown
+textile
+
 # third party apps
 -e svn+http://django-tagging.googlecode.com/svn/trunk#egg=django-tagging
 -e git://github.com/robhudson/django-debug-toolbar.git#egg=django-debug-toolbar
