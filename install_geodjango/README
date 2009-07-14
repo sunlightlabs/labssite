@@ -1,0 +1,13 @@
+
+0) install packages
+$ sudo apt-get install binutils libgdal1-1.5.0 postgresql-8.3 postgresql-8.3-postgis postgresql-server-dev-8.3 python-psycopg2 python-setuptools
+
+0b) link gis scripts
+$ sudo ln -s /usr/share/postgresql-8.3-postgis/{lwpostgis,spatial_ref_sys}.sql /usr/share/postgresql/8.3
+
+1) setup postgres authentication
+2) install geos
+3) install proj4
+4) install gdal
+5) create spatial template
+6) create postgis database

@@ -11,6 +11,7 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
+INTERNAL_IPS = ('127.0.0.1',)
 
 EMAIL_SUBJECT_PREFIX = '[sunlightlabs.com] '
 
@@ -62,6 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'gatekeeper.middleware.GatekeeperMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
 )
@@ -79,6 +81,7 @@ INSTALLED_APPS = (
     'django.contrib.redirects',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'debug_toolbar',
     'tagging',
     'mediasync',
     'gatekeeper',

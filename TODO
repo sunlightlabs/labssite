@@ -1,17 +1,17 @@
-blogdor: most popular
-blogdor: our favorites
-blogdor: robot links
-blogdor: categories
-projects: feedinator
-projects: admin section
-registration: recent members sidebar
-registration: implement openid + clickpass
-index: alertbox
-index: active projects
-index: newsfeed
-ideas: join buttons
-ideas: related projects
-ideas: comments
+blogdor: most popular                           ***
+blogdor: our favorites                          **
+blogdor: robot links                            *
+blogdor: categories                             **
+projects: feedinator                            **
+projects: admin section                         ***
+registration: recent members sidebar            *
+registration: implement openid + clickpass      ****
+index: alertbox                                 *
+index: active projects                          ***
+index: newsfeed                                 ****
+ideas: join buttons                             ***
+ideas: related projects                         **
+ideas: comments                                 ***
 
 people: audit***
 people: location
