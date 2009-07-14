@@ -62,7 +62,15 @@
     <div id="sunlightPost">	
         <h3 class="leftH3">{{p_user.profile.possessive}} Posts</h3>
         <div class="module">
-            {% user_posts p_user 3 %}
+            {% get_user_posts p_user 3 as user_posts %}
+
+            {% for post in user_posts %}
+            <div class="smPost">
+                <h4><a href="{{post.get_absolute_url}}">{{post.title}}</a></h4>
+                <p>{{post.excerpt}}</p>
+            </div>
+            {% endfor %}
+
             <a href="{% url blogdor_author p_user.username %}">See all of {{p_user.profile.possessive}} posts.</a>
         </div>
     </div>
