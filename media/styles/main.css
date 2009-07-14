@@ -86,7 +86,7 @@ div.contentHeader, .h3line{ background: url(/media/images/header_lines.png) cent
 div#postTitle{ margin-bottom: 3px;}
 body.projects div.contentHeader { margin-bottom: 3px;}
 
-div#ltColumn h3{ font-size: 180%; line-height: 24px; margin-bottom: 15px;}
+div#ltColumn h3{ font-size: 180%; line-height: 24px; margin-bottom: 15px; margin-top: 15px;}
 div#rtColumn h3 { background: url(/media/images/rtcolumn_headerLine.png) bottom center no-repeat; padding-left: 10px; margin-left: 20px; padding-bottom: 8px;}
 h3{ font-size: 180%; line-height: 25px; color:#1F1313;} 
 h3.space { margin-bottom: 20px;}
@@ -96,9 +96,9 @@ div#ltColumn h3#h3Header{ margin-bottom: 0; padding-left: 5px; width: 673px;}
 span#communityMembers { font-size: 160%;}
 
 dl.entryMetadata dt { float: left; margin-right: 5px;}
-dl.entryMetadata dd a{ float: left;}
+dl.entryMetadata dd a{ float: left; border-right: 1px solid #808285; padding-right: 10px; margin-right: 10px;}
 dl.entryMetadata { margin-bottom: 15px; font-size: 90%; font-style: oblique; color: #808285; line-height: 12px; margin-top: 5px;}
-dd a{ border-right: 1px solid #808285; padding-right: 10px; margin-right: 10px; }
+/*dd a{ border-right: 1px solid #808285; padding-right: 10px; margin-right: 10px; }*/
 
 p.continueLink{ margin-top: 15px;}
 p.continueLink a, a.viewAll{ font-size: 110%; color: #3d868d; font-style: oblique; font-weight: bold; background: url(/media/images/continue_arrow.png) right 4px no-repeat; padding: 0 20px 0 0; height: 18px;}
@@ -145,8 +145,14 @@ strong { font-weight: bold;}
 
 div.idea, div.project{ margin-bottom: 20px; background: url(/media/images/line_space2.png) left bottom no-repeat; padding-bottom: 30px; }
 
-div#process ol span { font-size: 50%; font-weight: normal; text-transform: uppercase; color: #1f1313;}
-div#process ol p { font-size: 35%; font-weight: normal; color: #4f4d4d;}
+div#process ol span, div#rtColumn li.hentry a.entry-title { font-size: 50%; font-weight: normal; text-transform: uppercase; color: #1f1313;}
+div#rtColumn li.hentry a.entry-title{ margin-bottom: 10px; display: block;}
+div#process ol p, div#rtColumn li.hentry p, div#rtColumn address.vcard { font-size: 35%; font-weight: normal; color: #4f4d4d;}
+address.vcard { font-style: oblique;}
+div#rtColumn ol#app_list p.metaSubmitted { margin-top: 20px; font-style: oblique; font-size: 30%; line-height: 15px;}
+
+a#allSubmitted { display: block; text-align: center; font-size: 140%; padding-top: 20px;}
+
 
 ol { list-style-type: decimal; padding-left: 40px;}
 div#rtColumn ol { color: #184259; font-size: 300%; font-weight: bold;}
@@ -213,7 +219,7 @@ div#ltColumn div.smPost p { padding-right: 10px; margin-bottom: 15px;}
 div#ltColumn div.smPost { margin-bottom: 15px; padding-bottom: 15px;}
 div#projectModule li { margin-bottom: 5px;}
 
-h4{ font-size: 150%; margin-bottom: 10px; color:#1F1313;}
+h4{ font-size: 150%; margin-bottom: 10px; color:#1F1313; margin-top: 25px;}
 
 div.post { margin-bottom: 40px;}
 
@@ -242,6 +248,8 @@ div#blog_detail img{ border: 3px solid #bfc8ba; margin-bottom: 20px;}
 div#blog_detail img.fullimage { margin: 0 auto 20px; display: block; }
 div#blog_detail img.detailimage { float: left; margin-right: 20px;}
 div#blog_detail ul { list-style-type: disc; padding-left:40px;}
+
+div.pagination { padding-right: 15px; text-align: center;}
 
 ul#blogCategories { font-size: 110%; line-height: 30px;}
 span.category{ float: left;}
@@ -275,6 +283,8 @@ li#signin_standard a{ background: url(/media/images/standard_signin.png) top lef
 li#signin_openid a.active{ background: url(/media/images/openid.png) bottom left no-repeat; }
 li#signin_standard a.active{ background: url(/media/images/standard_signin.png) bottom left no-repeat; }
 
+div#app dt{ font-size: 110%; font-weight: bold; margin: 15px 0 5px 0;}
+
 /*buttons*/
 button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
 button.searchBtn { background: url(/media/images/btn_search.png) left top no-repeat; width: 113px; }
@@ -294,6 +304,16 @@ button.joinBtn { background: url(/media/images/btn_join.png) right bottom no-rep
 button.signupBtn { background: url(/media/images/btn_joinus_sm.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
 button.signinBtn { background: url(/media/images/btn_signin.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
 button.submit-send { background: url(/media/images/btn_submit.png) left top no-repeat; width: 113px; margin-left: 200px;}
+
+
+/*apps sponsors*/
+div#appsSponsors {padding-right: 15px;}
+div#appsSponsors a { text-indent: -9999em; display: block; margin: 0 auto 30px;}
+a#googleLogo{ background: url(/media/images/logoSponsor_google.png) top center no-repeat; width: 146px; height: 52px;}
+a#gov2Logo{ background: url(/media/images/logoSponsor_gov2.png) top center no-repeat; width: 113px; height: 67px;}
+a#techwebLogo{ background: url(/media/images/logoSponsor_techweb.png) top center no-repeat; width: 155px; height: 50px;}
+a#oreillyLogo{ background: url(/media/images/logoSponsor_oreilly.png) top center no-repeat; width: 143px; height: 27px;}
+div#appsSponsors a#craignewmark { text-indent: 0; text-align: center; font-size: 200%; font-weight: bold; text-decoration: none; color: #000;}
 
 
 

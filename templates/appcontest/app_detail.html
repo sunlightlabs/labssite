@@ -2,27 +2,31 @@
 {% load markup %}
 
 {% block content %}
-    <div class="app">
-        <h2 id="appName">{{ app.name }}</h2>
-        {% if app.logo_url %}
-            <p><a href="{{ app.url }}"><img src="{{ app.logo_url }}" alt="application logo" /></a></p>
-        {% endif %}
-        <dl id="appDescriptions">
-            
-            <dt>App URL</dt>
-            <dd><a href="{{ app.url }}">{{ app.url }}</a></dd>
-            
-            <dt>Source URL</dt>
-            <dd><a href="{{ app.source_url }}" rel="source">{{ app.source_url }}</a></dd>
-            
-            <dt>Description</dt>
-            <dd>{{ app.description|markdown }}</dd>
-            
-        </dl>
-        {% if app.contact_url %}
-            <p>This application was submitted by <a href="{{ app.contact_url }}">{{ app.contact_display }}</a> on {{ app.timestamp|date }}</p>
-        {% else %}
-            <p>This application was submitted by {{ app.contact_display }} on {{ app.timestamp|date }}</p>
-        {% endif %}
-    </div>
+    
+		<div class="contentHeader">
+        	<h2 id="appName">{{ app.name }}</h2>
+		</div>
+		<div id="app" class="module">
+	      {% if app.logo_url %}
+	          <p><a href="{{ app.url }}"><img src="{{ app.logo_url }}" alt="application logo" /></a></p>
+	      {% endif %}
+	      <dl id="appDescriptions">
+          
+	          <dt>App URL</dt>
+	          <dd><a href="{{ app.url }}">{{ app.url }}</a></dd>
+          
+	          <dt>Source URL</dt>
+	          <dd><a href="{{ app.source_url }}" rel="source">{{ app.source_url }}</a></dd>
+          
+	          <dt>Description</dt>
+	          <dd>{{ app.description|markdown }}</dd>
+          
+	      </dl>
+	      {% if app.contact_url %}
+	          <p>This application was submitted by <a href="{{ app.contact_url }}">{{ app.contact_display }}</a> on {{ app.timestamp|date }}</p>
+	      {% else %}
+	          <p>This application was submitted by {{ app.contact_display }} on {{ app.timestamp|date }}</p>
+	      {% endif %}
+		</div>
+   
 {% endblock %}

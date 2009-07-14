@@ -6,8 +6,10 @@
 {% block body %}about{% endblock %}
 
 {% block content %}
-	<div id="whoWeAre">
+	<div class="contentHeader">
 		<h2>Who We Are</h2>
+	</div>
+	<div class="module">
 		{{ flatpage.content|markdown }}
 	</div>
 {% endblock %}

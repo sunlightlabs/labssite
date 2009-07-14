@@ -3,10 +3,14 @@
 {% load markup %}
 
 {% block sidebar %}
-    {% include "labs/sidebar_helpus.html" %}
+    
 {% endblock %}
 
 {% block content %}
-    <h2 id="appTitles">Submitted Apps</h2>
-    {% recent_apps contest 1000 %}
+	<div class="contentHeader">
+    	<h2 id="appTitles">Submitted Apps</h2>
+	</div>
+	<div class="module">
+    	{% recent_apps contest 1000 %}
+	</div>
 {% endblock %}

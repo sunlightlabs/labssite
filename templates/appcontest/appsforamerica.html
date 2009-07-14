@@ -2,6 +2,7 @@
 {% load appcontest %}
 {% load markup %}
 
+
 {% block title %}{{contest.name}}{% endblock %}
 
 {% block body %}contest{% endblock %}
@@ -14,9 +15,9 @@
 {% endblock %}
 
 {% block sidebar %}
-    <div id="recentlySubmitted">
-        <h3>Recently Submitted Apps</h3>
-        {% recent_apps contest 3 %}
+    <h3 class="space">Recently Submitted Apps</h3>
+	<div class="module">
+    	{% recent_apps contest 3 %}
     </div>
-    {% include "labs/sidebar_helpus.html" %}
+    
 {% endblock %}

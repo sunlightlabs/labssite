@@ -2,8 +2,10 @@
 {% load markup %}
 
 {% block content %}
-    <div id="contestPage">
+    <div class="contentHeader">
         <h2>{{contest.name}}</h2>
+	</div>
+	<div class="module">
         {{contest.body|markdown}}
     </div>
 {% endblock %}

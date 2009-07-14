@@ -2,6 +2,7 @@
 {% load appcontest %}
 {% load markup %}
 
+
 {% block title %}{{contest.name}}{% endblock %}
 
 {% block body %}contest{% endblock %}
@@ -14,14 +15,18 @@
 {% endblock %}
 
 {% block sidebar %}
-    <div id="recentlySubmitted">
-        <h3>Recently Submitted Apps</h3>
-        {% recent_apps contest 3 %}
+    <h3 class="space">Recently Submitted Apps</h3>
+	<div class="module">
+    	{% recent_apps contest 3 %}
+	</div>
+	<hr></hr>
+	<h3 class="space">Sponsors</h3>
+	<div id="appsSponsors" class="module">
+    	<a id="googleLogo" href="http://google.com">Google</a>
+    	<a id="oreillyLogo" href="http://oreilly.com">O'Reilly</a>
+    	<a id="craignewmark" href="http://cnewmark.com/">Craig Newmark</a>
+    	<a id="gov2Logo" href="http://www.gov2expo.com/">Gov 2.0 Expo</a>
+    	<a id="techwebLogo" href="http://www.techweb.com/">Tech Web</a>
     </div>
-    <a id="googleLogo" href="http://google.com">Google</a>
-    <a id="oreillyLogo" href="http://oreilly.com">O'Reilly</a>
-    <a id="craignewmark" href="http://cnewmark.com/">Craig Newmark</a>
-    <a id="gov2Logo" href="http://www.gov2expo.com/">Gov 2.0 Expo</a>
-    <a id="techwebLogo" href="http://www.techweb.com/">Tech Web</a>
-    {% include "labs/sidebar_helpus.html" %}
 {% endblock %}
+
