@@ -10,10 +10,26 @@ from anthill.people.forms import SearchForm, ProfileForm, PasswordForm
 def search(request):
     if request.GET:
         form = SearchForm(request.GET)
-    else:
-        form = SearchForm()
+        form.is_valid()
+        location = form.cleaned_data['location']
+        name = form.cleaned_data['name']
+        position = form.cleaned_data['position']
+        location_range = form.cleaned_data['location_range']
 
-    return render_to_response('people/search.html', {'form':form},
+        users = Profile.objects.all().select_related()
+        if position:
+            users = users.filter(role=position)
+        if location:
+            pass
+            # point = geocode(location)
+            # users = users.filter(lat_long__dwithin=(point, location_range))
+        if name:
+            users = users.filter(user__first_name__icontains=name)
+        context = { 'form': form, 'searched': True, 'search_results': users }
+    else:
+        context = { 'form': SearchForm() }
+
+    return render_to_response('people/search.html', context,
                              context_instance=RequestContext(request))
 
 def profile(request, username):

@@ -12,23 +12,36 @@
         <button class="searchBtn">
             <span>search</span>
         </button>
+        <div id="advancedSearch">
+        <ul>
+            <li> {{form.name.label_tag}} {{form.name}} </li>
+            <li> {{form.position.label_tag}} {{form.position}} </li>
+            <li> {{form.location_range.label_tag}} {{form.location_range}} </li>
+            <button class="advsearchBtn">
+                <span>search</span>
+            </button>
+            <div class="clear"></div>
+        </ul>
+        </div>
     </form>
-    <div id="advancedSearch">
-        <form id="advancedSearch" method="GET" action=".">
-            <ul>
-                <li> {{form.name.label_tag}} {{form.name}} </li>
-                <li> {{form.position.label_tag}} {{form.position}} </li>
-                <li> {{form.location_range.label_tag}} {{form.location_range}} </li>
-                <button class="advsearchBtn">
-                    <span>search</span>
-                </button>
-                <div class="clear"></div>
-            </ul>
-        </form>
-    </div>
 </div>
 
+
 <div class="contentHeader">
+
+{% if searched %}
+
+    <h3 id="h3Header">{{search_results|length}} members matching search:</h3>
+    <ul>
+        {% for user in search_results %}
+        <li> 
+        <a href="{{user.user.get_absolute_url}}">{{ user.user }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+{% else %}
+
     <h3 id="h3Header">There are <span id="communityMembers">{% num_registered_users %}</span> members of the Sunlight Labs community and growing.</h3>
 </div>
 <div id="timeline" class="module">
@@ -41,7 +54,10 @@
             </li>
         {% endfor %}
     </ul>
+{% endif %}
+
 </div>
+
 {% endblock %}
 
 {% block sidebar %}
