@@ -10,9 +10,9 @@
             {% include "blogdor/post.html" %}
         {% endfor %}
 
-        <a href="{% url blogdor_archive_month previous_month.year, previous_month|date:"m" %}">{{ previous_month|date:"F Y" }}</a>
+	       <a id="previousMonth" href="{% url blogdor_archive_month previous_month.year, previous_month|date:"m" %}">« {{ previous_month|date:"F Y" }}</a>
         {% if next_month %}
-            <a href="{% url blogdor_archive_month next_month.year, next_month|date:"m" %}">{{ next_month|date:"F Y" }}</a>
+            <a id="nextMonth" href="{% url blogdor_archive_month next_month.year, next_month|date:"m" %}">{{ next_month|date:"F Y" }} »</a>
         {% endif %}
     </div>
 {% endblock %}

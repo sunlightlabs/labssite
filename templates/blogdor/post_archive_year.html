@@ -1,9 +1,14 @@
 {% extends "blogdor/base.html" %}
 
 {% block content %}
-    <ol>
+<div class="contentHeader">
+	<h2>Blog Archive</h2>
+</div>	
+<div class="module">
+    <ol class="archive">
         {% for date in date_list %}
             <li><a href="{% url blogdor_archive_month date.year,date|date:"m" %}">{{ date|date:"F Y" }}</a></li>
         {% endfor %}
     </ol>
+</div>
 {% endblock %}
