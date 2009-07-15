@@ -4,12 +4,9 @@ feedinator:
 project join buttons:
     click takes to a "join this project?" page
     yes -> create role obj in moderation queue
-geocoding:
-    people locations geocoded on save
-    add locations to search
 most popular blog posts:
-    talk jeremy into adding this to blogdor
     add a Middleware that records views (map views->objects)
+    google analytics api
 community profile sidebar:
     position breakdown
     programming languages (select few)

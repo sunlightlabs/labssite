@@ -1,11 +1,14 @@
 from django.http import HttpResponse
+from django.conf import settings
 from django.template import RequestContext
 from django.shortcuts import redirect, render_to_response, get_object_or_404
 from django.views.decorators.http import require_POST
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.contrib.gis.geos import Point
 from anthill.people.models import Profile
 from anthill.people.forms import SearchForm, ProfileForm, PasswordForm
+from geopy import geocoders
 
 def search(request):
     if request.GET:
@@ -20,9 +23,10 @@ def search(request):
         if position:
             users = users.filter(role=position)
         if location:
-            pass
-            # point = geocode(location)
-            # users = users.filter(lat_long__dwithin=(point, location_range))
+            geocoder = geocoders.Google(settings.GMAPS_API_KEY)
+            addr, point = geocoder.geocode(location)
+            point = Point(*point)
+            users = users.filter(lat_long__distance__lte=(point, D(mi=location_range))
         if name:
             users = users.filter(user__first_name__icontains=name)
         context = { 'form': form, 'searched': True, 'search_results': users }

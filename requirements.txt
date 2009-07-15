@@ -5,6 +5,7 @@ python-twitter
 docutils
 markdown
 textile
+-e svn+http://geopy.googlecode.com/svn/trunk/#egg=geopy   # PyPI link is broken
 
 # third party apps
 -e svn+http://django-tagging.googlecode.com/svn/trunk#egg=django-tagging

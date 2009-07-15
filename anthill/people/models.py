@@ -1,8 +1,11 @@
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.contrib.gis.db import models
+from django.contrib.gis.geos import Point
 from django.db.models.signals import post_save
 from tagging.fields import TagField
 import twitter
+from geopy import geocoders
 
 ROLES = (
     ('dev', 'Developer'),
@@ -27,6 +30,13 @@ class Profile(models.Model):
     def static_google_map(self):
         base_url = 'http://maps.google.com/staticmap?markers=%(lat)s,%(long)s&zoom=12&size=210x210'
         return base_url % {'lat':self.lat_long.x, 'long':self.lat_long.y}
+
+    def save(self, *args, **kwargs):
+        if self.location:
+            geocoder = geocoders.Google(settings.GMAPS_API_KEY)
+            addr,point = geocoder.geocode(self.location)
+            self.lat_long = Point(*point)
+        super(Profile, self).save(*args, **kwargs)
 
     def possessive(self):
         name = self.user.first_name or self.user.username
