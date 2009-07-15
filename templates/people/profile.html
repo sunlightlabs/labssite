@@ -21,12 +21,12 @@
             {% endifequal %}
             <span id="personIdentifier">{{p_user.profile.get_role_display|safe}}</span>
         </div>	
-        <div class="module">
+        <div id="userDetails" class="module">
             <dl>
                 <dt>Website:</dt>
-                <dd><a href="{{p_user.profile.url|default:"#"}}">{{p_user.profile.url|default:"n/a"}}</a></dd>
+                <dd id="userWebsite"><a href="{{p_user.profile.url|default:"#"}}">{{p_user.profile.url|default:"n/a"}}</a></dd>
 
-                <dt>Location:</dt>
+                <dt id="userLocation">Location:</dt>
                 <dd>{{p_user.profile.location|default:"n/a"}}</dd>
                 <div class="clear"></div>
 
@@ -85,7 +85,7 @@
 </div>
 <hr></hr>
 <h3 class="space">{{p_user.profile.possessive}} Tweets</h3>
-<div class="module">
+<div id="userTweets" class="module">
     <ul>
     {% for tweet in p_user.profile.latest_tweets %}
         <li>{{tweet.text|twitterize}}</li>

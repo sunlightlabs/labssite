@@ -11,9 +11,11 @@
 	<div id="ideaNav">
 		<ul>
 		   {% ifequal ordering "most_popular" %}
+		  	   <li id="nav_popular"><a class="active" href="{% url ideas_popular %}">Most Popular</a></li>
 		       <li id="nav_recent"><a href="{% url ideas_latest %}">Most Recent</a></li>
 		   {% else %}
-		       <li id="nav_popular"><a href="{% url ideas_popular %}">Most Popular</a></li>
+			   <li id="nav_popular"><a href="{% url ideas_popular %}">Most Popular</a></li>
+			   <li id="nav_recent"><a class="active" href="{% url ideas_latest %}">Most Recent</a></li>
 		   {% endifequal %}
 		</ul>
 	</div>
