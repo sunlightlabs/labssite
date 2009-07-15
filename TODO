@@ -1,35 +1,30 @@
 features:
     project feedinator usage
+    most active projects
+        after feedinator is added, base it on a function of posts/time period
     project join buttons
-    people's locations geocoded on save
+        click takes to a "join this project?" page
+        yes -> create role obj in moderation queue
+    people locations geocoded on save
     people search
     comment subscribe to this stream
-    community profile sidebar
     newsfeed
     judgeforamerica
     events
+    most popular blog posts
+        talk jeremy into adding this to blogdor
+        add a Middleware that records views (map views->objects)
+    community profile sidebar
+        position breakdown
+        programming languages (select few)
+        projects (official or not)
+
+change name link on blog posts to link to author page (and robots too)
 
 db changes:
     add idea-project relationship
-    add twitter_id to profile
-
-need discussion:
-    most popular blog posts
-    most active projects
 
 improvements:
     people: display name templatetag
     people: possessive templatetag
-    registration: implement openid + clickpass      ****
-
-Ali:
-    style pagination on /blog/
-    style /blog/tag/
-    style /blog/2009/
-    style /blog/2009/05/ (links at bottom)
-    /ideas/ button to toggle latest/most popular
-    style /ideas/ voting and add button to idea pages
-    style links on projects pages (includes classes per type)
-    /accounts/password/reset/ (link to and style)
-    where do robot links point?
-    how do we cut up the alertbox?
+    registration: implement openid + clickpass

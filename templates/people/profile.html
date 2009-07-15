@@ -1,5 +1,6 @@
 {% extends "registration/base.html" %}
 {% load blog %}
+{% load twitterize %}
 
 {% block content %}
 <div id="person" class="module">
@@ -59,7 +60,7 @@
             </div>
         </div>
     </div>
-    <div id="sunlightPost">	
+    <div id="sunlightPost">
         <h3 class="leftH3">{{p_user.profile.possessive}} Posts</h3>
         <div class="module">
             {% get_user_posts p_user 3 as user_posts %}
@@ -85,6 +86,11 @@
 <hr></hr>
 <h3 class="space">{{p_user.profile.possessive}} Tweets</h3>
 <div class="module">
+    <ul>
+    {% for tweet in p_user.profile.latest_tweets %}
+        <li>{{tweet.text|twitterize}}</li>
+    {% endfor %}
+    </ul>
 </div>
 <div class="clear"></div>
 {% endblock sidebar %}

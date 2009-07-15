@@ -22,6 +22,7 @@ class ProfileForm(forms.Form):
     email = forms.CharField(label='Email')
     photo = forms.ImageField(label='Avatar', required=False)
     url = forms.URLField(label='Personal URL', required=False)
+    twitter_id = forms.CharField(label='Twitter Username', max_length=15, required=False)
     position = forms.ChoiceField(label='Position', choices=ROLES)
     location = forms.CharField(label='Location', required=False)
     skills = forms.CharField(label='Skills', required=False)

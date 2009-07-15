@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django.contrib.gis.db import models
 from django.db.models.signals import post_save
 from tagging.fields import TagField
+import twitter
 
 ROLES = (
     ('dev', 'Developer'),
@@ -18,6 +19,7 @@ class Profile(models.Model):
     lat_long = models.PointField('geocoded location', null=True, blank=True)
     about = models.TextField(blank=True)
     role = models.CharField(max_length=5, choices=ROLES, default='other')
+    twitter_id = models.CharField(max_length=15, blank=True)
     skills = TagField('comma separated list of your skills (eg. python, django)')
 
     objects = models.GeoManager()
@@ -33,6 +35,10 @@ class Profile(models.Model):
         else:
             name = ''.join((name, "'s"))
         return name
+
+    def latest_tweets(self, num=5):
+        api = twitter.Api()
+        return api.GetUserTimeline(self.twitter_id, count=num)
 
     def __unicode__(self):
         return unicode(self.user)

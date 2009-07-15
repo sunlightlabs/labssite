@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.template import RequestContext
 from django.shortcuts import redirect, render_to_response, get_object_or_404
+from django.views.decorators.http import require_POST
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from anthill.people.models import Profile
@@ -24,6 +25,7 @@ def _user_to_profileform(user):
     profile = user.profile
     data = {'name': user.first_name,
             'email': user.email,
+            'twitter_id': profile.twitter_id,
             'photo': profile.photo,
             'url': profile.url, 
             'position': profile.role,
@@ -43,6 +45,7 @@ def edit_profile(request):
             profile = user.profile
             user.first_name = form.cleaned_data['name']
             user.email = form.cleaned_data['email']
+            profile.twitter_id = form.cleaned_data['twitter_id']
             profile.photo = form.cleaned_data['photo']
             profile.url = form.cleaned_data['url']
             profile.role = form.cleaned_data['position']
@@ -59,7 +62,7 @@ def edit_profile(request):
                               context_instance=RequestContext(request))
 
 @login_required
-#@require_POST
+@require_POST
 def change_password(request):
     user = request.user
     password_form = PasswordForm(request.POST)
