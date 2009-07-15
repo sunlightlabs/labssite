@@ -7,13 +7,17 @@
 
 <div id="ideas" class="module">
 
-    {% ifequal ordering "most_popular" %}
-        <a href="{% url ideas_latest %}"> latest </a>
-    {% else %}
-        <a href="{% url ideas_popular %}"> most popular </a>
-    {% endifequal %}
-
     <p class="tip">Want to help and are looking for a great project, <strong>claim one from the list below!</strong><br /> See something that's interesting but you don't have the time to help, <strong>vote it up</strong> so that other people find it and get to work!</p>
+	<div id="ideaNav">
+		<ul>
+		   {% ifequal ordering "most_popular" %}
+		       <li id="nav_recent"><a href="{% url ideas_latest %}">Most Recent</a></li>
+		   {% else %}
+		       <li id="nav_popular"><a href="{% url ideas_popular %}">Most Popular</a></li>
+		   {% endifequal %}
+		</ul>
+	</div>
+
 
     {% for idea in idea_list %}
         {% include "ideas/idea.html" %}
