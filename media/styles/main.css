@@ -90,7 +90,7 @@ div#ltColumn h3{ font-size: 180%; line-height: 24px; margin-bottom: 15px; margin
 div#rtColumn h3 { background: url(/media/images/rtcolumn_headerLine.png) bottom center no-repeat; padding-left: 10px; margin-left: 20px; padding-bottom: 8px;}
 h3{ font-size: 180%; line-height: 25px; color:#1F1313;} 
 h3.space { margin-bottom: 20px;}
-div#ltColumn h3.leftH3 { padding-left: 5px; background: url(/media/images/header_lineShorter.png) bottom left no-repeat; padding-bottom: 10px; margin-bottom: 10px;}
+div#ltColumn h3.leftH3 { padding-left: 5px; background: url(/media/images/header_lineShorter.png) bottom left no-repeat; padding-bottom: 10px; margin-bottom: 10px; margin-top: 0px;}
 
 div#ltColumn h3#h3Header{ margin-bottom: 0; padding-left: 5px; width: 673px;}
 span#communityMembers { font-size: 160%;}
@@ -209,6 +209,8 @@ div#personDetails { margin-left: 85px; background: url(/media/images/line_space_
 div#personDetails h2 { float: left;}
 div#personProject { float: left; margin-left: 85px; width: 285px; margin-right: 20px;}
 div#sunlightPost{ margin-left: 395px;}
+dd#userWebsite a{ width: 233px; margin-right: 20px;}
+div#userDetails dt{ padding-top: 1px;}
 
 div#personHeader{ background: url(/media/images/header_lineShort.png) left bottom no-repeat; padding-bottom: 12px; margin-bottom: 20px;}
 span#personIdentifier{ font-size: 140%; text-align: right; display: block; padding-top: 4px; padding-right: 10px;}
@@ -250,6 +252,7 @@ div#blog_detail img.detailimage { float: left; margin-right: 20px;}
 div#blog_detail ul { list-style-type: disc; padding-left:40px;}
 
 div.pagination { padding-right: 15px; text-align: center;}
+div.pagination a { margin-right: 3px;}
 
 ul#blogCategories { font-size: 110%; line-height: 30px;}
 span.category{ float: left;}
@@ -260,7 +263,6 @@ div#ltColumn div.pullQuote p { text-align: center; font-size: 170%; font-style: 
 
 a#centered { text-align: center; width: 665px; display: block; font-size:110%; color: #3D868D; font-weight: bold;}
 
-div#projectDetail p{ float: left; width: 490px;}
 div#languages { -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #F0F0E5 none repeat scroll 0 0; border: 1px solid #D5D2C6; padding: 20px; width: 120px; float: left;}
 div#projectDetail div#timeline { width: 490px; padding-right: 30px; margin-top: 30px; }
 
@@ -269,7 +271,9 @@ div#timeline li, div.post { background: url(/media/images/line_space2.png) left 
 div#timeline li { background: none; padding-bottom: 0; margin-bottom: 15px;}
 div.post { padding-bottom: 30px; margin-bottom: 20px;}
 
-div#projectDetail p#projectDescription { margin-bottom: 20px; background: url(/media/images/line_505.png) bottom left no-repeat; padding-bottom: 30px;}
+div#projectDetail p{ width: 490px;}
+div#projectDetail p#projectDescription { margin-bottom: 20px; }
+div#project_mainDetails { margin-bottom: 20px; background: url(/media/images/line_505.png) bottom left no-repeat; padding-bottom: 30px; float: left;}
 
 div#signup_nav li a{ float: left; text-indent: -9999em; width: 103px; height: 45px; margin-bottom: 15px; margin-right: 10px; display: block;}
 li#signup_openid a{ background: url(/media/images/openid.png) top left no-repeat; }
@@ -284,6 +288,22 @@ li#signin_openid a.active{ background: url(/media/images/openid.png) bottom left
 li#signin_standard a.active{ background: url(/media/images/standard_signin.png) bottom left no-repeat; }
 
 div#app dt{ font-size: 110%; font-weight: bold; margin: 15px 0 5px 0;}
+
+div#ideaNav ul li { width: 103px; height: 45px; margin-bottom: 30px;}
+div#ideaNav ul li a { text-indent: -9999em; display: block; width: 103px; height: 45px;}
+li#nav_recent a {  background: url(/media/images/mostRecent.png) top left no-repeat;}
+li#nav_popular a { background: url(/media/images/mostPopular.png) top left no-repeat;}
+li#nav_recent a.active {  background: url(/media/images/mostRecent.png) bottom left no-repeat;}
+li#nav_popular a.active { background: url(/media/images/mostPopular.png) bottom left no-repeat;}
+li#nav_popular { float: left;}
+li#nav_recent { margin-left: 130px;}
+
+li.documentation_link a{ background: url(/media/images/iconSm_documentation.png) top left no-repeat; height: 20px; padding: 3px 0 2px 30px;}
+li.source_link a{ background: url(/media/images/iconSm_source.png) top left no-repeat; height: 20px; padding: 3px 0 2px 30px;}
+li.download_link a{ background: url(/media/images/iconSm_download.png) top left no-repeat; height: 20px; padding: 3px 0 2px 30px;}
+div#project_mainDetails li { margin-bottom: 8px;}
+
+div#userTweets li{ margin-bottom: 25px;}
 
 /*buttons*/
 button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
