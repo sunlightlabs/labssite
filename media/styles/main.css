@@ -214,11 +214,16 @@ div#userDetails dt{ padding-top: 1px;}
 
 div#personHeader{ background: url(/media/images/header_lineShort.png) left bottom no-repeat; padding-bottom: 12px; margin-bottom: 20px;}
 span#personIdentifier{ font-size: 140%; text-align: right; display: block; padding-top: 4px; padding-right: 10px;}
+div#personHeader a { float: left; padding-left: 10px; padding-top: 3px;}
 
 div#leadProjects { margin-bottom: 20px;}
 
 div#ltColumn div.smPost p { padding-right: 10px; margin-bottom: 15px;}
 div#ltColumn div.smPost { margin-bottom: 15px; padding-bottom: 15px;}
+div#ltColumn div.smPost img, div.post img, div#blog_detail img { border: 1px solid #c4bdbd; margin: 5px 0;}
+div#ltColumn div.smPost h3, div#ltColumn div.post h3, div#ltColumn div#blog_detail h3 { margin-bottom: 0;}
+div.smPost img{ max-width: 285px; }
+
 div#projectModule li { margin-bottom: 5px;}
 
 h4{ font-size: 150%; margin-bottom: 10px; color:#1F1313; margin-top: 25px;}
