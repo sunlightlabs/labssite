@@ -1,5 +1,8 @@
 {% load comments %}
 
+{% get_comment_list for comment_obj as comment_list %}
+{% get_comment_form for comment_obj as comment_form %}
+
 <div id="commentBox">
     <h3>Discussion</h3>
     {% if comment_list %}
@@ -21,6 +24,7 @@
             <img src="/media/images/avatar_male.jpg"/>
         </a>
         <form id="comment" method="POST" action="{% comment_form_target %}">
+            <input type="hidden" name="next" value="{{comment_obj.get_absolute_url}}" />
             {% for field in comment_form %}
                 {% if field.is_hidden %}
                     {{ field }}
@@ -31,7 +35,7 @@
                         {% endifequal %}
                 {% endif %}
             {% endfor %}
-            <textarea id="text" class="textarea" name="text" cols="32" rows="5"></textarea>
+            <textarea id="text" class="textarea" name="comment" cols="32" rows="5"></textarea>
             <div id="subscribe">
                 <input type="checkbox" value="1" name="subscribe"/>
                 <label>Subscribe to this stream</label>

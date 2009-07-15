@@ -1,5 +1,4 @@
 {% extends "ideas/base.html" %}
-{% load comments %}
 
 {% block content %}
 <div id="ideas" class="module">
@@ -31,9 +30,9 @@
                 <span>I Agree</span>
             </button>
         </div>
-        {% get_comment_list for idea as comment_list %}
-        {% get_comment_form for idea as comment_form %}
-        {% include "comments/comment_box.html" %}
+        {% with idea as comment_obj %}
+            {% include "comments/comment_box.html" %}
+        {% endwith %}
     </div>
 </div>
 {% endblock %}

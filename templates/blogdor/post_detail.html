@@ -1,5 +1,4 @@
 {% extends "blogdor/base.html" %}
-{% load comments %}
 {% load tagging_tags %}
 
 {% block title %}{{ block.super }} - {{ post.title }}{% endblock %}
@@ -33,8 +32,9 @@
     {% endif %}
 
     {% if post.is_published %}
-    {% get_comment_list for post as comment_list %} 
-    {% include "comments/comment_box.html" %}
+    {% with post as comment_obj %}
+        {% include "comments/comment_box.html" %}
+    {% endwith %}
     {% endif %}
 
 </div>

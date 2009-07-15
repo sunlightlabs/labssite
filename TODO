@@ -1,24 +1,26 @@
-blogdor: most popular                           ***
-blogdor: our favorites                          **
-blogdor: robot links                            *
-blogdor: categories                             **
-projects: feedinator                            **
-projects: admin section                         ***
-registration: recent members sidebar            *
-registration: implement openid + clickpass      ****
-index: alertbox                                 *
-index: active projects                          ***
-index: newsfeed                                 ****
-ideas: join buttons                             ***
-ideas: related projects                         **
-ideas: comments                                 ***
+features:
+    project feedinator usage
+    project join buttons
+    people's locations geocoded on save
+    people search
+    comment subscribe to this stream
+    community profile sidebar
+    newsfeed
+    judgeforamerica
+    events
 
-people: audit***
-people: location
-people: tweets
-people: avatar
-people: search
-people: community profile
+db changes:
+    add idea-project relationship
+    add twitter_id to profile
+
+need discussion:
+    most popular blog posts
+    most active projects
+
+improvements:
+    people: display name templatetag
+    people: possessive templatetag
+    registration: implement openid + clickpass      ****
 
 Ali:
     style pagination on /blog/
@@ -29,11 +31,5 @@ Ali:
     style /ideas/ voting and add button to idea pages
     style links on projects pages (includes classes per type)
     /accounts/password/reset/ (link to and style)
-    style contests
-    style contact
-
-general:
-    judgeforamerica
-    commenting
-    anthill.events
-    add body classes
+    where do robot links point?
+    how do we cut up the alertbox?
