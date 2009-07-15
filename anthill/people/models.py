@@ -37,8 +37,9 @@ class Profile(models.Model):
         return name
 
     def latest_tweets(self, num=5):
-        api = twitter.Api()
-        return api.GetUserTimeline(self.twitter_id, count=num)
+        if self.twitter_id:
+            api = twitter.Api()
+            return api.GetUserTimeline(self.twitter_id, count=num)
 
     def __unicode__(self):
         return unicode(self.user)
