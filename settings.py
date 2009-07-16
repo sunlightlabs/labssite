@@ -85,7 +85,6 @@ INSTALLED_APPS = (
     'tagging',
     'mediasync',
     'gatekeeper',
-    'djitter',
     'blogdor',
     'simplesurvey',
     'newsfeed',

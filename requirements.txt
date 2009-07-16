@@ -19,7 +19,6 @@ textile
 # sunlight apps
 -e git://github.com/sunlightlabs/django-mediasync.git#egg=django-mediasync
 -e git://github.com/sunlightlabs/django-gatekeeper.git#egg=django-gatekeeper
--e svn+https://source.sunlightlabs.com/pymods/django-twitter/#egg=django-twitter
 -e git://github.com/sunlightlabs/django-blogdor.git#egg=django-blogdor
 -e git://github.com/jamesturk/django-markupfield.git#egg=markupfield
 -e svn+https://source.sunlightlabs.com/pymods/django-simplesurvey/#egg=django-simplesurvey
