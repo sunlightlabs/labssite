@@ -21,5 +21,7 @@ improvements:
     registration: implement openid + clickpass
     blogdor: subscribe to comments
 
-Ali: 
+Ali:
     search form changed slightly, form now wraps the entire form
+    /projects/sunlight-labs-api/join/
+    /projects/admin/
