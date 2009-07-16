@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.db.models import Manager
 from django.contrib.auth.models import User
 from django.contrib.gis.db import models
 from django.contrib.gis.geos import Point
@@ -26,6 +27,7 @@ class Profile(models.Model):
     skills = TagField('comma separated list of your skills (eg. python, django)')
 
     objects = models.GeoManager()
+    non_geo_manager = Manager()
 
     def static_google_map(self):
         base_url = 'http://maps.google.com/staticmap?markers=%(lat)s,%(long)s&zoom=12&size=210x210'
