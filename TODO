@@ -2,12 +2,9 @@ feedinator:
     add feeds to projects
     after feedinator is added, base it on a function of posts/time period
 most popular blog posts:
-    add a Middleware that records views (map views->objects)
-    google analytics api
+    ga.py
 community profile sidebar:
-    position breakdown
-    programming languages (select few)
-    projects (official or not)
+    charts
 newsfeed
 judgeforamerica
 events
@@ -20,6 +17,7 @@ improvements:
     people: possessive templatetag
     registration: implement openid + clickpass
     blogdor: subscribe to comments
+    people: add caching around twitter api call
 
 Ali:
     search form changed slightly, form now wraps the entire form

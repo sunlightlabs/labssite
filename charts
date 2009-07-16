@@ -1,0 +1,13 @@
+
+# official vs unofficial
+Project.objects.values('official').annotate(num=Count('id'))
+http://chart.apis.google.com/chart?cht=p&chd=t:21,5&chs=550x200&chl=Sunlight%20Projects|Non-Sunlight%20Projects
+
+# google apis
+Profile.objects.values('role').annotate(Count('id'))
+http://chart.apis.google.com/chart?cht=p&chd=t:12,5,2,4&chs=375x150&chl=Developers|Designers|Both|Other&chco=003300|009900|00cc00|00ff00
+
+# languages
+project_ct = ContentType.objects.get_for_model(Project).id
+Tag.objects.filter(items__content_type=project_ct, name__in=tags).values('name').annotate(num=Count('id'))
+http://chart.apis.google.com/chart?cht=p&chd=t:5,3,1&chs=375x150&chl=Python|Ruby|PHP&chco=00aa00|aa0000|00aaaa
