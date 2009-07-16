@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse
 from tagging.fields import TagField
 
 class Project(models.Model):
-    slug = models.SlugField(max_length=50, unique=True)
+    slug = models.SlugField('unique identifier for project, will be part of project URL', max_length=50, unique=True)
     name = models.CharField(max_length=100)
     description = models.TextField()
     official = models.BooleanField(default=False)
@@ -21,7 +21,8 @@ class Project(models.Model):
         return reverse('project_detail', args=[self.slug])
 
     def get_members(self):
-        return self.members.filter(project_roles__is_lead=False)
+        return self.members.filter(project_roles__is_lead=False, 
+                                   project_roles__status='A')
 
 ROLE_STATUSES = (
     ('P', 'Pending'),
@@ -35,6 +36,7 @@ class Role(models.Model):
     join_time = models.DateField(auto_now_add=True)
     status = models.CharField(choices=ROLE_STATUSES, max_length=1, default='P')
     is_lead = models.BooleanField(default=False)
+    message = models.TextField(blank=True)
 
     def save(self, *args, **kwargs):
         super(Role, self).save(*args, **kwargs)
