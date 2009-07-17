@@ -26,3 +26,28 @@ def get_items_as_tag(token, queryset, count=5):
     varname = pieces[as_index+1]
 
     return SimpleItemsNode(queryset, count, offset, varname)
+
+
+## google charts ##
+
+def _piechart_url(items, width=200, height=200):
+    nums = []
+    names = []
+    colors = []
+    for item in items:
+        nums.append(item['num'])
+        names.append(item['name'])
+        colors.append(item['color'])
+
+    chart_data = {'width': width, 'height': height, 'nums':','.join(nums),
+                  'names':'|'.join(names), 'colors':'|'.join(colors)}
+
+    return 'http://chart.apis.google.com/chart?cht=p&chd=t:%(nums)s&chs=%(width)dx%(height)d&chl=%(names)s&chco=%(colors)s' % chart_data
+
+def _piechart_from_tags(model, tags, width=200, height=200):
+    ct = ContentType.objects.get_for_model(model).id
+    tag_names = tags.items()
+    items = Tag.objects.filter(items__content_type=ct, name__in=tag_names).values('name').annotate(num=Count('id'))
+    for item in items:
+        item['color'] = items[item['name']]
+    return _piechart_url(items, width, height)

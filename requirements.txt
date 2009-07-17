@@ -6,13 +6,12 @@ docutils
 markdown
 textile
 -e svn+http://geopy.googlecode.com/svn/trunk/#egg=geopy   # PyPI link is broken
--e git://github.com/clintecker/python-googleanalytics.git#egg=googleanalytics
+python-googleanalytics
 
 # third party apps
 -e svn+http://django-tagging.googlecode.com/svn/trunk#egg=django-tagging
 -e git://github.com/robhudson/django-debug-toolbar.git#egg=django-debug-toolbar
 -e hg+http://bitbucket.org/ubernostrum/django-contact-form/#egg=django-contact-form
-# S3
 #-e svn+http://opensource.washingtontimes.com/projects/public/django-clickpass/trunk/#egg=django-clickpass
 #-e svn+http://django-openid.googlecode.com/svn/trunk/django_openid/#egg=django-openid
 

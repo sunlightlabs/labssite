@@ -3,8 +3,6 @@ feedinator:
     after feedinator is added, base it on a function of posts/time period
 most popular blog posts:
     ga.py
-community profile sidebar:
-    charts
 newsfeed
 judgeforamerica
 events
