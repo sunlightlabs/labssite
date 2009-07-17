@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 from django.contrib.contenttypes.models import ContentType
-from models import Idea
-from feeds import LatestIdeasFeed
+from anthill.ideas.models import Idea
+from anthill.ideas.feeds import LatestIdeasFeed
 
 feeds = {
     'latest': LatestIdeasFeed,

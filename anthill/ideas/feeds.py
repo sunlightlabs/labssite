@@ -1,5 +1,5 @@
 from django.contrib.syndication.feeds import Feed, FeedDoesNotExist
-from models import Idea
+from anthill.ideas.models import Idea
 
 class LatestIdeasFeed(Feed):
 
