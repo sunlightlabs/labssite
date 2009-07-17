@@ -1,4 +1,4 @@
-feedinator:
+Feedinator:
     add feeds to projects
     after feedinator is added, base it on a function of posts/time period
 most popular blog posts:
@@ -7,15 +7,13 @@ newsfeed
 judgeforamerica
 events
 
-db changes:
-    add idea-project relationship
-
 improvements:
     people: display name templatetag
     people: possessive templatetag
     registration: implement openid + clickpass
     blogdor: subscribe to comments
     people: add caching around twitter api call
+    switch more TextFields to MarkupFields
 
 Ali:
     search form changed slightly, form now wraps the entire form

@@ -4,7 +4,7 @@
 <div id="ideas" class="module">
     <div class="contentHeader">
         <h2 class="ideas">{{idea.title}}</h2>
-    </div>	
+    </div>
     <div class="module">
         <dl class="entryMetadata">
             <dt>Posted by</dt>
@@ -13,6 +13,15 @@
             <dd>{{idea.submit_date|date}}</dd>
         </dl>
         <p>{{idea.description}}</p>
+
+        <!-- needs styling -->
+        {% if idea.projects.count %}
+        <ul>
+            {% for proj in idea.projects.all %}
+            <li> <a href="{{proj.get_absolute_url}}">{{proj}}</a> was started by {{proj.lead}} on {{proj.creation_date|date}} </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
 
         <button class="helpBtn">
             <span>Help On This Project</span>
