@@ -3,6 +3,7 @@ after feedinator is added, base most active on a function of posts/time period
 most popular blog posts (use googleanalytics)
 newsfeed
 judgeforamerica
+audit events
 
 improvements:
     people: display name templatetag
