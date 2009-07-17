@@ -2,10 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from tagging.fields import TagField
+from anthill.ideas.models import Idea
 
 class Project(models.Model):
-    slug = models.SlugField('unique identifier for project, will be part of project URL', max_length=50, unique=True)
-    name = models.CharField(max_length=100)
+    slug = models.SlugField('unique identifier for project',
+                            max_length=50, unique=True,
+                            help_text="changing this value will alter your project's URL")
+    name = models.CharField('displayed name of project', max_length=100)
     description = models.TextField()
     official = models.BooleanField(default=False)
     creation_date = models.DateTimeField(auto_now_add=True)

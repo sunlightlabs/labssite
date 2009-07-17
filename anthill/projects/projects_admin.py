@@ -10,9 +10,11 @@ class LinkInline(admin.TabularInline):
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ('name', 'official')
     list_filter = ('official',)
-    inlines = [RoleInline, LinkInline]
+    inlines = [LinkInline, RoleInline]
 
 class PublicProjectAdmin(ProjectAdmin):
+    exclude = ('official','lead')
+
     def queryset(self, request):
         return Project.objects.filter(lead=request.user)
 
@@ -23,7 +25,7 @@ class PublicProjectAdmin(ProjectAdmin):
         if obj:
             return obj.lead == request.user
         else:
-            return False
+            return True
 
     def has_delete_permission(self, request, obj=None):
         return False
