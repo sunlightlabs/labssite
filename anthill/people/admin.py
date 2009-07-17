@@ -1,4 +1,4 @@
 from django.contrib.gis import admin
-from models import Profile
+from anthill.people.models import Profile
 
 admin.site.register(Profile, admin.OSMGeoAdmin)

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Idea
+from anthill.ideas.models import Idea
 
 class IdeaAdmin(admin.ModelAdmin):
     list_display = ('title', 'user')

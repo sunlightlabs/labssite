@@ -1,0 +1,7 @@
+
+
+conn.get_account('UA-1265484-24')
+now = datetime.datetime.now()
+before = now-datetime.timedelta(14)
+acct.get_data(start_date=before, end_date=now, dimensions=['pageTitle', 'pagePath',], metrics=['pageviews',], sort=['-pageviews',], filters=[['pagePath', '=~', '^/blog/[0-9]{4}/']], max_results=5)
+

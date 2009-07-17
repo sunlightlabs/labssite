@@ -5,7 +5,7 @@
 <div id="projects" class="module">
     <div class="contentHeader">
         <h2 class="projects">{{project.name}}</h2>
-    </div>	
+    </div>
     <div id="projectDetail" class="module">
         <dl class="entryMetadata">
             {% if project.official %}
@@ -15,9 +15,16 @@
 
             <dt>Became a project on</dt>
             <dd>{{project.creation_date|date}}</dd>
+
+            <!-- needs styling -->
+            {% if project.idea %}
+            <dt>Project began as an implementation of idea</dt>
+            <dd>"<a href="{{project.idea.get_absolute_url}}">{{project.idea}}</a>"</dd>
+            {% endif %}
+
         </dl>
-		<div id="project_mainDetails">
-        	<p id="projectDescription">{{project.description}}</p>
+        <div id="project_mainDetails">
+            <p id="projectDescription">{{project.description}}</p>
             <ul>
                 {% for link in project.links.all %}
                 <li class="{{link.get_link_type_display}}_link">
@@ -83,9 +90,11 @@
 <h3 class="space">Want To Join This Project?</h3>
 <div id="projectJoin" class="module">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <a href="{% url join_project project.slug %}">
     <button class="joinBtn">
         <span>Join</span>
     </button>
+    </a>
 </div>
 <div class="clear"></div>
 {% endblock %}

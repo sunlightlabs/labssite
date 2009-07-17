@@ -2,17 +2,22 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from tagging.fields import TagField
+from markupfield.fields import MarkupField
+from anthill.ideas.models import Idea
 
 class Project(models.Model):
-    slug = models.SlugField(max_length=50, unique=True)
-    name = models.CharField(max_length=100)
-    description = models.TextField()
+    slug = models.SlugField('unique identifier for project',
+                            max_length=50, unique=True,
+                            help_text="changing this value will alter your project's URL")
+    name = models.CharField('displayed name of project', max_length=100)
+    description = MarkupField()
     official = models.BooleanField(default=False)
     creation_date = models.DateTimeField(auto_now_add=True)
     skills = TagField('list of skills used/required on this project')
 
     lead = models.ForeignKey(User, related_name='projects_lead_on')
     members = models.ManyToManyField(User, through='Role')
+    idea = models.ForeignKey(Idea, null=True, related_name='projects')
 
     def __unicode__(self):
         return self.name
@@ -21,7 +26,8 @@ class Project(models.Model):
         return reverse('project_detail', args=[self.slug])
 
     def get_members(self):
-        return self.members.filter(project_roles__is_lead=False)
+        return self.members.filter(project_roles__is_lead=False, 
+                                   project_roles__status='A')
 
 ROLE_STATUSES = (
     ('P', 'Pending'),
@@ -35,6 +41,7 @@ class Role(models.Model):
     join_time = models.DateField(auto_now_add=True)
     status = models.CharField(choices=ROLE_STATUSES, max_length=1, default='P')
     is_lead = models.BooleanField(default=False)
+    message = models.TextField(blank=True)
 
     def save(self, *args, **kwargs):
         super(Role, self).save(*args, **kwargs)

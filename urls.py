@@ -4,6 +4,8 @@ from django.contrib.gis import admin
 from django import forms
 from blogdor.feeds import LatestComments, LatestPosts, LatestForTag, LatestForAuthor
 from contact_form.forms import ContactForm
+from anthill.projects.projects_admin import projects_admin
+
 admin.autodiscover()
 
 class LabsContactForm(ContactForm):
@@ -48,7 +50,8 @@ blog_feeds = {
 urlpatterns = patterns('',
     # admin
     url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
-    url(r'^admin/(.*)', admin.site.root, name='admin'),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^projects/admin/', include(projects_admin.urls)),
 
     url(r'^comments/', include('django.contrib.comments.urls')),
 

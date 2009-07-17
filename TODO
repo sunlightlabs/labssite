@@ -1,28 +1,21 @@
-feedinator:
+Feedinator:
     add feeds to projects
     after feedinator is added, base it on a function of posts/time period
-project join buttons:
-    click takes to a "join this project?" page
-    yes -> create role obj in moderation queue
 most popular blog posts:
-    add a Middleware that records views (map views->objects)
-    google analytics api
-community profile sidebar:
-    position breakdown
-    programming languages (select few)
-    projects (official or not)
+    ga.py
 newsfeed
 judgeforamerica
 events
-
-db changes:
-    add idea-project relationship
 
 improvements:
     people: display name templatetag
     people: possessive templatetag
     registration: implement openid + clickpass
     blogdor: subscribe to comments
+    people: add caching around twitter api call
+    switch more TextFields to MarkupFields
 
-Ali: 
+Ali:
     search form changed slightly, form now wraps the entire form
+    /projects/sunlight-labs-api/join/
+    /projects/admin/

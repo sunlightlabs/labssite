@@ -26,7 +26,7 @@ def search(request):
             geocoder = geocoders.Google(settings.GMAPS_API_KEY)
             addr, point = geocoder.geocode(location)
             point = Point(*point)
-            users = users.filter(lat_long__distance__lte=(point, D(mi=location_range))
+            users = users.filter(lat_long__distance__lte=(point, D(mi=location_range)))
         if name:
             users = users.filter(user__first_name__icontains=name)
         context = { 'form': form, 'searched': True, 'search_results': users }
