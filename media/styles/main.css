@@ -196,9 +196,27 @@ h4#teamHeader { margin-top: 20px;}
 span#metadata { font-size: 90%; color: #808285; text-decoration: none; font-style: oblique; }
 a#leadParticipant { text-decoration: none;}
 
+div#footerMain_top{ background: url(/media/images/footer_mainBottom.png) bottom center no-repeat; width: 960px; margin: 0 auto; height: 372px;}
+div#footerMain{ background: url(/media/images/footer_mainTop.png) top center no-repeat; width: 960px; margin: 0 auto; height: 242px; padding-top: 130px;}
+div#footerWrapper{ background: url(/media/images/footer_repeat2.png) bottom center repeat-x; height: 372px;}
 
-div#footerMain{ background: url(/media/images/footer_main2.png) bottom center no-repeat; width: 960px; margin: 0 auto; height: 320px;}
-div#footerWrapper{ background: url(/media/images/footer_repeat.png) bottom center repeat-x; }
+div#footerMain h4 { text-indent: -9999em; display: block; height: 19px; margin-bottom: 20px;}
+h4#labsTwitter_header { background: url(/media/images/footer_followLabs.png) top left no-repeat; width: 328px;}
+h4#labsEvents_header { background: url(/media/images/footer_trackUsDown.png) top left no-repeat; width: 113px;}
+div#labsEvents { float: left; width: 305px; padding-left: 160px; border-right: 1px solid #545939; padding-right: 15px; height: 170px; margin-bottom: 20px;}
+div#labsEvents li a{ color: #d8ddd3; }
+div#labsEvents li { margin-bottom: 5px;}
+a.labsEvent{ text-decoration: underline; margin-right: 15px; font-size: 110%; font-weight: bold;}
+div#labsTwitter { margin-left: 495px; height: 145px; margin-bottom: 20px;}
+div#labsTwitter li { width: 210px; float: left; margin-right: 20px;}
+span.tweetMetaAuthor { text-transform: uppercase; color: #535631; font-size: 110%;}
+p.tweetContent { color: #d8ddd3;}
+
+div.foundationLogo { background: url(/media/images/foundationLogo.png) top left no-repeat; text-indent: -9999em; display: block; float: left; width: 83px; height: 38px; margin-left: 30px; margin-right: 20px;}
+div#foundationDetails { padding-top: 8px; color: #a7a9ac;}
+div.adr{ float: left; display: inline; margin-right: 15px; }
+div.phone { padding-top: 20px;}
+div.street-address { float: left; margin-right: 15px;}
 
 div#personPic { float: left;}
 div#personDetails dt{ float: left; font-weight: bold; margin-right: 8px; }
