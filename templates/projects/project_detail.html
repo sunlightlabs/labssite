@@ -10,7 +10,7 @@
         <dl class="entryMetadata">
             {% if project.official %}
             <dt>This project is funded by</dt>
-            <dd><a href="#">Sunlight</a></dd>
+            <dd><a class="seperationBlock" class="seperationBlock" href="#">Sunlight</a></dd>
             {% endif %}
 
             <dt>Became a project on</dt>
@@ -36,7 +36,7 @@
 
         {% tags_for_object project as skills %}
         <div id="languages">
-            <h3>Skills</h3>
+            <h3 id="skillsHeader">Skills</h3>
             <ul>
                 {% for skill in skills %}
                 <li><a href="#">{{skill}}</a></li>
@@ -46,7 +46,7 @@
 
         <div id="timeline">
             <h3>Milestones</h3>
-            <ul id="projectTimeline">
+            <ul id="projectTimeline" class="leftTimeline">
                 <li>Design comps have been uploaded by <a href="#">Ali</a></li>
                 <li><a href="#">Jeremy</a> was made lead</li>
                 <li>Project was created from idea: <a href="#">Data Commons</a></li>

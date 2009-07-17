@@ -8,7 +8,7 @@
     <div class="module">
         <dl class="entryMetadata">
             <dt>Posted by</dt>
-            <dd><a href="{{idea.user.get_absolute_url}}">{% firstof idea.user.first_name idea.user.username %}</a></dd>
+            <dd><a class="seperationBlock" href="{{idea.user.get_absolute_url}}">{% firstof idea.user.first_name idea.user.username %}</a></dd>
             <dt>Date</dt>
             <dd>{{idea.submit_date|date}}</dd>
         </dl>
