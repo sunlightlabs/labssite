@@ -1,0 +1,14 @@
+{% extends "events/base.html" %}
+
+{% block content %}
+<div class="module">
+    <div class="contentHeader">
+        <h2>{{year}}</h2>
+    </div>
+    <div class="module">
+        {% for m in date_list %}
+        <a href="{% url events_for_month m.year m|date:"m" %}">{{ m|date:"M y" }}</a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

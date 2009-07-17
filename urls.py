@@ -74,6 +74,7 @@ urlpatterns = patterns('',
 
     url(r'^ideas/', include('anthill.ideas.urls')),
     url(r'^projects/', include('anthill.projects.urls')),
+    url(r'^events/', include('anthill.events.urls')),
 
     # labs specific
     url(r'^$', 'sunlightlabs.labs.views.index', name='index'),

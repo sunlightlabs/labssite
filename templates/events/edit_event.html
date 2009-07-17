@@ -1,0 +1,20 @@
+{% extends "events/base.html" %}
+
+{% block content %}
+<div class="module">
+    <div class="contentHeader">
+        <h2>Event</h2>
+    </div>
+    <div class="module">
+        <p class="tip">I really should write something that goes here</p>
+        <form id="accountForm" method="POST" action="." enctype="multipart/form-data">
+            <ul>
+                {{ form.as_ul }}
+                <button class="saveBtn">
+                    <span>Save Changes</span>
+                </button>
+            </ul>
+        </form>
+    </div>
+</div>
+{% endblock %}

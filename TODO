@@ -1,11 +1,8 @@
-Feedinator:
-    add feeds to projects
-    after feedinator is added, base it on a function of posts/time period
-most popular blog posts:
-    ga.py
+add feeds to projects
+after feedinator is added, base most active on a function of posts/time period
+most popular blog posts (use googleanalytics)
 newsfeed
 judgeforamerica
-events
 
 improvements:
     people: display name templatetag
@@ -14,8 +11,9 @@ improvements:
     blogdor: subscribe to comments
     people: add caching around twitter api call
     switch more TextFields to MarkupFields
+    on comment_box hide discussion if there aren't comments yet
 
 Ali:
-    search form changed slightly, form now wraps the entire form
     /projects/sunlight-labs-api/join/
     /projects/admin/
+    /events/

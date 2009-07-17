@@ -95,6 +95,7 @@ INSTALLED_APPS = (
     'anthill.people',
     'anthill.ideas',
     'anthill.projects',
+    'anthill.events',
 )
 
 DATE_FORMAT = 'F j, Y'

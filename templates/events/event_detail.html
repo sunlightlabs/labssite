@@ -1,0 +1,19 @@
+{% extends "events/base.html" %}
+
+{% block content %}
+<div class="module">
+    <div class="contentHeader">
+        <h2>{{event}}</h2>
+    </div>
+    <div class="module">
+        <!-- here is all of the data that the template has -->
+        {{ event.description }}
+        <br />
+        {{ event.start_date|date}}
+        {{ event.end_date|date}}
+        {{ event.location }}
+        {{ event.url|urlize }}
+        <a href="{{event.creator.get_absolute_url}}">{{ event.creator.firstname }}</a>
+    </div>
+</div>
+{% endblock %}

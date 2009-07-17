@@ -2,9 +2,7 @@ from django import forms
 from anthill.people.models import ROLES
 
 DISTANCE_CHOICES = (
-    ('1', '1 Mile'),
     ('5', '5 Miles'),
-    ('10', '10 Miles'),
     ('25', '25 Miles'),
     ('50', '50 Miles'),
     ('100', '100 Miles'),
