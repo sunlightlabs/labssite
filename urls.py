@@ -114,7 +114,7 @@ urlpatterns = patterns('',
     url(r'^events/', include('anthill.events.urls')),
 
     # labs specific
-    url(r'^$', 'sunlightlabs.labs.views.index', name='index'),
+    url(r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'labs/index.html'}, name='index'),
 )
 
 #

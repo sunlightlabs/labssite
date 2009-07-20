@@ -7,13 +7,7 @@ from blogdor.views import archive
 from anthill.projects.models import Project
 
 def index(request):
-    recent_posts = Post.objects.filter(is_published=True)[:3]
-
-    data = {
-        "latest_posts": recent_posts,
-    }
-
-    return render_to_response("labs/index.html", data,
+    return render_to_response("labs/index.html",
                              context_instance=RequestContext(request))
 
 def blog_wrapper(request):
