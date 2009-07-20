@@ -6,8 +6,6 @@ audit events
 dynamic content for footer
 
 improvements:
-    people: display name templatetag
-    people: possessive templatetag
     registration: implement openid + clickpass
     blogdor: subscribe to comments
     people: add caching around twitter api call

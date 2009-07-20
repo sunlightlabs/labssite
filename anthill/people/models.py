@@ -21,14 +21,6 @@ class Profile(LocationModel):
     twitter_id = models.CharField(max_length=15, blank=True)
     skills = TagField('comma separated list of your skills (eg. python, django)')
 
-    def possessive(self):
-        name = self.user.first_name or self.user.username
-        if name[-1] == 's':
-            name = ''.join((name, "'"))
-        else:
-            name = ''.join((name, "'s"))
-        return name
-
     def latest_tweets(self, num=5):
         if self.twitter_id:
             api = twitter.Api()

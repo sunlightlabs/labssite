@@ -1,5 +1,6 @@
 {% extends "registration/base.html" %}
 {% load blog %}
+{% load people %}
 {% load twitterize %}
 
 {% block content %}
@@ -40,7 +41,7 @@
         </div>
     </div>
     <div id="personProject">
-        <h3 class="leftH3">{{p_user.profile.possessive}} Projects</h3>
+        <h3 class="leftH3">{% possessive p_user %} Projects</h3>
         <div id="projectModule" class="module">
             <div id="leadProjects">
                 <h4>Lead</h4>
@@ -61,7 +62,7 @@
         </div>
     </div>
     <div id="sunlightPost">
-        <h3 class="leftH3">{{p_user.profile.possessive}} Posts</h3>
+        <h3 class="leftH3">{% possessive p_user %} Posts</h3>
         <div class="module">
             {% get_user_posts p_user 3 as user_posts %}
 
@@ -72,19 +73,19 @@
             </div>
             {% endfor %}
 
-            <a href="{% url blogdor_author p_user.username %}">See all of {{p_user.profile.possessive}} posts.</a>
+            <a href="{% url blogdor_author p_user.username %}">See all of {% possessive p_user %} posts.</a>
         </div>
     </div>
 </div>
 {% endblock %}
 
 {% block sidebar %}
-<h3 class="space">{{p_user.profile.possessive}} Location</h3>
+<h3 class="space">{% possessive p_user %} Location</h3>
 <div class="module">
     <img src="{{p_user.profile.static_google_map}}" />
 </div>
 <hr></hr>
-<h3 class="space">{{p_user.profile.possessive}} Tweets</h3>
+<h3 class="space">{% possessive p_user %} Tweets</h3>
 <div id="userTweets" class="module">
     <ul>
     {% for tweet in p_user.profile.latest_tweets %}
