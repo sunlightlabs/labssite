@@ -4,8 +4,8 @@
 {% get_comment_form for comment_obj as comment_form %}
 
 <div id="commentBox">
-    <h3 id="blogH3">Discussion</h3>
     {% if comment_list %}
+    <h3 id="blogH3">Discussion</h3>
     <ol id="comments">
         {% for comment in comment_list %}
             <li>

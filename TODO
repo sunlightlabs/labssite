@@ -9,8 +9,7 @@ improvements:
     registration: implement openid + clickpass
     blogdor: subscribe to comments
     people: add caching around twitter api call
-    switch more TextFields to MarkupFields
-    on comment_box hide discussion if there aren't comments yet
+    switch event/ideas/people TextFields to MarkupFields
 
 Ali:
     /projects/sunlight-labs-api/join/
