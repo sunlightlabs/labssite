@@ -1,9 +1,9 @@
 add feeds to projects
 after feedinator is added, base most active on a function of posts/time period
 most popular blog posts (use googleanalytics)
-newsfeed
 judgeforamerica
 audit events
+dynamic content for footer
 
 improvements:
     people: display name templatetag
