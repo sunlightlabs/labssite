@@ -1,4 +1,3 @@
-add feeds to projects
 after feedinator is added, base most active on a function of posts/time period
 most popular blog posts (use googleanalytics)
 judgeforamerica
@@ -15,3 +14,4 @@ Ali:
     /projects/sunlight-labs-api/join/
     /projects/admin/
     /events/
+    charts on /projects/ + /users/ + /events/
