@@ -84,6 +84,7 @@ INSTALLED_APPS = (
     'debug_toolbar',
     'tagging',
     'mediasync',
+    'feedinator',
     'gatekeeper',
     'blogdor',
     'simplesurvey',

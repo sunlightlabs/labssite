@@ -8,6 +8,43 @@ from anthill.projects.projects_admin import projects_admin
 
 admin.autodiscover()
 
+### newsfeed ###
+from newsfeed.models import Feed
+from django.db.models.signals import post_save
+from anthill.events.models import Event
+from anthill.projects.models import Project
+from anthill.ideas.models import Idea
+from django.contrib.auth.models import User
+feed, created = Feed.objects.get_or_create(slug='main', 
+                                           defaults={'title':'main feed'})
+
+def event_callback(sender, instance, created, **kwargs):
+    if created:
+        feed.items.create(user=instance.creator, item_type='event',
+                          body=instance.title, link=instance.get_absolute_url())
+post_save.connect(event_callback, sender=Event)
+
+def idea_callback(sender, instance, created, **kwargs):
+    if created:
+        feed.items.create(user=instance.user, item_type='idea',
+                          body=unicode(instance),
+                          link=instance.get_absolute_url())
+post_save.connect(idea_callback, sender=Idea)
+
+def project_callback(sender, instance, created, **kwargs):
+    if created:
+        feed.items.create(user=instance.lead, item_type='project',
+                          body=unicode(instance),
+                          link=instance.get_absolute_url())
+post_save.connect(project_callback, sender=Project)
+
+def user_callback(sender, instance, created, **kwargs):
+    if created:
+        feed.items.create(user=instance, item_type='person',
+                          body=unicode(instance),
+                          link=instance.get_absolute_url())
+post_save.connect(user_callback, sender=User)
+
 class LabsContactForm(ContactForm):
 
     attrs_dict = { 'class': 'required' }
@@ -77,7 +114,7 @@ urlpatterns = patterns('',
     url(r'^events/', include('anthill.events.urls')),
 
     # labs specific
-    url(r'^$', 'sunlightlabs.labs.views.index', name='index'),
+    url(r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'labs/index.html'}, name='index'),
 )
 
 #

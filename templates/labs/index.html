@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load blog %}
+{% load newsfeed_tags %}
 
 {% block content %}
 <div id="featureBox_wrapper">
@@ -17,6 +19,7 @@
     <h2 class="post">Recent Posts</h2>
 </div>
 <div class="module">
+    {% get_recent_posts 3 as latest_posts %}
     {% for post in latest_posts %}
         {% include "blogdor/post.html" %}
     {% endfor %}
@@ -27,10 +30,7 @@
 </div>
 <div id="timeline" class="module">
     <ul>
-        <li class="idea">James has an idea for <a href="#">Data Commons</a></li>
-        <li class="person">James has an idea for <a href="#">Data Commons</a></li>
-        <li class="event">James has an idea for <a href="#">Data Commons</a></li>
-		<li class="project">James has an idea for <a href="#">Data Commons</a></li>
+        {% render_feed "main" 5 %}
     </ul>
 </div>
 

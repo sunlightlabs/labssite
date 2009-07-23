@@ -1,6 +1,7 @@
 -e svn+http://code.djangoproject.com/svn/django/trunk/#egg=django
 
 # non-django dependencies
+-e git://fabfile.org/fabric.git#egg=fabric
 python-twitter
 docutils
 markdown
