@@ -24,37 +24,54 @@
         </ul>
         </div>
     </form>
-</div>
 
 
-<div class="contentHeader">
+
+
 
 {% if searched %}
-
-    <h3 id="h3Header">{{search_results|length}} members matching search:</h3>
-    <ul>
-        {% for user in search_results %}
-        <li> 
-        <a href="{{user.user.get_absolute_url}}">{{ user.user }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-
-{% else %}
-
+	<div id="users_results" class="module">
+    <h3>{{search_results|length}} Results For ""</h3>
+	   <table id="users_table">
+		<thread>
+			<tr id="titles">
+				<th id="title_name">Name</th>
+				<th class="center_title">Position</th>
+				<th class="center_title">Skills</th>
+				<th>Distance</th>
+			</tr>	
+		</thread>
+		<tbody>	
+		    {% for user in search_results %}
+	        <tr class="{% cycle 'odd' 'even' %}">
+				<td>
+			    	<a  id="user_name"href="{{user.user.get_absolute_url}}">{{ user.user }}</a>
+				</td>
+				<td>{{p_user.profile.get_role_display|safe}}</td>
+				<td>{{p_user.profile.skills|default:"n/a"}}</td>
+				<td>1 Mile</td>
+	        </tr>
+	        {% endfor %}
+		</tbody>
+	   </table>
+	</div>
+</div>	
+	
+{% endif %}
+</div>
+<div class="contentHeader">
     <h3 id="h3Header">There are <span id="communityMembers">{% num_registered_users %}</span> members of the Sunlight Labs community and growing.</h3>
 </div>
 <div id="timeline" class="module">
-    <ul>
-        {% get_latest_user_profiles as user_profiles %}
-        {% for up in user_profiles %}
-            <li>
-            <a href="{{ up.user.get_absolute_url }}">{% firstof up.user.first_name up.user.username %}</a> just joined
-            {% if up.location %}from {{up.location}}{% endif %}
-            </li>
-        {% endfor %}
-    </ul>
-{% endif %}
+	<ul>
+	    {% get_latest_user_profiles as user_profiles %}
+	    {% for up in user_profiles %}
+	    <li> 
+        	<a href="{{ up.user.get_absolute_url }}">{% firstof up.user.first_name up.user.username %}</a> just joined
+        	{% if up.location %}from {{up.location}}{% endif %}
+	    </li>
+	    {% endfor %}
+	</ul>
 
 </div>
 
@@ -64,6 +81,8 @@
 <h3>Community Profile</h3>
 <div class="module">
 </div>
+<hr></hr>
+<div id="hackathonBox"><a href="#">Find Out How To Hold A Hackathon In Your Area</a></div>
 <div class="clear"></div>
 {% endblock %}
 

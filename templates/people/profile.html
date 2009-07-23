@@ -73,7 +73,7 @@
             </div>
             {% endfor %}
 
-            <a href="{% url blogdor_author p_user.username %}">See all of {% possessive p_user %} posts.</a>
+            <a class="center_viewall" href="{% url blogdor_author p_user.username %}">See all of {% possessive p_user %} posts »</a>
         </div>
     </div>
 </div>
@@ -81,8 +81,9 @@
 
 {% block sidebar %}
 <h3 class="space">{% possessive p_user %} Location</h3>
-<div class="module">
+<div id="user_map" class="module">
     <img src="{{p_user.profile.static_google_map}}" />
+	<div id="map_label">{{p_user.profile.location|default:"n/a"}}</div>
 </div>
 <hr></hr>
 <h3 class="space">{% possessive p_user %} Tweets</h3>

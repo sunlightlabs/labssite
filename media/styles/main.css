@@ -60,22 +60,22 @@ div.module{ padding-left: 5px; margin-bottom: 40px;}
 div#nav li a { height: 27px; text-indent: -9999em; display: block; margin-left: 6px; margin-top:20px;}
 
 li#nav_blog a { width: 70px; background: url(/media/images/nav_blog.png) left top no-repeat;}
-li#nav_blog a:hover, li#nav_blog a.active { width: 70px; background: url(/media/images/nav_blog.png) left bottom no-repeat;}
+li#nav_blog a:hover, body.blog li#nav_blog a { width: 70px; background: url(/media/images/nav_blog.png) left bottom no-repeat;}
 
 li#nav_people a { width: 88px; background: url(/media/images/nav_people.png) left top no-repeat;}
-li#nav_people a:hover, li#nav_people a.active { width: 88px; background: url(/media/images/nav_people.png) left bottom no-repeat;}
+li#nav_people a:hover, body.people li#nav_people a{ width: 88px; background: url(/media/images/nav_people.png) left bottom no-repeat;}
 
 li#nav_projects a { width: 103px; background: url(/media/images/nav_projects.png) left top no-repeat;}
-li#nav_projects a:hover, li#nav_projects a.active { width: 103px; background: url(/media/images/nav_projects.png) left bottom no-repeat;}
+li#nav_projects a:hover, body.projects li#nav_projects a{ width: 103px; background: url(/media/images/nav_projects.png) left bottom no-repeat;}
 
 li#nav_wiki a { width: 63px; background: url(/media/images/nav_wiki.png) left top no-repeat;}
-li#nav_wiki a:hover, li#nav_wiki a.active { width: 63px; background: url(/media/images/nav_wiki.png) left bottom no-repeat;}
+li#nav_wiki a:hover{ width: 63px; background: url(/media/images/nav_wiki.png) left bottom no-repeat;}
 
 li#nav_about a { width: 79px; background: url(/media/images/nav_about.png) left top no-repeat;}
-li#nav_about a:hover, li#nav_about a.active { width: 79px; background: url(/media/images/nav_about.png) left bottom no-repeat;}
+li#nav_about a:hover, body.about li#nav_about a { width: 79px; background: url(/media/images/nav_about.png) left bottom no-repeat;}
 
 li#nav_contact a { width: 99px; background: url(/media/images/nav_contact.png) left top no-repeat;}
-li#nav_contact a:hover, li#nav_contact a.active { width: 99px; background: url(/media/images/nav_contact.png) left bottom no-repeat;}
+li#nav_contact a:hover, body.contact li#nav_contact a { width: 99px; background: url(/media/images/nav_contact.png) left bottom no-repeat;}
 
 h2{ color: #1f1313; font-size: 210%;  padding-left: 5px; line-height: 27px;}
 h2.post{ background: url(/media/images/icon_post.png) top left no-repeat; padding: 10px 0 1px 35px; margin-left: 5px;}
@@ -119,7 +119,6 @@ div#communityTimelineHeader { background: url(/media/images/line_space2.png) lef
 
 input, textarea { background: #fff; border: 1px solid #c4bdbd; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 5px 5px 6px; margin-bottom: 10px;}
 input#id_location { float: left; margin-right: 10px;}
-form#searchForm { margin-bottom: 20px;}
 div#rtColumn label{ display: block;}
 div#ltColumn form label{ line-height: 15px;}
 div#ltColumn form#accountForm label { width: 200px; display: block; float: left; font-weight: bold;}
@@ -203,7 +202,8 @@ div#footerWrapper{ background: url(/media/images/footer_repeat2.png) bottom cent
 
 div#footerMain h4 { text-indent: -9999em; display: block; height: 19px; margin-bottom: 20px;}
 h4#labsTwitter_header { background: url(/media/images/footer_followLabs.png) top left no-repeat; width: 328px;}
-h4#labsEvents_header { background: url(/media/images/footer_trackUsDown.png) top left no-repeat; width: 113px;}
+h4#labsEvents_header { width: 113px; height: 19px;}
+h4#labsEvents_header a{ background: url(/media/images/footer_trackUsDown.png) top left no-repeat; width: 113px; text-indent: -9999em; display: block; height: 19px; margin-bottom: 20px;}
 div#labsEvents { float: left; width: 305px; padding-left: 160px; padding-right: 15px; height: 170px; margin-bottom: 20px;}
 div#labsEvents li a{ color: #d8ddd3; }
 div#labsEvents li { margin-bottom: 5px;}
@@ -338,9 +338,26 @@ div#project_mainDetails li { margin-bottom: 8px;}
 
 div#userTweets li{ margin-bottom: 25px;}
 
+div#user_map img { border: 4px solid #C4BDBD;}
+div#map_label { background-color: #C4BDBD; padding: 1px 5px 5px 8px; width: 193px; color: #1F1313;}
+a.center_viewall{ text-align: center; display: block;}
+
+div#rtColumn div#hackathonBox a{ text-indent: -9999em; display: block; width: 215px; height: 103px; background: url(/media/images/holdHackathon_box.png) 3px top no-repeat;}
+div#rtColumn div#hackathonBox { width: 215px; height: 103px; padding-left: 20px;}
+
+/*table*/
+div#users_results { margin-top: 25px; margin-bottom: 25px;}
+table { width: 625px;}
+tr { height: 25px;}
+tr.odd { background-color: #fff; padding: 5px; }
+tr.even { padding: 5px;  }
+tr#titles th { color: #403030; text-transform: uppercase; font-weight: bold;}
+a#user_name, th#title_name{ margin-left: 10px;}
+th#title_name{ padding-left: 10px;}
+
 /*buttons*/
 button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
-button.searchBtn { background: url(/media/images/btn_search.png) left top no-repeat; width: 113px; }
+button.searchBtn { background: url(/media/images/btn_search.png) left top no-repeat; width: 113px; margin-top: 0px;}
 button.advsearchBtn { background: url(/media/images/btn_search.png) left top no-repeat; width: 113px; float: right; margin-top: 20px;}
 button.submitBtn { background: url(/media/images/btn_submit.png) left top no-repeat; width: 113px; }
 a.interestedBtn { background: url(/media/images/btn_interested.png) right bottom no-repeat; width: 148px;  margin: 15px 0;}
