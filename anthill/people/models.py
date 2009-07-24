@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from tagging.fields import TagField
-import twitter
 from anthill.models import LocationModel
 
 ROLES = (
@@ -20,11 +19,6 @@ class Profile(LocationModel):
     role = models.CharField(max_length=5, choices=ROLES, default='other')
     twitter_id = models.CharField(max_length=15, blank=True)
     skills = TagField('comma separated list of your skills (eg. python, django)')
-
-    def latest_tweets(self, num=5):
-        if self.twitter_id:
-            api = twitter.Api()
-            return api.GetUserTimeline(self.twitter_id, count=num)
 
     def __unicode__(self):
         return unicode(self.user)

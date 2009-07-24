@@ -1,7 +1,7 @@
 {% extends "registration/base.html" %}
 {% load blog %}
 {% load people %}
-{% load twitterize %}
+{% load twitter_tags %}
 
 {% block content %}
 <div id="person" class="module">
@@ -89,7 +89,8 @@
 <h3 class="space">{% possessive p_user %} Tweets</h3>
 <div id="userTweets" class="module">
     <ul>
-    {% for tweet in p_user.profile.latest_tweets %}
+    {% get_latest_tweets p_user.profile.twitter_id 5 as tweets %}
+    {% for tweet in tweets %}
         <li>{{tweet.text|twitterize}}</li>
     {% endfor %}
     </ul>
