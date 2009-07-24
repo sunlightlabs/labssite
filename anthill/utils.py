@@ -33,21 +33,22 @@ def get_items_as_tag(token, queryset, count=5):
 
 ## google charts ##
 
-def piechart_url(items, width=200, height=200):
-    nums = []
-    names = []
-    colors = []
-    for item in items:
-        nums.append(str(item['num']))
-        names.append(item['name'])
-        colors.append(item['color'])
+class PiechartNode(template.Node):
+    def __init__(self, items, width=200, height=200):
+        nums = []
+        names = []
+        colors = []
+        for item in items:
+            nums.append(str(item['num']))
+            names.append(item['name'])
+            colors.append(item['color'])
 
-    chart_data = {'width': width, 'height': height, 'nums':','.join(nums),
-                  'names':'|'.join(names), 'colors':'|'.join(colors)}
+        chart_data = {'width': width, 'height': height, 'nums':','.join(nums),
+                      'names':'|'.join(names), 'colors':'|'.join(colors)}
+        self.img_url = 'http://chart.apis.google.com/chart?cht=p&chf=bg,s,00000000&chd=t:%(nums)s&chs=%(width)dx%(height)d&chdl=%(names)s&chco=%(colors)s' % chart_data
 
-    img_url = 'http://chart.apis.google.com/chart?cht=p&chf=bg,s,00000000&chd=t:%(nums)s&chs=%(width)dx%(height)d&chdl=%(names)s&chco=%(colors)s' % chart_data
-    return '<img src="%s" />' % img_url
-piechart_url.mark_safe = True
+    def render(self, context):
+        return '<img src="%s" />' % self.img_url
 
 def piechart_from_tags(model, tags, width=200, height=200):
     ct = ContentType.objects.get_for_model(model).id
@@ -55,4 +56,5 @@ def piechart_from_tags(model, tags, width=200, height=200):
     items = Tag.objects.filter(items__content_type=ct, name__in=tag_names).values('name').annotate(num=Count('id'))
     for item in items:
         item['color'] = tags[item['name']]
-    return piechart_url(items, width, height)
+    return PiechartNode(items, width, height)
+
