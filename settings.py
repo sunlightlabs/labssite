@@ -89,6 +89,7 @@ INSTALLED_APPS = (
     'blogdor',
     'simplesurvey',
     'newsfeed',
+    'popular',
     'sunlightlabs.labs',
     'sunlightlabs.registration',
     'sunlightlabs.appcontest',

@@ -1,24 +1,24 @@
 {% extends "base.html" %}
 {% load blog %}
+{% load popular_tags %}
 
 {% block bodyclass %}blog{% endblock %}
 
 {% block sidebar %}
 <div id="popularNav">
     <ul>
-        <li id ="popular" ><a class="active" href="#">Most Popular</li>
-        <li id ="favorites" ><a href="#">Our Favorites</li>
+        <li id ="popular"><a class="active" href="#">Most Popular</li>
+        <li id ="favorites"><a href="#">Our Favorites</li>
     </ul>	
 </div>	
 <div class="module">
     <div id="popularPosts">
+        {% get_recently_popular blogdor.Post 5 14 as popular_posts %}
         <ul>
-            <li><a href="#">Post Name</a></li>
-            <li><a href="#">Post Name</a></li>
-            <li><a href="#">Post Name</a></li>
-            <li><a href="#">Post Name</a></li>
-            <li><a href="#">Post Name</a></li>
-        </ul>	
+            {% for post in popular_posts %}
+            <li><a href="{{post.get_absolute_url}}">{{post.title}}</a></li>
+            {% endfor %}
+        </ul>
     </div>	
     <div id="favoritePosts">
         {% get_favorite_posts as favorite_posts %}
