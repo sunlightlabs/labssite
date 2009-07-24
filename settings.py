@@ -144,6 +144,8 @@ ACCOUNT_ACTIVATION_DAYS = 7
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
+ANTHILL_DEFAULT_MARKUP = 'markdown'
+
 try:
     from local_settings import *
 except ImportError, exp:
