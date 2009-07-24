@@ -43,6 +43,6 @@ def get_popular_items(model, num=5, days_ago=7,
         try:
             obj = lookup_func(item.dimension)
             objects.append((obj, item.metric))
-        except model.DoesNotExist as e:
+        except model.DoesNotExist:
             pass
     return objects
