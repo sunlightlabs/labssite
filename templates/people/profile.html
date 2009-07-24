@@ -86,6 +86,7 @@
 	<div id="map_label">{{p_user.profile.location|default:"n/a"}}</div>
 </div>
 <hr></hr>
+{% if p_user.profile.twitter_id %}
 <h3 class="space">{% possessive p_user %} Tweets</h3>
 <div id="userTweets" class="module">
     <ul>
@@ -96,5 +97,6 @@
     </ul>
 	<a class="center_viewall" href="#">Go to {% possessive p_user %} twitter page »</a>
 </div>
+{% endif %}
 <div class="clear"></div>
 {% endblock sidebar %}
