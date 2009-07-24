@@ -3,7 +3,11 @@
 {% block content %}
 <div class="module">
     <div class="contentHeader">
-        <h2>Edit Your Event</h2>
+		{% if event %}
+			<h2>Edit Your Event</h2>
+		{% else %}
+        	<h2>Add An Event</h2>
+		{% endif %}
     </div>
     <div class="module">
         <form id="accountForm" method="POST" action="." enctype="multipart/form-data">

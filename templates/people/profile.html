@@ -82,12 +82,17 @@
 {% block sidebar %}
 <h3 class="space">{% possessive p_user %} Location</h3>
 <div id="user_map" class="module">
-    <img src="{{p_user.profile.static_google_map}}" />
-	<div id="map_label">{{p_user.profile.location|default:"n/a"}}</div>
+	{% if p_user.profile.location %}
+	    <img src="{{p_user.profile.static_google_map}}" />
+		<div id="map_label">{{p_user.profile.location|default:"n/a"}}</div>
+	{% else %}
+		<p>We're not quite sure where {{p_user.first_name}} lives just yet, do you know?</p>
+	{% endif %}
 </div>
 <hr></hr>
 <h3 class="space">{% possessive p_user %} Tweets</h3>
 <div id="userTweets" class="module">
+	{% if tweets %}
     <ul>
     {% get_latest_tweets p_user.profile.twitter_id 5 as tweets %}
     {% for tweet in tweets %}
@@ -95,6 +100,9 @@
     {% endfor %}
     </ul>
 	<a class="center_viewall" href="#">Go to {% possessive p_user %} twitter page »</a>
+	{% else %}
+		<p>No tweets here to follow, move along.</p>
+	{% endif %}
 </div>
 <div class="clear"></div>
 {% endblock sidebar %}
