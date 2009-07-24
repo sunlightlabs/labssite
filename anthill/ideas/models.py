@@ -1,9 +1,11 @@
 from django.db import models
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.db.models.signals import post_save
 from django.contrib.contenttypes import generic
 from django.contrib.comments.models import Comment
+from markupfield.fields import MarkupField
 
 class IdeaManager(models.Manager):
 
@@ -14,7 +16,7 @@ class IdeaManager(models.Manager):
 class Idea(models.Model):
 
     title = models.CharField(max_length=100)
-    description = models.TextField()
+    description = MarkupField(default_markup_type=settings.ANTHILL_DEFAULT_MARKUP)
     score = models.IntegerField(default=0)
 
     submit_date = models.DateTimeField(auto_now_add=True)
