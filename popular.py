@@ -21,7 +21,7 @@ def register(model, regex, lookup_func):
         lookup_func = default_lookup_func
     registered_models[model] = (regex, lookup_func)
 
-def get_popular_items(model, num=5, days_ago=7
+def get_popular_items(model, num=5, days_ago=7,
                       start_date=None, end_date=None):
     if model not in registered_models:
         raise ValueError('%s not in registry, call popular.register first' % model._meta.object_name)
@@ -43,6 +43,6 @@ def get_popular_items(model, num=5, days_ago=7
         try:
             obj = lookup_func(item.dimension)
             objects.append((obj, item.metric))
-        except model.DoesNotExist as e:
+        except model.DoesNotExist:
             pass
     return objects
