@@ -3,6 +3,22 @@
 {% block bodyclass %}people{% endblock %}
 
 {% block sidebar %}
-<h3 class="space">What Goes Here?</h3>
+<h3 class="space">Current Events</h3>
+<div id="currentEvents" class="module">
+	<dl>
+		<dt><a class="eventTitle" href="#">Title of Event</a></dt>
+		<dd class="event_date">May 30</dd>
+		<dd class="event_location">Washington, DC</dd>
+		
+		<dt><a class="eventTitle" href="#">Title of Event</a></dt>
+		<dd class="event_date">May 30</dd>
+		<dd class="event_location">Washington, DC</dd>
+	</dl>
+	<a class="center_viewall" href="#">View All Events »</a>
+</div>
+<hr></hr>
+<div id="haveEvent">
+	<a href="/events/new">Have An Event Planned? Tell The Community!</a>
+</div>	
 <div class="clear"></div>
 {% endblock %}

@@ -16,6 +16,7 @@
 
         <!-- needs styling -->
         {% if idea.projects.count %}
+		<h4>Projects Created From This Idea</h4>
         <ul>
             {% for proj in idea.projects.all %}
             <li> <a href="{{proj.get_absolute_url}}">{{proj}}</a> was started by {{proj.lead}} on {{proj.creation_date|date}} </li>
@@ -23,11 +24,8 @@
         </ul>
         {% endif %}
 
-        <button class="helpBtn">
-            <span>Help On This Project</span>
-        </button>
-        <button class="leadBtn">
-            <span>Lead This Project</span>
+        <button class="startnewBtn">
+            <span>Start/Lead A New Project</span>
         </button>
         <div class="clear"></div>
 

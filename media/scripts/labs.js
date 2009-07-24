@@ -7,6 +7,10 @@ $(document).ready(function(){
 
     //$("form#standard_signupForm").hide();
     //$("form#standard_signinForm").hide();
+    
+    $("button.startnewBtn").click(function(){
+        $("div#leadBox").toggle("slow");
+    });
 
     $("li#signup_standard a").click(function(){
         $("form#openid_signupForm").hide();

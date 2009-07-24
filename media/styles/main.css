@@ -84,14 +84,14 @@ h2.ideas{ background: url(/media/images/icon_idea.png) top left no-repeat; paddi
 
 div.contentHeader, .h3line{ background: url(/media/images/header_lines.png) center bottom no-repeat; padding-bottom: 15px; margin-bottom: 20px; width: 700px;}
 div#postTitle{ margin-bottom: 3px;}
-body.projects div.contentHeader { margin-bottom: 3px;}
+body.projects div.contentHeader, div#headerTip { margin-bottom: 3px;}
 
 div#ltColumn h3{ font-size: 180%; line-height: 24px; margin-bottom: 15px; margin-top: 15px;}
 div#rtColumn h3 { background: url(/media/images/rtcolumn_headerLine.png) bottom center no-repeat; padding-left: 10px; margin-left: 20px; padding-bottom: 8px;}
 h3{ font-size: 180%; line-height: 25px; color:#1F1313;} 
 h3.space { margin-bottom: 20px;}
 div#ltColumn h3.leftH3 { padding-left: 5px; background: url(/media/images/header_lineShorter.png) bottom left no-repeat; padding-bottom: 10px; margin-bottom: 10px; margin-top: 0px;}
-div#ltColumn h3#skillsHeader { margin-top: 0;}
+div#ltColumn h3#skillsHeader { margin-top: 0; margin-bottom: 15px;}
 
 div#ltColumn h3#h3Header{ margin-bottom: 0; padding-left: 5px; width: 673px;}
 span#communityMembers { font-size: 160%;}
@@ -163,9 +163,9 @@ span#ideas{ background: url(/media/images/image_light.png) right top no-repeat; 
 
 hr{ background: url(/media/images/rtmodule_bar.png) bottom left no-repeat; border: none; height: 10px; margin-left:9px; margin-bottom: 30px;}
 
-div#leadBox{ -moz-border-radius: 3px; -moz-border-radius: 3px; background: #F0F0E5 none repeat scroll 0 0; border: 1px solid #D5D2C6; padding: 20px; width: 620px;}
+div#leadBox{ -moz-border-radius: 3px; -moz-border-radius: 3px; background: #F0F0E5 none repeat scroll 0 0; border: 1px solid #D5D2C6; padding: 20px; width: 620px; margin-top: 20px;}
 
-div#commentBox { margin-top: 20px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #F0F0E5 none repeat scroll 0 0; border: 1px solid #D5D2C6; padding: 30px 30px 150px; margin-right: 20px;}
+div#commentBox { margin-top: 30px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #F0F0E5 none repeat scroll 0 0; border: 1px solid #D5D2C6; padding: 30px 30px 150px; margin-right: 20px;}
 div#commentBlock img{ float: left;}
 form#comment { margin-right: 10px; width: 24px; height: 55px; margin-left: -1px; float: left; z-index: 2; position: relative;}
 form#comment textarea { -moz-border-radius: 10px; -webkit-border-radius: 10px; width: 480px;}
@@ -239,7 +239,7 @@ div#leadProjects { margin-bottom: 20px;}
 
 div#ltColumn div.smPost p { padding-right: 10px; margin-bottom: 15px;}
 div#ltColumn div.smPost { margin-bottom: 15px; padding-bottom: 15px;}
-div#ltColumn div.smPost img, div.post img, div#blog_detail img { border: 1px solid #c4bdbd; margin: 5px 0;}
+div#ltColumn div.smPost img, div.post img, div#blog_detail img { border: 3px solid #BFC8BA; margin: 5px 0;}
 div#ltColumn div.smPost h3, div#ltColumn div.post h3, div#ltColumn div#blog_detail h3, div#projects h3, div#ideas h3 { margin-bottom: 0;}
 div.smPost img{ max-width: 285px; }
 
@@ -338,12 +338,24 @@ div#project_mainDetails li { margin-bottom: 8px;}
 
 div#userTweets li{ margin-bottom: 25px;}
 
-div#user_map img { border: 4px solid #C4BDBD;}
-div#map_label { background-color: #C4BDBD; padding: 1px 5px 5px 8px; width: 193px; color: #1F1313;}
+div#user_map img { border: 4px solid #BFC8BA;}
+div#map_label { background-color: #BFC8BA; padding: 1px 5px 5px 8px; width: 193px; color: #1F1313;}
 a.center_viewall{ text-align: center; display: block;}
 
 div#rtColumn div#hackathonBox a{ text-indent: -9999em; display: block; width: 215px; height: 103px; background: url(/media/images/holdHackathon_box.png) 3px top no-repeat;}
-div#rtColumn div#hackathonBox { width: 215px; height: 103px; padding-left: 20px;}
+div#rtColumn div#hackathonBox { width: 215px; height: 103px; padding-left: 20px; margin-bottom: 20px;}
+
+div#ltColumn div#timeline h3 { margin-bottom: 15px;}
+div#ltColumn div#commentBox h3, div#leadBox h3 { margin-top: 0px;}
+
+div#ltColumn div#commentBlock img { border: none;}
+div#ltColumn div#commentBox h3#header_topSpace{ margin-top: 40px;}
+
+dd.event_location { margin-bottom: 25px;}
+div#currentEvents dt { font-size: 140%; margin-bottom: 10px;}
+
+div#haveEvent a{ text-indent: -9999em; display: block; width: 215px; height: 103px; background: url(/media/images/haveEvent_box.png) 3px top no-repeat;}
+div#haveEvent { width: 215px; height: 103px; padding-left: 20px; margin-bottom: 20px;}
 
 /*table*/
 div#users_results { margin-top: 25px; margin-bottom: 25px;}
@@ -362,7 +374,7 @@ button.advsearchBtn { background: url(/media/images/btn_search.png) left top no-
 button.submitBtn { background: url(/media/images/btn_submit.png) left top no-repeat; width: 113px; }
 a.interestedBtn { background: url(/media/images/btn_interested.png) right bottom no-repeat; width: 148px;  margin: 15px 0;}
 a.learnBtn{ background: url(/media/images/btn_learnmore.png) right bottom no-repeat; width: 140px; }
-a.agreeBtn{ background: url(/media/images/btn_agreemore.png) right bottom no-repeat; width: 140px; }
+button.agreeBtn{ background: url(/media/images/btn_agree.png) right bottom no-repeat; width: 86px; margin-top: 20px;}
 button.leadBtn{ background: url(/media/images/btn_lead.png) right bottom no-repeat; width: 148px; float: left;  margin: 20px 30px 20px 10px;}
 button.helpBtn{ background: url(/media/images/btn_help.png) right bottom no-repeat; width: 171px;  float: left; margin-top: 20px;}
 button.postBtn { background: url(/media/images/btn_post.png) right bottom no-repeat; width: 86px;}
@@ -374,7 +386,7 @@ button.joinBtn { background: url(/media/images/btn_join.png) right bottom no-rep
 button.signupBtn { background: url(/media/images/btn_joinus_sm.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
 button.signinBtn { background: url(/media/images/btn_signin.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
 button.submit-send { background: url(/media/images/btn_submit.png) left top no-repeat; width: 113px; margin-left: 200px;}
-
+button.startnewBtn { background: url(/media/images/btn_startnew.png) left top no-repeat; width: 247px; margin-top: 20px; }
 
 /*apps sponsors*/
 div#appsSponsors {padding-right: 15px;}
