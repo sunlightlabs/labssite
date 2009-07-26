@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 {% load media %}
 {% load twitter_tags %}
+{% load events %}
 <html xmlns="http://www.w3.org/1999/xhtml" >
     <head>
         <meta name="keywords" content="" />
@@ -75,22 +76,17 @@
             <div id="footerMain_top">
                 <div id="footerMain">
                     <div id="labsEvents">
-                        <h4 id="labsEvents_header"><a href="/events">Track Us Down</a></h4>
+                        <h4 id="labsEvents_header"><a href="{% url event_search %}">Track Us Down</a></h4>
                         <ul>
+                            {% get_official_events 3 as events %}
+                            {% for event in events %}
                             <li>
-                                <a class="labsEvent">Name of Event</a>
-                                <a class="labsEvent_date">May 15</a>
+                            <a class="labsEvent" href="{{event.get_absolute_url }}">{{event.title}}</a>
+                            <span class="labsEvent_date">{{event.start_date|date:"M d"}}</span>
                             </li>
-                            <li>
-                                <a class="labsEvent">Name of Event</a>
-                                <a class="labsEvent_date">May 15</a>
-                            </li>
-                            <li>
-                                <a class="labsEvent">Name of Event</a>
-                                <a class="labsEvent_date">May 15</a>
-                            </li>
-                        </ul>   
-                    </div>  
+                            {% endfor %}
+                        </ul>
+                    </div>
                     <div id="labsTwitter">
                         <h4 id="labsTwitter_header">Follow The Labs And See What We're Up To</h4>
                         <ul>
