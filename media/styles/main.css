@@ -205,7 +205,7 @@ h4#labsTwitter_header { background: url(/media/images/footer_followLabs.png) top
 h4#labsEvents_header { width: 113px; height: 19px;}
 h4#labsEvents_header a{ background: url(/media/images/footer_trackUsDown.png) top left no-repeat; width: 113px; text-indent: -9999em; display: block; height: 19px; margin-bottom: 20px;}
 div#labsEvents { float: left; width: 305px; padding-left: 160px; padding-right: 15px; height: 170px; margin-bottom: 20px;}
-div#labsEvents li a{ color: #d8ddd3; }
+div#labsEvents li a, div#labsTwitter a{ color: #d8ddd3; }
 div#labsEvents li { margin-bottom: 5px;}
 a.labsEvent{ text-decoration: underline; margin-right: 15px; font-size: 110%; font-weight: bold;}
 div#labsTwitter { margin-left: 495px; height: 145px; margin-bottom: 20px;}
