@@ -3,6 +3,8 @@
 {% load newsfeed_tags %}
 
 {% block content %}
+
+{% if request.user.is_anonymous %}
 <div id="featureBox_wrapper">
     <div id="featureBox">
         <h2>We're Opening America's Government</h2>
@@ -10,10 +12,11 @@
         <a id="joinBtn" href="/accounts/login/">Join Us</a>
         <div class="clear"></div>
         <div id="alertBox">
-            <h3>[ Apps for America 2 has just launched ]</h3>
+            {% include "labs/alertbox.html" %}
         </div>
     </div>
 </div>
+{% endif %}
 
 <div class="contentHeader">
     <h2 class="post">Recent Posts</h2>
