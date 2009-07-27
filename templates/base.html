@@ -37,7 +37,7 @@
                     <div id="pageNav">
                         <ul>
                             {% if user.is_authenticated %}
-                            <li>Hi, <a href="{% url user_profile user.username %}">{{user}}</a>.</li>
+                            <li>Hi, <a href="{% url edit_profile %}">{{user}}</a>.</li>
                             <li><a href="{% url auth_logout %}">Logout?</a></li>
                             {% if user.is_staff %}
                             <li><a href="/admin/">Admin</a></li>

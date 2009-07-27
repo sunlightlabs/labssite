@@ -1,5 +1,6 @@
 from django import forms
 from anthill.people.models import ROLES
+from markupfield.widgets import MarkupTextarea
 
 DISTANCE_CHOICES = (
     ('5', '5 Miles'),
@@ -26,7 +27,7 @@ class ProfileForm(forms.Form):
     position = forms.ChoiceField(label='Position', choices=ROLES)
     location = forms.CharField(label='Location', required=False)
     skills = forms.CharField(label='Skills', required=False)
-    about = forms.CharField(widget=forms.widgets.Textarea, label='About You', required=False)
+    about = forms.CharField(widget=MarkupTextarea, label='About You', required=False)
 
 class PasswordForm(forms.Form):
     password1 = forms.CharField(label='Password', 

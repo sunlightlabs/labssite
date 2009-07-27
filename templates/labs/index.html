@@ -5,19 +5,20 @@
 
 {% block content %}
 
-{% if request.user.is_anonymous %}
 <div id="featureBox_wrapper">
     <div id="featureBox">
+{% if not user.is_authenticated %}
         <h2>We're Opening America's Government</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
         <a id="joinBtn" href="/accounts/login/">Join Us</a>
+{% endif %}
         <div class="clear"></div>
+
         <div id="alertBox">
             {% include "labs/alertbox.html" %}
         </div>
     </div>
 </div>
-{% endif %}
 
 <div class="contentHeader">
     <h2 class="post">Recent Posts</h2>

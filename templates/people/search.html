@@ -6,8 +6,9 @@
     <h2>Search For People In Your Area</h2>
 </div>
 <div class="module" id="searchContent">
-    <a id="advancedBtn"href="#">Advanced Search</a>	
+    <a id="advancedBtn"href="#">Advanced Search</a> 
     <form id="searchForm" method="GET" action=".">
+        {{form.location.label_tag}}
         {{form.location}}
         <button class="searchBtn">
             <span>search</span>
@@ -26,48 +27,48 @@
     </form>
 
 {% if searched %}
-	<div id="users_results" class="module">
-    <h3>{{search_results|length}} Results For ""</h3>
-	   <table id="users_table">
-		<thead>
-			<tr id="titles">
-				<th class="table_left" id="title_name">Name</th>
-				<th class="table_center table_position">Position</th>
-				<th class="table_center">Skills</th>
-				<th class="table_right">Distance</th>
-			</tr>	
-		</thead>
-		<tbody>	
-		    {% for user in search_results %}
-	        <tr class="{% cycle 'odd' 'even' %}">
-				<td class="table_left">
-			    	<a  id="user_name"href="{{user.user.get_absolute_url}}">{{ user.user }}</a>
-				</td>
-				<td class="table_center table_position">{{p_user.profile.get_role_display|safe}}</td>
-				<td class="table_center">{{p_user.profile.skills|default:"n/a"}}</td>
-				<td class="table_right">1 Mile</td>
-	        </tr>
-	        {% endfor %}
-		</tbody>
-	   </table>
-	</div>
-	
-	
+    <div id="users_results" class="module">
+    <h3>{{search_results|length}} Results</h3>
+       <table id="users_table">
+        <thead>
+            <tr id="titles">
+                <th class="table_left" id="title_name">Name</th>
+                <th class="table_center table_position">Position</th>
+                <th class="table_center">Skills</th>
+                <th class="table_right">Distance</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in search_results %}
+            <tr class="{% cycle 'odd' 'even' %}">
+                <td class="table_left">
+                    <a id="user_name" href="{{user.user.get_absolute_url}}">{{ user.user }}</a>
+                </td>
+                <td class="table_center table_position">{{user.get_role_display|safe}}</td>
+                <td class="table_center">{{user.skills|default:"n/a"}}</td>
+                <td class="table_right">
+                    {% if user.distance %} {{user.distance.mi|floatformat}} mi {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+       </table>
+    </div>
 {% endif %}
 </div>
 <div class="contentHeader">
     <h3 id="h3Header">There are <span id="communityMembers">{% num_registered_users %}</span> members of the Sunlight Labs community and growing.</h3>
 </div>
 <div id="timeline" class="module">
-	<ul>
-	    {% get_latest_user_profiles as user_profiles %}
-	    {% for up in user_profiles %}
-	    <li> 
-        	<a href="{{ up.user.get_absolute_url }}">{% firstof up.user.first_name up.user.username %}</a> just joined
-        	{% if up.location %}from {{up.location}}{% endif %}
-	    </li>
-	    {% endfor %}
-	</ul>
+    <ul>
+        {% get_latest_user_profiles as user_profiles %}
+        {% for up in user_profiles %}
+        <li> 
+            <a href="{{ up.user.get_absolute_url }}">{% firstof up.user.first_name up.user.username %}</a> just joined
+            {% if up.location %}from {{up.location}}{% endif %}
+        </li>
+        {% endfor %}
+    </ul>
 
 </div>
 
@@ -82,20 +83,20 @@
 <hr></hr>
 <h3 class="space">Current Events</h3>
 <div id="currentEvents" class="module">
-	<dl>
-		<dt><a class="eventTitle" href="#">Title of Event</a></dt>
-		<dd class="event_date">May 30</dd>
-		<dd class="event_location">Washington, DC</dd>
-		
-		<dt><a class="eventTitle" href="#">Title of Event</a></dt>
-		<dd class="event_date">May 30</dd>
-		<dd class="event_location">Washington, DC</dd>
-	</dl>
-	<a class="center_viewall" href="#">View All Events »</a>
+    <dl>
+        <dt><a class="eventTitle" href="#">Title of Event</a></dt>
+        <dd class="event_date">May 30</dd>
+        <dd class="event_location">Washington, DC</dd>
+        
+        <dt><a class="eventTitle" href="#">Title of Event</a></dt>
+        <dd class="event_date">May 30</dd>
+        <dd class="event_location">Washington, DC</dd>
+    </dl>
+    <a class="center_viewall" href="#">View All Events »</a>
 </div>
 <hr></hr>
 <div id="hackathonBox">
-	<a href="/events">Find Out How To Hold A Hackathon In Your Area</a>
+    <a href="/events">Find Out How To Hold A Hackathon In Your Area</a>
 </div>
 <div class="clear"></div>
 {% endblock %}

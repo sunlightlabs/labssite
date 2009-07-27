@@ -2,6 +2,7 @@ import datetime
 from django.conf import settings
 from django.core.urlresolvers import resolve
 from googleanalytics import Connection
+from googleanalytics.exception import GoogleAnalyticsClientError
 
 registered_models = {}
 
@@ -33,16 +34,19 @@ def get_popular_items(model, num=5, days_ago=7,
         start_date = end_date - datetime.timedelta(days_ago)
 
     acct = get_analytics_account()
-    data = acct.get_data(start_date=start_date, end_date=end_date,
-                         dimensions=['pagePath'], metrics=['pageviews'],
-                         filters=[['pagePath', '=~', regex]],
-                         sort=['-pageviews'], max_results=num)
+    try:
+        data = acct.get_data(start_date=start_date, end_date=end_date,
+                             dimensions=['pagePath'], metrics=['pageviews'],
+                             filters=[['pagePath', '=~', regex]],
+                             sort=['-pageviews'], max_results=num)
 
-    objects = []
-    for item in data:
-        try:
-            obj = lookup_func(item.dimension)
-            objects.append((obj, item.metric))
-        except model.DoesNotExist:
-            pass
-    return objects
+        objects = []
+        for item in data:
+            try:
+                obj = lookup_func(item.dimension)
+                objects.append((obj, item.metric))
+            except model.DoesNotExist:
+                pass
+        return objects
+    except GoogleAnalyticsClientError:
+        return None

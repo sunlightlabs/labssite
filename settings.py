@@ -12,14 +12,10 @@ ADMINS = (
 
 MANAGERS = ADMINS
 INTERNAL_IPS = ('127.0.0.1',)
+DEBUG_TOOLBAR_CONFIG = { 'INTERCEPT_REDIRECTS': False}
 
 EMAIL_SUBJECT_PREFIX = '[sunlightlabs.com] '
 
-# Local time zone for this installation. Choices can be found here:
-# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-# although not all choices may be available on all operating systems.
-# If running in a Windows environment this must be set to the same as your
-# system time zone.
 TIME_ZONE = 'America/New_York'
 
 # Language code for this installation. All choices can be found here:
@@ -111,8 +107,6 @@ if not DEBUG:
     EMAIL_HOST_PASSWORD = "***REMOVED***"
     EMAIL_USE_TLS = True
 
-ALLOWED_TO_DM = ['cjoh','felskia','gregelin','jamesturk','jcarbaugh','jroo','timball']
-
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 AWS_KEY = '***REMOVED***'
@@ -123,8 +117,6 @@ MEDIASYNC_AWS_KEY = AWS_KEY
 MEDIASYNC_AWS_SECRET = AWS_SECRET
 MEDIASYNC_AWS_BUCKET = 'assets.sunlightlabs.com'
 MEDIASYNC_AWS_PREFIX = 'site'
-
-TWITTER_USERNAME = 'sunlightlabs'
 
 BLOGDOR_NOTIFY_ON_COMMENT = True
 BLOGDOR_ENABLE_FEEDS = False
@@ -138,8 +130,6 @@ GRAVATAR_SIZE = 60
 FORCE_LOWERCASE_TAGS = True
 
 SIMPLESURVEY_COMPLETE_REDIRECT = "/judgeforamerica/"
-
-ACCOUNT_ACTIVATION_DAYS = 7
 
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'

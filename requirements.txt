@@ -6,6 +6,7 @@ python-twitter
 docutils
 markdown
 textile
+feedparser
 -e svn+http://geopy.googlecode.com/svn/trunk/#egg=geopy   # PyPI link is broken
 python-googleanalytics
 
@@ -27,3 +28,4 @@ python-googleanalytics
 # new apps
 #django-newsfeed
 #anthill
+#popular

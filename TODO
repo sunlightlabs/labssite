@@ -1,10 +1,23 @@
 real content
 test judgeforamerica
-make events box use real content
-contact user button
-implement openid + clickpass
+first names instead of usernames
+events:
+    eventsbox real content
+    link to /events/ unless already there in which case we link to /events/new/
+users:
+    re-test search (ali added a table)
+    (enter zip code) in search box
+    contact user button (email them)
+    implement openid + clickpass
+    show current avatar on edit profile page
+ideas:
+    voting
+projects:
+    project tag view
+add redirect from /contests/ to latest contest
+
 blogdor: subscribe to comments
-add caching around twitter api call
+caching
 
 Ali:
     /projects/sunlight-labs-api/join/
