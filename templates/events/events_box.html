@@ -1,0 +1,14 @@
+{% load events %}
+<h3 class="space">Upcoming Events</h3>
+<div id="currentEvents" class="module">
+    <dl>
+        {% get_upcoming_events 2 as events %}
+        {% for event in events %}
+        <dt><a class="eventTitle" href="{{event.get_absolute_url}}">{{event.title}}</a></dt>
+        <dd class="event_date">{{event.start_date|date:"M d"}}</dd>
+        <dd class="event_location">{{event.location}}</dd>
+        {% endfor %}
+    </dl>
+    <a class="center_viewall" href="#">View All Events »</a>
+</div>
+<hr></hr>
