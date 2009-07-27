@@ -34,12 +34,12 @@
             </ul>
         </div>
 
-        {% tags_for_object project as skills %}
+        {% tags_for_object project as tags %}
         <div id="languages">
-            <h3 id="skillsHeader">Languages</h3>
+            <h3 id="skillsHeader">Tags</h3>
             <ul>
-                {% for skill in skills %}
-                <li><a href="#">{{skill}}</a></li>
+                {% for tag in tags %}
+                <li><a href="{% url projects_tagged tag %}">{{tag}}</a></li>
                 {% endfor %}
             </ul>
         </div>

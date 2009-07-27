@@ -2,10 +2,11 @@ from django.views.generic.list_detail import object_list, object_detail
 from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
+from django.template.loader import render_to_string
+from tagging.views import tagged_object_list
 from anthill.projects.models import Project, Role
 from anthill.projects.forms import ProjectForm, JoinProjectForm
 from anthill.ideas.models import Idea
-from django.template.loader import render_to_string
 
 
 def projects_and_ideas(request):
@@ -19,6 +20,15 @@ def archive(request):
                        queryset=Project.objects.select_related().all(),
                        template_object_name='project', allow_empty=True,
                        paginate_by=10)
+
+def tag_archive(request, tag):
+    return tagged_object_list(request,
+                              Project.objects.select_related(),
+                              tag,
+                              paginate_by=10,
+                              template_object_name='project',
+                              extra_context={'tag':tag},
+                              allow_empty=True)
 
 def project_detail(request, slug):
     return object_detail(request,

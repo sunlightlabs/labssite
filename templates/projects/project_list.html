@@ -3,10 +3,11 @@
 
 {% block content %}
 <div class="contentHeader">
-    <h2 class="projects">Projects</h2>
+    <h2 class="projects">Projects
+        {% if tag %} tagged {{tag}} {% endif %}
+    </h2>
 </div>
 <div id="projects" class="module">
-    <p class="tip">These are active projects that are currently being worked on in the labs community. <strong><br/> Feel free to help</strong> on a project you're interested in or just <strong>keep your eye out for the final product</strong>.</p>
     {% for project in project_list %}
         {% include "projects/project_summary.html" %}
     {% endfor %}

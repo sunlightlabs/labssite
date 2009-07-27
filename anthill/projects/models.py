@@ -50,11 +50,12 @@ class Role(models.Model):
             self.project.lead = self.user
             self.project.save()
 
-SOURCE_LINK, DOCS_LINK, DOWNLOAD_LINK = range(3)
+SOURCE_LINK, DOCS_LINK, DOWNLOAD_LINK, SITE_LINK = range(4)
 LINK_TYPES = (
     (SOURCE_LINK, 'source'),
     (DOCS_LINK, 'documentation'),
     (DOWNLOAD_LINK, 'download'),
+    (SITE_LINK, 'website'),
 )
 
 class Link(models.Model):

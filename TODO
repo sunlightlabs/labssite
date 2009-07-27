@@ -3,7 +3,6 @@ blogdor:
 projects:
     /projects/add/
     /projects/slug/edit/
-    project tag view
 users:
     contact user button (email them)
     show current avatar on edit profile page
@@ -21,3 +20,4 @@ Ali:
 on edit_profile page, added a (view profile) link
 styling on events pages
 on tweets, we're showing 'sunlightlabs' at the top of each tweet.. perhaps something else could fit here?
+one more icon for link type 'site'
