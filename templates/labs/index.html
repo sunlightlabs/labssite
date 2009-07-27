@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load blog %}
+{% load projects %}
 {% load newsfeed_tags %}
 
 {% block content %}
@@ -33,6 +34,12 @@
 {% block sidebar %}
 <h3 class="space">Active Projects</h3>
 <div class="module">
+    {% get_active_projects 3 as active_projects %}
+    <ul>
+        {% for project in active_projects %}
+            <li> <a href="{{ project.get_absolute_url }}"> {{project}} </a> </li>
+        {% endfor %}
+    </ul>
 </div>
 <hr></hr>
 <h3 class="space">What's Happening In The Labs Community</h3>

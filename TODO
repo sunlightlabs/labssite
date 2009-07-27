@@ -1,12 +1,10 @@
 real content
-judgeforamerica
+test judgeforamerica
 charts on /projects/
 make events box use real content
-projects charts
 contact user button
-
 implement openid + clickpass
-subscribe to comments
+blogdor: subscribe to comments
 add caching around twitter api call
 
 Ali:
