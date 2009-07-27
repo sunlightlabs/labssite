@@ -29,14 +29,14 @@
 	<div id="users_results" class="module">
     <h3>{{search_results|length}} Results For ""</h3>
 	   <table id="users_table">
-		<thread>
+		<thead>
 			<tr id="titles">
 				<th id="title_name">Name</th>
 				<th class="center_title">Position</th>
 				<th class="center_title">Skills</th>
 				<th>Distance</th>
 			</tr>	
-		</thread>
+		</thead>
 		<tbody>	
 		    {% for user in search_results %}
 	        <tr class="{% cycle 'odd' 'even' %}">
@@ -76,8 +76,8 @@
 {% block sidebar %}
 <h3 class="space">Community Profile</h3>
 <div class="module">
-    {% people_skills python:00aa00 ruby:aa0000 %}
-    {% people_roles other:ff0000 dev:00ffff %}
+    {% people_skills_piechart python:00aa00 ruby:aa0000 %}
+    {% people_roles_piechart other:ff0000 dev:00ffff %}
 </div>
 <hr></hr>
 <h3 class="space">Current Events</h3>

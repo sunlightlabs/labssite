@@ -29,14 +29,11 @@ def num_registered_users():
     return Profile.objects.all().count()
 
 @register.tag
-def people_skills(parser, token):
-    pieces = token.contents.split(None)
-    args = pieces[1:]
-    tags = dict(arg.split(':') for arg in args)
-    return piechart_from_tags(Profile, tags)
+def people_skills_piechart(parser, token):
+    return piechart_from_tags(Profile, token)
 
 @register.tag
-def people_roles(parser, token):
+def people_roles_piechart(parser, token):
     pieces = token.contents.split(None)
     args = pieces[1:]
     colors = dict(arg.split(':') for arg in args)

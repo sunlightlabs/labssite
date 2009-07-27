@@ -1,4 +1,5 @@
 {% extends "ideas/base.html" %}
+{% load projects %}
 
 {% block content %}
 <div class="contentHeader">
@@ -11,4 +12,11 @@
     {% endfor %}
 </div>
 {% include "pagination_div.html" %}
+{% endblock %}
+
+{% block sidebar %}
+<h3 class="space">Project Statistics</h3>
+<div class="module">
+    {% project_skills_piechart python:00aa00 ruby:aa0000 %}
+</div>
 {% endblock %}

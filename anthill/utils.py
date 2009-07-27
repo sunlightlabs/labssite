@@ -50,7 +50,10 @@ class PiechartNode(template.Node):
     def render(self, context):
         return '<img src="%s" />' % self.img_url
 
-def piechart_from_tags(model, tags, width=200, height=200):
+def piechart_from_tags(model, token, width=200, height=200):
+    pieces = token.contents.split(None)
+    args = pieces[1:]
+    tags = dict(arg.split(':') for arg in args)
     ct = ContentType.objects.get_for_model(model).id
     tag_names = tags.keys()
     items = Tag.objects.filter(items__content_type=ct, name__in=tag_names).values('name').annotate(num=Count('id'))
