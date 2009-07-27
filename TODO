@@ -1,25 +1,24 @@
-real content
-test judgeforamerica
-first names instead of usernames
+blogdor:
+    subscribe to comments
+projects:
+    /projects/add/
+    /projects/slug/edit/
+    project tag view
 events:
-    eventsbox real content
-    link to /events/ unless already there in which case we link to /events/new/
+    /events/all/
 users:
-    re-test search (ali added a table)
-    (enter zip code) in search box
     contact user button (email them)
-    implement openid + clickpass
     show current avatar on edit profile page
+    fancy skills widget
+    implement openid + clickpass
 ideas:
     voting
-projects:
-    project tag view
-add redirect from /contests/ to latest contest
-
-blogdor: subscribe to comments
-caching
+other:
+    caching
+    test judgeforamerica
+    first names instead of usernames
+    add redirect from /contests/ to latest contest
 
 Ali:
-    /projects/sunlight-labs-api/join/
-    /projects/admin/
-    /events/
+on edit_profile page, added a (view profile) link
+events pages could use some styling
