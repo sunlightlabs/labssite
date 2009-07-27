@@ -357,6 +357,8 @@ div#currentEvents dt { font-size: 140%; margin-bottom: 10px;}
 div#haveEvent a{ text-indent: -9999em; display: block; width: 215px; height: 103px; background: url(/media/images/haveEvent_box.png) 3px top no-repeat;}
 div#haveEvent { width: 215px; height: 103px; padding-left: 20px; margin-bottom: 20px;}
 
+div#labsAddress { background: url(/media/images/contact_bg.png) top left no-repeat; width: 212px; height: 193px; display: block; text-indent: -9999em;}
+
 /*table*/
 div#users_results { margin-top: 25px; margin-bottom: 25px;}
 table { width: 625px;}
