@@ -9,7 +9,7 @@ class LocationModelQuerySet(models.query.GeoQuerySet):
         geocoder = geocoders.Google(settings.GMAPS_API_KEY)
         addr, point = geocoder.geocode(location)
         point = Point(*point)
-        return self.filter(lat_long__distance_lte=(point, D(mi=mile_radius)))
+        return self.filter(lat_long__distance_lte=(point, D(mi=mile_radius))).distance(point).order_by('distance')
 
 class LocationModelManager(models.GeoManager):
     def get_query_set(self):

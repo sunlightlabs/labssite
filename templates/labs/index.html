@@ -7,7 +7,7 @@
 
 <div id="featureBox_wrapper">
     <div id="featureBox">
-{% if not request.user.is_authenticated %}
+{% if not user.is_authenticated %}
         <h2>We're Opening America's Government</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
         <a id="joinBtn" href="/accounts/login/">Join Us</a>
