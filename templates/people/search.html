@@ -32,30 +32,28 @@
        <table id="users_table">
         <thead>
             <tr id="titles">
-                <th id="title_name">Name</th>
-                <th class="center_title">Position</th>
-                <th class="center_title">Skills</th>
-                <th>Distance</th>
+                <th class="table_left" id="title_name">Name</th>
+                <th class="table_center table_position">Position</th>
+                <th class="table_center">Skills</th>
+                <th class="table_right">Distance</th>
             </tr>
         </thead>
         <tbody>
             {% for user in search_results %}
             <tr class="{% cycle 'odd' 'even' %}">
-                <td>
+                <td class="table_left">
                     <a id="user_name" href="{{user.user.get_absolute_url}}">{{ user.user }}</a>
                 </td>
-                <td>{{user.get_role_display|safe}}</td>
-                <td>{{user.skills|default:"n/a"}}</td>
-                {% if user.distance %}
-                <td>{{user.distance.mi|floatformat}} mi</td>
-                {% endif %}
+                <td class="table_center table_position">{{user.get_role_display|safe}}</td>
+                <td class="table_center">{{user.skills|default:"n/a"}}</td>
+                <td class="table_right">
+                    {% if user.distance %} {{user.distance.mi|floatformat}} mi {% endif %}
+                </td>
             </tr>
             {% endfor %}
         </tbody>
        </table>
     </div>
-    
-    
 {% endif %}
 </div>
 <div class="contentHeader">
