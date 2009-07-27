@@ -365,9 +365,13 @@ table { width: 625px;}
 tr { height: 25px;}
 tr.odd { background-color: #fff; padding: 5px; }
 tr.even { padding: 5px;  }
-tr#titles th { color: #403030; text-transform: uppercase; font-weight: bold;}
+tr#titles th { color: #403030; text-transform: uppercase; font-weight: bold; padding-bottom: 10px;}
 a#user_name, th#title_name{ margin-left: 10px;}
 th#title_name{ padding-left: 10px;}
+.table_right { text-align: right; padding-right: 10px; width: 80px;}
+.table_left { width: 120px; padding-right: 15px;}
+.table_center { text-align: center;}
+.table_position { width: 120px; padding-right: 15px;}
 
 /*buttons*/
 button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
