@@ -4,7 +4,6 @@ $(function() {
         // post to link
         var link = $(this);
         var href = link.attr('href');
-        console.log(href);
         event.preventDefault();
 
         // do the post

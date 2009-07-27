@@ -8,8 +8,6 @@ users:
     show current avatar on edit profile page
     fancy skills widget
     implement openid + clickpass
-ideas:
-    voting
 other:
     caching
     test judgeforamerica
@@ -21,3 +19,4 @@ on edit_profile page, added a (view profile) link
 styling on events pages
 on tweets, we're showing 'sunlightlabs' at the top of each tweet.. perhaps something else could fit here?
 one more icon for link type 'site'
+style voting

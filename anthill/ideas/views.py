@@ -62,4 +62,4 @@ def vote(request, idea_id, score):
     if not created:
         vote.value = score
         vote.save()
-    return HttpResponse("{'score':%d}" % (idea.score+score))
+    return HttpResponse("{'score':%d}" % (idea.score))

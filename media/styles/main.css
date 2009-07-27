@@ -134,6 +134,7 @@ a#advancedBtn{ float: right; padding-top: 3px;}
 div#advancedSearch{ border-top: 1px solid #c4bdbd; padding-top: 20px; margin-top: 20px;}
 
 div.voteBox { background: url(/media/images/voteBox_bg.png) top left no-repeat; width: 62px; height: 82px; float: left;}
+div.voted { background: url(/media/images/votedBox_bg.png); }
 div.voteBox a { width: 62px; height: 22px; display: block; text-align: center; font-weight: bold; text-transform: uppercase; font-size: 145%; padding-top: 35px; text-decoration: none; padding-right:2px;}
 div.voteBox span { font-size: 85%; font-style: oblique; padding-right: 2px; text-align: center; width: 62px; display: block; color: #636466; }
 div.ideaContent{ margin-left: 85px;}
