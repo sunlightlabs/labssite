@@ -1,5 +1,6 @@
 {% extends "ideas/base.html" %}
 {% load tagging_tags %}
+{% load newsfeed_tags %}
 
 {% block content %}
 <div id="projects" class="module">
@@ -16,7 +17,6 @@
             <dt>Became a project on</dt>
             <dd>{{project.creation_date|date}}</dd>
 
-            <!-- needs styling -->
             {% if project.idea %}
             <dt>Project began as an implementation of idea</dt>
             <dd>"<a href="{{project.idea.get_absolute_url}}">{{project.idea}}</a>"</dd>
@@ -47,9 +47,7 @@
         <div id="timeline">
             <h3>Milestones</h3>
             <ul id="projectTimeline" class="leftTimeline">
-                <li>Design comps have been uploaded by <a href="#">Ali</a></li>
-                <li><a href="#">Jeremy</a> was made lead</li>
-                <li>Project was created from idea: <a href="#">Data Commons</a></li>
+                {% render_feed project.slug 10 %}
             </ul>
         </div>
     </div>

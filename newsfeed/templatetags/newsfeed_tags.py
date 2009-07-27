@@ -10,7 +10,7 @@ def render_feed(feed, max_items=5):
     if isinstance(feed, basestring):
         feed = Feed.objects.get(slug=feed)
     results = []
-    for item in feed.items.all().select_related()[:5]:
+    for item in feed.items.all().select_related()[:max_items]:
         template = select_template(('newsfeed/%s.html' % item.item_type,
                                     'newsfeed/item.html'))
         results.append(template.render(Context({'item': item})))
