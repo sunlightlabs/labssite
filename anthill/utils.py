@@ -34,7 +34,7 @@ def get_items_as_tag(token, queryset, count=5):
 ## google charts ##
 
 class PiechartNode(template.Node):
-    def __init__(self, items, width=200, height=200):
+    def __init__(self, items, width=150, height=150):
         nums = []
         names = []
         colors = []
@@ -50,7 +50,7 @@ class PiechartNode(template.Node):
     def render(self, context):
         return '<img src="%s" />' % self.img_url
 
-def piechart_from_tags(model, token, width=200, height=200):
+def piechart_from_tags(model, token, width=150, height=150):
     pieces = token.contents.split(None)
     args = pieces[1:]
     tags = dict(arg.split(':') for arg in args)
