@@ -42,5 +42,6 @@ def get_recently_popular(parser, token):
         num_days = int(pieces[3])
 
     items = get_popular_items(model, num_items, num_days)
+
     varname = pieces[-1]
     return ItemsNode(items, varname)
