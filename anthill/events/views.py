@@ -1,11 +1,14 @@
 from datetime import datetime
-from django.views.generic import date_based, list_detail
+from django.views.generic import simple, date_based, list_detail
 from django.template import RequestContext
 from django.shortcuts import get_object_or_404, render_to_response, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseNotAllowed
 from anthill.events.models import Event
 from anthill.events.forms import EventForm, SearchForm
+
+def index(request):
+    return simple.direct_to_template(request, template='events/index.html')
 
 def search(request):
     if request.GET:
@@ -70,6 +73,10 @@ def new_event(request):
                               {'form':form},
                              context_instance=RequestContext(request))
 
+def archive(request):
+    return list_detail.object_list(request,
+                                   queryset=Event.objects.future().select_related().all(),
+                                   template_object_name='event')
 
 def archive_year(request, year):
     return date_based.archive_year(request, year=year,

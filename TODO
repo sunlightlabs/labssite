@@ -4,8 +4,6 @@ projects:
     /projects/add/
     /projects/slug/edit/
     project tag view
-events:
-    /events/all/
 users:
     contact user button (email them)
     show current avatar on edit profile page
@@ -21,4 +19,5 @@ other:
 
 Ali:
 on edit_profile page, added a (view profile) link
-events pages could use some styling
+styling on events pages
+on tweets, we're showing 'sunlightlabs' at the top of each tweet.. perhaps something else could fit here?
