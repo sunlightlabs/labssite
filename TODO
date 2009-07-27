@@ -1,12 +1,13 @@
-template tag for most active projects
 real content
 judgeforamerica
 charts on /projects/
+make events box use real content
+projects charts
+contact user button
 
-improvements:
-    registration: implement openid + clickpass
-    blogdor: subscribe to comments
-    people: add caching around twitter api call
+implement openid + clickpass
+subscribe to comments
+add caching around twitter api call
 
 Ali:
     /projects/sunlight-labs-api/join/

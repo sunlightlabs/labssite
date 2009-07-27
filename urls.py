@@ -36,6 +36,7 @@ def project_callback(sender, instance, created, **kwargs):
         feed.items.create(user=instance.lead, item_type='project',
                           body=unicode(instance),
                           link=instance.get_absolute_url())
+        Feed.objects.create(slug=instance.slug, title=instance.name)
 post_save.connect(project_callback, sender=Project)
 
 def user_callback(sender, instance, created, **kwargs):
@@ -44,6 +45,7 @@ def user_callback(sender, instance, created, **kwargs):
                           body=unicode(instance),
                           link=instance.get_absolute_url())
 post_save.connect(user_callback, sender=User)
+
 
 class LabsContactForm(ContactForm):
 

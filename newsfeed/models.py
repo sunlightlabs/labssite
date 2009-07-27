@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -15,7 +16,7 @@ class FeedItem(models.Model):
     item_type = models.SlugField(max_length=20)
     user = models.ForeignKey(User)
     feed = models.ForeignKey(Feed, related_name='items')
-    timestamp = models.DateTimeField(auto_now_add=True)
+    timestamp = models.DateTimeField(default=datetime.datetime.now)
 
     class Meta:
         ordering = ('-timestamp',)
