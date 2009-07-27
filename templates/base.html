@@ -93,7 +93,6 @@
                             {% get_latest_tweets "sunlightlabs" 2 as tweets %}
                             {% for tweet in tweets %}
                             <li>
-                                <span class="tweetMetaAuthor">{{tweet.user.screen_name}}</span>
                                 <p class="tweetContent">{{tweet.text|twitterize}}</p>
                             </li>
                             {% endfor %}

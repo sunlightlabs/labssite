@@ -110,9 +110,9 @@ form#searchForm li{ float: left; margin-right: 20px;}
 form#searchForm label{ display: block; margin-bottom: 5px; font-weight: bold;}
 form#searchForm select{ padding: 2px 0; margin-top: 1px; margin-right: 10px;}
 
-form#accountForm, div#signupOptions, form#contactForm{ border: 1px solid #D5D2C6; padding: 30px; background: #F0F0E5; -moz-border-radius: 3px; -webkit-border-radius: 3px; margin-right: 20px; }
-div#ltColumn form#accountForm label, div#signupOptions label, form#contactForm label { width: 200px; display: block; float: left; font-weight: bold; padding-top: 5px;}
-form#accountForm input, div#signupOptions input, form#contactForm input, form#contactForm textarea { width: 350px;}
+form#accountForm, div#signupOptions, form#contactForm, form#resetPassword{ border: 1px solid #D5D2C6; padding: 30px; background: #F0F0E5; -moz-border-radius: 3px; -webkit-border-radius: 3px; margin-right: 20px; }
+div#ltColumn form#accountForm label, div#signupOptions label, form#contactForm label, form#resetPassword label{ width: 200px; display: block; float: left; font-weight: bold; padding-top: 5px;}
+form#accountForm input, div#signupOptions input, form#contactForm input, form#contactForm textarea, form#resetPassword input { width: 350px;}
 select { margin-bottom: 10px;}
 
 div#communityTimelineHeader { background: url(/media/images/line_space2.png) left top no-repeat; padding-top:50px;}
@@ -301,7 +301,7 @@ div#projectDetail div#timeline { width: 490px; padding-right: 30px; margin-top: 
 div#ltColumn ul.leftTimeline li{ padding-left: 0;}
 div#timeline{ font-size: 120%;}
 div#timeline li, div.post { background: url(/media/images/line_space2.png) left bottom no-repeat; padding-bottom: 20px; margin-bottom: 10px;}
-div#timeline li { background: none; padding-bottom: 0; margin-bottom: 15px;}
+div#timeline li { background: none; padding-bottom: 0; margin-bottom: 30px;}
 div.post { padding-bottom: 30px; margin-bottom: 20px;}
 
 div#projectDetail p{ width: 490px;}
@@ -359,17 +359,19 @@ div#haveEvent { width: 215px; height: 103px; padding-left: 20px; margin-bottom: 
 
 div#labsAddress { background: url(/media/images/contact_bg.png) top left no-repeat; width: 212px; height: 193px; display: block; text-indent: -9999em;}
 
+div#ltColumn ul#messages_list, div#ltColumn p#instructions { background: #f8f7f0; border: 1px solid #c4bdbd; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 10px; width: 650px; font-size: 110%; margin-right: 0px;}
+p#forgottenPassword { margin-left: 200px; margin-top:30px;}
+
 /*table*/
 div#users_results { margin-top: 25px; margin-bottom: 25px;}
-table { width: 625px;}
+table { width: 625px; line-height: 18px; max-height: 10px; overflow: auto;}
 tr { height: 25px;}
 tr.odd { background-color: #fff; padding: 5px; }
 tr.even { padding: 5px;  }
 tr#titles th { color: #403030; text-transform: uppercase; font-weight: bold; padding-bottom: 10px;}
-a#user_name, th#title_name{ margin-left: 10px;}
 th#title_name{ padding-left: 10px;}
 .table_right { text-align: right; padding-right: 10px; width: 80px;}
-.table_left { width: 120px; padding-right: 15px;}
+.table_left { width: 120px; padding-right: 15px; padding-left: 10px;}
 .table_center { text-align: center;}
 .table_position { width: 120px; padding-right: 15px;}
 
@@ -393,6 +395,7 @@ button.signupBtn { background: url(/media/images/btn_joinus_sm.png) right bottom
 button.signinBtn { background: url(/media/images/btn_signin.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
 button.submit-send { background: url(/media/images/btn_submit.png) left top no-repeat; width: 113px; margin-left: 200px;}
 button.startnewBtn { background: url(/media/images/btn_startnew.png) left top no-repeat; width: 247px; margin-top: 20px; }
+button#resetPassword { background: url(/media/images/btn_resetpassword.png) left top no-repeat; width: 171px; margin-left: 200px;}
 
 /*apps sponsors*/
 div#appsSponsors {padding-right: 15px;}
