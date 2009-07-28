@@ -21,7 +21,7 @@
                         <th>Type</th>
                         <th class="links_order">Order</th>
                         <th>Delete?</th>
-                    </tr>    
+                    </tr>
                 </thead>
                 <tbody>
                 {% for linkform in link_formset.forms %}
@@ -36,7 +36,36 @@
                 </tbody>
             </table>
 
+            {{ feed_formset.management_form }}
+            <h3>Feeds</h3>
+            <p class="tip">Feeds listed here will populate the activity portion of your project page</p>
+            <table id="feedsTable">
+                <thead>
+                    <tr id="titles">
+                        <th>Feed Name</th>
+                        <th>URL</th>
+                        <th>Delete?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for feedform in feed_formset.forms %}
+                    {% for field in feedform.hidden_fields %}
+                        {{ field }}
+                    {% endfor %}
+                <tr>
+                    {% for field in feedform.visible_fields %}
+                    <td>
+                        {{ field }}
+                    </td>
+                    {% endfor %}
+                <tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+
             {{ role_formset.management_form }}
+            <h3>Project Members</h3>
             <table>
                 <thead>
                     <th>User</th>

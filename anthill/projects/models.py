@@ -5,6 +5,7 @@ from django.contrib.contenttypes import generic
 from tagging.fields import TagField
 from markupfield.fields import MarkupField
 from anthill.ideas.models import Idea
+from feedinator.models import Subscription
 
 class Project(models.Model):
     slug = models.SlugField('unique identifier for project',
@@ -19,6 +20,8 @@ class Project(models.Model):
     lead = models.ForeignKey(User, related_name='projects_lead_on')
     members = models.ManyToManyField(User, through='Role')
     idea = models.ForeignKey(Idea, blank=True, null=True, related_name='projects')
+
+    subscriptions = generic.GenericRelation(Subscription)
 
     def __unicode__(self):
         return self.name

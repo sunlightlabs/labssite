@@ -1,16 +1,18 @@
 blogdor:
     subscribe to comments
 projects:
-    edit feeds
+    add edit links on user profile page + project page
+    projects/join_request_email.txt
+    text for when milestones are blank
 users:
     show current avatar on edit profile page
     fancy skills widget
+    size of the map on the users page to 198x210
     implement openid + clickpass
 other:
     caching
+    titles
     test judgeforamerica
     first names instead of usernames
     add redirect from /contests/ to latest contest
-    text for when milestones are blank
-    size of the map on the users page to 198x210
-    projects/join_request_email.txt
+

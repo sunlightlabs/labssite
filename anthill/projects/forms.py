@@ -1,4 +1,5 @@
 from django import forms
+from django.forms.formsets import formset_factory
 from django.forms.models import inlineformset_factory
 from anthill.projects.models import Project, Link, Role
 
@@ -6,6 +7,12 @@ class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
         fields = ['slug', 'name', 'description', 'skills']
+
+class FeedForm(forms.Form):
+    id = forms.IntegerField(required=False, widget=forms.HiddenInput())
+    title = forms.CharField(widget=forms.widgets.TextInput(attrs={'class':'title'}))
+    url = forms.URLField(widget=forms.widgets.TextInput(attrs={'class':'url'}))
+FeedFormSet = formset_factory(FeedForm, can_delete=True, extra=1)
 
 def formfield_class_callback(field):
     ff = field.formfield()
