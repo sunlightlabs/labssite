@@ -1,7 +1,7 @@
 blogdor:
     subscribe to comments
 projects:
-    /projects/slug/edit/
+    edit feeds
 users:
     contact user button (email them)
     show current avatar on edit profile page

@@ -10,6 +10,7 @@
             <ul>
                 {{ project_form.as_ul }}
             </ul>
+
             {{ link_formset.management_form }}
             <table>
                 <thead>
@@ -23,6 +24,28 @@
                 {% for linkform in link_formset.forms %}
                 <tr>
                     {% for field in linkform %}
+                    <td>
+                        {{ field }}
+                    </td>
+                    {% endfor %}
+                <tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            {{ role_formset.management_form }}
+            <table>
+                <thead>
+                    <th>User</th>
+                    <th>Message</th>
+                    <th>Status</th>
+                </thead>
+                <tbody>
+                {% for roleform in role_formset.forms %}
+                <tr>
+                    <td> {{roleform.instance.user}} </td>
+                    <td> {{roleform.instance.message}} </td>
+                    {% for field in roleform %}
                     <td>
                         {{ field }}
                     </td>
