@@ -48,19 +48,27 @@
         <div id="projectModule" class="module">
             <div id="leadProjects">
                 <h4>Lead</h4>
-                <ul>
-                {% for project in p_user.projects_lead_on.all %}
-                    <li><a href="{{project.get_absolute_url}}">{{project}}</a></li>
-                {% endfor %}
-                </ul>
+                {% if p_user.projects_lead_on.all %}
+                    <ul>
+                    {% for project in p_user.projects_lead_on.all %}
+                        <li><a class="projectName" href="{{project.get_absolute_url}}">{{project}}</a><a class="projectEdit" href="#">edit project</a></li>
+                    {% endfor %}
+                    </ul>
+                {% else %}
+                	<p>{{p_user.first_name}} hasn't lead a projects just yet.</p>
+                {% endif %}
             </div>
             <div id="helpedProjects">
                 <h4>Helped</h4>
+                {% if helped_projects %}
                 <ul>
                     {% for project in helped_projects %}
                         <li><a href="{{project.get_absolute_url}}">{{project}}</a></li>
                     {% endfor %}
                 </ul>
+                {% else %}
+                	<p>{{p_user.first_name}} hasn't helped on any projects just yet.</p>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -105,7 +113,7 @@
     </ul>
 	<a class="center_viewall" href="#">Go to {% possessive p_user %} twitter page »</a>
 	{% else %}
-		<p>No tweets here to follow, move along.</p>
+		<p>No tweets to follow here, move along.</p>
 	{% endif %}
 </div>
 {% endif %}

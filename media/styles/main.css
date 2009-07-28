@@ -376,6 +376,13 @@ a#accountProfile { padding-top: 3px; display: block;}
 ul#projectForm_details { margin-bottom: 30px; border-bottom: solid 1px #c5c3b4; padding-bottom: 30px;}
 div#users_scroll { height: 250px; overflow: auto;}
 
+div#projectModule a.projectName { margin-right: 15px; }
+div#projectModule a.projectEdit { font-size: 90%;}
+div#projectDetail_header a.projectEdit { text-align: right; padding-top: 10px; display: block; padding-right: 10px;}
+div#projectModule li { margin-bottom: 10px;}
+div#ltColumn div#projectDetail_header h2 { float: left; width: 550px;}
+
+
 /*table*/
 div#users_results { margin-top: 25px; margin-bottom: 25px;}
 table { width: 605px; line-height: 18px; }
