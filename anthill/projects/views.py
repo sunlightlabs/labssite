@@ -6,7 +6,7 @@ from django.template import RequestContext
 from django.template.loader import render_to_string
 from tagging.views import tagged_object_list
 from anthill.projects.models import Project, Role
-from anthill.projects.forms import ProjectForm, LinkFormSet, JoinProjectForm
+from anthill.projects.forms import ProjectForm, LinkFormSet, RoleFormSet, JoinProjectForm
 from anthill.ideas.models import Idea
 
 
@@ -55,21 +55,25 @@ def new_project(request):
 @login_required
 def edit_project(request, slug):
     project = get_object_or_404(Project, slug=slug)
-    if request.user != project.lead:
+    if request.user != project.lead and not request.user.is_staff:
         return HttpResponseForbidden('Only the project lead can edit a project.')
     if request.method == 'GET':
         project_form = ProjectForm(instance=project)
-        link_formset = LinkFormSet(instance=project)
+        link_formset = LinkFormSet(instance=project, prefix='links')
+        role_formset = RoleFormSet(instance=project, prefix='roles')
     else:
         project_form = ProjectForm(request.POST, instance=project)
-        link_formset = LinkFormSet(request.POST, instance=project)
-        if project_form.is_valid() and link_formset.is_valid():
+        link_formset = LinkFormSet(request.POST, instance=project, prefix='links')
+        role_formset = RoleFormSet(request.POST, instance=project, prefix='roles')
+        if project_form.is_valid() and link_formset.is_valid() and role_formset.is_valid():
             project_form.save()
             link_formset.save()
+            role_formset.save()
             request.user.message_set.create(message='Your changes have been saved.')
             return redirect(project)
     return render_to_response('projects/edit_project.html',
                               {'project':project, 'project_form':project_form,
+                               'role_formset': role_formset, 
                                'link_formset':link_formset},
                               context_instance=RequestContext(request))
 

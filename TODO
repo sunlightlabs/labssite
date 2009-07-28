@@ -1,9 +1,8 @@
 blogdor:
     subscribe to comments
 projects:
-    /projects/slug/edit/
+    edit feeds
 users:
-    contact user button (email them)
     show current avatar on edit profile page
     fancy skills widget
     implement openid + clickpass
@@ -13,6 +12,6 @@ other:
     first names instead of usernames
     add redirect from /contests/ to latest contest
 
-hide new idea box for non-logged in users
 text for when milestones are blank
 size of the map on the users page to 198x210
+projects/join_request_email.txt

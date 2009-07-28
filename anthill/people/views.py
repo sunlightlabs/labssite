@@ -1,12 +1,13 @@
 from django.http import HttpResponse
 from django.conf import settings
 from django.template import RequestContext
+from django.template.loader import render_to_string
 from django.shortcuts import redirect, render_to_response, get_object_or_404
 from django.views.decorators.http import require_POST
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from anthill.people.models import Profile
-from anthill.people.forms import SearchForm, ProfileForm, PasswordForm
+from anthill.people.forms import SearchForm, ProfileForm, PasswordForm, UserContactForm
 
 def search(request):
     if request.GET:
@@ -89,3 +90,30 @@ def change_password(request):
     else:
         user.message_set.create(message='Passwords did not match.')
     return redirect('edit_profile')
+
+@login_required
+def contact(request, username):
+    to_user = get_object_or_404(User, username=username)
+
+    if not request.user.email:
+        request.user.message_set.create(message='You must set a valid email address prior to emailing other users.')
+        return redirect('edit_profile')
+
+    if request.method == 'GET':
+        form = UserContactForm()
+    else:
+        form = UserContactForm(request.POST)
+        if form.is_valid():
+            data = {'from_user': request.user, 'to_user': to_user,
+                    'subject': form.cleaned_data['subject'],
+                    'body': form.cleaned_data['body']}
+            subject = render_to_string('people/contact_email_subject.txt', data)
+            body = render_to_string('people/contact_email_body.txt', data)
+            print subject, body
+            to_user.email_user(subject, body, request.user.email)
+            request.user.message_set.create(message='Your email has been delivered to %s' % request.user)
+            return redirect('user_profile', username)
+
+    return render_to_response('people/contact.html',
+                              {'form': form, 'to_user': to_user},
+                              context_instance=RequestContext(request))

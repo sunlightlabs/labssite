@@ -39,3 +39,7 @@ class PasswordForm(forms.Form):
         if self.cleaned_data.get('password1') != self.cleaned_data.get('password2'):
             raise forms.ValidationError('Passwords must match')
         return self.cleaned_data
+
+class UserContactForm(forms.Form):
+    subject = forms.CharField()
+    body = forms.CharField(widget=forms.widgets.Textarea)
