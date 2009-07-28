@@ -9,6 +9,7 @@
 
 {% block sidebar %}
 
+{% if not user.is_authorized %}
 <h3>Submit An Idea</h3>
 <div id="submitIdea" class="module">
     <p class="tip">Have a great idea, <strong>tell us about it using the form below</strong>!</p>
@@ -29,6 +30,8 @@
     </form>
 </div>
 <hr></hr>
+{% endif %}
+
 <h3 class="space">How Our Process Works</h3>
 <div id="process" class="module">	
     <ol>
