@@ -3,8 +3,8 @@
 {% block content %}
 <div class="module">
     <div id="headerTip" class="contentHeader">
-        <h2>Account Information</h2>
-        <a href="{{user.get_absolute_url}}"> (view profile) </a>
+        <h2 id="accountHeader">Account Information</h2>
+        <a id="accountProfile" href="{{user.get_absolute_url}}"> (view profile) </a>
     </div>
     <div class="module">
         <p class="tip">Let the labs community know more about you.</p>

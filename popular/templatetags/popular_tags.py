@@ -30,7 +30,7 @@ def get_recently_popular(parser, token):
     try:
         label, modelname = pieces[1].split('.')
         model = get_model(label, modelname)
-    except Exception as e:
+    except Exception, e:
         raise template.TemplateSyntaxError('%s is not a valid app.Model reference' % pieces[1])
 
     # get num items/days if they were provided

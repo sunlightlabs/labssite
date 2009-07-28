@@ -7,52 +7,54 @@
 </div>
 <div class="module" id="searchContent">
     <a id="advancedBtn"href="#">Advanced Search</a> 
-    <form id="searchForm" method="GET" action=".">
-        {{form.location.label_tag}}
-        {{form.location}}
-        <button class="searchBtn">
-            <span>search</span>
-        </button>
-        <div id="advancedSearch">
-        <ul>
-            <li> {{form.name.label_tag}} {{form.name}} </li>
-            <li> {{form.position.label_tag}} {{form.position}} </li>
-            <li> {{form.location_range.label_tag}} {{form.location_range}} </li>
-            <button class="advsearchBtn">
+        <form id="searchForm" method="GET" action=".">
+            {{form.location.label_tag}}
+            {{form.location}}
+            <button class="searchBtn">
                 <span>search</span>
             </button>
-            <div class="clear"></div>
-        </ul>
-        </div>
-    </form>
+            <div id="advancedSearch">
+            <ul>
+                <li> {{form.name.label_tag}} {{form.name}} </li>
+                <li> {{form.position.label_tag}} {{form.position}} </li>
+                <li> {{form.location_range.label_tag}} {{form.location_range}} </li>
+                <button class="advsearchBtn">
+                    <span>search</span>
+                </button>
+                <div class="clear"></div>
+            </ul>
+            </div>
+        </form>  
 
 {% if searched %}
     <div id="users_results" class="module">
-    <h3>{{search_results|length}} Results</h3>
-       <table id="users_table">
-        <thead>
-            <tr id="titles">
-                <th class="table_left" id="title_name">Name</th>
-                <th class="table_center table_position">Position</th>
-                <th class="table_center">Skills</th>
-                <th class="table_right">Distance</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for user in search_results %}
-            <tr class="{% cycle 'odd' 'even' %}">
-                <td class="table_left">
-                    <a id="user_name" href="{{user.user.get_absolute_url}}">{{ user.user }}</a>
-                </td>
-                <td class="table_center table_position">{{user.get_role_display|safe}}</td>
-                <td class="table_center">{{user.skills|default:"n/a"}}</td>
-                <td class="table_right">
-                    {% if user.distance %} {{user.distance.mi|floatformat}} mi {% endif %}
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-       </table>
+        <h3>{{search_results|length}} Results</h3>
+        <div id="users_scroll">
+           <table id="users_table">
+            <thead>
+                <tr id="titles">
+                    <th class="table_left" id="title_name">Name</th>
+                    <th class="table_center table_position">Position</th>
+                    <th class="table_center">Skills</th>
+                    <th class="table_right">Distance</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in search_results %}
+                <tr class="{% cycle 'odd' 'even' %}">
+                    <td class="table_left">
+                        <a id="user_name" href="{{user.user.get_absolute_url}}">{{ user.user }}</a>
+                    </td>
+                    <td class="table_center table_position">{{user.get_role_display|safe}}</td>
+                    <td class="table_center">{{user.skills|default:"n/a"}}</td>
+                    <td class="table_right">
+                        {% if user.distance %} {{user.distance.mi|floatformat}} mi {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+           </table>
+       </div>  
     </div>
 {% endif %}
 </div>

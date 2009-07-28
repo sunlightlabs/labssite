@@ -2,22 +2,25 @@
 
 {% block content %}
 <div id="join_project" class="module">
-    <div class="contentHeader">
+    <div id="createHeader" class="contentHeader">
         <h2>Editing Project {{project}}</h2>
     </div>
     <div class="module">
         <form id="projectForm" method="POST" action=".">
-            <ul>
+            <ul id="projectForm_details">
                 {{ project_form.as_ul }}
             </ul>
             {{ link_formset.management_form }}
-            <table>
+            <h3>Links</h3>
+            <table id="linksTable">
                 <thead>
-                    <th>Link Name</th>
-                    <th>URL</th>
-                    <th>Type</th>
-                    <th>Order</th>
-                    <th>Delete?</th>
+                    <tr id="titles">
+                        <th>Link Name</th>
+                        <th>URL</th>
+                        <th>Type</th>
+                        <th class="links_order">Order</th>
+                        <th>Delete?</th>
+                    </tr>    
                 </thead>
                 <tbody>
                 {% for linkform in link_formset.forms %}
