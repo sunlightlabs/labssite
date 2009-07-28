@@ -1,6 +1,7 @@
 from django.views.generic.list_detail import object_list, object_detail
 from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseForbidden
 from django.template import RequestContext
 from django.template.loader import render_to_string
 from tagging.views import tagged_object_list
@@ -45,6 +46,7 @@ def new_project(request):
             project = project_form.save(commit=False)
             project.lead = request.user
             project.save()
+            request.user.message_set.create(message='Your project has been created.')
             return redirect('edit_project', project.slug)
     return render_to_response('projects/new_project.html',
                               {'project_form':project_form},
@@ -53,7 +55,23 @@ def new_project(request):
 @login_required
 def edit_project(request, slug):
     project = get_object_or_404(Project, slug=slug)
-    # working here
+    if request.user != project.lead:
+        return HttpResponseForbidden('Only the project lead can edit a project.')
+    if request.method == 'GET':
+        project_form = ProjectForm(instance=project)
+        link_formset = LinkFormSet(instance=project)
+    else:
+        project_form = ProjectForm(request.POST, instance=project)
+        link_formset = LinkFormSet(request.POST, instance=project)
+        if project_form.is_valid() and link_formset.is_valid():
+            project_form.save()
+            link_formset.save()
+            request.user.message_set.create(message='Your changes have been saved.')
+            return redirect(project)
+    return render_to_response('projects/edit_project.html',
+                              {'project':project, 'project_form':project_form,
+                               'link_formset':link_formset},
+                              context_instance=RequestContext(request))
 
 @login_required
 def join_project(request, slug):
