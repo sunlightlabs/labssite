@@ -129,6 +129,11 @@ GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site/images/avatar_new.jpg"
 GRAVATAR_SIZE = 60
 FORCE_LOWERCASE_TAGS = True
 
+GMAPS_API_KEY = '***REMOVED***'
+GOOGLE_ANALYTICS_EMAIL = 'sunlightlabs@gmail.com'
+GOOGLE_ANALYTICS_PASSWORD = '***REMOVED***'
+GOOGLE_ANALYTICS_ID = '***REMOVED***'
+
 SIMPLESURVEY_COMPLETE_REDIRECT = "/judgeforamerica/"
 
 LOGIN_URL = '/accounts/login/'
