@@ -9,9 +9,9 @@ from anthill.ideas.models import Idea
 class Project(models.Model):
     slug = models.SlugField('unique identifier for project',
                             max_length=50, unique=True,
-                            help_text="changing this value will alter your project's URL")
+                            help_text="(this will become part of your projects URL)")
     name = models.CharField('displayed name of project', max_length=100)
-    description = MarkupField()
+    description = MarkupField(default_markup_type='markdown')
     official = models.BooleanField(default=False)
     creation_date = models.DateTimeField(auto_now_add=True)
     skills = TagField('list of skills used/required on this project')

@@ -5,7 +5,7 @@ from django.template import RequestContext
 from django.template.loader import render_to_string
 from tagging.views import tagged_object_list
 from anthill.projects.models import Project, Role
-from anthill.projects.forms import ProjectForm, JoinProjectForm
+from anthill.projects.forms import ProjectForm, LinkFormSet, JoinProjectForm
 from anthill.ideas.models import Idea
 
 
@@ -34,6 +34,26 @@ def project_detail(request, slug):
     return object_detail(request,
                          queryset=Project.objects.select_related().all(),
                          slug=slug, template_object_name='project')
+
+@login_required
+def new_project(request):
+    if request.method == 'GET':
+        project_form = ProjectForm()
+    else:
+        project_form = ProjectForm(request.POST)
+        if project_form.is_valid():
+            project = project_form.save(commit=False)
+            project.lead = request.user
+            project.save()
+            return redirect('edit_project', project.slug)
+    return render_to_response('projects/new_project.html',
+                              {'project_form':project_form},
+                              context_instance=RequestContext(request))
+
+@login_required
+def edit_project(request, slug):
+    project = get_object_or_404(Project, slug=slug)
+    # working here
 
 @login_required
 def join_project(request, slug):

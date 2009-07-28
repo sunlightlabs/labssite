@@ -1,0 +1,41 @@
+{% extends "ideas/base.html" %}
+
+{% block content %}
+<div id="join_project" class="module">
+    <div class="contentHeader">
+        <h2>Create a Project</h2>
+    </div>
+    <div class="module">
+        <form id="projectForm" method="POST" action=".">
+            <ul>
+                {{ project_form.as_ul }}
+            </ul>
+
+            <table>
+                <thead>
+                    <th>Link Name</th>
+                    <th>URL</th>
+                    <th>Type</th>
+                    <th>Order</th>
+                    <th>Delete?</th>
+                </thead>
+                <tbody>
+                {% for linkform in link_formset.forms %}
+                <tr>
+                    {% for field in linkform %}
+                    <td>
+                        {{ field }}
+                    </td>
+                    {% endfor %}
+                <tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <button class="submitBtn">
+                <span>Submit</span>
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

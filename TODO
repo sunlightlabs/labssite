@@ -1,7 +1,6 @@
 blogdor:
     subscribe to comments
 projects:
-    /projects/add/
     /projects/slug/edit/
 users:
     contact user button (email them)
@@ -14,9 +13,5 @@ other:
     first names instead of usernames
     add redirect from /contests/ to latest contest
 
-Ali:
-on edit_profile page, added a (view profile) link
-styling on events pages
-on tweets, we're showing 'sunlightlabs' at the top of each tweet.. perhaps something else could fit here?
-one more icon for link type 'site'
-style voting
+hide new idea box for non-logged in users
+text for when milestones are blank
