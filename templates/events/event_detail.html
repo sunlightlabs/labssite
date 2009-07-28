@@ -5,14 +5,24 @@
     <div class="contentHeader">
         <h2>{{event}}</h2>
     </div>
-    <div class="module">
+    <div id="eventDetails" class="module">
         <!-- here is all of the data that the template has -->
+		<dl>
+			<dt>Start Date:</dt>
+			<dd>{{ event.start_date|date}}</dd>
+			
+			<dt>End Date:</dt>
+			<dd>{{ event.end_date|date}}</dd>
+			<div class="clear"></div>
+			
+			<dt>Location:</dt>
+			<dd>{{ event.location }}</dd>
+			
+			<dt>URL:</dt>
+			<dd>{{ event.url|urlize }}</dd>
+			<div class="clear"></div>
+		</dl>
         {{ event.description }}
-        <br />
-        {{ event.start_date|date}}
-        {{ event.end_date|date}}
-        {{ event.location }}
-        {{ event.url|urlize }}
         <a href="{{event.creator.get_absolute_url}}">{{ event.creator.firstname }}</a>
     </div>
 </div>

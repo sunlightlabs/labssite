@@ -24,11 +24,11 @@
 
         </dl>
         <div id="project_mainDetails">
-            <p id="projectDescription">{{project.description}}</p>
+            <div id="projectDescription">{{project.description}}</div>
             <ul>
                 {% for link in project.links.all %}
                 <li class="{{link.get_link_type_display}}_link">
-                    <a href="{{link.url}}">{{link.name}}</a>
+                    <a title="{{link.get_link_type_display}}" href="{{link.url}}">{{link.name}}</a>
                 </li>
                 {% endfor %}
             </ul>
@@ -46,9 +46,13 @@
 
         <div id="timeline">
             <h3>Milestones</h3>
-            <ul id="projectTimeline" class="leftTimeline">
-                {% render_feed project.slug 10 %}
-            </ul>
+			{% if project.slug %}
+	            <ul id="projectTimeline" class="leftTimeline">
+	                {% render_feed project.slug 10 %}
+	            </ul>
+			{% else %}
+				<p>There are currently no milestones.</p>
+			{% endif %}
         </div>
     </div>
 </div>
