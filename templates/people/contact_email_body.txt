@@ -1,0 +1,6 @@
+{{body}}
+
+----
+This email was sent via sunlightlabs.com from {{from_user}} - {{from_user.get_absolute_url}}.
+To report abuse please email admin@sunlightlabs.com
+
