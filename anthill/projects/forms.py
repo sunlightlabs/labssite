@@ -7,8 +7,16 @@ class ProjectForm(forms.ModelForm):
         model = Project
         fields = ['slug', 'name', 'description', 'skills']
 
-LinkFormSet = inlineformset_factory(Project, Link, extra=3)
-RoleFormSet = inlineformset_factory(Project, Role, extra=0, fields=['status'], can_delete=False)
+def formfield_class_callback(field):
+    ff = field.formfield()
+    if ff:
+        ff.widget.attrs['class'] = field.name
+    return ff
+LinkFormSet = inlineformset_factory(Project, Link, extra=3,
+                                    formfield_callback=formfield_class_callback)
+RoleFormSet = inlineformset_factory(Project, Role, extra=0, fields=['status'],
+                                    can_delete=False,
+                                    formfield_callback=formfield_class_callback)
 
 class JoinProjectForm(forms.Form):
     message = forms.CharField(widget=forms.widgets.Textarea)
