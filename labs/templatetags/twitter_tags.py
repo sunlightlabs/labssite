@@ -2,6 +2,7 @@ from django import template
 from django.template.defaultfilters import stringfilter
 from django.utils.safestring import mark_safe
 from django.utils.html import urlize
+from urllib2 import HTTPError
 import twitter
 
 register = template.Library()
@@ -18,7 +19,12 @@ class TweetsNode(template.Node):
             user = self.user[1:-1]
         else:
             user = template.Variable(self.user).resolve(context)
-        context[self.context_var] = api.GetUserTimeline(user, count=self.count)
+        try:
+            tweets = api.GetUserTimeline(user, count=self.count)
+            context[self.context_var] = tweets
+        except HTTPError:
+            pass
+
         return ''
 
 @register.tag
