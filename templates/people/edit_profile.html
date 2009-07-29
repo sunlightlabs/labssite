@@ -1,4 +1,14 @@
 {% extends "registration/base.html" %}
+{% load media %}
+
+{% block extrahead %} 
+{% js "fancytags.js" %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        fancytags('#id_skills');
+    });
+</script>
+{% endblock %}
 
 {% block content %}
 <div class="module">
@@ -14,38 +24,25 @@
                     {% ifequal field.name "photo" %}
                     <li><label>Current Avatar</label> <img src="{{user.photo|default:"/media/images/avatar_male.jpg"}}"></li>
                     {% endifequal %}
-                    <li>{{field.label_tag}} {{field}} </li>
-                {% endfor %}
-                <!-- <li>
-                    <label>Skills</label>
-                    <p><a href="#">Show Common Skills List</a></p>
-                    <input id="skills" type="text" name="word" maxlength="30" />
-                    <button class="addBtn">
-                        <span>Add Skill</span>
-                    </button>
-                    <div id="yourSkills">
-                        <ul>
-                            <li>
-                                <span class="delete">delete</span>
-                                Python
-                            </li>
-                            <li>
-                                <span class="delete">delete</span>
-                                Design
-                            </li>
-                            <li>
-                                <span class="delete">delete</span>
-                                Ruby
-                            </li>
-                            <li>
-                                <span class="delete">delete</span>
-                                CSS
-                            </li>
-                        </ul>
-                        <div class="clear"></div>	
-                    </div>
+
+                    <li>{{field.label_tag}} {{field}} 
+
+                    {% ifequal field.name "skills" %}
+                        <div id="fancy_tags_widget">
+                            <p><a href="#">Show Common Skills List</a></p>
+                            <input id="skills" type="text" name="word" maxlength="30" />
+                            <button class="addBtn">
+                                <span>Add Skill</span>
+                            </button>
+                            <div id="yourSkills">
+                                <ul> </ul>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    {% endifequal %}
                     </li>
-                    -->
+                {% endfor %}
+
                 <button class="saveBtn">
                     <span>Save Changes</span>
                 </button>
