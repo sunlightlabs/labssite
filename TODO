@@ -1,7 +1,6 @@
 blogdor:
     subscribe to comments
 projects:
-    add edit links on user profile page + project page
     projects/join_request_email.txt
     text for when milestones are blank
 users:

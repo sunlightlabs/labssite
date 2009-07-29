@@ -51,7 +51,13 @@
                 {% if p_user.projects_lead_on.all %}
                     <ul>
                     {% for project in p_user.projects_lead_on.all %}
-                        <li><a class="projectName" href="{{project.get_absolute_url}}">{{project}}</a><a class="projectEdit" href="#">edit project</a></li>
+                    <li><a class="projectName" href="{{project.get_absolute_url}}">{{project}}</a>
+
+                    {# only show link if user==p_user==project.lead #}
+                    {% ifequal user p_user %}
+                    {% ifequal user project.lead %}<a class="projectEdit" href="{% url edit_project project.slug %}">edit project</a>{% endifequal %}
+                    {% endifequal %}
+                    </li>
                     {% endfor %}
                     </ul>
                 {% else %}

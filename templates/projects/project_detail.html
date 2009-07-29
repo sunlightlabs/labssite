@@ -4,11 +4,19 @@
 
 {% block content %}
 <div id="projects" class="module">
+
+    {% ifequal project.lead user %}
     <div id="projectDetail_header" class="contentHeader">
         <h2 class="projects">{{project.name}}</h2>
-        <a class="projectEdit" href="#">edit project</a>
+        <a class="projectEdit" href="{% url edit_project project.slug %}">edit project</a>
         <div class="clear"></div>
     </div>
+    {% else %}
+    <div class="contentHeader">
+        <h2 class="projects">{{project.name}}</h2>
+    </div>
+    {% endifequal %}
+
     <div id="projectDetail" class="module">
         <dl class="entryMetadata">
             {% if project.official %}
