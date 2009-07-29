@@ -123,7 +123,7 @@ def join_project(request, slug):
 
                 subject = 'Sunlight Labs: Request to join project %s' % project
                 body = render_to_string('projects/join_request_email.txt',
-                                        {'role': role})
+                                        {'project': project, 'role': role})
                 project.lead.email_user(subject, body)
                 request.user.message_set.create(message='Thank you for submitting your request to join %s' % project)
                 return redirect(project.get_absolute_url())
