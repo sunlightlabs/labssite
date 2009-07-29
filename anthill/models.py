@@ -4,12 +4,22 @@ from django.contrib.gis.geos import Point
 from django.contrib.gis.measure import D
 from geopy import geocoders
 
+def _geocode(location):
+    geocoder = geocoders.Google(settings.GMAPS_API_KEY)
+    locations = list(geocoder.geocode(location, exactly_one=False))
+    if locations:
+        point = locations[0][1]
+        return Point(*point)
+    else:
+        return None
+
 class LocationModelQuerySet(models.query.GeoQuerySet):
     def search_by_distance(self, location, mile_radius):
-        geocoder = geocoders.Google(settings.GMAPS_API_KEY)
-        addr, point = geocoder.geocode(location)
-        point = Point(*point)
-        return self.filter(lat_long__distance_lte=(point, D(mi=mile_radius))).distance(point).order_by('distance')
+        point = _geocode(location)
+        if point:
+            return self.filter(lat_long__distance_lte=(point, D(mi=mile_radius))).distance(point).order_by('distance')
+        else:
+            return self
 
 class LocationModelManager(models.GeoManager):
     def get_query_set(self):
@@ -23,9 +33,7 @@ class LocationModel(models.Model):
 
     def save(self, *args, **kwargs):
         if self.location:
-            geocoder = geocoders.Google(settings.GMAPS_API_KEY)
-            addr,point = geocoder.geocode(self.location)
-            self.lat_long = Point(*point)
+            self.lat_long = _geocode(self.location)
         super(LocationModel, self).save(*args, **kwargs)
 
     class Meta:
