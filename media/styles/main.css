@@ -373,7 +373,7 @@ p#forgottenPassword { margin-left: 200px; margin-top:30px;}
 h2#accountHeader { float: left; margin-right: 20px;}
 a#accountProfile { padding-top: 3px; display: block;}
 
-ul#projectForm_details, table#linksTable, table#feedsTable { margin-bottom: 30px; border-bottom: solid 1px #c5c3b4; padding-bottom: 30px;}
+ul#projectForm_details, table#linksTable, table#feedsTable { margin-bottom: 30px; border-bottom: solid 1px #c5c3b4; padding-bottom: 30px; display: block;}
 div#users_scroll { height: 250px; overflow: auto;}
 
 div#projectModule a.projectName { margin-right: 15px; }
@@ -381,14 +381,16 @@ div#projectModule a.projectEdit { font-size: 90%;}
 div#projectDetail_header a.projectEdit { text-align: right; padding-top: 10px; display: block; padding-right: 10px;}
 div#projectModule li { margin-bottom: 10px;}
 div#ltColumn div#projectDetail_header h2 { float: left; width: 550px;}
-form#projectForm input#tags { float: left; width: 265px; margin-right: 15px;}
+form#projectForm input#tags { float: left; width: 265px; margin-right: 15px; margin-left: 195px;}
 form#projectForm button.addBtn { margin-top: 0px;}
 div#projectTags { margin-left: 195px;}
 div#projectTags li { float: left; margin-right: 15px;}
 a#commonTags_link { margin-bottom: 5px; display: block;}
 
 form#projectForm input.order { width: 40px;}
-form#projectForm table#feedsTable input.title, form#projectForm table#feedsTable input.url { width: 200px; margin-right: 15px;}
+form#projectForm table#feedsTable input.title, form#projectForm table#feedsTable input.url { width: 242px; margin-right: 15px;}
+select.link_type { margin-right: 20px;}
+form#projectForm table#feedsTable input#id_links {text-align: center;}
 
 /*table*/
 div#users_results { margin-top: 25px; margin-bottom: 25px;}
@@ -403,7 +405,7 @@ th#title_name{ padding-left: 10px;}
 .table_center { text-align: center;}
 .table_position { width: 120px; padding-right: 15px;}
 
-table#linksTable input{ width: 150px;}
+table#linksTable input.name, table#linksTable input.url{ width: 175px; display: block; margin-right: 15px;}
 table#linksTable { width: 608px;}
 
 /*buttons*/
@@ -428,6 +430,7 @@ button.submit-send { background: url(/media/images/btn_submit.png) left top no-r
 button.startnewBtn { background: url(/media/images/btn_startnew.png) left top no-repeat; width: 247px; margin-top: 20px; }
 button#resetPassword { background: url(/media/images/btn_resetpassword.png) left top no-repeat; width: 171px; margin-left: 200px;}
 form#projectForm button.submitBtn { margin-left: 270px; margin-top: 20px;}
+button.updateProjectBtn { background: url(/media/images/btn_updateProject.png) left top no-repeat; width: 182px; margin-top: 30px;}
 
 /*apps sponsors*/
 div#appsSponsors {padding-right: 15px;}

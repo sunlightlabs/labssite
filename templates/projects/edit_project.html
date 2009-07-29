@@ -67,8 +67,8 @@
             </table>
 
             {{ feed_formset.management_form }}
-            <h3>Feeds</h3>
-            <p class="tip">Feeds listed here will populate the activity portion of your project page</p>
+            <h3 class="h3tip">News Feed</h3>
+            <p class="tip">Update the community on the progress you and your team have made on {{project}}.</p>
             <table id="feedsTable">
                 <thead>
                     <tr id="titles">
@@ -95,7 +95,8 @@
 
 
             {{ role_formset.management_form }}
-            <h3>Project Members</h3>
+            <h3 class="h3tip">Project Members</h3>
+            <p class="tip">Add and keep track of community members who have requested to become part of {{project}}.</p>
             <table>
                 <thead>
                     <tr id="titles">
@@ -119,8 +120,8 @@
                 </tbody>
             </table>
 
-            <button class="submitBtn">
-                <span>Submit</span>
+            <button class="updateProjectBtn">
+                <span>Update Project Details</span>
             </button>
         </form>
     </div>
