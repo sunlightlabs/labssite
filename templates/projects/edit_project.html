@@ -53,13 +53,16 @@
                 </thead>
                 <tbody>
                 {% for linkform in link_formset.forms %}
+                {% for field in linkform.hidden_fields %}
+                    {{ field }}
+                {% endfor %}
                 <tr>
-                    {% for field in linkform %}
+                    {% for field in linkform.visible_fields %}
                     <td>
                         {{ field }}
                     </td>
                     {% endfor %}
-                <tr>
+                </tr>
                 {% endfor %}
                 </tbody>
             </table>
@@ -86,7 +89,7 @@
                         {{ field }}
                     </td>
                     {% endfor %}
-                <tr>
+                </tr>
                 {% endfor %}
                 </tbody>
             </table>
@@ -110,7 +113,7 @@
                         {{ field }}
                     </td>
                     {% endfor %}
-                <tr>
+                </tr>
                 {% endfor %}
                 </tbody>
             </table>
