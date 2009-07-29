@@ -115,8 +115,8 @@ div#ltColumn form#accountForm label, div#signupOptions label, form#contactForm l
 form#accountForm input, div#signupOptions input, form#contactForm input, form#contactForm textarea, form#resetPassword input { width: 350px;}
 select { margin-bottom: 10px;}
 
-form#projectForm label { width: 270px;}
-form#projectForm input, form#projectForm textarea { width: 320px;}
+form#projectForm label { width: 180px; margin-right: 15px;}
+form#projectForm input, form#projectForm textarea { width: 395px;}
 
 div#communityTimelineHeader { background: url(/media/images/line_space2.png) left top no-repeat; padding-top:50px;}
 
@@ -373,7 +373,7 @@ p#forgottenPassword { margin-left: 200px; margin-top:30px;}
 h2#accountHeader { float: left; margin-right: 20px;}
 a#accountProfile { padding-top: 3px; display: block;}
 
-ul#projectForm_details { margin-bottom: 30px; border-bottom: solid 1px #c5c3b4; padding-bottom: 30px;}
+ul#projectForm_details, table#linksTable, table#feedsTable { margin-bottom: 30px; border-bottom: solid 1px #c5c3b4; padding-bottom: 30px;}
 div#users_scroll { height: 250px; overflow: auto;}
 
 div#projectModule a.projectName { margin-right: 15px; }
@@ -381,7 +381,14 @@ div#projectModule a.projectEdit { font-size: 90%;}
 div#projectDetail_header a.projectEdit { text-align: right; padding-top: 10px; display: block; padding-right: 10px;}
 div#projectModule li { margin-bottom: 10px;}
 div#ltColumn div#projectDetail_header h2 { float: left; width: 550px;}
+form#projectForm input#tags { float: left; width: 265px; margin-right: 15px;}
+form#projectForm button.addBtn { margin-top: 0px;}
+div#projectTags { margin-left: 195px;}
+div#projectTags li { float: left; margin-right: 15px;}
+a#commonTags_link { margin-bottom: 5px; display: block;}
 
+form#projectForm input.order { width: 40px;}
+form#projectForm table#feedsTable input.title, form#projectForm table#feedsTable input.url { width: 200px; margin-right: 15px;}
 
 /*table*/
 div#users_results { margin-top: 25px; margin-bottom: 25px;}
