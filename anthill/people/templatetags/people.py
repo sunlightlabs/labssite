@@ -42,10 +42,15 @@ def people_skills_piechart(parser, token):
 def people_roles_piechart(parser, token):
     pieces = token.contents.split(None)
     args = pieces[1:]
+    if ':' not in args[0] and 'x' in args[0]:
+        width, height = args[0].split('x')
+        width = int(width)
+        height = int(height)
+        args = args[1:]
     colors = dict(arg.split(':') for arg in args)
     items = Profile.objects.filter(role__in=colors.keys()).values('role').annotate(num=Count('id'))
     for item in items:
         item['name'] = name = item.pop('role')
         item['color'] = colors[name]
-    return PiechartNode(items)
+    return PiechartNode(items, width, height)
 
