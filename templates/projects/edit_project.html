@@ -5,7 +5,7 @@
 {% js "fancytags.js" %}
 <script type="text/javascript">
     $(document).ready(function() {
-        fancytags('#id_skills');
+        fancytags('#id_tags');
     });
 </script>
 {% endblock %}
@@ -21,12 +21,12 @@
                 {% for field in project_form %}
                 <li> {{ field.label_tag }} {{ field }}
 
-                {% ifequal field.name "skills" %}
+                {% ifequal field.name "tags" %}
                     <div id="fancy_tags_widget">
                         <a id="commonTags_link" href="#">Show Common Tags List</a>
                         <input id="tags" type="text" maxlength="30" />
                         <button class="addBtn">
-                            <span>Add Skill</span>
+                            <span>Add Tag</span>
                         </button>
                         <div id="projectTags">
                             <ul> </ul>
@@ -47,7 +47,6 @@
                         <th>Link Name</th>
                         <th>URL</th>
                         <th>Type</th>
-                        <th class="links_order">Order</th>
                         <th>Delete?</th>
                     </tr>
                 </thead>

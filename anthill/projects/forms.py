@@ -6,7 +6,7 @@ from anthill.projects.models import Project, Link, Role
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
-        fields = ['slug', 'name', 'description', 'skills']
+        fields = ['slug', 'name', 'description', 'tags']
 
 class FeedForm(forms.Form):
     id = forms.IntegerField(required=False, widget=forms.HiddenInput())

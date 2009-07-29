@@ -15,7 +15,7 @@ class Project(models.Model):
     description = MarkupField(default_markup_type='markdown')
     official = models.BooleanField(default=False)
     creation_date = models.DateTimeField(auto_now_add=True)
-    skills = TagField('list of skills used/required on this project')
+    tags = TagField('Tags')
 
     lead = models.ForeignKey(User, related_name='projects_lead_on')
     members = models.ManyToManyField(User, through='Role')
@@ -53,21 +53,20 @@ class Role(models.Model):
             self.project.lead = self.user
             self.project.save()
 
-SOURCE_LINK, DOCS_LINK, DOWNLOAD_LINK, SITE_LINK = range(4)
+SITE_LINK, SOURCE_LINK, DOCS_LINK, DOWNLOAD_LINK = range(4)
 LINK_TYPES = (
+    (SITE_LINK, 'website'),
     (SOURCE_LINK, 'source'),
     (DOCS_LINK, 'documentation'),
     (DOWNLOAD_LINK, 'download'),
-    (SITE_LINK, 'website'),
 )
 
 class Link(models.Model):
     name = models.CharField(max_length=100)
     url = models.URLField()
     link_type = models.PositiveSmallIntegerField(choices=LINK_TYPES)
-    order = models.PositiveSmallIntegerField()
 
     project = models.ForeignKey(Project, related_name='links')
 
     class Meta:
-        ordering = ['order']
+        ordering = ['link_type']
