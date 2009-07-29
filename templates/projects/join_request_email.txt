@@ -1,0 +1,16 @@
+{% load people %}
+
+{{role.user}} has submitted a request to join your project, {{project}}, on sunlightlabs.com.
+
+
+{{role.user}} writes:
+{{role.message}}
+
+
+
+You may opt to view {% possessive role.user %} profile page: http://sunlightlabs.com{{role.user.get_absolute_url}} or ignore the request.
+
+To accept this request, login at http://sunlightlabs.com{% url edit_project project.slug %} and change {% possessive role.user %}.
+
+----
+This email was sent via sunlightlabs.com, to report abuse please email admin@sunlightlabs.com
