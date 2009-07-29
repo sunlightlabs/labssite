@@ -1,7 +1,11 @@
+make table sortable
+opt-in checkbox on signup
+pagination on search results
 common skills list
 subscribe to comments
 test judgeforamerica
 implement openid + clickpass
+official/other piechart: sunlight: #bf920b / other: #bfc7ba
 
 audit:
     test email
@@ -9,3 +13,9 @@ audit:
     add caching tags
     add titles
     first names instead of usernames
+
+release:
+    markupfield
+    anthill
+    popular
+    
