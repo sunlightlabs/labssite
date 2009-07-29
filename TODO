@@ -2,9 +2,9 @@ blogdor:
     subscribe to comments
 projects:
     projects/join_request_email.txt
-    text for when milestones are blank
 users:
     show current avatar on edit profile page
+    if users > 10, make scrollable
     fancy skills widget
     size of the map on the users page to 198x210
     implement openid + clickpass

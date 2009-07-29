@@ -54,16 +54,15 @@
             </ul>
         </div>
 
+        {# TODO: change if feed can be populated from non-subscription sources #}
+        {% if project.subscriptions.count %}
         <div id="timeline">
-            <h3>Milestones</h3>
-			{% if project.slug %}
-	            <ul id="projectTimeline" class="leftTimeline">
-	                {% render_feed project.slug 10 %}
-	            </ul>
-			{% else %}
-				<p>There are currently no milestones.</p>
-			{% endif %}
+            <h3>News</h3>
+            <ul id="projectTimeline" class="leftTimeline">
+                {% render_feed project.slug 10 %}
+            </ul>
         </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
