@@ -14,6 +14,11 @@ $(function() {
            success: function(data, textStatus) {
                 // toggle display on success
                 link.parent().toggleClass('voted');
+                if(link.text() == 'Vote') {
+                    link.text('Voted');
+                } else {
+                    link.text('Vote');
+                }
 
                 // update # of votes
                 data = eval( '(' + data + ')' );

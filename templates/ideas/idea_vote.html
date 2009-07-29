@@ -3,8 +3,8 @@
         <a class="vote_link" href="{% url vote_up idea.id %}">Vote</a>
 {% else %}
     <div class="voteBox voted">
-        <span>Voted</span>
+        <a class="vote_link" href="{% url unvote idea.id %}">Voted</a>
 {% endif %}
-        <span class="voteTotal">{{idea.score}} Votes</span>
+<span class="voteTotal">{{idea.score}} Vote{{idea.score|pluralize}}</span>
     </div>
 

@@ -3,7 +3,6 @@ test judgeforamerica
 projects/join_request_email.txt
 common skills list
 implement openid + clickpass
-fully test voting
 
 audit:
     test email

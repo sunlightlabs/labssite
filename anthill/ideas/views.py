@@ -57,9 +57,11 @@ def submit_comment(request):
 def vote(request, idea_id, score):
     idea = get_object_or_404(Idea, pk=idea_id)
     score = int(score)
+    score_diff = score
     vote, created = Vote.objects.get_or_create(user=request.user, idea=idea,
                                                defaults={'value':score})
     if not created:
+        score_diff -= vote.value
         vote.value = score
         vote.save()
-    return HttpResponse("{'score':%d}" % (idea.score))
+    return HttpResponse("{'score':%d}" % (idea.score+score_diff))
