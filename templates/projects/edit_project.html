@@ -23,7 +23,7 @@
 
                 {% ifequal field.name "skills" %}
                     <div id="fancy_tags_widget">
-                        <p><a href="#">Show Common Tags List</a></p>
+                        <a id="commonTags_link" href="#">Show Common Tags List</a>
                         <input id="tags" type="text" maxlength="30" />
                         <button class="addBtn">
                             <span>Add Skill</span>
@@ -96,9 +96,11 @@
             <h3>Project Members</h3>
             <table>
                 <thead>
-                    <th>User</th>
-                    <th>Message</th>
-                    <th>Status</th>
+                    <tr id="titles">
+                        <th>User</th>
+                        <th>Message</th>
+                        <th>Status</th>
+                    </tr>    
                 </thead>
                 <tbody>
                 {% for roleform in role_formset.forms %}
