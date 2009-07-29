@@ -53,6 +53,11 @@ class PiechartNode(template.Node):
 def piechart_from_tags(model, token, width=150, height=150):
     pieces = token.contents.split(None)
     args = pieces[1:]
+    if ':' not in args[0] and 'x' in args[0]:
+        width, height = args[0].split('x')
+        width = int(width)
+        height = int(height)
+        args = args[1:]
     tags = dict(arg.split(':') for arg in args)
     ct = ContentType.objects.get_for_model(model).id
     tag_names = tags.keys()
