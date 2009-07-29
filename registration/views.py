@@ -13,6 +13,9 @@ def register(request):
             user = authenticate(username=form.cleaned_data['username'],
                                 password=form.cleaned_data['password1'])
             login(request, user)
+            if form.cleaned_data['email_opt_in']:
+                user.profile.allow_org_emails = True
+                user.profile.save()
             user.message_set.create(message="Thank you for creating an account.  You may now create your profile if you wish.")
             return redirect('edit_profile')
     else:

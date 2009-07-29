@@ -11,12 +11,14 @@ class RegistrationForm(forms.Form):
     email = forms.EmailField(widget=forms.TextInput(attrs=dict(required, 
                                                                maxlength=75)),
                             label='Email')
-    password1 = forms.CharField(widget=forms.PasswordInput(attrs=required, 
+    password1 = forms.CharField(widget=forms.PasswordInput(attrs=required,
                                                            render_value=False),
                                 label='Password')
-    password2 = forms.CharField(widget=forms.PasswordInput(attrs=required, 
+    password2 = forms.CharField(widget=forms.PasswordInput(attrs=required,
                                                            render_value=False),
                                 label='Confirm Password')
+    email_opt_in = forms.BooleanField(label='Recieve Updates about Sunlight',
+                                      required=False)
 
     banned_names = ['admin']
 
