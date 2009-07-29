@@ -28,6 +28,12 @@ def possessive(user):
 def num_registered_users():
     return Profile.objects.all().count()
 
+@register.simple_tag
+def static_google_map(person, width=200, height=200, zoom=12):
+    base_url = 'http://maps.google.com/staticmap?markers=%(lat)s,%(long)s&zoom=%(zoom)s&size=%(width)sx%(height)s'
+    return base_url % {'lat':person.lat_long.x, 'long':person.lat_long.y,
+                       'width': width, 'height': height, 'zoom': zoom}
+
 @register.tag
 def people_skills_piechart(parser, token):
     return piechart_from_tags(Profile, token)
