@@ -138,7 +138,8 @@ div#advancedSearch{ border-top: 1px solid #c4bdbd; padding-top: 20px; margin-top
 
 div.voteBox { background: url(/media/images/voteBox_bg.png) top left no-repeat; width: 62px; height: 82px; float: left;}
 div.voted { background: url(/media/images/votedBox_bg.png); }
-div.voteBox a { width: 62px; height: 22px; display: block; text-align: center; font-weight: bold; text-transform: uppercase; font-size: 145%; padding-top: 35px; text-decoration: none; padding-right:2px;}
+div.voteBox a { width: 62px; height: 22px; display: block; text-align: center; font-weight: bold; text-transform: uppercase; font-size: 145%; padding-top: 35px; text-decoration: none; padding-right:2px; padding-bottom: 2px;}
+div#ltColumn div.voted a { font-size: 130%; font-style: oblique; padding-top: 25px; color: #636466; text-transform: none; padding-bottom: 12px;}
 div.voteBox span { font-size: 85%; font-style: oblique; padding-right: 2px; text-align: center; width: 62px; display: block; color: #636466; }
 div.ideaContent{ margin-left: 85px;}
 
@@ -159,6 +160,7 @@ a#allSubmitted { display: block; text-align: center; font-size: 140%; padding-to
 
 
 ol, div.ideaContent ol, div.projectContent ol, div#eventDetails ol, div#event_howtohold ol { list-style-type: decimal; padding-left: 40px;}
+div.ideaContent ol li, div.projectContent ol li, div#eventDetails ol li, div#event_howtohold ol li { margin-bottom: 5px;}
 div#rtColumn ol { color: #184259; font-size: 300%; font-weight: bold;}
 ol li{ margin-bottom: 20px;}
 
@@ -281,7 +283,8 @@ div#tags li { float: left; margin-right: 10px; font-style: oblique;}
 div#blog_detail img{ border: 3px solid #bfc8ba; margin-bottom: 20px;}
 div#blog_detail img.fullimage { margin: 0 auto 20px; display: block; }
 div#blog_detail img.detailimage { float: left; margin-right: 20px;}
-div#blog_detail ul, div.ideaContent ul, div.projectContent ul, div#eventDetails ul, div#event_howtohold ul, div#projectDescription ul { list-style-type: disc; padding-left:40px;}
+div#blog_detail ul, div.ideaContent ul, div.projectContent ul, div#eventDetails ul, div#event_howtohold ul, div#projectDescription ul, div#apps_content ul { list-style-type: disc; padding-left:40px;}
+div#blog_detail ul li, div.ideaContent ul li, div.projectContent ul li, div#eventDetails ul li, div#event_howtohold ul li, div#projectDescription ul li, div#apps_content ul li { margin-bottom: 5px;}
 
 textarea#id_message { width: 600px;}
 
@@ -374,7 +377,6 @@ h2#accountHeader { float: left; margin-right: 20px;}
 a#accountProfile { padding-top: 3px; display: block;}
 
 ul#projectForm_details, table#linksTable, table#feedsTable { margin-bottom: 30px; border-bottom: solid 1px #c5c3b4; padding-bottom: 30px; display: block;}
-div#users_scroll { height: 250px; overflow: auto;}
 
 div#projectModule a.projectName { margin-right: 15px; }
 div#projectModule a.projectEdit { font-size: 90%;}
@@ -395,14 +397,15 @@ form#projectForm table#feedsTable input#id_links {text-align: center;}
 /*table*/
 div#users_results { margin-top: 25px; margin-bottom: 25px;}
 table { width: 605px; line-height: 18px; }
+table#users_table { width: 620px;}
+table#users_table tbody td { padding-top:5px; padding-bottom:5px;}
 tr { height: 25px;}
 tr.odd { background-color: #fff; padding: 5px; }
 tr.even { padding: 5px;  }
 tr#titles th { color: #403030; text-transform: uppercase; font-weight: bold; padding-bottom: 10px;}
-th#title_name{ padding-left: 10px;}
-.table_right { text-align: right; padding-right: 10px; width: 80px;}
+.table_right { text-align: right; padding-right: 10px; width: 50px;}
 .table_left { width: 120px; padding-right: 15px; padding-left: 10px;}
-.table_center { text-align: center;}
+.table_center { text-align: left;}
 .table_position { width: 120px; padding-right: 15px;}
 
 table#linksTable input.name, table#linksTable input.url{ width: 175px; display: block; margin-right: 15px;}
@@ -412,6 +415,8 @@ table#linksTable { width: 608px;}
 select.status { margin-top: 10px;}
 .member_message { width: 395px; padding-right: 15px;}
 table#projectMembers tbody td{ padding-top:5px; padding-bottom:5px;}
+
+th.sort { background: url(/media/images/sortArrows.png) left 2px no-repeat; text-align: left; padding-left: 15px;}
 
 /*buttons*/
 button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
