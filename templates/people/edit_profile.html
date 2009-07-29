@@ -10,7 +10,12 @@
         <p class="tip">Let the labs community know more about you.</p>
         <form id="accountForm" method="POST" action="." enctype="multipart/form-data">
             <ul>
-                {{ form.as_ul }}
+                {% for field in form %}
+                    {% ifequal field.name "photo" %}
+                    <li><label>Current Avatar</label> <img src="{{user.photo|default:"/media/images/avatar_male.jpg"}}"></li>
+                    {% endifequal %}
+                    <li>{{field.label_tag}} {{field}} </li>
+                {% endfor %}
                 <!-- <li>
                     <label>Skills</label>
                     <p><a href="#">Show Common Skills List</a></p>

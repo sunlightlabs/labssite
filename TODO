@@ -1,15 +1,13 @@
-blogdor:
-    subscribe to comments
-projects:
-    projects/join_request_email.txt
-users:
-    show current avatar on edit profile page
-    fancy skills widget
-    implement openid + clickpass
-other:
-    caching
-    titles
-    test judgeforamerica
-    first names instead of usernames
-    add redirect from /contests/ to latest contest
+subscribe to comments
+test judgeforamerica
+projects/join_request_email.txt
+fancy skills widget
+implement openid + clickpass
+fully test voting
 
+audit:
+    test email
+    reduce #queries
+    add caching tags
+    add titles
+    first names instead of usernames
