@@ -29,7 +29,11 @@
 {% if searched %}
     <div id="users_results" class="module">
         <h3>{{search_results|length}} Results</h3>
+
+        {# i'm quite sorry for this -james #}
+        {% if search_results.10 %}
         <div id="users_scroll">
+        {% endif %}
            <table id="users_table">
             <thead>
                 <tr id="titles">
@@ -53,8 +57,11 @@
                 </tr>
                 {% endfor %}
             </tbody>
-           </table>
-       </div>  
+        </table>
+        {% if search_results.10 %}
+        </div>  
+        {% endif %}
+
     </div>
 {% endif %}
 </div>
