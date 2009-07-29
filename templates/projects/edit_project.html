@@ -67,8 +67,8 @@
             </table>
 
             {{ feed_formset.management_form }}
-            <h3>Feeds</h3>
-            <p class="tip">Feeds listed here will populate the activity portion of your project page</p>
+            <h3 class="h3tip">News Feed</h3>
+            <p class="tip">Update the community on the progress you and your team have made on {{project}}.</p>
             <table id="feedsTable">
                 <thead>
                     <tr id="titles">
@@ -95,20 +95,21 @@
 
 
             {{ role_formset.management_form }}
-            <h3>Project Members</h3>
-            <table>
+            <h3 class="h3tip">Project Members</h3>
+            <p class="tip">Add and keep track of community members who have requested to become part of {{project}}.</p>
+            <table id="projectMembers">
                 <thead>
                     <tr id="titles">
-                        <th>User</th>
-                        <th>Message</th>
+                        <th class="member_left">User</th>
+                        <th class="member_message">Message</th>
                         <th>Status</th>
                     </tr>    
                 </thead>
                 <tbody>
                 {% for roleform in role_formset.forms %}
-                <tr>
-                    <td> {{roleform.instance.user}} </td>
-                    <td> {{roleform.instance.message}} </td>
+                <tr class="{% cycle 'odd' 'even' %}">
+                    <td class="member_left"> <a href="{{ up.user.get_absolute_url }}">{{roleform.instance.user}}</a> </td>
+                    <td class="member_message">{{roleform.instance.message}}</td>
                     {% for field in roleform %}
                     <td>
                         {{ field }}
@@ -119,8 +120,8 @@
                 </tbody>
             </table>
 
-            <button class="submitBtn">
-                <span>Submit</span>
+            <button class="updateProjectBtn">
+                <span>Update Project Details</span>
             </button>
         </form>
     </div>
