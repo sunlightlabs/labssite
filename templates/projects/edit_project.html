@@ -1,4 +1,14 @@
 {% extends "ideas/base.html" %}
+{% load media %}
+
+{% block extrahead %} 
+{% js "fancytags.js" %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        fancytags('#id_skills');
+    });
+</script>
+{% endblock %}
 
 {% block content %}
 <div id="join_project" class="module">
@@ -8,7 +18,25 @@
     <div class="module">
         <form id="projectForm" method="POST" action=".">
             <ul id="projectForm_details">
-                {{ project_form.as_ul }}
+                {% for field in project_form %}
+                <li> {{ field.label_tag }} {{ field }}
+
+                {% ifequal field.name "skills" %}
+                    <div id="fancy_tags_widget">
+                        <p><a href="#">Show Common Tags List</a></p>
+                        <input id="tags" type="text" maxlength="30" />
+                        <button class="addBtn">
+                            <span>Add Skill</span>
+                        </button>
+                        <div id="projectTags">
+                            <ul> </ul>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                {% endifequal %}
+
+                </li>
+                {% endfor %}
             </ul>
 
             {{ link_formset.management_form }}
