@@ -39,7 +39,15 @@
             </form>-->
             <form id="standard_signupForm" method="post" action=".">
                 <ul>
-                    {{ form.as_ul }}
+                    {% for field in form %}
+                        {% ifequal field.name "email_opt_in" %}
+                        <li class="email_opt_in">
+                            {{ field }} {{ field.label_tag }}
+                        </li>
+                        {% else %}
+                            <li> {{ field.label_tag }} {{ field }} </li>
+                        {% endifequal %}
+                    {% endfor %}
                     <button class="signupBtn">
                         <span>Join Us!</span>
                     </button>
