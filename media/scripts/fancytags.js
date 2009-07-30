@@ -47,7 +47,7 @@ fancytags = function(tag_input_selector, options) {
         event.preventDefault();
         var new_tag = jQuery(add_tag_box_selector).val();
         if(new_tag) {
-            new_tag.replace(settings.illegal_char_regex, '');
+            new_tag = new_tag.replace(settings.illegal_char_regex, '');
             jQuery(add_tag_box_selector).val('');
             add_tag_li(new_tag);
             make_deletes_clickable();
@@ -56,14 +56,18 @@ fancytags = function(tag_input_selector, options) {
     });
 
     // convert input to list
-    var tags = tag_input.val().split(settings.separator);
-    for(var i=0; i < tags.length; ++i) {
-        add_tag_li(tags[i]);
+    var cur_tags = tag_input.val();
+    if(cur_tags) {
+        var tags = cur_tags.split(settings.separator);
+        for(var i=0; i < tags.length; ++i) {
+            add_tag_li(tags[i]);
+        }
     }
 
-    // hide list and show 
+
+    // hide list and show
     tag_input.hide();
-    $(settings.fancy_tag_div).show();
+    //$(settings.fancy_tag_div).show();
 
     make_deletes_clickable();
 };
