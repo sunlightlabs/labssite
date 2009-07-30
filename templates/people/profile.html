@@ -2,6 +2,7 @@
 {% load blog %}
 {% load people %}
 {% load twitter_tags %}
+{% load media %}
 
 {% block content %}
 <div id="person" class="module">
@@ -33,6 +34,18 @@
 
                 <dt>Skills:</dt>
                 <dd>{{p_user.profile.skills|default:"n/a"}}</dd>
+                
+                <dt>Badges:</dt>
+                <dd class="badge"><img alt="Sunlight Labs Employee" title="Sunlight Labs Employee" src="{% media_url %}/images/icon_sunlightlabsEmployee.png"/></dd>
+                <dd class="badge"><img alt="Sunlight Project Contributor" title="Sunlight Project Contributor" src="{% media_url %}/images/icon_contributedProject.png"/></dd>
+                <dd class="badge"><img alt="Transparency Hero" title="Transparency Hero" src="{% media_url %}/images/icon_transparencyHero.png"/></dd>
+                <dd class="badge"><img alt="Completed a Project" title="Completed a Project" src="{% media_url %}/images/icon_completedProject.png"/></dd>
+                <dd class="badge"><img alt="Organized an Event" title="Organized an Event" src="{% media_url %}/images/icon_heldEvent.png"/></dd>
+                <dd class="badge"><img alt="Lead a Project" title="Lead a Project" src="{% media_url %}/images/icon_leadProject.png"/></dd>
+                <dd class="badge"><img alt="1st Place for Apps For America" title="1st Place for Apps For America" src="{% media_url %}/images/icon_apps1.png"/></dd>
+                <dd class="badge"><img alt="2nd Place for Apps For America" title="2nd Place for Apps For America" src="{% media_url %}/images/icon_apps2.png"/></dd>
+                <dd class="badge"><img alt="3rd Place for Apps For America" title="3rd Place for Apps For America" src="{% media_url %}/images/icon_apps3.png"/></dd>
+                <div class="clear"></div>
             </dl>
             <p>
             {{p_user.profile.about}}

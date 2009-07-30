@@ -6,7 +6,11 @@
 {% block content %}
 
 <div id="featureBox_wrapper">
+    {% if not user.is_authenticated %}
     <div id="featureBox">
+    {% else %}
+    <div class="news_feature" id="featureBox">
+    {% endif %}
 {% if not user.is_authenticated %}
         <h2>We're Opening America's Government</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices.</p>
@@ -34,19 +38,20 @@
 
 {% block sidebar %}
 <h3 class="space">Active Projects</h3>
-<div class="module">
+<div id="activeProject_list" class="module">
     {% get_active_projects 3 as active_projects %}
     <ul>
         {% for project in active_projects %}
-            <li> 
             {% if project.official %}
-                <a class="sunlightProject" href="{{ project.get_absolute_url }}"> {{project}} </a>
+                <li class="sunlightProject"> 
             {% else %}
-                <a href="{{ project.get_absolute_url }}"> {{project}} </a>
+                <li> 
             {% endif %}
+                <a href="{{ project.get_absolute_url }}"> {{project}} </a>
             </li>
         {% endfor %}
     </ul>
+    <a class="center_viewall" href="/projects/all/">View All Active Projects »</a>
 </div>
 <hr></hr>
 <h3 class="space">What's Happening In The Labs Community</h3>

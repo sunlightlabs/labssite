@@ -35,8 +35,9 @@ div#featureBox { position: relative; margin: 0 10px 0 0; width: 94%; height: 94%
 div#featureBox_wrapper{ background: url(../images/feature_bg.png) bottom right no-repeat; padding: 0 10px 1px 0; margin: 0 10px 30px 15px;}
 div#ltColumn div#featureBox p{ float: left; width: 450px; margin-bottom: 25px;}
 div#featureBox a{ float: right; }
+div#ltColumn div.news_feature { padding: 20px; width:95%;}
 
-div#ltColumn div#alertBox h3{ margin: 0;}
+div#ltColumn div#alertBox h3{ margin: 0; font-size: 165%;}
 
 div#nav{ background: url(../images/nav_bg.png) bottom right no-repeat; width: 544px; height: 65px; float: right; margin-top: 50px;}
 div#pageNav li{ float: left; margin-right: 15px;}
@@ -422,6 +423,20 @@ th.sort { background: url(../images/sortArrows.png) left 2px no-repeat; text-ali
 div#ltColumn form#standard_signupForm input#id_email_opt_in{ margin-right: 5px; display: block; float: left;  }
 div#ltColumn form#standard_signupForm li.email_opt_in { margin-left: 200px; padding-bottom: 20px;}
 div#ltColumn form#standard_signupForm li.email_opt_in label { font-size: 95%; font-weight: normal; font-style: oblique; width: 350px; padding-top: 2px;}
+
+div#activeProject_list a { font-size: 120%; }
+div#activeProject_list li { margin-bottom: 15px; padding-left: 30px; padding-top:2px;}
+div#activeProject_list li.sunlightProject { background: url(../images/icon_sunlightSm.png) left top no-repeat;}
+div#activeProject_list a.center_viewall {font-size: 100%; margin-top: 30px;}
+
+div#commonTags_wrapper { background: #d9d5d0; margin-left: 200px; padding: 15px; margin-bottom: 15px; -moz-border-radius: 3px; -webkit-border-radius: 3px;}
+div#ltColumn div.commonProject_tags { margin-left: 195px;}
+div#commonTags_wrapper p.tip { margin-bottom: 15px;}
+div#commonTags_wrapper li.common_tag { float: left; margin-right: 15px;}
+div#eventMetaData { margin-bottom: 20px;}
+
+div#userDetails dd { padding-bottom: 2px; margin-left:60px;}
+div#ltColumn div#userDetails dd.badge { float: left; margin-right: 15px; margin-left: 0px;}
 
 /*buttons*/
 button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}

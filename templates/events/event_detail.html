@@ -7,21 +7,23 @@
     </div>
     <div id="eventDetails" class="module">
         <!-- here is all of the data that the template has -->
-		<dl>
-			<dt>Start Date:</dt>
-			<dd>{{ event.start_date|date}}</dd>
-			
-			<dt>End Date:</dt>
-			<dd>{{ event.end_date|date}}</dd>
-			<div class="clear"></div>
-			
-			<dt>Location:</dt>
-			<dd>{{ event.location }}</dd>
-			
-			<dt>URL:</dt>
-			<dd>{{ event.url|urlize }}</dd>
-			<div class="clear"></div>
-		</dl>
+        <div id="eventMetaData">
+        	<dl>
+        		<dt>Start Date:</dt>
+        		<dd>{{ event.start_date|date}}</dd>
+		
+        		<dt>End Date:</dt>
+        		<dd>{{ event.end_date|date}}</dd>
+        		<div class="clear"></div>
+		
+        		<dt class="eventLocation">Location:</dt>
+        		<dd class="eventLocation">{{ event.location }}</dd>
+		
+        		<dt>URL:</dt>
+        		<dd>{{ event.url|urlize }}</dd>
+        	</dl>
+        	<div class="clear"></div>
+		</div>
         {{ event.description }}
         <a href="{{event.creator.get_absolute_url}}">{{ event.creator.firstname }}</a>
     </div>

@@ -1,3 +1,7 @@
 div#ltColumn form#standard_signupForm li.email_opt_in input#id_email_opt_in, div#subscribe input{ width: 20px; border: none; background: none;}
 form#standard_signupForm button.signupBtn { margin-left: 0px;}
 div#labsTwitter { height: 165px;}
+span.categoryTotal { float: right;}
+dt.eventLocation { clear: left;}
+div#eventMetaData dd { display: block; float: left; padding-bottom: 1px;}
+div#eventMetaData dt { display: block;  float: left; }
