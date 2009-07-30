@@ -1,11 +1,23 @@
 {% extends "ideas/base.html" %}
 {% load media %}
+{% load tagging_tags %}
 
 {% block extrahead %} 
 {% js "fancytags.js" %}
 <script type="text/javascript">
     $(document).ready(function() {
-        fancytags('#id_tags');
+        var ftctl = fancytags('#id_tags');
+
+        $('.common_tag a').click(function(event) {
+            event.preventDefault();
+            ftctl.add_tag(($(this).text()));
+        });
+
+        $('#show_common_tags').click(function(event) {
+            event.preventDefault();
+            $('#common_tags').toggle();
+        });
+        $('#common_tags').hide();
     });
 </script>
 {% endblock %}
@@ -23,13 +35,19 @@
 
                 {% ifequal field.name "tags" %}
                     <div id="fancy_tags_widget">
-                        <a id="commonTags_link" href="#">Show Common Tags List</a>
+                        <p><a id="show_common_tags" href="#">Show Common Tags List</a></p>
+                        <ul id="common_tags">
+                            {% tag_cloud_for_model projects.Project as used_tags with min_count=3 %}
+                            {% for tag in used_tags %}
+                            <li class="common_tag"><a href="#">{{tag}}</a></li>
+                            {% endfor %}
+                        </ul>
                         <input id="tags" type="text" maxlength="30" />
                         <button class="addBtn">
                             <span>Add Tag</span>
                         </button>
                         <div id="projectTags">
-                            <ul> </ul>
+                            <ul class="tag_buttons"> </ul>
                             <div class="clear"></div>
                         </div>
                     </div>
