@@ -1,11 +1,23 @@
 {% extends "registration/base.html" %}
 {% load media %}
+{% load tagging_tags %}
 
 {% block extrahead %} 
 {% js "fancytags.js" %}
 <script type="text/javascript">
     $(document).ready(function() {
-        fancytags('#id_skills');
+        var ftctl = fancytags('#id_skills');
+
+        $('.common_tag a').click(function(event) {
+            event.preventDefault();
+            ftctl.add_tag(($(this).text()));
+        });
+
+        $('#show_common_tags').click(function(event) {
+            event.preventDefault();
+            $('#common_tags').toggle();
+        });
+        $('#common_tags').hide();
     });
 </script>
 {% endblock %}
@@ -29,13 +41,19 @@
 
                     {% ifequal field.name "skills" %}
                         <div id="fancy_tags_widget">
-                            <p><a href="#">Show Common Skills List</a></p>
+                            <p><a id="show_common_tags" href="#">Show Common Skills List</a></p>
+                            <ul id="common_tags">
+                                {% tag_cloud_for_model people.Profile as used_tags with min_count=3 %}
+                                {% for tag in used_tags %}
+                                <li class="common_tag"><a href="#">{{tag}}</a></li>
+                                {% endfor %}
+                            </ul>
                             <input id="skills" type="text" maxlength="30" />
                             <button class="addBtn">
                                 <span>Add Skill</span>
                             </button>
                             <div id="yourSkills">
-                                <ul> </ul>
+                                <ul class="tag_buttons"> </ul>
                                 <div class="clear"></div>
                             </div>
                         </div>

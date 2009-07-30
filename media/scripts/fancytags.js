@@ -6,7 +6,8 @@
  *
  * 0.1 - July 29 2009
  */
-fancytags = function(tag_input_selector, options) {
+
+var fancytags = function (tag_input_selector, options) {
     var settings = jQuery.extend({
         fancy_tags_div: '#fancy_tags_widget',
         separator: ', ',
@@ -14,7 +15,7 @@ fancytags = function(tag_input_selector, options) {
     }, options);
 
     // derived selectors
-    var tag_list_selector = settings.fancy_tags_div + ' ul';
+    var tag_list_selector = settings.fancy_tags_div + ' ul.tag_buttons';
     var tag_button_selector = settings.fancy_tags_div + ' button';
     var add_tag_box_selector = settings.fancy_tags_div + ' input';
 
@@ -42,16 +43,20 @@ fancytags = function(tag_input_selector, options) {
         });
     }
 
-    // made tag button work as expected
+    var add_tag = function(tag) {
+        add_tag_li(tag);
+        make_deletes_clickable();
+        rebuild_tag_input();
+    }
+
+    // make tag button work as expected
     jQuery(tag_button_selector).click(function(event) {
         event.preventDefault();
         var new_tag = jQuery(add_tag_box_selector).val();
         if(new_tag) {
             new_tag = new_tag.replace(settings.illegal_char_regex, '');
             jQuery(add_tag_box_selector).val('');
-            add_tag_li(new_tag);
-            make_deletes_clickable();
-            rebuild_tag_input();
+            add_tag(new_tag);
         }
     });
 
@@ -64,10 +69,14 @@ fancytags = function(tag_input_selector, options) {
         }
     }
 
-
     // hide list and show
     tag_input.hide();
     //$(settings.fancy_tag_div).show();
 
     make_deletes_clickable();
+
+    return {
+        add_tag: add_tag
+    }
 };
+
