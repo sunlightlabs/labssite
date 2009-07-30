@@ -13,84 +13,84 @@ a:active{outline: none; color: #184259}
 
 body{
 	color:#4f4d4d;
-	background: url(/media/images/bg_grid.jpg) top left repeat;
+	background: url(../images/bg_grid.jpg) top left repeat;
 	font-size: 76%;
   	line-height: 20px;
   	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-div#headerWrapper{ background: url(/media/images/bg_repeat2.jpg) top center repeat-x; }
-div#pageMain{ background: url(/media/images/header_bg4.jpg) top center no-repeat; width: 960px; margin: 0 auto; }
+div#headerWrapper{ background: url(../images/bg_repeat2.jpg) top center repeat-x; }
+div#pageMain{ background: url(../images/header_bg4.jpg) top center no-repeat; width: 960px; margin: 0 auto; }
 
 div#header{ height: 223px; margin-bottom: 40px;}
 div#nav li { float: left;}
 
-div#logo{ background: url(/media/images/logo_line.png) top right no-repeat;  width: 360px; height: 116px; float: left; margin-top: 30px; margin-bottom: 43px;}
+div#logo{ background: url(../images/logo_line.png) top right no-repeat;  width: 360px; height: 116px; float: left; margin-top: 30px; margin-bottom: 43px;}
 h1{  width: 293px; height: 104px; }
-h1 a{ background: url(/media/images/logo.png) bottom left no-repeat; width: 293px; height: 104px; text-indent: -9999em; display: block;}
+h1 a{ background: url(../images/logo.png) bottom left no-repeat; width: 293px; height: 104px; text-indent: -9999em; display: block;}
 
 div#featureBox{ background: #fff; border: 1px solid #c7c8ba; padding: 25px; -moz-border-radius: 5px; -webkit-border-radius: 5px; margin-bottom: 50px;}
-div#featureBox h2{ margin-bottom: 20px; background: url(/media/images/feature_header.png) top left no-repeat; width: 323px; height: 83px; text-indent: -9999em;}
+div#featureBox h2{ margin-bottom: 20px; background: url(../images/feature_header.png) top left no-repeat; width: 323px; height: 83px; text-indent: -9999em;}
 div#featureBox { position: relative; margin: 0 10px 0 0; width: 94%; height: 94%; top: -10px; left: -10px;}
-div#featureBox_wrapper{ background: url(/media/images/feature_bg.png) bottom right no-repeat; padding: 0 10px 1px 0; margin: 0 10px 30px 15px;}
+div#featureBox_wrapper{ background: url(../images/feature_bg.png) bottom right no-repeat; padding: 0 10px 1px 0; margin: 0 10px 30px 15px;}
 div#ltColumn div#featureBox p{ float: left; width: 450px; margin-bottom: 25px;}
 div#featureBox a{ float: right; }
 
 div#ltColumn div#alertBox h3{ margin: 0;}
 
-div#nav{ background: url(/media/images/nav_bg.png) bottom right no-repeat; width: 544px; height: 65px; float: right; margin-top: 50px;}
+div#nav{ background: url(../images/nav_bg.png) bottom right no-repeat; width: 544px; height: 65px; float: right; margin-top: 50px;}
 div#pageNav li{ float: left; margin-right: 15px;}
 div#pageNav{ padding-bottom: 15px; width: 960px; height: 20px; padding-left: 5px; font-size:110%; font-weight:bold;}
 
-body.home div#pageNav{ background: url(/media/images/banner_home.png) bottom center no-repeat; }
-body.blog div#pageNav{ background: url(/media/images/banner_blog.png) bottom center no-repeat; }
-body.people div#pageNav{ background: url(/media/images/banner_people.png) bottom center no-repeat; }
-body.projects div#pageNav{ background: url(/media/images/banner_projects.png) bottom center no-repeat; }
-body.about div#pageNav{ background: url(/media/images/banner_about.png) bottom center no-repeat; }
-body.contact div#pageNav{ background: url(/media/images/banner_contact.png) bottom center no-repeat; }
+body.home div#pageNav{ background: url(../images/banner_home.png) bottom center no-repeat; }
+body.blog div#pageNav{ background: url(../images/banner_blog.png) bottom center no-repeat; }
+body.people div#pageNav{ background: url(../images/banner_people.png) bottom center no-repeat; }
+body.projects div#pageNav{ background: url(../images/banner_projects.png) bottom center no-repeat; }
+body.about div#pageNav{ background: url(../images/banner_about.png) bottom center no-repeat; }
+body.contact div#pageNav{ background: url(../images/banner_contact.png) bottom center no-repeat; }
 
 .clear{ clear: both;}
 
 div#ltColumn{ width: 700px; float: left; margin-right: 15px;}
 div#rtColumn{ float: left; width: 245px;}
-div#mainContent {background: url(/media/images/rtColumn_bg.png) top right repeat-y;  width: 960px; margin-top: -49px; padding-top: 45px;}
+div#mainContent {background: url(../images/rtColumn_bg.png) top right repeat-y;  width: 960px; margin-top: -49px; padding-top: 45px;}
 
 div#rtColumn div.module{ margin-left: 25px; }
 div.module{ padding-left: 5px; margin-bottom: 40px;}
 div#nav li a { height: 27px; text-indent: -9999em; display: block; margin-left: 6px; margin-top:20px;}
 
-li#nav_blog a { width: 70px; background: url(/media/images/nav_blog.png) left top no-repeat;}
-li#nav_blog a:hover, body.blog li#nav_blog a { width: 70px; background: url(/media/images/nav_blog.png) left bottom no-repeat;}
+li#nav_blog a { width: 70px; background: url(../images/nav_blog.png) left top no-repeat;}
+li#nav_blog a:hover, body.blog li#nav_blog a { width: 70px; background: url(../images/nav_blog.png) left bottom no-repeat;}
 
-li#nav_people a { width: 88px; background: url(/media/images/nav_people.png) left top no-repeat;}
-li#nav_people a:hover, body.people li#nav_people a{ width: 88px; background: url(/media/images/nav_people.png) left bottom no-repeat;}
+li#nav_people a { width: 88px; background: url(../images/nav_people.png) left top no-repeat;}
+li#nav_people a:hover, body.people li#nav_people a{ width: 88px; background: url(../images/nav_people.png) left bottom no-repeat;}
 
-li#nav_projects a { width: 103px; background: url(/media/images/nav_projects.png) left top no-repeat;}
-li#nav_projects a:hover, body.projects li#nav_projects a{ width: 103px; background: url(/media/images/nav_projects.png) left bottom no-repeat;}
+li#nav_projects a { width: 103px; background: url(../images/nav_projects.png) left top no-repeat;}
+li#nav_projects a:hover, body.projects li#nav_projects a{ width: 103px; background: url(../images/nav_projects.png) left bottom no-repeat;}
 
-li#nav_wiki a { width: 63px; background: url(/media/images/nav_wiki.png) left top no-repeat;}
-li#nav_wiki a:hover{ width: 63px; background: url(/media/images/nav_wiki.png) left bottom no-repeat;}
+li#nav_wiki a { width: 63px; background: url(../images/nav_wiki.png) left top no-repeat;}
+li#nav_wiki a:hover{ width: 63px; background: url(../images/nav_wiki.png) left bottom no-repeat;}
 
-li#nav_about a { width: 79px; background: url(/media/images/nav_about.png) left top no-repeat;}
-li#nav_about a:hover, body.about li#nav_about a { width: 79px; background: url(/media/images/nav_about.png) left bottom no-repeat;}
+li#nav_about a { width: 79px; background: url(../images/nav_about.png) left top no-repeat;}
+li#nav_about a:hover, body.about li#nav_about a { width: 79px; background: url(../images/nav_about.png) left bottom no-repeat;}
 
-li#nav_contact a { width: 99px; background: url(/media/images/nav_contact.png) left top no-repeat;}
-li#nav_contact a:hover, body.contact li#nav_contact a { width: 99px; background: url(/media/images/nav_contact.png) left bottom no-repeat;}
+li#nav_contact a { width: 99px; background: url(../images/nav_contact.png) left top no-repeat;}
+li#nav_contact a:hover, body.contact li#nav_contact a { width: 99px; background: url(../images/nav_contact.png) left bottom no-repeat;}
 
 h2{ color: #1f1313; font-size: 210%;  padding-left: 5px; line-height: 27px;}
-h2.post{ background: url(/media/images/icon_post.png) top left no-repeat; padding: 10px 0 1px 35px; margin-left: 5px;}
-h2.projects{ background: url(/media/images/icon_projects.png) top left no-repeat; padding: 5px 0 1px 35px; margin-left: 5px;}
-h2.ideas{ background: url(/media/images/icon_idea.png) top left no-repeat; padding: 10px 0 1px 35px; margin-left: 5px;}
+h2.post{ background: url(../images/icon_post.png) top left no-repeat; padding: 10px 0 1px 35px; margin-left: 5px;}
+h2.projects{ background: url(../images/icon_projects.png) top left no-repeat; padding: 5px 0 1px 35px; margin-left: 5px;}
+h2.ideas{ background: url(../images/icon_idea.png) top left no-repeat; padding: 10px 0 1px 35px; margin-left: 5px;}
 
-div.contentHeader, .h3line{ background: url(/media/images/header_lines.png) center bottom no-repeat; padding-bottom: 15px; margin-bottom: 20px; width: 700px;}
+div.contentHeader, .h3line{ background: url(../images/header_lines.png) center bottom no-repeat; padding-bottom: 15px; margin-bottom: 20px; width: 700px;}
 div#postTitle{ margin-bottom: 3px;}
 body.projects div.contentHeader, div#headerTip { margin-bottom: 3px;}
 
 div#ltColumn h3{ font-size: 180%; line-height: 24px; margin-bottom: 15px; margin-top: 15px;}
-div#rtColumn h3 { background: url(/media/images/rtcolumn_headerLine.png) bottom center no-repeat; padding-left: 10px; margin-left: 20px; padding-bottom: 8px;}
+div#rtColumn h3 { background: url(../images/rtcolumn_headerLine.png) bottom center no-repeat; padding-left: 10px; margin-left: 20px; padding-bottom: 8px;}
 h3{ font-size: 180%; line-height: 25px; color:#1F1313;} 
 h3.space, div#ltColumn div#createHeader { margin-bottom: 20px;}
-div#ltColumn h3.leftH3 { padding-left: 5px; background: url(/media/images/header_lineShorter.png) bottom left no-repeat; padding-bottom: 10px; margin-bottom: 10px; margin-top: 0px;}
+div#ltColumn h3.leftH3 { padding-left: 5px; background: url(../images/header_lineShorter.png) bottom left no-repeat; padding-bottom: 10px; margin-bottom: 10px; margin-top: 0px;}
 div#ltColumn h3#skillsHeader { margin-top: 0; margin-bottom: 15px;}
 
 div#ltColumn h3#h3Header{ margin-bottom: 0; padding-left: 5px; width: 673px;}
@@ -102,7 +102,7 @@ dl.entryMetadata { margin-bottom: 15px; font-size: 90%; font-style: oblique; col
 /*dd a{ border-right: 1px solid #808285; padding-right: 10px; margin-right: 10px; }*/
 
 p.continueLink{ margin-top: 15px;}
-p.continueLink a, a.viewAll{ font-size: 110%; color: #3d868d; font-style: oblique; font-weight: bold; background: url(/media/images/continue_arrow.png) right 4px no-repeat; padding: 0 20px 0 0; height: 18px;}
+p.continueLink a, a.viewAll{ font-size: 110%; color: #3d868d; font-style: oblique; font-weight: bold; background: url(../images/continue_arrow.png) right 4px no-repeat; padding: 2px 20px 2px 0; height: 18px;}
 div#ltColumn p.arrow { float: none; text-align: center; width: 680px; display: block; padding-right: 0px;}
 
 div#searchContent{ background: #f0f0e5; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 20px; margin-left: 5px; border: 1px solid #d5d2c6; margin-right: 20px;}
@@ -118,7 +118,7 @@ select { margin-bottom: 10px;}
 form#projectForm label { width: 180px; margin-right: 15px;}
 form#projectForm input, form#projectForm textarea { width: 395px;}
 
-div#communityTimelineHeader { background: url(/media/images/line_space2.png) left top no-repeat; padding-top:50px;}
+div#communityTimelineHeader { background: url(../images/line_space2.png) left top no-repeat; padding-top:50px;}
 
 input, textarea { background: #fff; border: 1px solid #c4bdbd; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 5px 5px 6px; margin-bottom: 10px;}
 input#id_location { float: left; margin-right: 10px;}
@@ -131,13 +131,13 @@ form#accountForm textarea { width: 350px;}
 
 div#yourSkills li{ float: left; margin-right: 15px; }
 div#yourSkills { display: block; margin-left: 200px; margin-bottom: 15px;}
-span.delete { text-indent: -9999em; background: url(/media/images/btn_delete.png) left 3px no-repeat; display: block; float: left; width: 11px; height: 15px; padding-left: 5px;}
+span.delete { text-indent: -9999em; background: url(../images/btn_delete.png) left 3px no-repeat; display: block; float: left; width: 11px; height: 15px; padding-left: 5px;}
 
 a#advancedBtn{ float: right; padding-top: 3px;}
 div#advancedSearch{ border-top: 1px solid #c4bdbd; padding-top: 20px; margin-top: 20px;}
 
-div.voteBox { background: url(/media/images/voteBox_bg.png) top left no-repeat; width: 62px; height: 82px; float: left;}
-div.voted { background: url(/media/images/votedBox_bg.png); }
+div.voteBox { background: url(../images/voteBox_bg.png) top left no-repeat; width: 62px; height: 82px; float: left;}
+div.voted { background: url(../images/votedBox_bg.png); }
 div.voteBox a { width: 62px; height: 22px; display: block; text-align: center; font-weight: bold; text-transform: uppercase; font-size: 145%; padding-top: 35px; text-decoration: none; padding-right:2px; padding-bottom: 2px;}
 div#ltColumn div.voted a { font-size: 130%; font-style: oblique; padding-top: 25px; color: #636466; text-transform: none; padding-bottom: 12px;}
 div.voteBox span { font-size: 85%; font-style: oblique; padding-right: 2px; text-align: center; width: 62px; display: block; color: #636466; }
@@ -148,7 +148,7 @@ div#ltColumn p.tip, div#rtColumn p.tip { font-style: oblique; line-height: 18px;
 div#rtColumn p.tip{ margin-bottom: 20px;}
 strong { font-weight: bold;}
 
-div.idea, div.project, dd.endEvent_list{ margin-bottom: 20px; background: url(/media/images/line_space2.png) left bottom no-repeat; padding-bottom: 30px; }
+div.idea, div.project, dd.endEvent_list{ margin-bottom: 20px; background: url(../images/line_space2.png) left bottom no-repeat; padding-bottom: 30px; }
 
 div#process ol span, div#rtColumn li.hentry a.entry-title { font-size: 50%; font-weight: normal; text-transform: uppercase; color: #1f1313;}
 div#rtColumn li.hentry a.entry-title{ margin-bottom: 10px; display: block;}
@@ -164,10 +164,10 @@ div.ideaContent ol li, div.projectContent ol li, div#eventDetails ol li, div#eve
 div#rtColumn ol { color: #184259; font-size: 300%; font-weight: bold;}
 ol li{ margin-bottom: 20px;}
 
-span#mess{ background: url(/media/images/image_mess.png) right bottom no-repeat; padding-right:50px; padding-top:10px;}
-span#ideas{ background: url(/media/images/image_light.png) right top no-repeat; padding:5px 30px 0 0;}
+span#mess{ background: url(../images/image_mess.png) right bottom no-repeat; padding-right:50px; padding-top:10px;}
+span#ideas{ background: url(../images/image_light.png) right top no-repeat; padding:5px 30px 0 0;}
 
-hr{ background: url(/media/images/rtmodule_bar.png) bottom left no-repeat; border: none; height: 10px; margin-left:9px; margin-bottom: 30px;}
+hr{ background: url(../images/rtmodule_bar.png) bottom left no-repeat; border: none; height: 10px; margin-left:9px; margin-bottom: 30px;}
 
 div#leadBox{ -moz-border-radius: 3px; -moz-border-radius: 3px; background: #F0F0E5 none repeat scroll 0 0; border: 1px solid #D5D2C6; padding: 20px; width: 620px; margin-top: 20px;}
 
@@ -175,7 +175,7 @@ div#commentBox { margin-top: 30px; -moz-border-radius: 3px; -webkit-border-radiu
 div#commentBlock img{ float: left;}
 form#comment { margin-right: 10px; width: 24px; height: 55px; margin-left: -1px; float: left; z-index: 2; position: relative;}
 form#comment textarea { -moz-border-radius: 10px; -webkit-border-radius: 10px; width: 480px;}
-div#commentBlock a.userPhoto { display: block; background: url(/media/images/commentArrow.png) right 15px no-repeat; float: left; height: 65px; padding-right: 30px; position: relative; z-index: 99; }
+div#commentBlock a.userPhoto { display: block; background: url(../images/commentArrow.png) right 15px no-repeat; float: left; height: 65px; padding-right: 30px; position: relative; z-index: 99; }
 
 div#subscribe input{ float: left; display: block; margin-right: 10px;}
 div#subscribe { width: 300px; margin-bottom: 20px;}
@@ -186,7 +186,7 @@ ol#comments span.commentMetaDate { font-size: 90%; color: #808285;}
 
 div#ltColumn div.module h3.h3tip { margin-bottom: 5px; margin-top: 35px; }
 
-span.sunlightProject { background: url(/media/images/icon_sunlight.png) top left no-repeat; float: left; text-indent: -9999em; width: 35px; height: 33px;}
+span.sunlightProject { background: url(../images/icon_sunlight.png) top left no-repeat; float: left; text-indent: -9999em; width: 35px; height: 33px;}
 div.projectContent{ padding-left: 50px;}
 
 a#leadParticipant img, div#recentMembers img{ float: left; height: 64px; margin: 0 15px 15px 0;}
@@ -202,14 +202,14 @@ h4#teamHeader { margin-top: 20px;}
 span#metadata { font-size: 90%; color: #808285; text-decoration: none; font-style: oblique; }
 a#leadParticipant { text-decoration: none;}
 
-div#footerMain_top{ background: url(/media/images/footer_mainBottom.png) bottom center no-repeat; width: 960px; margin: 0 auto; height: 372px;}
-div#footerMain{ background: url(/media/images/footer_mainTop.png) top center no-repeat; width: 960px; margin: 0 auto; height: 242px; padding-top: 130px;}
-div#footerWrapper{ background: url(/media/images/footer_repeat2.png) bottom center repeat-x; height: 372px;}
+div#footerMain_top{ background: url(../images/footer_mainBottom.png) bottom center no-repeat; width: 960px; margin: 0 auto; height: 372px;}
+div#footerMain{ background: url(../images/footer_mainTop.png) top center no-repeat; width: 960px; margin: 0 auto; height: 242px; padding-top: 130px;}
+div#footerWrapper{ background: url(../images/footer_repeat2.png) bottom center repeat-x; height: 372px;}
 
 div#footerMain h4 { text-indent: -9999em; display: block; height: 19px; margin-bottom: 20px;}
-h4#labsTwitter_header { background: url(/media/images/footer_followLabs.png) top left no-repeat; width: 328px;}
+h4#labsTwitter_header { background: url(../images/footer_followLabs.png) top left no-repeat; width: 328px;}
 h4#labsEvents_header { width: 113px; height: 19px;}
-h4#labsEvents_header a{ background: url(/media/images/footer_trackUsDown.png) top left no-repeat; width: 113px; text-indent: -9999em; display: block; height: 19px; margin-bottom: 20px;}
+h4#labsEvents_header a{ background: url(../images/footer_trackUsDown.png) top left no-repeat; width: 113px; text-indent: -9999em; display: block; height: 19px; margin-bottom: 20px;}
 div#labsEvents { float: left; width: 305px; padding-left: 160px; padding-right: 15px; height: 170px; margin-bottom: 20px;}
 div#labsEvents li a, div#labsTwitter a{ color: #d8ddd3; }
 div#labsEvents li { margin-bottom: 5px;}
@@ -219,10 +219,9 @@ div#labsTwitter li { width: 210px; float: left; margin-right: 20px;}
 span.tweetMetaAuthor { text-transform: uppercase; color: #535631; font-size: 110%;}
 p.tweetContent { color: #d8ddd3;}
 
-div.foundationLogo { background: url(/media/images/foundationLogo.png) top left no-repeat; text-indent: -9999em; display: block; float: left; width: 83px; height: 38px; margin-left: 15px; margin-right: 20px;}
+div.foundationLogo { background: url(../images/foundationLogo.png) top left no-repeat; text-indent: -9999em; display: block; float: left; width: 83px; height: 38px; margin-left: 15px; margin-right: 20px;}
 div#foundationDetails { padding-top: 8px; color: #a7a9ac;}
-div.adr{ float: left; display: inline; margin-right: 15px; }
-div.phone { padding-top: 21px;}
+div.adr{ display: block; margin-right: 15px; }
 div.street-address { float: left; margin-right: 15px;}
 
 div#personPic { float: left;}
@@ -231,7 +230,7 @@ div#personDetails dd a { float: left; border: none;}
 div#personDetails dl, div#eventDetails dl { line-height: 25px; margin-bottom: 20px;}
 div#eventDetails dt{ width: 70px;}
 
-div#personDetails { margin-left: 85px; background: url(/media/images/line_space_short.png) bottom left no-repeat; padding-bottom: 1px; margin-bottom: 25px;}
+div#personDetails { margin-left: 85px; background: url(../images/line_space_short.png) bottom left no-repeat; padding-bottom: 1px; margin-bottom: 25px;}
 div#personDetails h2 { float: left;}
 div#personProject { float: left; margin-left: 85px; width: 285px; margin-right: 20px;}
 div#sunlightPost{ margin-left: 395px;}
@@ -239,7 +238,7 @@ dd#userWebsite a, div#eventDetails dd{ width: 233px; margin-right: 20px;}
 div#eventDetails dd { float: left;}
 div#userDetails dt, div#eventDetails dt{ padding-top: 1px;}
 
-div#personHeader{ background: url(/media/images/header_lineShort.png) left bottom no-repeat; padding-bottom: 12px; margin-bottom: 20px;}
+div#personHeader{ background: url(../images/header_lineShort.png) left bottom no-repeat; padding-bottom: 12px; margin-bottom: 20px;}
 span#personIdentifier{ font-size: 140%; text-align: right; display: block; padding-top: 4px; padding-right: 10px;}
 div#personHeader a { float: left; padding-left: 10px; padding-top: 3px;}
 
@@ -263,13 +262,13 @@ h2, h3, h4 { font-family: Avenir, Avenir LT std, Helvetica Neue, Helvetica, Aria
 
 div#popularNav li {  float: left; }
 div#popularNav { margin-left: 20px;   }
-div#popularNav ul{ background: url(/media/images/rtcolumn_headerLine.png) left bottom no-repeat; width: 221px; display: block; height: 45px; padding-bottom: 10px; padding-left: 5px; margin-bottom: 15px;}
+div#popularNav ul{ background: url(../images/rtcolumn_headerLine.png) left bottom no-repeat; width: 221px; display: block; height: 45px; padding-bottom: 10px; padding-left: 5px; margin-bottom: 15px;}
 div#popularNav li a { width: 103px; height: 45px; text-indent: -9999em; display: block;}
-li#popular a{ background: url(/media/images/mostPopular.png) top left no-repeat;  margin-right: 5px;}
-li#favorites a{ background: url(/media/images/ourFavorites.png) top left no-repeat; }
+li#popular a{ background: url(../images/mostPopular.png) top left no-repeat;  margin-right: 5px;}
+li#favorites a{ background: url(../images/ourFavorites.png) top left no-repeat; }
 
-li#popular a.active{ background: url(/media/images/mostPopular.png) bottom left no-repeat;  }
-li#favorites a.active{ background: url(/media/images/ourFavorites.png) bottom left no-repeat; }
+li#popular a.active{ background: url(../images/mostPopular.png) bottom left no-repeat;  }
+li#favorites a.active{ background: url(../images/ourFavorites.png) bottom left no-repeat; }
 
 div#popularPosts li, div#favoritePosts li{ margin-bottom: 10px;}
 
@@ -299,7 +298,7 @@ ul#blogCategories { font-size: 110%; line-height: 30px;}
 span.category{ float: left;}
 span.categoryTotal { text-align: right; display: block; padding-right: 10px;}
 
-div.pullQuote { float: right; width: 265px;  border-bottom: 1px solid #c9d2c9; margin: 10px 20px; padding: 20px 10px; background: url(/media/images/line_quote.png) top center no-repeat;}
+div.pullQuote { float: right; width: 265px;  border-bottom: 1px solid #c9d2c9; margin: 10px 20px; padding: 20px 10px; background: url(../images/line_quote.png) top center no-repeat;}
 div#ltColumn div.pullQuote p { text-align: center; font-size: 170%; font-style: oblique; margin: 0; padding: 0; line-height: 26px; color: #a7b3ab;}
 
 a#centered { text-align: center; width: 665px; display: block; font-size:110%; color: #3D868D; font-weight: bold;}
@@ -309,41 +308,41 @@ div#projectDetail div#timeline { width: 490px; padding-right: 30px; margin-top: 
 
 div#ltColumn ul.leftTimeline li{ padding-left: 0;}
 div#timeline{ font-size: 120%;}
-div#timeline li, div.post { background: url(/media/images/line_space2.png) left bottom no-repeat; padding-bottom: 20px; margin-bottom: 10px;}
+div#timeline li, div.post { background: url(../images/line_space2.png) left bottom no-repeat; padding-bottom: 20px; margin-bottom: 10px;}
 div#timeline li { background: none; padding-bottom: 0; margin-bottom: 20px;}
 div.post { padding-bottom: 30px; margin-bottom: 20px;}
 
 div#projectDetail p{ width: 490px;}
 div#projectDetail div#projectDescription { margin-bottom: 20px; }
-div#project_mainDetails { margin-bottom: 20px; background: url(/media/images/line_505.png) bottom left no-repeat; padding-bottom: 30px; float: left;}
+div#project_mainDetails { margin-bottom: 20px; background: url(../images/line_505.png) bottom left no-repeat; padding-bottom: 30px; float: left;}
 
 div#signup_nav li a{ float: left; text-indent: -9999em; width: 103px; height: 45px; margin-bottom: 15px; margin-right: 10px; display: block;}
-li#signup_openid a{ background: url(/media/images/openid.png) top left no-repeat; }
-li#signup_standard a{ background: url(/media/images/standard_signup.png) top left no-repeat; }
-li#signup_openid a.active{ background: url(/media/images/openid.png) bottom left no-repeat; }
-li#signup_standard a.active{ background: url(/media/images/standard_signup.png) bottom left no-repeat; }
+li#signup_openid a{ background: url(../images/openid.png) top left no-repeat; }
+li#signup_standard a{ background: url(../images/standard_signup.png) top left no-repeat; }
+li#signup_openid a.active{ background: url(../images/openid.png) bottom left no-repeat; }
+li#signup_standard a.active{ background: url(../images/standard_signup.png) bottom left no-repeat; }
 
 div#signin_nav li a{ float: left; text-indent: -9999em; width: 103px; height: 45px; margin-bottom: 15px; margin-right: 10px; display: block;}
-li#signin_openid a{ background: url(/media/images/openid.png) top left no-repeat; }
-li#signin_standard a{ background: url(/media/images/standard_signin.png) top left no-repeat; }
-li#signin_openid a.active{ background: url(/media/images/openid.png) bottom left no-repeat; }
-li#signin_standard a.active{ background: url(/media/images/standard_signin.png) bottom left no-repeat; }
+li#signin_openid a{ background: url(../images/openid.png) top left no-repeat; }
+li#signin_standard a{ background: url(../images/standard_signin.png) top left no-repeat; }
+li#signin_openid a.active{ background: url(../images/openid.png) bottom left no-repeat; }
+li#signin_standard a.active{ background: url(../images/standard_signin.png) bottom left no-repeat; }
 
 div#app dt{ font-size: 110%; font-weight: bold; margin: 15px 0 5px 0;}
 
 div#ideaNav ul li { width: 103px; height: 45px; margin-bottom: 30px;}
 div#ideaNav ul li a { text-indent: -9999em; display: block; width: 103px; height: 45px;}
-li#nav_recent a {  background: url(/media/images/mostRecent.png) top left no-repeat;}
-li#nav_popular a { background: url(/media/images/mostPopular.png) top left no-repeat;}
-li#nav_recent a.active {  background: url(/media/images/mostRecent.png) bottom left no-repeat;}
-li#nav_popular a.active { background: url(/media/images/mostPopular.png) bottom left no-repeat;}
+li#nav_recent a {  background: url(../images/mostRecent.png) top left no-repeat;}
+li#nav_popular a { background: url(../images/mostPopular.png) top left no-repeat;}
+li#nav_recent a.active {  background: url(../images/mostRecent.png) bottom left no-repeat;}
+li#nav_popular a.active { background: url(../images/mostPopular.png) bottom left no-repeat;}
 li#nav_popular { float: left;}
 li#nav_recent { margin-left: 130px;}
 
-li.documentation_link a{ background: url(/media/images/iconSm_documentation.png) top left no-repeat; height: 20px; padding: 3px 0 2px 30px;}
-li.website_link a{ background: url(/media/images/iconSm_url.png) top left no-repeat; height: 20px; padding: 3px 0 2px 30px;}
-li.source_link a{ background: url(/media/images/iconSm_source.png) top left no-repeat; height: 20px; padding: 3px 0 2px 30px;}
-li.download_link a{ background: url(/media/images/iconSm_download.png) top left no-repeat; height: 20px; padding: 3px 0 2px 30px;}
+li.documentation_link a{ background: url(../images/iconSm_documentation.png) top left no-repeat; height: 20px; padding: 3px 0 2px 30px;}
+li.website_link a{ background: url(../images/iconSm_url.png) top left no-repeat; height: 20px; padding: 3px 0 2px 30px;}
+li.source_link a{ background: url(../images/iconSm_source.png) top left no-repeat; height: 20px; padding: 3px 0 2px 30px;}
+li.download_link a{ background: url(../images/iconSm_download.png) top left no-repeat; height: 20px; padding: 3px 0 2px 30px;}
 div#project_mainDetails li { margin-bottom: 8px;}
 
 div#userTweets li{ margin-bottom: 25px;}
@@ -352,7 +351,7 @@ div#user_map img { border: 4px solid #BFC8BA;}
 div#map_label { background-color: #BFC8BA; padding: 1px 5px 5px 8px; width: 193px; color: #1F1313;}
 a.center_viewall{ text-align: center; display: block;}
 
-div#rtColumn div#hackathonBox a{ text-indent: -9999em; display: block; width: 215px; height: 103px; background: url(/media/images/holdHackathon_box.png) 3px top no-repeat;}
+div#rtColumn div#hackathonBox a{ text-indent: -9999em; display: block; width: 215px; height: 103px; background: url(../images/holdHackathon_box.png) 3px top no-repeat;}
 div#rtColumn div#hackathonBox { width: 215px; height: 103px; padding-left: 20px; margin-bottom: 20px;}
 
 div#ltColumn div#timeline h3 { margin-bottom: 15px;}
@@ -365,13 +364,13 @@ dd.event_location { margin-bottom: 25px;}
 div#currentEvents dt, div#eventsList dt, div#eventsList dd.event_date { font-size: 140%; margin-bottom: 10px;}
 div#eventsList dt a.eventTitle { float: left; margin-right: 15px;}
 
-div#haveEvent a{ text-indent: -9999em; display: block; width: 215px; height: 103px; background: url(/media/images/haveEvent_box.png) 3px top no-repeat;}
+div#haveEvent a{ text-indent: -9999em; display: block; width: 215px; height: 103px; background: url(../images/haveEvent_box.png) 3px top no-repeat;}
 div#haveEvent { width: 215px; height: 103px; padding-left: 20px; margin-bottom: 20px;}
 
-div#labsAddress { background: url(/media/images/contact_bg.png) top left no-repeat; width: 212px; height: 193px; display: block; text-indent: -9999em;}
+div#labsAddress { background: url(../images/contact_bg.png) top left no-repeat; width: 212px; height: 193px; display: block; text-indent: -9999em;}
 
 div#ltColumn ul#messages_list, div#ltColumn p#instructions { background: #f8f7f0; border: 1px solid #c4bdbd; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 10px; width: 650px; font-size: 110%; margin-right: 0px; margin-bottom: 25px;}
-p#forgottenPassword { margin-left: 200px; margin-top:30px;}
+p#forgottenPassword { margin-left: 200px; margin-top: 30px;}
 
 h2#accountHeader { float: left; margin-right: 20px;}
 a#accountProfile { padding-top: 3px; display: block;}
@@ -393,6 +392,8 @@ form#projectForm input.order { width: 40px;}
 form#projectForm table#feedsTable input.title, form#projectForm table#feedsTable input.url { width: 242px; margin-right: 15px;}
 select.link_type { margin-right: 20px; }
 form#projectForm table#feedsTable input#id_links {text-align: center;}
+
+.errorlist li { font-size: 95%; color: #de4205; font-style: oblique;}
 
 /*table*/
 div#users_results { margin-top: 25px; margin-bottom: 25px;}
@@ -416,71 +417,75 @@ select.status { margin-top: 10px;}
 .member_message { width: 395px; padding-right: 15px;}
 table#projectMembers tbody td{ padding-top:5px; padding-bottom:5px;}
 
-th.sort { background: url(/media/images/sortArrows.png) left 2px no-repeat; text-align: left; padding-left: 15px;}
+th.sort { background: url(../images/sortArrows.png) left 2px no-repeat; text-align: left; padding-left: 15px;}
+
+div#ltColumn form#standard_signupForm input#id_email_opt_in{ margin-right: 5px; display: block; float: left;  }
+div#ltColumn form#standard_signupForm li.email_opt_in { margin-left: 200px; padding-bottom: 20px;}
+div#ltColumn form#standard_signupForm li.email_opt_in label { font-size: 95%; font-weight: normal; font-style: oblique; width: 350px; padding-top: 2px;}
 
 /*buttons*/
 button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
-button.searchBtn { background: url(/media/images/btn_search.png) left top no-repeat; width: 113px; margin-top: 0px;}
-button.advsearchBtn { background: url(/media/images/btn_search.png) left top no-repeat; width: 113px; float: right; margin-top: 20px;}
-button.submitBtn { background: url(/media/images/btn_submit.png) left top no-repeat; width: 113px; }
-a.interestedBtn { background: url(/media/images/btn_interested.png) right bottom no-repeat; width: 148px;  margin: 15px 0;}
-a.learnBtn{ background: url(/media/images/btn_learnmore.png) right bottom no-repeat; width: 140px; }
-button.agreeBtn{ background: url(/media/images/btn_agree.png) right bottom no-repeat; width: 86px; margin-top: 20px;}
-button.leadBtn{ background: url(/media/images/btn_lead.png) right bottom no-repeat; width: 148px; float: left;  margin: 20px 30px 20px 10px;}
-button.helpBtn{ background: url(/media/images/btn_help.png) right bottom no-repeat; width: 171px;  float: left; margin-top: 20px;}
-button.postBtn { background: url(/media/images/btn_post.png) right bottom no-repeat; width: 86px;}
-button.addBtn{ background: url(/media/images/btn_add.png) right bottom no-repeat; width: 113px; margin-bottom: 11px;}
-button.saveBtn{ background: url(/media/images/btn_savechanges.png) right bottom no-repeat; width: 148px; margin: 15px 0 15px 200px; }
-a#joinBtn { background: url(/media/images/btn_joinus.png) right bottom no-repeat; width: 144px; height: 33px; margin-top: 20px; display: block;}
-a#contactBtn { background: url(/media/images/btn_contact.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
-button.joinBtn { background: url(/media/images/btn_join.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
-button.signupBtn { background: url(/media/images/btn_joinus_sm.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
-button.signinBtn { background: url(/media/images/btn_signin.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
-button.submit-send { background: url(/media/images/btn_submit.png) left top no-repeat; width: 113px; margin-left: 200px;}
-button.startnewBtn { background: url(/media/images/btn_startnew.png) left top no-repeat; width: 247px; margin-top: 20px; }
-button#resetPassword { background: url(/media/images/btn_resetpassword.png) left top no-repeat; width: 171px; margin-left: 200px;}
+button.searchBtn { background: url(../images/btn_search.png) left top no-repeat; width: 113px; margin-top: 0px;}
+button.advsearchBtn { background: url(../images/btn_search.png) left top no-repeat; width: 113px; float: right; margin-top: 20px;}
+button.submitBtn { background: url(../images/btn_submit.png) left top no-repeat; width: 113px; }
+a.interestedBtn { background: url(../images/btn_interested.png) right bottom no-repeat; width: 148px;  margin: 15px 0;}
+a.learnBtn{ background: url(../images/btn_learnmore.png) right bottom no-repeat; width: 140px; }
+button.agreeBtn{ background: url(../images/btn_agree.png) right bottom no-repeat; width: 86px; margin-top: 20px;}
+button.leadBtn{ background: url(../images/btn_lead.png) right bottom no-repeat; width: 148px; float: left;  margin: 20px 30px 20px 10px;}
+button.helpBtn{ background: url(../images/btn_help.png) right bottom no-repeat; width: 171px;  float: left; margin-top: 20px;}
+button.postBtn { background: url(../images/btn_post.png) right bottom no-repeat; width: 86px;}
+button.addBtn{ background: url(../images/btn_add.png) right bottom no-repeat; width: 113px; margin-bottom: 11px;}
+button.saveBtn{ background: url(../images/btn_savechanges.png) right bottom no-repeat; width: 148px; margin: 15px 0 15px 200px; }
+a#joinBtn { background: url(../images/btn_joinus.png) right bottom no-repeat; width: 144px; height: 33px; margin-top: 20px; display: block;}
+a#contactBtn { background: url(../images/btn_contact.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
+button.joinBtn { background: url(../images/btn_join.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
+button.signupBtn { background: url(../images/btn_joinus_sm.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
+button.signinBtn { background: url(../images/btn_signin.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
+button.submit-send { background: url(../images/btn_submit.png) left top no-repeat; width: 113px; margin-left: 200px;}
+button.startnewBtn { background: url(../images/btn_startnew.png) left top no-repeat; width: 247px; margin-top: 20px; }
+button#resetPassword { background: url(../images/btn_resetpassword.png) left top no-repeat; width: 171px; margin-left: 200px;}
 form#projectForm button.submitBtn { margin-left: 270px; margin-top: 20px;}
-button.updateProjectBtn { background: url(/media/images/btn_updateProject.png) left top no-repeat; width: 182px; margin-top: 30px;}
+button.updateProjectBtn { background: url(../images/btn_updateProject.png) left top no-repeat; width: 182px; margin-top: 30px;}
 
 /*apps sponsors*/
 div#appsSponsors {padding-right: 15px;}
 div#appsSponsors a { text-indent: -9999em; display: block; margin: 0 auto 30px;}
-a#googleLogo{ background: url(/media/images/logoSponsor_google.png) top center no-repeat; width: 146px; height: 52px;}
-a#gov2Logo{ background: url(/media/images/logoSponsor_gov2.png) top center no-repeat; width: 113px; height: 67px;}
-a#techwebLogo{ background: url(/media/images/logoSponsor_techweb.png) top center no-repeat; width: 155px; height: 50px;}
-a#oreillyLogo{ background: url(/media/images/logoSponsor_oreilly.png) top center no-repeat; width: 143px; height: 27px;}
+a#googleLogo{ background: url(../images/logoSponsor_google.png) top center no-repeat; width: 146px; height: 52px;}
+a#gov2Logo{ background: url(../images/logoSponsor_gov2.png) top center no-repeat; width: 113px; height: 67px;}
+a#techwebLogo{ background: url(../images/logoSponsor_techweb.png) top center no-repeat; width: 155px; height: 50px;}
+a#oreillyLogo{ background: url(../images/logoSponsor_oreilly.png) top center no-repeat; width: 143px; height: 27px;}
 div#appsSponsors a#craignewmark { text-indent: 0; text-align: center; font-size: 200%; font-weight: bold; text-decoration: none; color: #000;}
 
 
 
-ul#labsMembers { background: url(/media/images/gear_bg.png) top left no-repeat; width: 220px;}
+ul#labsMembers { background: url(../images/gear_bg.png) top left no-repeat; width: 220px;}
 ul#labsMembers li{ width: 105px; height: 100px; float: left; margin-top: -20px;}
 ul#labsMembers li a { width: 105px; height: 100px; text-indent: -9999em; display: block;}
 ul#labsMembers li#clay { margin: 20px auto 0; float: none; height: 115px;}
-ul#labsMembers li#clay a{ background: url(/media/images/bot_clay.png) 20px top no-repeat; height: 115px;}
-li#ali a{ background: url(/media/images/bot_ali.png) top left no-repeat;}
-li#david a{ background: url(/media/images/bot_david.png) top left no-repeat;}
-li#eric a{ background: url(/media/images/bot_eric.png) top left no-repeat;}
+ul#labsMembers li#clay a{ background: url(../images/bot_clay.png) 20px top no-repeat; height: 115px;}
+li#ali a{ background: url(../images/bot_ali.png) top left no-repeat;}
+li#david a{ background: url(../images/bot_david.png) top left no-repeat;}
+li#eric a{ background: url(../images/bot_eric.png) top left no-repeat;}
 
 ul#labsMembers li#garrett { height: 115px;}
-ul#labsMembers li#garrett a{ background: url(/media/images/bot_garrett.png) top left no-repeat; height: 115px;}
-li#james a{ background: url(/media/images/bot_james.png) top left no-repeat;}
-li#jeremy a{ background: url(/media/images/bot_jeremy.png) top left no-repeat;}
-li#josh a{ background: url(/media/images/bot_josh.png) top left no-repeat;}
-li#kevin a{ background: url(/media/images/bot_kevin.png) top left no-repeat;}
-li#luigi a{ background: url(/media/images/bot_luigi.png) top left no-repeat;}
-li#luke a{ background: url(/media/images/bot_luke.png) top left no-repeat;}
-li#tim a{ background: url(/media/images/bot_tim.png) top left no-repeat;}
-li#tom a{ background: url(/media/images/bot_tom.png) top left no-repeat;}
-li#kaitlin a{ background: url(/media/images/bot_kaitlin.png) top left no-repeat;}
+ul#labsMembers li#garrett a{ background: url(../images/bot_garrett.png) top left no-repeat; height: 115px;}
+li#james a{ background: url(../images/bot_james.png) top left no-repeat;}
+li#jeremy a{ background: url(../images/bot_jeremy.png) top left no-repeat;}
+li#josh a{ background: url(../images/bot_josh.png) top left no-repeat;}
+li#kevin a{ background: url(../images/bot_kevin.png) top left no-repeat;}
+li#luigi a{ background: url(../images/bot_luigi.png) top left no-repeat;}
+li#luke a{ background: url(../images/bot_luke.png) top left no-repeat;}
+li#tim a{ background: url(../images/bot_tim.png) top left no-repeat;}
+li#tom a{ background: url(../images/bot_tom.png) top left no-repeat;}
+li#kaitlin a{ background: url(../images/bot_kaitlin.png) top left no-repeat;}
 
 ul#labsMembers li.memberRight{ margin-top: 12px;}
 ul#labsMembers li#jeremy { margin-top: 20px;}
 
 div#timeline li { padding-left: 35px; padding-top: 5px;}
-div#timeline li.idea { background: url(/media/images/iconSm_idea.png) left top no-repeat;}
-div#timeline li.project { background: url(/media/images/iconSm_project.png) top left no-repeat;}
-div#timeline li.event { background: url(/media/images/iconSm_event.png) top left no-repeat;}
-div#timeline li.person { background: url(/media/images/iconSm_people.png) top left no-repeat;}
+div#timeline li.idea { background: url(../images/iconSm_idea.png) left top no-repeat;}
+div#timeline li.project { background: url(../images/iconSm_project.png) top left no-repeat;}
+div#timeline li.event { background: url(../images/iconSm_event.png) top left no-repeat;}
+div#timeline li.person { background: url(../images/iconSm_people.png) top left no-repeat;}
 
 body.people div#timeline li { padding-left: 0;}

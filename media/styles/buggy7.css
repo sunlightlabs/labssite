@@ -1,0 +1,3 @@
+div#ltColumn form#standard_signupForm li.email_opt_in input#id_email_opt_in, div#subscribe input{ width: 20px; border: none; background: none;}
+form#standard_signupForm button.signupBtn { margin-left: 0px;}
+div#labsTwitter { height: 165px;}

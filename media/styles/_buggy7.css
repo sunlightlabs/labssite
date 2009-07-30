@@ -1,15 +1,15 @@
 div#header h1 a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/logo2.png", sizingMethod="crop"); }
 
-li#nav_about a{  background: url("/media/images/aboutNav_8.png") top left no-repeat; }
-li#nav_about a:hover {  background: url("/media/images/aboutNav_8.png") bottom left no-repeat; }
-li#nav_projects a{  background: url("/media/images/projectsNav_8.png") top left no-repeat; }
-li#nav_projects a:hover {  background: url("/media/images/projectsNav_8.png") bottom left no-repeat; }
-li#nav_blog a{  background: url("/media/images/blogNav_8.png") top left no-repeat; }
-li#nav_blog a:hover {  background: url("/media/images/blogNav_8.png") bottom left no-repeat; }
-li#nav_wiki a{  background: url("/media/images/wikiNav_8.png") top left no-repeat; }
-li#nav_wiki a:hover{  background: url("/media/images/wikiNav_8.png") bottom left no-repeat; }
-li#nav_contact a{  background: url("/media/images/contactNav_8.png") top left no-repeat; }
-li#nav_contact a:hover, body.contact li#nav_contact a {  background: url("/media/images/contactNav_8.png") bottom left no-repeat; }
+li#nav_about a{  background: url("../images/aboutNav_8.png") top left no-repeat; }
+li#nav_about a:hover {  background: url("../images/aboutNav_8.png") bottom left no-repeat; }
+li#nav_projects a{  background: url("../images/projectsNav_8.png") top left no-repeat; }
+li#nav_projects a:hover {  background: url("../images/projectsNav_8.png") bottom left no-repeat; }
+li#nav_blog a{  background: url("../images/blogNav_8.png") top left no-repeat; }
+li#nav_blog a:hover {  background: url("../images/blogNav_8.png") bottom left no-repeat; }
+li#nav_wiki a{  background: url("../images/wikiNav_8.png") top left no-repeat; }
+li#nav_wiki a:hover{  background: url("../images/wikiNav_8.png") bottom left no-repeat; }
+li#nav_contact a{  background: url("../images/contactNav_8.png") top left no-repeat; }
+li#nav_contact a:hover, body.contact li#nav_contact a {  background: url("../images/contactNav_8.png") bottom left no-repeat; }
 
 body.home h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/featureTitle.png", sizingMethod="crop"); }
 body.blog h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/blogTitle.png", sizingMethod="crop"); }
@@ -26,7 +26,7 @@ div#projectsImage {  background: none; filter: progid:DXImageTransform.Microsoft
 div#aboutImage {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/aboutHeader.png", sizingMethod="crop"); }
 
 div#helpBox {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/helpBox.png", sizingMethod="crop"); }
-div#blog div.entry div.hr {  background: url("/media/images/blogLine_8.png") bottom left no-repeat; }
+div#blog div.entry div.hr {  background: url("../images/blogLine_8.png") bottom left no-repeat; }
 div#blog h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/recentPosts.png", sizingMethod="crop"); width: 124px; margin: 0 auto 20px auto;}
 div#paperEdge {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/paperCorner.png", sizingMethod="crop"); }
 div.readMore a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/readMore.png", sizingMethod="crop"); }
@@ -35,15 +35,15 @@ div#workBox{ background: none; filter: progid:DXImageTransform.Microsoft.AlphaIm
 div.commentsMetaData span.value a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/commentBox.png", sizingMethod="crop"); }
 div#featuredProjects h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/featuredProjects.png", sizingMethod="crop"); }
 div#featuredHeader {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/featureArrow.png", sizingMethod="crop"); }
-div#footerMain h3 {  background: url("/media/images/footerTitle_8.png") bottom left no-repeat; }
+div#footerMain h3 {  background: url("../images/footerTitle_8.png") bottom left no-repeat; }
 
 div#mainContent { zoom: 1; }
 div#workBoxWrapper { margin-left: 517px; }
 div#helpBox a { height: 25px; }
 
-li#data_dumps {  background: url("/media/images/data_icon_8.png") top left no-repeat; }
-li#api {  background: url("/media/images/api_icon_8.png") top left no-repeat; }
-li#open_source {  background: url("/media/images/open_icon_8.png") top left no-repeat; }
+li#data_dumps {  background: url("../images/data_icon_8.png") top left no-repeat; }
+li#api {  background: url("../images/api_icon_8.png") top left no-repeat; }
+li#open_source {  background: url("../images/open_icon_8.png") top left no-repeat; }
 
 li#api h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/APIs_title.png", sizingMethod="crop"); height: 25px;}
 li#open_source h2 {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/media/images/opensource_title.png", sizingMethod="crop"); height: 25px;}

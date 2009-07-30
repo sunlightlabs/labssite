@@ -17,7 +17,7 @@ class RegistrationForm(forms.Form):
     password2 = forms.CharField(widget=forms.PasswordInput(attrs=required,
                                                            render_value=False),
                                 label='Confirm Password')
-    email_opt_in = forms.BooleanField(label='Recieve Updates about Sunlight',
+    email_opt_in = forms.BooleanField(label='Keep me posted about other Sunlight news and information',
                                       required=False)
 
     banned_names = ['admin']

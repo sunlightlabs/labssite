@@ -39,12 +39,16 @@ $(document).ready(function(){
 
     $("li#favorites a").click(function(){
         $("div#popularPosts").hide();
+        $("li#popular a").attr('class', 'inactive');
         $("div#favoritePosts").show();
+        $("li#favorites a").attr('class', 'active');
     });
 
     $("li#popular a").click(function(){
         $("div#favoritePosts").hide();
+        $("li#favorites a").attr('class', 'inactive');
         $("div#popularPosts").show();
+        $("li#popular a").attr('class', 'active');
     });
 
 });

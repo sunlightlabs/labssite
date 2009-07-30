@@ -38,7 +38,13 @@
     {% get_active_projects 3 as active_projects %}
     <ul>
         {% for project in active_projects %}
-            <li> <a href="{{ project.get_absolute_url }}"> {{project}} </a> </li>
+            <li> 
+            {% if project.official %}
+                <a class="sunlightProject" href="{{ project.get_absolute_url }}"> {{project}} </a>
+            {% else %}
+                <a href="{{ project.get_absolute_url }}"> {{project}} </a>
+            {% endif %}
+            </li>
         {% endfor %}
     </ul>
 </div>

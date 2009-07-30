@@ -24,7 +24,7 @@ div#ltColumn p{
 }
 
 div#headerWrapper{
-	background: url(/media/images/wrapperBg4.jpg) top center repeat-x;
+	background: url(../images/wrapperBg4.jpg) top center repeat-x;
 }
 
 div#pageMain{
@@ -34,14 +34,14 @@ div#pageMain{
 }
 
 div#feature{
-	background: url(/media/images/featureBar.jpg) top center repeat-x;
+	background: url(../images/featureBar.jpg) top center repeat-x;
 	width: 960px;
 	height: 59px;
 	margin: 0 auto 0 auto;
 }
 
 div#pageMain{
-	background: url(/media/images/mainBg6.jpg) top center no-repeat;
+	background: url(../images/mainBg6.jpg) top center no-repeat;
 	margin: 0 auto 0 auto;
 	width: 959;
 }
@@ -63,7 +63,7 @@ div#header h1 a{
 	text-indent: -9999em;
 	width: 308px;
 	height: 97px;
-	background: url(/media/images/logo2.png) top left no-repeat;
+	background: url(../images/logo2.png) top left no-repeat;
 	
 }
 
@@ -84,56 +84,56 @@ div#nav li a{
 
 li#nav_blog a{
 	width: 77px;
-	background: url(/media/images/blogNav.png) left top no-repeat;
+	background: url(../images/blogNav.png) left top no-repeat;
 }
 
 li#nav_blog a:hover, body.blog li#nav_blog a{
 	width: 77px;
-	background: url(/media/images/blogNav.png) left bottom no-repeat;
+	background: url(../images/blogNav.png) left bottom no-repeat;
 }
 
 li#nav_projects a{
 	width: 112px;
-	background: url(/media/images/projectsNav.png) left top no-repeat;
+	background: url(../images/projectsNav.png) left top no-repeat;
 }
 
 li#nav_projects a:hover, body.projects li#nav_projects a{
 	width: 112px;
-	background: url(/media/images/projectsNav.png) left bottom no-repeat;
+	background: url(../images/projectsNav.png) left bottom no-repeat;
 }
 
 li#nav_wiki a{
 	width: 77px;
-	background: url(/media/images/wikiNav.png) left top no-repeat;
+	background: url(../images/wikiNav.png) left top no-repeat;
 }
 
 li#nav_wiki a:hover{
 	width: 77px;
-	background: url(/media/images/wikiNav.png) left bottom no-repeat;
+	background: url(../images/wikiNav.png) left bottom no-repeat;
 }
 
 li#nav_about a{
 	width: 114px;
-	background: url(/media/images/aboutNav.png) left top no-repeat;
+	background: url(../images/aboutNav.png) left top no-repeat;
 }
 
 li#nav_about a:hover, body.about li#nav_about a{
 	width: 114px;
-	background: url(/media/images/aboutNav.png) left bottom no-repeat;
+	background: url(../images/aboutNav.png) left bottom no-repeat;
 }
 
 li#nav_contact a{
 	width: 110px;
-	background: url(/media/images/contactNav.png) left top no-repeat;
+	background: url(../images/contactNav.png) left top no-repeat;
 }
 
 li#nav_contact a:hover, body.contact li#nav_contact a{
 	width: 110px;
-	background: url(/media/images/contactNav.png) left bottom no-repeat;
+	background: url(../images/contactNav.png) left bottom no-repeat;
 }
 
 div#paperEdge{
-	background: url(/media/images/paperCorner.png) left top no-repeat;
+	background: url(../images/paperCorner.png) left top no-repeat;
 	width: 250px;
 	height: 35px;
 	margin-left: 40px;
@@ -142,7 +142,7 @@ div#paperEdge{
 
 div#mainContent{
 	padding-left: 72px;
-	background: url(/media/images/mainPaper_header.jpg) left top no-repeat;
+	background: url(../images/mainPaper_header.jpg) left top no-repeat;
 }
 
 div#ltColumn{
@@ -165,29 +165,29 @@ div#featureBox h2{
 }
 
 body.home h2{
-	background: url(/media/images/featureTitle.png) top left no-repeat;
+	background: url(../images/featureTitle.png) top left no-repeat;
 }
 
 body.blog h2{
-	background: url(/media/images/blogTitle.png) top left no-repeat;
+	background: url(../images/blogTitle.png) top left no-repeat;
 }
 
 body.about h2{
-	background: url(/media/images/aboutTitle.png) top left no-repeat;
+	background: url(../images/aboutTitle.png) top left no-repeat;
 }
 
 body.contact h2{
-	background: url(/media/images/contactHeader.png) top left no-repeat;
+	background: url(../images/contactHeader.png) top left no-repeat;
 }
 
 body.projects h2.projects{
-	background: url(/media/images/projectsTitle.png) top left no-repeat;
+	background: url(../images/projectsTitle.png) top left no-repeat;
 	z-index: 2;
 	position: absolute;
 }
 
 div#projectsImage{
-	background: url(/media/images/projectsHeader.png) bottom left no-repeat;
+	background: url(../images/projectsHeader.png) bottom left no-repeat;
 	height: 214px;
 	width: 630px;
 	margin-top: -14px;
@@ -195,7 +195,7 @@ div#projectsImage{
 }
 
 div#contactImage{
-	background: url(/media/images/contactImage.png) bottom left no-repeat;
+	background: url(../images/contactImage.png) bottom left no-repeat;
 	height: 160px;
 	width: 538px;
 	margin-top: 15px;
@@ -203,7 +203,7 @@ div#contactImage{
 }
 
 div#blogImage{
-	background: url(/media/images/blogHeader.png) bottom left no-repeat;
+	background: url(../images/blogHeader.png) bottom left no-repeat;
 	height: 214px;
 	width: 630px;
 	margin-top: -45px;
@@ -211,57 +211,57 @@ div#blogImage{
 }
 
 div#aboutImage{
-	background: url(/media/images/aboutHeader.png) bottom left no-repeat;
+	background: url(../images/aboutHeader.png) bottom left no-repeat;
 	height: 182px;
 	width: 689px;
 	margin-top: -13px;
 }
 
 div#contestImage-appsforamerica{
-	background: url(/media/images/contestImage.png) bottom left no-repeat;
+	background: url(../images/contestImage.png) bottom left no-repeat;
 	height: 214px;
 	width: 530px;
 	margin: -65px 0 0 110px;
 }
 div#contestImage-appsforamerica2{
-	background: url(/media/images/contestImage2.png) bottom left no-repeat;
+	background: url(../images/contestImage2.png) bottom left no-repeat;
 	height: 207px;
 	width: 697px;
 	margin: -35px 0 0 27px;
 }
 
 div#whoWeAre h2{
-	background: url(/media/images/whoWeAre.png) bottom center no-repeat;
+	background: url(../images/whoWeAre.png) bottom center no-repeat;
 	text-indent: -9999em;
 	margin-bottom: 20px;
 }
 
 h2#previewSubmit{
-	background: url(/media/images/previewAppSubmit.png) bottom center no-repeat;
+	background: url(../images/previewAppSubmit.png) bottom center no-repeat;
 	text-indent: -9999em;
 	margin-bottom: 10px;
 }
 
 h2#appTitles{
-	background: url(/media/images/submittedAppsTitle.png) bottom center no-repeat;
+	background: url(../images/submittedAppsTitle.png) bottom center no-repeat;
 	text-indent: -9999em;
 	margin-bottom: 10px;
 }
 
 div#contestPage h2{
-	background: url(/media/images/contestTitle.png) bottom center no-repeat;
+	background: url(../images/contestTitle.png) bottom center no-repeat;
 	text-indent: -9999em;
 	margin-bottom: 10px;
 }
 
 h2#submitApp {
-	background: url(/media/images/submitAppBtn.png) top center no-repeat;
+	background: url(../images/submitAppBtn.png) top center no-repeat;
 	margin-bottom: 25px;
 	text-indent: -9999em;
 }
 
 div#featuredProjects h2{
-	background: url(/media/images/featuredProjects.png) bottom left no-repeat;
+	background: url(../images/featuredProjects.png) bottom left no-repeat;
 	text-indent: -9999em;
 	width: 220px;
 	height: 32px;
@@ -272,7 +272,7 @@ div#featuredProjects h2{
 }
 
 div#featuredHeader{
-	background: url(/media/images/featureArrow.png) bottom left no-repeat;
+	background: url(../images/featureArrow.png) bottom left no-repeat;
 	width: 400px;
 	height: 75px;
 }
@@ -311,7 +311,7 @@ li#idea {
 	display: block;
 	height: 165px;
 	width: 124px;
-	background: url(/media/images/drawing1.png) top left no-repeat;
+	background: url(../images/drawing1.png) top left no-repeat;
 }
 
 li#mess {
@@ -319,7 +319,7 @@ li#mess {
 	display: block;
 	height: 165px;
 	width: 141px;
-	background: url(/media/images/drawing2.png) top left no-repeat;
+	background: url(../images/drawing2.png) top left no-repeat;
 }
 
 li#developer {
@@ -327,7 +327,7 @@ li#developer {
 	display: block;
 	height: 165px;
 	width: 267px;
-	background: url(/media/images/drawing3.png) top left no-repeat;
+	background: url(../images/drawing3.png) top left no-repeat;
 }
 
 li#sunlight {
@@ -335,16 +335,16 @@ li#sunlight {
 	display: block;
 	height: 165px;
 	width: 129px;
-	background: url(/media/images/drawing4.png) top left no-repeat;
+	background: url(../images/drawing4.png) top left no-repeat;
 }
 
 li#api{
 	padding-left: 90px;
-	background: url(/media/images/api_icon.png) top left no-repeat;
+	background: url(../images/api_icon.png) top left no-repeat;
 }
 
 li#api h2{
-	background: url(/media/images/APIs_title.png) bottom left no-repeat;
+	background: url(../images/APIs_title.png) bottom left no-repeat;
 	text-indent: -9999em;
 }
 
@@ -376,21 +376,21 @@ div#whatWeDo dd{
 
 li#open_source{
 	padding-left: 90px;
-	background: url(/media/images/open_icon.png) top left no-repeat;
+	background: url(../images/open_icon.png) top left no-repeat;
 }
 
 li#open_source h2{
-	background: url(/media/images/opensource_title.png) bottom left no-repeat;
+	background: url(../images/opensource_title.png) bottom left no-repeat;
 	text-indent: -9999em;
 }
 
 li#data_dumps{
 	padding-left: 90px;
-	background: url(/media/images/data_icon.png) top left no-repeat;
+	background: url(../images/data_icon.png) top left no-repeat;
 }
 
 li#data_dumps h2{
-	background: url(/media/images/datadumps_title.png) bottom left no-repeat;
+	background: url(../images/datadumps_title.png) bottom left no-repeat;
 	text-indent: -9999em;
 }
 
@@ -403,7 +403,7 @@ div#blog h2{
 	text-indent: -9999em;
 	width: 124px;
 	height: 25px;
-	background: url(/media/images/recentPosts.png) top center no-repeat;
+	background: url(../images/recentPosts.png) top center no-repeat;
 }
 
 div#blog h2 a{
@@ -437,14 +437,14 @@ div#blogArchive{
 
 div#blogArchive h3{
 	text-indent: -9999em;
-	background: url(/media/images/morePosts.png) top center no-repeat;
+	background: url(../images/morePosts.png) top center no-repeat;
 	padding-bottom: 5px;
 }
 
 div#blogNav{
 	height: 32px;
 	padding-bottom: 12px;
-	background: url(/media/images/blogNav_line.png) bottom center no-repeat;
+	background: url(../images/blogNav_line.png) bottom center no-repeat;
 }
 
 div#blogNav li{
@@ -462,19 +462,19 @@ div#blogNav li a{
 }
 
 div#blogNav li#popular a{
-	background: url(/media/images/navPopular.png) top left no-repeat;
+	background: url(../images/navPopular.png) top left no-repeat;
 }
 
 div#blogNav li#popular a:hover{
-	background: url(/media/images/navPopular.png) bottom left no-repeat;
+	background: url(../images/navPopular.png) bottom left no-repeat;
 }
 
 div#blogNav li#favorites a{
-	background: url(/media/images/navFavorites.png) top left no-repeat;
+	background: url(../images/navFavorites.png) top left no-repeat;
 }
 
 div#blogNav li#favorites a:hover{
-	background: url(/media/images/navFavorites.png) bottom left no-repeat;
+	background: url(../images/navFavorites.png) bottom left no-repeat;
 }
 
 div#postsArchive li{
@@ -507,7 +507,7 @@ div.commentsMetaData span.value a{
 	text-decoration: none;
 	width: 23px;
 	height: 28px;
-	background: url(/media/images/commentBox.png) right center no-repeat;
+	background: url(../images/commentBox.png) right center no-repeat;
 	font-size: 85%;
 }
 
@@ -530,7 +530,7 @@ li.commentGravatar div#commentHeader{
 
 li.commentGravatar div#commentHeader img { margin-bottom: 10px; }
 
-div.hr { clear: both; background: url(/media/images/blogLine.png) bottom left no-repeat; height: 7px; }
+div.hr { clear: both; background: url(../images/blogLine.png) bottom left no-repeat; height: 7px; }
 div.hr hr { display: none; }
 
 
@@ -571,7 +571,7 @@ div.readMore{
 
 div.readMore a{
 	text-indent: -9999em;
-	background: url(/media/images/readMore.png) bottom left no-repeat;
+	background: url(../images/readMore.png) bottom left no-repeat;
 	width: 77px;
 	height: 14px;
 	display: block;
@@ -630,7 +630,7 @@ div#helpBox{
 	text-indent: -9999em;
 	width: 325px;
 	height: 260px;
-	background: url(/media/images/helpBox.png) top left no-repeat;
+	background: url(../images/helpBox.png) top left no-repeat;
 	margin-bottom: 20px;
 }
 
@@ -652,7 +652,7 @@ div#workBoxWrapper{
 	width: 366px;
 	height: 354px;
 	text-indent: -9999em;
-	background: url(/media/images/postit_notes.png) bottom left no-repeat;
+	background: url(../images/postit_notes.png) bottom left no-repeat;
 	margin: 20px 0 0 525px;
 }
 
@@ -685,13 +685,13 @@ div#heroes li{
 }
 
 div#heroes h3{
-	background: url(/media/images/heroesTitle.png) bottom center no-repeat;
+	background: url(../images/heroesTitle.png) bottom center no-repeat;
 	text-indent: -9999em;
 	margin-bottom: 20px;
 }
 
 div#recentlySubmitted h3{
-	background: url(/media/images/recentSubmitsBtn.png) bottom center no-repeat;
+	background: url(../images/recentSubmitsBtn.png) bottom center no-repeat;
 	text-indent: -9999em;
 	margin-bottom: 20px;
 }
@@ -726,7 +726,7 @@ span.organization a{
 }
 
 a#googleLogo {
-    background: url(/media/images/sponsors/googleLogo.png) bottom left no-repeat;
+    background: url(../images/sponsors/googleLogo.png) bottom left no-repeat;
     width: 200px;
     height: 81px;
     margin-left: 500px;
@@ -736,7 +736,7 @@ a#googleLogo {
 }
 
 a#oreillyLogo {
-    background: url(/media/images/sponsors/oreillyLogo.png) bottom left no-repeat;
+    background: url(../images/sponsors/oreillyLogo.png) bottom left no-repeat;
     width: 200px;
     height: 46px;
     margin-left: 500px;
@@ -756,7 +756,7 @@ a#craignewmark {
 }
 
 a#gov2Logo {
-    background: url(/media/images/sponsors/gov2_logo.png) bottom center no-repeat;
+    background: url(../images/sponsors/gov2_logo.png) bottom center no-repeat;
     display:block;
     width: 168px;
     height: 103px;
@@ -766,7 +766,7 @@ a#gov2Logo {
 }
 
 a#techwebLogo {
-    background: url(/media/images/sponsors/techwebLogo.png) bottom center no-repeat;
+    background: url(../images/sponsors/techwebLogo.png) bottom center no-repeat;
     display:block;
     width: 204px;
     height: 65px;
@@ -776,7 +776,7 @@ a#techwebLogo {
 }
 
 div#contestBox{
-	background: url(/media/images/appsAmericaTile_2.png) bottom left no-repeat;
+	background: url(../images/appsAmericaTile_2.png) bottom left no-repeat;
 	width: 295px;
 	height: 174px;
 	margin-left: 468px;
@@ -785,7 +785,7 @@ div#contestBox{
 }
 
 div#contestBox2{
-	background: url(/media/images/appsAmerica2_btn.png) bottom left no-repeat;
+	background: url(../images/appsAmerica2_btn.png) bottom left no-repeat;
 	width: 295px;
 	height: 174px;
 	margin-left: 468px;
@@ -825,12 +825,12 @@ div#contestPage ol, div.post_content ol, div.entry-summary ol{
 
 
 div#footerWrapper{
-	background: url(/media/images/footerWrapper.jpg) bottom center repeat-x;
+	background: url(../images/footerWrapper.jpg) bottom center repeat-x;
 	height: 400px;
 }
 
 div#footerMain{
-	background: url(/media/images/footerMain.jpg) bottom center no-repeat;
+	background: url(../images/footerMain.jpg) bottom center no-repeat;
 	margin: 0 auto 0 auto;
 	height: 400px;
 	width: 960px;
@@ -838,7 +838,7 @@ div#footerMain{
 
 div#footerMain h3{
 	text-indent: -9999em;
-	background: url(/media/images/footerTitle.png) bottom left no-repeat;
+	background: url(../images/footerTitle.png) bottom left no-repeat;
 	padding-top: 175px;
 	display: block;
 	width: 301px;
@@ -890,8 +890,8 @@ div#comments h3{
 }
 
 form { margin: 1em;}
-body.contact form {background: url(/media/images/commentLines.png) bottom right no-repeat; height:350px;}
-div#comments form {background: url(/media/images/commentLines.png) 89px -30px no-repeat; height:390px;}
+body.contact form {background: url(../images/commentLines.png) bottom right no-repeat; height:350px;}
+div#comments form {background: url(../images/commentLines.png) 89px -30px no-repeat; height:390px;}
 
 form p, form li { margin-bottom: 10px; }
 form p label, form li label { width: 90px; float: left; text-align: right; padding-right: 15px;}
@@ -920,7 +920,7 @@ div#comments p.tip{
 
 button.submit-send{
 	margin-left: 310px;
-	background: url(/media/images/submitBtn.png) bottom right no-repeat;
+	background: url(../images/submitBtn.png) bottom right no-repeat;
 	border: none;
 	text-indent: -9999em;
 	display: block;
@@ -930,7 +930,7 @@ button.submit-send{
 }
 
 button.submit-post{ 
-	background: url(/media/images/postBtn.png) bottom right no-repeat;
+	background: url(../images/postBtn.png) bottom right no-repeat;
 	border: none;
 	text-indent: -9999em;
 	display: block;
@@ -947,7 +947,7 @@ button.submit-preview{
 	height: 27px;
 	text-indent: -9999em;
 	display: block;
-	background: url(/media/images/previewBtn.png) bottom right no-repeat;
+	background: url(../images/previewBtn.png) bottom right no-repeat;
 	margin-left: 205px;
 	cursor: pointer;
 }
@@ -958,7 +958,7 @@ button.submit-app{
 	height: 27px;
 	text-indent: -9999em;
 	display: block;
-	background: url(/media/images/submitApp.png) bottom right no-repeat;
+	background: url(../images/submitApp.png) bottom right no-repeat;
 	margin-left: 275px;
 	cursor: pointer;
 	margin-top: 30px;
@@ -970,7 +970,7 @@ button.preview-app{
 	height: 27px;
 	text-indent: -9999em;
 	display: block;
-	background: url(/media/images/previewAppBtn.png) bottom right no-repeat;
+	background: url(../images/previewAppBtn.png) bottom right no-repeat;
 	margin-left: 400px;
 	cursor: pointer;
 	margin-top: 30px;
@@ -1002,7 +1002,7 @@ strong {
 }
 
 div#ltColumn h2.contact{
-	background: url(/media/images/contactTitle.png) bottom center no-repeat;
+	background: url(../images/contactTitle.png) bottom center no-repeat;
 	width: 255px;
 	text-indent: -9999em;
 	margin: 0 0 5px 105px
@@ -1036,7 +1036,7 @@ div#fullColumn{
 a.orgName{
     display: block;
 	text-indent: -9999em;
-	background: url(/media/images/sunlightfoundation_logo.png) bottom center no-repeat;
+	background: url(../images/sunlightfoundation_logo.png) bottom center no-repeat;
 	width: 90px;
 	height: 44px;
 	margin-bottom: 3px;
@@ -1084,15 +1084,15 @@ div#project_detail li{
 }
 
 div#project_detail li.source{
-	background: url(/media/images/sourceIcon.png) bottom left no-repeat;
+	background: url(../images/sourceIcon.png) bottom left no-repeat;
 }
 
 div#project_detail li.documentation{
-	background: url(/media/images/documentationIcon.png) bottom left no-repeat;
+	background: url(../images/documentationIcon.png) bottom left no-repeat;
 }
 
 div#project_detail li.download{
-	background: url(/media/images/downloadIcon.png) bottom left no-repeat;
+	background: url(../images/downloadIcon.png) bottom left no-repeat;
 }
 
 div#login h3 { font-size: 20px; }

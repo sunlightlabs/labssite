@@ -1,0 +1,55 @@
+h1 a {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/logo.png", sizingMethod="crop"); }
+div#nav {  background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/nav_bg.png", sizingMethod="crop"); }
+
+li#nav_blog a{  background: url("../images/nav_blog_8.png") top left no-repeat; }
+li#nav_blog a:hover, li#nav_blog a.active {  background: url("../images/nav_blog_8.png") bottom left no-repeat; }
+
+li#nav_people a{  background: url("../images/nav_people_8.png") top left no-repeat; }
+li#nav_people a:hover, li#nav_people a.active{  background: url("../images/nav_people_8.png") bottom left no-repeat; }
+
+li#nav_projects a{  background: url("../images/nav_projects_8.png") top left no-repeat; }
+li#nav_projects a:hover, li#nav_projects a.active{  background: url("../images/nav_projects_8.png") bottom left no-repeat; }
+
+li#nav_wiki a{  background: url("../images/nav_wiki_8.png") top left no-repeat; }
+li#nav_wiki a:hover, li#nav_wiki a.active{  background: url("../images/nav_wiki_8.png") bottom left no-repeat; }
+
+li#nav_about a{  background: url("../images/nav_about_8.png") top left no-repeat; }
+li#nav_about a:hover, li#nav_about a.active{  background: url("../images/nav_about_8.png") bottom left no-repeat; }
+
+li#nav_contact a{  background: url("../images/nav_contact_8.png") top left no-repeat; }
+li#nav_contact a:hover, body.contact li#nav_contact a {  background: url("../images/nav_contact_8.png") bottom left no-repeat; }
+
+div#logo { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/logo_line.png", sizingMethod="crop");}
+
+
+body.home div#pageNav { background: url("../images/banner_home_8.png") center bottom no-repeat;}
+body.blog div#pageNav { background: url("../images/banner_blog_8.png") center bottom no-repeat;}
+body.people div#pageNav { background: url("../images/banner_people_8.png") center bottom no-repeat;}
+body.projects div#pageNav { background: url("images/banner_projects_8.png") center bottom no-repeat;}
+body.about div#pageNav { background: url("../images/banner_about_8.png") center bottom no-repeat;}
+body.contact div#pageNav { background: url("../images/banner_contact_8.png") center bottom no-repeat;}
+
+div#footerMain { background: url("../images/footer_main2_8.png") center bottom no-repeat; }
+div#footerWrapper { background: url("../images/footer_repeat_8.png") center bottom repeat-x; }
+
+div#mainContent { background: url("../images/rtColumn_bg_8.png") right top repeat-y; }
+
+div#rtColumn { overflow: hidden;}
+
+div.contentHeader { background: url("../images/header_lines_8.png") center bottom no-repeat; }
+
+ul#labsMembers { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/gear_bg.png", sizingMethod="crop"); }
+li#ali a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_ali.png", sizingMethod="crop"); }
+li#david a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_david.png", sizingMethod="crop"); }
+li#eric a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_eric.png", sizingMethod="crop"); }
+ul#labsMembers li#garrett a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_garrett.png", sizingMethod="crop"); }
+li#james a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_james.png", sizingMethod="crop"); }
+li#jeremy a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_jeremy.png", sizingMethod="crop"); }
+li#josh a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_josh.png", sizingMethod="crop"); }
+ul#labsMembers li#clay a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_clay.png", sizingMethod="crop"); }
+li#kaitlin a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_kaitlin.png", sizingMethod="crop"); }
+li#kevin a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_kevin.png", sizingMethod="crop"); }
+li#luigi a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_luigi.png", sizingMethod="crop"); }
+li#luke a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_luke.png", sizingMethod="crop"); }
+li#tim a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_tim.png", sizingMethod="crop"); }
+li#tom a { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/bot_tom.png", sizingMethod="crop"); }
