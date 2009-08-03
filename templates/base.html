@@ -40,13 +40,13 @@
                         <ul>
                             {% if user.is_authenticated %}
                             <li>Hi, <a href="{% url edit_profile %}">{{user}}</a>.</li>
-                            <li><a href="{% url auth_logout %}">Logout?</a></li>
+                            <li><a href="/accounts/logout/">Logout?</a></li>
                             {% if user.is_staff %}
                             <li><a href="/admin/">Admin</a></li>
                             {% endif %}
                             {% else %}
-                            <li><a href="{% url registration_register %}">Join Us</a></li>
-                            <li><a href="{% url auth_login %}">Sign In</a></li>
+                            <li><a href="/accounts/register/">Join Us</a></li>
+                            <li><a href="/accounts/signin/">Sign In</a></li>
                             {% endif %}
                         </ul>
                     </div>

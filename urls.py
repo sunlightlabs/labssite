@@ -13,6 +13,8 @@ from django_openid.forms import RegistrationFormPasswordConfirm
 
 class RegistrationForm(RegistrationFormPasswordConfirm):
     extra_required = ('email',)
+    email_opt_in = forms.BooleanField(label='Keep me posted about other Sunlight news and information', 
+                                      required=False)
 
 class CustomRegistrationConsumer(RegistrationConsumer):
     confirm_email_addresses = False
@@ -20,6 +22,13 @@ class CustomRegistrationConsumer(RegistrationConsumer):
     trust_root = 'http://127.0.0.1:8000/'
     on_complete_url = '/openid/complete/'
     after_registration_url = '/users/edit_profile/'
+
+    def on_registration_complete(self, request):
+        if request.POST.get('email_opt_in'):
+            request.user.profile.allow_org_emails = True
+            request.user.profile.save()
+        return super(CustomRegistrationConsumer, self).on_registration_complete(request)
+
 
 registration_consumer = CustomRegistrationConsumer()
 
@@ -107,8 +116,6 @@ urlpatterns = patterns('',
     url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^openid/', include(registration_consumer.urls)),
-
     url(r'^comments/', include('django.contrib.comments.urls')),
 
     # contests
@@ -124,10 +131,10 @@ urlpatterns = patterns('',
     url(r'^contact/sent/$', 'sunlightlabs.labs.views.contact_sent', {"form_class": LabsContactForm}),
     url(r'^contact/', include('contact_form.urls'), {"form_class": LabsContactForm, "fail_silently": False}),
 
-    # users
-    url(r'^accounts/', include('registration.urls')),
-    url(r'^users/', include('anthill.people.urls')),
+    url(r'^accounts/', include(registration_consumer.urls)),
 
+    # anthill
+    url(r'^users/', include('anthill.people.urls')),
     url(r'^ideas/', include('anthill.ideas.urls')),
     url(r'^projects/', include('anthill.projects.urls')),
     url(r'^events/', include('anthill.events.urls')),
