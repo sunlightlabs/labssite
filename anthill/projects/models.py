@@ -30,8 +30,7 @@ class Project(models.Model):
         return reverse('project_detail', args=[self.slug])
 
     def get_members(self):
-        return self.members.filter(project_roles__is_lead=False, 
-                                   project_roles__status='A')
+        return self.members.filter(project_roles__status='A')
 
 ROLE_STATUSES = (
     ('P', 'Pending'),
@@ -44,14 +43,7 @@ class Role(models.Model):
     project = models.ForeignKey(Project, related_name='roles')
     join_time = models.DateField(auto_now_add=True)
     status = models.CharField(choices=ROLE_STATUSES, max_length=1, default='P')
-    is_lead = models.BooleanField(default=False)
     message = models.TextField(blank=True)
-
-    def save(self, *args, **kwargs):
-        super(Role, self).save(*args, **kwargs)
-        if self.is_lead:
-            self.project.lead = self.user
-            self.project.save()
 
 SITE_LINK, SOURCE_LINK, DOCS_LINK, DOWNLOAD_LINK = range(4)
 LINK_TYPES = (
