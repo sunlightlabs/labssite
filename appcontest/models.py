@@ -48,7 +48,7 @@ class Entry(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('appcontest_app_detail', [self.slug])
+        return ('appcontest_app_detail', [self.contest.slug, self.slug])
 
 class EntryForm(ModelForm):
     def clean_data_source(self):

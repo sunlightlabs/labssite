@@ -135,7 +135,7 @@ GOOGLE_ANALYTICS_EMAIL = 'sunlightlabs@gmail.com'
 GOOGLE_ANALYTICS_PASSWORD = '***REMOVED***'
 GOOGLE_ANALYTICS_ID = '***REMOVED***'
 
-SIMPLESURVEY_COMPLETE_REDIRECT = "/judgeforamerica/"
+SIMPLESURVEY_COMPLETE_REDIRECT = "/judgeforamerica/appsforamerica2/"
 
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'

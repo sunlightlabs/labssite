@@ -1,17 +1,20 @@
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect, Http404
-from django.shortcuts import render_to_response
-from sunlightlabs.appcontest.models import Entry
+from django.template import RequestContext
+from django.shortcuts import render_to_response, get_object_or_404
+from sunlightlabs.appcontest.models import Entry, Contest
 from simplesurvey.forms import SurveyForm
 from simplesurvey.models import QuestionSet, AnswerSet, Answer
 
 @login_required
-def index(request):
-    apps = Entry.objects.all().approved()
+def index(request, contest):
+    contest = get_object_or_404(Contest, slug=contest)
+    apps = contest.entries.all().approved()
     judged_ids = AnswerSet.objects.for_model(Entry).filter(user=request.user).values_list('object_id', flat=True)
     for app in apps:
         app.judged = app.pk in judged_ids
-    return render_to_response("appjudging/index.html", {"apps": apps, "judged_ids": judged_ids})
+    return render_to_response("appjudging/index.html", {"apps": apps, "judged_ids": judged_ids},
+                             context_instance=RequestContext(request))
 
 @login_required
 def app(request, app_id):
@@ -40,7 +43,7 @@ def app_scorecard(request, app_id):
     return render_to_response('appjudging/app_scorecard.html', data)
 
 @login_required
-def scores(request):
+def scores(request, contest):
     
     # app id
     # question 1
@@ -49,19 +52,19 @@ def scores(request):
     # question 4
     # question 5
     # judge id
-    
+
+    entry_ids = list(Entry.objects.filter(contest__slug=contest).values_list('id',flat=True))
     question_set = QuestionSet.objects.get(slug="appcontest")
-    answers_sets = AnswerSet.objects.all().select_related()
+    answers_sets = AnswerSet.objects.filter(object_id__in=entry_ids).select_related()
     scores = []
-    
+
     csv = ""
-    
+
     for answer_set in answers_sets:
         score = [answer_set.related_object.name, 0, 0, 0, 0, 0, answer_set.user.get_full_name()]
         for answer in answer_set.answers.all():
             score[answer.question_id] = int(answer.text)
-        scores.append(score)    
-        print score
+        scores.append(score)
         csv += '''"%s",%i,%i,%i,%i,%i,"%s"\n''' % (score[0], score[1], score[2], score[3], score[4], score[5], score[6])
-        
+
     return HttpResponse(csv, content_type="text/plain")

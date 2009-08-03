@@ -24,7 +24,7 @@
         {% if app.url %}<a href="{{ app.url }}" target="_blank">App</a>{% endif %}
         {% if app.source_url %}<a href="{{ app.source_url }}" target="_blank">Source</a>{% endif %}
     </p>
-    <p class="description">{{ app.quick_description }}<br /><br /><a href="{% url appcontest_app_detail app.slug %}" target="_blank">Full description...</a></p>
+    <p class="description">{{ app.quick_description }}<br /><br /><a href="{{app.get_absolute_url}}" target="_blank">Full description...</a></p>
 	<form action="{% url appjudging_submit %}" method="post" target="_top">
 		<ul>
 			{{ form.as_ul }}
