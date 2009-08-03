@@ -5,11 +5,15 @@
 
 <div id="ideas" class="module">
     <div id="headerTip" class="contentHeader">
-        <h2 >Join Us!</h2>
+        {% if openid %}
+            <h2>Almost Done</h2>
+        {% else %}
+            <h2>Join Us!</h2>
+        {% endif %}
     </div>
     <div class="module">
-        <p class="tip">Come help open up the government by becoming a part of our community.</p>
         {% if not openid %}
+        <p class="tip">Come help open up the government by becoming a part of our community.</p>
         <p>Already have an account, <a href="/accounts/login">sign in here</a>.</p>
         <div id="signup_nav">
             <ul>
@@ -31,19 +35,21 @@
                 </ul>
             </form>
         {% else %}
+        <p class="tip">Your account will be associated with {{openid}}</p>
         <div id="signupOptions">
         {% endif %}
             <form id="standard_signupForm" method="post" action=".">
                 <ul>
-                    <li> {{ form.username.label_tag }} {{ form.username }}</li>
-                    <li> {{ form.email.label_tag }} {{ form.email }} </li>
-                    <li class="email_opt_in"> {{ form.email_opt_in }} {{ form.email_opt_in.label_tag }} </li>
+                    <li> {{ form.username.label_tag }} {{ form.username }} {{ form.username.errors }}</li>
+                    <li> {{ form.email.label_tag }} {{ form.email }} {{ form.email.errors }} </li>
                     {% if openid %}
                     <p> Since you are using OpenID you don't need to set a password.  You can set one later if you want. </p>
                     {% else %}
-                    <li> {{ form.password.label_tag }} {{ form.password }} </li>
-                    <li> {{ form.password2.label_tag }} {{ form.password2 }} </li>
+                    <li> {{ form.password.label_tag }} {{ form.password }} {{ form.password.errors }} </li>
+                    <li> {{ form.password2.label_tag }} {{ form.password2 }} {{ form.password2.errors }} </li>
                     {% endif %}
+
+                    <li class="email_opt_in"> {{ form.email_opt_in }} {{ form.email_opt_in.label_tag }} </li>
 
                     <button class="signupBtn">
                         <span>Join Us!</span>

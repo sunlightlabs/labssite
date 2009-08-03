@@ -20,7 +20,7 @@ class CustomRegistrationConsumer(RegistrationConsumer):
     confirm_email_addresses = False
     RegistrationForm = RegistrationForm
     trust_root = 'http://127.0.0.1:8000/'
-    on_complete_url = '/openid/complete/'
+    on_complete_url = '/accounts/complete/'
     after_registration_url = '/users/edit_profile/'
 
     def on_registration_complete(self, request):

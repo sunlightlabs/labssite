@@ -89,7 +89,6 @@ INSTALLED_APPS = (
     'newsfeed',
     'popular',
     'sunlightlabs.labs',
-    'sunlightlabs.registration',
     'sunlightlabs.appcontest',
     'sunlightlabs.appjudging',
     'anthill.people',
