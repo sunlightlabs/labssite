@@ -14,7 +14,7 @@
     <div class="module">
         {% if not openid %}
         <p class="tip">Come help open up the government by becoming a part of our community.</p>
-        <p>Already have an account, <a href="/accounts/login">sign in here</a>.</p>
+        <p>Already have an account, <a href="{% url openid-login %}">sign in here</a>.</p>
         <div id="signup_nav">
             <ul>
                 <li id="signup_standard"><a class="active" href="#">Standard Sign Up</a></li>
