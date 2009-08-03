@@ -1,9 +1,9 @@
 subscribe to comments
 judgeforamerica
-try and simplify roles
 openid reset password
 google/yahoo login
 official/other piechart: sunlight: #bf920b / other: #bfc7ba
+badges
 
 audit:
     test email
@@ -13,7 +13,6 @@ audit:
     first names instead of usernames
 
 release:
-    markupfield
     anthill
     popular
-
+    newsfeed

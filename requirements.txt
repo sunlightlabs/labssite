@@ -20,7 +20,7 @@ python-googleanalytics
 -e git://github.com/sunlightlabs/django-mediasync.git#egg=django-mediasync
 -e git://github.com/sunlightlabs/django-gatekeeper.git#egg=django-gatekeeper
 -e git://github.com/sunlightlabs/django-blogdor.git#egg=django-blogdor
--e git://github.com/jamesturk/django-markupfield.git#egg=markupfield
+django-markupfield==0.2.0
 -e svn+https://source.sunlightlabs.com/pymods/django-simplesurvey/#egg=django-simplesurvey
 -e git+git@github.com:sunlightlabs/django-feedinator.git#egg=django-feedinator
 
