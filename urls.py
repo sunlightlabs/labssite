@@ -7,6 +7,21 @@ from contact_form.forms import ContactForm
 
 admin.autodiscover()
 
+### openid ###
+from django_openid.registration import RegistrationConsumer
+from django_openid.forms import RegistrationFormPasswordConfirm
+
+class RegistrationForm(RegistrationFormPasswordConfirm):
+    extra_required = ('email',)
+
+class CustomRegistrationConsumer(RegistrationConsumer):
+    confirm_email_addresses = False
+    RegistrationForm = RegistrationForm
+    after_registration_url = '/users/edit_profile/'
+
+registration_consumer = CustomRegistrationConsumer()
+
+
 ### newsfeed ###
 from newsfeed.models import Feed
 from django.db.models.signals import post_save
@@ -89,6 +104,8 @@ urlpatterns = patterns('',
     # admin
     url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
     url(r'^admin/', include(admin.site.urls)),
+
+    url(r'^openid/', include(registration_consumer.urls)),
 
     url(r'^comments/', include('django.contrib.comments.urls')),
 
