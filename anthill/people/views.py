@@ -85,6 +85,7 @@ def change_password(request):
     form = _user_to_profileform(user)
     if password_form.is_valid():
         user.set_password(password_form.cleaned_data['password1'])
+        user.save()
         user.message_set.create(message='Password changed.')
         password_form = PasswordForm()
     else:
