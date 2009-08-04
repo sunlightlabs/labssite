@@ -1,7 +1,7 @@
 from django import template
 from django.conf import settings
 from django.db.models import Count
-from anthill.utils import get_items_as_tag, piechart_from_tags, PiechartNode
+from anthill.utils import get_items_as_tag, piechart_from_tags, _extract_chart_params, PiechartNode
 from anthill.people.models import Profile
 
 register = template.Library()
@@ -40,13 +40,7 @@ def people_skills_piechart(parser, token):
 
 @register.tag
 def people_roles_piechart(parser, token):
-    pieces = token.contents.split(None)
-    args = pieces[1:]
-    if ':' not in args[0] and 'x' in args[0]:
-        width, height = args[0].split('x')
-        width = int(width)
-        height = int(height)
-        args = args[1:]
+    width, height, args = _extract_chart_params(token)
     colors = dict(arg.split(':') for arg in args)
     items = Profile.objects.filter(role__in=colors.keys()).values('role').annotate(num=Count('id'))
     for item in items:
