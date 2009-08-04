@@ -1,4 +1,4 @@
--e svn+http://code.djangoproject.com/svn/django/trunk/#egg=django
+Django==1.1
 
 # non-django dependencies
 -e git://fabfile.org/fabric.git#egg=fabric
@@ -17,11 +17,11 @@ python-googleanalytics
 -e git://github.com/jamesturk/django-openid.git#egg=django-openid
 
 # sunlight apps
+django-markupfield==0.2.0
 -e git://github.com/sunlightlabs/django-mediasync.git#egg=django-mediasync
 -e git://github.com/sunlightlabs/django-gatekeeper.git#egg=django-gatekeeper
 -e git://github.com/sunlightlabs/django-blogdor.git#egg=django-blogdor
-django-markupfield==0.2.0
--e svn+https://source.sunlightlabs.com/pymods/django-simplesurvey/#egg=django-simplesurvey
+-e git+git@github.com:sunlightlabs/django-simplesurvey.git#egg=django-simplesurvey
 -e git+git@github.com:sunlightlabs/django-feedinator.git#egg=django-feedinator
 
 # new apps
