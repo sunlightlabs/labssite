@@ -91,10 +91,11 @@
             </div>
         </div>
     </div>
+    {% get_user_posts p_user 3 as user_posts %}
+    {% if user_posts %}
     <div id="sunlightPost">
         <h3 class="leftH3">{% possessive p_user %} Posts</h3>
         <div class="module">
-            {% get_user_posts p_user 3 as user_posts %}
 
             {% for post in user_posts %}
             <div class="smPost">
@@ -106,6 +107,7 @@
             <a class="center_viewall" href="{% url blogdor_author p_user.username %}">See all of {% possessive p_user %} posts »</a>
         </div>
     </div>
+    {% endif %}
 </div>
 {% endblock %}
 
@@ -116,7 +118,7 @@
 	    <img src="{% static_google_map p_user.profile 198 210 %}" />
 		<div id="map_label">{{p_user.profile.location|default:"n/a"}}</div>
 	{% else %}
-		<p>We're not quite sure where {{p_user.first_name}} lives just yet, do you know?</p>
+		<p>We don't know {% possessive p_user %} location.</p>
 	{% endif %}
 </div>
 <hr></hr>

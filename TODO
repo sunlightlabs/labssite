@@ -2,7 +2,6 @@ blogdor: subscribe to comments
 openid: reset password
 openid: google/yahoo login (Ali)
 merit badges
-if a user has no blog posts, remove blog div
 
 audit:
     test email
