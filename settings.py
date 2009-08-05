@@ -137,6 +137,7 @@ GOOGLE_ANALYTICS_ID = '***REMOVED***'
 
 SIMPLESURVEY_COMPLETE_REDIRECT = "/judgeforamerica/appsforamerica2/"
 
+RESTRUCTUREDTEXT_FILTER_SETTINGS = {'initial_header_level': 3}
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
