@@ -1,0 +1,25 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+     <a href="../../../">{% trans "Home" %}</a> &rsaquo;
+     <a href="../../">Meritbadges</a> &rsaquo;
+     Assign
+</div>
+{% endblock %}
+
+
+{% block content %}
+<form method="POST" action=".">
+<ul>
+{% for badge in badges %}
+    <li>
+    <input type="checkbox" {% if badge.checked %}checked="checked"{% endif %} name="{{badge.slug}}" id="badge_{{badge.slug}}" />
+    <label for="badge_{{badge.slug}}">{{badge.admin_image_tag|safe}}</label>
+    </li>
+{% endfor %}
+</ul>
+<input type="submit" value="Update Badges">
+</form>
+{% endblock %}

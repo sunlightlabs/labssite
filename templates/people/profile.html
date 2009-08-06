@@ -26,7 +26,7 @@
         <div id="userDetails" class="module">
             <dl>
                 <dt>Website:</dt>
-                <dd id="userWebsite"><a href="{{p_user.profile.url|default:"#"}}">{{p_user.profile.url|default:"n/a"}}</a></dd>
+                <dd id="userWebsite"><a rel="me" href="{{p_user.profile.url|default:"#"}}">{{p_user.profile.url|default:"n/a"}}</a></dd>
 
                 <dt id="userLocation">Location:</dt>
                 <dd>{{p_user.profile.location|default:"n/a"}}</dd>
@@ -34,17 +34,13 @@
 
                 <dt>Skills:</dt>
                 <dd>{{p_user.profile.skills|default:"n/a"}}</dd>
-                
+
                 <dt>Badges:</dt>
-                <dd class="badge"><img alt="Sunlight Labs Employee" title="Sunlight Labs Employee" src="{% media_url %}/images/icon_sunlightlabsEmployee.png"/></dd>
-                <dd class="badge"><img alt="Sunlight Project Contributor" title="Sunlight Project Contributor" src="{% media_url %}/images/icon_contributedProject.png"/></dd>
-                <dd class="badge"><img alt="Transparency Hero" title="Transparency Hero" src="{% media_url %}/images/icon_transparencyHero.png"/></dd>
-                <dd class="badge"><img alt="Completed a Project" title="Completed a Project" src="{% media_url %}/images/icon_completedProject.png"/></dd>
-                <dd class="badge"><img alt="Organized an Event" title="Organized an Event" src="{% media_url %}/images/icon_heldEvent.png"/></dd>
-                <dd class="badge"><img alt="Lead a Project" title="Lead a Project" src="{% media_url %}/images/icon_leadProject.png"/></dd>
-                <dd class="badge"><img alt="1st Place for Apps For America" title="1st Place for Apps For America" src="{% media_url %}/images/icon_apps1.png"/></dd>
-                <dd class="badge"><img alt="2nd Place for Apps For America" title="2nd Place for Apps For America" src="{% media_url %}/images/icon_apps2.png"/></dd>
-                <dd class="badge"><img alt="3rd Place for Apps For America" title="3rd Place for Apps For America" src="{% media_url %}/images/icon_apps3.png"/></dd>
+                {% for badge in p_user.badges.all %}
+                <dd class="badge"><img alt="{{badge.name}}" title="{{badge.name}}" src="{{badge.image_url}}"/></dd>
+                {% empty %}
+                <dd>This user has not earned any badges yet.</dd>
+                {% endfor %}
                 <div class="clear"></div>
             </dl>
             <p>
@@ -132,7 +128,7 @@
         <li>{{tweet.text|twitterize}}</li>
     {% endfor %}
     </ul>
-	<a class="center_viewall" href="#">Go to {% possessive p_user %} twitter page »</a>
+    <a class="center_viewall" href="http://twitter.com/{{p_user.profile.twitter_id}}">Go to {% possessive p_user %} twitter page »</a>
 	{% else %}
 		<p>No tweets to follow here, move along.</p>
 	{% endif %}

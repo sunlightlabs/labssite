@@ -88,6 +88,7 @@ INSTALLED_APPS = (
     'simplesurvey',
     'newsfeed',
     'popular',
+    'meritbadges',
     'sunlightlabs.labs',
     'sunlightlabs.appcontest',
     'sunlightlabs.appjudging',

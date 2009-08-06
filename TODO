@@ -1,7 +1,6 @@
-blogdor: subscribe to comments
-openid: reset password
+blogdor: subscribe to comments (Jeremy)
+openid: reset password (email)
 openid: google/yahoo login (Ali)
-merit badges
 
 audit:
     test email
@@ -9,8 +8,3 @@ audit:
     add caching tags
     add titles
     first names instead of usernames
-
-release:
-    anthill
-    popular
-    newsfeed
