@@ -54,7 +54,7 @@ def convert_dumps():
     convert_appcontest('appcontest.json')
 
 def load_dumps():
-    local('./manage.py loaddata meta.json')
+    #local('./manage.py loaddata meta.json')
     local('./manage.py loaddata new_blog.json')
     local('./manage.py loaddata new_appcontest.json')
 
