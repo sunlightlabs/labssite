@@ -124,6 +124,10 @@ BLOGDOR_NOTIFY_ON_COMMENT = True
 BLOGDOR_ENABLE_FEEDS = False
 #AKISMET_KEY = '54f2d2830563'
 
+ABSOLUTE_URL_OVERRIDES = {
+    'auth.user': lambda o: "/people/%s/" % o.username
+}
+
 GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com',
                             'jturk@sunlightfoundation.com']
 
