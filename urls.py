@@ -19,9 +19,9 @@ class RegistrationForm(RegistrationFormPasswordConfirm):
 class CustomRegistrationConsumer(RegistrationConsumer):
     confirm_email_addresses = False
     RegistrationForm = RegistrationForm
-    trust_root = 'http://127.0.0.1:8000/'
+    trust_root = 'http://*.sunlightlabs.com/'
     on_complete_url = '/accounts/complete/'
-    after_registration_url = '/users/edit_profile/'
+    after_registration_url = '/people/edit_profile/'
 
     def on_registration_complete(self, request):
         if request.POST.get('email_opt_in'):
@@ -134,7 +134,7 @@ urlpatterns = patterns('',
     url(r'^accounts/', include(registration_consumer.urls)),
 
     # anthill
-    url(r'^users/', include('anthill.people.urls')),
+    url(r'^people/', include('anthill.people.urls')),
     url(r'^ideas/', include('anthill.ideas.urls')),
     url(r'^projects/', include('anthill.projects.urls')),
     url(r'^events/', include('anthill.events.urls')),
