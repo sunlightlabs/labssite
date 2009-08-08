@@ -21,7 +21,6 @@ class SearchForm(forms.Form):
 class ProfileForm(forms.Form):
     name = forms.CharField(label='Name', required=False)
     email = forms.CharField(label='Email')
-    photo = forms.ImageField(label='Upload New Avatar', required=False)
     url = forms.URLField(label='Personal URL', required=False)
     twitter_id = forms.CharField(label='Twitter Username', max_length=15, required=False)
     position = forms.ChoiceField(label='Position', choices=ROLES)

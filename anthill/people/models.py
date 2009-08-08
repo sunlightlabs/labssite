@@ -15,7 +15,6 @@ ROLES = (
 
 class Profile(LocationModel):
     user = models.OneToOneField(User, related_name='profile')
-    photo = models.ImageField(upload_to='profile_images', blank=True)
     url = models.URLField(blank=True)
     about = MarkupField(blank=True, default_markup_type=settings.ANTHILL_DEFAULT_MARKUP)
     role = models.CharField(max_length=5, choices=ROLES, default='other')

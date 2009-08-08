@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load blog %}
 {% load people %}
 
 {% block bodyclass %}people{% endblock %}
@@ -10,7 +11,7 @@
         {% get_latest_user_profiles as user_profiles %}
         {% for up in user_profiles %}
         <li>
-            <img src="{{up.photo|default:"/media/images/avatar_male.jpg"}}"/>
+            {% gravatar up.user.email %}
             <span id="leadName"><a href="{{up.user.get_absolute_url}}">
                     {% firstof up.user.first_name up.user.username %}</a>
             </span>
