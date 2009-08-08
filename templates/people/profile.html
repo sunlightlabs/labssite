@@ -5,28 +5,26 @@
 {% load media %}
 
 {% block content %}
-<div id="person" class="module">
+<div id="person" class="module vcard">
     <div id="personPic">
-        <img src="{{p_user.profile.photo|default:"/media/images/avatar_male.jpg"}}"/>
+        <img class="photo" src="{{p_user.profile.photo|default:"/media/images/avatar_male.jpg"}}"/>
     </div>
     <div id="personDetails">
         <div id="personHeader">
-            <h2>
-                {% if p_user.first_name %}
-                    {{p_user.first_name}}
-                {% else %}
-                    {{p_user.username}}
-                {% endif %}
-            </h2>
+            {% if p_user.first_name %}
+                <h2 class="fn">{{p_user.first_name}}</h2>
+            {% else %}
+                <h2 class="fn nickname">{{p_user.username}}</h2>
+            {% endif %}
             {% ifequal user.id p_user.id %}
                 <a href="{% url edit_profile %}">(edit profile)</a>
             {% endifequal %}
-            <span id="personIdentifier">{{p_user.profile.get_role_display|safe}}</span>
+            <span id="personIdentifier" class="role">{{p_user.profile.get_role_display|safe}}</span>
         </div>	
         <div id="userDetails" class="module">
             <dl>
                 <dt>Website:</dt>
-                <dd id="userWebsite"><a rel="me" href="{{p_user.profile.url|default:"#"}}">{{p_user.profile.url|default:"n/a"}}</a></dd>
+                <dd id="userWebsite"><a class="url" rel="me" href="{{p_user.profile.url|default:"#"}}">{{p_user.profile.url|default:"n/a"}}</a></dd>
 
                 <dt id="userLocation">Location:</dt>
                 <dd>{{p_user.profile.location|default:"n/a"}}</dd>
