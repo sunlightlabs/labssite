@@ -27,7 +27,7 @@
 <div class="contentHeader">
     <h2 class="post">Recent Posts</h2>
 </div>
-<div class="module">
+<div class="module hfeed">
     {% get_recent_posts 3 as latest_posts %}
     {% for post in latest_posts %}
         {% include "blogdor/post.html" %}

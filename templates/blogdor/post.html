@@ -1,13 +1,17 @@
-<div class="post">
-    <h3><a href="{{post.get_absolute_url}}">{{post.title}}</a></h3>
+<div class="post hentry">
+    <h3><a class="entry-title" href="{{post.get_absolute_url}}">{{post.title}}</a></h3>
     <dl class="entryMetadata">
         <dt>Written by</dt>
-        <dd><a class="seperationBlock" href="{{post.author.get_absolute_url}}">{{post.author}}</a></dd>
+        <dd>
+			<address class="author vcard">
+				<a class="seperationBlock fn" href="{{post.author.get_absolute_url}}">{{post.author}}</a>
+			</address>
+		</dd>
 
         <dt>Date</dt>
-        <dd>{{post.date_published|date:"m d Y"}}</dd>
+        <dd><abbr class="published" title="{{ post.date_published.isoformat }}">{{post.date_published|date:"m d Y"}}</abbr></dd>
     </dl>
-    <p>{{post.excerpt}}</p>
-    <p class="continueLink"><a href="{{post.get_absolute_url}}">Continue Reading</a></p>
+    <p class="entry-summary">{{post.excerpt}}</p>
+    <p class="continueLink"><a rel="bookmark" href="{{post.get_absolute_url}}">Continue Reading</a></p>
     <div class="clear"></div>
 </div>

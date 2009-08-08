@@ -24,7 +24,7 @@
         <span>Tags:</span>
         <ul>
             {% for tag in tags %}
-            <li><a href="{% url blogdor_tag tag.name %}">{{ tag.name }}</a></li>
+            <li><a href="{% url blogdor_tag tag.name %}" rel="tag">{{ tag.name }}</a></li>
             {% endfor %}
         </ul>
         <div class="clear"></div>
