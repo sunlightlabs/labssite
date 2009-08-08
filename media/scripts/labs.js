@@ -13,14 +13,16 @@ $(document).ready(function(){
     });
 
     make_toggle = function(link_a, div_a, link_b, div_b) {
-        $(link_a).click(function(){
+        $(link_a).click(function(event){
+            event.preventDefault();
             $(div_b).hide();
             $(link_b).attr('class', 'inactive');
             $(div_a).show();
             $(link_a).attr('class', 'active');
         }).click();
 
-        $(link_b).click(function(){
+        $(link_b).click(function(event){
+            event.preventDefault();
             $(div_a).hide();
             $(link_a).attr('class', 'inactive');
             $(div_b).show();
