@@ -26,4 +26,4 @@ class BadgeAward(models.Model):
         ordering = ['-timestamp']
 
     def __unicode__(self):
-        print '%s for %s' % (badge, user)
+        return '%s for %s' % (self.badge, self.user)
