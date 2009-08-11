@@ -3,25 +3,27 @@
 {% block bodyclass %}contact{%endblock%}
 
 {% block content %}
-	<div class="contentHeader">
-    	<h2 class="contact">We'd Like to Hear From You</h2>
-	</div>
-	<div class="module">
-    	<form id="contactForm" action="." method="post">
-        	<ul>
-            	{{ form.as_ul }}
-            	<li class="submit">
-                	<button class="submit-send" type="submit"><span>Send</span></button>
-            	</li>
-        	</ul>
-    	</form>
-	</div>
+    <div class="contentHeader">
+        <h2 class="contact">We'd Like to Hear From You</h2>
+    </div>
+    {% block thanks %}
+    {% endblock thanks %}
+    <div class="module">
+        <form id="contactForm" action="." method="post">
+            <ul>
+                {{ form.as_ul }}
+                <li class="submit">
+                    <button class="submit-send" type="submit"><span>Send</span></button>
+                </li>
+            </ul>
+        </form>
+    </div>
 {% endblock %}
 
 {% block sidebar %}
 <h3>Where We Work</h3>
 <div id="labsAddress" class="module">
-	<div class="adr">
+    <div class="adr">
         <div class="street-address">1818 N Street NW, Suite 410</div>
         <span class="locality">Washington,</span>
         <abbr class="region" title="District of Columbia">DC</abbr>
@@ -30,6 +32,6 @@
     <div class="phone">
     <span class="tel">202.742.1520</span>
     </div>
-</div>	
+</div>  
 <div class="clear"></div>
 {% endblock %}
