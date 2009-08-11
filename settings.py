@@ -102,12 +102,11 @@ DATE_FORMAT = 'F j, Y'
 
 AUTH_PROFILE_MODULE = 'people.Profile'
 
-if not DEBUG:
-    EMAIL_HOST = "smtp.sunlightlabs.com"
-    EMAIL_PORT = "25"
-    EMAIL_HOST_USER = "***REMOVED***"
-    EMAIL_HOST_PASSWORD = "***REMOVED***"
-    EMAIL_USE_TLS = True
+EMAIL_HOST = "smtp.sunlightlabs.com"
+EMAIL_PORT = "25"
+EMAIL_HOST_USER = "***REMOVED***"
+EMAIL_HOST_PASSWORD = "***REMOVED***"
+EMAIL_USE_TLS = True
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
