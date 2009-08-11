@@ -1,8 +1,9 @@
 {% extends "registration/base.html" %}
+{% load people %}
 
 {% block content %}
     <div id="headerTip"class="contentHeader">
-        <h2 class="contact">Contact {{to_user}}</h2>
+        <h2 class="contact">Contact {% display_name to_user %}</h2>
     </div>
     <div class="module">
         <p class="tip">Please note that when contacting this user your email will be visible to them so that they may reply.</p>

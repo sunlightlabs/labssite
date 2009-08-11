@@ -108,9 +108,8 @@ def contact(request, username):
                     'body': form.cleaned_data['body']}
             subject = render_to_string('people/contact_email_subject.txt', data)
             body = render_to_string('people/contact_email_body.txt', data)
-            print subject, body
-            to_user.email_user(subject, body, request.user.email)
-            request.user.message_set.create(message='Your email has been delivered to %s' % request.user)
+            to_user.email_user(subject.strip(), body, request.user.email)
+            request.user.message_set.create(message='Your email has been delivered to %s' % (request.user.first_name or request.user.username))
             return redirect('user_profile', username)
 
     return render_to_response('people/contact.html',

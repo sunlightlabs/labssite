@@ -2,6 +2,7 @@
 {% load cache %}
 {% load media %}
 {% load twitter_tags %}
+{% load people %}
 {% load events %}
 <html xmlns="http://www.w3.org/1999/xhtml" >
     <head>
@@ -42,7 +43,7 @@
                     <div id="pageNav">
                         <ul>
                             {% if user.is_authenticated %}
-                            <li>Hi, <a href="{% url edit_profile %}">{{user}}</a>.</li>
+                            <li>Hi, <a href="{% url edit_profile %}">{% display_name user %}</a>.</li>
                             <li><a href="{% url openid-logout %}">Logout?</a></li>
                             {% if user.is_staff %}
                             <li><a href="/admin/">Admin</a></li>
