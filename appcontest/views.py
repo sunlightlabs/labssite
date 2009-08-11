@@ -2,16 +2,19 @@ from django.template.defaultfilters import slugify
 from django.forms.util import ErrorList
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect, Http404
+from django.template import RequestContext
 from django.shortcuts import get_object_or_404, render_to_response
 from sunlightlabs.appcontest.models import Contest, Entry, EntryForm
 
 def index(request, contest):
     contest = get_object_or_404(Contest, slug=contest)
-    return render_to_response('appcontest/index.html', {'contest':contest})
+    return render_to_response('appcontest/index.html', {'contest':contest},
+                              context_instance=RequestContext(request))
 
 def thanks(request, contest):
     contest = get_object_or_404(Contest, slug=contest)
-    return render_to_response('appcontest/thanks.html', {'contest':contest})
+    return render_to_response('appcontest/thanks.html', {'contest':contest},
+                              context_instance=RequestContext(request))
 
 def submit(request, contest):
     message = None
@@ -39,13 +42,15 @@ def submit(request, contest):
     else:
         form = EntryForm()
 
-    return render_to_response("appcontest/submit.html", {"contest": contest, "form": form, "message": message})
+    return render_to_response("appcontest/submit.html", {"contest": contest, "form": form, "message": message},
+                             context_instance=RequestContext(request))
 
 def app_list(request, contest):
     contest = get_object_or_404(Contest, slug=contest)
     apps = contest.entries.all().approved()
     return render_to_response("appcontest/app_list.html", {"contest": contest,
-                                                           "apps": apps})
+                                                           "apps": apps},
+                             context_instance=RequestContext(request))
 
 def app_detail(request, contest, slug):
     contest = get_object_or_404(Contest, slug=contest)
@@ -54,6 +59,7 @@ def app_detail(request, contest, slug):
         if not request.user.is_superuser and app.moderation_status != 1:
            raise Entry.DoesNotExist
         return render_to_response("appcontest/app_detail.html", {"app": app,
-                                                                 "contest":contest})
+                                                                 "contest":contest},
+                                 context_instance=RequestContext(request))
     except Entry.DoesNotExist:
         raise Http404("Application does not exist")
