@@ -22,7 +22,7 @@ class TweetsNode(template.Node):
         try:
             tweets = api.GetUserTimeline(user, count=self.count)
             context[self.context_var] = tweets
-        except HTTPError:
+        except:
             pass
 
         return ''

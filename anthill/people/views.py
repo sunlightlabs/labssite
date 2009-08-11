@@ -42,7 +42,6 @@ def _user_to_profileform(user):
     data = {'name': user.first_name,
             'email': user.email,
             'twitter_id': profile.twitter_id,
-            'photo': profile.photo,
             'url': profile.url, 
             'position': profile.role,
             'location': profile.location,
@@ -62,7 +61,6 @@ def edit_profile(request):
             user.first_name = form.cleaned_data['name']
             user.email = form.cleaned_data['email']
             profile.twitter_id = form.cleaned_data['twitter_id']
-            profile.photo = form.cleaned_data['photo']
             profile.url = form.cleaned_data['url']
             profile.role = form.cleaned_data['position']
             profile.location = form.cleaned_data['location']

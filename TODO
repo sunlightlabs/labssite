@@ -1,6 +1,6 @@
-blogdor: subscribe to comments (Jeremy)
-openid: reset password (email)
-openid: google/yahoo login (Ali)
+subscribe to comments (Jeremy)
+google/yahoo login (Ali)
+create project from idea
 
 audit:
     test email
@@ -8,3 +8,15 @@ audit:
     add caching tags
     add titles
     first names instead of usernames
+
+comments
+openid recovery
+contests
+blogdor rss
+blogdor
+contact form
+anthill.people
+anthill.ideas
+anthill.projects
+anthill.events
+move redirects to db

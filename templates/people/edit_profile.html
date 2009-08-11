@@ -1,4 +1,5 @@
 {% extends "registration/base.html" %}
+{% load blog %}
 {% load media %}
 {% load tagging_tags %}
 
@@ -32,10 +33,9 @@
         <p class="tip">Let the labs community know more about you.</p>
         <form id="accountForm" method="POST" action="." enctype="multipart/form-data">
             <ul>
+		<li><label>Current Avatar</label>{% gravatar user.email %}</li>
+		<p class="tip">To edit your avatar visit <a href="http://gravatar.com">gravatar.com</a></p>
                 {% for field in form %}
-                    {% ifequal field.name "photo" %}
-                    <li><label>Current Avatar</label> <img src="{{user.photo|default:"/media/images/avatar_male.jpg"}}"></li>
-                    {% endifequal %}
 
                     <li>{{field.label_tag}} {{field}} 
 

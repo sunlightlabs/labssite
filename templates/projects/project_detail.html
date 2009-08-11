@@ -1,4 +1,5 @@
 {% extends "ideas/base.html" %}
+{% load blog %}
 {% load tagging_tags %}
 {% load newsfeed_tags %}
 
@@ -72,7 +73,7 @@
 <div class="module">
     <h4>Lead</h4>
     <a id="leadParticipant" href="{{project.lead.get_absolute_url}}">
-        <img src="{{project.lead.profile.photo|default:"/media/images/avatar_male.jpg"}}" />
+        {% gravatar project.lead.email %}
         <span id="leadName">{{project.lead.username}}</span>
         <span id="metadata">Sunlight Labs</span>
     </a>
@@ -83,13 +84,11 @@
     <h4 id="teamHeader">Team</h4>
     <ul id="teamParticipants">
         {% for member in members %}
-            {% if not member.role.lead %}
             <li>
-                <a href="{{member.get_absolute_url}}"><img src="{{member.profile.photo|default:"/media/images/avatar_male.jpg"}}"/>
+                <a href="{{member.get_absolute_url}}">{% gravatar member.email %}
                     <span>{{member}}</span>
                 </a>
             </li>
-            {% endif %}
         {% endfor %}
         <div class="clear"></div>
     </ul>

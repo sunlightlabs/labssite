@@ -7,7 +7,7 @@
 {% block content %}
 <div id="person" class="module vcard">
     <div id="personPic">
-        <img class="photo" src="{{p_user.profile.photo|default:"/media/images/avatar_male.jpg"}}"/>
+        {% gravatar p_user.email %}
     </div>
     <div id="personDetails">
         <div id="personHeader">
