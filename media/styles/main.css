@@ -317,17 +317,30 @@ div#projectDetail p{ width: 490px;}
 div#projectDetail div#projectDescription { margin-bottom: 20px; }
 div#project_mainDetails { margin-bottom: 20px; background: url(../images/line_505.png) bottom left no-repeat; padding-bottom: 30px; float: left;}
 
-div#signup_nav li a{ float: left; text-indent: -9999em; width: 103px; height: 45px; margin-bottom: 15px; margin-right: 10px; display: block;}
 li#signup_openid a{ background: url(../images/openid.png) top left no-repeat; }
 li#signup_standard a{ background: url(../images/standard_signup.png) top left no-repeat; }
+li#signup_google a{ background: url(../images/google_signup.png) top left no-repeat; }
+li#signup_yahoo a{ background: url(../images/yahoo_signup.png) top left no-repeat; }
+li#signup_aol a{ background: url(../images/aol_signup.png) top left no-repeat; }
+
 li#signup_openid a.active{ background: url(../images/openid.png) bottom left no-repeat; }
 li#signup_standard a.active{ background: url(../images/standard_signup.png) bottom left no-repeat; }
+li#signup_google a.active{ background: url(../images/google_signup.png) bottom left no-repeat; }
+li#signup_yahoo a.active{ background: url(../images/yahoo_signup.png) bottom left no-repeat; }
+li#signup_aol a.active{ background: url(../images/aol_signup.png) bottom left no-repeat; }
 
-div#signin_nav li a{ float: left; text-indent: -9999em; width: 103px; height: 45px; margin-bottom: 15px; margin-right: 10px; display: block;}
+div#signin_nav li a, div#signup_nav li a{ float: left; text-indent: -9999em; width: 103px; height: 45px; margin-bottom: 15px; margin-right: 10px; display: block;}
 li#signin_openid a{ background: url(../images/openid.png) top left no-repeat; }
 li#signin_standard a{ background: url(../images/standard_signin.png) top left no-repeat; }
+li#signin_google a{ background: url(../images/google_signin.png) top left no-repeat; }
+li#signin_yahoo a{ background: url(../images/yahoo_signin.png) top left no-repeat; }
+li#signin_aol a{ background: url(../images/aol_signin.png) top left no-repeat; }
+
 li#signin_openid a.active{ background: url(../images/openid.png) bottom left no-repeat; }
 li#signin_standard a.active{ background: url(../images/standard_signin.png) bottom left no-repeat; }
+li#signin_google a.active{ background: url(../images/google_signin.png) bottom left no-repeat; }
+li#signin_aol a.active{ background: url(../images/aol_signin.png) bottom left no-repeat; }
+li#signin_yahoo a.active{ background: url(../images/yahoo_signin.png) bottom left no-repeat; }
 
 div#app dt{ font-size: 110%; font-weight: bold; margin: 15px 0 5px 0;}
 
@@ -419,6 +432,8 @@ select.status { margin-top: 10px;}
 table#projectMembers tbody td{ padding-top:5px; padding-bottom:5px;}
 
 th.sort { background: url(../images/sortArrows.png) left 2px no-repeat; text-align: left; padding-left: 15px;}
+div#ltColumn th.headerSortDown { background: url(../images/sortArrows_down.png) left 2px no-repeat; text-align: left; padding-left: 15px; }
+div#ltColumn th.headerSortUp { background: url(../images/sortArrows_up.png) left 2px no-repeat; text-align: left; padding-left: 15px; }
 
 div#ltColumn form#standard_signupForm input#id_email_opt_in{ margin-right: 5px; display: block; float: left;  }
 div#ltColumn form#standard_signupForm li.email_opt_in { margin-left: 200px; padding-bottom: 20px;}
@@ -461,6 +476,16 @@ button.startnewBtn { background: url(../images/btn_startnew.png) left top no-rep
 button#resetPassword { background: url(../images/btn_resetpassword.png) left top no-repeat; width: 171px; margin-left: 200px;}
 form#projectForm button.submitBtn { margin-left: 270px; margin-top: 20px;}
 button.updateProjectBtn { background: url(../images/btn_updateProject.png) left top no-repeat; width: 182px; margin-top: 30px;}
+
+form#openid_signinForm button.signinBtn { background: url(../images/btn_signinOpenID.png) right bottom no-repeat; width: 214px; margin-left: 200px; margin-top: 20px;}
+form#google_signinForm button.signinBtn { background: url(../images/btn_signinGoogle.png) right bottom no-repeat; width: 263px;}
+form#yahoo_signinForm button.signinBtn { background: url(../images/btn_signinYahoo.png) right bottom no-repeat; width: 214px;}
+form#aol_signinForm button.signinBtn { background: url(../images/btn_signinAOL.png) right bottom no-repeat; width: 275px; margin-left: 200px;}
+
+form#openid_signupForm button.signupBtn { background: url(../images/btn_signupOpenID.png) right bottom no-repeat; width: 214px; margin-left: 200px; margin-top: 20px;}
+form#google_signupForm button.signupBtn { background: url(../images/btn_signupGoogle.png) right bottom no-repeat; width: 263px;}
+form#yahoo_signupForm button.signupBtn { background: url(../images/btn_signupYahoo.png) right bottom no-repeat; width: 214px;}
+form#aol_signupForm button.signupBtn { background: url(../images/btn_signupAOL.png) right bottom no-repeat; width: 275px; margin-left: 200px;}
 
 /*apps sponsors*/
 div#appsSponsors {padding-right: 15px;}
