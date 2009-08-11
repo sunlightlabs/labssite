@@ -20,7 +20,7 @@
         <form id="searchForm" method="GET" action=".">
             {{form.location.label_tag}}
             {{form.location}}
-            <button class="searchBtn">
+            <button type="submit" class="searchBtn">
                 <span>search</span>
             </button>
             <div id="advancedSearch">
@@ -28,7 +28,7 @@
                 <li> {{form.name.label_tag}} {{form.name}} </li>
                 <li> {{form.position.label_tag}} {{form.position}} </li>
                 <li> {{form.location_range.label_tag}} {{form.location_range}} </li>
-                <button class="advsearchBtn">
+                <button type="submit" class="advsearchBtn">
                     <span>search</span>
                 </button>
                 <div class="clear"></div>
