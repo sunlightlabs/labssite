@@ -19,6 +19,9 @@
             <ul>
                 <li id="signup_standard"><a class="active" href="#">Standard Sign Up</a></li>
                 <li id="signup_openid"><a href="#">OpenID</a></li>
+                <li id="signup_google"><a href="#">Google</a></li>
+                <li id="signup_yahoo"><a href="#">Yahoo</a></li>
+                <li id="signup_aol"><a href="#">AOL</a></li>
             </ul>
             <div class="clear"></div>
         </div>
@@ -31,6 +34,27 @@
                     </li>
                     <button class="signupBtn">
                         <span>Join Us!</span>
+                    </button>
+                </ul>
+            </form>
+            <form id="google_signupForm" method="POST" action="{{action}}">
+                <button class="signupBtn">
+                    <span>Sign Up With Your Google Account</span>
+                </button>
+            </form>
+            <form id="yahoo_signupForm" method="POST" action="{{action}}">
+                <button class="signupBtn">
+                    <span>Sign Up With Your Yahoo ID</span>
+                </button>
+            </form>
+            <form id="aol_signupForm" method="POST" action="{{action}}">
+                <ul>
+                    <li>
+                        <label for="aol_url">AOL Screenname</label>
+                        <input id="aol_url" type="text" name="openid_url"  />
+                    </li>
+                    <button class="signupBtn">
+                        <span>Sign Up With Your AOL Screenname</span>
                     </button>
                 </ul>
             </form>
