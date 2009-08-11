@@ -1,4 +1,5 @@
 {% extends "ideas/base.html" %}
+{% load people %}
 {% load blog %}
 {% load tagging_tags %}
 {% load newsfeed_tags %}
@@ -74,7 +75,7 @@
     <h4>Lead</h4>
     <a id="leadParticipant" href="{{project.lead.get_absolute_url}}">
         {% gravatar project.lead.email %}
-        <span id="leadName">{{project.lead.username}}</span>
+        <span id="leadName">{% display_name project.lead %}</span>
         <span id="metadata">Sunlight Labs</span>
     </a>
     <div class="clear"></div>
@@ -86,7 +87,7 @@
         {% for member in members %}
             <li>
                 <a href="{{member.get_absolute_url}}">{% gravatar member.email %}
-                    <span>{{member}}</span>
+                    <span>{% display_name member %}</span>
                 </a>
             </li>
         {% endfor %}

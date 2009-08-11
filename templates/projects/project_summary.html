@@ -1,3 +1,5 @@
+{% load people %}
+
 <div class="project">
     {% if project.official %}
         <span class="sunlightProject">Sunlight Project</span>
@@ -9,7 +11,7 @@
         <h3><a href="{{project.get_absolute_url}}">{{project}}</a></h3>
         <dl class="entryMetadata">
             <dt>Written by</dt>
-            <dd><a class="seperationBlock" href="{{project.lead.get_absolute_url}}">{{project.lead}}</a></dd>
+            <dd><a class="seperationBlock" href="{{project.lead.get_absolute_url}}">{% display_name project.lead %}</a></dd>
             <dt>Date</dt>
             <dd>{{project.creation_date|date}}</dd>
         </dl>
