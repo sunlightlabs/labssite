@@ -1,4 +1,5 @@
 {% load comments %}
+{% load blog %}
 
 {% get_comment_list for comment_obj as comment_list %}
 {% get_comment_form for comment_obj as comment_form %}
@@ -24,7 +25,11 @@
     <p class="tip">Have thoughts that might fuel this discussion further, post them below. (<a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a> is supported in comments.)</p>
     <div id="commentBlock">
         <a class="userPhoto" href="{{comment.user.get_absolute_url}}">
-            <img src="/media/images/avatar_male.jpg"/>
+            {% if user.is_authenticated %}
+            {% gravatar user.email %}
+            {% else %}
+            {% gravatar "" %}
+            {% endif %}
         </a>
         <form id="comment" method="POST" action="{% comment_form_target %}">
             <input type="hidden" name="next" value="{{comment_obj.get_absolute_url}}" />
@@ -39,10 +44,12 @@
                 {% endif %}
             {% endfor %}
             <textarea id="text" class="textarea" name="comment" cols="32" rows="5"></textarea>
+            <!--
             <div id="subscribe">
-                <input type="checkbox" value="1" name="subscribe"/>
+                <input type="checkbox" name="subscribe"/>
                 <label>Subscribe to this stream</label>
             </div>
+            -->
             <button class="postBtn" name="submit" type="submit">
                 <span>Post!</span>
             </button>
