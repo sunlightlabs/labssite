@@ -50,7 +50,7 @@ def app_list(request, contest):
 def app_detail(request, contest, slug):
     contest = get_object_or_404(Contest, slug=contest)
     try:
-        app = Entry.objects.get(slug=slug)
+        app = contest.entries.get(slug=slug)
         if not request.user.is_superuser and app.moderation_status != 1:
            raise Entry.DoesNotExist
         return render_to_response("appcontest/app_detail.html", {"app": app,
