@@ -53,7 +53,7 @@
                                 <div class="clear"></div>
                             </div>    
                             <input id="skills" type="text" maxlength="30" />
-                            <button class="addBtn">
+                            <button type="submit" class="addBtn">
                                 <span>Add Skill</span>
                             </button>
                             <div id="yourSkills">
@@ -65,7 +65,7 @@
                     </li>
                 {% endfor %}
 
-                <button class="saveBtn">
+                <button type="submit" class="saveBtn">
                     <span>Save Changes</span>
                 </button>
             </ul>
@@ -80,7 +80,7 @@
     <form method="POST" action="{% url change_password %}">
         <ul>
             {{ password_form.as_ul }}
-            <button class="submitBtn">
+            <button type="submit" class="submitBtn">
                 <span>Save Changes</span>
             </button>
         </ul>
