@@ -1,4 +1,5 @@
 {% extends "registration/base.html" %}
+{% load cache %}
 {% load blog %}
 {% load people %}
 {% load twitter_tags %}
@@ -123,10 +124,12 @@
 <div id="userTweets" class="module">
 	{% if tweets %}
     <ul>
+    {% cache 3600 tweets p_user.profile.twitter_id %}
     {% get_latest_tweets p_user.profile.twitter_id 5 as tweets %}
     {% for tweet in tweets %}
         <li>{{tweet.text|twitterize}}</li>
     {% endfor %}
+    {% endcache %}
     </ul>
     <a class="center_viewall" href="http://twitter.com/{{p_user.profile.twitter_id}}">Go to {% possessive p_user %} twitter page »</a>
 	{% else %}

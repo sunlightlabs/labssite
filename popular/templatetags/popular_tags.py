@@ -5,12 +5,15 @@ from popular import get_popular_items
 register = template.Library()
 
 class ItemsNode(template.Node):
-    def __init__(self, items, context_var):
-        self.items = items
+    def __init__(self, model, num_items, num_days, context_var):
+        self.model = model
+        self.num_items = num_items
+        self.num_days = num_days
         self.context_var = context_var
 
     def render(self, context):
-        context[self.context_var] = [x[0] for x in self.items]
+        items = get_popular_items(self.model, self.num_items, self.num_days)
+        context[self.context_var] = [x[0] for x in items]
         return ''
 
 @register.tag
@@ -41,7 +44,5 @@ def get_recently_popular(parser, token):
     if as_index > 3:
         num_days = int(pieces[3])
 
-    items = get_popular_items(model, num_items, num_days)
-
     varname = pieces[-1]
-    return ItemsNode(items, varname)
+    return ItemsNode(model, num_items, num_days, varname)

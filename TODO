@@ -2,18 +2,21 @@ subscribe to comments (Jeremy)
 google/yahoo login (Ali)
 create project from idea
 
+Content:
+    tag more posts
+    favorite posts
+
 audit:
     test email
     reduce #queries
-    add caching tags
     add titles
     first names instead of usernames
+    format dates properly
 
 comments
 openid recovery
 contests
 blogdor rss
-blogdor
 contact form
 anthill.people
 anthill.ideas

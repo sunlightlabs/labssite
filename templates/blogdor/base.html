@@ -1,31 +1,30 @@
 {% extends "base.html" %}
+{% load cache %}
 {% load blog %}
 {% load popular_tags %}
 
 {% block bodyclass %}blog{% endblock %}
 
 {% block sidebar %}
-{% get_recently_popular blogdor.Post 5 14 as popular_posts %}
+
 <div id="popularNav">
     <ul>
-        {% if popular_posts %}
-            <li id ="popular"><a class="active" href="#">Most Popular</li>
-            <li id ="favorites"><a href="#">Our Favorites</li>
-        {% else %}
-            <li id ="popular"><a href="#">Most Popular</li>
-            <li id ="favorites"><a class="active" href="#">Our Favorites</li>
-        {% endif %}
+        <li id ="popular"><a class="active" href="#">Most Popular</li>
+        <li id ="favorites"><a href="#">Our Favorites</li>
     </ul>
 </div>
+
 <div class="module">
+{% cache 3600 pop_posts %}
+{% get_recently_popular blogdor.Post 5 14 as popular_posts %}
     <div id="popularPosts">
-        
         <ul>
             {% for post in popular_posts %}
             <li><a href="{{post.get_absolute_url}}">{{post.title}}</a></li>
             {% endfor %}
         </ul>
     </div>
+{% endcache %}
     <div id="favoritePosts">
         {% get_favorite_posts as favorite_posts %}
         <ul>
@@ -35,6 +34,7 @@
         </ul>
     </div>
 </div>
+
 <hr></hr>
 <h3>Labs Members</h3>
 <div class="module">
