@@ -5,7 +5,6 @@ create project from idea
 audit:
     test email
     reduce #queries
-    add caching tags
     add titles
     first names instead of usernames
 
