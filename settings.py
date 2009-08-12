@@ -10,6 +10,8 @@ ADMINS = (
     ('timball', 'timball@sunlightfoundation.com'),
 )
 
+CACHE_BACKEND = 'file:///home/james/code/sunlight/sunlightlabs/dbgcache'
+
 MANAGERS = ADMINS
 INTERNAL_IPS = ('127.0.0.1',)
 DEBUG_TOOLBAR_CONFIG = {'INTERCEPT_REDIRECTS': False}
@@ -130,7 +132,7 @@ ABSOLUTE_URL_OVERRIDES = {
 GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com',
                             'jturk@sunlightfoundation.com']
 
-GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site/images/avatar_new.jpg"
+GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site3/images/avatar.jpg"
 GRAVATAR_SIZE = 60
 FORCE_LOWERCASE_TAGS = True
 

@@ -1,17 +1,5 @@
-{% extends "base.html" %}
+{% extends "contact_form/contact_form.html" %}
 
-{% block body %}contact{% endblock %}
-
-{% block content %}
-	<h2 class="contact">We'd Like to Hear From You</h2>
-	<p>Thanks for your message!</p>
-    <form action="." method="post">
-        <ul>
-            {{ form.as_ul }}
-            <li class="submit">
-				<button class="submit-send" type="submit"><span>Send</span></button>
-			</li>
-        </ul>
-    </form>
+{% block thanks %}
+<p>Your message has been sent, thank you for contacting us.</p>
 {% endblock %}
-

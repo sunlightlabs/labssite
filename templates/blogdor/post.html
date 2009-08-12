@@ -1,15 +1,16 @@
+{% load people %}
 <div class="post hentry">
     <h3><a class="entry-title" href="{{post.get_absolute_url}}">{{post.title}}</a></h3>
     <dl class="entryMetadata">
         <dt>Written by</dt>
         <dd>
 			<address class="author vcard">
-				<a class="seperationBlock fn" href="{{post.author.get_absolute_url}}">{{post.author}}</a>
+				<a class="seperationBlock fn" href="{{post.author.get_absolute_url}}">{% display_name post.author %}</a>
 			</address>
 		</dd>
 
         <dt>Date</dt>
-        <dd><abbr class="published" title="{{ post.date_published.isoformat }}">{{post.date_published|date:"m d Y"}}</abbr></dd>
+        <dd><abbr class="published" title="{{ post.date_published.isoformat }}">{{post.date_published|date}}</abbr></dd>
     </dl>
     <p class="entry-summary">{{post.excerpt}}</p>
     <p class="continueLink"><a rel="bookmark" href="{{post.get_absolute_url}}">Continue Reading</a></p>

@@ -1,22 +1,15 @@
-subscribe to comments (Jeremy)
-google/yahoo login (Ali)
+subscribe to comments
+google/yahoo/aol login
 create project from idea
-
-audit:
-    test email
-    reduce #queries
-    add caching tags
-    add titles
-    first names instead of usernames
-
-comments
+add titles to all pages
+test commenting (logged in vs. anonymous)
 openid recovery
-contests
-blogdor rss
-blogdor
-contact form
-anthill.people
-anthill.ideas
-anthill.projects
-anthill.events
+blogdor RSS
 move redirects to db
+test emails [signup, recovery, project join, blog post]
+allow anonymous comments or hide comment box if not logged in
+
+Content:
+    tag more posts
+    favorite posts
+    move redirects to db

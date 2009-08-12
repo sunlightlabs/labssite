@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load cache %}
 {% load media %}
 {% load twitter_tags %}
+{% load people %}
 {% load events %}
 <html xmlns="http://www.w3.org/1999/xhtml" >
     <head>
@@ -41,7 +43,7 @@
                     <div id="pageNav">
                         <ul>
                             {% if user.is_authenticated %}
-                            <li>Hi, <a href="{% url edit_profile %}">{{user}}</a>.</li>
+                            <li>Hi, <a href="{% url edit_profile %}">{% display_name user %}</a>.</li>
                             <li><a href="{% url openid-logout %}">Logout?</a></li>
                             {% if user.is_staff %}
                             <li><a href="/admin/">Admin</a></li>
@@ -82,6 +84,7 @@
                     <div id="labsEvents">
                         <h4 id="labsEvents_header"><a href="{% url event_search %}">Track Us Down</a></h4>
                         <ul>
+                            {% cache 1800 events %}
                             {% get_official_events 3 as events %}
                             {% for event in events %}
                             <li>
@@ -89,17 +92,20 @@
                             <span class="labsEvent_date">{{event.start_date|date:"M d"}}</span>
                             </li>
                             {% endfor %}
+                            {% endcache %}
                         </ul>
                     </div>
                     <div id="labsTwitter">
                         <a href="http://twitter.com/sunlightlabs"><h4 id="labsTwitter_header">Follow The Labs And See What We're Up To</h4></a>
                         <ul>
+                            {% cache 3600 labs_tweets %}
                             {% get_latest_tweets "sunlightlabs" 2 as tweets %}
                             {% for tweet in tweets %}
                             <li>
                                 <p class="tweetContent">{{tweet.text|twitterize}}</p>
                             </li>
                             {% endfor %}
+                            {% endcache %}
                         </ul>
                     </div>
                     <div id="foundationDetails">
