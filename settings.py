@@ -127,8 +127,9 @@ ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda o: "/people/%s/" % o.username
 }
 
-GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com',
-                            'jturk@sunlightfoundation.com']
+#GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com',
+#                            'jturk@sunlightfoundation.com']
+GATEKEEPER_MODERATOR_LIST = []
 
 GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site3/images/avatar.jpg"
 GRAVATAR_SIZE = 60
