@@ -22,6 +22,11 @@ class Contest(models.Model):
     def get_absolute_url(self):
         return ('appcontest_index', [self.slug])
 
+    class Meta:
+        permissions = (
+            ('is_judge', 'Is Judge'),
+        )
+
 class Entry(models.Model):
 
     name = models.CharField("Your apps name", max_length=128)
