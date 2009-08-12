@@ -6,7 +6,7 @@
 {% js "jquery.tablesorter.min.js" %}
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#users_table').tablesorter({headers: {2: {sorter: false} } });
+        $('#users_table').tablesorter({headers: {2: {sorter: false} }, widgets: ['zebra'] });
     });
 </script>
 {% endblock %}
@@ -50,7 +50,7 @@
                     <th class="table_left sort" id="title_name">Name</th>
                     <th class="table_center table_position sort">Position</th>
                     <th class="table_center">Skills</th>
-                    <th class="table_right sort">Distance</th>
+                    <th class="table_right sort">Distance <small>(mi)</small></th>
                 </tr>
             </thead>
             <tbody>
@@ -61,9 +61,7 @@
                     </td>
                     <td class="table_center table_position">{{user.get_role_display|safe}}</td>
                     <td class="table_center">{{user.skills|default:"n/a"}}</td>
-                    <td class="table_right">
-                        {% if user.distance %} {{user.distance.mi|floatformat}} mi {% endif %}
-                    </td>
+                    <td class="table_right">{% if user.distance %} {{user.distance.mi|floatformat}} {% endif %}</td>
                 </tr>
                 {% endfor %}
             </tbody>
