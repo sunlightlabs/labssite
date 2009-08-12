@@ -3,11 +3,14 @@
 {% block content %}
 <div class="module">
     <div class="contentHeader">
-		{% if event %}
-			<h2>Edit Your Event</h2>
-		{% else %}
-        	<h2>Add An Event</h2>
-		{% endif %}
+        {% if event %}
+            <h2>Edit Your Event</h2>
+        {% else %}
+        <h2>Add An Event</h2>
+        <p> Want to plan a hackathon in your area? Looking to just get some open government developers together to hang out in the area? We've made a simple event tool for you to create and promote your own events so you can get folks together.</p>
+
+        <p> Use the form below to tell the community about your event. Then other people will be able to <a href="{% url event_search %}">search for your event</a> and sign up for it.</p>
+        {% endif %}
     </div>
     <div class="module">
         <form id="accountForm" method="POST" action="." enctype="multipart/form-data">
