@@ -2,11 +2,11 @@ subscribe to comments
 create project from idea
 add titles to all pages
 blogdor RSS
-move redirects to db
 test emails [signup, project join, blog post]
 allow anonymous comments or hide comment box if not logged in
+events rsvp
+events date picker
 
 Content:
     tag more posts
     favorite posts
-    move redirects to db
