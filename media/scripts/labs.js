@@ -1,6 +1,6 @@
 var GB_ANIMATION = true;
 $(document).ready(function(){
-
+    
     $("div#leadBox").hide();
     $("div#advancedSearch").hide();
 
