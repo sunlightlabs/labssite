@@ -11,7 +11,7 @@ from anthill.ideas.models import Idea
 from feedinator.models import Feed
 
 def projects_and_ideas(request):
-    context = {'projects': Project.objects.select_related().all()[0:3],
+    context = {'projects': Project.objects.select_related().order_by('-update_date').all()[0:3],
                'ideas': Idea.objects.with_user_vote(request.user).select_related().all()[0:3]}
     return render_to_response('projects/projects_and_ideas.html', context,
                               context_instance=RequestContext(request))
