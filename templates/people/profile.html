@@ -5,6 +5,12 @@
 {% load twitter_tags %}
 {% load media %}
 
+{% block extrahead %}
+    {% if p_user.is_staff %}
+    <link rel="alternate" type="application/rss+xml" title="Sunlight Labs blog posts by {{user}}" href="/blog/feeds/author/{{p_user}}/" />
+    {% endif %}
+{% endblock %}
+
 {% block content %}
 <div id="person" class="module">
     <div id="personPic">
