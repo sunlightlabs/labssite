@@ -201,7 +201,7 @@ span.sunlightProject { background: url(../images/icon_sunlight.png) top left no-
 div.projectContent{ padding-left: 50px;}
 
 a#leadParticipant img, div#recentMembers img{ float: left; height: 64px; margin: 0 15px 15px 0;}
-div#recentMembers li { height: 64px; margin-bottom: 15px;}
+div#recentMembers li { height: 70px; margin-bottom: 18px;}
 ul#teamParticipants img{ width: 40px;}
 ul#teamParticipants li { float: left; width: 70px; margin-bottom: 10px;}
 ul#teamParticipants span { display: block;}
@@ -442,6 +442,10 @@ table#linksTable { width: 608px;}
 select.status { margin-top: 10px;}
 .member_message { width: 395px; padding-right: 15px;}
 table#projectMembers tbody td{ padding-top:5px; padding-bottom:5px;}
+
+table#events_table th.table_left { width: 250px;}
+table#events_table th.table_position { width: 200px;}
+table#events_table th.table_right { text-align: right;}
 
 th.sort { background: url(../images/sortArrows.png) left 2px no-repeat; text-align: left; padding-left: 15px;}
 div#ltColumn th.headerSortDown { background: url(../images/sortArrows_down.png) left 2px no-repeat; text-align: left; padding-left: 15px; }
