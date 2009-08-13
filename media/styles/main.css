@@ -49,6 +49,7 @@ body.people div#pageNav{ background: url(../images/banner_people.png) bottom cen
 body.projects div#pageNav{ background: url(../images/banner_projects.png) bottom center no-repeat; }
 body.about div#pageNav{ background: url(../images/banner_about.png) bottom center no-repeat; }
 body.contact div#pageNav{ background: url(../images/banner_contact.png) bottom center no-repeat; }
+body.events div#pageNav{ background: url(../images/banner_events.png) bottom center no-repeat; }
 
 .clear{ clear: both;}
 
@@ -338,6 +339,8 @@ li#signup_google a.active{ background: url(../images/google_signin.png) bottom l
 li#signup_yahoo a.active{ background: url(../images/yahoo_signin.png) bottom left no-repeat; }
 li#signup_aol a.active{ background: url(../images/aol_signin.png) bottom left no-repeat; }
 
+div#signin_nav, div#signup_nav { margin-top:20px;}
+
 div#signin_nav li a, div#signup_nav li a{ float: left; text-indent: -9999em; width: 103px; height: 45px; margin-bottom: 15px; margin-right: 10px; display: block;}
 li#signin_openid a{ background: url(../images/openid.png) top left no-repeat; }
 li#signin_standard a{ background: url(../images/standard_signin.png) top left no-repeat; }
@@ -421,8 +424,8 @@ form#projectForm table#feedsTable input#id_links {text-align: center;}
 /*table*/
 div#users_results { margin-top: 25px; margin-bottom: 25px;}
 table { width: 605px; line-height: 18px; }
-table#users_table { width: 620px;}
-table#users_table tbody td { padding-top:5px; padding-bottom:5px;}
+table#users_table, table#events_table { width: 620px;}
+table#users_table tbody td, table#events_table tbody td { padding-top:5px; padding-bottom:5px;}
 tr { height: 25px;}
 tr.odd { background-color: #fff; padding: 5px; }
 tr.even { padding: 5px;  }
@@ -490,13 +493,13 @@ a#projectCreate{ background: url(../images/btn_createNewProject.png) right top n
 form#searchForm button.searchBtn_events { background: url(../images/btn_search.png) left bottom no-repeat; width: 113px; margin-top: 0px; padding-top: 47px;}
 
 form#openid_signinForm button.signinBtn { background: url(../images/btn_signinOpenID.png) right bottom no-repeat; width: 214px; margin-left: 200px; margin-top: 20px;}
-form#google_signinForm button.signinBtn { background: url(../images/btn_signinGoogle.png) right bottom no-repeat; width: 263px; margin-left: 0px;}
-form#yahoo_signinForm button.signinBtn { background: url(../images/btn_signinYahoo.png) right bottom no-repeat; width: 214px; margin-left: 0px;}
+form#google_signinForm button.signinBtn { background: url(../images/btn_signinGoogle.png) right bottom no-repeat; width: 263px; margin-left: 0px; margin-top:0;}
+form#yahoo_signinForm button.signinBtn { background: url(../images/btn_signinYahoo.png) right bottom no-repeat; width: 214px; margin-left: 0px; margin-top:0;}
 form#aol_signinForm button.signinBtn { background: url(../images/btn_signinAOL.png) right bottom no-repeat; width: 275px; margin-left: 200px;}
 
 form#openid_signupForm button.signupBtn { background: url(../images/btn_signupOpenID.png) right bottom no-repeat; width: 214px; margin-left: 200px; margin-top: 20px;}
-form#google_signupForm button.signupBtn { background: url(../images/btn_signupGoogle.png) right bottom no-repeat; width: 263px; margin-left: 0px;}
-form#yahoo_signupForm button.signupBtn { background: url(../images/btn_signupYahoo.png) right bottom no-repeat; width: 214px; margin-left: 0px;}
+form#google_signupForm button.signupBtn { background: url(../images/btn_signupGoogle.png) right bottom no-repeat; width: 275px; margin-left: 0px; margin-top:0;}
+form#yahoo_signupForm button.signupBtn { background: url(../images/btn_signupYahoo.png) right bottom no-repeat; width: 214px; margin-left: 0px; margin-top:0;}
 form#aol_signupForm button.signupBtn { background: url(../images/btn_signupAOL.png) right bottom no-repeat; width: 275px; margin-left: 200px;}
 
 /*apps sponsors*/
@@ -541,3 +544,5 @@ div#timeline li.event { background: url(../images/iconSm_event.png) top left no-
 div#timeline li.person { background: url(../images/iconSm_people.png) top left no-repeat;}
 
 body.people div#timeline li { padding-left: 0;}
+
+img.gravatar { border: 3px solid #c0c8bb;}
