@@ -25,7 +25,7 @@ div#pageMain{ background: url(../images/header_bg4.jpg) top center no-repeat; wi
 div#header{ height: 223px; margin-bottom: 40px;}
 div#nav li { float: left;}
 
-div#logo{ background: url(../images/logo_line.png) top right no-repeat;  width: 360px; height: 116px; float: left; margin-top: 30px; margin-bottom: 43px;}
+div#logo{ background: url(../images/logo_line.png) top right no-repeat;  width: 325px; height: 116px; float: left; margin-top: 30px; margin-bottom: 43px;}
 h1{  width: 293px; height: 104px; }
 h1 a{ background: url(../images/logo.png) bottom left no-repeat; width: 293px; height: 104px; text-indent: -9999em; display: block;}
 
@@ -39,7 +39,7 @@ div#ltColumn div.news_feature { padding: 20px; width:95%;}
 
 div#ltColumn div#alertBox h3{ margin: 0; font-size: 165%;}
 
-div#nav{ background: url(../images/nav_bg.png) bottom right no-repeat; width: 544px; height: 65px; float: right; margin-top: 50px;}
+div#nav{ background: url(../images/nav_bg.png) bottom right no-repeat; width: 615px; height: 65px; float: right; margin-top: 50px;}
 div#pageNav li{ float: left; margin-right: 15px;}
 div#pageNav{ padding-bottom: 15px; width: 960px; height: 20px; padding-left: 5px; font-size:110%; font-weight:bold;}
 
@@ -58,7 +58,7 @@ div#mainContent {background: url(../images/rtColumn_bg.png) top right repeat-y; 
 
 div#rtColumn div.module{ margin-left: 25px; }
 div.module{ padding-left: 5px; margin-bottom: 40px;}
-div#nav li a { height: 27px; text-indent: -9999em; display: block; margin-left: 6px; margin-top:20px;}
+div#nav li a { height: 27px; text-indent: -9999em; display: block; margin-left: 4px; margin-top:20px;}
 
 li#nav_blog a { width: 70px; background: url(../images/nav_blog.png) left top no-repeat;}
 li#nav_blog a:hover, body.blog li#nav_blog a { width: 70px; background: url(../images/nav_blog.png) left bottom no-repeat;}
@@ -68,6 +68,9 @@ li#nav_people a:hover, body.people li#nav_people a{ width: 88px; background: url
 
 li#nav_projects a { width: 103px; background: url(../images/nav_projects.png) left top no-repeat;}
 li#nav_projects a:hover, body.projects li#nav_projects a{ width: 103px; background: url(../images/nav_projects.png) left bottom no-repeat;}
+
+li#nav_events a { width: 83px; background: url(../images/nav_events.png) left top no-repeat;}
+li#nav_events a:hover, body.events li#nav_events a{ width: 83px; background: url(../images/nav_events.png) left bottom no-repeat;}
 
 li#nav_wiki a { width: 63px; background: url(../images/nav_wiki.png) left top no-repeat;}
 li#nav_wiki a:hover{ width: 63px; background: url(../images/nav_wiki.png) left bottom no-repeat;}
@@ -113,13 +116,14 @@ form#searchForm select{ padding: 2px 0; margin-top: 1px; margin-right: 10px;}
 
 form#accountForm, div#signupOptions, form#contactForm, form#resetPassword, form#projectForm, form#eventForm { border: 1px solid #D5D2C6; padding: 30px; background: #F0F0E5; -moz-border-radius: 3px; -webkit-border-radius: 3px; margin-right: 20px; }
 div#ltColumn form#accountForm label, div#signupOptions label, form#contactForm label, form#resetPassword label, form#projectForm label, form#eventForm label{ width: 200px; display: block; float: left; font-weight: bold; padding-top: 5px;}
-form#accountForm input, div#signupOptions input, form#contactForm input, form#contactForm textarea, form#resetPassword input, form#eventForm input { width: 350px;}
+form#accountForm input, div#signupOptions input, form#contactForm input, form#contactForm textarea, form#resetPassword input, form#eventForm input, form#eventForm textarea { width: 350px;}
 select { margin-bottom: 10px;}
 
 form#projectForm label { width: 180px; margin-right: 15px;}
 form#projectForm input, form#projectForm textarea { width: 395px;}
 
 form#eventForm input#id_start_date_0, form#eventForm input#id_start_date_1, form#eventForm input#id_end_date_0, form#eventForm input#id_end_date_1 { width: 100px; }
+div#ltColumn p#eventDescription  { margin-bottom: 30px;}
 
 
 div#communityTimelineHeader { background: url(../images/line_space2.png) left top no-repeat; padding-top:50px;}
