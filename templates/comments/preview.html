@@ -4,27 +4,30 @@
 {% load markup %}
 
 {% block content %}
-    <form action="{% comment_form_target %}" method="post">
-        {% if form.errors %}
-            <h3 id="errorTitle">{% blocktrans count form.errors|length as counter %}Please correct the error below{% plural %}Please correct the errors below{% endblocktrans %}</h3>
-        {% else %}
-            <h3>{% trans "Preview your comment" %}</h3>
-            <blockquote>{{ comment|markdown }}</blockquote>
-            <p>
-                {% trans "and" %} <input type="submit" name="submit" class="submit-post" value="{% trans "Post your comment" %}" id="submit" /> {% trans "or make changes" %}:
-            </p>
-        {% endif %}
-        {% for field in form %}
-            {% if field.is_hidden %}
-                {{ field }}
-            {% else %}
-                  {% if field.errors %}<p class="error">{{ field.errors }}</p>{% endif %}
-                  <p{% ifequal field.name "honeypot" %} style="display:none;"{% endifequal %}>{{ field.label_tag }} {{ field }}</p>
-            {% endif %}
-        {% endfor %}
-        <p class="submit">
-			<button class="submit-post" name="post" type="submit"><span>Post</span></button>
-			<button class="submit-preview" name="preview" type="submit"><span>Preview</span></button>
-        </p>
-    </form>
+
+<form action="{% comment_form_target %}" method="post">
+{% if form.errors %}
+<h2 id="errorTitle">{% blocktrans count form.errors|length as counter %}Please correct the error below{% plural %}Please correct the errors below{% endblocktrans %}</h2>
+<div class="module">
+{% else %}
+    <h2>{% trans "Preview your comment" %}</h2>
+    <div class="module">
+    <blockquote>{{ comment|markdown }}</blockquote>
+    <p>
+    {% trans "and" %} <input type="submit" name="submit" class="submit-post" value="{% trans "Post your comment" %}" id="submit" /> {% trans "or make changes" %}:
+    </p>
+{% endif %}
+
+
+{% for field in form %}
+    {% if field.is_hidden %}
+        {{ field }}
+    {% else %}
+          {% if field.errors %}<p class="error">{{ field.errors }}</p>{% endif %}
+          <p{% ifequal field.name "honeypot" %} style="display:none;"{% endifequal %}>{{ field.label_tag }} {{ field }}</p>
+    {% endif %}
+{% endfor %}
+    <button class="postBtn" name="post" type="submit"><span>Post</span></button>
+</form>
+</div>
 {% endblock %}
