@@ -39,10 +39,22 @@ def project_detail(request, slug):
 @login_required
 def new_project(request):
     if request.method == 'GET':
-        project_form = ProjectForm()
+        from_idea = request.GET.get('from_idea')
+        if from_idea:
+            initial = {'idea': from_idea}
+        else:
+            initial = {}
+        project_form = ProjectForm(initial=initial)
     else:
         project_form = ProjectForm(request.POST)
         if project_form.is_valid():
+            # convert idea_id into idea
+            idea_id = project_form.cleaned_data['idea']
+            if idea_id:
+                project_form.cleaned_data['idea'] = Idea.objects.get(pk=int(idea_id))
+            else:
+                project_form.cleaned_data['idea'] = None
+
             project = project_form.save(commit=False)
             project.lead = request.user
             project.save()
@@ -74,6 +86,13 @@ def edit_project(request, slug):
         # only save if the main form + all three formsets validate
         if (project_form.is_valid() and link_formset.is_valid() 
             and role_formset.is_valid() and feed_formset.is_valid()):
+
+            # convert idea_id into idea
+            idea_id = project_form.cleaned_data['idea']
+            if idea_id:
+                project_form.cleaned_data['idea'] = Idea.objects.get(pk=int(idea_id))
+            else:
+                project_form.cleaned_data['idea'] = None
 
             # three simple saves do so much
             project_form.save()

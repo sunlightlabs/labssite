@@ -1,25 +1,7 @@
 {% extends "ideas/base.html" %}
-{% load media %}
-{% load tagging_tags %}
 
 {% block extrahead %} 
-{% js "fancytags.js" %}
-<script type="text/javascript">
-    $(document).ready(function() {
-        var ftctl = fancytags('#id_tags');
-
-        $('.common_tag a').click(function(event) {
-            event.preventDefault();
-            ftctl.add_tag(($(this).text()));
-        });
-
-        $('#show_common_tags').click(function(event) {
-            event.preventDefault();
-            $('div#commonTags_wrapper').toggle();
-        });
-        $('div#commonTags_wrapper').hide();
-    });
-</script>
+    {% include "projects/tags_js.html" %}
 {% endblock %}
 
 {% block content %}
@@ -29,38 +11,7 @@
     </div>
     <div class="module">
         <form id="projectForm" method="POST" action=".">
-            <ul id="projectForm_details">
-                {% for field in project_form %}
-                <li> {{ field.label_tag }} {{ field }}
-
-                {% ifequal field.name "tags" %}
-                    <div id="fancy_tags_widget">
-                        <p><a id="show_common_tags" href="#">Show Common Tags List</a></p>
-                        <div class="commonProject_tags" id="commonTags_wrapper">
-                            <p class="tip">Click on the common tags below to add them to your list.</p>
-                            <ul id="common_tags">
-                                {% tag_cloud_for_model projects.Project as used_tags with min_count=3 %}
-                                {% for tag in used_tags %}
-                                <li class="common_tag"><a href="#">{{tag}}</a></li>
-                                {% endfor %}
-                            </ul>
-                            <div class="clear"></div>
-                        </div>    
-                        <input id="tags" type="text" maxlength="30" />
-                        <button type="submit" class="addBtn">
-                            <span>Add Tag</span>
-                        </button>
-                        <div id="projectTags">
-                            <ul class="tag_buttons"> </ul>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                {% endifequal %}
-
-                </li>
-                {% endfor %}
-            </ul>
-
+            {% include "projects/base_form.html" %}
             {{ link_formset.management_form }}
             <h3>Links</h3>
             <table id="linksTable">
