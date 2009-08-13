@@ -29,8 +29,12 @@
     </div>
     <div class="module">
         <form id="projectForm" method="POST" action=".">
+            {% for field in project_form.hidden_fields %}
+                {{ field }}
+            {% endfor %}
+                
             <ul id="projectForm_details">
-                {% for field in project_form %}
+                {% for field in project_form.visible_fields %}
                 <li> {{ field.label_tag }} {{ field }}
 
                 {% ifequal field.name "tags" %}
