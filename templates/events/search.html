@@ -1,4 +1,14 @@
 {% extends "events/base.html" %}
+{% load media %}
+
+{% block extrahead %}
+{% js "jquery.tablesorter.min.js" %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#events_table').tablesorter({widgets: ['zebra'] });
+    });
+</script>
+{% endblock %}
 
 {% block content %}
 <div class="contentHeader">
@@ -33,7 +43,7 @@
                     <a id="event_name" href="{{user.user.get_absolute_url}}">{{event}}</a>
                 </td>
                 <td class="table_center table_position">{{ event.location }}</td>
-                <td class="table_right">{% if user.distance %} {{user.distance.mi|floatformat}} {% endif %}</td>
+                <td class="table_right">{% if event.distance %} {{event.distance.mi|floatformat}} {% endif %}</td>
             </tr>
             {% endfor %}
         </tbody>
