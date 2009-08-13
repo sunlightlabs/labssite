@@ -2,6 +2,10 @@
 {% load people %}
 {% load media %}
 
+{% block title %}
+{{ block.super }}: Search People
+{% endblock %}
+
 {% block extrahead %}
 {% js "jquery.tablesorter.min.js" %}
 <script type="text/javascript">

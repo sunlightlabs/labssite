@@ -1,6 +1,8 @@
 {% extends "events/base.html" %}
 {% load media %}
 
+{% block title %}{{block.super}}: Events{% endblock %}
+
 {% block extrahead %}
 {% js "jquery.tablesorter.min.js" %}
 <script type="text/javascript">

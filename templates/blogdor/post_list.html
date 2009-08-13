@@ -1,5 +1,11 @@
 {% extends "blogdor/base.html" %}
 
+{% block title %}
+    Sunlight Labs: Blog
+    {% if tag %} posts tagged {{tag}} {% endif %}
+    {% if author %} posts by {{author}} {% endif %}
+{% endblock %}
+
 {% block extrahead %}
     {% if tag %}
     <link rel="alternate" type="application/rss+xml" title="Sunlight Labs' {{tag}} posts" href="/blog/feeds/tag/{{tag}}/" />

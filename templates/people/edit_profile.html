@@ -3,6 +3,10 @@
 {% load media %}
 {% load tagging_tags %}
 
+{% block title %}
+{{block.super}} - Edit Profile
+{% endblock %}
+
 {% block extrahead %} 
 {% js "fancytags.js" %}
 <script type="text/javascript">

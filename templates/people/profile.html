@@ -5,6 +5,8 @@
 {% load twitter_tags %}
 {% load media %}
 
+{% block title %}{{block.super}} - {% display_name p_user %}{% endblock %}
+
 {% block extrahead %}
     {% if p_user.is_staff %}
     <link rel="alternate" type="application/rss+xml" title="Sunlight Labs blog posts by {{user}}" href="/blog/feeds/author/{{p_user}}/" />

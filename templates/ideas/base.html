@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load media %}
 
+{% block title %}
+{{block.super}}: Ideas
+{% endblock %}
+
 {% block extrahead %}
     {% js "voting.js" %}
 {% endblock %}

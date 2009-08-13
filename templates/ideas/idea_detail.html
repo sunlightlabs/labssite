@@ -1,6 +1,10 @@
 {% extends "ideas/base.html" %}
 {% load people %}
 
+{% block title %}
+{{block.super}} - {{idea.title}}
+{% endblock %}
+
 {% block content %}
 <div id="ideas" class="module">
     <div class="contentHeader">
