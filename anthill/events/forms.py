@@ -18,5 +18,5 @@ class EventForm(forms.ModelForm):
     class Meta:
         model = Event
         fields = ['title', 'description', 'location', 'url', 'start_date', 'end_date']
-    start_date = forms.CharField(widget=forms.widgets.SplitDateTimeWidget)
-    end_date = forms.CharField(widget=forms.widgets.SplitDateTimeWidget)
+    start_date = forms.SplitDateTimeField()
+    end_date = forms.SplitDateTimeField()
