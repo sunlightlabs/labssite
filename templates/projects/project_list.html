@@ -3,9 +3,11 @@
 
 {% block content %}
 <div class="contentHeader">
-    <h2 class="projects">Projects
+    <h2 class="projects projectHeader">Projects
         {% if tag %} tagged {{tag}} {% endif %}
     </h2>
+    <a id="projectCreate" href="/projects/new/">Create A New Project</a>
+    <div class="clear"></div>
 </div>
 <div id="projects" class="module">
     {% for project in project_list %}
@@ -18,7 +20,7 @@
 {% block sidebar %}
 <h3 class="space">Project Statistics</h3>
 <div class="module">
-    {% project_skills_piechart 190x140 python:00aa00 ruby:aa0000 %}
+    {% project_skills_piechart 190x140 python:9ca489 ruby:e95018 %}
     {% project_official_piechart 190x140 official:bf920b community:bfc7ba %}
 </div>
 {% endblock %}
