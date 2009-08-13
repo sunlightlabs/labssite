@@ -4,6 +4,7 @@
 {% get_comment_list for comment_obj as comment_list %}
 {% get_comment_form for comment_obj as comment_form %}
 
+{% if comment_list or user.is_authenticated %}
 <div id="commentBox">
     {% if comment_list %}
     <h3 id="blogH3">Discussion</h3>
@@ -17,6 +18,8 @@
         {% endfor %}
     </ol>
     {% endif %}
+
+    {% if user.is_authenticated %}
     {% if comment_list %}
         <h3 id="header_topSpace" class="h3tip">What are Your Thoughts?</h3>
     {% else %}
@@ -56,4 +59,6 @@
         </form>
     </div>
     <div class="clear"></div>
+    {% endif %}
 </div>
+{% endif %}
