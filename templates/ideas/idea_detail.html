@@ -32,9 +32,11 @@
         <div id="leadBox">
             <h3>Are you sure you want to lead this project?</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus lorem a nibh consectetur eu porttitor massa semper. Pellentesque hendrerit, eros vitae molestie ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button type="submit" class="agreeBtn">
+            <a href="{% url new_project %}?from_idea={{idea.id}}">
+            <button class="agreeBtn">
                 <span>I Agree</span>
             </button>
+            </a>
         </div>
         {% with idea as comment_obj %}
             {% include "comments/comment_box.html" %}
