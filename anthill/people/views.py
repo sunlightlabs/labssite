@@ -18,7 +18,7 @@ def search(request):
         position = form.cleaned_data['position']
         location_range = form.cleaned_data['location_range']
 
-        users = Profile.objects.all().select_related()
+        users = Profile.objects.all().select_related().exclude(user__id=request.user.id)
         if position:
             users = users.filter(role=position)
         if location:
