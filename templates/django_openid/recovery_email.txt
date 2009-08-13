@@ -2,3 +2,4 @@ Visit this page to recover your account:
 
 {{ url }}
 
+After logging in you can reset your password on your profile page.

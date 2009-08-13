@@ -15,6 +15,7 @@ INTERNAL_IPS = ('127.0.0.1',)
 DEBUG_TOOLBAR_CONFIG = {'INTERCEPT_REDIRECTS': False}
 
 EMAIL_SUBJECT_PREFIX = '[sunlightlabs.com] '
+DEFAULT_FROM_EMAIL = 'bounce@sunlightfoundation.com'
 
 TIME_ZONE = 'America/New_York'
 
