@@ -468,6 +468,7 @@ div#eventMetaData { margin-bottom: 20px;}
 
 div#userDetails dd { padding-bottom: 2px; margin-left:60px;}
 div#ltColumn div#userDetails dd.badge { float: left; margin-right: 15px; margin-left: 0px;}
+dd.badge {margin-top: 5px; }
 
 /*buttons*/
 button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn, a#projectCreate { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
