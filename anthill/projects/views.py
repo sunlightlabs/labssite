@@ -39,7 +39,12 @@ def project_detail(request, slug):
 @login_required
 def new_project(request):
     if request.method == 'GET':
-        project_form = ProjectForm()
+        from_idea = request.GET.get('from_idea')
+        if from_idea:
+            initial = {'idea': from_idea}
+        else:
+            initial = {}
+        project_form = ProjectForm(initial=initial)
     else:
         project_form = ProjectForm(request.POST)
         if project_form.is_valid():
