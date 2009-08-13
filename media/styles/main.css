@@ -484,6 +484,8 @@ button#resetPassword { background: url(../images/btn_resetpassword.png) left top
 form#projectForm button.submitBtn { margin-left: 270px; margin-top: 20px;}
 button.updateProjectBtn { background: url(../images/btn_updateProject.png) left top no-repeat; width: 182px; margin-top: 30px;}
 
+form#searchForm button.searchBtn_events { background: url(../images/btn_search.png) left bottom no-repeat; width: 113px; margin-top: 0px; padding-top: 47px;}
+
 form#openid_signinForm button.signinBtn { background: url(../images/btn_signinOpenID.png) right bottom no-repeat; width: 214px; margin-left: 200px; margin-top: 20px;}
 form#google_signinForm button.signinBtn { background: url(../images/btn_signinGoogle.png) right bottom no-repeat; width: 263px; margin-left: 0px;}
 form#yahoo_signinForm button.signinBtn { background: url(../images/btn_signinYahoo.png) right bottom no-repeat; width: 214px; margin-left: 0px;}
