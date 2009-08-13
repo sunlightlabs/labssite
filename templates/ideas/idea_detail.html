@@ -1,4 +1,5 @@
 {% extends "ideas/base.html" %}
+{% load people %}
 
 {% block content %}
 <div id="ideas" class="module">
@@ -18,7 +19,7 @@
 		<h4>Projects Created From This Idea</h4>
         <ul>
             {% for proj in idea.projects.all %}
-            <li> <a href="{{proj.get_absolute_url}}">{{proj}}</a> was started by {{proj.lead}} on {{proj.creation_date|date}} </li>
+            <li> <a href="{{proj.get_absolute_url}}">{{proj}}</a> was started by <a href="{{proj.lead.get_absolute_url}}">{% display_name proj.lead %}</a> on {{proj.creation_date|date}} </li>
             {% endfor %}
         </ul>
         {% endif %}
