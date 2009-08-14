@@ -5,10 +5,14 @@
 
 {% block content %}
 <div class="module vevent">
-    <div class="contentHeader">
+    <div id="eventDetail_Title" class="contentHeader">
         <h2 class="summary">{{event}}</h2>
     </div>
     <div id="eventDetails" class="module">
+        <dl class="eventAuthorMetadata">
+            <dt>This event was added by</dt>
+            <dd><a href="{{event.creator.get_absolute_url}}">{% display_name event.creator %}</a></dd>
+        </dl>    
         <div id="eventMetaData">
             <dl>
                 <dt>Start Date:</dt>
@@ -35,21 +39,34 @@
             <div class="clear"></div>
         </div>
         <span class="description">{{ event.description }}</span>
-        <a href="{{event.creator.get_absolute_url}}">{% display_name event.creator %}</a>
-
-        <div>
-        <h3>Attendees</h3>
-        <ul>
-            {% for att in event.attendances.all %}
-            <li>
-            {% display_name att.user %}
-                <span class="num_guests">{{att.guests}}
-                <blockquote>
-                    {{att.message}}
-                </blockquote>
-            </li>
-            {% endfor %}
-        </ul>
+        
+        <div id="attend_event">
+            <h3 id="attendeesTitle">Attendees</h3>
+            <ul id="attendeeList">
+                {% for att in event.attendances.all %}
+                <li>
+                    <dl>
+                        <dt>Name of Attendee</dt>
+                        <dd>{% display_name att.user %}</dd>
+                
+                        <dt>Number of Guests</dt>
+                        <dd id="eventGuests">+{{att.guests}}</dd>
+                
+                        <dt>Attendees Message</dt>
+                        <dd id="eventMessage">{{att.message}}</dd>
+                    </dl>
+                </li>
+                {% endfor %}
+            </ul>        
+            <h3>I'm Interested</h3>
+            <form id="joinProjectForm" method="POST" action=".">
+                <ul>
+                    {{ form.as_ul }}
+                    <button type="submit" class="signupBtn">
+                        <span>Sign Up</span>
+                    </button>
+                </ul>
+            </form>
         </div>
     </div>
 </div>
