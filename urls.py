@@ -1,144 +1,15 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
-from django.http import HttpResponseRedirect
 from django.contrib.gis import admin
-from django import forms
-from blogdor.feeds import LatestComments, LatestPosts, LatestForTag, LatestForAuthor
-from contact_form.forms import ContactForm
+from labs.feeds import LabsLatestComments, LabsLatestPosts, LabsLatestForTag, LabsLatestForAuthor
+from labs.forms import LabsContactForm
+from labs.registration import registration_consumer
 
 admin.autodiscover()
 
-### openid ###
-from django_openid.registration import RegistrationConsumer
-from django_openid.forms import RegistrationFormPasswordConfirm
-
-class RegistrationForm(RegistrationFormPasswordConfirm):
-    extra_required = ('email',)
-    email_opt_in = forms.BooleanField(label='Keep me posted about other Sunlight news and information', 
-                                      required=False)
-
-class CustomRegistrationConsumer(RegistrationConsumer):
-    confirm_email_addresses = False
-    RegistrationForm = RegistrationForm
-    trust_root = 'http://*.sunlightlabs.com/'
-    on_complete_url = '/accounts/complete/'
-    after_registration_url = '/people/edit_profile/'
-    recovery_email_subject = 'Recover Your SunlightLabs.com Account'
-
-    def redirect_if_valid_next(self, request):
-        "Logic for checking if a signed ?next= token is included in request"
-        next = request.REQUEST.get('next')
-        if next:
-            return HttpResponseRedirect(next)
-        else:
-            return None
-
-    def show_login(self, request, message=None):
-        if request.user.is_authenticated():
-            return self.show_already_logged_in(request)
-
-        response = self.render(request, self.login_template, {
-            'action': request.path,
-            'logo': self.logo_path or (request.path + 'logo/'),
-            'message': message,
-            'next': request.REQUEST.get('next'),
-        })
-
-        if self.password_logins_enabled:
-            response.template_name = self.login_plus_password_template
-            response.template_context.update({
-                'account_recovery': self.account_recovery_enabled and (
-                    self.account_recovery_url or (request.path + 'recover/')
-                ),
-            })
-        return response
-
-    def on_registration_complete(self, request):
-        if request.POST.get('email_opt_in'):
-            request.user.profile.allow_org_emails = True
-            request.user.profile.save()
-        return super(CustomRegistrationConsumer, self).on_registration_complete(request)
-
-
-registration_consumer = CustomRegistrationConsumer()
-
-
-### newsfeed ###
-from newsfeed.models import Feed
-from django.db.models.signals import post_save
-from anthill.events.models import Event
-from anthill.projects.models import Project
-from anthill.ideas.models import Idea
-from django.contrib.auth.models import User
-feed, created = Feed.objects.get_or_create(slug='main', 
-                                           defaults={'title':'main feed'})
-
-def event_callback(sender, instance, created, **kwargs):
-    if created:
-        feed.items.create(user=instance.creator, item_type='event',
-                          body=instance.title, link=instance.get_absolute_url())
-post_save.connect(event_callback, sender=Event)
-
-def idea_callback(sender, instance, created, **kwargs):
-    if created:
-        feed.items.create(user=instance.user, item_type='idea',
-                          body=unicode(instance),
-                          link=instance.get_absolute_url())
-post_save.connect(idea_callback, sender=Idea)
-
-def project_callback(sender, instance, created, **kwargs):
-    if created:
-        feed.items.create(user=instance.lead, item_type='project',
-                          body=unicode(instance),
-                          link=instance.get_absolute_url())
-        Feed.objects.create(slug=instance.slug, title=instance.name)
-post_save.connect(project_callback, sender=Project)
-
-def user_callback(sender, instance, created, **kwargs):
-    if created:
-        feed.items.create(user=instance, item_type='person',
-                          body=unicode(instance),
-                          link=instance.get_absolute_url())
-post_save.connect(user_callback, sender=User)
-
-
-class LabsContactForm(ContactForm):
-
-    attrs_dict = { 'class': 'required' }
-
-    from_email = "bounce@sunlightfoundation.com"
-    recipient_list = ['swells@sunlightfoundation.com','cjohnson@sunlightfoundation.com','jcarbaugh@sunlightfoundation.com', 'jturk@sunlightfoundation.com']
-    subject = "[SunlightLabs.com] Contact"
-
-    name = forms.CharField(max_length=100,
-                widget=forms.TextInput(attrs=attrs_dict),
-                label=u'Name')
-    email = forms.EmailField(widget=forms.TextInput(attrs=dict(attrs_dict, maxlength=200)),
-                label=u'Email Address')
-    body = forms.CharField(widget=forms.Textarea(attrs=attrs_dict),
-                label=u'Comment')
-
-class LabsLatestPosts(LatestPosts):
-    feed_title = "Sunlight Labs blog"
-    feed_description = "Latest blog updates from the nerds at Sunlight Labs"
-
-class LabsLatestComments(LatestComments):
-    feed_title = "Sunlight Labs blog comments"
-    feed_description = "Latest comments from the nerds that read the Sunlight Labs blog"
-
-class LabsLatestForTag(LatestForTag):
-    feed_title = "Sunlight Labs loves %s"
-    feed_description = "Posts from the Sunlight Labs blog tagged with '%s'"
-
-class LabsLatestForAuthor(LatestForAuthor):
-    feed_title = "Sunlight Labs' %s"
-    feed_description = "Posts written by %s for the Sunlight Labs blog"
-
 blog_feeds = {
-    'latest': LabsLatestPosts,
-    'comments': LabsLatestComments,
-    'tag': LabsLatestForTag,
-    'author': LabsLatestForAuthor,
+    'latest': LabsLatestPosts, 'comments': LabsLatestComments,
+    'tag': LabsLatestForTag, 'author': LabsLatestForAuthor,
 }
 
 urlpatterns = patterns('',
