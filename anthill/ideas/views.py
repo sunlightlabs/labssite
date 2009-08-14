@@ -35,25 +35,6 @@ def new_idea(request):
 
 @require_POST
 @login_required
-def submit_comment(request):
-    content_type = ContentType.objects.get_for_model(Idea).id
-    site = settings.SITE_ID
-    object_pk = request.POST['idea_id']
-    name = request.POST.get('name', 'anonymous')
-    email = request.POST.get('email', '')
-    url = request.POST.get('url', '')
-    comment = request.POST['comment']
-    date = datetime.datetime.now()
-    ip = request.META['REMOTE_ADDR']
-    c = Comment.objects.create(user_name=name, user_email=email, user_url=url,
-            comment=comment, submit_date=date, ip_address=ip,
-            site_id=site, content_type_id=content_type, object_pk=object_pk)
-    idea = Idea.objects.get(pk=object_pk)
-    linkback = '%s#c%s' % (idea.get_absolute_url(), c.id)
-    return HttpResponseRedirect(linkback)
-
-@require_POST
-@login_required
 def vote(request, idea_id, score):
     idea = get_object_or_404(Idea, pk=idea_id)
     score = int(score)
