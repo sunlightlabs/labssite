@@ -31,7 +31,16 @@ def search(request):
                               context_instance=RequestContext(request))
 
 def event_detail(request, event_id):
+    if request.method == 'POST' and request.user.is_authenticated():
+        form = AttendForm(request.POST)
+        if form.is_valid():
+            Attendance.objects.create(user=request.user, event_id=event_id,
+                                      guests=form.cleaned_data['guests'],
+                                      message=form.cleaned_data['message'])
+    else:
+        form = AttendForm()
     return list_detail.object_detail(request, queryset=Event.objects.all(),
+                                     extra_context={'form':form},
                                      object_id=event_id,
                                      template_object_name='event')
 
@@ -52,23 +61,6 @@ def edit_event(request, event_id):
     return render_to_response('events/edit_event.html',
                               {'form':form, 'event':event},
                              context_instance=RequestContext(request))
-
-@login_required
-def attend_event(request, event_id=None):
-    event = get_object_or_404(Event, pk=event_id)
-    if request.method == 'POST':
-        form = AttendForm(request.POST)
-        if form.is_valid():
-            Attendance.objects.create(user=request.user, event=event,
-                                      guests=form.cleaned_data['guests'],
-                                      message=form.cleaned_data['message'])
-            return redirect(event.get_absolute_url())
-    else:
-        form = AttendForm()
-
-    return render_to_response('events/attend_event.html',
-                              {'form':form, 'event':event},
-                              context_instance=RequestContext(request))
 
 @login_required
 def new_event(request):

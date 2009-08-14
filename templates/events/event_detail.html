@@ -1,4 +1,5 @@
 {% extends "events/base.html" %}
+{% load blog %}
 {% load people %}
 
 {% block title %}{{block.super}} - {{event}}{% endblock title %}
@@ -40,12 +41,18 @@
         </div>
         <span class="description">{{ event.description }}</span>
         
+        {% with event.attendances.all as attendances %}
+        {% if attendances or user.is_authenticated %}
         <div id="attend_event">
+            {% if attendances %}
             <h3 id="attendeesTitle">Attendees</h3>
             <ul id="attendeeList">
-                {% for att in event.attendances.all %}
+                {% for att in attendances %}
                 <li>
                     <dl>
+                        <dt>Photo</dt>
+                        <dd>{% gravatar att.user.email %}</dd>
+
                         <dt>Name of Attendee</dt>
                         <dd>{% display_name att.user %}</dd>
                 
@@ -57,7 +64,9 @@
                     </dl>
                 </li>
                 {% endfor %}
-            </ul>        
+            </ul>
+            {% endif %}
+            {% if user.is_authenticated %}
             <h3>I'm Interested</h3>
             <form id="joinProjectForm" method="POST" action=".">
                 <ul>
@@ -67,7 +76,10 @@
                     </button>
                 </ul>
             </form>
+            {% endif %}
         </div>
+        {% endif %}
+        {% endwith %}
     </div>
 </div>
 {% endblock %}
