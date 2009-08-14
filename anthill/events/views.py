@@ -4,8 +4,8 @@ from django.template import RequestContext
 from django.shortcuts import get_object_or_404, render_to_response, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseNotAllowed
-from anthill.events.models import Event
-from anthill.events.forms import EventForm, SearchForm
+from anthill.events.models import Event, Attendance
+from anthill.events.forms import EventForm, SearchForm, AttendForm
 
 def search(request):
     if request.GET:
@@ -36,7 +36,7 @@ def event_detail(request, event_id):
                                      template_object_name='event')
 
 @login_required
-def edit_event(request, event_id=None):
+def edit_event(request, event_id):
     event = get_object_or_404(Event, pk=event_id)
     if event.creator != request.user:
         return HttpResponseForbidden('Only the creator of an event may edit it.')
@@ -53,6 +53,22 @@ def edit_event(request, event_id=None):
                               {'form':form, 'event':event},
                              context_instance=RequestContext(request))
 
+@login_required
+def attend_event(request, event_id=None):
+    event = get_object_or_404(Event, pk=event_id)
+    if request.method == 'POST':
+        form = AttendForm(request.POST)
+        if form.is_valid():
+            Attendance.objects.create(user=request.user, event=event,
+                                      guests=form.cleaned_data['guests'],
+                                      message=form.cleaned_data['message'])
+            return redirect(event.get_absolute_url())
+    else:
+        form = AttendForm()
+
+    return render_to_response('events/attend_event.html',
+                              {'form':form, 'event':event},
+                              context_instance=RequestContext(request))
 
 @login_required
 def new_event(request):

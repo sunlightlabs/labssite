@@ -25,3 +25,7 @@ class EventForm(forms.ModelForm):
         fields = ['title', 'description', 'location', 'url', 'start_date', 'end_date']
     start_date = forms.SplitDateTimeField(widget=SplitDateTimeListWidget)
     end_date = forms.SplitDateTimeField(widget=SplitDateTimeListWidget)
+
+class AttendForm(forms.Form):
+    guests = forms.IntegerField('Additional Guests')
+    message = forms.CharField('Message to Event Organizer', widget=forms.widgets.Textarea)

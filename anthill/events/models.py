@@ -20,7 +20,8 @@ class Event(LocationModel):
     url = models.URLField(blank=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField(null=True, blank=True)
-    creator = models.ForeignKey(User)
+    creator = models.ForeignKey(User, related_name='events_created')
+    attendees = models.ManyToManyField(User, through='Attendance', related_name='events_attended')
 
     objects = EventManager()
 
@@ -32,3 +33,10 @@ class Event(LocationModel):
 
     def get_absolute_url(self):
         return reverse('event_detail', args=[self.id])
+
+class Attendance(models.Model):
+    user = models.ForeignKey(User, related_name='event_attendances')
+    event = models.ForeignKey(Event, related_name='attendances')
+    join_time = models.DateField(auto_now_add=True)
+    guests = models.IntegerField(default=0)
+    message = models.TextField(blank=True)

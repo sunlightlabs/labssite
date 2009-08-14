@@ -1,4 +1,5 @@
 {% extends "events/base.html" %}
+{% load people %}
 
 {% block title %}{{block.super}} - {{event}}{% endblock title %}
 
@@ -8,34 +9,48 @@
         <h2 class="summary">{{event}}</h2>
     </div>
     <div id="eventDetails" class="module">
-        <!-- here is all of the data that the template has -->
         <div id="eventMetaData">
-        	<dl>
-        		<dt>Start Date:</dt>
-        		<dd>
-					<abbr class="dtstart" title="{{ event.start_date.isoformat }}">
-						{{ event.start_date|date}}
-					</abbr>
-				</dd>
-		
-        		<dt>End Date:</dt>
-        		<dd>
-					<abbr class="dtend" title="{{ event.end_date.isoformat }}">
-						{{ event.end_date|date}}
-					</abbr>
-				</dd>
-        		<div class="clear"></div>
-		
-        		<dt class="eventLocation">Location:</dt>
-        		<dd class="location eventLocation">{{ event.location }}</dd>
-		
-        		<dt>URL:</dt>
-        		<dd class="url">{{ event.url|urlize }}</dd>
-        	</dl>
-        	<div class="clear"></div>
-		</div>
+            <dl>
+                <dt>Start Date:</dt>
+                <dd>
+                    <abbr class="dtstart" title="{{ event.start_date.isoformat }}">
+                        {{ event.start_date|date}}
+                    </abbr>
+                </dd>
+
+                <dt>End Date:</dt>
+                <dd>
+                    <abbr class="dtend" title="{{ event.end_date.isoformat }}">
+                        {{ event.end_date|date}}
+                    </abbr>
+                </dd>
+                <div class="clear"></div>
+
+                <dt class="eventLocation">Location:</dt>
+                <dd class="location eventLocation">{{ event.location }}</dd>
+
+                <dt>URL:</dt>
+                <dd class="url">{{ event.url|urlize }}</dd>
+            </dl>
+            <div class="clear"></div>
+        </div>
         <span class="description">{{ event.description }}</span>
-        <a href="{{event.creator.get_absolute_url}}">{{ event.creator.firstname }}</a>
+        <a href="{{event.creator.get_absolute_url}}">{% display_name event.creator %}</a>
+
+        <div>
+        <h3>Attendees</h3>
+        <ul>
+            {% for att in event.attendances.all %}
+            <li>
+            {% display_name att.user %}
+                <span class="num_guests">{{att.guests}}
+                <blockquote>
+                    {{att.message}}
+                </blockquote>
+            </li>
+            {% endfor %}
+        </ul>
+        </div>
     </div>
 </div>
 {% endblock %}

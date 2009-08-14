@@ -1,0 +1,24 @@
+{% extends "events/base.html" %}
+
+{% block title %}
+Sunlight Labs: Attend Event
+{% endblock title %}
+
+{% block content %}
+<div id="attend_event" class="module">
+    <div class="contentHeader">
+        <h2>Sign up to Attend {{event}}</h2>
+    </div>
+    <div class="module">
+        <p class="tip">Sign up as an attendee of an event.</p>
+        <form id="joinProjectForm" method="POST" action=".">
+            <ul>
+                {{ form.as_ul }}
+                <button type="submit" class="submitBtn">
+                    <span>Submit</span>
+                </button>
+            </ul>
+        </form>
+    </div>
+</div>
+{% endblock %}
