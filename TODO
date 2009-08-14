@@ -1,9 +1,5 @@
 subscribe to comments
-allow anonymous comments
 events rsvp
-events/new - date format
-
-content:
-    tag more posts
-    favorite posts
-    update badges
+ali: events/new - date format
+clay: lorem ipsum box on sidebar
+content: tag more posts
