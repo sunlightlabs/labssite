@@ -5,9 +5,9 @@
 
 {% block content %}
 
-<form action="{% comment_form_target %}" method="post">
+<form id="errorForm" action="{% comment_form_target %}" method="post">
 {% if form.errors %}
-<h2 id="errorTitle">{% blocktrans count form.errors|length as counter %}Please correct the error below{% plural %}Please correct the errors below{% endblocktrans %}</h2>
+<h2 id="errorTitle">{% blocktrans count form.errors|length as counter %}Please correct the error below{% plural %}Please Correct the Errors Below{% endblocktrans %}</h2>
 <div class="module">
 {% else %}
     <h2>{% trans "Preview your comment" %}</h2>
@@ -27,7 +27,7 @@
           <p{% ifequal field.name "honeypot" %} style="display:none;"{% endifequal %}>{{ field.label_tag }} {{ field }}</p>
     {% endif %}
 {% endfor %}
-    <button class="postBtn" name="post" type="submit"><span>Post</span></button>
+    <button class="postBtn" id="nonuser_postBtn" name="post" type="submit"><span>Post</span></button>
 </form>
 </div>
 {% endblock %}
