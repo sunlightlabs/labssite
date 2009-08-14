@@ -1,4 +1,16 @@
 {% extends "events/base.html" %}
+{% load media %}
+
+{% block title %}{{block.super}}: Events{% endblock %}
+
+{% block extrahead %}
+{% js "jquery.tablesorter.min.js" %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#events_table').tablesorter({widgets: ['zebra'] });
+    });
+</script>
+{% endblock %}
 
 {% block content %}
 <div class="contentHeader">
@@ -9,32 +21,37 @@
         <ul>
             {{ form.as_ul }}
         </ul>
-        <button type="submit" class="searchBtn">
+        <button type="submit" class="searchBtn_events">
             <span>search</span>
         </button>
         <div class="clear"></div>
     </form>
-</div>
-
-<div class="contentHeader">
 
 {% if searched %}
 
-    <h3 id="h3Header">{{search_results|length}} events found:</h3>
-    <ul>
-        {% for event in search_results %}
-        <li>
-        <a href="{{event.get_absolute_url}}">{{event}}</a>
-        </li>
-        {% endfor %}
-    </ul>
-
-{% else %}
-
-    This area is displayed if they user hasn't searched yet.
+    <h3>{{search_results|length}} Events Found</h3>
+    <table id="events_table">
+        <thead>
+            <tr id="titles">
+                <th class="table_left sort" id="title_name">Name</th>
+                <th class="table_center table_position sort">Location</th>
+                <th class="table_right sort">Distance <small>(mi)</small></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in search_results %}
+            <tr class="{% cycle 'odd' 'even' %}">
+                <td class="table_left">
+                    <a id="event_name" href="{{user.user.get_absolute_url}}">{{event}}</a>
+                </td>
+                <td class="table_center table_position">{{ event.location }}</td>
+                <td class="table_right">{% if event.distance %} {{event.distance.mi|floatformat}} {% endif %}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
 {% endif %}
-
 </div>
 
 

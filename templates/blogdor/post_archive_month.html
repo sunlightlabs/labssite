@@ -1,6 +1,10 @@
 {% extends "blogdor/base.html" %}
 {% load markup %}
 
+{% block title %}
+Sunlight Labs: Blog posts from {{ month|date:"F Y" }}
+{% endblock title %}
+
 {% block content %}
     <div class="contentHeader">
         <h2 class="post">Posts from {{ month|date:"F Y" }}</h2>

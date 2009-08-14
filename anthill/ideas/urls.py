@@ -14,7 +14,6 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('anthill.ideas.views',
-    url(r'^submit_comment/$', 'submit_comment', name='submit_idea_comment'),
     url(r'^$', 'idea_list', {'ordering': 'most_popular'}, name='ideas_popular'),
     url(r'^latest/$', 'idea_list', {'ordering': 'latest'}, name='ideas_latest'),
     url(r'^(?P<id>\d+)/$', 'idea_detail', name='idea_detail'),

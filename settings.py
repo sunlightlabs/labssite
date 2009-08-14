@@ -1,7 +1,7 @@
 # Django settings for sunlightlabs project.
 import os
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -10,13 +10,12 @@ ADMINS = (
     ('timball', 'timball@sunlightfoundation.com'),
 )
 
-CACHE_BACKEND = 'file:///home/james/code/sunlight/sunlightlabs/dbgcache'
-
 MANAGERS = ADMINS
 INTERNAL_IPS = ('127.0.0.1',)
 DEBUG_TOOLBAR_CONFIG = {'INTERCEPT_REDIRECTS': False}
 
 EMAIL_SUBJECT_PREFIX = '[sunlightlabs.com] '
+DEFAULT_FROM_EMAIL = 'bounce@sunlightfoundation.com'
 
 TIME_ZONE = 'America/New_York'
 
@@ -129,8 +128,9 @@ ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda o: "/people/%s/" % o.username
 }
 
-GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com',
-                            'jturk@sunlightfoundation.com']
+#GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com',
+#                            'jturk@sunlightfoundation.com']
+GATEKEEPER_MODERATOR_LIST = []
 
 GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site3/images/avatar.jpg"
 GRAVATAR_SIZE = 60

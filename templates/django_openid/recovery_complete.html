@@ -1,0 +1,12 @@
+{% extends "people/base.html" %}
+
+{% block title %}Recovery Complete{% endblock %}
+
+{% block content %}
+<div id="headerTip" class="contentHeader">
+    <h2>Account Recovered</h2>
+</div>
+<div class="module">
+    <p> You have been logged in.  It is highly recommended you <a href="{% url edit_profile %}">edit your profile</a> to set a new password.</p>
+</div>
+{% endblock %}

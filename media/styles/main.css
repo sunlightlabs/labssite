@@ -25,7 +25,7 @@ div#pageMain{ background: url(../images/header_bg4.jpg) top center no-repeat; wi
 div#header{ height: 223px; margin-bottom: 40px;}
 div#nav li { float: left;}
 
-div#logo{ background: url(../images/logo_line.png) top right no-repeat;  width: 360px; height: 116px; float: left; margin-top: 30px; margin-bottom: 43px;}
+div#logo{ background: url(../images/logo_line.png) top right no-repeat;  width: 325px; height: 116px; float: left; margin-top: 30px; margin-bottom: 43px;}
 h1{  width: 293px; height: 104px; }
 h1 a{ background: url(../images/logo.png) bottom left no-repeat; width: 293px; height: 104px; text-indent: -9999em; display: block;}
 
@@ -39,7 +39,7 @@ div#ltColumn div.news_feature { padding: 20px; width:95%;}
 
 div#ltColumn div#alertBox h3{ margin: 0; font-size: 165%;}
 
-div#nav{ background: url(../images/nav_bg.png) bottom right no-repeat; width: 544px; height: 65px; float: right; margin-top: 50px;}
+div#nav{ background: url(../images/nav_bg.png) bottom right no-repeat; width: 615px; height: 65px; float: right; margin-top: 50px;}
 div#pageNav li{ float: left; margin-right: 15px;}
 div#pageNav{ padding-bottom: 15px; width: 960px; height: 20px; padding-left: 5px; font-size:110%; font-weight:bold;}
 
@@ -49,6 +49,7 @@ body.people div#pageNav{ background: url(../images/banner_people.png) bottom cen
 body.projects div#pageNav{ background: url(../images/banner_projects.png) bottom center no-repeat; }
 body.about div#pageNav{ background: url(../images/banner_about.png) bottom center no-repeat; }
 body.contact div#pageNav{ background: url(../images/banner_contact.png) bottom center no-repeat; }
+body.events div#pageNav{ background: url(../images/banner_events.png) bottom center no-repeat; }
 
 .clear{ clear: both;}
 
@@ -58,7 +59,7 @@ div#mainContent {background: url(../images/rtColumn_bg.png) top right repeat-y; 
 
 div#rtColumn div.module{ margin-left: 25px; }
 div.module{ padding-left: 5px; margin-bottom: 40px;}
-div#nav li a { height: 27px; text-indent: -9999em; display: block; margin-left: 6px; margin-top:20px;}
+div#nav li a { height: 27px; text-indent: -9999em; display: block; margin-left: 4px; margin-top:20px;}
 
 li#nav_blog a { width: 70px; background: url(../images/nav_blog.png) left top no-repeat;}
 li#nav_blog a:hover, body.blog li#nav_blog a { width: 70px; background: url(../images/nav_blog.png) left bottom no-repeat;}
@@ -68,6 +69,9 @@ li#nav_people a:hover, body.people li#nav_people a{ width: 88px; background: url
 
 li#nav_projects a { width: 103px; background: url(../images/nav_projects.png) left top no-repeat;}
 li#nav_projects a:hover, body.projects li#nav_projects a{ width: 103px; background: url(../images/nav_projects.png) left bottom no-repeat;}
+
+li#nav_events a { width: 83px; background: url(../images/nav_events.png) left top no-repeat;}
+li#nav_events a:hover, body.events li#nav_events a{ width: 83px; background: url(../images/nav_events.png) left bottom no-repeat;}
 
 li#nav_wiki a { width: 63px; background: url(../images/nav_wiki.png) left top no-repeat;}
 li#nav_wiki a:hover{ width: 63px; background: url(../images/nav_wiki.png) left bottom no-repeat;}
@@ -82,6 +86,8 @@ h2{ color: #1f1313; font-size: 210%;  padding-left: 5px; line-height: 27px;}
 h2.post{ background: url(../images/icon_post.png) top left no-repeat; padding: 10px 0 1px 35px; margin-left: 5px;}
 h2.projects{ background: url(../images/icon_projects.png) top left no-repeat; padding: 5px 0 1px 35px; margin-left: 5px;}
 h2.ideas{ background: url(../images/icon_idea.png) top left no-repeat; padding: 10px 0 1px 35px; margin-left: 5px;}
+
+h2.projectHeader{ float: left;}
 
 div.contentHeader, .h3line{ background: url(../images/header_lines.png) center bottom no-repeat; padding-bottom: 15px; margin-bottom: 20px; width: 700px;}
 div#postTitle{ margin-bottom: 3px;}
@@ -111,13 +117,17 @@ form#searchForm li{ float: left; margin-right: 20px;}
 form#searchForm label{ display: block; margin-bottom: 5px; font-weight: bold;}
 form#searchForm select{ padding: 2px 0; margin-top: 1px; margin-right: 10px;}
 
-form#accountForm, div#signupOptions, form#contactForm, form#resetPassword, form#projectForm{ border: 1px solid #D5D2C6; padding: 30px; background: #F0F0E5; -moz-border-radius: 3px; -webkit-border-radius: 3px; margin-right: 20px; }
-div#ltColumn form#accountForm label, div#signupOptions label, form#contactForm label, form#resetPassword label, form#projectForm label{ width: 200px; display: block; float: left; font-weight: bold; padding-top: 5px;}
-form#accountForm input, div#signupOptions input, form#contactForm input, form#contactForm textarea, form#resetPassword input { width: 350px;}
+form#accountForm, div#signupOptions, form#contactForm, form#resetPassword, form#projectForm, form#eventForm, form#errorForm { border: 1px solid #D5D2C6; padding: 30px; background: #F0F0E5; -moz-border-radius: 3px; -webkit-border-radius: 3px; margin-right: 20px; }
+div#ltColumn form#accountForm label, div#signupOptions label, form#contactForm label, form#resetPassword label, form#projectForm label, form#eventForm label, form#errorForm label{ width: 200px; display: block; float: left; font-weight: bold; padding-top: 5px;}
+form#accountForm input, div#signupOptions input, form#contactForm input, form#contactForm textarea, form#resetPassword input, form#eventForm input, form#eventForm textarea, form#errorForm textarea, form#errorForm input { width: 350px;}
 select { margin-bottom: 10px;}
 
 form#projectForm label { width: 180px; margin-right: 15px;}
 form#projectForm input, form#projectForm textarea { width: 395px;}
+
+form#eventForm input#id_start_date_0, form#eventForm input#id_start_date_1, form#eventForm input#id_end_date_0, form#eventForm input#id_end_date_1 { width: 100px; }
+div#ltColumn p#eventDescription  { margin-bottom: 30px;}
+
 
 div#communityTimelineHeader { background: url(../images/line_space2.png) left top no-repeat; padding-top:50px;}
 
@@ -173,6 +183,7 @@ hr{ background: url(../images/rtmodule_bar.png) bottom left no-repeat; border: n
 div#leadBox{ -moz-border-radius: 3px; -moz-border-radius: 3px; background: #F0F0E5 none repeat scroll 0 0; border: 1px solid #D5D2C6; padding: 20px; width: 620px; margin-top: 20px;}
 
 div#commentBox { margin-top: 30px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #F0F0E5 none repeat scroll 0 0; border: 1px solid #D5D2C6; padding: 30px 30px 150px; margin-right: 20px;}
+div.nonuser_commentBox { padding-bottom: 170px;}
 div#commentBlock img{ float: left;}
 form#comment { margin-right: 10px; width: 24px; height: 55px; margin-left: -1px; float: left; z-index: 2; position: relative;}
 form#comment textarea { -moz-border-radius: 10px; -webkit-border-radius: 10px; width: 480px;}
@@ -191,7 +202,7 @@ span.sunlightProject { background: url(../images/icon_sunlight.png) top left no-
 div.projectContent{ padding-left: 50px;}
 
 a#leadParticipant img, div#recentMembers img{ float: left; height: 64px; margin: 0 15px 15px 0;}
-div#recentMembers li { height: 64px; margin-bottom: 15px;}
+div#recentMembers li { height: 70px; margin-bottom: 18px;}
 ul#teamParticipants img{ width: 40px;}
 ul#teamParticipants li { float: left; width: 70px; margin-bottom: 10px;}
 ul#teamParticipants span { display: block;}
@@ -314,20 +325,23 @@ div#timeline li { background: none; padding-bottom: 0; margin-bottom: 20px;}
 div.post { padding-bottom: 30px; margin-bottom: 20px;}
 
 div#projectDetail p{ width: 490px;}
+div#projectDetail ol, div#projectDetail ul { width: 450px;}
 div#projectDetail div#projectDescription { margin-bottom: 20px; }
 div#project_mainDetails { margin-bottom: 20px; background: url(../images/line_505.png) bottom left no-repeat; padding-bottom: 30px; float: left;}
 
 li#signup_openid a{ background: url(../images/openid.png) top left no-repeat; }
 li#signup_standard a{ background: url(../images/standard_signup.png) top left no-repeat; }
-li#signup_google a{ background: url(../images/google_signup.png) top left no-repeat; }
-li#signup_yahoo a{ background: url(../images/yahoo_signup.png) top left no-repeat; }
-li#signup_aol a{ background: url(../images/aol_signup.png) top left no-repeat; }
+li#signup_google a{ background: url(../images/google_signin.png) top left no-repeat; }
+li#signup_yahoo a{ background: url(../images/yahoo_signin.png) top left no-repeat; }
+li#signup_aol a{ background: url(../images/aol_signin.png) top left no-repeat; }
 
 li#signup_openid a.active{ background: url(../images/openid.png) bottom left no-repeat; }
 li#signup_standard a.active{ background: url(../images/standard_signup.png) bottom left no-repeat; }
-li#signup_google a.active{ background: url(../images/google_signup.png) bottom left no-repeat; }
-li#signup_yahoo a.active{ background: url(../images/yahoo_signup.png) bottom left no-repeat; }
-li#signup_aol a.active{ background: url(../images/aol_signup.png) bottom left no-repeat; }
+li#signup_google a.active{ background: url(../images/google_signin.png) bottom left no-repeat; }
+li#signup_yahoo a.active{ background: url(../images/yahoo_signin.png) bottom left no-repeat; }
+li#signup_aol a.active{ background: url(../images/aol_signin.png) bottom left no-repeat; }
+
+div#signin_nav, div#signup_nav { margin-top:20px;}
 
 div#signin_nav li a, div#signup_nav li a{ float: left; text-indent: -9999em; width: 103px; height: 45px; margin-bottom: 15px; margin-right: 10px; display: block;}
 li#signin_openid a{ background: url(../images/openid.png) top left no-repeat; }
@@ -407,18 +421,23 @@ form#projectForm table#feedsTable input.title, form#projectForm table#feedsTable
 select.link_type { margin-right: 20px; }
 form#projectForm table#feedsTable input#id_links {text-align: center;}
 
+form#comment label{ font-weight: bold; float: left; width: 200px; }
+form#comment input { width: 350px; float: left;}
+form#comment textarea.nonuser_textarea { width: 350px; -moz-border-radius: 3px; -webkit-border-radius: 3px;}
+div#ltColumn form.nonuser_comment { width: 600px;}
+
 .errorlist li { font-size: 95%; color: #de4205; font-style: oblique;}
 
 /*table*/
 div#users_results { margin-top: 25px; margin-bottom: 25px;}
 table { width: 605px; line-height: 18px; }
-table#users_table { width: 620px;}
-table#users_table tbody td { padding-top:5px; padding-bottom:5px;}
+table#users_table, table#events_table { width: 620px;}
+table#users_table tbody td, table#events_table tbody td { padding-top:5px; padding-bottom:5px;}
 tr { height: 25px;}
 tr.odd { background-color: #fff; padding: 5px; }
 tr.even { padding: 5px;  }
 tr#titles th { color: #403030; text-transform: uppercase; font-weight: bold; padding-bottom: 10px;}
-.table_right { text-align: right; padding-right: 10px; width: 50px;}
+.table_right { text-align: right; padding-right: 10px; width: 85px;}
 .table_left { width: 120px; padding-right: 15px; padding-left: 10px;}
 .table_center { text-align: left;}
 .table_position { width: 120px; padding-right: 15px;}
@@ -430,6 +449,10 @@ table#linksTable { width: 608px;}
 select.status { margin-top: 10px;}
 .member_message { width: 395px; padding-right: 15px;}
 table#projectMembers tbody td{ padding-top:5px; padding-bottom:5px;}
+
+table#events_table th.table_left { width: 250px;}
+table#events_table th.table_position { width: 200px;}
+table#events_table th.table_right { text-align: right;}
 
 th.sort { background: url(../images/sortArrows.png) left 2px no-repeat; text-align: left; padding-left: 15px;}
 div#ltColumn th.headerSortDown { background: url(../images/sortArrows_down.png) left 2px no-repeat; text-align: left; padding-left: 15px; }
@@ -452,9 +475,10 @@ div#eventMetaData { margin-bottom: 20px;}
 
 div#userDetails dd { padding-bottom: 2px; margin-left:60px;}
 div#ltColumn div#userDetails dd.badge { float: left; margin-right: 15px; margin-left: 0px;}
+dd.badge {margin-top: 5px; }
 
 /*buttons*/
-button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
+button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn, a#projectCreate { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
 button.searchBtn { background: url(../images/btn_search.png) left top no-repeat; width: 113px; margin-top: 0px;}
 button.advsearchBtn { background: url(../images/btn_search.png) left top no-repeat; width: 113px; float: right; margin-top: 20px;}
 button.submitBtn { background: url(../images/btn_submit.png) left top no-repeat; width: 113px; }
@@ -464,6 +488,7 @@ button.agreeBtn{ background: url(../images/btn_agree.png) right bottom no-repeat
 button.leadBtn{ background: url(../images/btn_lead.png) right bottom no-repeat; width: 148px; float: left;  margin: 20px 30px 20px 10px;}
 button.helpBtn{ background: url(../images/btn_help.png) right bottom no-repeat; width: 171px;  float: left; margin-top: 20px;}
 button.postBtn { background: url(../images/btn_post.png) right bottom no-repeat; width: 86px;}
+button#nonuser_postBtn{ margin-left: 200px;}
 button.addBtn{ background: url(../images/btn_add.png) right bottom no-repeat; width: 113px; margin-bottom: 11px;}
 button.saveBtn{ background: url(../images/btn_savechanges.png) right bottom no-repeat; width: 148px; margin: 15px 0 15px 200px; }
 a#joinBtn { background: url(../images/btn_joinus.png) right bottom no-repeat; width: 144px; height: 33px; margin-top: 20px; display: block;}
@@ -476,15 +501,18 @@ button.startnewBtn { background: url(../images/btn_startnew.png) left top no-rep
 button#resetPassword { background: url(../images/btn_resetpassword.png) left top no-repeat; width: 171px; margin-left: 200px;}
 form#projectForm button.submitBtn { margin-left: 270px; margin-top: 20px;}
 button.updateProjectBtn { background: url(../images/btn_updateProject.png) left top no-repeat; width: 182px; margin-top: 30px;}
+a#projectCreate{ background: url(../images/btn_createNewProject.png) right top no-repeat; width: 180px; float: right; margin-right: 10px; margin-top:3px;}
+
+form#searchForm button.searchBtn_events { background: url(../images/btn_search.png) left bottom no-repeat; width: 113px; margin-top: 0px; padding-top: 47px;}
 
 form#openid_signinForm button.signinBtn { background: url(../images/btn_signinOpenID.png) right bottom no-repeat; width: 214px; margin-left: 200px; margin-top: 20px;}
-form#google_signinForm button.signinBtn { background: url(../images/btn_signinGoogle.png) right bottom no-repeat; width: 263px;}
-form#yahoo_signinForm button.signinBtn { background: url(../images/btn_signinYahoo.png) right bottom no-repeat; width: 214px;}
+form#google_signinForm button.signinBtn { background: url(../images/btn_signinGoogle.png) right bottom no-repeat; width: 263px; margin-left: 0px; margin-top:0;}
+form#yahoo_signinForm button.signinBtn { background: url(../images/btn_signinYahoo.png) right bottom no-repeat; width: 214px; margin-left: 0px; margin-top:0;}
 form#aol_signinForm button.signinBtn { background: url(../images/btn_signinAOL.png) right bottom no-repeat; width: 275px; margin-left: 200px;}
 
 form#openid_signupForm button.signupBtn { background: url(../images/btn_signupOpenID.png) right bottom no-repeat; width: 214px; margin-left: 200px; margin-top: 20px;}
-form#google_signupForm button.signupBtn { background: url(../images/btn_signupGoogle.png) right bottom no-repeat; width: 263px;}
-form#yahoo_signupForm button.signupBtn { background: url(../images/btn_signupYahoo.png) right bottom no-repeat; width: 214px;}
+form#google_signupForm button.signupBtn { background: url(../images/btn_signupGoogle.png) right bottom no-repeat; width: 275px; margin-left: 0px; margin-top:0;}
+form#yahoo_signupForm button.signupBtn { background: url(../images/btn_signupYahoo.png) right bottom no-repeat; width: 214px; margin-left: 0px; margin-top:0;}
 form#aol_signupForm button.signupBtn { background: url(../images/btn_signupAOL.png) right bottom no-repeat; width: 275px; margin-left: 200px;}
 
 /*apps sponsors*/
@@ -529,3 +557,5 @@ div#timeline li.event { background: url(../images/iconSm_event.png) top left no-
 div#timeline li.person { background: url(../images/iconSm_people.png) top left no-repeat;}
 
 body.people div#timeline li { padding-left: 0;}
+
+div#ltColumn div#commentBlock img.gravatar, img.gravatar  { border: 3px solid #c0c8bb;}

@@ -3,6 +3,11 @@
 {% load projects %}
 {% load newsfeed_tags %}
 
+{% block extrahead %}
+<link rel="alternate" type="application/rss+xml" title="Sunlight Labs' latest blog posts" href="/blog/feeds/latest/" />
+<link rel="alternate" type="application/rss+xml" title="Recent comments to the Sunlight Labs blog" href="/blog/feeds/comments/" />
+{% endblock %}
+
 {% block content %}
 
 <div id="featureBox_wrapper">

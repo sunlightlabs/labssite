@@ -15,6 +15,7 @@ class Project(models.Model):
     description = MarkupField(default_markup_type='markdown')
     official = models.BooleanField(default=False)
     creation_date = models.DateTimeField(auto_now_add=True)
+    update_date = models.DateTimeField(auto_now=True)
     tags = TagField('Tags')
 
     lead = models.ForeignKey(User, related_name='projects_lead_on')

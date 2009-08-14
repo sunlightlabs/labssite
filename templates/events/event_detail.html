@@ -1,5 +1,7 @@
 {% extends "events/base.html" %}
 
+{% block title %}{{block.super}} - {{event}}{% endblock title %}
+
 {% block content %}
 <div class="module vevent">
     <div class="contentHeader">

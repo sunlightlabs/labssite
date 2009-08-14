@@ -1,23 +1,57 @@
 {% extends "events/base.html" %}
+{% load media %}
+
+{% block extrahead %}
+<link type="text/css" href="http://jqueryui.com/latest/themes/base/ui.all.css" rel="stylesheet" />
+<script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.core.js"></script>
+<script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.datepicker.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('#id_start_date_0').datepicker({ dateFormat: 'yy-mm-dd'});
+        $('#id_end_date_0').datepicker({ dateFormat: 'yy-mm-dd'} );
+    });
+</script>
+{% endblock %}
 
 {% block content %}
-<div class="module">
     <div class="contentHeader">
-		{% if event %}
-			<h2>Edit Your Event</h2>
-		{% else %}
-        	<h2>Add An Event</h2>
-		{% endif %}
+        {% if event %}
+            <h2>Edit Your Event</h2>
+        {% else %}
+        <h2>Add An Event</h2>
     </div>
     <div class="module">
-        <form id="accountForm" method="POST" action="." enctype="multipart/form-data">
+        <p> Want to plan a hackathon in your area? Looking to just get some open government developers together to hang out in the area? We've made a simple event tool for you to create and promote your own events so you can get folks together.</p>
+        <p id="eventDescription"> Use the form below to tell the community about your event. Then other people will be able to <a href="{% url event_search %}">search for your event</a> and sign up for it.</p>
+        {% endif %}
+        <form id="eventForm" method="POST" action="." enctype="multipart/form-data">
             <ul>
-                {{ form.as_ul }}
+                {% for field in form %}
+                    {% ifnotequal field.name "start_date" %}
+                    {% ifnotequal field.name "end_date" %} 
+                        {# normal field display #}
+                        <li> {{field.errors}} {{field.label_tag}} {{ field }} </li>
+
+                        {% else %} {# end_date #}
+
+                        <li>
+                            <label id="endTitle" >End</label>
+                            {{ field }}
+                        </li>
+
+                        {% endifnotequal %}
+                    {% else %} {# start_date #}
+                        <li>
+                        <label id="startTitle">Start</label>
+                            {{ field }}
+                        </ul>
+                        </li>
+                    {% endifnotequal %}
+                {% endfor %}
                 <button type="submit" class="saveBtn">
                     <span>Save Changes</span>
                 </button>
             </ul>
         </form>
     </div>
-</div>
 {% endblock %}

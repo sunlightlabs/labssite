@@ -1,4 +1,6 @@
-{% extends "registration/base.html" %}
+{% extends "people/base.html" %}
+
+{% block title %}{{block.super}}: Join Us!{% endblock %}
 
 {% block content %}
 <div id="register">
@@ -38,11 +40,13 @@
                 </ul>
             </form>
             <form id="google_signupForm" method="POST" action="{{action}}">
+                <input type="hidden" name="openid_url" value="http://www.google.com/accounts/o8/id" />
                 <button class="signupBtn">
                     <span>Sign Up With Your Google Account</span>
                 </button>
             </form>
             <form id="yahoo_signupForm" method="POST" action="{{action}}">
+                <input type="hidden" name="openid_url" value="http://yahoo.com" />
                 <button class="signupBtn">
                     <span>Sign Up With Your Yahoo ID</span>
                 </button>
@@ -51,7 +55,7 @@
                 <ul>
                     <li>
                         <label for="aol_url">AOL Screenname</label>
-                        <input id="aol_url" type="text" name="openid_url"  />
+                        <input id="aol_url" type="text" name="openid_url" value="http://openid.aol.com/screenname" />
                     </li>
                     <button class="signupBtn">
                         <span>Sign Up With Your AOL Screenname</span>

@@ -1,5 +1,13 @@
 {% extends "ideas/base.html" %}
 
+{% block title %}
+Sunlight Labs: Create Project
+{% endblock title %}
+
+{% block extrahead %}
+    {% include "projects/tags_js.html" %}
+{% endblock %}
+
 {% block content %}
 <div id="join_project" class="module">
     <div id="createHeader"class="contentHeader">
@@ -7,9 +15,8 @@
     </div>
     <div class="module">
         <form id="projectForm" method="POST" action=".">
-            <ul>
-                {{ project_form.as_ul }}
-            </ul>
+            {% include "projects/base_form.html" %}
+
             <button type="submit" class="submitBtn">
                 <span>Submit</span>
             </button>

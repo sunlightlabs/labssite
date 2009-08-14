@@ -1,4 +1,4 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.template import RequestContext
 from django.shortcuts import render_to_response, get_object_or_404
@@ -6,7 +6,7 @@ from sunlightlabs.appcontest.models import Entry, Contest
 from simplesurvey.forms import SurveyForm
 from simplesurvey.models import QuestionSet, AnswerSet, Answer
 
-@login_required
+@permission_required('appcontest.is_judge')
 def index(request, contest):
     contest = get_object_or_404(Contest, slug=contest)
     apps = contest.entries.all().approved()
@@ -16,16 +16,16 @@ def index(request, contest):
     return render_to_response("appjudging/index.html", {"apps": apps, "judged_ids": judged_ids},
                              context_instance=RequestContext(request))
 
-@login_required
+@permission_required('appcontest.is_judge')
 def app(request, app_id):
     app = Entry.objects.get(pk=app_id)
     return render_to_response('appjudging/app.html', {"app": app})
 
-@login_required
+@permission_required('appcontest.is_judge')
 def app_scorecard(request, app_id):
 
     app = Entry.objects.get(pk=app_id)
-    qs = QuestionSet.objects.get(slug="appcontest")
+    qs = QuestionSet.objects.get(slug="judgeforamerica2")
 
     try:
         aset = AnswerSet.objects.for_model(Entry).get(question_set=qs, user=request.user, object_id=app.pk)

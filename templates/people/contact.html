@@ -1,5 +1,9 @@
-{% extends "registration/base.html" %}
+{% extends "people/base.html" %}
 {% load people %}
+
+{% block title %}
+{{block.super}} - Contact {% display_name to_user %}
+{% endblock %}
 
 {% block content %}
     <div id="headerTip"class="contentHeader">

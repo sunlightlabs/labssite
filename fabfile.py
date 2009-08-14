@@ -36,9 +36,9 @@ def convert_appcontest(filename):
 
 def get_dumps():
     mappings = (
-        ('auth flatpages redirects sites', 'meta.json'),
-        ('simplesurvey appcontest gatekeeper', 'appcontest.json'),
-        ('blogdor comments', 'blog.json'))
+        #('auth flatpages redirects sites', 'meta.json'),
+        #('simplesurvey appcontest gatekeeper', 'appcontest.json'),
+        ('blogdor comments', 'blog.json'),)
 
     # generate files
     with cd('/home/sunlabs/lib/python/sunlightlabs'):
@@ -51,12 +51,12 @@ def get_dumps():
 
 def convert_dumps():
     convert_blog('blog.json')
-    convert_appcontest('appcontest.json')
+    #convert_appcontest('appcontest.json')
 
 def load_dumps():
     #local('./manage.py loaddata meta.json')
     local('./manage.py loaddata new_blog.json')
-    local('./manage.py loaddata new_appcontest.json')
+    #local('./manage.py loaddata new_appcontest.json')
 
 def move_data():
     get_dumps()

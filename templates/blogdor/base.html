@@ -3,6 +3,12 @@
 {% load blog %}
 {% load popular_tags %}
 
+{% block extrahead %}
+<link rel="alternate" type="application/rss+xml" title="Sunlight Labs' latest blog posts" href="/blog/feeds/latest/" />
+<link rel="alternate" type="application/rss+xml" title="Recent comments to the Sunlight Labs blog" href="/blog/feeds/comments/" />
+{% endblock %}
+
+{% block title %}Sunlight Labs: Blog{% endblock %}
 {% block bodyclass %}blog{% endblock %}
 
 {% block sidebar %}

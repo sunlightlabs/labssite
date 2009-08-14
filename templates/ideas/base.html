@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load media %}
 
+{% block title %}
+{{block.super}}: Ideas
+{% endblock %}
+
 {% block extrahead %}
     {% js "voting.js" %}
 {% endblock %}
@@ -9,7 +13,7 @@
 
 {% block sidebar %}
 
-{% if not user.is_authorized %}
+{% if user.is_authenticated %}
 <h3>Submit An Idea</h3>
 <div id="submitIdea" class="module">
     <p class="tip">Have a great idea, <strong>tell us about it using the form below</strong>!</p>

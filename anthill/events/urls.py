@@ -1,8 +1,7 @@
 from django.conf.urls.defaults import *
 
 urlpatterns = patterns('anthill.events.views',
-    url(r'^$', 'index', name='events_index'),
-    url(r'^search/$', 'search', name='event_search'),
+    url(r'^$', 'search', name='event_search'),
     url(r'^(?P<event_id>\d+)/$', 'event_detail', name='event_detail'),
     url(r'^(?P<event_id>\d+)/edit/$', 'edit_event', name='edit_event'),
     url(r'^new/$', 'new_event', name='new_event'),

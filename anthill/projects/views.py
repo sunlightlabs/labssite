@@ -11,7 +11,7 @@ from anthill.ideas.models import Idea
 from feedinator.models import Feed
 
 def projects_and_ideas(request):
-    context = {'projects': Project.objects.select_related().all()[0:3],
+    context = {'projects': Project.objects.select_related().order_by('-update_date').all()[0:3],
                'ideas': Idea.objects.with_user_vote(request.user).select_related().all()[0:3]}
     return render_to_response('projects/projects_and_ideas.html', context,
                               context_instance=RequestContext(request))
@@ -39,7 +39,12 @@ def project_detail(request, slug):
 @login_required
 def new_project(request):
     if request.method == 'GET':
-        project_form = ProjectForm()
+        from_idea = request.GET.get('from_idea')
+        if from_idea:
+            initial = {'idea': from_idea}
+        else:
+            initial = {}
+        project_form = ProjectForm(initial=initial)
     else:
         project_form = ProjectForm(request.POST)
         if project_form.is_valid():

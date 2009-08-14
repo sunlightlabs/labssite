@@ -4,56 +4,73 @@
 {% get_comment_list for comment_obj as comment_list %}
 {% get_comment_form for comment_obj as comment_form %}
 
+{# if comment_list or user.is_authenticated #}
 <div id="commentBox">
     {% if comment_list %}
     <h3 id="blogH3">Discussion</h3>
     <ol id="comments">
         {% for comment in comment_list %}
             <li>
-            <span class="commentMetaAuthor"><a href="{% firstof comment.user_url comment.user.get_absolute_url %}">{% firstof comment.user_name comment.user.first_name comment.user %}</a></span>
+            <span class="commentMetaAuthor">
+                {% if comment.user_url or comment.user %}
+                <a href="{% firstof comment.user_url comment.user.get_absolute_url %}">
+                {% endif %}
+                    {% firstof comment.user_name comment.user.first_name comment.user %}{% if comment.user_url or comment.user %}</a>{% endif %}
+            </span>
             <span class="commentMetaDate">{{comment.submit_date|date:"m/d/Y P"}}</span>
             <p>{{comment.comment}}</p>
             </li>
         {% endfor %}
     </ol>
     {% endif %}
-    {% if comment_list %}
-        <h3 id="header_topSpace" class="h3tip">What are Your Thoughts?</h3>
-    {% else %}
-        <h3 class="h3tip">What are Your Thoughts?</h3>
-    {% endif %}
-    <p class="tip">Have thoughts that might fuel this discussion further, post them below. (<a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a> is supported in comments.)</p>
-    <div id="commentBlock">
-        <a class="userPhoto" href="{{comment.user.get_absolute_url}}">
+
+    {# if user.is_authenticated #}
+        {% if comment_list %}
+            <h3 id="header_topSpace" class="h3tip">What are Your Thoughts?</h3>
+        {% else %}
+            <h3 class="h3tip">What are Your Thoughts?</h3>
+        {% endif %}
+        <p class="tip">Have thoughts that might fuel this discussion further, post them below. (<a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a> is supported in comments.)</p>
+        <div id="commentBlock" {% if not user.is_authenticated %}class="nonuser_commentBox"{% endif %}>
             {% if user.is_authenticated %}
-            {% gravatar user.email %}
-            {% else %}
-            {% gravatar "" %}
+            <a class="userPhoto">
+                {% gravatar user.email %}
+            </a>
             {% endif %}
-        </a>
-        <form id="comment" method="POST" action="{% comment_form_target %}">
-            <input type="hidden" name="next" value="{{comment_obj.get_absolute_url}}" />
-            {% for field in comment_form %}
-                {% if field.is_hidden %}
-                    {{ field }}
-                {% else %}
+            <form id="comment" {% if not user.is_authenticated %}class="nonuser_comment"{% endif %} method="POST" action="{% comment_form_target %}">
+                <input type="hidden" name="next" value="{{comment_obj.get_absolute_url}}" />
+                {% for field in comment_form %}
+                    {% if field.is_hidden %}
+                        {{ field }}
+                    {% else %}
                     {% if field.errors %}<p class="error">{{ field.errors }}</p>{% endif %}
                         {% ifequal field.name "honeypot" %}
                             <p style="display:none;">{{ field.label_tag }} {{ field }}</p>
+                        {% else %}
+                            {% if not user.is_authenticated %}
+                            {% ifnotequal field.name "comment" %}
+                                {{ field.label_tag }} {{ field }}
+                            {% endifnotequal %}
+                            {% endif %}
                         {% endifequal %}
+                    {% endif %}
+                {% endfor %}
+                {% if not user.is_authenticated %}
+                <label>Comment</label>
                 {% endif %}
-            {% endfor %}
-            <textarea id="text" class="textarea" name="comment" cols="32" rows="5"></textarea>
-            <!--
-            <div id="subscribe">
-                <input type="checkbox" name="subscribe"/>
-                <label>Subscribe to this stream</label>
-            </div>
-            -->
-            <button class="postBtn" name="submit" type="submit">
-                <span>Post!</span>
-            </button>
-        </form>
-    </div>
-    <div class="clear"></div>
+                <textarea id="text" {% if not user.is_authenticated %}class="nonuser_textarea"{% endif %} class="textarea" name="comment" cols="32" rows="5"></textarea>
+                <!--
+                <div id="subscribe">
+                    <input type="checkbox" name="subscribe"/>
+                    <label>Subscribe to this stream</label>
+                </div>
+                -->
+                <button class="postBtn" {% if not user.is_authenticated %}id="nonuser_postBtn"{% endif %} name="submit" type="submit">
+                    <span>Post!</span>
+                </button>
+            </form>
+        </div>
+        <div class="clear"></div>
+    {# endif #}
 </div>
+{# endif #}

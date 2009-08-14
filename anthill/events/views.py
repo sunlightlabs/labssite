@@ -7,9 +7,6 @@ from django.http import HttpResponseNotAllowed
 from anthill.events.models import Event
 from anthill.events.forms import EventForm, SearchForm
 
-def index(request):
-    return simple.direct_to_template(request, template='events/index.html')
-
 def search(request):
     if request.GET:
         form = SearchForm(request.GET)

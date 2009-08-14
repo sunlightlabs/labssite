@@ -1,12 +1,16 @@
-{% extends "registration/base.html" %}
+{% extends "people/base.html" %}
 {% load people %}
 {% load media %}
+
+{% block title %}
+{{ block.super }}: Search People
+{% endblock %}
 
 {% block extrahead %}
 {% js "jquery.tablesorter.min.js" %}
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#users_table').tablesorter({headers: {2: {sorter: false} } });
+        $('#users_table').tablesorter({headers: {2: {sorter: false} }, widgets: ['zebra'] });
     });
 </script>
 {% endblock %}
@@ -40,7 +44,7 @@
     <div id="users_results" class="module">
         <h3>{{search_results|length}} Results</h3>
 
-        {# i'm quite sorry for this -james #}
+        {# i'm quite sorry for this hack to get around the lack of < -james #}
         {% if search_results.10 %}
         <div id="users_scroll">
         {% endif %}
@@ -50,20 +54,18 @@
                     <th class="table_left sort" id="title_name">Name</th>
                     <th class="table_center table_position sort">Position</th>
                     <th class="table_center">Skills</th>
-                    <th class="table_right sort">Distance</th>
+                    <th class="table_right sort">Distance <small>(mi)</small></th>
                 </tr>
             </thead>
             <tbody>
-                {% for user in search_results %}
+                {% for up in search_results %}
                 <tr class="{% cycle 'odd' 'even' %}">
                     <td class="table_left">
-                        <a id="user_name" href="{{user.user.get_absolute_url}}">{{ user.user }}</a>
+                        <a id="user_name" href="{{up.user.get_absolute_url}}">{% display_name up.user %}</a>
                     </td>
-                    <td class="table_center table_position">{{user.get_role_display|safe}}</td>
-                    <td class="table_center">{{user.skills|default:"n/a"}}</td>
-                    <td class="table_right">
-                        {% if user.distance %} {{user.distance.mi|floatformat}} mi {% endif %}
-                    </td>
+                    <td class="table_center table_position">{{up.get_role_display|safe}}</td>
+                    <td class="table_center">{{up.skills|default:"n/a"}}</td>
+                    <td class="table_right">{% if up.distance %} {{up.distance.mi|floatformat}} {% endif %}</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -102,9 +104,5 @@
 <hr></hr>
 
 {% include "events/events_box.html" %}
-<div id="hackathonBox">
-    <a href="{% url events_index %}">Find Out How To Hold A Hackathon In Your Area</a>
-</div>
-<div class="clear"></div>
 {% endblock %}
 

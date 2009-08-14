@@ -1,15 +1,4 @@
 subscribe to comments
-google/yahoo/aol login
-create project from idea
-add titles to all pages
-test commenting (logged in vs. anonymous)
-openid recovery
-blogdor RSS
-move redirects to db
-test emails [signup, recovery, project join, blog post]
-allow anonymous comments or hide comment box if not logged in
-
-Content:
-    tag more posts
-    favorite posts
-    move redirects to db
+events rsvp
+clay: lorem ipsum box on sidebar
+content: tag more posts
