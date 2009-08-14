@@ -29,9 +29,16 @@ class BadgeAdmin(admin.ModelAdmin):
                                   {'title': 'Assigning Badges to %s' % user,
                                    'badges':badges})
 
+    def user_list(self, request):
+        users = User.objects.all().order_by('username')
+        return render_to_response('meritbadges/user_list.html',
+                                  {'title': 'User List',
+                                   'users': users})
+
     def get_urls(self):
         urls = super(BadgeAdmin, self).get_urls()
         return patterns('',
+            url(r'^assign/$', self.admin_site.admin_view(self.user_list), name='badges_user_list'),
             url(r'^assign/(?P<username>\w+)/$', self.admin_site.admin_view(self.assign), name='assign_badges'),
         ) + urls
 

@@ -1,0 +1,35 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+     <a href="../../../">{% trans "Home" %}</a> &rsaquo;
+     <a href="../../">Meritbadges</a> &rsaquo;
+     User List
+</div>
+{% endblock %}
+
+
+{% block content %}
+<table cellspacing="0">
+<thead>
+<tr>
+    <th>Username</th>
+    <th>Name</th>
+    <th>Badges</th>
+</tr>
+</thead>
+<tbody>
+{% for user in users %}
+<tr>
+    <td> <a href="{% url admin:assign_badges user.username %}">{{user.username}}</a> </td>
+    <td> {{user.first_name}} </td>
+    <td> {% for badge in user.badges.all %}
+            {{badge.image_tag}}
+         {% endfor %}
+    </td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
