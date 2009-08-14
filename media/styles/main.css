@@ -563,4 +563,4 @@ div#ltColumn div#commentBlock img.gravatar, img.gravatar  { border: 3px solid #c
 div#ltColumn form#eventForm label#startTitle, div#ltColumn form#eventForm label#endTitle  { float: none;}
 div#ltColumn form#eventForm ul.timeDetails label { color: #797878; margin-left: 20px; width: 180px;}
 div#ltColumn form#eventForm ul.timeDetails { margin-top: 10px;}
-div#ltColumn form#eventForm ul.timeDetails input { width: 200px;}
+div#ltColumn form#eventForm ul.timeDetails input { width: 150px;}
