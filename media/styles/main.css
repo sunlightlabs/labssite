@@ -487,6 +487,8 @@ div#userDetails dd { padding-bottom: 2px; margin-left:60px;}
 div#ltColumn div#userDetails dd.badge { float: left; margin-right: 15px; margin-left: 0px;}
 dd.badge {margin-top: 5px; }
 
+div#fancy_tags_widget p.tip { margin-left: 200px;}
+
 /*buttons*/
 button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn, a#projectCreate { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
 button.searchBtn { background: url(../images/btn_search.png) left top no-repeat; width: 113px; margin-top: 0px;}
@@ -500,6 +502,7 @@ button.helpBtn{ background: url(../images/btn_help.png) right bottom no-repeat; 
 button.postBtn { background: url(../images/btn_post.png) right bottom no-repeat; width: 86px;}
 button#nonuser_postBtn{ margin-left: 200px;}
 button.addBtn{ background: url(../images/btn_add.png) right bottom no-repeat; width: 113px; margin-bottom: 11px;}
+ul#projectForm_details button.addBtn{ background: url(../images/btn_addTags.png) right bottom no-repeat; width: 113px; margin-bottom: 11px;}
 button.saveBtn{ background: url(../images/btn_savechanges.png) right bottom no-repeat; width: 148px; margin: 15px 0 15px 200px; }
 a#joinBtn { background: url(../images/btn_joinus.png) right bottom no-repeat; width: 144px; height: 33px; margin-top: 20px; display: block;}
 a#contactBtn { background: url(../images/btn_contact.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
