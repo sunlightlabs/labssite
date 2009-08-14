@@ -9,6 +9,10 @@ class Badge(models.Model):
 
     recipients = models.ManyToManyField(User, through='BadgeAward', related_name='badges')
 
+    def image_tag(self):
+        return mark_safe('<img src="%s" title="%s" alt="%s" />' % 
+                         (self.image_url, self.name, self.name))
+
     def admin_image_tag(self):
         return '<img src="%s" title="%s" alt="%s" /> %s' % (self.image_url, self.name, self.name, self.name)
     admin_image_tag.allow_tags = True
