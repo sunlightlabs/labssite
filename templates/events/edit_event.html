@@ -36,14 +36,14 @@
 
                         <li>
                             <label id="endTitle" >End</label>
-                            <ul>{{ field }}</ul>
+                            <ul class="timeDetails">{{ field }}</ul>
                         </li>
 
                         {% endifnotequal %}
                     {% else %} {# start_date #}
                         <li>
                         <label id="startTitle">Start</label>
-                        <ul> {{ field }} </ul>
+                        <ul class="timeDetails"> {{ field }} </ul>
                         </li>
                     {% endifnotequal %}
                 {% endfor %}
