@@ -397,6 +397,9 @@ a.center_viewall{ text-align: center; display: block;}
 div#rtColumn div#hackathonBox a{ text-indent: -9999em; display: block; width: 215px; height: 103px; background: url(../images/holdHackathon_box.png) 3px top no-repeat;}
 div#rtColumn div#hackathonBox { width: 215px; height: 103px; padding-left: 20px; margin-bottom: 20px;}
 
+div#rtColumn div#planEvent a{ text-indent: -9999em; display: block; width: 215px; height: 143px; background: url(../images/planAnEvent_box.png) 3px top no-repeat;}
+div#rtColumn div#planEvent { width: 215px; height: 143px; padding-left: 20px; margin-bottom: 20px;}
+
 div#ltColumn div#timeline h3 { margin-bottom: 15px;}
 div#ltColumn div#commentBox h3, div#leadBox h3 { margin-top: 0px;}
 
