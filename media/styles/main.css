@@ -407,6 +407,8 @@ dd.event_location { margin-bottom: 25px;}
 div#currentEvents dt, div#eventsList dt, div#eventsList dd.event_date { font-size: 140%; margin-bottom: 10px;}
 div#eventsList dt a.eventTitle { float: left; margin-right: 15px;}
 
+div.eventsSearch dd.endEvent_list { background: none; padding-bottom: 0px; margin-bottom: 30px;}
+
 div#haveEvent a{ text-indent: -9999em; display: block; width: 215px; height: 103px; background: url(../images/haveEvent_box.png) 3px top no-repeat;}
 div#haveEvent { width: 215px; height: 103px; padding-left: 20px; margin-bottom: 20px;}
 
