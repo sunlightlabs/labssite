@@ -12,6 +12,9 @@ blog_feeds = {
     'tag': LabsLatestForTag, 'author': LabsLatestForAuthor,
 }
 
+from newsfeed.feeds import NewsFeed
+news_feed = { 'newsfeed': NewsFeed }
+
 urlpatterns = patterns('',
     # admin
     url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
@@ -31,6 +34,8 @@ urlpatterns = patterns('',
     # contact-form
     url(r'^contact/sent/$', 'sunlightlabs.labs.views.contact_sent', {"form_class": LabsContactForm}),
     url(r'^contact/', include('contact_form.urls'), {"form_class": LabsContactForm, "fail_silently": False}),
+
+    url(r'^newsfeed/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': news_feed}, name="newsfeed_feeds"),
 
     url(r'^accounts/', include(registration_consumer.urls)),
 

@@ -1,0 +1,21 @@
+{% load people %}
+
+{% ifequal obj.item_type "event" %}
+{% display_name obj.user %} created the event {{obj.body}}
+{% endifequal %}
+
+{% ifequal obj.item_type "idea" %}
+{% display_name obj.user %} submitted the idea {{obj.body}}
+{% endifequal %}
+
+{% ifequal obj.item_type "person" %}
+{% display_name obj.user %} registered for an account.
+{% endifequal %}
+
+{% ifequal obj.item_type "project" %}
+{% display_name obj.user %} created the project {{obj.body}}
+{% endifequal %}
+
+{% ifequal obj.item_type "rss" %}
+{{obj.body}}
+{% endifequal %}
