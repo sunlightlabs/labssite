@@ -21,10 +21,10 @@ def search(request):
         users = Profile.objects.all().select_related().exclude(user__id=request.user.id)
         if position:
             users = users.filter(role=position)
-        if location:
-            users = users.search_by_distance(location, location_range)
         if name:
             users = users.filter(user__first_name__icontains=name)
+        if location:
+            users = users.search_by_distance(location, location_range)
         context = { 'form': form, 'searched': True, 'search_results': users }
     else:
         context = { 'form': SearchForm() }

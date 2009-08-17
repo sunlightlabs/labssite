@@ -9,17 +9,19 @@ def _geocode(location):
     locations = list(geocoder.geocode(location, exactly_one=False))
     if locations:
         point = locations[0][1]
-        return Point(*point)
+        return Point(*point), locations[0][0]
     else:
-        return None
+        return None, None
 
 class LocationModelQuerySet(models.query.GeoQuerySet):
     def search_by_distance(self, location, mile_radius):
-        point = _geocode(location)
+        point, location_name = _geocode(location)
         if point:
-            return self.filter(lat_long__distance_lte=(point, D(mi=mile_radius))).distance(point).order_by('distance')
+            result = self.filter(lat_long__distance_lte=(point, D(mi=mile_radius))).distance(point).order_by('distance')
         else:
-            return self
+            result = self
+        result.geocoded_location = location_name
+        return result
 
 class LocationModelManager(models.GeoManager):
     def get_query_set(self):
@@ -33,7 +35,7 @@ class LocationModel(models.Model):
 
     def save(self, *args, **kwargs):
         if self.location:
-            self.lat_long = _geocode(self.location)
+            self.lat_long, _ = _geocode(self.location)
         super(LocationModel, self).save(*args, **kwargs)
 
     class Meta:
