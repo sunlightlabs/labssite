@@ -14,8 +14,6 @@ class Project(models.Model):
     name = models.CharField('displayed name of project', max_length=100)
     description = MarkupField(default_markup_type='markdown')
     official = models.BooleanField(default=False)
-    public = models.BooleanField(default=False)
-    accepting_members = models.BooleanField(default=False)
     creation_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
     tags = TagField('Tags')

@@ -15,8 +15,10 @@ def search(request):
         location = form.cleaned_data['location']
         location_range = form.cleaned_data['location_range']
 
+        events = Event.objects.all().select_related()
         # only events that haven't happened
-        events = Event.objects.future().select_related()
+        now = datetime.now()
+        events = events.filter(start_date__gt=now)
         if name:
             events = events.filter(title__icontains=name)
         if location:
@@ -29,14 +31,7 @@ def search(request):
                               context_instance=RequestContext(request))
 
 def event_detail(request, event_id):
-    event = get_object_or_404(Event, pk=event_id)
-    now = datetime.now()
-    if event.end_date:
-        finished = event.end_date < now
-    else:
-        finished = event.start_date < now
-
-    if not finished and request.method == 'POST' and request.user.is_authenticated():
+    if request.method == 'POST' and request.user.is_authenticated():
         form = AttendForm(request.POST)
         if form.is_valid():
             Attendance.objects.create(user=request.user, event_id=event_id,
@@ -44,9 +39,10 @@ def event_detail(request, event_id):
                                       message=form.cleaned_data['message'])
     else:
         form = AttendForm()
-    return render_to_response('events/event_detail.html',
-                              {'event':event, 'form':form, 'finished':finished},
-                              context_instance=RequestContext(request))
+    return list_detail.object_detail(request, queryset=Event.objects.all(),
+                                     extra_context={'form':form},
+                                     object_id=event_id,
+                                     template_object_name='event')
 
 @login_required
 def edit_event(request, event_id):

@@ -13,11 +13,8 @@
         <dl class="eventAuthorMetadata">
             <dt>This event was added by</dt>
             <dd><a href="{{event.creator.get_absolute_url}}">{% display_name event.creator %}</a></dd>
-        </dl>
+        </dl>    
         <div id="eventMetaData">
-            {% if finished %}
-            <p class="tip">This event has already taken place.</p>
-            {% endif %}
             <dl>
                 <dt>Start Date:</dt>
                 <dd>
@@ -43,8 +40,7 @@
             <div class="clear"></div>
         </div>
         <span class="description">{{ event.description }}</span>
-
-        {% if not finished %}
+        
         {% with event.attendances.all as attendances %}
         {% if attendances or user.is_authenticated %}
         <div id="attend_event">
@@ -84,7 +80,6 @@
         </div>
         {% endif %}
         {% endwith %}
-        {% endif %}
     </div>
 </div>
 {% endblock %}
