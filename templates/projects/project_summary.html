@@ -10,9 +10,9 @@
     <div class="projectContent">
         <h3><a href="{{project.get_absolute_url}}">{{project}}</a></h3>
         <dl class="entryMetadata">
-            <dt>Written by</dt>
+            <dt>Lead by</dt>
             <dd><a class="seperationBlock" href="{{project.lead.get_absolute_url}}">{% display_name project.lead %}</a></dd>
-            <dt>Date</dt>
+            <dt>Added</dt>
             <dd>{{project.creation_date|date}}</dd>
         </dl>
         <p>{{project.description}}</p>
