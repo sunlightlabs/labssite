@@ -16,10 +16,16 @@
 <div class="contentHeader">
     <h2>Search For Events In Your Area</h2>
 </div>
+
+
 <div class="module" id="searchContent">
     <form id="searchForm" method="GET" action=".">
         <ul>
-            {{ form.as_ul }}
+            <li>{{form.location.label_tag}} {{form.location}}</li>
+        </ul>
+        <ul class="advanced_search">
+            <li>{{form.name.label_tag}} {{form.name}}</li>
+            <li>{{form.location_range.label_tag}} {{form.location_range}}</li>
         </ul>
         <button type="submit" class="searchBtn_events">
             <span>search</span>
@@ -54,5 +60,21 @@
 {% endif %}
 </div>
 
+<div id="eventsList" class="module">
+    <dl>
+        {% for event in event_list %}
+        <dt><a class="eventTitle" href="{{event.get_absolute_url}}">{{event.title}}</a></dt>
+        <dd class="event_date">{{event.start_date|date:"M d"}}{% if event.end_date %} &ndash; {{ event.end_date|date:"M d" }} {% endif %}</dd>
+        <dd class="event_location endEvent_list">{{event.location}}</dd>
+        {% endfor %}
+    </dl>
+</div>
 
+{% endblock %}
+
+{% block sidebar %}
+<div id="haveEvent">
+    <a href="{% url new_event %}">Have An Event Planned? Tell The Community!</a>
+</div>
+<div class="clear"></div>
 {% endblock %}

@@ -8,6 +8,7 @@ from anthill.events.models import Event, Attendance
 from anthill.events.forms import EventForm, SearchForm, AttendForm
 
 def search(request):
+    upcoming_events = Event.objects.future().select_related()[0:5]
     if request.GET:
         form = SearchForm(request.GET)
         form.is_valid()
@@ -21,9 +22,10 @@ def search(request):
             events = events.filter(title__icontains=name)
         if location:
             events = events.search_by_distance(location, location_range)
-        context = {'form': form, 'searched': True, 'search_results': events}
+        context = {'form': form, 'searched': True, 'search_results': events,
+                   'event_list': upcoming_events}
     else:
-        context = {'form': SearchForm()}
+        context = {'form': SearchForm(), 'event_list': upcoming_events}
 
     return render_to_response('events/search.html', context,
                               context_instance=RequestContext(request))
