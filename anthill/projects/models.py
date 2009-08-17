@@ -46,12 +46,13 @@ class Role(models.Model):
     status = models.CharField(choices=ROLE_STATUSES, max_length=1, default='P')
     message = models.TextField(blank=True)
 
-SITE_LINK, SOURCE_LINK, DOCS_LINK, DOWNLOAD_LINK = range(4)
+SITE_LINK, SOURCE_LINK, DOCS_LINK, DOWNLOAD_LINK, EMAIL_LINK = range(5)
 LINK_TYPES = (
     (SITE_LINK, 'website'),
     (SOURCE_LINK, 'source'),
     (DOCS_LINK, 'documentation'),
     (DOWNLOAD_LINK, 'download'),
+    (EMAIL_LINK, 'email'),
 )
 
 class Link(models.Model):
