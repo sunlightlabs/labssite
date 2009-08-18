@@ -1,7 +1,7 @@
 from django import template
 from django.conf import settings
 from django.db.models import Count
-from anthill.utils import get_items_as_tag, piechart_from_tags, _extract_chart_params, PiechartNode
+from anthill.utils import get_items_as_tag, chart_from_tags, _extract_chart_params, ChartNode
 from anthill.people.models import Profile
 
 register = template.Library()
@@ -37,7 +37,7 @@ def static_google_map(person, width=200, height=200, zoom=12):
 
 @register.tag
 def people_skills_piechart(parser, token):
-    return piechart_from_tags(Profile, token)
+    return chart_from_tags(Profile, token)
 
 @register.tag
 def people_roles_piechart(parser, token):
@@ -47,5 +47,5 @@ def people_roles_piechart(parser, token):
     for item in items:
         item['name'] = name = item.pop('role')
         item['color'] = colors[name]
-    return PiechartNode(items, width, height)
+    return ChartNode(items, width, height, 'p')
 

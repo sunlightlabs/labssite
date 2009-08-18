@@ -4,8 +4,7 @@
 {% load newsfeed_tags %}
 
 {% block extrahead %}
-<link rel="alternate" type="application/rss+xml" title="Sunlight Labs' latest blog posts" href="/blog/feeds/latest/" />
-<link rel="alternate" type="application/rss+xml" title="Recent comments to the Sunlight Labs blog" href="/blog/feeds/comments/" />
+<link rel="alternate" type="application/rss+xml" title="Sunlight Labs' latest blog posts" href="/blog/feeds/latest/" /><link rel="alternate" type="application/rss+xml" title="Latest Sunlight Labs Activity" href="/newsfeed/newsfeed/main/" />
 {% endblock %}
 
 {% block content %}
@@ -61,7 +60,7 @@
 <hr></hr>
 <h3>What's Happening In The Labs Community</h3>
 <div id="timeline" class="module labsHappenings">
-    <a class="tip rss" href="#">Subscribe to this field</a>
+    <a class="tip rss" href="/newsfeed/newsfeed/main/">Subscribe to this feed</a>
     <ul>
         {% render_feed "main" 5 %}
     </ul>

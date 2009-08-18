@@ -49,8 +49,6 @@ def scores(request, contest):
     # question 1
     # question 2
     # question 3
-    # question 4
-    # question 5
     # judge id
 
     entry_ids = list(Entry.objects.filter(contest__slug=contest).values_list('id',flat=True))
@@ -61,10 +59,10 @@ def scores(request, contest):
     csv = ""
 
     for answer_set in answers_sets:
-        score = [answer_set.related_object.name, 0, 0, 0, 0, 0, answer_set.user.get_full_name()]
+        score = [answer_set.related_object.name, 0, 0, 0, answer_set.user.get_full_name()]
         for answer in answer_set.answers.all():
-            score[answer.question_id] = int(answer.text)
+            score[answer.question_id-5] = int(answer.text[0])
         scores.append(score)
-        csv += '''"%s",%i,%i,%i,%i,%i,"%s"\n''' % (score[0], score[1], score[2], score[3], score[4], score[5], score[6])
+        csv += '''"%s",%i,%i,%i,"%s"\n''' % (score[0], score[1], score[2], score[3], score[4])
 
     return HttpResponse(csv, content_type="text/plain")
