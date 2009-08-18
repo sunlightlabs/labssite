@@ -1,18 +1,20 @@
-from django.contrib.syndication.feeds import Feed, FeedDoesNotExist
+from django.contrib.syndication import feeds
 from anthill.ideas.models import Idea
 
-class LatestIdeasFeed(Feed):
+class IdeaFeed(feeds.Feed):
 
-    description_template = 'ideas/idea_rss_description.html'
+    title = 'Latest Ideas'
+    description = 'Latest Ideas'
+    link = '/ideas/'
 
-    def title(self):
-        return 'Latest Ideas'
-
-    def description(self, obj):
-        return 'Latest ideas submitted for %s' % obj.name
+    title_template = 'ideas/feed_title.html'
+    description_template = 'ideas/feed_description.html'
 
     def items(self):
         return Idea.objects.order_by('-submit_date')[:30]
+
+    def item_link(self, item):
+        return item.get_absolute_url()
 
     def item_author_name(self, item):
         return item.user
