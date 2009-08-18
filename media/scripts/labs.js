@@ -12,6 +12,14 @@ $(document).ready(function(){
         $("div#advancedSearch").toggle("slow");
     });
 
+    // do previews on projects page
+    $(".long_desc").hide();
+    $(".more").click(function(event) {
+        event.preventDefault();
+        $(this).parent().siblings(".long_desc").show();
+        $(this).parent().siblings(".short_desc").hide();
+    });
+
     make_toggle = function(pairs) {
         // attach event to each link in pairs
         for(var i=0; i < pairs.length; ++i) {

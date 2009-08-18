@@ -15,7 +15,8 @@
             <dt>Added</dt>
             <dd>{{project.creation_date|date}}</dd>
         </dl>
-        <p>{{project.description}}</p>
-        <p><a class="viewAll" href="{{project.get_absolute_url}}">More Details</a></p>
+        <div class="short_desc">{{project.description|truncatewords_html:50}}</div>
+        <div class="long_desc">{{project.description}}</div>
+        <p><a class="viewAll more" href="{{project.get_absolute_url}}">More Details</a></p>
     </div>
 </div>
