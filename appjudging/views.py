@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required, permission_required
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.template import RequestContext
 from django.shortcuts import render_to_response, get_object_or_404
-from sunlightlabs.appcontest.models import Entry, Contest
+from appcontest.models import Entry, Contest
 from simplesurvey.forms import SurveyForm
 from simplesurvey.models import QuestionSet, AnswerSet, Answer
 
