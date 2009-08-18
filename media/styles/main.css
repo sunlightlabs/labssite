@@ -87,7 +87,8 @@ h2.post{ background: url(../images/icon_post.png) top left no-repeat; padding: 1
 h2.projects{ background: url(../images/icon_projects.png) top left no-repeat; padding: 5px 0 1px 35px; margin-left: 5px;}
 h2.ideas{ background: url(../images/icon_idea.png) top left no-repeat; padding: 10px 0 1px 35px; margin-left: 5px;}
 
-h2.projectHeader{ float: left;}
+h2.projectHeader{ float: left; margin-right: 25px;}
+h2.ideaHeader{ float: left; margin-right: 25px;}
 
 div.contentHeader, .h3line{ background: url(../images/header_lines.png) center bottom no-repeat; padding-bottom: 15px; margin-bottom: 20px; width: 700px;}
 div#postTitle, div#eventDetail_Title{ margin-bottom: 3px;}
@@ -595,4 +596,7 @@ ul#attendeeList dd { line-height: 20px;}
 div#ltColumn form#eventForm input, div#ltColumn form#eventForm textarea { width: 350px;}
 
 a.tip { font-size: 80%; font-style: oblique; margin-bottom:20px; line-height:18px; display: block;}
-a.rss { background: url(../images/feed-icon-14x14.png) left 4px no-repeat; padding-left: 25px; padding-top: 3px;}
+a.rss { background: url(../images/feed-icon-14x14.png) left 4px no-repeat; padding-left: 23px; padding-top: 3px;}
+body.projects a.rss { float: left; background: url(../images/feed-icon-14x14.png) left 11px no-repeat; padding-top: 10px;}
+body.projects a.tip { margin-bottom: 0px;}
+body.projects div.ideadHeader_wrapper a.rss { float: left; background: url(../images/feed-icon-14x14.png) left 16px no-repeat; padding-top: 16px;}

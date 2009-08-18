@@ -7,6 +7,7 @@ Sunlight Labs: Projects &amp; Ideas
 {% block content %}
 <div class="contentHeader">
     <h2 class="projects projectHeader">Projects</h2>
+    <a class="tip rss" href="#">Subscribe to this field</a>
     <a id="projectCreate" href="/projects/new/">Create A New Project</a>
     <div class="clear"></div>
 </div>
@@ -18,8 +19,10 @@ Sunlight Labs: Projects &amp; Ideas
     <p class="arrow"><a class ="viewAll" href="{% url projects_archive %}">View All</a></p>
 </div>
 
-<div class="contentHeader">
-    <h2 class="ideas">Ideas</h2>
+<div class="contentHeader ideadHeader_wrapper">
+    <h2 class="ideas ideaHeader">Ideas</h2>
+    <a class="tip rss" href="#">Subscribe to this field</a>
+    <div class="clear"></div>
 </div>
 <div id="ideas" class="module">
     <p class="tip">Want to help and are looking for a great project, <strong>claim one from the list below!</strong><br /> See something that's interesting but you don't have the time to help, <strong>vote it up</strong> so that other people find it and get to work!</p>
