@@ -1,6 +1,6 @@
 from django import template
 from django.db.models import Count
-from anthill.utils import get_items_as_tag, piechart_from_tags, _extract_chart_params, PiechartNode
+from anthill.utils import get_items_as_tag, chart_from_tags, _extract_chart_params, ChartNode
 from anthill.projects.models import Project
 from newsfeed.models import FeedItem
 
@@ -14,7 +14,7 @@ def get_active_projects(parser, token):
 
 @register.tag
 def project_skills_piechart(parser, token):
-    return piechart_from_tags(Project, token)
+    return chart_from_tags(Project, token)
 
 @register.tag
 def project_official_piechart(parser, token):
@@ -28,4 +28,4 @@ def project_official_piechart(parser, token):
         else:
             item['name'] = args[1][0]
             item['color'] = args[1][1]
-    return PiechartNode(items, width, height)
+    return ChartNode(items, width, height, chart_type='p')

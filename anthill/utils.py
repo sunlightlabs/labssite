@@ -33,19 +33,22 @@ def get_items_as_tag(token, queryset, count=5):
 
 ## google charts ##
 
-class PiechartNode(template.Node):
-    def __init__(self, items, width=150, height=150):
+class ChartNode(template.Node):
+    def __init__(self, items, width=150, height=150, chart_type='p'):
         nums = []
+        snums = []
         names = []
         colors = []
         for item in items:
-            nums.append(str(item['num']))
+            nums.append(item['num'])
+            snums.append(str(item['num']))
             names.append(item['name'])
             colors.append(item['color'])
 
-        chart_data = {'width': width, 'height': height, 'nums':','.join(nums),
-                      'names':'|'.join(names), 'colors':'|'.join(colors)}
-        self.img_url = 'http://chart.apis.google.com/chart?cht=p&chf=bg,s,00000000&chd=t:%(nums)s&chs=%(width)dx%(height)d&chdl=%(names)s&chco=%(colors)s' % chart_data
+        chart_data = {'width': width, 'height': height, 'nums':','.join(snums),
+                      'names':'|'.join(names), 'colors':'|'.join(colors),
+                      'scale': max(nums)+5, 'chart_type':chart_type}
+        self.img_url = 'http://chart.apis.google.com/chart?cht=%(chart_type)s&chds=0,%(scale)s&chdlp=b&chf=bg,s,00000000&chd=t:%(nums)s&chs=%(width)dx%(height)d&chdl=%(names)s&chco=%(colors)s' % chart_data
 
     def render(self, context):
         return '<img src="%s" />' % self.img_url
@@ -60,7 +63,7 @@ def _extract_chart_params(token, width=150, height=150):
         args = args[1:]
     return width, height, args
 
-def piechart_from_tags(model, token):
+def chart_from_tags(model, token):
     width, height, args = _extract_chart_params(token)
     tags = dict(arg.split(':') for arg in args)
     ct = ContentType.objects.get_for_model(model).id
@@ -68,5 +71,5 @@ def piechart_from_tags(model, token):
     items = Tag.objects.filter(items__content_type=ct, name__in=tag_names).values('name').annotate(num=Count('id'))
     for item in items:
         item['color'] = tags[item['name']]
-    return PiechartNode(items, width, height)
+    return ChartNode(items, width, height, chart_type='bhs')
 
