@@ -14,7 +14,18 @@ def get_analytics_account():
         _ga_acct = connection.get_account(settings.GOOGLE_ANALYTICS_ID)
     return _ga_acct
 
-def register(model, regex, lookup_func):
+def register(model, regex, lookup_func=None):
+    """
+        register a model to be used with the get_recently_popular templatetag
+
+        An example call may look like::
+            popular.register(Post, '^/blog/[0-9]{4}/', url_to_post)
+
+        This tells popular to use Google Analytics results that match the
+        given regex to determine the most popular Posts.  The third (optional)
+        parameter is a function that is used to resolve a url to an object
+        of the given type.
+    """
     if lookup_func is None:
         def default_lookup_func(url):
             view,_,pieces = resolve(url)
@@ -24,6 +35,23 @@ def register(model, regex, lookup_func):
 
 def get_popular_items(model, num=5, days_ago=7,
                       start_date=None, end_date=None):
+    """
+        Get the most popular instances of a particular model.
+
+        Using the information given when the model was registered (see
+        ``register``) look up the most popular items meeting the given
+        criteria.
+
+        Optional Parameters:
+            num
+                Number of items to look up. (default: 5)
+            days_ago
+                Number of days into the past to consider. (default: 7)
+            start_date
+                ``datetime`` object to start lookup range
+            end_date
+                ``datetime`` object to end lookup range
+    """
     if model not in registered_models:
         raise ValueError('%s not in registry, call popular.register first' % model._meta.object_name)
     regex, lookup_func = registered_models[model]

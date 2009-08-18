@@ -19,7 +19,11 @@ class ItemsNode(template.Node):
 @register.tag
 def get_recently_popular(parser, token):
     '''
-        {% get_recently_popular model num_items num_days as context_var %}
+        Tag used to get popular instances of a model.
+
+        {% get_recently_popular model [num_items] [num_days] as context_var %}
+
+        Note that ``model`` must first be registered with ``popular.register``
     '''
     pieces = token.split_contents()
     tagname = pieces[0]
