@@ -163,7 +163,7 @@ div#advancedSearch{ border-top: 1px solid #c4bdbd; padding-top: 20px; margin-top
 div.voteBox { background: url(../images/voteBox_bg.png) top left no-repeat; width: 62px; height: 82px; float: left;}
 div.voted { background: url(../images/votedBox_bg.png); }
 div#ltColumn div.voteBox button.voteBtn span.vote_link{ width: 55px; height: 22px; text-align: center; font-weight: bold; text-transform: uppercase; font-size: 145%; text-decoration: none; }
-div#ltColumn div.voted button.votedBtn span.vote_link{ font-size: 130%; font-style: oblique; color: #636466; text-transform: none; }
+div#ltColumn div.voted button.voteBtn span.voted_link{ width: 55px; font-size: 130%; font-style: oblique; color: #636466; text-transform: none; }
 div.voteBox span { font-size: 85%; font-style: oblique; padding-right: 2px; text-align: center; width: 62px; display: block; color: #636466; }
 div.ideaContent{ margin-left: 85px;}
 div#ltColumn div.voteBox button.voteBtn, div#ltColumn div.voteBox button.votedBtn { text-indent: 0px; background: none; width: 62px; padding-top: 22px; margin-top: 0px; height: 60px;}
@@ -593,3 +593,6 @@ div#ltColumn form#eventForm ul.timeDetails input { width: 150px;}
 ul#attendeeList img{ width: 40px; height: 40px; }
 ul#attendeeList dd { line-height: 20px;}
 div#ltColumn form#eventForm input, div#ltColumn form#eventForm textarea { width: 350px;}
+
+a.tip { font-size: 80%; font-style: oblique; margin-bottom:20px; line-height:18px; display: block;}
+a.rss { background: url(../images/feed-icon-14x14.png) left 4px no-repeat; padding-left: 25px; padding-top: 3px;}
