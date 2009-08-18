@@ -45,11 +45,13 @@ def vote(request):
     vote, created = Vote.objects.get_or_create(user=request.user, idea=idea,
                                                defaults={'value':score})
     if not created:
-        score_diff -= vote.value
+        new_score = idea.score + (score-vote.value)
         vote.value = score
         vote.save()
+    else:
+        new_score = idea.score
 
     if request.is_ajax():
-        return HttpResponse("{'score':%d}" % (idea.score+score_diff))
+        return HttpResponse("{'score':%d}" % new_score)
 
     return redirect(idea)
