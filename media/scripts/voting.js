@@ -1,40 +1,32 @@
 $(function() {
     // get all vote_links
-    $('.vote_link').click(function(event) {
+    $('.votedBtn, .voteBtn').click(function(event) {
         // post to link
-        var link = $(this);
-        var href = link.attr('href');
+        var form = $(this).parent();
+        var idea = form.children('[name=idea]');
+        var score = form.children('[name=score]');
+        var action = form.attr('action');
         event.preventDefault();
 
         // do the post
         $.ajax({
            type: 'POST',
-           url: href,
-           data: {},
+           url: action,
+           data: {'idea':idea.val(), 'score':score.val()},
            success: function(data, textStatus) {
                 // toggle display on success
-                link.parent().toggleClass('voted');
-                if(link.text() == 'Vote') {
-                    link.text('Voted');
+                form.parent().toggleClass('voted');
+
+                if(score.val() == '0') {
+                    score.val('1');
                 } else {
-                    link.text('Vote');
+                    score.val('0');
                 }
 
                 // update # of votes
                 data = eval( '(' + data + ')' );
-                link.siblings('.voteTotal').text(data.score + ' Votes');
-
-                // switch link
-                parts = href.match(/\/((?:un)?vote(?:_up)?)\/(\d+)\//);
-                action = parts[1];
-                num = parts[2];
-                if (action == 'vote_up') {
-                    link.attr('href', '/ideas/unvote/' + num + '/');
-                } else { 
-                    link.attr('href', '/ideas/vote_up/' + num + '/');
-                }
+                form.siblings('.voteTotal').text(data.score + ' Votes');
             }
             });
-        return false;
     });
 });

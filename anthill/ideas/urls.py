@@ -18,8 +18,9 @@ urlpatterns += patterns('anthill.ideas.views',
     url(r'^latest/$', 'idea_list', {'ordering': 'latest'}, name='ideas_latest'),
     url(r'^(?P<id>\d+)/$', 'idea_detail', name='idea_detail'),
     url(r'^new_idea/$', 'new_idea', name='new_idea'),
-    url(r'^vote_up/(?P<idea_id>\d+)/$', 'vote', {'score': 1}, name='vote_up'),
-    url(r'^vote_down/(?P<idea_id>\d+)/$', 'vote', {'score': -1}, name='vote_down'),
-    url(r'^unvote/(?P<idea_id>\d+)/$', 'vote', {'score': 0}, name='unvote'),
+    url(r'^vote/$', 'vote', name='idea_vote'),
+#    url(r'^vote_up/(?P<idea_id>\d+)/$', 'vote', {'score': 1}, name='vote_up'),
+#    url(r'^vote_down/(?P<idea_id>\d+)/$', 'vote', {'score': -1}, name='vote_down'),
+#    url(r'^unvote/(?P<idea_id>\d+)/$', 'vote', {'score': 0}, name='unvote'),
 )
 

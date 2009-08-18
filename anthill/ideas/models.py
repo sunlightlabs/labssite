@@ -10,7 +10,7 @@ from markupfield.fields import MarkupField
 class IdeaManager(models.Manager):
 
     def with_user_vote(self, user):
-        return self.extra(select={'user_vote':'SELECT score FROM ideas_vote WHERE idea_id=ideas_idea.id AND user_id=%s'}, select_params=[user.id])
+        return self.extra(select={'user_vote':'SELECT value FROM ideas_vote WHERE idea_id=ideas_idea.id AND user_id=%s'}, select_params=[user.id])
 
 
 class Idea(models.Model):
@@ -38,6 +38,9 @@ class Vote(models.Model):
     idea = models.ForeignKey(Idea, related_name='votes')
     value = models.IntegerField()
     timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __unicode__(self):
+        return '%s %s on %s' % (self.user, self.value, self.idea)
 
     class Meta:
         unique_together = (('user', 'idea'),)

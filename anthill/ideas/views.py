@@ -1,8 +1,8 @@
 import datetime
 from django.template import RequestContext
 from django.core.urlresolvers import reverse
-from django.shortcuts import get_object_or_404, render_to_response
-from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render_to_response, redirect
+from django.http import HttpResponse
 from django.contrib.comments.models import Comment
 from django.contrib.contenttypes.models import ContentType
 from django.views.generic import list_detail
@@ -31,13 +31,16 @@ def new_idea(request):
     description = request.POST['description']
     user = request.user
     idea = Idea.objects.create(title=title, description=description, user=user)
-    return HttpResponseRedirect(idea.get_absolute_url())
+    return redirect(idea)
 
 @require_POST
 @login_required
-def vote(request, idea_id, score):
+def vote(request):
+    idea_id = int(request.POST.get('idea'))
+    score = int(request.POST.get('score'))
+    if score not in (0,1):
+        score = 0
     idea = get_object_or_404(Idea, pk=idea_id)
-    score = int(score)
     score_diff = score
     vote, created = Vote.objects.get_or_create(user=request.user, idea=idea,
                                                defaults={'value':score})
@@ -45,4 +48,8 @@ def vote(request, idea_id, score):
         score_diff -= vote.value
         vote.value = score
         vote.save()
-    return HttpResponse("{'score':%d}" % (idea.score+score_diff))
+
+    if request.is_ajax():
+        return HttpResponse("{'score':%d}" % (idea.score+score_diff))
+
+    return redirect(idea)

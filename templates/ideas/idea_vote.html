@@ -1,13 +1,21 @@
 {% if not idea.user_vote %}
     <div class="voteBox">
-        <button type="submit" class="voteBtn">
-            <span class="vote_link">Vote</span>
-        </button>
+        <form method="POST" action="{% url idea_vote %}">
+            <input type="hidden" name="idea" value="{{idea.id}}" />
+            <input type="hidden" name="score" value="1" />
+            <button type="submit" class="voteBtn">
+                <span class="vote_link">Vote</span>
+            </button>
+        </form>
 {% else %}
     <div class="voteBox voted">
-        <button type="submit" class="votedBtn">
-            <span class="voted_link">Voted</span>
-        </button>
+        <form method="POST" action="{% url idea_vote %}">
+            <input type="hidden" name="idea" value="{{idea.id}}" />
+            <input type="hidden" name="score" value="0" />
+            <button type="submit" class="voteBtn">
+                <span class="voted_link">Voted</span>
+            </button>
+        </form>
 {% endif %}
 <span class="voteTotal">{{idea.score}} Vote{{idea.score|pluralize}}</span>
     </div>
