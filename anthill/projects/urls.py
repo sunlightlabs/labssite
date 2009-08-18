@@ -1,6 +1,12 @@
 from django.conf.urls.defaults import *
+from anthill.projects.feeds import ProjectFeed
 
-urlpatterns = patterns('anthill.projects.views',
+urlpatterns = patterns('',
+    url(r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
+        {'feed_dict': {'latest': ProjectFeed}}, name='project_feeds'),
+)
+
+urlpatterns += patterns('anthill.projects.views',
     url(r'^$', 'projects_and_ideas', name='projects_and_ideas'),
     url(r'^all/$', 'archive', name='projects_archive'),
     url(r'^new/$', 'new_project', name='new_project'),
