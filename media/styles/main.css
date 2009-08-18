@@ -188,8 +188,13 @@ a#allSubmitted { display: block; text-align: center; font-size: 140%; padding-to
 
 ol, div.ideaContent ol, div.projectContent ol, div#eventDetails ol, div#event_howtohold ol { list-style-type: decimal; padding-left: 40px;}
 div.ideaContent ol li, div.projectContent ol li, div#eventDetails ol li, div#event_howtohold ol li { margin-bottom: 5px;}
-div#rtColumn ol { color: #184259; font-size: 300%; font-weight: bold;}
+div#rtColumn ol#processList, ol#joinProject_list { color: #184259; font-size: 300%; font-weight: bold;}
 ol li{ margin-bottom: 20px;}
+
+ol#joinProject_list { margin-top: 20px;}
+ol#joinProject_list p { color: #4F4D4D; font-size: 35%; font-weight: normal;}
+ol#joinProject_list span.joinProject_details { color:#1F1313; font-size:50%; font-weight:normal; text-transform:uppercase;}
+div#projectJoin button.joinBtn { margin-left: 40px;}
 
 span#mess{ background: url(../images/image_mess.png) right bottom no-repeat; padding-right:50px; padding-top:10px;}
 span#ideas{ background: url(../images/image_light.png) right top no-repeat; padding:5px 30px 0 0;}

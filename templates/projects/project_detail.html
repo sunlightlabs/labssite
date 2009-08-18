@@ -104,10 +104,19 @@ Sunlight Labs: Projects - {{project.name}}
 <h3 class="space">Join This Project?</h3>
 <div id="projectJoin" class="module">
     <p>If you're interested in helping out on this project, you should! Here's how:</p>
-    <ol>
-        <li><a href="{% url contact_user project.lead.username %}">Contact the Project Lead</a></li>
-        <li>Contribute Some Code</li>
-        <li>After you've contacted and contributed to the project, click the Join This Project button below to be listed as a contributor.</li>
+    <ol id="joinProject_list">
+        <li>
+            <span class="joinProject_details">Contact</span>
+            <p><a href="{% url contact_user project.lead.username %}">Contact the Project Lead</a></p>
+        </li>
+        <li>
+            <span class="joinProject_details">Contribute</span>
+            <p>Contribute Some Code</p>
+        </li>
+        <li>
+            <span class="joinProject_details">Join</span>
+            <p>After you've contacted and contributed to the project, click the Join This Project button below to be listed as a contributor.</p>
+        </li>
     </ol>
     <a href="{% url join_project project.slug %}">
     <button type="submit" class="joinBtn">
