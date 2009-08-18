@@ -177,14 +177,19 @@ strong { font-weight: bold;}
 
 div.idea, div.project, dd.endEvent_list{ margin-bottom: 20px; background: url(../images/line_space2.png) left bottom no-repeat; padding-bottom: 30px; }
 
-div#process ol span, div#rtColumn li.hentry a.entry-title { font-size: 50%; font-weight: normal; text-transform: uppercase; color: #1f1313;}
-div#rtColumn li.hentry a.entry-title{ margin-bottom: 10px; display: block;}
-div#process ol p, div#rtColumn li.hentry p, div#rtColumn address.vcard { font-size: 35%; font-weight: normal; color: #4f4d4d;}
-address.vcard { font-style: oblique;}
-div#rtColumn ol#app_list p.metaSubmitted { margin-top: 20px; font-style: oblique; font-size: 30%; line-height: 15px;}
+div#process ol span { font-size: 50%; font-weight: normal; text-transform: uppercase; color: #1f1313;}
+li.hentry a.entry-title{ margin-bottom: 10px; display: block; font-size: 140%;}
+div#process ol p { font-size: 35%; font-weight: normal; color: #4f4d4d;}
+address.vcard { font-style: oblique; font-size: 95%;}
+ol#app_list p.metaSubmitted { margin-top: 10px; font-style: oblique; line-height: 15px; color: #808285; font-size: 95%;}
 
 a#allSubmitted { display: block; text-align: center; font-size: 140%; padding-top: 20px;}
 
+ol#app_list { list-style-type: none; padding-left: 0px;}
+ol#processList { margin-left: 0px;}
+ol#app_list li { margin-bottom: 25px;}
+div#ltColumn ol#app_list p.metaSubmitted { float: left; padding-top: 3px; padding-right: 7px; margin-top: 0px;}
+div#ltColumn ol#app_list li { margin-bottom: 30px;}
 
 ol, div.ideaContent ol, div.projectContent ol, div#eventDetails ol, div#event_howtohold ol { list-style-type: decimal; padding-left: 40px;}
 div.ideaContent ol li, div.projectContent ol li, div#eventDetails ol li, div#event_howtohold ol li { margin-bottom: 5px;}
