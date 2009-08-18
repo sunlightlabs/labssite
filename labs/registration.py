@@ -1,4 +1,5 @@
 from django import forms
+from django.shortcuts import redirect
 from django_openid.registration import RegistrationConsumer
 from django_openid.forms import RegistrationFormPasswordConfirm
 
@@ -19,7 +20,7 @@ class CustomRegistrationConsumer(RegistrationConsumer):
         "Logic for checking if a signed ?next= token is included in request"
         next = request.REQUEST.get('next')
         if next:
-            return HttpResponseRedirect(next)
+            return redirect(next)
         else:
             return None
 
