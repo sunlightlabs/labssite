@@ -22,6 +22,7 @@ python-googleanalytics
 -e git://github.com/sunlightlabs/django-mediasync.git#egg=django-mediasync
 -e git://github.com/sunlightlabs/django-gatekeeper.git#egg=django-gatekeeper
 -e git://github.com/sunlightlabs/django-blogdor.git#egg=django-blogdor
+-e git://github.com/sunlightlabs/django-appcontest.git#egg=django-appcontest
 -e git://github.com/sunlightlabs/django-simplesurvey.git#egg=django-simplesurvey
 -e git://github.com/sunlightlabs/django-feedinator.git#egg=django-feedinator
 -e git://github.com/sunlightlabs/django-popular.git#egg=django-popular

@@ -23,7 +23,7 @@ urlpatterns = patterns('',
     url(r'^comments/', include('django.contrib.comments.urls')),
 
     # contests
-    url(r'^contests/', include('sunlightlabs.appcontest.urls')),
+    url(r'^contests/', include('appcontest.urls')),
     url(r'^judgeforamerica/', include('sunlightlabs.appjudging.urls')),
 
     # blog/blogdor
