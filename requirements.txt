@@ -1,7 +1,6 @@
 Django==1.1
 
 # non-django dependencies
--e git://fabfile.org/fabric.git#egg=fabric
 python-twitter
 docutils
 markdown
