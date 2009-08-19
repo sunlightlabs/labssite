@@ -91,10 +91,10 @@ INSTALLED_APPS = (
     'popular',
     'meritbadges',
     'appcontest',
+    'brainstorm',
     'sunlightlabs.labs',
     'sunlightlabs.appjudging',
     'anthill.people',
-    'anthill.ideas',
     'anthill.projects',
     'anthill.events',
 )

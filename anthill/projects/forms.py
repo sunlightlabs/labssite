@@ -1,7 +1,7 @@
 from django import forms
 from django.forms.formsets import formset_factory
 from django.forms.models import inlineformset_factory
-from anthill.ideas.models import Idea
+from brainstorm.models import Idea
 from anthill.projects.models import Project, Link, Role
 
 class ProjectForm(forms.ModelForm):

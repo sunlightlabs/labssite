@@ -5,7 +5,7 @@ from blogdor.models import Post
 from newsfeed.models import Feed
 from anthill.events.models import Event
 from anthill.projects.models import Project
-from anthill.ideas.models import Idea
+from brainstorm.models import Idea
 import popular
 
 def url_to_post(url):

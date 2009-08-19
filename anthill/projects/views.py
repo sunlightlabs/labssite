@@ -7,7 +7,7 @@ from django.template.loader import render_to_string
 from tagging.views import tagged_object_list
 from anthill.projects.models import Project, Role
 from anthill.projects.forms import ProjectForm, LinkFormSet, RoleFormSet, FeedFormSet, JoinProjectForm
-from anthill.ideas.models import Idea
+from brainstorm.models import Idea
 from feedinator.models import Feed
 
 def projects_and_ideas(request):
