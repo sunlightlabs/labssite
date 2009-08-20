@@ -14,11 +14,16 @@ def search(request):
         form = SearchForm(request.GET)
         form.is_valid()
         location = form.cleaned_data['location']
+        skills = form.cleaned_data['skills']
         name = form.cleaned_data['name']
         position = form.cleaned_data['position']
         location_range = form.cleaned_data['location_range']
 
         users = Profile.objects.all().select_related().exclude(user__id=request.user.id)
+        if skills:
+            tags = [t.strip() for t in skills.split(',')]
+            for tag in tags:
+                users = users.filter(skills__icontains=tag)
         if position:
             users = users.filter(role=position)
         if name:

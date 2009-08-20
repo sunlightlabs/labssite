@@ -11,6 +11,7 @@ DISTANCE_CHOICES = (
 
 class SearchForm(forms.Form):
     location = forms.CharField(required=False)
+    skills = forms.CharField(required=False)
     name = forms.CharField(required=False)
     position = forms.ChoiceField(label='Position', 
                                  choices=(('','-------'),)+ROLES,

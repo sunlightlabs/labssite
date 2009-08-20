@@ -3,7 +3,6 @@ allow censoring of projects/ideas
 asks:
     allow all members to see post box
     all asks for project?
-search by tag
 
 open source:
     anthill
@@ -11,5 +10,4 @@ open source:
     meritbadges
 
 content:
-    integrate clay's content
     tag more posts
