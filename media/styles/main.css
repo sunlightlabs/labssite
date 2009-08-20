@@ -513,6 +513,8 @@ div#fancy_tags_widget p.tip { margin-left: 200px;}
 /*buttons*/
 button, a.interestedBtn, a.learnBtn, a#joinBtn, a#contactBtn, a#projectCreate { border: none; text-indent: -9999em; display: block; margin-top: 10px; height: 28px;}
 button.searchBtn { background: url(../images/btn_search.png) left top no-repeat; width: 113px; margin-top: 0px;}
+form#searchForm ul#peopleSearch button.searchBtn { background: url(../images/btn_search.png) left 20px no-repeat; width: 113px; margin-top: 0px; padding-bottom: 48px;}
+
 button.advsearchBtn { background: url(../images/btn_search.png) left top no-repeat; width: 113px; float: right; margin-top: 20px;}
 button.submitBtn { background: url(../images/btn_submit.png) left top no-repeat; width: 113px; }
 a.interestedBtn { background: url(../images/btn_interested.png) right bottom no-repeat; width: 148px;  margin: 15px 0;}
@@ -610,3 +612,4 @@ a.rss { background: url(../images/feed-icon-14x14.png) left 4px no-repeat; paddi
 body.projects a.rss { float: left; background: url(../images/feed-icon-14x14.png) left 11px no-repeat; padding-top: 10px;}
 body.projects a.tip { margin-bottom: 0px;}
 body.projects div.ideadHeader_wrapper a.rss { float: left; background: url(../images/feed-icon-14x14.png) left 16px no-repeat; padding-top: 16px;}
+div#communityCharts img { margin-bottom: 30px;}
