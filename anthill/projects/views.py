@@ -23,6 +23,12 @@ def archive(request):
                        template_object_name='project', allow_empty=True,
                        paginate_by=10)
 
+def official_projects(request):
+    return object_list(request,
+                       queryset=Project.objects.select_related().filter(official=True),
+                       template_object_name='project', allow_empty=True,
+                       extra_context={'official':True}, paginate_by=10)
+
 def tag_archive(request, tag):
     return tagged_object_list(request,
                               Project.objects.select_related(),

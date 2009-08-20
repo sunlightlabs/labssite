@@ -2,7 +2,9 @@
 
 <div class="project">
     {% if project.official %}
-        <span class="sunlightProject">Sunlight Project</span>
+        <a href="{% url official_projects %}">
+            <span class="sunlightProject">Sunlight Project</span>
+        </a>
     {% else %}
         <span class=""></span>
     {% endif %}

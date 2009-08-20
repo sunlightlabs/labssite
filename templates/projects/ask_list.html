@@ -1,0 +1,27 @@
+{% extends "brainstorm/base.html" %}
+{% load people %}
+
+{% block title %}
+Sunlight Labs: Project Asks
+{% endblock title %}
+
+{% block content %}
+<div id="projects" class="module">
+
+    <div class="contentHeader">
+        <h2 class="projects">Project Asks</h2>
+    </div>
+
+    <div class="module">
+        <ul>
+            {% for ask in ask_list %}
+            <li>{{ask.message|urlize}} 
+            | <a href="{{ ask.project.get_absolute_url }}">{{ask.project}}</a>
+            | {{ask.timestamp|date}}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
