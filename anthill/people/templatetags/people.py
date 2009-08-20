@@ -47,5 +47,5 @@ def people_roles_piechart(parser, token):
     for item in items:
         item['name'] = name = item.pop('role')
         item['color'] = colors[name]
-    return ChartNode(items, width, height, 'p')
+    return ChartNode(items, width, height, 'bhs')
 

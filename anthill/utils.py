@@ -34,7 +34,7 @@ def get_items_as_tag(token, queryset, count=5):
 ## google charts ##
 
 class ChartNode(template.Node):
-    def __init__(self, items, width=150, height=150, chart_type='p'):
+    def __init__(self, items, width=150, height=150, chart_type='bhs'):
         nums = []
         snums = []
         names = []

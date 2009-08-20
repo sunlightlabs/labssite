@@ -28,4 +28,4 @@ def project_official_piechart(parser, token):
         else:
             item['name'] = args[1][0]
             item['color'] = args[1][1]
-    return ChartNode(items, width, height, chart_type='p')
+    return ChartNode(items, width, height, chart_type='bhs')
