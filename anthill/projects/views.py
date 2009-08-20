@@ -1,11 +1,12 @@
 from django.views.generic.list_detail import object_list, object_detail
 from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_POST
 from django.http import HttpResponseForbidden
 from django.template import RequestContext
 from django.template.loader import render_to_string
 from tagging.views import tagged_object_list
-from anthill.projects.models import Project, Role
+from anthill.projects.models import Project, Role, Ask
 from anthill.projects.forms import ProjectForm, LinkFormSet, RoleFormSet, FeedFormSet, JoinProjectForm
 from brainstorm.models import Idea
 from feedinator.models import Feed
@@ -136,3 +137,25 @@ def join_project(request, slug):
     return render_to_response('projects/join_project.html',
                               {'project':project, 'form':form},
                              context_instance=RequestContext(request))
+
+@login_required
+@require_POST
+def add_ask(request, slug):
+    project = get_object_or_404(Project, slug=slug)
+    message = request.POST['message']
+
+    # check if a user is a project member
+    allowed_users = list(project.roles.exclude(status='R')
+                         .values_list('user_id', flat=True))
+    allowed_users.append(project.lead_id)
+    if request.user.id in allowed_users:
+        Ask.objects.create(message=message, project=project, user=request.user)
+        return redirect(project)
+    else:
+        return HttpResponseForbidden('Only project members may post asks')
+
+def ask_list(request):
+    return object_list(request,
+                       queryset=Ask.objects.select_related().all(),
+                       template_object_name='ask', allow_empty=True,
+                       paginate_by=20)

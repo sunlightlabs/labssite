@@ -64,3 +64,15 @@ class Link(models.Model):
 
     class Meta:
         ordering = ['link_type']
+
+class Ask(models.Model):
+    message = models.CharField(max_length=200)
+    project = models.ForeignKey(Project, related_name='asks')
+    user = models.ForeignKey(User, related_name='asks')
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-timestamp']
+
+    def __unicode__(self):
+        return self.message

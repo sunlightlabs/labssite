@@ -60,15 +60,30 @@ Sunlight Labs: Projects - {{project.name}}
             </ul>
         </div>
 
-        {# TODO: change if feed can be populated from non-subscription sources #}
-        {% if project.subscriptions.count %}
+        {% with project.asks.all.0 as latest_ask %}
+        {% if project.subscriptions.count or latest_ask %}
         <div id="timeline">
+            {% ifequal user project.lead %}
+            <form method="POST" action="{% url new_project_ask project.slug %}">
+                <textarea name="message"></textarea>
+                <button type="submit" name="post"></button>
+            </form>
+            {% endifequal %}
+            {% if latest_ask %}
+            <div id="helpwanted">
+                <h4>Help Wanted:</h4>
+                <p>{{latest_ask}}</p>
+                <a href="{% url all_project_asks %}">see all asks</a>
+            </div>
+            {% endif %}
+
             <h3>News</h3>
             <ul id="projectTimeline" class="leftTimeline">
                 {% render_feed project.slug 10 %}
             </ul>
         </div>
         {% endif %}
+        {% endwith %}
     </div>
 </div>
 {% endblock %}
