@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse
 from django.contrib.contenttypes import generic
 from tagging.fields import TagField
 from markupfield.fields import MarkupField
-from anthill.ideas.models import Idea
+from brainstorm.models import Idea
 from feedinator.models import Subscription
 
 class Project(models.Model):

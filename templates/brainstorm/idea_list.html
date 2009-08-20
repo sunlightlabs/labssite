@@ -1,9 +1,9 @@
-{% extends "ideas/base.html" %}
+{% extends "brainstorm/base.html" %}
 
 {% block content %}
 <div class="contentHeader ideadHeader_wrapper">
     <h2 class="ideas ideaHeader">Ideas</h2>
-    <a class="tip rss" href="/ideas/feeds/latest/">Subscribe to this feed</a>
+    <a class="tip rss" href="/ideas/feeds/latest/ideas/">Subscribe to this feed</a>
     <div class="clear"></div>
 </div>
 
@@ -24,7 +24,7 @@
 
 
     {% for idea in idea_list %}
-        {% include "ideas/idea.html" %}
+        {% include "brainstorm/idea.html" %}
     {% endfor %}
 </div>
 
