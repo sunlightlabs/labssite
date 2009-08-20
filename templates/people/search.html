@@ -22,11 +22,20 @@
 <div class="module" id="searchContent">
     <a id="advancedBtn"href="#">Advanced Search</a> 
         <form id="searchForm" method="GET" action=".">
-            {{form.location.label_tag}}
-            {{form.location}}
-            <button type="submit" class="searchBtn">
-                <span>search</span>
-            </button>
+            <ul id="peopleSearch">
+                <li>
+                    {{form.location.label_tag}}
+                    {{form.location}}
+                </li>
+                <li>
+                    <label for="id_skills">Skills</label>
+                    <input id="id_skills" type="text" name="skills"/>
+                </li>    
+                <button type="submit" class="searchBtn">
+                    <span>search</span>
+                </button>
+                <div class="clear"></div>
+            </ul>
             <div id="advancedSearch">
             <ul>
                 <li> {{form.name.label_tag}} {{form.name}} </li>
@@ -97,8 +106,8 @@
 
 {% block sidebar %}
 <h3 class="space">Community Profile</h3>
-<div class="module">
-    {% people_skills_piechart 190x140 python:9ca489 ruby:e95018 %}
+<div class="module" id="communityCharts">
+    {% people_skills_piechart 190x90 python:9ca489 ruby:e95018 %}
     {% people_roles_piechart 190x140 des:bf6e0b both:bfc7ba dev:2a5955 %}
 </div>
 <hr></hr>
