@@ -537,7 +537,7 @@ button.signinBtn { background: url(../images/btn_signin.png) right bottom no-rep
 button.submit-send { background: url(../images/btn_submit.png) left top no-repeat; width: 113px; margin-left: 200px;}
 button.startnewBtn { background: url(../images/btn_startnew.png) left top no-repeat; width: 247px; margin-top: 20px; }
 button#resetPassword { background: url(../images/btn_resetpassword.png) left top no-repeat; width: 171px; margin-left: 200px;}
-form#projectForm button.submitBtn { margin-left: 270px; margin-top: 20px;}
+form#projectForm button.submitBtn { margin-left: 200px; margin-top: 20px;}
 button.updateProjectBtn { background: url(../images/btn_updateProject.png) left top no-repeat; width: 182px; margin-top: 30px;}
 a#projectCreate{ background: url(../images/btn_createNewProject.png) right top no-repeat; width: 180px; float: right; margin-right: 10px; margin-top:3px;}
 
@@ -613,3 +613,7 @@ body.projects a.rss { float: left; background: url(../images/feed-icon-14x14.png
 body.projects a.tip { margin-bottom: 0px;}
 body.projects div.ideadHeader_wrapper a.rss { float: left; background: url(../images/feed-icon-14x14.png) left 16px no-repeat; padding-top: 16px;}
 div#communityCharts img { margin-bottom: 30px;}
+
+dl#requestList dd{ margin-bottom: 30px; font-style: oblique; font-size: 95%; margin-top: 10px; color: #808285;}
+dl#requestList dd a { margin-right: 2px;}
+dl#requestList dt { font-size: 120%;}

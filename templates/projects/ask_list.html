@@ -9,18 +9,18 @@ Sunlight Labs: Project Asks
 <div id="projects" class="module">
 
     <div class="contentHeader">
-        <h2 class="projects">Project Asks</h2>
+        <h2>All Requests For Help</h2>
     </div>
 
     <div class="module">
-        <ul>
+		<p class="tip">Here are the requests people have made for help on the projects they're working on. If one of them looks appealing, contact the lead, and get to work.</p>
+        <dl id="requestList">
             {% for ask in ask_list %}
-            <li>{{ask.message|urlize}} 
-            | <a href="{{ ask.project.get_absolute_url }}">{{ask.project}}</a>
-            | {{ask.timestamp|date}}
-            </li>
+            <dt>{{ask.message|urlize}}</dt>
+            <dd><a href="{{ ask.project.get_absolute_url }}">{{ask.project}}</a>
+            {{ask.timestamp|date}}</dd>
             {% endfor %}
-        </ul>
+        </dl>
     </div>
 </div>
 
