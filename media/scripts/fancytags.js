@@ -43,8 +43,11 @@ var fancytags = function (tag_input_selector, options) {
         });
     }
 
-    var add_tag = function(tag) {
-        add_tag_li(tag);
+    var add_tag = function(tags) {
+        tags = tags.split(',');
+        for(var i=0; i < tags.length; ++i) {
+            add_tag_li(tags[i]);
+        }
         make_deletes_clickable();
         rebuild_tag_input();
     }
@@ -54,7 +57,7 @@ var fancytags = function (tag_input_selector, options) {
         event.preventDefault();
         var new_tag = jQuery(add_tag_box_selector).val();
         if(new_tag) {
-            new_tag = new_tag.replace(settings.illegal_char_regex, '');
+            //new_tag = new_tag.replace(settings.illegal_char_regex, '');
             jQuery(add_tag_box_selector).val('');
             add_tag(new_tag);
         }
