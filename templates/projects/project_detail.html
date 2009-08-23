@@ -39,6 +39,17 @@ Sunlight Labs: Projects - {{project.name}}
             {% endif %}
 
         </dl>
+
+		{% tags_for_object project as tags %}
+        <div id="languages">
+            <h3 id="skillsHeader">Tags</h3>
+            <ul>
+                {% for tag in tags %}
+                <li><a href="{% url projects_tagged tag %}">{{tag}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
         <div id="project_mainDetails">
             <div id="projectDescription">{{project.description}}</div>
             <ul>
@@ -50,28 +61,20 @@ Sunlight Labs: Projects - {{project.name}}
             </ul>
         </div>
 
-        {% tags_for_object project as tags %}
-        <div id="languages">
-            <h3 id="skillsHeader">Tags</h3>
-            <ul>
-                {% for tag in tags %}
-                <li><a href="{% url projects_tagged tag %}">{{tag}}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
+		{% with project.asks.all.0 as latest_ask %}
+		{% if latest_ask %}
+		<div id="helpwanted">
+			<h4>Help Wanted:</h4>
+			<div id="wantedData">
+				<p>{{latest_ask}}</p>
+				<a id="allRequests_link" href="{% url all_project_asks %}">View All Requests for Help »</a>
+			</div>
+		</div>
+		<div class="clear"></div>
+		{% endif %}
+		{% endwith %}
 
-        <div id="timeline">
-
-            {% with project.asks.all.0 as latest_ask %}
-            {% if latest_ask %}
-            <div id="helpwanted">
-                <h4>Help Wanted:</h4>
-                <p>{{latest_ask}}</p>
-                <a href="{% url all_project_asks %}">View All Requests for Help</a>
-            </div>
-            {% endif %}
-            {% endwith %}
-
+		<div id="timeline">
             {% if project.subscriptions.count %}
             <h3>News</h3>
             <ul id="projectTimeline" class="leftTimeline">

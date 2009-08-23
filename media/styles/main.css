@@ -341,8 +341,8 @@ div#ltColumn div.pullQuote p { text-align: center; font-size: 170%; font-style: 
 
 a#centered { text-align: center; width: 665px; display: block; font-size:110%; color: #3D868D; font-weight: bold;}
 
-div#languages { -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #F0F0E5 none repeat scroll 0 0; border: 1px solid #D5D2C6; padding: 20px; width: 120px; float: left;}
-div#projectDetail div#timeline { width: 490px; padding-right: 30px; margin-top: 30px; }
+div#languages { -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #F0F0E5 none repeat scroll 0 0; border: 1px solid #D5D2C6; padding: 20px; width: 120px; float: right;}
+div#projectDetail div#timeline { width: 490px; padding-right: 30px; margin-top: 25px; }
 
 div#ltColumn ul.leftTimeline li{ padding-left: 0;}
 div#timeline{ font-size: 120%;}
@@ -353,7 +353,7 @@ div.post { padding-bottom: 30px; margin-bottom: 20px;}
 div#projectDetail p{ width: 490px;}
 div#projectDetail ol, div#projectDetail ul { width: 450px;}
 div#projectDetail div#projectDescription { margin-bottom: 20px; }
-div#project_mainDetails { margin-bottom: 20px; background: url(../images/line_505.png) bottom left no-repeat; padding-bottom: 30px; float: left;}
+div#project_mainDetails { margin-bottom: 20px; background: url(../images/line_505.png) bottom left no-repeat; padding-bottom: 20px; padding-right:30px; width:490px;}
 
 li#signup_openid a{ background: url(../images/openid.png) top left no-repeat; }
 li#signup_standard a{ background: url(../images/standard_signup.png) top left no-repeat; }
@@ -617,3 +617,11 @@ div#communityCharts img { margin-bottom: 30px;}
 dl#requestList dd{ margin-bottom: 30px; font-style: oblique; font-size: 95%; margin-top: 10px; color: #808285;}
 dl#requestList dd a { margin-right: 2px;}
 dl#requestList dt { font-size: 120%;}
+
+div#helpwanted h4{ text-indent: -9999em; background: url(../images/helpWanted.png) top left no-repeat; width: 114px; height: 89px; display: block; float: left; margin-top: 0px; margin-right: 15px;}
+div#ltColumn div#helpwanted p { padding-top: 5px; margin-bottom: 5px; width: 360px; line-height: 22px;}
+div#helpwanted a#allRequests_link { font-size: 85%; }
+div#wantedData { float: left; width: 360px;}
+div#helpwanted { margin-top: 25px; padding-right:30px; width:490px; font-size:120%;}
+
+div#ltColumn div.module input.checkbox { width: 15px;}
