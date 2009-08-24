@@ -23,8 +23,9 @@ class EventForm(forms.ModelForm):
     class Meta:
         model = Event
         fields = ['title', 'description', 'location', 'url', 'start_date', 'end_date']
-    start_date = forms.SplitDateTimeField(widget=SplitDateTimeListWidget)
-    end_date = forms.SplitDateTimeField(widget=SplitDateTimeListWidget)
+    location = forms.CharField(label='Address')
+    start_date = forms.SplitDateTimeField(widget=SplitDateTimeListWidget, required=False)
+    end_date = forms.SplitDateTimeField(widget=SplitDateTimeListWidget, required=False)
 
 class AttendForm(forms.Form):
     guests = forms.IntegerField('Additional Guests',
