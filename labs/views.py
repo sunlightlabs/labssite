@@ -2,6 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.cache import cache_control
 from contact_form.views import contact_form
 from blogdor.models import Post
 from blogdor.views import archive
@@ -26,6 +27,7 @@ def image_wrapper(request, image_path):
     data = {"image_path": image_path}
     return render_to_response("labs/image_wrapper.html", data)
 
+@cache_control(private=True)
 @login_required
 def aa2_judging(request):
     qs = QuestionSet.objects.get(slug='aa2public')
@@ -39,6 +41,6 @@ def aa2_judging(request):
     form = SurveyForm(qs, answer_set=aset)
 
     return render_to_response('labs/public_judging.html',
-                              {'form': form, 'answer': answer},
+                              {'form': form, 'aset': aset, 'answer': answer},
                              context_instance=RequestContext(request))
 
