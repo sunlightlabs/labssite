@@ -118,12 +118,23 @@ Sunlight Labs: Edit Project
 {% block sidebar %}
 <h3>Ask For Help</h3>
 <div class="module">
-	<p class="tip">Let the community know what you need from them to make your project great.</p>
-	<form method="POST" action="{% url new_project_ask project.slug %}">
-	   <textarea id="helpMessage" rows="5" cols="32" name="message"></textarea>
-	   <button type="submit" class="submitBtn" name="post">
-			<span>Submit</span>
- 	   </button>
-	</form>
+    <p class="tip">Let the community know what you need from them to make your project great.</p>
+    <form method="POST" action="{% url new_project_ask project.slug %}">
+       <textarea id="helpMessage" rows="5" cols="32" name="message"></textarea>
+       <button type="submit" class="submitBtn" name="post">
+            <span>Submit</span>
+       </button>
+   </form>
+
+   <h3>Current Asks</h3>
+   <ul>
+       {% for ask in project.asks.all %}
+       <li>{{ask}}
+           <form action="{% url delete_ask ask.id %}" method="POST">
+               <button type="submit" value="Delete">X</button>
+            </form>
+        </li>
+       {% endfor %}
+    </ul>
 </div>
 {% endblock %}

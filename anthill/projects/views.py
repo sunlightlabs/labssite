@@ -144,21 +144,34 @@ def join_project(request, slug):
                               {'project':project, 'form':form},
                              context_instance=RequestContext(request))
 
+def _user_on_project(project, user):
+    ''' check if user is a current project member '''
+    allowed_users = list(project.roles.exclude(status='R')
+                         .values_list('user_id', flat=True))
+    allowed_users.append(project.lead_id)
+    return user.id in allowed_users
+
 @login_required
 @require_POST
 def add_ask(request, slug):
     project = get_object_or_404(Project, slug=slug)
     message = request.POST['message']
 
-    # check if a user is a project member
-    allowed_users = list(project.roles.exclude(status='R')
-                         .values_list('user_id', flat=True))
-    allowed_users.append(project.lead_id)
-    if request.user.id in allowed_users:
+    if _user_on_project(project, request.user):
         Ask.objects.create(message=message, project=project, user=request.user)
         return redirect(project)
     else:
         return HttpResponseForbidden('Only project members may post asks')
+
+@login_required
+@require_POST
+def delete_ask(request, id):
+    ask = get_object_or_404(Ask, pk=id)
+    if _user_on_project(ask.project, request.user):
+        ask.delete()
+        return redirect('edit_project', ask.project.slug)
+    else:
+        return HttpResponseForbidden('Only project members may delete tasks')
 
 def ask_list(request):
     return object_list(request,

@@ -40,7 +40,7 @@ Sunlight Labs: Projects - {{project.name}}
 
         </dl>
 
-		{% tags_for_object project as tags %}
+        {% tags_for_object project as tags %}
         <div id="languages">
             <h3 id="skillsHeader">Tags</h3>
             <ul>
@@ -61,20 +61,26 @@ Sunlight Labs: Projects - {{project.name}}
             </ul>
         </div>
 
-		{% with project.asks.all.0 as latest_ask %}
-		{% if latest_ask %}
-		<div id="helpwanted">
-			<h4>Help Wanted:</h4>
-			<div id="wantedData">
-				<p>{{latest_ask}}</p>
-				<a id="allRequests_link" href="{% url all_project_asks %}">View All Requests for Help »</a>
-			</div>
-		</div>
-		<div class="clear"></div>
-		{% endif %}
-		{% endwith %}
+        {% with project.asks.all as asks %}
+        {% if asks %}
+        <div id="helpwanted">
+            <h4>Help Wanted:</h4>
+            <div id="wantedData">
+                <ul>
+                    {% for ask in asks %}
+                    <li>
+                    {{ask}}
+                    </li>
+                    {% endfor  %}
+                </ul>
+                <a id="allRequests_link" href="{% url all_project_asks %}">View All Requests for Help »</a>
+            </div>
+        </div>
+        <div class="clear"></div>
+        {% endif %}
+        {% endwith %}
 
-		<div id="timeline">
+        <div id="timeline">
             {% if project.subscriptions.count %}
             <h3>News</h3>
             <ul id="projectTimeline" class="leftTimeline">
