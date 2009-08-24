@@ -125,16 +125,20 @@ Sunlight Labs: Edit Project
             <span>Submit</span>
        </button>
    </form>
-
-   <h3>Current Asks</h3>
-   <ul>
-       {% for ask in project.asks.all %}
-       <li>{{ask}}
-           <form action="{% url delete_ask ask.id %}" method="POST">
-               <button type="submit" value="Delete">X</button>
-            </form>
-        </li>
-       {% endfor %}
-    </ul>
 </div>
+<h3 class="space">Current Asks</h3>
+<div id="currentAsks" class="module">
+    <ul>
+        {% for ask in project.asks.all %}
+        <li>
+            <form action="{% url delete_ask ask.id %}" method="POST">
+                <button type="submit" value="Delete">X</button>
+             </form>
+             <p>{{ask}}</p>
+             <div class="clear"></div>
+         </li>
+         
+        {% endfor %}
+     </ul>
+ </div>
 {% endblock %}

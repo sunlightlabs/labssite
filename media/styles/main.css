@@ -346,6 +346,7 @@ div#projectDetail div#timeline { width: 490px; padding-right: 30px; margin-top: 
 
 div#ltColumn ul.leftTimeline li{ padding-left: 0;}
 div#timeline{ font-size: 120%;}
+div#projectDetail div#timeline{ font-size: 110%;}
 div#timeline li, div.post { background: url(../images/line_space2.png) left bottom no-repeat; padding-bottom: 20px; margin-bottom: 10px;}
 div#timeline li { background: none; padding-bottom: 0; margin-bottom: 20px;}
 div.post { padding-bottom: 30px; margin-bottom: 20px;}
@@ -530,6 +531,7 @@ button.saveBtn{ background: url(../images/btn_savechanges.png) right bottom no-r
 a#joinBtn { background: url(../images/btn_joinus.png) right bottom no-repeat; width: 144px; height: 33px; margin-top: 20px; display: block;}
 a#contactBtn { background: url(../images/btn_contact.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
 button.joinBtn { background: url(../images/btn_join.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
+button#voteBtn { background: url(../images/btn_vote.png) right bottom no-repeat; width: 113px; margin-top: 20px; }
 
 form#joinProjectForm button.signupBtn { margin-left: 120px;}
 button.signupBtn { background: url(../images/btn_joinus_sm.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}
@@ -614,14 +616,23 @@ body.projects a.tip { margin-bottom: 0px;}
 body.projects div.ideadHeader_wrapper a.rss { float: left; background: url(../images/feed-icon-14x14.png) left 16px no-repeat; padding-top: 16px;}
 div#communityCharts img { margin-bottom: 30px;}
 
-dl#requestList dd{ margin-bottom: 30px; font-style: oblique; font-size: 95%; margin-top: 10px; color: #808285;}
+dl#requestList dd{ margin-bottom: 30px; font-style: oblique; font-size: 95%; margin-top: 5px; color: #808285;}
 dl#requestList dd a { margin-right: 2px;}
 dl#requestList dt { font-size: 120%;}
 
 div#helpwanted h4{ text-indent: -9999em; background: url(../images/helpWanted.png) top left no-repeat; width: 114px; height: 89px; display: block; float: left; margin-top: 0px; margin-right: 15px;}
 div#ltColumn div#helpwanted p { padding-top: 5px; margin-bottom: 5px; width: 360px; line-height: 22px;}
-div#helpwanted a#allRequests_link { font-size: 85%; }
-div#wantedData { float: left; width: 360px;}
-div#helpwanted { margin-top: 25px; padding-right:30px; width:490px; font-size:120%;}
+div#helpwanted a#allRequests_link { font-size: 95%; }
+div#wantedData { width: 360px;}
+div#wantedData li{ margin-bottom: 15px;}
+div#wantedData ul { margin-top: 10px;}
+div#helpwanted { margin-top: 25px; padding-right:30px; width:490px; font-size:110%; margin-bottom: 30px;}
 
 div#ltColumn div.module input.checkbox { width: 15px;}
+div#currentAsks button{ background: url(../images/btn_delete.png) left 4px no-repeat; display: block; float: left; height: 15px; padding-right: 20px; text-indent: -9999em; width: 11px; margin-top: 0px;}
+div#currentAsks p { float: left; width: 180px;}
+div#currentAsks li { margin-bottom: 20px;}
+
+div#ltColumn h3#favoriteFinalists { margin-top: 30px;}
+div#join_project li { margin-bottom: 10px;}
+div#join_project input.radio_choice_field { margin-top: 5px; margin-right: 10px; display: block; float: left;}
