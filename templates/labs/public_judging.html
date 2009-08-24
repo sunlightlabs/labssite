@@ -2,12 +2,26 @@
 
 {% block content %}
     <p>
-    Content about voting goes here
-    </p>
-    {% if message %} <p>{{ message }}</p> {% endif %}
+    Thanks for Voting in the Sunlight Labs Apps for America contest. Our three final entrants are below. Check out each finalist, and then vote for the one you think is the best. Each entry here has already won-- now you're selecting how they'll be ordered. We'll announce the winners (ranked by your votes) at the <a href="http://gov2expo.com">Gov 2.0 Expo</a> next month!</p>
+
+    {% if answer %} <p>Your vote has been recorded.</p> {% endif %}
     <form action="{% url appjudging_submit %}" method="post" target="_top">
         <ul>
-            {{ form.as_ul }}
+            <li><label for="id_answer_for_9_0">Pick your favorite of the three finalists:</label> <ul>
+            <li><label for="id_answer_for_9_0">
+                <input {% ifequal answer "ThisWeKnow" %}checked="checked"{% endifequal %} value="ThisWeKnow" class="radio_choice_field" name="answer_for_9" id="id_answer_for_9_0" type="radio">
+                <a href="http://www.thisweknow.org/">ThisWeKnow</a>
+            </label></li>
+            <li><label for="id_answer_for_9_1">
+                <input {% ifequal answer "govpulse" %}checked="checked"{% endifequal %} name="answer_for_9" value="govpulse" id="id_answer_for_9_1" class="radio_choice_field" type="radio">
+                <a href="http://govpulse.us/">govpulse</a>
+            </label></li>
+            <li><label for="id_answer_for_9_2">
+                <input {% ifequal answer "DataMasher" %}checked="checked"{% endifequal %} value="DataMasher" class="radio_choice_field" name="answer_for_9" id="id_answer_for_9_2" type="radio">
+                <a href="http://datamasher.org/">DataMasher</a>
+            </label></li>
+            </ul><input name="answer_set" value="323" id="id_answer_set" type="hidden"><input name="question_set" value="aa2public" id="id_question_set" type="hidden"></li>
+    
         </ul>
         <input type="submit" value="Vote" />
     </form>
