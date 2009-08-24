@@ -25,7 +25,7 @@ urlpatterns = patterns('',
 
     # contests
     url(r'^contests/', include('appcontest.urls')),
-    url(r'^judgeforamerica/', include('sunlightlabs.appjudging.urls')),
+    url(r'^aa2judging/submit/$', 'simplesurvey.views.submit', name='appjudging_submit'),
     url(r'^aa2judging/$', 'sunlightlabs.labs.views.aa2_judging', name='aa2_judging'),
 
     # blog/blogdor
@@ -43,7 +43,6 @@ urlpatterns = patterns('',
 
     # anthill
     url(r'^people/', include('anthill.people.urls')),
-    #url(r'^ideas/', include('brainstorm.urls')),
     url(r'^projects/', include('anthill.projects.urls')),
     url(r'^events/', include('anthill.events.urls')),
 

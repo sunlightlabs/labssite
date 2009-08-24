@@ -93,7 +93,6 @@ INSTALLED_APPS = (
     'appcontest',
     'brainstorm',
     'sunlightlabs.labs',
-    'sunlightlabs.appjudging',
     'anthill.people',
     'anthill.projects',
     'anthill.events',
