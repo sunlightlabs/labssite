@@ -26,6 +26,7 @@ urlpatterns = patterns('',
     # contests
     url(r'^contests/', include('appcontest.urls')),
     url(r'^judgeforamerica/', include('sunlightlabs.appjudging.urls')),
+    url(r'^aa2judging/$', 'sunlightlabs.labs.views.aa2_judging', name='aa2_judging'),
 
     # blog/blogdor
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="blogdor_feeds"),
