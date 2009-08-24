@@ -35,6 +35,7 @@
                         {% else %} {# end_date #}
 
                         <li>
+                            {{ field.errors }}
                             <label id="endTitle" >End</label>
                             <ul class="timeDetails">{{ field }}</ul>
                         </li>
@@ -42,6 +43,7 @@
                         {% endifnotequal %}
                     {% else %} {# start_date #}
                         <li>
+                        {{ field.errors }}
                         <label id="startTitle">Start</label>
                         <ul class="timeDetails"> {{ field }} </ul>
                         </li>
