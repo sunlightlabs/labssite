@@ -7,7 +7,7 @@
 <div id="join_project" class="module">  
     <p>Thanks for Voting in the Sunlight Labs Apps for America contest. Our three final entrants are below. Check out each finalist, and then vote for the one you think is the best. Each entry here has already won-- now you're selecting how they'll be ordered. We'll announce the winners (ranked by your votes) at the <a href="http://gov2expo.com">Gov 2.0 Expo</a> next month!</p>
 
-    {% if answer %} <p>Your vote has been recorded.</p> {% endif %}
+    {% if answer %} <strong>Your vote has been recorded.</strong> {% endif %}
     <h3 id="favoriteFinalists">Pick your favorite of the three finalists</h3>
     <form action="{% url appjudging_submit %}" method="post" target="_top">
         <ul>

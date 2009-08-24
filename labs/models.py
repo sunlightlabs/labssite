@@ -6,7 +6,11 @@ from newsfeed.models import Feed
 from anthill.events.models import Event
 from anthill.projects.models import Project
 from brainstorm.models import Idea
+import gatekeeper
 import popular
+
+gatekeeper.register(Idea, auto_moderator=lambda o: True, import_unmoderated=True)
+
 
 def url_to_post(url):
     from django.core.urlresolvers import resolve
