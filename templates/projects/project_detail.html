@@ -9,6 +9,29 @@ Sunlight Labs: Projects - {{project.name}}
 {% endblock title %}
 
 {% block content %}
+{% ifequal project.moderation_object.moderation_status -1 %}
+
+<div id="ideas" class="module">
+    <div class="contentHeader">
+        <h2 class="ideas">Project Removed</h2>
+    </div>
+    <div class="module">
+        <p>
+        This project has been removed, we should have some copy here explaining what our moderation procedures are.
+
+        <dl class="moderationMetadata">
+            <dt>Removed by</dt>
+            <dd>{% display_name project.moderation_object.moderation_status_by %}</a></dd>
+            <dt>Date</dt>
+            <dd>{{project.moderation_object.moderation_status_date|date}}</dd>
+            <dt>Reason</dt>
+            <dd>{{project.moderation_object.moderation_reason}}</dd>
+        </dl>
+        </p>
+    </div>
+</div>
+
+{% else %}
 <div id="projects" class="module">
 
     {% ifequal project.lead user %}
@@ -76,7 +99,7 @@ Sunlight Labs: Projects - {{project.name}}
                 <a id="allRequests_link" href="{% url all_project_asks %}">View All Requests for Help »</a>
                 <div class="clear"></div>
             </div>
-            
+
         </div>
         <div class="clear"></div>
         {% endif %}
@@ -92,9 +115,11 @@ Sunlight Labs: Projects - {{project.name}}
         </div>
     </div>
 </div>
+{% endifequal %}
 {% endblock %}
 
 {% block sidebar %}
+{% ifnotequal project.moderation_object.moderation_status -1 %}
 <h3 class="space">Project Participants</h3>
 <div class="module">
     <h4>Lead</h4>
@@ -146,4 +171,5 @@ Sunlight Labs: Projects - {{project.name}}
     </a>
 </div>
 <div class="clear"></div>
+{% endifnotequal %}
 {% endblock %}

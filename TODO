@@ -1,4 +1,4 @@
-allow censoring of projects/ideas
+in projects templatetag make get_active_projects use only recent activity
 
 open source:
     anthill

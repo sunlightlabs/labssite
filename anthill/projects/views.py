@@ -12,33 +12,41 @@ from brainstorm.models import Idea
 from feedinator.models import Feed
 
 def projects_and_ideas(request):
-    context = {'projects': Project.objects.select_related().order_by('-update_date').all()[0:3],
+    project_qs = Project.objects.select_related().order_by('-update_date').all()
+    if hasattr(project_qs, '_gatekeeper'):
+        project_qs = project_qs.approved()
+    context = {'projects': project_qs[0:3],
                'ideas': Idea.objects.with_user_vote(request.user).select_related().all()[0:3]}
     return render_to_response('projects/projects_and_ideas.html', context,
                               context_instance=RequestContext(request))
 
 def archive(request):
-    return object_list(request,
-                       queryset=Project.objects.select_related().all(),
+    qs = Project.objects.select_related().all()
+    if hasattr(qs, '_gatekeeper'):
+        qs = qs.approved()
+    return object_list(request, queryset=qs,
                        template_object_name='project', allow_empty=True,
                        paginate_by=10)
 
 def official_projects(request):
-    return object_list(request,
-                       queryset=Project.objects.select_related().filter(official=True),
+    qs = Project.objects.select_related().filter(official=True)
+    if hasattr(qs, '_gatekeeper'):
+        qs = qs.approved()
+    return object_list(request, queryset=qs,
                        template_object_name='project', allow_empty=True,
                        extra_context={'official':True}, paginate_by=10)
 
 def tag_archive(request, tag):
-    return tagged_object_list(request,
-                              Project.objects.select_related(),
-                              tag,
-                              paginate_by=10,
+    qs = Project.objects.select_related()
+    if hasattr(qs, '_gatekeeper'):
+        qs = qs.approved()
+    return tagged_object_list(request, qs, tag, paginate_by=10,
                               template_object_name='project',
                               extra_context={'tag':tag},
                               allow_empty=True)
 
 def project_detail(request, slug):
+    # explicitly don't use _gatekeeper check here
     return object_detail(request,
                          queryset=Project.objects.select_related().all(),
                          slug=slug, template_object_name='project')
@@ -66,7 +74,10 @@ def new_project(request):
 
 @login_required
 def edit_project(request, slug):
-    project = get_object_or_404(Project, slug=slug)
+    qs = Project.objects.all()
+    if hasattr(qs, '_gatekeeper'):
+        qs = qs.approved()
+    project = get_object_or_404(qs, slug=slug)
     if request.user != project.lead and not request.user.is_staff:
         return HttpResponseForbidden('Only the project lead can edit a project.')
 
@@ -121,7 +132,10 @@ def edit_project(request, slug):
 
 @login_required
 def join_project(request, slug):
-    project = get_object_or_404(Project, slug=slug)
+    qs = Project.objects.all()
+    if hasattr(qs, '_gatekeeper'):
+        qs = qs.approved()
+    project = get_object_or_404(qs, slug=slug)
     if request.method == 'GET':
         form = JoinProjectForm()
     else:

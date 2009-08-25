@@ -10,7 +10,7 @@ import gatekeeper
 import popular
 
 gatekeeper.register(Idea, auto_moderator=lambda o: True, import_unmoderated=True)
-
+gatekeeper.register(Project, auto_moderator=lambda o: True, import_unmoderated=True)
 
 def url_to_post(url):
     from django.core.urlresolvers import resolve

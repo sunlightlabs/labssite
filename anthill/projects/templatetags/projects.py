@@ -10,6 +10,8 @@ register = template.Library()
 def get_active_projects(parser, token):
     most_active = FeedItem.objects.values_list('feed__slug', flat=True).order_by('count').annotate(count=Count('id'))[:5]
     projects = Project.objects.filter(slug__in=list(most_active))
+    if hasattr(projects, '_gatekeeper'):
+        projects = projects.approved()
     return get_items_as_tag(token, projects)
 
 @register.tag
