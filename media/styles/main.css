@@ -264,18 +264,22 @@ div.adr{ display: block; margin-right: 15px; }
 div.street-address { float: left; margin-right: 15px;}
 
 div#personPic { float: left;}
-div#personDetails dt, div#eventDetails dt{ float: left; font-weight: bold; margin-right: 8px; }
+div#personDetails dt, div#eventDetails dt, dl.moderationMetadata dt{ float: left; font-weight: bold; margin-right: 8px; }
 div#personDetails dd a { float: left; border: none;}
-div#personDetails dl, div#eventDetails dl { line-height: 25px; margin-bottom: 20px;}
+div#personDetails dl, div#eventDetails dl, dl.moderationMetadata{ line-height: 25px; margin-bottom: 20px;}
 div#eventDetails dt{ width: 70px;}
+dl.moderationMetadata dt{ width: 85px;}
 
 div#personDetails { margin-left: 85px; background: url(../images/line_space_short.png) bottom left no-repeat; padding-bottom: 1px; margin-bottom: 25px;}
 div#personDetails h2 { float: left;}
 div#personProject { float: left; margin-left: 85px; width: 285px; margin-right: 20px;}
 div#sunlightPost{ margin-left: 395px;}
-dd#userWebsite a, div#eventDetails dd{ width: 233px; margin-right: 20px;}
-div#eventDetails dd { float: left;}
-div#userDetails dt, div#eventDetails dt{ padding-top: 1px;}
+dd#userWebsite a, div#eventDetails dd, dl.moderationMetadata dd{ width: 233px; margin-right: 20px;}
+dl.moderationMetadata dd { width: 223px;}
+div#eventDetails dd, dl.moderationMetadata dd { float: left;}
+div#userDetails dt, div#eventDetails dt, dl.moderationMetadata dt{ padding-top: 1px;}
+dl.moderationMetadata dd { padding-bottom: 2px;}
+dl.moderationMetadata dd#ideaReason { width: 550px;}
 
 div#personHeader{ background: url(../images/header_lineShort.png) left bottom no-repeat; padding-bottom: 12px; margin-bottom: 20px;}
 span#personIdentifier{ font-size: 140%; text-align: right; display: block; padding-top: 4px; padding-right: 10px;}
