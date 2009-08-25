@@ -8,7 +8,7 @@
 <div id="ideas" class="module">
     <div id="headerTip" class="contentHeader">
         {% if openid %}
-            <h2>Almost Done</h2>
+            <h2>Almost Done Creating Your New Account</h2>
         {% else %}
             <h2>Join Us!</h2>
         {% endif %}
@@ -63,7 +63,8 @@
                 </ul>
             </form>
         {% else %}
-        <p class="tip">Your account will be associated with {{openid}}</p>
+        <p class="tip">You are creating a new account associated with {{openid}}.
+        (<a href="/accounts/logout/">logout</a>?)</p>
         <div id="signupOptions">
         {% endif %}
             <form id="standard_signupForm" method="post" action=".">

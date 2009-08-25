@@ -3,6 +3,8 @@ from django.shortcuts import redirect
 from django_openid.registration import RegistrationConsumer
 from django_openid.forms import RegistrationFormPasswordConfirm
 
+from django.conf import settings
+
 class RegistrationForm(RegistrationFormPasswordConfirm):
     extra_required = ('email',)
     email_opt_in = forms.BooleanField(label='Keep me posted about other Sunlight news and information', 
@@ -11,7 +13,7 @@ class RegistrationForm(RegistrationFormPasswordConfirm):
 class CustomRegistrationConsumer(RegistrationConsumer):
     confirm_email_addresses = False
     RegistrationForm = RegistrationForm
-    trust_root = 'http://*.sunlightlabs.com/'
+    trust_root = settings.TRUST_ROOT
     on_complete_url = '/accounts/complete/'
     after_registration_url = '/people/edit_profile/'
     recovery_email_subject = 'Recover Your SunlightLabs.com Account'
@@ -49,5 +51,15 @@ class CustomRegistrationConsumer(RegistrationConsumer):
             request.user.profile.allow_org_emails = True
             request.user.profile.save()
         return super(CustomRegistrationConsumer, self).on_registration_complete(request)
+
+    def show_unknown_openid(self, request, openid):
+        return redirect('/accounts/register/')
+
+    def show_error(self, request, message, exception=None):
+        self.do_logout(request)
+        super(CustomRegistrationConsumer, self).show_error(self, request, message, exception)
+
+
+
 
 registration_consumer = CustomRegistrationConsumer()
