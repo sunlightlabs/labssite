@@ -114,7 +114,7 @@ def contact(request, username):
             subject = render_to_string('people/contact_email_subject.txt', data)
             body = render_to_string('people/contact_email_body.txt', data)
             to_user.email_user(subject.strip(), body, request.user.email)
-            request.user.message_set.create(message='Your email has been delivered to %s' % (request.user.first_name or request.user.username))
+            request.user.message_set.create(message='Your email has been delivered to %s' % (to_user.first_name or to_user.username))
             return redirect('user_profile', username)
 
     return render_to_response('people/contact.html',
