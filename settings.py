@@ -66,7 +66,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
 )
 
-ROOT_URLCONF = 'sunlightlabs.urls'
+ROOT_URLCONF = 'labssite.urls'
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -92,7 +92,7 @@ INSTALLED_APPS = (
     'meritbadges',
     'appcontest',
     'brainstorm',
-    'sunlightlabs.labs',
+    'labssite.labs',
     'anthill.people',
     'anthill.projects',
     'anthill.events',

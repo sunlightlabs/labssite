@@ -26,15 +26,15 @@ urlpatterns = patterns('',
     # contests
     url(r'^contests/', include('appcontest.urls')),
     url(r'^aa2judging/submit/$', 'simplesurvey.views.submit', name='appjudging_submit'),
-    url(r'^aa2judging/$', 'sunlightlabs.labs.views.aa2_judging', name='aa2_judging'),
+    url(r'^aa2judging/$', 'labssite.labs.views.aa2_judging', name='aa2_judging'),
 
     # blog/blogdor
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="blogdor_feeds"),
-    url(r'^blog/$', 'sunlightlabs.labs.views.blog_wrapper'),
+    url(r'^blog/$', 'labssite.labs.views.blog_wrapper'),
     url(r'^blog/', include('blogdor.urls')),
 
     # contact-form
-    url(r'^contact/sent/$', 'sunlightlabs.labs.views.contact_sent', {"form_class": LabsContactForm}),
+    url(r'^contact/sent/$', 'labssite.labs.views.contact_sent', {"form_class": LabsContactForm}),
     url(r'^contact/', include('contact_form.urls'), {"form_class": LabsContactForm, "fail_silently": False}),
 
     url(r'^newsfeed/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': news_feed}, name="newsfeed_feeds"),
