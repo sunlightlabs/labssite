@@ -6,6 +6,29 @@
 {% endblock %}
 
 {% block content %}
+{% ifequal idea.moderation_object.moderation_status -1 %}
+
+<div id="ideas" class="module">
+    <div class="contentHeader">
+        <h2 class="ideas">Idea Removed</h2>
+    </div>
+    <div class="module">
+        <p>
+        This idea has been removed, we should have some copy here explaining what our moderation procedures are.
+
+        <dl class="moderationMetadata">
+            <dt>Removed by</dt>
+            <dd>{% display_name idea.moderation_object.moderation_status_by %}</a></dd>
+            <dt>Date</dt>
+            <dd>{{idea.moderation_object.moderation_status_date|date}}</dd>
+            <dt>Reason</dt>
+            <dd>{{idea.moderation_object.moderation_reason}}</dd>
+        </dl>
+        </p>
+    </div>
+</div>
+
+{% else %}
 <div id="ideas" class="module">
     <div class="contentHeader">
         <h2 class="ideas">{{idea.title}}</h2>
@@ -48,4 +71,5 @@
         {% endwith %}
     </div>
 </div>
+{% endifequal %}
 {% endblock %}
