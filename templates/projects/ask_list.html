@@ -1,6 +1,10 @@
 {% extends "brainstorm/base.html" %}
 {% load people %}
 
+{% block extrahead %}
+<link rel="alternate" type="application/rss+xml" title="Latest Project Asks"  href="/projects/feeds/asks/" />
+{% endblock %}
+
 {% block title %}
 Sunlight Labs: Project Asks
 {% endblock title %}
@@ -10,6 +14,7 @@ Sunlight Labs: Project Asks
 
     <div class="contentHeader">
         <h2>All Requests For Help</h2>
+        <a class="tip rss" href="/projects/feeds/asks/">Subscirbe to this feed</a>
     </div>
 
     <div class="module">
