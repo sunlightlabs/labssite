@@ -117,7 +117,7 @@
 {% block sidebar %}
 <h3 class="space">{% possessive p_user %} Location</h3>
 <div id="user_map" class="module">
-    {% if p_user.profile.location %}
+    {% if p_user.profile.lat_long %}
         <img src="{% static_google_map p_user.profile 198 210 %}" />
         <div id="map_label">{{p_user.profile.location|default:"n/a"}}</div>
     {% else %}
