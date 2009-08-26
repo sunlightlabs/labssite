@@ -17,6 +17,19 @@ Sunlight Labs: {% if official %} Official {% endif %} Projects
     <div class="clear"></div>
 </div>
 <div id="projects" class="module">
+    <div id="projectNav" class="projectList_nav">
+        <ul>
+            <li id="allProjects">
+                <a class="active" href="#">All Projects</a>
+            </li>  
+            <li id="labsProjects">
+                <a href="#">Labs Projects</a>
+            </li>  
+            <li id="communityProjects">
+                <a href="#">Community Projects</a>
+            </li>
+        </ul>    
+    </div>
     {% for project in project_list %}
         {% include "projects/project_summary.html" %}
     {% endfor %}

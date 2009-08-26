@@ -13,6 +13,19 @@ Sunlight Labs: Projects &amp; Ideas
 </div>
 <div id="projects" class="module">
     <p class="tip">These are active projects that are currently being worked on in the labs community. <strong><br/> Feel free to help</strong> on a project you're interested in or just <strong>keep your eye out for the final product</strong>.</p>
+    <div id="projectNav">
+        <ul>
+            <li id="allProjects">
+                <a class="active" href="#">All Projects</a>
+            </li>  
+            <li id="labsProjects">
+                <a href="#">Labs Projects</a>
+            </li>  
+            <li id="communityProjects">
+                <a href="#">Community Projects</a>
+            </li>
+        </ul>    
+    </div>
     {% for project in projects %}
         {% include "projects/project_summary.html" %}
     {% endfor %}

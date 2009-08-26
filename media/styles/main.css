@@ -178,9 +178,9 @@ strong { font-weight: bold;}
 
 div.idea, div.project, dd.endEvent_list{ margin-bottom: 20px; background: url(../images/line_space2.png) left bottom no-repeat; padding-bottom: 30px; }
 
-div#process ol span { font-size: 50%; font-weight: normal; text-transform: uppercase; color: #1f1313;}
+div#process ol span, ol#helpList span { font-size: 50%; font-weight: normal; text-transform: uppercase; color: #1f1313;}
 li.hentry a.entry-title{ margin-bottom: 10px; display: block; font-size: 140%;}
-div#process ol p { font-size: 35%; font-weight: normal; color: #4f4d4d;}
+div#process ol p, ol#helpList p { font-size: 35%; font-weight: normal; color: #4f4d4d;}
 address.vcard { font-style: oblique; font-size: 95%;}
 ol#app_list p.metaSubmitted { margin-top: 10px; font-style: oblique; line-height: 15px; color: #808285; font-size: 95%;}
 
@@ -194,7 +194,7 @@ div#ltColumn ol#app_list li { margin-bottom: 30px;}
 
 ol, div.ideaContent ol, div.projectContent ol, div#eventDetails ol, div#event_howtohold ol { list-style-type: decimal; padding-left: 40px;}
 div.ideaContent ol li, div.projectContent ol li, div#eventDetails ol li, div#event_howtohold ol li { margin-bottom: 5px;}
-div#rtColumn ol#processList, ol#joinProject_list { color: #184259; font-size: 300%; font-weight: bold;}
+div#rtColumn ol#processList, ol#joinProject_list, div#rtColumn ol#helpList { color: #184259; font-size: 300%; font-weight: bold;}
 ol li{ margin-bottom: 20px;}
 
 ol#joinProject_list { margin-top: 20px;}
@@ -204,6 +204,12 @@ div#projectJoin button.joinBtn { margin-left: 40px;}
 
 span#mess{ background: url(../images/image_mess.png) right bottom no-repeat; padding-right:50px; padding-top:10px;}
 span#ideas{ background: url(../images/image_light.png) right top no-repeat; padding:5px 30px 0 0;}
+
+ol#helpList span { display: block; margin-bottom: 3px; }
+span#create{ background: url(../images/iconSm_people.png) right bottom no-repeat; padding-right:50px; padding-top:10px; width: 60px;}
+span#find{ background: url(../images/iconSm_project.png) right bottom no-repeat; padding-right:50px; padding-top:10px; width: 40px;}
+span#fill{ background: url(../images/iconSm_fill.png) right bottom no-repeat; padding-right:50px; padding-top:10px; width: 35px;}
+span#contribute{ background: url(../images/iconSm_contribute.png) right bottom no-repeat; padding-right:50px; padding-top:10px; width: 100px;}
 
 hr{ background: url(../images/rtmodule_bar.png) bottom left no-repeat; border: none; height: 10px; margin-left:9px; margin-bottom: 30px;}
 
@@ -390,14 +396,24 @@ li#signin_yahoo a.active{ background: url(../images/yahoo_signin.png) bottom lef
 
 div#app dt{ font-size: 110%; font-weight: bold; margin: 15px 0 5px 0;}
 
-div#ideaNav ul li { width: 103px; height: 45px; margin-bottom: 30px;}
-div#ideaNav ul li a { text-indent: -9999em; display: block; width: 103px; height: 45px;}
+div#ideaNav, div#projectNav { padding-top: 15px; margin-bottom: 45px; height: 65px;}
+div#ltColumn div.projectList_nav { padding-top: 40px;}
+div#ideaNav ul, div#projectNav ul { background: url(../images/nav_secondBg.png) top left no-repeat;height: 65px; }
+div#ideaNav ul li, div#projectNav ul li { width: 103px; height: 45px; padding-top: 10px; float: left; padding-left: 10px;}
+div#ideaNav ul li a, div#projectNav ul li a { text-indent: -9999em; display: block; width: 103px; height: 45px;}
 li#nav_recent a {  background: url(../images/mostRecent.png) top left no-repeat;}
-li#nav_popular a { background: url(../images/mostPopular.png) top left no-repeat;}
-li#nav_recent a.active {  background: url(../images/mostRecent.png) bottom left no-repeat;}
-li#nav_popular a.active { background: url(../images/mostPopular.png) bottom left no-repeat;}
-li#nav_popular { float: left;}
-li#nav_recent { margin-left: 130px;}
+li#nav_popular a { background: url(../images/mostPopular.png) top left no-repeat; }
+li#nav_recent a.active, li#nav_recent a:hover {  background: url(../images/mostRecent.png) bottom left no-repeat;}
+li#nav_popular a.active, li#nav_popular a:hover { background: url(../images/mostPopular.png) bottom left no-repeat;}
+li#nav_popular, div#projectNav ul li  { float: left;}
+
+li#allProjects a {  background: url(../images/nav_allProjects.png) top left no-repeat;}
+li#allProjects a.active, li#allProjects a:hover {  background: url(../images/nav_allProjects.png) bottom left no-repeat;}
+li#labsProjects a {  background: url(../images/nav_labsProjects.png) top left no-repeat;}
+li#labsProjects a.active, li#labsProjects a:hover {  background: url(../images/nav_labsProjects.png) bottom left no-repeat;}
+li#communityProjects a {  background: url(../images/nav_communityProjects.png) top left no-repeat;}
+li#communityProjects a.active, li#communityProjects a:hover {  background: url(../images/nav_communityProjects.png) bottom left no-repeat;}
+
 
 li.documentation_link a{ background: url(../images/iconSm_documentation.png) top left no-repeat; height: 20px; padding: 3px 0 2px 30px;}
 li.website_link a{ background: url(../images/iconSm_url.png) top left no-repeat; height: 20px; padding: 3px 0 2px 30px;}
