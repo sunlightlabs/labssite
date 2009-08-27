@@ -653,6 +653,7 @@ div#ltColumn div.module input.checkbox { width: 15px;}
 div#currentAsks button{ background: url(../images/btn_delete.png) left 4px no-repeat; display: block; float: left; height: 15px; padding-right: 20px; text-indent: -9999em; width: 11px; margin-top: 0px;}
 div#currentAsks p { float: left; width: 180px;}
 div#currentAsks li { margin-bottom: 20px;}
+h2#helpHeader { float: left; margin-right: 25px; padding-top: 3px; }
 
 div#ltColumn h3#favoriteFinalists { margin-top: 30px;}
 div#join_project li { margin-bottom: 10px;}

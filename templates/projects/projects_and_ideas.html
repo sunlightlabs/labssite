@@ -12,24 +12,24 @@ Sunlight Labs: Projects &amp; Ideas
     <div class="clear"></div>
 </div>
 <div id="projects" class="module">
-    <p class="tip">These are active projects that are currently being worked on in the labs community. <strong><br/> Feel free to help</strong> on a project you're interested in or just <strong>keep your eye out for the final product</strong>.</p>
+    <p class="tip">These are active projects that are currently being worked on in the labs community. <strong><br/> <a href="{% url all_project_asks %}">Feel free to help</a></strong> on a project you're interested in or just <strong>keep your eye out for the final product</strong>.</p>
     <div id="projectNav">
         <ul>
             <li id="allProjects">
-                <a class="active" href="#">All Projects</a>
+                <a class="active" href="{% url all_projects %}">All Projects</a>
             </li>  
             <li id="labsProjects">
-                <a href="#">Labs Projects</a>
+                <a href="{% url official_projects %}">Labs Projects</a>
             </li>  
             <li id="communityProjects">
-                <a href="#">Community Projects</a>
+                <a href="{% url community_projects %}">Community Projects</a>
             </li>
-        </ul>    
+        </ul>
     </div>
     {% for project in projects %}
         {% include "projects/project_summary.html" %}
     {% endfor %}
-    <p class="arrow"><a class ="viewAll" href="{% url projects_archive %}">View All</a></p>
+    <p class="arrow"><a class ="viewAll" href="{% url all_projects %}">View All</a></p>
 </div>
 
 <div class="contentHeader ideadHeader_wrapper">

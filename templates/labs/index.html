@@ -46,15 +46,15 @@
     <ol id="helpList">
         <li>
             <span id="create">Create</span>
-            <p>an <a href="/accounts/register/">Account</a></p>
+            <p>an <a href="{% url openid-register %}">Account</a></p>
         </li>
         <li>
             <span id="find">Find</span>
-            <p>a <a href="/projects">Project</a></p>
+            <p>a <a href="{% url all_projects %}">Project</a></p>
         </li>
         <li>
             <span id="fill">Fill</span>
-            <p>a <a href="/projects/needs">need</a></p>
+            <p>a <a href="{% url all_project_asks %}">need</a></p>
         </li>
         <li>
             <span id="contribute">Contribute</span>
