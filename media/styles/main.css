@@ -251,10 +251,11 @@ div#footerMain_top{ background: url(../images/footer_mainBottom.png) bottom cent
 div#footerMain{ background: url(../images/footer_mainTop.png) top center no-repeat; width: 960px; margin: 0 auto; height: 242px; padding-top: 130px;}
 div#footerWrapper{ background: url(../images/footer_repeat2.png) bottom center repeat-x; height: 372px;}
 
-div#footerMain h4 { text-indent: -9999em; display: block; height: 19px; margin-bottom: 20px;}
-h4#labsTwitter_header { background: url(../images/footer_followLabs.png) top left no-repeat; width: 328px;}
+div#footerMain h4 { height: 19px; margin-bottom: 20px;}
+div#footerMain h4 a { text-indent: -9999em; display: block;}
+h4#labsTwitter_header a{ background: url(../images/footer_followLabs.png) top left no-repeat; width: 328px;}
 h4#labsEvents_header { width: 113px; height: 19px;}
-h4#labsEvents_header a{ background: url(../images/footer_trackUsDown.png) top left no-repeat; width: 113px; text-indent: -9999em; display: block; height: 19px; margin-bottom: 20px;}
+h4#labsEvents_header a{ background: url(../images/footer_trackUsDown.png) top left no-repeat; width: 113px;}
 div#labsEvents { float: left; width: 305px; padding-left: 160px; padding-right: 15px; height: 170px; margin-bottom: 20px;}
 div#labsEvents li a, div#labsTwitter a{ color: #d8ddd3; }
 div#labsEvents li { margin-bottom: 5px;}
