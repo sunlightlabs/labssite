@@ -149,6 +149,8 @@ LOGIN_REDIRECT_URL = '/'
 
 ANTHILL_DEFAULT_MARKUP = 'markdown'
 
+BLOGDOR_AUTHOR_GROUP = 'Bloggers'
+
 try:
     from local_settings import *
 except ImportError, exp:
