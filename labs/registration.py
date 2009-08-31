@@ -57,7 +57,7 @@ class CustomRegistrationConsumer(RegistrationConsumer):
 
     def show_error(self, request, message, exception=None):
         self.do_logout(request)
-        super(CustomRegistrationConsumer, self).show_error(self, request, message, exception)
+        super(CustomRegistrationConsumer, self).show_error(request, message, exception)
 
 
 
