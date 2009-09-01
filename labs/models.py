@@ -52,7 +52,7 @@ def project_callback(sender, instance, created, **kwargs):
         Feed.objects.create(slug=instance.slug, title=instance.name)
 
         # assign badge to lead
-        award_badge(instance.lead, 'project-lead')
+        award_badge(instance.lead, 'lead-project')
 
 post_save.connect(project_callback, sender=Project)
 
