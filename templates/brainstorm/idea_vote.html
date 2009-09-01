@@ -1,5 +1,5 @@
 {% if not user.is_authenticated %}
-    <div class="noVoteBox">
+    <div class="voteBox noVoteBox">
 {% else %}
 {% if not idea.user_vote %}
     <div class="voteBox">
@@ -16,11 +16,11 @@
             <input type="hidden" name="idea" value="{{idea.id}}" />
             <input type="hidden" name="score" value="0" />
             <button type="submit" class="voteBtn">
-                <span class="vote_link">Voted</span>
+                <span class="vote_link">Unvote</span>
             </button>
         </form>
 {% endif %}
 {% endif %}
-<span class="voteTotal">{{idea.score}} Vote{{idea.score|pluralize}}</span>
+<span class="voteTotal"><strong>{{idea.score}}</strong> Vote{{idea.score|pluralize}}</span>
     </div>
 
