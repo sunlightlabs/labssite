@@ -26,6 +26,11 @@ $(function() {
                 // update # of votes
                 data = eval( '(' + data + ')' );
                 form.siblings('.voteTotal').text(data.score + ' Votes');
+                if($('.vote_link').text() == 'Vote') {
+                    $('.vote_link').text('Voted');
+                } else {
+                    $('.vote_link').text('Vote');
+                }
             }
             });
     });
