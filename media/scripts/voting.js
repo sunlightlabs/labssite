@@ -26,10 +26,13 @@ $(function() {
                 // update # of votes
                 data = eval( '(' + data + ')' );
                 form.siblings('.voteTotal').text(data.score + ' Votes');
-                if($('.vote_link').text() == 'Vote') {
-                    $('.vote_link').text('Voted');
+
+                var span = form.find('.vote_link');
+                //console.log(span);
+                if(span.text() == 'Vote') {
+                    span.text('Unvote');
                 } else {
-                    $('.vote_link').text('Vote');
+                    span.text('Vote');
                 }
             }
             });
