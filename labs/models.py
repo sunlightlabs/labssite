@@ -6,6 +6,7 @@ from newsfeed.models import Feed
 from anthill.events.models import Event
 from anthill.projects.models import Project
 from brainstorm.models import Idea
+from meritbadges.models import award_badge
 import gatekeeper
 import popular
 
@@ -49,6 +50,10 @@ def project_callback(sender, instance, created, **kwargs):
                           body=unicode(instance),
                           link=instance.get_absolute_url())
         Feed.objects.create(slug=instance.slug, title=instance.name)
+
+        # assign badge to lead
+        award_badge(instance.lead, 'project-lead')
+
 post_save.connect(project_callback, sender=Project)
 
 def user_callback(sender, instance, created, **kwargs):
