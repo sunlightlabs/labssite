@@ -15,7 +15,7 @@ body{
 	color:#4f4d4d;
 	background: url(../images/bg_grid.jpg) top left repeat;
 	font-size: 76%;
-  	line-height: 20px;
+  	line-height: 21px;
   	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -198,6 +198,7 @@ ol, div.ideaContent ol, div.projectContent ol, div#eventDetails ol, div#event_ho
 div.ideaContent ol li, div.projectContent ol li, div#eventDetails ol li, div#event_howtohold ol li { margin-bottom: 5px;}
 div#rtColumn ol#processList, ol#joinProject_list, div#rtColumn ol#helpList { color: #184259; font-size: 300%; font-weight: bold;}
 ol li{ margin-bottom: 20px;}
+div#ltColumn ol, div#ltColumn ul { padding-right: 30px;}
 
 ol#joinProject_list { margin-top: 20px;}
 ol#joinProject_list p { color: #4F4D4D; font-size: 35%; font-weight: normal;}
@@ -228,8 +229,10 @@ div#subscribe input{ float: left; display: block; margin-right: 10px;}
 div#subscribe { width: 300px; margin-bottom: 20px;}
 div#subscribe label { font-style: oblique; padding-top: 1px; display: block;}
 
-ol#comments span.commentMetaAuthor { font-size: 130%; margin-right: 10px; }
-ol#comments span.commentMetaDate { font-size: 90%; color: #808285;}
+ol#comments span.commentMetaAuthor { font-size: 130%; margin-right: 10px; display: block; padding-bottom: 5px; float: left;}
+ol#comments span.commentMetaDate { font-size: 90%; color: #808285; display: block; padding: 2px 0 5px;}
+ol#comments li { margin-bottom: 25px;}
+ol#comments p { color: #656464;}
 
 div#ltColumn div.module h3.h3tip { margin-bottom: 5px; margin-top: 35px; }
 
@@ -255,7 +258,7 @@ div#footerWrapper{ background: url(../images/footer_repeat2.png) bottom center r
 
 div#footerMain h4 { height: 19px; margin-bottom: 20px;}
 div#footerMain h4 a { text-indent: -9999em; display: block;}
-h4#labsTwitter_header a{ background: url(../images/footer_followLabs.png) top left no-repeat; width: 328px;}
+h4#labsTwitter_header a{ background: url(../images/footer_followLabs.png) top left no-repeat; width: 330px;}
 h4#labsEvents_header { width: 113px; height: 19px;}
 h4#labsEvents_header a{ background: url(../images/footer_trackUsDown.png) top left no-repeat; width: 113px;}
 div#labsEvents { float: left; width: 305px; padding-left: 160px; padding-right: 15px; height: 170px; margin-bottom: 20px;}
@@ -299,7 +302,8 @@ div#leadProjects { margin-bottom: 20px;}
 div#ltColumn div.smPost p { padding-right: 10px; margin-bottom: 15px;}
 div#ltColumn div.smPost { margin-bottom: 15px; padding-bottom: 15px;}
 div#ltColumn div.smPost img, div.post img, div#blog_detail img { border: 3px solid #BFC8BA; margin: 5px 0;}
-div#ltColumn div.smPost h3, div#ltColumn div.post h3, div#ltColumn div#blog_detail h3, div#projects h3, div#ideas h3 { margin-bottom: 0;}
+div#ltColumn div.smPost h3, div#ltColumn div.post h3, div#projects h3, div#ideas h3 { margin-bottom: 0;}
+div#ltColumn div#blog_detail h3, div#ltColumn div.entry-summary h3, div#ltColumn div#blog_detail ul, div#ltColumn div.entry-summary ul, div#ltColumn div#blog_detail ol, div#ltColumn div.entry-summary ol, div#ltColumn div#blog_detail ol li, div#ltColumn div.entry-summary ol li{ margin-bottom: 15px;}
 div.smPost img{ max-width: 285px; }
 
 div#ltColumn div#commentBox h3#blogH3 { margin-bottom: 15px;}
@@ -334,8 +338,8 @@ div#tags li { float: left; margin-right: 10px; font-style: oblique;}
 div#blog_detail img, div.entry-summary img{ border: 3px solid #bfc8ba; margin-bottom: 20px;}
 div#blog_detail img.fullimage, div.entry-summary img.fullimage { margin: 0 auto 20px; display: block; }
 div#blog_detail img.detailimage, div.entry-summary img.detailimage{ float: left; margin-right: 20px;}
-div#blog_detail ul, div.ideaContent ul, div.projectContent ul, div#eventDetails ul, div#event_howtohold ul, div#projectDescription ul, div#apps_content ul { list-style-type: disc; padding-left:40px;}
-div#blog_detail ul li, div.ideaContent ul li, div.projectContent ul li, div#eventDetails ul li, div#event_howtohold ul li, div#projectDescription ul li, div#apps_content ul li { margin-bottom: 5px;}
+div#blog_detail ul, div.ideaContent ul, div.projectContent ul, div#eventDetails ul, div#event_howtohold ul, div#projectDescription ul, div#apps_content ul, body.about div#ltColumn ul { list-style-type: disc; padding-left:40px;}
+div#blog_detail ul li, div.ideaContent ul li, div.projectContent ul li, div#eventDetails ul li, div#event_howtohold ul li, div#projectDescription ul li, div#apps_content ul li, body.about div#ltColumn ul li { margin-bottom: 15px;}
 
 textarea#id_message { width: 600px;}
 
@@ -344,7 +348,7 @@ a#nextMonth { text-align: right; display: block; padding-right: 25px;}
 a#previousMonth { padding-left: 10px; float: left;}
 
 div.pagination { padding-right: 15px; text-align: center;}
-div.pagination a { margin-right: 3px;}
+div.pagination a, div.pagination span { margin-right: 3px;}
 
 ul#blogCategories { font-size: 110%; line-height: 30px;}
 span.category{ float: left;}
