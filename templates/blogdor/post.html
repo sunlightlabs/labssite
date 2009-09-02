@@ -10,7 +10,7 @@
 		</dd>
 
         <dt>Date</dt>
-        <dd><abbr class="published" title="{{ post.date_published.isoformat }}">{{post.date_published|date}}</abbr></dd>
+        <dd><abbr class="published" title="{{ post.date_published.isoformat }}">{{post.date_published|date:"m/d/Y P"}}</abbr></dd>
     </dl>
     <div class="entry-summary">{{post.excerpt}}</div>
     <p class="continueLink"><a rel="bookmark" href="{{post.get_absolute_url}}">Continue Reading</a></p>
