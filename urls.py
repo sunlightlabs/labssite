@@ -22,6 +22,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^comments/', include('django.contrib.comments.urls')),
+    url(r'^images/(?P<image_path>.*)$', 'labssite.labs.views.image_wrapper', name="image_wrapper"),
 
     # contests
     url(r'^contests/', include('appcontest.urls')),
