@@ -4,7 +4,7 @@ from feedinator.models import FeedEntry
 from blogdor.models import Post
 from newsfeed.models import Feed
 from anthill.events.models import Event
-from anthill.projects.models import Project
+from anthill.projects.models import Project, Role
 from anthill.people.signals import message_sent
 from brainstorm.models import Idea
 from meritbadges.models import award_badge
@@ -70,3 +70,11 @@ def message_callback(sender, **kwargs):
                       body=recipient.first_name or recipient.username,
                       link=recipient.get_absolute_url())
 message_sent.connect(message_callback)
+
+
+def role_callback(sender, instance, created, **kwargs):
+    if created:
+        feed.items.create(user=instance.user, item_type='role',
+                          body=unicode(instance.project),
+                          link=instance.project.get_absolute_url())
+post_save.connect(role_callback, sender=Role)
