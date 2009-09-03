@@ -1,0 +1,5 @@
+{{object.title}}
+
+{{object.description}}
+
+Submitted by: {{object.user}}

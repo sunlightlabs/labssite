@@ -15,11 +15,11 @@
         </ul>
 
         {% if page.object_list %}
+            <ul class="searchResults">
             {% for result in page.object_list %}
-                <ul class="searchResults">
-                    <li class="{{result.model_name}}"><a href="{{result.object.get_absolute_url}}">{{ result.object }}</a></li>
-                </ul>
+                <li class="{{result.model_name}}"><a href="{{result.object.get_absolute_url}}">{{ result.object }}</a></li>
             {% endfor %}
+            </ul>
         {% else %}
             <p>No results found.</p>
         {% endif %}
