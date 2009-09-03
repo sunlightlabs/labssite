@@ -1,5 +1,6 @@
 from django.db.models.signals import post_save
 from django.contrib.auth.models import User
+from django.contrib.comments.models import Comment
 from feedinator.models import FeedEntry
 from blogdor.models import Post
 from newsfeed.models import Feed
@@ -86,3 +87,11 @@ def ask_callback(sender, instance, created, **kwargs):
                           body=unicode(instance.project),
                           link=instance.project.get_absolute_url())
 post_save.connect(ask_callback, sender=Ask)
+
+
+def comment_callback(sender, instance, created, **kwargs):
+    if created and instance.user:
+        feed.items.create(user=instance.user, item_type='comment',
+                          body=unicode(instance.content_object),
+                          link=instance.content_object.get_absolute_url())
+post_save.connect(comment_callback, sender=Comment)
