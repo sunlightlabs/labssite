@@ -9,11 +9,13 @@ pygments
 feedparser
 -e svn+http://geopy.googlecode.com/svn/trunk/#egg=geopy   # PyPI link is broken
 python-googleanalytics
+Whoosh
 
 # third party apps
 django-tagging==0.3
 -e git://github.com/robhudson/django-debug-toolbar.git#egg=django-debug-toolbar
 -e hg+http://bitbucket.org/ubernostrum/django-contact-form/#egg=django-contact-form
+-e git://github.com/toastdriven/django-haystack.git#egg=django-haystack
 -e git://github.com/jamesturk/django-openid.git#egg=django-openid       # a fork of simonw's work
 -e git://github.com/jamesturk/django-markupfield.git#egg=django-markupfield
 

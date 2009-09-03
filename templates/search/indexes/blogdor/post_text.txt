@@ -1,0 +1,7 @@
+{{object.title}}
+
+Written by {{object.user.first_name}} 
+
+{{object.content}}
+
+Tagged: {{object.tags}}

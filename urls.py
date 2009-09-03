@@ -21,6 +21,8 @@ urlpatterns = patterns('',
     url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
+    url(r'^search/', include('haystack.urls')),
+
     url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^images/(?P<image_path>.*)$', 'labssite.labs.views.image_wrapper', name="image_wrapper"),
 

@@ -1,0 +1,6 @@
+{{object.name}}
+
+{{object.description}}
+
+Led by: {{object.lead}}
+Tagged: {{object.tags}}

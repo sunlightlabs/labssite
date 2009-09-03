@@ -81,6 +81,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'debug_toolbar',
     'django_openid',
+    'haystack',
     'tagging',
     'mediasync',
     'feedinator',
@@ -150,6 +151,10 @@ LOGIN_REDIRECT_URL = '/'
 ANTHILL_DEFAULT_MARKUP = 'markdown'
 
 BLOGDOR_AUTHOR_GROUP = 'Bloggers'
+
+HAYSTACK_SITECONF = 'labs.search_sites'
+HAYSTACK_SEARCH_ENGINE = 'whoosh'
+HAYSTACK_WHOOSH_PATH = 'whoosh_index'
 
 try:
     from local_settings import *
