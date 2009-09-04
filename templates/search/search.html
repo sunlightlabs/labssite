@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 
+{% block title %}
+Sunlight Labs Search
+{% endblock %}
+
 {% block content %}
 <div class="contentHeader">
     <h2>Search</h2>
-</div>    
+</div>
 <div id="siteSearchContent" class="module">
+
     <a id="advancedBtn" href="#">Advanced Search</a>
     <form id="siteSearch" method="get" action=".">
         {{form.q}}
@@ -20,14 +25,17 @@
         </div>
     </form>
 
-    {% if page.object_list %}
+{% if page.object_list %}
+    <h3>{{paginator.count}} results for "{{query}}"</h3>
     <ul class="searchResults">
     {% for result in page.object_list %}
         <li class="{{result.model_name}}"><a href="{{result.object.get_absolute_url}}">{{ result.object }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
+    {% if query %}
     <p>No results found.</p>
+    {% endif %}
 {% endif %}
 </div>
 
