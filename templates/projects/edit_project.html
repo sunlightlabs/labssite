@@ -5,7 +5,20 @@ Sunlight Labs: Edit Project
 {% endblock title %}
 
 {% block extrahead %} 
-    {% include "projects/tags_js.html" %}
+{% include "projects/tags_js.html" %}
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('textarea[maxlength]').keyup(function(){
+        var max = parseInt($(this).attr('maxlength'));
+        if($(this).val().length > max){
+            $(this).val($(this).val().substr(0, $(this).attr('maxlength')));
+        }
+        $(this).parent().find('.charsRemaining').html((max - $(this).val().length) + ' characters remaining');
+    });
+});
+
+</script>
 {% endblock %}
 
 {% block content %}
@@ -120,7 +133,8 @@ Sunlight Labs: Edit Project
 <div class="module">
     <p class="tip">Let the community know what you need from them to make your project great.</p>
     <form method="POST" action="{% url new_project_ask project.slug %}">
-       <textarea id="helpMessage" rows="5" cols="32" name="message"></textarea>
+        <textarea id="helpMessage" rows="5" cols="32" name="message" maxlength="200"></textarea>
+        <p class="charsRemaining">200 characters remaining</p>
        <button type="submit" class="submitBtn" name="post">
             <span>Submit</span>
        </button>
