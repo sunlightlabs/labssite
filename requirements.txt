@@ -31,4 +31,3 @@ django-tagging==0.3
 
 # site-specific apps
 -e git://github.com/sunlightlabs/labssite-apps.git#egg=labssite-apps
-
