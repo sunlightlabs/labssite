@@ -7,27 +7,29 @@
 <div id="siteSearchContent" class="module">
     <a id="advancedBtn" href="#">Advanced Search</a>
     <form method="get" action=".">
-        <ul>
-            {{ form.as_ul }}
-            <tr>
-                <td>&nbsp;</td>
-                <td>
-                    <button class="searchBtn" type="submit" value="Search">
-                        <span>Search</spam>
-                    </button>    
-                </td>
-            </tr>
-        </ul>
-
-        {% if page.object_list %}
-            <ul class="searchResults">
-            {% for result in page.object_list %}
-                <li class="{{result.model_name}}"><a href="{{result.object.get_absolute_url}}">{{ result.object }}</a></li>
-            {% endfor %}
-            </ul>
-        {% else %}
-            <p>No results found.</p>
-        {% endif %}
+        {{form.q}}
+        <button class="searchBtn" type="submit" value="Search">
+            <span>Search</spam>
+        </button>
+        <div id="advancedSearch">
+            <label>Models:</label>
+            {{ form.models }}
+            <button class="searchBtn" type="submit" value="Search">
+                <span>Search</spam>
+            </button>
+        </div>
     </form>
-</div>    
+
+    {% if page.object_list %}
+    <ul class="searchResults">
+    {% for result in page.object_list %}
+        <li class="{{result.model_name}}"><a href="{{result.object.get_absolute_url}}">{{ result.object }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No results found.</p>
+{% endif %}
+</div>
+
+
 {% endblock %}
