@@ -8,8 +8,9 @@ $(document).ready(function(){
         $("div#leadBox").toggle("slow");
     });
 
-    $("a#advancedBtn").click(function(){
+    $("a#advancedBtn").click(function(event){
         $("div#advancedSearch").toggle("slow");
+        event.preventDefault();
     });
 
     make_toggle = function(pairs) {
