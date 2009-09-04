@@ -55,12 +55,13 @@
                             {% endif %}
                         </ul>
                         <div id="searchBox">
+                            <form method="GET" action="/search/">
                             <button class="siteSearchBtn" type="submit">
                                 <span>Search</span>
                             </button>
-                            <input id="siteSearch_box" type="text"/>
-                              
-                        </div>    
+                            <input id="siteSearch_box" type="text" name="q" />
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div id="mainContent">
