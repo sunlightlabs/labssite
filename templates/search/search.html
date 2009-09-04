@@ -26,7 +26,8 @@ Sunlight Labs Search
     </form>
 
 {% if page.object_list %}
-    <h3>{{paginator.count}} results for "{{query}}"</h3>
+<div id="siteSearch">
+    <h3>{{paginator.count}} Results For &#8220;{{query}}&#8221;</h3>
     <ul class="searchResults">
     {% for result in page.object_list %}
         <li class="{{result.model_name}}"><a href="{{result.object.get_absolute_url}}">{{ result.object }}</a></li>
@@ -36,6 +37,7 @@ Sunlight Labs Search
     {% if query %}
     <p>No results found.</p>
     {% endif %}
+</div>
 {% endif %}
 </div>
 

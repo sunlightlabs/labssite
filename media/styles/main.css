@@ -42,7 +42,12 @@ div#ltColumn div#alertBox h3{ margin: 0; font-size: 165%;}
 
 div#nav{ background: url(../images/nav_bg.png) bottom right no-repeat; width: 615px; height: 65px; float: right; margin-top: 50px;}
 div#pageNav li{ float: left; margin-right: 15px;}
-div#pageNav{ padding-bottom: 15px; width: 960px; height: 20px; padding-left: 5px; font-size:110%; font-weight:bold;}
+div#pageNav{ padding-bottom: 15px; width: 960px; height: 35px; padding-left: 5px; font-size:110%; font-weight:bold;}
+div#pageNav ul { float: left; padding-top: 10px;}
+div#searchBox { float: right;}
+input#siteSearch_box, div#searchBox button { float: right;}
+input#siteSearch_box { margin-right: 15px; font-size: 85%; width: 170px; background: rgba(254,254,254,0.5); }
+div#searchBox button { margin-right: 5px;}
 
 body.home div#pageNav{ background: url(../images/banner_home.png) bottom center no-repeat; }
 body.blog div#pageNav{ background: url(../images/banner_blog.png) bottom center no-repeat; }
@@ -56,7 +61,7 @@ body.events div#pageNav{ background: url(../images/banner_events.png) bottom cen
 
 div#ltColumn{ width: 700px; float: left; margin-right: 15px;}
 div#rtColumn{ float: left; width: 245px;}
-div#mainContent {background: url(../images/rtColumn_bg.png) top right repeat-y;  width: 960px; margin-top: -49px; padding-top: 45px;}
+div#mainContent {background: url(../images/rtColumn_bg.png) top right repeat-y;  width: 960px; margin-top: -34px; padding-top: 50px;}
 
 div#rtColumn div.module{ margin-left: 25px; }
 div.module{ padding-left: 5px; margin-bottom: 40px;}
@@ -129,12 +134,13 @@ form#accountForm input, div#signupOptions input, form#contactForm input#id_name,
 select { margin-bottom: 10px;}
 
 input#id_q { float: left; margin-right: 20px;}
-ul.searchResults { margin-top: 25px; margin-bottom: 25px;}
+div#siteSearch, div#events_results { margin-top: 40px; margin-bottom: 25px;}
 form#siteSearch div#advancedSearch label { font-weight: bold; margin-bottom:5px; display: block;}
 form#siteSearch div#advancedSearch li { float: left; margin-right: 35px; padding-top: 8px;}
 form#siteSearch div#advancedSearch ul label { float: none; font-weight: normal;}
 form#siteSearch div#advancedSearch ul input { display: block; margin-right: 8px; float: left;}
-ul.searchResults li { padding-left: 35px; margin-bottom: 15px;}
+ul.searchResults { margin-top: 20px;}
+ul.searchResults li { padding-left: 35px; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #c9d2c9;}
 ul.searchResults li.event { background: url(../images/iconSm_event.png) left -3px no-repeat; }
 ul.searchResults li.post { background: url(../images/iconSm_post.png) left -3px no-repeat;}
 ul.searchResults li.project { background: url(../images/iconSm_project.png) top left no-repeat; padding-top: 3px;}
@@ -502,7 +508,7 @@ div#ltColumn form.nonuser_comment { width: 600px;}
 .errorlist li { font-size: 95%; color: #de4205; font-style: oblique;}
 
 /*table*/
-div#users_results { margin-top: 25px; margin-bottom: 25px;}
+div#users_results { margin-top: 40px; margin-bottom: 25px;}
 table { width: 605px; line-height: 18px; }
 table#users_table, table#events_table { width: 620px;}
 table#users_table tbody td, table#events_table tbody td { padding-top:5px; padding-bottom:5px;}
@@ -573,6 +579,7 @@ a#joinBtn { background: url(../images/btn_joinus.png) right bottom no-repeat; wi
 a#contactBtn { background: url(../images/btn_contact.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
 button.joinBtn { background: url(../images/btn_join.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
 button#voteBtn { background: url(../images/btn_vote.png) right bottom no-repeat; width: 113px; margin-top: 20px; }
+button.siteSearchBtn { background: url(../images/btn_siteSearch.png) right bottom no-repeat; width: 94px; height: 25px; margin-top: 1px;}
 
 form#joinProjectForm button.signupBtn { margin-left: 120px;}
 button.signupBtn { background: url(../images/btn_joinus_sm.png) right bottom no-repeat; width: 113px; margin-left: 200px; margin-top: 20px;}

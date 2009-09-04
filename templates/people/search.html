@@ -51,7 +51,7 @@
 
 {% if searched %}
     <div id="users_results" class="module">
-        <h3>{{search_results|length}} Results {% if search_results.geocoded_location %} near {{search_results.geocoded_location }} {% endif %}</h3>
+        <h3>{{search_results|length}} Results {% if search_results.geocoded_location %} Near {{search_results.geocoded_location }} {% endif %}</h3>
 
         {# i'm quite sorry for this hack to get around the lack of < -james #}
         {% if search_results.10 %}
