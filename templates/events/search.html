@@ -37,8 +37,8 @@
     </form>
 
 {% if searched %}
-
-<h3>{{search_results|length}} Events Found {% if search_results.geocoded_location %} near {{search_results.geocoded_location }} {% endif %}</h3>
+<div id="events_results">
+<h3>{{search_results|length}} Events Found {% if search_results.geocoded_location %} Near {{search_results.geocoded_location }} {% endif %}</h3>
     <table id="events_table">
         <thead>
             <tr id="titles">
@@ -59,7 +59,7 @@
             {% endfor %}
         </tbody>
     </table>
-
+</div>
 {% endif %}
 </div>
 
