@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load newsfeed_tags %}
 
 {% block title %}
 Sunlight Labs Search
@@ -14,19 +15,18 @@ Sunlight Labs Search
     <form id="siteSearch" method="get" action=".">
         {{form.q}}
         <button class="searchBtn" type="submit" value="Search">
-            <span>Search</spam>
+            <span>Search</span>
         </button>
         <div id="advancedSearch">
-            <label>Models:</label>
             {{ form.models }}
             <button class="searchBtn" type="submit" value="Search">
-                <span>Search</spam>
+                <span>Search</span>
             </button>
         </div>
     </form>
 
-{% if page.object_list %}
 <div id="siteSearch">
+{% if page.object_list %}
     <h3>{{paginator.count}} Results For &#8220;{{query}}&#8221;</h3>
     <ul class="searchResults">
     {% for result in page.object_list %}
@@ -37,9 +37,18 @@ Sunlight Labs Search
     {% if query %}
     <p>No results found.</p>
     {% endif %}
-</div>
 {% endif %}
 </div>
+</div>
 
+{% endblock %}
 
+{% block sidebar %}
+<h3>What's Happening In The Labs Community</h3>
+<div id="timeline" class="module labsHappenings">
+    <a class="tip rss" href="/newsfeed/newsfeed/main/">Subscribe to this feed</a>
+    <ul>
+        {% render_feed "main" 10 %}
+    </ul>
+</div>
 {% endblock %}
