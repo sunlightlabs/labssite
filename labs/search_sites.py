@@ -40,8 +40,3 @@ class EventIndex(indexes.SearchIndex):
         return Event.objects.future()
 site.register(Event, EventIndex)
 
-
-class ProfileIndex(indexes.SearchIndex):
-    text = indexes.CharField(document=True, use_template=True)
-    author = indexes.CharField(model_attr='user')
-site.register(Profile, ProfileIndex)
