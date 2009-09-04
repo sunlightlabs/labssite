@@ -9,13 +9,9 @@ from anthill.projects.models import Project, Role, Ask
 from anthill.people.signals import message_sent
 from brainstorm.models import Idea
 from meritbadges.models import award_badge
-from blogdor.comments import AkismetModerator, BlogdorModerator
 import gatekeeper
 import popular
 
-# Akismet Moderator
-class BlogdorAkismetModerator(AkismetModerator, BlogdorModerator):
-    pass
 
 gatekeeper.register(Idea, auto_moderator=lambda o: True)
 gatekeeper.register(Project, auto_moderator=lambda o: True)

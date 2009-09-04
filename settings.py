@@ -151,7 +151,7 @@ LOGIN_REDIRECT_URL = '/'
 ANTHILL_DEFAULT_MARKUP = 'markdown'
 
 BLOGDOR_AUTHOR_GROUP = 'Bloggers'
-BLOGDOR_MODERATOR = 'labs.models.BlogdorAkismetModerator'
+BLOGDOR_MODERATOR = 'labs.BlogdorAkismetModerator'
 
 HAYSTACK_SITECONF = 'labs.search_sites'
 HAYSTACK_SEARCH_ENGINE = 'whoosh'
