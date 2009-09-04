@@ -1,3 +1,4 @@
 local_settings.py
 run-this.sh
 media/profile_images
+whoosh_index
