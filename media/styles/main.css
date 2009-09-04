@@ -117,10 +117,11 @@ p.continueLink{ margin-top: 15px;}
 p.continueLink a, a.viewAll{ font-size: 110%; color: #3d868d; font-style: oblique; font-weight: bold; background: url(../images/continue_arrow.png) right 4px no-repeat; padding: 2px 20px 2px 0; height: 18px;}
 div#ltColumn p.arrow { float: none; text-align: center; width: 680px; display: block; padding-right: 0px;}
 
-div#searchContent{ background: #f0f0e5; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 20px; margin-left: 5px; border: 1px solid #d5d2c6; margin-right: 20px;}
+div#searchContent, div#siteSearchContent{ background: #f0f0e5; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 20px; margin-left: 5px; border: 1px solid #d5d2c6; margin-right: 20px;}
 form#searchForm li{ float: left; margin-right: 20px;}
 form#searchForm label{ display: block; margin-bottom: 5px; font-weight: bold;}
 form#searchForm select{ padding: 2px 0; margin-top: 1px; margin-right: 10px;}
+
 
 form#accountForm, div#signupOptions, form#contactForm, form#resetPassword, form#projectForm, form#eventForm, form#errorForm, div#attend_event { border: 1px solid #D5D2C6; padding: 30px; background: #F0F0E5; -moz-border-radius: 3px; -webkit-border-radius: 3px; margin-right: 20px; }
 div#ltColumn form#accountForm label, div#signupOptions label, form#contactForm label, form#resetPassword label, form#projectForm label, form#eventForm label, form#errorForm label, form#joinProjectForm label{ width: 200px; display: block; float: left; font-weight: bold; padding-top: 5px;}

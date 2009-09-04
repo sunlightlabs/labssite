@@ -1,15 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="contentHeader">
     <h2>Search</h2>
-
+</div>    
+<div id="siteSearchContent" class="module">
+    <a id="advancedBtn" href="#">Advanced Search</a>
     <form method="get" action=".">
         <ul>
             {{ form.as_ul }}
             <tr>
                 <td>&nbsp;</td>
                 <td>
-                    <input type="submit" value="Search">
+                    <button class="searchBtn" type="submit" value="Search">
+                        <span>Search</spam>
+                    </button>    
                 </td>
             </tr>
         </ul>
@@ -24,4 +29,5 @@
             <p>No results found.</p>
         {% endif %}
     </form>
+</div>    
 {% endblock %}
