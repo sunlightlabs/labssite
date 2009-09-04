@@ -12,8 +12,8 @@ from meritbadges.models import award_badge
 import gatekeeper
 import popular
 
-gatekeeper.register(Idea, auto_moderator=lambda o: True, import_unmoderated=True)
-gatekeeper.register(Project, auto_moderator=lambda o: True, import_unmoderated=True)
+gatekeeper.register(Idea, auto_moderator=lambda o: True)
+gatekeeper.register(Project, auto_moderator=lambda o: True)
 
 def url_to_post(url):
     from django.core.urlresolvers import resolve
@@ -32,6 +32,7 @@ def feedentry_callback(sender, instance, created, **kwargs):
 post_save.connect(feedentry_callback, sender=FeedEntry)
 
 feed, created = Feed.objects.get_or_create(slug='main', defaults={'title':'main feed'})
+noisy, created = Feed.objects.get_or_create(slug='noisy', defaults={'title':'noisy feed'})
 
 def event_callback(sender, instance, created, **kwargs):
     if created:
@@ -57,6 +58,7 @@ def project_callback(sender, instance, created, **kwargs):
         award_badge(instance.lead, 'lead-project')
 post_save.connect(project_callback, sender=Project)
 
+
 def user_callback(sender, instance, created, **kwargs):
     if created:
         feed.items.create(user=instance, item_type='person',
@@ -67,9 +69,9 @@ post_save.connect(user_callback, sender=User)
 
 def message_callback(sender, **kwargs):
     recipient = kwargs['recipient']
-    feed.items.create(user=sender, item_type='message',
-                      body=recipient.first_name or recipient.username,
-                      link=recipient.get_absolute_url())
+    noisy.items.create(user=sender, item_type='message',
+                       body=recipient.first_name or recipient.username,
+                       link=recipient.get_absolute_url())
 message_sent.connect(message_callback)
 
 
