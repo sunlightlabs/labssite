@@ -128,6 +128,18 @@ div#ltColumn form#accountForm label, div#signupOptions label, form#contactForm l
 form#accountForm input, div#signupOptions input, form#contactForm input#id_name, form#contactForm input#id_email, form#contactForm textarea, form#resetPassword input, form#eventForm input, form#eventForm textarea, form#errorForm textarea, form#errorForm input, form#joinProjectForm textarea, form#standard_signinForm input, form#openid_signinForm input, form#aol_signinForm input{ width: 350px;}
 select { margin-bottom: 10px;}
 
+input#id_q { float: left; margin-right: 20px;}
+ul.searchResults { margin-top: 25px; margin-bottom: 25px;}
+form#siteSearch div#advancedSearch label { font-weight: bold; margin-bottom:5px; display: block;}
+form#siteSearch div#advancedSearch li { float: left; margin-right: 35px; padding-top: 8px;}
+form#siteSearch div#advancedSearch ul label { float: none; font-weight: normal;}
+form#siteSearch div#advancedSearch ul input { display: block; margin-right: 8px; float: left;}
+ul.searchResults li { padding-left: 35px; margin-bottom: 15px;}
+ul.searchResults li.event { background: url(../images/iconSm_event.png) left -3px no-repeat; }
+ul.searchResults li.post { background: url(../images/iconSm_post.png) left -3px no-repeat;}
+ul.searchResults li.project { background: url(../images/iconSm_project.png) top left no-repeat; padding-top: 3px;}
+ul.searchResults li.idea { background: url(../images/iconSm_idea.png) left -3px no-repeat; padding-top: 2px;}
+
 form#projectForm label { width: 180px; margin-right: 15px;}
 form#projectForm input, form#projectForm textarea { width: 395px;}
 
