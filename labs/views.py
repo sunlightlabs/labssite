@@ -26,21 +26,3 @@ def image_wrapper(request, image_path):
     image_path = "images/%s" % image_path
     data = {"image_path": image_path}
     return render_to_response("labs/image_wrapper.html", data)
-
-@cache_control(private=True)
-@login_required
-def aa2_judging(request):
-    qs = QuestionSet.objects.get(slug='aa2public')
-    try:
-        aset = AnswerSet.objects.get(question_set=qs, user=request.user)
-        answer = aset.answers.all()[0].text
-    except AnswerSet.DoesNotExist:
-        aset = None
-        answer = None
-
-    form = SurveyForm(qs, answer_set=aset)
-
-    return render_to_response('labs/public_judging.html',
-                              {'form': form, 'aset': aset, 'answer': answer},
-                             context_instance=RequestContext(request))
-
