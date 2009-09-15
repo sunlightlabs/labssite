@@ -695,3 +695,5 @@ div#blog_detail ul#FCCPost>li { list-style-type: none; margin-bottom: 5px; margi
 div#blog_detail ul#FCCPost>li { font-size: 110%; font-weight: bold;}
 div#blog_detail ul.subnav li { margin-bottom: 10px;}
 /*ul.subnav { display: none;}*/
+
+a.googleGroup { color: #fff; font-size: 120%; text-decoration: none; background: url(../images/continue_arrow.png) right 3px no-repeat; padding-right: 20px;}
