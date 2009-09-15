@@ -358,6 +358,7 @@ div#tags li { float: left; margin-right: 10px; font-style: oblique;}
 div#blog_detail img, div.entry-summary img{ border: 3px solid #bfc8ba; margin-bottom: 20px;}
 div#blog_detail img.fullimage, div.entry-summary img.fullimage { margin: 0 auto 20px; display: block; }
 div#blog_detail img.detailimage, div.entry-summary img.detailimage{ float: left; margin-right: 20px;}
+div#blog_detail img.detailimage_right, div.entry-summary img.detailimage_right { float: right; margin-left: 20px;}
 div#blog_detail ul, div.ideaContent ul, div.projectContent ul, div#eventDetails ul, div#event_howtohold ul, div#projectDescription ul, div#apps_content ul, body.about div#ltColumn ul { list-style-type: disc; padding-left:40px;}
 div#blog_detail ul li, div.ideaContent ul li, div.projectContent ul li, div#eventDetails ul li, div#event_howtohold ul li, div#projectDescription ul li, div#apps_content ul li, body.about div#ltColumn ul li { margin-bottom: 15px;}
 
