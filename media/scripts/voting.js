@@ -28,7 +28,6 @@ $(function() {
                 form.siblings('.voteTotal').text(data.score + ' Votes');
 
                 var span = form.find('.vote_link');
-                //console.log(span);
                 if(span.text() == 'Vote') {
                     span.text('Unvote');
                 } else {

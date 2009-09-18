@@ -44,7 +44,7 @@ var fancytags = function (tag_input_selector, options) {
     }
 
     var add_tag = function(tags) {
-        tags = tags.split(',');
+        tags = tags.split(/[,/]/);  // split on slash or comma
         for(var i=0; i < tags.length; ++i) {
             add_tag_li(tags[i]);
         }
