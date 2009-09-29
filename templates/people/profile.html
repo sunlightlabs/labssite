@@ -2,6 +2,7 @@
 {% load cache %}
 {% load blog %}
 {% load people %}
+{% load projects %}
 {% load twitter_tags %}
 {% load media %}
 
@@ -82,15 +83,17 @@
             </div>
             <div id="helpedProjects">
                 <h4>Helped</h4>
+                {% with p_user.project_roles.active.select_related as helped_projects %}
                 {% if helped_projects %}
                 <ul>
-                    {% for project in helped_projects %}
-                        <li><a href="{{project.get_absolute_url}}">{{project}}</a></li>
+                    {% for r in helped_projects %}
+                        <li><a href="{{r.project.get_absolute_url}}">{{r.project}}</a></li>
                     {% endfor %}
                 </ul>
                 {% else %}
                     <p>{{p_user.first_name}} hasn't helped on any projects just yet.</p>
                 {% endif %}
+                {% endwith %}
             </div>
         </div>
     </div>
