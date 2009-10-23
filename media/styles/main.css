@@ -620,7 +620,7 @@ div#appsSponsors a#craignewmark { text-indent: 0; text-align: center; font-size:
 
 
 
-ul#labsMembers { background: url(../images/gear_bg.png) top left no-repeat; width: 220px;}
+div.labsMembers { background: url(../images/gear_bg.png) top left no-repeat; width: 220px; }
 ul#labsMembers li{ width: 105px; height: 100px; float: left; margin-top: -20px;}
 ul#labsMembers li a { width: 105px; height: 100px; text-indent: -9999em; display: block;}
 ul#labsMembers li#clay { margin: 20px auto 0; float: none; height: 115px;}
@@ -629,7 +629,7 @@ li#ali a{ background: url(../images/bot_ali.png) top left no-repeat;}
 li#david a{ background: url(../images/bot_david.png) top left no-repeat;}
 li#eric a{ background: url(../images/bot_eric.png) top left no-repeat;}
 
-ul#labsMembers li#garrett { height: 115px;}
+ul#labsMembers li#garrett { height: 115px; margin-top: -25px;}
 ul#labsMembers li#garrett a{ background: url(../images/bot_garrett.png) top left no-repeat; height: 115px;}
 li#james a{ background: url(../images/bot_james.png) top left no-repeat;}
 li#jeremy a{ background: url(../images/bot_jeremy.png) top left no-repeat;}
@@ -640,9 +640,11 @@ li#luke a{ background: url(../images/bot_luke.png) top left no-repeat;}
 li#tim a{ background: url(../images/bot_tim.png) top left no-repeat;}
 li#tom a{ background: url(../images/bot_tom.png) top left no-repeat;}
 li#kaitlin a{ background: url(../images/bot_kaitlin.png) top left no-repeat;}
+li#ethan a{ background: url(../images/bot_ethan.png) top left no-repeat;}
 
-ul#labsMembers li.memberRight{ margin-top: 12px;}
-ul#labsMembers li#jeremy { margin-top: 20px;}
+ul#labsMembers li.memberRight{ margin-top: 15px;}
+ul#labsMembers li#jeremy { margin-top: -15px;}
+ul#labsMembers li#james, ul#labsMembers li#josh { margin-top: 20px;}
 
 div#timeline li { padding-left: 35px; padding-top: 5px;}
 div#timeline li.idea { background: url(../images/iconSm_idea.png) left top no-repeat;}
