@@ -61,6 +61,15 @@ Sunlight Labs: Projects - {{project.name}}
             <dd>"<a href="{{project.idea.get_absolute_url}}">{{project.idea}}</a>"</dd>
             {% endif %}
 
+            {% with project.related_events.future as events %}
+            {% if events %}
+                <dt>Upcoming hackathons working on this project:</dt>
+                {% for event in events %}
+                    <dd class="event"><a href="{{event.get_absolute_url}}">{{event}}</a></dd>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+
         </dl>
 
         {% tags_for_object project as tags %}
