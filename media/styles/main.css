@@ -708,3 +708,7 @@ a.googleGroup { color: #fff; font-size: 120%; text-decoration: none; background:
 div.hiringBox a{ background:transparent url(../images/block_hiring.png) top left no-repeat; display:block; height:103px; text-indent:-9999em; width:215px;}
 
 div.postBreak { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #c0c0b5;}
+
+#id_related_projects { width: 460px; }
+div#ltColumn form#eventForm div.ui-multiselect  input { width: 100%; }
+div#ltColumn ul.connected-list { padding-right: 0px; }
