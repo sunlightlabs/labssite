@@ -11,6 +11,7 @@
     <ol id="comments">
         {% for comment in comment_list %}
             <li>
+            <a name="c{{comment.id}}"></a>
             <span class="commentMetaAuthor">
                 {% if comment.user_url or comment.user %}
                 <a href="{% firstof comment.user_url comment.user.get_absolute_url %}">
@@ -18,6 +19,7 @@
                     {% firstof comment.user_name comment.user.first_name comment.user %}{% if comment.user_url or comment.user %}</a>{% endif %}
             </span>
             <span class="commentMetaDate">{{comment.submit_date|date:"m/d/Y P"}}</span>
+            <span class="commentPermalink"><a href="{{comment_obj.get_absolute_url}}#c{{comment.id}}">(permalink)</a>
             <p>{{comment.comment}}</p>
             </li>
         {% endfor %}
