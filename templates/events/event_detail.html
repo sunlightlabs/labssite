@@ -42,7 +42,7 @@
 
                 {% with event.related_projects.all as projects %}
                 {% if projects %}
-                    <dt>Related Projects:</dt>
+                    <dt class="relatedProjects">Related Projects:</dt>
                     {% for project in projects %}
                         <dd class="project"><a href="{{project.get_absolute_url}}">{{project}}</a></dd>
                     {% endfor %}

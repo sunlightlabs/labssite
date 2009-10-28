@@ -303,16 +303,17 @@ div#personPic { float: left;}
 div#personDetails dt, div#eventDetails dt, dl.moderationMetadata dt{ float: left; font-weight: bold; margin-right: 8px; }
 div#personDetails dd a { float: left; border: none;}
 div#personDetails dl, div#eventDetails dl, dl.moderationMetadata{ line-height: 25px; margin-bottom: 20px;}
-div#eventDetails dt{ width: 70px;}
+div#eventDetails dt{ width: 110px;}
 dl.moderationMetadata dt{ width: 85px;}
+div#eventDetails dd.project { float: none; margin-left: 118px;}
 
 div#personDetails { margin-left: 85px; background: url(../images/line_space_short.png) bottom left no-repeat; padding-bottom: 1px; margin-bottom: 25px;}
 div#personDetails h2 { float: left;}
 div#personProject { float: left; margin-left: 85px; width: 285px; margin-right: 20px;}
 div#sunlightPost{ margin-left: 395px;}
-dd#userWebsite a, div#eventDetails dd, dl.moderationMetadata dd{ width: 233px; margin-right: 20px;}
+dd#userWebsite a, div#eventDetails dd, dl.moderationMetadata dd{ width: 200px; margin-right: 20px;}
 dl.moderationMetadata dd { width: 223px;}
-div#eventDetails dd, dl.moderationMetadata dd { float: left;}
+div#eventDetails dd, dl.moderationMetadata dd { float: left; margin-bottom: 2px;}
 div#userDetails dt, div#eventDetails dt, dl.moderationMetadata dt{ padding-top: 1px;}
 dl.moderationMetadata dd { padding-bottom: 2px;}
 dl.moderationMetadata dd#ideaReason { width: 550px;}
