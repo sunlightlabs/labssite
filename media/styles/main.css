@@ -252,10 +252,11 @@ div#subscribe input{ float: left; display: block; margin-right: 10px;}
 div#subscribe { width: 300px; margin-bottom: 20px;}
 div#subscribe label { font-style: oblique; padding-top: 1px; display: block;}
 
-ol#comments span.commentMetaAuthor { font-size: 130%; margin-right: 10px; display: block; padding-bottom: 5px; float: left;}
-ol#comments span.commentMetaDate { font-size: 90%; color: #808285; display: block; padding: 2px 0 5px;}
+ol#comments span.commentMetaAuthor { font-size: 130%; margin-right: 10px; padding-bottom: 5px; }
+ol#comments span.commentMetaDate { font-size: 90%; color: #808285; }
 ol#comments li { margin-bottom: 25px;}
 ol#comments p { color: #656464;}
+div.AuthorName { margin-bottom: 5px;}
 
 div#ltColumn div.module h3.h3tip { margin-bottom: 5px; margin-top: 35px; }
 
