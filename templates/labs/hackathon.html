@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load markup %}
+
+{% block title %}{{ flatpage.title }}{% endblock %}
+
+{% block content %}
+    <div class="contentHeader">
+        <h2>Great American Hackathon</h2>
+    </div>
+    <div class="module">
+        {{ flatpage.content|markdown }}
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+{% include "events/events_box.html" %}
+{% endblock %}
