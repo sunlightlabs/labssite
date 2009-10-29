@@ -1,4 +1,5 @@
 {% load comments %}
+{% load markup %}
 {% load blog %}
 
 {% get_comment_list for comment_obj as comment_list %}
@@ -22,7 +23,7 @@
             <span class="commentMetaDate">{{comment.submit_date|date:"m/d/Y P"}}</span>
             <span class="commentPermalink"><a href="{{comment_obj.get_absolute_url}}#c{{comment.id}}">(permalink)</a>
 	</div>
-            <p>{{comment.comment}}</p>
+            <p>{{comment.comment|markdown}}</p>
             </li>
         {% endfor %}
     </ol>
