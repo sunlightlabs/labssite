@@ -715,4 +715,4 @@ div.postBreak { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px so
 div#ltColumn form#eventForm div.ui-multiselect  input { width: 100%; }
 div#ltColumn ul.connected-list { padding-right: 0px; }
 
-img#hackathonLogo { text-indent: -9999em; background: url(../images/logo_hackathon.png) center bottom no-repeat; width: 487px; height: 241px; margin: 0 auto; display: block; margin-bottom: 35px;}
+img#hackathonLogo { width: 487px; height: 241px; margin: 0 auto; display: block; margin-bottom: 35px;}

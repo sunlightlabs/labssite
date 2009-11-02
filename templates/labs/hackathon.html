@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% load markup %}
+{% load media %}
 
 {% block title %}{{ flatpage.title }}{% endblock %}
 
 {% block content %}
     <div class="contentHeader">
-        <img id="hackathonLogo" src="http://www.sunlightlabs.com/media/images/logo_hackathon.png" alt="Great American Hackathon Logo"/>
+        <img id="hackathonLogo" src="{%media_url%}/images/logo_hackathon.png" alt="Great American Hackathon Logo"/>
         <h2>{{ flatpage.title }}</h2>
     </div>
     <div class="module">
