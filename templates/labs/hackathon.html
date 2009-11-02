@@ -5,7 +5,8 @@
 
 {% block content %}
     <div class="contentHeader">
-        <h2>Great American Hackathon</h2>
+        <img id="hackathonLogo" src="http://www.sunlightlabs.com/media/images/logo_hackathon.png" alt="Great American Hackathon Logo"/>
+        <h2>{{ flatpage.title }}</h2>
     </div>
     <div class="module">
         {{ flatpage.content|markdown }}
