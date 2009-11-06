@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load hackathon_tags %}
 {% load markup %}
 {% load media %}
 
@@ -11,6 +12,13 @@
     </div>
     <div class="module">
         {{ flatpage.content|markdown }}
+    </div>
+    
+    <div class="contentHeader">
+        <h3 id="h3Header">Hosted Events</h3>
+    </div>
+    <div id="eventsList" class="module eventsSearch">
+        {% hackathon_events %}
     </div>
 {% endblock %}
 

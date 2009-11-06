@@ -1,0 +1,9 @@
+<dl>
+    {% for event in event_list %}
+    <dt><a class="eventTitle" href="{{event.get_absolute_url}}">{{event.title}}</a></dt>
+    <dd class="event_date">
+        {{event.start_date|date:"M d"}}{% if event.end_date %} &ndash; {{ event.end_date|date:"M d" }} {% endif %}
+    </dd>
+    <dd class="event_location endEvent_list">{{event.location}}</dd>
+    {% endfor %}
+</dl>
