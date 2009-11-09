@@ -51,7 +51,7 @@
             {% for event in search_results %}
             <tr class="{% cycle 'odd' 'even' %}">
                 <td class="table_left">
-                    <a id="event_name" href="{{user.user.get_absolute_url}}">{{event}}</a>
+                    <a id="event_name" href="{{ event.get_absolute_url }}">{{event}}</a>
                 </td>
                 <td class="table_center table_position">{{ event.location }}</td>
                 <td class="table_right">{% if event.distance %} {{event.distance.mi|floatformat}} {% endif %}</td>
