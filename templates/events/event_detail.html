@@ -70,8 +70,8 @@
                         <dd>{% display_name att.user %}</dd>
                 
                         <dt>Number of Guests</dt>
-                        <dd id="eventGuests">+{{att.guests}}</dd>
-                
+                        <dd id="eventGuests">{% ifnotequal att.guests 0 %}+{{att.guests}}{% else %}&nbsp;{% endifnotequal %}</dd>
+                        
                         <dt>Attendees Message</dt>
                         <dd id="eventMessage">{{att.message}}</dd>
                     </dl>
