@@ -23,8 +23,10 @@
 {% endblock %}
 
 {% block sidebar %}
-{% include "events/events_box.html" %}
-  <hr></hr>
+    <div class="haveEvent module">
+        <a href="{% url new_event %}">Have An Event Planned? Tell The Community!</a>
+    </div>
+    <hr></hr>
   <h3 class="space">Partners</h3>
   <div id="hackathonSponsors" class="module">
     <a id="mozillaLogo" href="http://www.mozilla.org/">Mozilla</a>

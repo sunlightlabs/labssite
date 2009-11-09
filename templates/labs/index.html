@@ -42,6 +42,10 @@
 {% endblock content %}
 
 {% block sidebar %}
+<div class="hackathonBox module">
+    <a href="http://www.sunlightlabs.com/hackathon09/">Check Out or Create Hackathon Events Near You!</a>
+</div>
+<hr></hr>
 <h3 class="space">How You Can Help</h3>
 <div class="module">
     <ol id="helpList">
@@ -67,10 +71,12 @@
 <div class="hiringBox module">
     <a href="http://www.sunlightlabs.com/blog/2009/sunlight-labs-hiring/">We're Hiring! Click Here for More Details</a>
 </div>
+
+{% get_active_projects 3 as active_projects %}
+{% if active_projects %}
 <hr></hr>
 <h3 class="space">Active Projects</h3>
 <div id="activeProject_list" class="module">
-    {% get_active_projects 3 as active_projects %}
     <ul>
         {% for project in active_projects %}
             {% if project.official %}
@@ -84,6 +90,8 @@
     </ul>
     <a class="center_viewall" href="/projects/all/">View All Active Projects »</a>
 </div>
+{% endif %}
+
 <hr></hr>
 <h3>What's Happening In The Labs Community</h3>
 <div id="timeline" class="module labsHappenings">

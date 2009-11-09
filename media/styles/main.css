@@ -711,6 +711,8 @@ a.googleGroup { color: #fff; font-size: 120%; text-decoration: none; background:
 
 div.hiringBox a{ background:transparent url(../images/block_hiring.png) top left no-repeat; display:block; height:103px; text-indent:-9999em; width:215px;}
 div.hackathonBox a{ background: transparent url(../images/block_hackathon.png) top left no-repeat; display: block; height: 182px; text-indent: -9999em; width: 215px;}
+div.planEvent a { background: transparent url(../images/planAnEvent_box.png) top left no-repeat; display: block; height: 143px; text-indent: -9999em; width: 215px; }
+div.haveEvent a { background: transparent url(../images/haveEvent_box.png) top left no-repeat; display: block; height: 103px; text-indent: -9999em; width: 215px; }
 
 div.postBreak { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #c0c0b5;}
 
