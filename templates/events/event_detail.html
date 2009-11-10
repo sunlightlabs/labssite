@@ -64,10 +64,10 @@
                 <li>
                     <dl>
                         <dt>Photo</dt>
-                        <dd>{% gravatar att.user.email %}</dd>
+                        <dd><a href="{% url user_profile att.user.username %}">{% gravatar att.user.email %}</a></dd>
 
                         <dt>Name of Attendee</dt>
-                        <dd>{% display_name att.user %}</dd>
+                        <dd><a href="{% url user_profile att.user.username %}">{% display_name att.user %}</a></dd>
                 
                         <dt>Number of Guests</dt>
                         <dd id="eventGuests">{% ifnotequal att.guests 0 %}+{{att.guests}}{% else %}&nbsp;{% endifnotequal %}</dd>
