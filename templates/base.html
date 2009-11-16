@@ -17,6 +17,7 @@
         <!--[if IE 7]>{% css "buggy7.css" %}<![endif]-->
         {% js "jquery-1.3.2.min.js" %}
         {% js "labs.js" %}
+        <script src="http://services.sunlightlabs.com/brandingbar/hat_js/sunlightlabs/" type="text/javascript"></script>
         {% block extrahead %} {% endblock %}
     </head>
     <body class="{% block bodyclass %}home{% endblock %}">
@@ -120,7 +121,7 @@
                     </div>
                     <div id="foundationDetails">
                         <div class="vcard">
-                            <div class="foundationLogo fn org">Sunlight Foundation</div>
+                            <a href="http://sunlightfoundation.com"><div class="foundationLogo fn org">Sunlight Foundation</div></a>
                             <div class="adr">
                                 <div class="street-address">1818 N Street NW, Suite 300</div>
                                 <span class="locality">Washington,</span>
