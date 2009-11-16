@@ -721,3 +721,6 @@ div#ltColumn form#eventForm div.ui-multiselect  input { width: 100%; }
 div#ltColumn ul.connected-list { padding-right: 0px; }
 
 img#hackathonLogo { width: 487px; height: 241px; margin: 0 auto; display: block; margin-bottom: 35px;}
+
+a.projectEdit { float: right; margin-right: 30px; margin-top: 5px;}
+h2.addedEvent { float: left; width: 550px; }
