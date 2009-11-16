@@ -1,12 +1,12 @@
 from blogdor.feeds import LatestComments, LatestPosts, LatestForTag, LatestForAuthor
 
 class LabsLatestPosts(LatestPosts):
-    feed_title = "Sunlight Labs blog"
-    feed_description = "Latest blog updates from the nerds at Sunlight Labs"
+    title = "Sunlight Labs blog"
+    description = "Latest blog updates from the nerds at Sunlight Labs"
 
 class LabsLatestComments(LatestComments):
-    feed_title = "Sunlight Labs blog comments"
-    feed_description = "Latest comments from the nerds that read the Sunlight Labs blog"
+    title = "Sunlight Labs blog comments"
+    description = "Latest comments from the nerds that read the Sunlight Labs blog"
 
 class LabsLatestForTag(LatestForTag):
     feed_title = "Sunlight Labs loves %s"
