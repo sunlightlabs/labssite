@@ -724,3 +724,5 @@ img#hackathonLogo { width: 487px; height: 241px; margin: 0 auto; display: block;
 
 a.projectEdit { float: right; margin-right: 30px; margin-top: 5px;}
 h2.addedEvent { float: left; width: 550px; }
+
+#brandingbar input { padding: 0 5px;}
