@@ -8,6 +8,9 @@
 <div class="module vevent">
     <div id="eventDetail_Title" class="contentHeader">
         <h2 class="summary">{{event}}</h2>
+        {% ifequal event.user user %}
+            <a class="projectEdit" href="{% url edit_event event.id %}">edit event</a>
+        {% endifequal %}
     </div>
     <div id="eventDetails" class="module">
         <dl class="eventAuthorMetadata">
