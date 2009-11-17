@@ -14,7 +14,7 @@ class PostIndex(indexes.SearchIndex):
     def get_queryset(self):
         return Post.objects.filter(is_published=True)
 
-    def should_update(self, instance):
+    def should_update(self, instance, **kwargs):
         return instance.is_published
 
 site.register(Post, PostIndex)
