@@ -59,7 +59,6 @@
 
         {% if not finished %}
         {% with event.attendances.all as attendances %}
-        {% if attendances or user.is_authenticated %}
         <div id="attend_event">
             {% if attendances %}
             <h3 id="attendeesTitle">Attendees</h3>
@@ -83,8 +82,8 @@
                 {% endfor %}
             </ul>
             {% endif %}
-            {% if user.is_authenticated %}
             <h3>I'm Interested</h3>
+            {% if user.is_authenticated %}
             <form id="joinProjectForm" method="POST" action=".">
                 <ul>
                     {{ form.as_ul }}
@@ -93,9 +92,10 @@
                     </button>
                 </ul>
             </form>
+            {% else %}
+            Please <a href="{% url openid-register %}">Create an Account</a> to RSVP
             {% endif %}
         </div>
-        {% endif %}
         {% endwith %}
         {% endif %}
     </div>
