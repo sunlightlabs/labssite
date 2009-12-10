@@ -1,0 +1,12 @@
+div#days { background: url(../images/openPages/date_bg.png) top left no-repeat; width: 90px; height: 62px; } 
+div#days span { width: 38px; height: 51px; text-indent: -9999em; display: block;   }
+span.one { background: url(../images/openPages/date_1.png) top left no-repeat; } 
+span.two { background: url(../images/openPages/date_2.png) top left no-repeat; } 
+span.three { background: url(../images/openPages/date_3.png) top left no-repeat;  } 
+span.four { background: url(../images/openPages/date_4.png) top left no-repeat; } 
+span.five { background: url(../images/openPages/date_5.png) top left no-repeat; } 
+span.six { background: url(../images/openPages/date_6.png) top left no-repeat;  } 
+span.seven { background: url(../images/openPages/date_7.png) top left no-repeat; } 
+span.eight { background: url(../images/openPages/date_8.png) top left no-repeat;  } 
+span.nine { background: url(../images/openPages/date_9.png) top left no-repeat; } 
+span.zero { background: url(../images/openPages/date_0.png) top left no-repeat; }
