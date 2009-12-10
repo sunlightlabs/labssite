@@ -1,5 +1,7 @@
-div#days { background: url(../images/openPages/date_bg.png) top left no-repeat; width: 90px; height: 62px; } 
-div#days span { width: 38px; height: 51px; text-indent: -9999em; display: block;   }
+div#days { background: url(../images/openPages/date_bg.png) top left no-repeat; width: 90px; height: 62px; padding-left:4px; float: left; margin-right: 15px;} 
+div#daysLeft { float: left;}
+div#agenciesLeft { float: right;}
+div#days span { width: 38px; height: 51px; text-indent: -9999em; display: block; margin:6px 0 0 2px; float: left;}
 span.one { background: url(../images/openPages/date_1.png) top left no-repeat; } 
 span.two { background: url(../images/openPages/date_2.png) top left no-repeat; } 
 span.three { background: url(../images/openPages/date_3.png) top left no-repeat;  } 
@@ -10,3 +12,15 @@ span.seven { background: url(../images/openPages/date_7.png) top left no-repeat;
 span.eight { background: url(../images/openPages/date_8.png) top left no-repeat;  } 
 span.nine { background: url(../images/openPages/date_9.png) top left no-repeat; } 
 span.zero { background: url(../images/openPages/date_0.png) top left no-repeat; }
+
+div#openpageHeader { font-size: 180%; font-weight: bold; margin-right: 25px;}
+span.achieved, span.notAchieved { width: 28px; height: 28px; text-indent: -9999em; display: block;}
+span.achieved { background: url(../images/openPages/icon_accepted.png) top left no-repeat; }
+span.notAchieved { background: url(../images/openPages/icon_alert.png) top left no-repeat; }
+
+table#openPages_table tbody td { padding-bottom:5px; padding-top:5px;}
+table#openPages_table .table_left { width: 30px;}
+table#openPages_table { width: 633px;}
+
+span#daysText, div#agenciesLeft { padding-top: 24px;}
+span#daysText { display: block; float: left;}
