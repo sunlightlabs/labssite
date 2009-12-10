@@ -49,6 +49,7 @@ urlpatterns = patterns('',
 
     # labs specific
     url(r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'labs/index.html'}, name='index'),
+    url(r'^open/$', 'labssite.labs.views.proxypage'),
 )
 
 # brainstorm - custom urls so slug isn't needed

@@ -1,14 +1,13 @@
 {% extends "base.html" %}
-{% load markup %}
 {% load media %}
 {% block extrahead %}
   {%css "openPages.css" %}
 {% endblock %}
 
-{% block title %}{{ flatpage.title }}{% endblock %}
+{% block title %}Sunlight Labs / Open Watcher {% endblock %}
 
 {% block content %}
     <div>
-        {{ flatpage.content|markdown }}
+        {{ proxypage_content }}
     </div>
 {% endblock %}

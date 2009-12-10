@@ -1,8 +1,11 @@
+import urllib2
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.utils.safestring import mark_safe
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.cache import cache_control
+from django.core.cache import cache
 from contact_form.views import contact_form
 from blogdor.models import Post
 from blogdor.views import archive
@@ -26,3 +29,26 @@ def image_wrapper(request, image_path):
     image_path = "images/%s" % image_path
     data = {"image_path": image_path}
     return render_to_response("labs/image_wrapper.html", data)
+
+def proxypage(request):
+
+    # could look up a proxy object here based on URL
+    proxy_url = 'http://beta-tasks.sunlightlabs.com/open/'
+    cache_time = 300                # 5 minute default timeout
+    proxypage_template = 'flatpages/default_openpage.html'
+
+    cache_key = 'proxy_%s' % proxy_url
+
+    proxypage = cache.get(cache_key)
+    if proxypage is None:
+        try:
+            proxypage = urllib2.urlopen(proxy_url).read()
+            cache.set(cache_key, proxypage, cache_time)
+        except urllib2.HTTPError:
+            proxypage = 'Error Retrieving Content'
+
+    if proxypage:
+        proxypage = mark_safe(proxypage)
+
+    return render_to_response(proxypage_template, {'proxypage_content':proxypage},
+                              context_instance=RequestContext(request))
