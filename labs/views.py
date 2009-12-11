@@ -33,7 +33,7 @@ def image_wrapper(request, image_path):
 def proxypage(request):
 
     # could look up a proxy object here based on URL
-    proxy_url = 'http://beta-tasks.sunlightlabs.com/open/'
+    proxy_url = 'http://tasks.sunlightfoundation.com/open/'
     cache_time = 300                # 5 minute default timeout
     proxypage_template = 'flatpages/default_openpage.html'
 
