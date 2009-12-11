@@ -353,7 +353,7 @@ li#favorites a.active{ background: url(../images/ourFavorites.png) bottom left n
 
 div#popularPosts li, div#favoritePosts li{ margin-bottom: 10px;}
 
-div#ltColumn p, div.rtColumnSpaces { margin-bottom: 1em;}
+div#ltColumn p, div.rtColumnSpaces p{ margin-bottom: 1em;}
 
 div#blog_detail div#tags { margin: 30px 0; }
 div#blog_detail div#tags ul { list-style-type: none;}
