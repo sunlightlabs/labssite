@@ -144,6 +144,13 @@ GOOGLE_ANALYTICS_EMAIL = 'sunlightlabs@gmail.com'
 GOOGLE_ANALYTICS_PASSWORD = '***REMOVED***'
 GOOGLE_ANALYTICS_ID = '***REMOVED***'
 
+ANTHILL_ROLES = (
+    ('other', 'Community Member'),
+    ('des', 'Designer'),
+    ('dev', 'Developer'),
+    ('both', 'Developer/Designer'),
+)
+
 SIMPLESURVEY_COMPLETE_REDIRECT = "/aa2judging/"
 
 RESTRUCTUREDTEXT_FILTER_SETTINGS = {'initial_header_level': 3}
