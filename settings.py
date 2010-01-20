@@ -139,10 +139,17 @@ GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site3/images/avatar.jpg"
 GRAVATAR_SIZE = 60
 FORCE_LOWERCASE_TAGS = True
 
-GMAPS_API_KEY = '***REMOVED***'
+ANTHILL_GMAPS_KEY = '***REMOVED***'
 GOOGLE_ANALYTICS_EMAIL = 'sunlightlabs@gmail.com'
 GOOGLE_ANALYTICS_PASSWORD = '***REMOVED***'
 GOOGLE_ANALYTICS_ID = '***REMOVED***'
+
+ANTHILL_ROLES = (
+    ('other', 'Community Member'),
+    ('des', 'Designer'),
+    ('dev', 'Developer'),
+    ('both', 'Developer/Designer'),
+)
 
 SIMPLESURVEY_COMPLETE_REDIRECT = "/aa2judging/"
 
