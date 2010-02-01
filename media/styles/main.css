@@ -25,46 +25,51 @@ blockquote p { font-size: 130%; line-height: 22px; padding-left: 50px; font-styl
 div#headerWrapper{ background: url(../images/bg_repeat2.jpg) top center repeat-x; }
 div#pageMain{ background: url(../images/header_bg4.jpg) top center no-repeat; width: 960px; margin: 0 auto; }
 
-div#header{ height: 223px; margin-bottom: 40px;}
+div#header{ height: 223px; }
 div#nav li { float: left;}
 
-div#logo{ background: url(../images/logo_line.png) top right no-repeat;  width: 325px; height: 116px; float: left; margin-top: 30px; margin-bottom: 43px;}
-h1{  width: 293px; height: 104px; }
-h1 a{ background: url(../images/logo.png) bottom left no-repeat; width: 293px; height: 104px; text-indent: -9999em; display: block;}
+h1{  width: 440px; height: 90px; float: left; padding-top: 30px;}
+h1 a{ background: url(../images/logo.png) bottom left no-repeat; width: 440px; height: 90px; text-indent: -9999em; display: block;}
 
-div#featureBox{ background: #fff; border: 1px solid #c7c8ba; padding: 25px; -moz-border-radius: 5px; -webkit-border-radius: 5px; margin-bottom: 50px;}
-div#featureBox h2{ margin-bottom: 20px; background: url(../images/feature_header.png) top left no-repeat; width: 323px; height: 83px; text-indent: -9999em;}
-div#featureBox { position: relative; margin: 0 10px 0 0; width: 94%; height: 94%; top: -10px; left: -10px;}
-div#featureBox_wrapper{ background: url(../images/feature_bg.png) bottom right no-repeat; padding: 0 10px 1px 0; margin: 0 10px 30px 15px;}
-div#ltColumn div#featureBox p{ float: left; width: 450px; margin-bottom: 25px;}
-div#featureBox a{ float: right; }
-div#featureBox h3 a { float: none; }
+div#featureBox{ margin-bottom: 50px; background: url(../images/featureBox_bg.png) top left no-repeat; height: 274px; padding: 0 15px;}
+div#featureBox h2{ margin-bottom: 20px; background: url(../images/feature_header.png) top left no-repeat; width: 323px; height: 83px; text-indent: -9999em; float: left;}
+/*div#featureBox { position: relative; margin: 0 10px 0 0; width: 94%; height: 94%; top: -10px; left: -10px;}
+div#featureBox_wrapper{ background: url(../images/feature_bg.png) bottom right no-repeat; padding: 0 10px 1px 0; margin: 0 10px 30px 15px;}*/
+div#ltColumn div#featureBox p{ float: left; font-size: 105%; margin-bottom: 25px; line-height: 19px; color:#6C6969;}
+div#featureBox a{ float: right; margin-right:80px;}
+div#featureBox span a { float: none; }
 div#ltColumn div.news_feature { padding: 20px; width:95%;}
 
-div#ltColumn div#alertBox h3{ margin: 0; font-size: 165%;}
+div#ltColumn div#alertBox { position: relative; margin: 0 10px 0 0; width: 98.3%; top: -3px; left: -15px; background: #fff; border: 1px solid #c7c8ba; padding: 10px 15px; -moz-border-radius: 3px; -webkit-border-radius: 3px;}
+div#ltColumn div#alertBox_wrapper { background: url(../images/feature_bg.png) bottom right no-repeat; padding: 0 10px 1px 0; margin: 10px 10px 30px 15px;}
+div#alertBox span{ font-size: 110%; font-weight: bold;}
+div#alertBox span a { margin-right: 0px;}
+span#alertContent, span.alertHolder { float: left; margin-right: 10px;}
+span.alertHolder_close { text-align: right; display: block;}
 
-div#nav{ background: url(../images/nav_bg.png) bottom right no-repeat; width: 615px; height: 65px; float: right; margin-top: 50px;}
+div#nav{ background: url(../images/nav_bg.png) bottom center no-repeat; width: 954px; height: 51px; float: right; margin-top: 40px;}
 div#pageNav li{ float: left; margin-right: 15px;}
-div#pageNav{ padding-bottom: 15px; width: 960px; height: 35px; padding-left: 5px; font-size:110%; font-weight:bold;}
-div#pageNav ul { float: left; padding-top: 10px;}
-div#searchBox { float: right;}
+div#pageNav a { color: #fff;}
+div#pageNav{ padding-bottom: 15px; height: 35px; padding-left: 5px; font-size:110%; float: right;}
+div#pageNav ul { float: right; padding-top: 10px;}
 input#siteSearch_box, div#searchBox button { float: right;}
+div#searchBox { margin-top: 70px;}
 input#siteSearch_box { margin-right: 15px; font-size: 85%; width: 170px; background: rgba(254,254,254,0.5); }
 div#searchBox button { margin-right: 5px;}
 
-body.home div#pageNav{ background: url(../images/banner_home.png) bottom center no-repeat; }
+/*body.home div#pageNav{ background: url(../images/banner_home.png) bottom center no-repeat; }
 body.blog div#pageNav{ background: url(../images/banner_blog.png) bottom center no-repeat; }
 body.people div#pageNav{ background: url(../images/banner_people.png) bottom center no-repeat; }
 body.projects div#pageNav{ background: url(../images/banner_projects.png) bottom center no-repeat; }
 body.about div#pageNav{ background: url(../images/banner_about.png) bottom center no-repeat; }
 body.contact div#pageNav{ background: url(../images/banner_contact.png) bottom center no-repeat; }
-body.events div#pageNav{ background: url(../images/banner_events.png) bottom center no-repeat; }
+body.events div#pageNav{ background: url(../images/banner_events.png) bottom center no-repeat; }*/
 
 .clear{ clear: both;}
 
 div#ltColumn{ width: 700px; float: left; margin-right: 15px;}
 div#rtColumn{ float: left; width: 245px;}
-div#mainContent {background: url(../images/rtColumn_bg.png) top right repeat-y;  width: 960px; margin-top: -34px; padding-top: 50px;}
+div#mainContent {background: url(../images/rtColumn_bg.png) top right repeat-y;  width: 960px; padding-top: 50px;}
 
 div#rtColumn div.module{ margin-left: 25px; }
 div.module{ padding-left: 5px; margin-bottom: 40px;}
@@ -583,7 +588,7 @@ button#nonuser_postBtn{ margin-left: 200px;}
 button.addBtn{ background: url(../images/btn_add.png) right bottom no-repeat; width: 113px; margin-bottom: 11px;}
 ul#projectForm_details button.addBtn{ background: url(../images/btn_addTags.png) right bottom no-repeat; width: 113px; margin-bottom: 11px;}
 button.saveBtn{ background: url(../images/btn_savechanges.png) right bottom no-repeat; width: 148px; margin: 15px 0 15px 200px; }
-a#joinBtn { background: url(../images/btn_joinus.png) right bottom no-repeat; width: 144px; height: 33px; margin-top: 20px; display: block;}
+a#joinBtn { background: url(../images/btn_joinus.png) right bottom no-repeat; width: 204px; height: 65px; margin-top: 20px; display: block;}
 a#contactBtn { background: url(../images/btn_contact.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
 button.joinBtn { background: url(../images/btn_join.png) right bottom no-repeat; width: 113px; margin-top: 20px;}
 button#voteBtn { background: url(../images/btn_vote.png) right bottom no-repeat; width: 113px; margin-top: 20px; }
