@@ -48,7 +48,7 @@ urlpatterns = patterns('',
     url(r'^events/', include('anthill.events.urls')),
 
     # labs specific
-    url(r'^$', 'django.views.generic.simple.direct_to_template', {'template': 'labs/index.html'}, name='index'),
+    url(r'^$', 'labssite.labs.views.index', name='index'),
     url(r'^open/$', 'labssite.labs.views.proxypage'),
 )
 

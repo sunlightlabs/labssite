@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.utils.safestring import mark_safe
 from django.contrib.auth.decorators import login_required
+from django.contrib.flatpages.models import FlatPage
 from django.views.decorators.cache import cache_control
 from django.core.cache import cache
 from contact_form.views import contact_form
@@ -14,7 +15,12 @@ from simplesurvey.forms import SurveyForm
 from anthill.projects.models import Project
 
 def index(request):
-    return render_to_response("labs/index.html",
+    try:
+        fpage = FlatPage.objects.get(url='alertbox-content')
+        box = fpage.content.strip()
+    except FlatPage.DoesNotExist:
+        box = ''
+    return render_to_response("labs/index.html", {'alertbox': box},
                              context_instance=RequestContext(request))
 
 def blog_wrapper(request):

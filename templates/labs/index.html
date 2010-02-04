@@ -10,21 +10,24 @@
 {% block content %}
 
     {% if not user.is_authenticated %}
-    <div id="featureBox">
+    <div id="featureBox{% if not alertbox %}NoAlert{% endif %}">
     {% else %}
-    <div class="news_feature" id="featureBox">
+    <div class="news_feature" id="featureBox{% if not alertbox %}NoAlert{% endif %}">
     {% endif %}
+
 {% if not user.is_authenticated %}
         <h2>We're Opening America's Government</h2>
         <a id="joinBtn" href="{% url openid-register %}">Join Us</a>
         <p>We're a community of open source developers and designers dedicated to opening up our government to make it more transparent, accountable and responsible. We need your help.</p>
 {% endif %}
-        <div class="clear"></div>
+    <div class="clear"></div>
+        {% if alertbox %}
         <div id="alertBox_wrapper">
             <div id="alertBox">
-                {% include "labs/alertbox.html" %}
+                {{alertbox|safe}}
             </div>
         </div>
+        {% endif %}
     </div>
 
 <div class="contentHeader">
