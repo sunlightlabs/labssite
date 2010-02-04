@@ -24,7 +24,9 @@
         {% if alertbox %}
         <div id="alertBox_wrapper">
             <div id="alertBox">
-                {{alertbox|safe}}
+                <span class="alertHolder">[</span>
+                <span id="alertContent">{{alertbox|safe}}</span>
+                <span class="alertHolder_close">]</span>
             </div>
         </div>
         {% endif %}
