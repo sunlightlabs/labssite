@@ -11,7 +11,6 @@ register = template.Library()
 def get_active_projects(parser, token):
     start_time = datetime.datetime.now() - datetime.timedelta(30)  # month ago
     most_active = FeedItem.objects.filter(timestamp__gt=start_time).values_list('feed__slug', flat=True).order_by('count').annotate(count=Count('id'))[:5]
-    print most_active
     projects = Project.objects.filter(slug__in=list(most_active))
     if hasattr(projects, '_gatekeeper'):
         projects = projects.approved()
