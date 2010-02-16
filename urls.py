@@ -26,9 +26,6 @@ urlpatterns = patterns('',
     url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^images/(?P<image_path>.*)$', 'labssite.labs.views.image_wrapper', name="image_wrapper"),
 
-    # contests
-    url(r'^contests/', include('appcontest.urls')),
-
     # blog/blogdor
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="blogdor_feeds"),
     url(r'^blog/$', 'labssite.labs.views.blog_wrapper'),
@@ -68,5 +65,5 @@ urlpatterns += patterns('',
 if settings.DEBUG:
     urlpatterns += patterns('',
         url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
-        url(r'^(?P<filename>.*)\.(?P<extension>css|js)$', 'mediasync.views.static'),
+        #url(r'^(?P<filename>.*)\.(?P<extension>css|js)$', 'mediasync.views.static'),
     )

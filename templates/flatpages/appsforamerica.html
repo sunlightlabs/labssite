@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load markup %}
+
+{% block title %}Apps for America{% endblock %}
+
+{% block body %}contest{% endblock %}
+
+{% block feature %}
+    <a href="/contests/appsforamerica/">
+        <h2 class="contest">Labs Contest</h2>
+        <div id="contestImage-appsforamerica"></div>
+    </a>
+{% endblock %}
+
+{% block content %}
+{{flatpage.content}}
+{% endblock %}

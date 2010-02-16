@@ -91,7 +91,6 @@ INSTALLED_APPS = (
     'newsfeed',
     'popular',
     'meritbadges',
-    'appcontest',
     'brainstorm',
     'labssite.labs',
     'anthill.people',
