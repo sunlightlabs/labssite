@@ -9,12 +9,16 @@ from brainstorm.feeds import SubsiteFeed
 admin.autodiscover()
 
 blog_feeds = {
-    'latest': LabsLatestPosts, 'comments': LabsLatestComments,
-    'tag': LabsLatestForTag, 'author': LabsLatestForAuthor,
+    'latest': LabsLatestPosts, 'latest_fburner': LabsLatestPosts,
+    'comments': LabsLatestComments,
+    'tag': LabsLatestForTag,
+    'author': LabsLatestForAuthor,
 }
 
 from newsfeed.feeds import NewsFeed
-news_feed = { 'newsfeed': NewsFeed }
+news_feed = {
+    'newsfeed': NewsFeed, 'newsfeed_fburner': NewsFeed
+}
 
 urlpatterns = patterns('',
     # admin
