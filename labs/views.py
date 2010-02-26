@@ -25,7 +25,7 @@ def index(request):
 
 def blog_wrapper(request):
     if 'feed' in request.GET:
-        return HttpResponseRedirect('/blog/feeds/latest')
+        return HttpResponseRedirect('http://feeds.feedburner.com/sunlightlabs/blog')
     return archive(request)
 
 def contact_sent(request, form_class):
