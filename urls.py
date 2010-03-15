@@ -50,7 +50,6 @@ urlpatterns = patterns('',
 
     # labs specific
     url(r'^$', 'labssite.labs.views.index', name='index'),
-    url(r'^open/$', 'labssite.labs.views.proxypage'),
 )
 
 # brainstorm - custom urls so slug isn't needed
