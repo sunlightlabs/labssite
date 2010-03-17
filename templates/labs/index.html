@@ -10,10 +10,11 @@
 
 {% block content %}
 
+{% if not user.is_authenticated or alertbox %}
     {% if not user.is_authenticated %}
     <div id="featureBox{% if not alertbox %}NoAlert{% endif %}">
     {% else %}
-    <div class="news_feature" id="featureBox{% if not alertbox %}NoAlert{% endif %}">
+    <div class="news_feature" id="featureBox">
     {% endif %}
 
 {% if not user.is_authenticated %}
@@ -32,6 +33,7 @@
         </div>
         {% endif %}
     </div>
+{% endif %} {# endif -- user signed in and no alerts #}
 
 <div class="contentHeader">
     <h2 class="post">Recent Posts</h2>
