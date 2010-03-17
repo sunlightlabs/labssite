@@ -52,8 +52,9 @@ div#ltColumn div#alertBox_wrapper { background: url(../images/feature_bg.png) bo
 div#alertBox span{ font-size: 110%; font-weight: bold;}
 div#alertBox span a { margin-right: 0px;}
 span#alertContent, span.alertHolder { float: left; margin-right: 10px;}
-span#alertContent { width: 620px; margin-top: 1px;}
+span#alertContent { width: 570px; margin-top: 1px;}
 span.alertHolder_close { text-align: right; margin-left: 15px;}
+span.alertHolder { width: 5px;}
 
 div#nav{ background: url(../images/nav_bg.png) bottom center no-repeat; width: 954px; height: 51px; float: right; margin-top: 40px;}
 div#pageNav li{ float: left; margin-left: 15px; line-height: 15px; padding-left: 15px; color: #fff;}
