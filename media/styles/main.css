@@ -52,7 +52,7 @@ div#ltColumn div#alertBox_wrapper { background: url(../images/feature_bg.png) bo
 div#alertBox span{ font-size: 110%; font-weight: bold;}
 div#alertBox span a { margin-right: 0px;}
 span#alertContent, span.alertHolder { float: left; margin-right: 10px;}
-span#alertContent { width: 570px; margin-top: 1px;}
+span#alertContent { width: 640px; margin-top: 1px;}
 span.alertHolder_close { text-align: right; margin-left: 15px;}
 span.alertHolder { width: 5px;}
 
