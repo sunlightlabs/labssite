@@ -624,8 +624,9 @@ form#yahoo_signupForm button.signupBtn { background: url(../images/btn_signupYah
 form#aol_signupForm button.signupBtn { background: url(../images/btn_signupAOL.png) right bottom no-repeat; width: 275px; margin-left: 200px;}
 
 /*apps sponsors*/
+a#adobeLogo { background: url(../images/logoSponsor_adobe.png) top center no-repeat; width: 79px; height: 91px;}
 div#appsSponsors {padding-right: 15px;}
-div#appsSponsors a, div#hackathonSponsors a { text-indent: -9999em; display: block; margin: 0 auto 30px;}
+div#appsSponsors a, div#hackathonSponsors a, .sponsorLogos a, .sponsorLogosList li a { text-indent: -9999em; display: block; margin: 0 auto 30px;}
 a#googleLogo{ background: url(../images/logoSponsor_google.png) top center no-repeat; width: 146px; height: 52px;}
 a#gov2Logo{ background: url(../images/logoSponsor_gov2.png) top center no-repeat; width: 113px; height: 67px;}
 a#techwebLogo{ background: url(../images/logoSponsor_techweb.png) top center no-repeat; width: 155px; height: 50px;}
