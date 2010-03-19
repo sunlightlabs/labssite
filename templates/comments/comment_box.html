@@ -29,12 +29,14 @@
     </ol>
     {% endif %}
 
-    {# if user.is_authenticated #}
-        {% if comment_list %}
-            <h3 id="header_topSpace" class="h3tip">What are Your Thoughts?</h3>
-        {% else %}
-            <h3 class="h3tip">What are Your Thoughts?</h3>
-        {% endif %}
+    {% if comment_list %}
+        <h3 id="header_topSpace" class="h3tip">What are Your Thoughts?</h3>
+    {% else %}
+        <h3 class="h3tip">What are Your Thoughts?</h3>
+    {% endif %}
+
+    {% if not post or post.comments_enabled %}
+
         <p class="tip">Have thoughts that might fuel this discussion further, post them below. (<a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a> is supported in comments.)</p>
         <div id="commentBlock" {% if not user.is_authenticated %}class="nonuser_commentBox"{% endif %}>
             {% if user.is_authenticated %}
@@ -76,6 +78,9 @@
             </form>
         </div>
         <div class="clear"></div>
-    {# endif #}
+        {% else %}
+        <p class="tip">Comments have been closed on this post.</p>
+        {% endif %}
+
 </div>
 {# endif #}
