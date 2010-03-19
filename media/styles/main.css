@@ -638,6 +638,7 @@ div#appsSponsors a#craignewmark { text-indent: 0; text-align: center; font-size:
 a#mozillaLogo{ background: url(../images/logoSponsor_mozilla.png) top center no-repeat; width: 126px; height: 118px;}
 a#redhatLogo{ background: url(../images/logoSponsor_redhat.png) top center no-repeat; width: 172px; height: 56px;}
 a#fedoraLogo{ background: url(../images/logoSponsor_fedora.png) top center no-repeat; width: 158px; height: 50px;}
+a#palantirLogo{ background: url(../images/logoSponsor_palantir.png) top center no-repeat; width: 155px; height: 37px;}
 
 
 div.labsMembers { background: url(../images/gear_bg.png) top left no-repeat; width: 220px; }
