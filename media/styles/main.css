@@ -45,13 +45,16 @@ div#ltColumn div#featureBox p, div#ltColumn div#featureBoxNoAlert p{ float: left
 div#featureBox a, div#featureBoxNoAlert a{ float: right; margin-right:80px;}
 div#featureBox span a, div#featureBoxNoAlert span a { float: none; }
 div#ltColumn div.news_feature { /*padding: 20px;*/ width:99%; height: 100%; background: none; padding: 0;}
+div#alertBox span.largeFeatureText { font-size: 140%; line-height: 27px; color: #383535;}
 
 div#ltColumn div#alertBox { position: relative; margin: 0 10px 0 0; width: 98.3%; top: -3px; left: -15px; background: #fff; border: 1px solid #c7c8ba; padding: 10px 15px; -moz-border-radius: 3px; -webkit-border-radius: 3px;}
 div#ltColumn div#alertBox_wrapper { background: url(../images/feature_bg.png) bottom right no-repeat; padding: 0 10px 1px 0; margin: 10px 10px 0 15px;}
 div#alertBox span{ font-size: 110%; font-weight: bold;}
 div#alertBox span a { margin-right: 0px;}
 span#alertContent, span.alertHolder { float: left; margin-right: 10px;}
-span.alertHolder_close { text-align: right; display: block;}
+span#alertContent { width: 640px; margin-top: 1px;}
+span.alertHolder_close { text-align: right; margin-left: 15px;}
+span.alertHolder { width: 5px;}
 
 div#nav{ background: url(../images/nav_bg.png) bottom center no-repeat; width: 954px; height: 51px; float: right; margin-top: 40px;}
 div#pageNav li{ float: left; margin-left: 15px; line-height: 15px; padding-left: 15px; color: #fff;}
