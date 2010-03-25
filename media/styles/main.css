@@ -638,6 +638,7 @@ div#appsSponsors a#craignewmark { text-indent: 0; text-align: center; font-size:
 a#mozillaLogo{ background: url(../images/logoSponsor_mozilla.png) top center no-repeat; width: 126px; height: 118px;}
 a#redhatLogo{ background: url(../images/logoSponsor_redhat.png) top center no-repeat; width: 172px; height: 56px;}
 a#fedoraLogo{ background: url(../images/logoSponsor_fedora.png) top center no-repeat; width: 158px; height: 50px;}
+a#palantir{ background: url(../images/logoSponsor_palantir.png) top center no-repeat; width: 155px; height: 37px;}
 
 
 div.labsMembers { background: url(../images/gear_bg.png) top left no-repeat; width: 220px; }
@@ -648,9 +649,7 @@ ul#labsMembers li#clay a{ background: url(../images/bot_clay.png) 20px top no-re
 li#ali a{ background: url(../images/bot_ali.png) top left no-repeat;}
 li#david a{ background: url(../images/bot_david.png) top left no-repeat;}
 li#eric a{ background: url(../images/bot_eric.png) top left no-repeat;}
-
-ul#labsMembers li#garrett { height: 115px; margin-top: -25px;}
-ul#labsMembers li#garrett a{ background: url(../images/bot_garrett.png) top left no-repeat; height: 115px;}
+li#greg a{ background: url(../images/bot_greg.png) top left no-repeat;}
 li#james a{ background: url(../images/bot_james.png) top left no-repeat;}
 li#jeremy a{ background: url(../images/bot_jeremy.png) top left no-repeat;}
 li#josh a{ background: url(../images/bot_josh.png) top left no-repeat;}
@@ -662,9 +661,7 @@ li#tom a{ background: url(../images/bot_tom.png) top left no-repeat;}
 li#kaitlin a{ background: url(../images/bot_kaitlin.png) top left no-repeat;}
 li#ethan a{ background: url(../images/bot_ethan.png) top left no-repeat;}
 
-ul#labsMembers li.memberRight{ margin-top: 15px;}
-ul#labsMembers li#jeremy { margin-top: -15px;}
-ul#labsMembers li#james, ul#labsMembers li#josh { margin-top: 20px;}
+ul#labsMembers li.memberRight{ margin-top: 30px;}
 
 div#timeline li { padding-left: 35px; padding-top: 5px;}
 div#timeline li.idea { background: url(../images/iconSm_idea.png) left top no-repeat;}
