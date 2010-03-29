@@ -2,7 +2,11 @@
 {% load people %}
 {% load tagging_tags %}
 
-{% block title %}{{ block.super }} - {{ post.title }}{% endblock %}
+{% block title %}{{ post.title }} - {{ block.super }} {% endblock %}
+
+{% block metadescription %}
+{{post.content.raw|truncatewords:100}}
+{% endblock %}
 
 {% block content %}
 <div id="postTitle" class="contentHeader">
