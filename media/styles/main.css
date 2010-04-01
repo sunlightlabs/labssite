@@ -741,4 +741,5 @@ h2.addedEvent { float: left; width: 550px; }
 
 #brandingbar input { padding: 0 5px;}
 
-div.redacted { background: #000000; }
+span.redacted { background: #000000; color: #000000; }
+span.redacted a { color: #000000; }
