@@ -15,18 +15,14 @@ from simplesurvey.forms import SurveyForm
 from anthill.projects.models import Project
 
 def index(request):
-    if request.session.get('pranked'):
-        try:
-            fpage = FlatPage.objects.get(url='alertbox-content')
-            box = fpage.content.strip()
-        except FlatPage.DoesNotExist:
-            box = ''
-        return render_to_response("labs/index.html", {'alertbox': box},
-                                 context_instance=RequestContext(request))
-    else:
-        request.session['pranked'] = True
-        return render_to_response("labs/scan_index.html",
-                                  context_instance=RequestContext(request))
+    try:
+        fpage = FlatPage.objects.get(url='alertbox-content')
+        box = fpage.content.strip()
+    except FlatPage.DoesNotExist:
+        box = ''
+    return render_to_response("labs/index.html", {'alertbox': box},
+                             context_instance=RequestContext(request))
+
 
 def blog_wrapper(request):
     if 'feed' in request.GET:
