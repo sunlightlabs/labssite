@@ -87,7 +87,6 @@ INSTALLED_APPS = (
     'feedinator',
     'gatekeeper',
     'blogdor',
-    'simplesurvey',
     'newsfeed',
     'popular',
     'meritbadges',
@@ -149,8 +148,6 @@ ANTHILL_ROLES = (
     ('dev', 'Developer'),
     ('both', 'Developer/Designer'),
 )
-
-SIMPLESURVEY_COMPLETE_REDIRECT = "/aa2judging/"
 
 RESTRUCTUREDTEXT_FILTER_SETTINGS = {'initial_header_level': 3}
 LOGIN_URL = '/accounts/login/'

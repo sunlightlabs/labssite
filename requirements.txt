@@ -1,22 +1,29 @@
-Django==1.1
+Django==1.2
 
-# non-django dependencies
+# used by labssite.labs
 python-twitter
+
+# markupfield
 docutils
 markdown
 textile
 pygments
+
+# feedinator
 feedparser
--e svn+http://geopy.googlecode.com/svn/trunk/#egg=geopy   # PyPI link is broken
+
+# django-popularity
 python-googleanalytics
+
+# django-haystack
 Whoosh
 
 # third party apps
-django-tagging==0.3
--e git://github.com/robhudson/django-debug-toolbar.git#egg=django-debug-toolbar
--e git://github.com/toastdriven/django-haystack.git#egg=django-haystack
+django-tagging==0.3.1
+django-haystack==1.0.1-final
+django-markupfield
+django-debug-toolbar
 -e git://github.com/jamesturk/django-openid.git#egg=django-openid       # a fork of simonw's work
--e git://github.com/jamesturk/django-markupfield.git#egg=django-markupfield
 
 # sunlight apps
 -e git://github.com/sunlightlabs/anthill.git#egg=anthill
@@ -26,7 +33,6 @@ django-tagging==0.3
 -e git://github.com/sunlightlabs/django-gatekeeper.git#egg=django-gatekeeper
 -e git://github.com/sunlightlabs/django-mediasync.git#egg=django-mediasync
 -e git://github.com/sunlightlabs/django-popular.git#egg=django-popular
--e git://github.com/sunlightlabs/django-simplesurvey.git#egg=django-simplesurvey
 
 # site-specific apps
 -e git://github.com/sunlightlabs/labssite-apps.git#egg=labssite-apps

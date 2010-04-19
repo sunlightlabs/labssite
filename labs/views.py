@@ -12,8 +12,6 @@ from django.core.cache import cache
 from labs.forms import LabsContactForm
 from blogdor.models import Post
 from blogdor.views import archive
-from simplesurvey.models import AnswerSet, QuestionSet
-from simplesurvey.forms import SurveyForm
 from anthill.projects.models import Project
 
 def index(request):
