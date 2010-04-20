@@ -8,7 +8,7 @@
     {% for field in project_form.visible_fields %}
     <li> {{field.errors}} {{ field.label_tag }} {{ field }}
 
-    {% ifequal field.name "tags" %}
+    {% if field.name == "tags" %}
         <div id="fancy_tags_widget">
             <p><a id="show_common_tags" href="#">Show Common Tags List</a></p>
             <div class="commonProject_tags" id="commonTags_wrapper">
@@ -31,7 +31,7 @@
                 <div class="clear"></div>
             </div>
         </div>
-    {% endifequal %}
+    {% endif %}
 
     </li>
     {% endfor %}

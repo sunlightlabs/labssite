@@ -7,10 +7,10 @@
 {% block content %}
 <div class="module vevent">
     <div id="eventDetail_Title" class="contentHeader">
-        <h2 class="summary {% ifequal event.creator user %}addedEvent{% endifequal %}">{{event}}</h2>
-        {% ifequal event.creator user %}
+        <h2 class="summary {% if event.creator == user %}addedEvent{% endif %}">{{event}}</h2>
+        {% if event.creator == user %}
             <a class="projectEdit" href="{% url edit_event event.id %}">edit event</a>
-        {% endifequal %}
+        {% endif %}
         <div class="clear"></div>
     </div>
     <div id="eventDetails" class="module">
@@ -73,7 +73,7 @@
                         <dd><a href="{% url user_profile att.user.username %}">{% display_name att.user %}</a></dd>
                 
                         <dt>Number of Guests</dt>
-                        <dd id="eventGuests">{% ifnotequal att.guests 0 %}+{{att.guests}}{% else %}&nbsp;{% endifnotequal %}</dd>
+                        <dd id="eventGuests">{% if att.guests %}+{{att.guests}}{% else %}&nbsp;{% endif %}</dd>
                         
                         <dt>Attendees Message</dt>
                         <dd id="eventMessage">{{att.message}}</dd>

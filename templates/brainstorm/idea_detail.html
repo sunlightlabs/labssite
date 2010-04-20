@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-{% ifequal idea.moderation_object.moderation_status -1 %}
+{% if idea.moderation_object.moderation_status == -1 %}
 
 <div id="ideas" class="module">
     <div class="contentHeader">
@@ -71,5 +71,5 @@
         {% endwith %}
     </div>
 </div>
-{% endifequal %}
+{% endif %}
 {% endblock %}
