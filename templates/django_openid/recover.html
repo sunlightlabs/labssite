@@ -10,6 +10,7 @@
     <p class="tip">Forgotten your password? Enter your username or e-mail address below, and we'll e-mail instructions for setting a new one.</p>
 
     <form id="resetPassword" action="" method="post">
+        {% csrf_token %}
         {% if message %}<p class="error">{{message}}</p>{% endif %}
         <label for="id_recover">Username or Email:</label>
         <input id="id_recover" type="text" name="recover">

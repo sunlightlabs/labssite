@@ -28,6 +28,7 @@ $(document).ready(function(){
     </div>
     <div class="module">
         <form id="projectForm" method="POST" action=".">
+            {% csrf_token %}
             {% include "projects/base_form.html" %}
             {{ link_formset.management_form }}
             <h3>Links</h3>
@@ -133,6 +134,7 @@ $(document).ready(function(){
 <div class="module">
     <p class="tip">Let the community know what you need from them to make your project great.</p>
     <form method="POST" action="{% url new_project_ask project.slug %}">
+        {% csrf_token %}
         <textarea id="helpMessage" rows="5" cols="32" name="message" maxlength="200"></textarea>
         <p class="charsRemaining">200 characters remaining</p>
        <button type="submit" class="submitBtn" name="post">
@@ -146,6 +148,7 @@ $(document).ready(function(){
         {% for ask in project.asks.all %}
         <li>
             <form action="{% url delete_ask ask.id %}" method="POST">
+                {% csrf_token %}
                 <button type="submit" value="Delete">X</button>
              </form>
              <p>{{ask}}</p>

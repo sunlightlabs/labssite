@@ -45,6 +45,7 @@
             </a>
             {% endif %}
             <form id="comment" {% if not user.is_authenticated %}class="nonuser_comment"{% endif %} method="POST" action="{% comment_form_target %}">
+            {% csrf_token %}
                 <input type="hidden" name="next" value="{{comment_obj.get_absolute_url}}" />
                 {% for field in comment_form %}
                     {% if field.is_hidden %}

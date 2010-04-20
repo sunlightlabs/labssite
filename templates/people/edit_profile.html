@@ -36,6 +36,7 @@
     <div class="module">
         <p class="tip">Let the labs community know more about you.</p>
         <form id="accountForm" method="POST" action="." enctype="multipart/form-data">
+            {% csrf_token %}
             <ul>
 		<li><label>Current Avatar</label>{% gravatar user.email %}</li>
 		<p class="tip">To edit your avatar visit <a href="http://gravatar.com">gravatar.com</a></p>
@@ -82,6 +83,7 @@
 <h3 class="space">Log In Information</h3>
 <div class="module">
     <form method="POST" action="{% url change_password %}">
+        {% csrf_token %}
         <ul>
             {{ password_form.as_ul }}
             <button type="submit" class="submitBtn">

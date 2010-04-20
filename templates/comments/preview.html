@@ -6,6 +6,7 @@
 {% block content %}
 
 <form id="errorForm" action="{% comment_form_target %}" method="post">
+{% csrf_token %}
 {% if form.errors %}
 <h2 id="errorTitle">{% blocktrans count form.errors|length as counter %}Please correct the error below{% plural %}Please Correct the Errors Below{% endblocktrans %}</h2>
 <div class="module">

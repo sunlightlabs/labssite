@@ -85,6 +85,7 @@
             <h3>I'm Interested</h3>
             {% if user.is_authenticated %}
             <form id="joinProjectForm" method="POST" action=".">
+                {% csrf_token %}
                 <ul>
                     {{ form.as_ul }}
                     <button type="submit" class="signupBtn">

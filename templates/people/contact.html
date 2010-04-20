@@ -12,6 +12,7 @@
     <div class="module">
         <p class="tip">Please note that when contacting this user your email will be visible to them so that they may reply.</p>
         <form id="contactForm" action="." method="post">
+            {% csrf_token %}
             <ul>
                 {{ form.as_ul }}
                 <li class="submit">

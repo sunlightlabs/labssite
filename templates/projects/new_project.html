@@ -15,6 +15,7 @@ Sunlight Labs: Create Project
     </div>
     <div class="module">
         <form id="projectForm" method="POST" action=".">
+            {% csrf_token %}
             {% include "projects/base_form.html" %}
 
             <button type="submit" class="submitBtn">

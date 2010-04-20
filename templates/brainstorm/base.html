@@ -18,6 +18,7 @@
 <div id="submitIdea" class="module">
     <p class="tip">Have a great idea, <strong>tell us about it using the form below</strong>!</p>
     <form method="POST" action="{% url new_idea %}">
+        {% csrf_token %}
         <ul>
             <li>
                 <label for="id_title">Title</label>
