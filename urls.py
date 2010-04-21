@@ -35,9 +35,9 @@ urlpatterns = patterns('',
     url(r'^blog/$', 'labssite.labs.views.blog_wrapper'),
     url(r'^blog/', include('blogdor.urls')),
 
-    # contact-form
-    url(r'^contact/sent/$', 'labssite.labs.views.contact_sent', {"form_class": LabsContactForm}),
-    url(r'^contact/', include('contact_form.urls'), {"form_class": LabsContactForm, "fail_silently": False}),
+    # contact form
+    url(r'^contact/$', 'labssite.labs.views.contact_form', name='contact_form'),
+    url(r'^contact/sent/$', 'labssite.labs.views.contact_sent', name='contact_form_sent'),
 
     url(r'^newsfeed/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': news_feed}, name="newsfeed_feeds"),
 

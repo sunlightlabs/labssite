@@ -1,13 +1,15 @@
 import urllib2
+from django.core.mail import send_mail
 from django.http import HttpResponse
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
+from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
 from django.contrib.auth.decorators import login_required
 from django.contrib.flatpages.models import FlatPage
 from django.views.decorators.cache import cache_control
 from django.core.cache import cache
-from contact_form.views import contact_form
+from labs.forms import LabsContactForm
 from blogdor.models import Post
 from blogdor.views import archive
 from simplesurvey.models import AnswerSet, QuestionSet
@@ -41,8 +43,31 @@ def blog_wrapper(request):
 
     return archive(request)
 
-def contact_sent(request, form_class):
-    return contact_form(request, form_class, template_name='contact_form/contact_form_sent.html')
+def contact_form(request):
+
+    recipient_list = ['swells@sunlightfoundation.com','cjohnson@sunlightfoundation.com','jcarbaugh@sunlightfoundation.com', 'jturk@sunlightfoundation.com']
+    subject = "[SunlightLabs.com] Contact"
+
+    if request.method == 'POST':
+        form = LabsContactForm(request.POST)
+        if form.is_valid():
+            message = render_to_string('labs/contact_email.txt',
+                                       form.cleaned_data)
+            send_mail(subject, message, form.cleaned_data['email'],
+                      recipient_list, fail_silently=False)
+            return redirect('contact_form_sent')
+    else:
+        if not request.user.is_anonymous():
+            form = LabsContactForm(initial={'email':request.user.email})
+        else:
+            form = LabsContactForm()
+
+    return render_to_response('labs/contact_form.html', {'form': form},
+                              context_instance=RequestContext(request))
+
+def contact_sent(request):
+    return render_to_response('labs/contact_form_sent.html',
+                        context_instance=RequestContext(request))
 
 def image_wrapper(request, image_path):
     image_path = "images/%s" % image_path
