@@ -36,7 +36,6 @@ urlpatterns = patterns('',
 
     # contact form
     url(r'^contact/$', 'labssite.labs.views.contact_form', name='contact_form'),
-    url(r'^contact/sent/$', 'labssite.labs.views.contact_sent', name='contact_form_sent'),
 
     url(r'^newsfeed/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': news_feed}, name="newsfeed_feeds"),
 
