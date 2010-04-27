@@ -4,10 +4,10 @@
 {% block extrahead %}
 <link type="text/css" href="http://jqueryui.com/latest/themes/base/ui.all.css" rel="stylesheet" />
 {% css "ui.multiselect.css" %}
-<script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.core.js"></script>
-<script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.draggable.js"></script>
-<script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.sortable.js"></script>
-<script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.datepicker.js"></script>
+{% js "ui.core.js" %}
+{% js "ui.draggable.js" %}
+{% js "ui.sortable.js" %}
+{% js "ui.datepicker.js" %}
 {% js "ui.multiselect.js" %}
 <script type="text/javascript">
     $(function() {
