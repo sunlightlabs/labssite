@@ -2,12 +2,9 @@
 {% load media %}
 
 {% block extrahead %}
-<link type="text/css" href="http://jqueryui.com/latest/themes/base/ui.all.css" rel="stylesheet" />
+{% css "ui.jquery-ui-1.7.2.custom.css" %}
 {% css "ui.multiselect.css" %}
-{% js "ui.core.js" %}
-{% js "ui.draggable.js" %}
-{% js "ui.sortable.js" %}
-{% js "ui.datepicker.js" %}
+{% js "jquery-ui-1.7.2.custom.min.js" %}
 {% js "ui.multiselect.js" %}
 <script type="text/javascript">
     $(function() {
