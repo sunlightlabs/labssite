@@ -22,7 +22,7 @@ news_feed = {
 
 urlpatterns = patterns('',
     # admin
-    url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
+#    url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^search/', include('haystack.urls')),
