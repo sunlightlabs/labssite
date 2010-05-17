@@ -50,6 +50,9 @@ urlpatterns = patterns('',
 
     # labs specific
     url(r'^$', 'labssite.labs.views.index', name='index'),
+
+
+    url(r'^judging/$', 'judging.views.judge_form', name='judge_form'),
 )
 
 # brainstorm - custom urls so slug isn't needed

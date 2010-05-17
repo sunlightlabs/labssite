@@ -93,6 +93,7 @@ INSTALLED_APPS = (
     'meritbadges',
     'brainstorm',
     'labssite.labs',
+    'judging',
     'anthill.people',
     'anthill.projects',
     'anthill.events',
