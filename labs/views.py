@@ -73,3 +73,6 @@ def image_wrapper(request, image_path):
     image_path = "images/%s" % image_path
     data = {"image_path": image_path}
     return render_to_response("labs/image_wrapper.html", data)
+
+def sponsor_iframe(request):
+    return render_to_response("labs/sponsor_iframe.html", {'url': request.GET['url']})
