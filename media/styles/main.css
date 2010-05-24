@@ -640,6 +640,14 @@ a#redhatLogo{ background: url(../images/logoSponsor_redhat.png) top center no-re
 a#fedoraLogo{ background: url(../images/logoSponsor_fedora.png) top center no-repeat; width: 158px; height: 50px;}
 a#palantir{ background: url(../images/logoSponsor_palantir.png) top center no-repeat; width: 155px; height: 37px;}
 
+ul.iframeLogo { text-align: center; }
+ul.iframeLogo a { margin: 0 auto 0;}
+ul.iframeLogo a#techwebLogo { margin-top: 18px; }
+ul.iframeLogo a#palantir { margin-top: 28px;}
+ul.iframeLogo a#oreillyLogo { margin-top: 38px;}
+ul.iframeLogo a#googleLogo { margin-top: 30px;}
+ul.iframeLogo a#adobeLogo { background: url(../images/logoSponsor_adobeSm.png) top center no-repeat; width: 59px; height: 69px;}
+ul.iframeLogo a#sunlightLogo { background: url(../images/logoSponsor_sunlight.png) top center no-repeat; width: 134px; height: 61px; }
 
 div.labsMembers { background: url(../images/gear_bg.png) top left no-repeat; width: 220px; }
 ul#labsMembers li{ width: 105px; height: 100px; float: left; margin-top: -20px;}
@@ -742,3 +750,5 @@ h2.addedEvent { float: left; width: 550px; }
 
 span.redacted { background: #000000; color: #000000; }
 span.redacted a { color: #000000; }
+
+
