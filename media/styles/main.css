@@ -282,7 +282,7 @@ a#leadParticipant img, div#recentMembers img{ float: left; height: 64px; margin:
 div#recentMembers li { height: 70px; margin-bottom: 18px;}
 ul#teamParticipants img{ width: 40px;}
 ul#teamParticipants li { float: left; width: 70px; margin-bottom: 10px;}
-ul#teamParticipants span { display: block;}
+ul#teamParticipants span { display: block; line-height: 17px;}
 
 div#recentMembers span#leadName { margin-top: 0; padding-top: 20px;}
 
@@ -402,6 +402,8 @@ div#ltColumn div.pullQuote p { text-align: center; font-size: 170%; font-style: 
 a#centered { text-align: center; width: 665px; display: block; font-size:110%; color: #3D868D; font-weight: bold;}
 
 div#languages { -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #F0F0E5 none repeat scroll 0 0; border: 1px solid #D5D2C6; padding: 20px; width: 120px; float: right;}
+div#projectDetail div#languages ul { width: 120px;}
+div#languages ul li { margin-bottom: 10px; line-height: 17px;}
 div#projectDetail div#timeline { width: 490px; padding-right: 30px; margin-top: 25px; }
 
 div#ltColumn ul.leftTimeline li{ padding-left: 0;}
