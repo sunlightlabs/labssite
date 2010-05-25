@@ -45,21 +45,20 @@
             </a>
             {% endif %}
             <form id="comment" {% if not user.is_authenticated %}class="nonuser_comment"{% endif %} method="POST" action="{% comment_form_target %}">
+            {% csrf_token %}
                 <input type="hidden" name="next" value="{{comment_obj.get_absolute_url}}" />
                 {% for field in comment_form %}
                     {% if field.is_hidden %}
                         {{ field }}
                     {% else %}
                     {% if field.errors %}<p class="error">{{ field.errors }}</p>{% endif %}
-                        {% ifequal field.name "honeypot" %}
+                        {% if field.name == "honeypot" %}
                             <p style="display:none;">{{ field.label_tag }} {{ field }}</p>
                         {% else %}
-                            {% if not user.is_authenticated %}
-                            {% ifnotequal field.name "comment" %}
+                            {% if not user.is_authenticated and field.name != "comment" %}
                                 {{ field.label_tag }} {{ field }}
-                            {% endifnotequal %}
                             {% endif %}
-                        {% endifequal %}
+                        {% endif %}
                     {% endif %}
                 {% endfor %}
                 {% if not user.is_authenticated %}

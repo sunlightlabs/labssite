@@ -3,16 +3,16 @@
 
 {% block title %}
 Sunlight Labs:
-{% ifequal projects "official" %} Official {% endifequal %}
-{% ifequal projects "community" %} Community {% endifequal %}
+{% if projects == "official" %} Official {% endif %}
+{% if projects == "community" %} Community {% endif %}
 Projects
 {% endblock title %}
 
 {% block content %}
 <div class="contentHeader">
     <h2 class="projects projectHeader">
-        {% ifequal projects "official" %} Official {% endifequal %}
-        {% ifequal projects "community" %} Community {% endifequal %}
+        {% if projects == "official" %} Official {% endif %}
+        {% if projects == "community" %} Community {% endif %}
         Projects
         {% if tag %} tagged {{tag}} {% endif %}
     </h2>
@@ -24,13 +24,13 @@ Projects
     <div id="projectNav" class="projectList_nav">
         <ul>
             <li id="allProjects">
-            <a {% ifequal projects "all" %}class="active"{% endifequal %} href="{% url all_projects %}">All Projects</a>
+            <a {% if projects == "all" %}class="active"{% endif %} href="{% url all_projects %}">All Projects</a>
             </li>
             <li id="labsProjects">
-                <a {% ifequal projects "official" %}class="active"{% endifequal %} href="{% url official_projects %}">Labs Projects</a>
+                <a {% if projects == "official" %}class="active"{% endif %} href="{% url official_projects %}">Labs Projects</a>
             </li>
             <li id="communityProjects">
-                <a {% ifequal projects "community" %}class="active"{% endifequal %} href="{% url community_projects %}">Community Projects</a>
+                <a {% if projects == "community" %}class="active"{% endif %} href="{% url community_projects %}">Community Projects</a>
             </li>
         </ul>
     </div>

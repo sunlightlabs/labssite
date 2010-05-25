@@ -26,9 +26,9 @@
             {% else %}
                 <h2 class="fn nickname">{{p_user.username}}</h2>
             {% endif %}
-            {% ifequal user.id p_user.id %}
+            {% if user.id == p_user.id %}
                 <a href="{% url edit_profile %}">(edit profile)</a>
-            {% endifequal %}
+            {% endif %}
             <span id="personIdentifier" class="role">{{p_user.profile.get_role_display|safe}}</span>
         </div>
         <div id="userDetails" class="module">
@@ -71,9 +71,9 @@
                     <li><a class="projectName" href="{{project.get_absolute_url}}">{{project}}</a>
 
                     {# only show link if user==p_user==project.lead #}
-                    {% ifequal user p_user %}
-                    {% ifequal user project.lead %}<a class="projectEdit" href="{% url edit_project project.slug %}">edit project</a>{% endifequal %}
-                    {% endifequal %}
+                    {% if user == p_user and user == project.lead %}
+                    <a class="projectEdit" href="{% url edit_project project.slug %}">edit project</a>
+                    {% endif %}
                     </li>
                     {% endfor %}
                     </ul>

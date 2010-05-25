@@ -4,11 +4,11 @@
     <a href="?page={{page_obj.previous_page_number}}">Prev</a>
     {% endif %}
     {% for num in paginator.page_range %}
-		{% ifequal num page_obj.number %}
+		{% if num == page_obj.number %}
 	    	<span class="current">{{num}}</span>
 	    {% else %}
 	    	<a href="?page={{num}}">{{num}}</a>
-	    {% endifequal %}
+	    {% endif %}
 	
         
     {% endfor %}

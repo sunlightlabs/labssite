@@ -59,8 +59,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
     'django_openid.consumer.SessionConsumer',
     'gatekeeper.middleware.GatekeeperMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
@@ -76,6 +78,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'django.contrib.gis',
     'django.contrib.markup',
+    'django.contrib.messages',
     'django.contrib.redirects',
     'django.contrib.sessions',
     'django.contrib.sites',
@@ -87,7 +90,6 @@ INSTALLED_APPS = (
     'feedinator',
     'gatekeeper',
     'blogdor',
-    'simplesurvey',
     'newsfeed',
     'popular',
     'meritbadges',
@@ -149,8 +151,6 @@ ANTHILL_ROLES = (
     ('dev', 'Developer'),
     ('both', 'Developer/Designer'),
 )
-
-SIMPLESURVEY_COMPLETE_REDIRECT = "/aa2judging/"
 
 RESTRUCTUREDTEXT_FILTER_SETTINGS = {'initial_header_level': 3}
 LOGIN_URL = '/accounts/login/'

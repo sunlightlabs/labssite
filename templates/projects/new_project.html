@@ -19,6 +19,7 @@ Sunlight Labs: Create Project
     <p>To compete in Design for America, please use this form. To have a valid entry, you must do take two steps. First, fill out the form below to create a new project, and give the project the tag "D4A". Once you hit submit, an expanded form will appear. Please add the links to your original artwork in the links section of that form, and then click on "Update your Project".</p>
 
         <form id="projectForm" method="POST" action=".">
+            {% csrf_token %}
             {% include "projects/base_form.html" %}
 
             <button type="submit" class="submitBtn">

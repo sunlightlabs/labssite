@@ -7,13 +7,12 @@ from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
 from django.contrib.auth.decorators import login_required
 from django.contrib.flatpages.models import FlatPage
+from django.contrib import messages
 from django.views.decorators.cache import cache_control
 from django.core.cache import cache
 from labs.forms import LabsContactForm
 from blogdor.models import Post
 from blogdor.views import archive
-from simplesurvey.models import AnswerSet, QuestionSet
-from simplesurvey.forms import SurveyForm
 from anthill.projects.models import Project
 
 def index(request):
@@ -55,7 +54,10 @@ def contact_form(request):
                                        form.cleaned_data)
             send_mail(subject, message, form.cleaned_data['email'],
                       recipient_list, fail_silently=False)
-            return redirect('contact_form_sent')
+
+            # use a message for success
+            messages.success(request, 'Your message has been sent, thank you for your email.')
+            form = LabsContactForm()
     else:
         if not request.user.is_anonymous():
             form = LabsContactForm(initial={'email':request.user.email})
@@ -64,10 +66,6 @@ def contact_form(request):
 
     return render_to_response('labs/contact_form.html', {'form': form},
                               context_instance=RequestContext(request))
-
-def contact_sent(request):
-    return render_to_response('labs/contact_form_sent.html',
-                        context_instance=RequestContext(request))
 
 def image_wrapper(request, image_path):
     image_path = "images/%s" % image_path

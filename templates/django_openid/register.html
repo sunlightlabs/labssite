@@ -29,6 +29,7 @@
         </div>
         <div id="signupOptions">
             <form id="openid_signupForm" method="POST" action="{{action}}">
+                {% csrf_token %}
                 <ul>
                     <li>
                         <label for="openid_url">OpenID</label>
@@ -40,18 +41,21 @@
                 </ul>
             </form>
             <form id="google_signupForm" method="POST" action="{{action}}">
+                {% csrf_token %}
                 <input type="hidden" name="openid_url" value="http://www.google.com/accounts/o8/id" />
                 <button type="submit" class="signupBtn">
                     <span>Sign Up With Your Google Account</span>
                 </button>
             </form>
             <form id="yahoo_signupForm" method="POST" action="{{action}}">
+                {% csrf_token %}
                 <input type="hidden" name="openid_url" value="http://yahoo.com" />
                 <button type="submit" class="signupBtn">
                     <span>Sign Up With Your Yahoo ID</span>
                 </button>
             </form>
             <form id="aol_signupForm" method="POST" action="{{action}}">
+                {% csrf_token %}
                 <ul>
                     <li>
                         <label for="aol_url">AOL Screenname</label>
@@ -68,6 +72,7 @@
         <div id="signupOptions">
         {% endif %}
             <form id="standard_signupForm" method="post" action=".">
+                {% csrf_token %}
                 <ul>
                     <li> {{ form.username.label_tag }} {{ form.username }} {{ form.username.errors }}</li>
                     <li> {{ form.email.label_tag }} {{ form.email }} {{ form.email.errors }} </li>

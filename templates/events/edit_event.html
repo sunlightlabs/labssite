@@ -27,10 +27,11 @@
         <p id="eventDescription"> Use the form below to tell the community about your event. Then other people will be able to <a href="{% url event_search %}">search for your event</a> and sign up for it.</p>
         {% endif %}
         <form id="eventForm" method="POST" action="." enctype="multipart/form-data">
+            {% csrf_token %}
             <ul>
                 {% for field in form %}
-                    {% ifnotequal field.name "start_date" %}
-                    {% ifnotequal field.name "end_date" %} 
+                    {% if field.name != "start_date" %}
+                        {% if field.name != "end_date" %} 
                         {# normal field display #}
                         <li> {{field.errors}} {{field.label_tag}} {{ field }} </li>
 
@@ -42,14 +43,14 @@
                             <ul class="timeDetails">{{ field }}</ul>
                         </li>
 
-                        {% endifnotequal %}
+                        {% endif %}
                     {% else %} {# start_date #}
                         <li>
                         {{ field.errors }}
                         <label id="startTitle">Start</label>
                         <ul class="timeDetails"> {{ field }} </ul>
                         </li>
-                    {% endifnotequal %}
+                    {% endif %}
                 {% endfor %}
                 <button type="submit" class="saveBtn">
                     <span>Save Changes</span>
