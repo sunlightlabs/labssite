@@ -133,7 +133,7 @@ ABSOLUTE_URL_OVERRIDES = {
     'brainstorm.subsite': lambda o: '/ideas/',
 }
 
-GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','cjohnson@sunlightfoundation.com',
+GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','tlee@sunlightfoundation.com',
                             'jturk@sunlightfoundation.com']
 
 GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site3/images/avatar.jpg"

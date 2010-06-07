@@ -44,7 +44,7 @@ def blog_wrapper(request):
 
 def contact_form(request):
 
-    recipient_list = ['swells@sunlightfoundation.com','cjohnson@sunlightfoundation.com','jcarbaugh@sunlightfoundation.com', 'jturk@sunlightfoundation.com']
+    recipient_list = ['swells@sunlightfoundation.com','tlee@sunlightfoundation.com','jcarbaugh@sunlightfoundation.com', 'jturk@sunlightfoundation.com']
     subject = "[SunlightLabs.com] Contact"
 
     if request.method == 'POST':
