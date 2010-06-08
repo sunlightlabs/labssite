@@ -17,7 +17,7 @@ Sunlight Labs: Projects - {{project.name}}
     </div>
     <div class="module">
         <p>
-        This project has been removed, we should have some copy here explaining what our moderation procedures are.
+        This project has been removed.
 
         <dl class="moderationMetadata">
             <dt>Removed by</dt>
@@ -46,6 +46,8 @@ Sunlight Labs: Projects - {{project.name}}
     </div>
     {% endif %}
 
+    {% tags_for_object project as tags %}
+
     <div id="projectDetail" class="module">
         <dl class="entryMetadata">
             {% if project.official %}
@@ -72,8 +74,15 @@ Sunlight Labs: Projects - {{project.name}}
 
         </dl>
 
-        {% tags_for_object project as tags %}
         <div id="languages">
+            {% if "d4a-winner" in project.tags %}
+            <img alt="Design For America Winner" title="Design For America Winner" src="http://assets.sunlightlabs.com/site3/images/icon_apps1.png">
+            {% else %}
+                {% if "d4a" in project.tags %}
+                <img alt="Design For America Entry" title="Design For America Entry" src="http://assets.sunlightlabs.com/site3/images/icon_apps.png">
+                {% endif %}
+            {% endif %}
+
             <h3 id="skillsHeader">Tags</h3>
             <ul>
                 {% for tag in tags %}
