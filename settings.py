@@ -63,6 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django_openid.consumer.SessionConsumer',
     'gatekeeper.middleware.GatekeeperMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfResponseMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
