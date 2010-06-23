@@ -654,8 +654,7 @@ ul.iframeLogo a#sunlightLogo { background: url(../images/logoSponsor_sunlight.pn
 div.labsMembers { background: url(../images/gear_bg.png) top left no-repeat; width: 220px; }
 ul#labsMembers li{ width: 105px; height: 100px; float: left; margin-top: -20px;}
 ul#labsMembers li a { width: 105px; height: 100px; text-indent: -9999em; display: block;}
-ul#labsMembers li#clay { margin: 20px auto 0; float: none; height: 115px;}
-ul#labsMembers li#clay a{ background: url(../images/bot_clay.png) 20px top no-repeat; height: 115px;}
+ul#labsMembers li#tom { margin: 20px auto 0; float: none; height: 115px;}
 li#ali a{ background: url(../images/bot_ali.png) top left no-repeat;}
 li#david a{ background: url(../images/bot_david.png) top left no-repeat;}
 li#eric a{ background: url(../images/bot_eric.png) top left no-repeat;}
