@@ -214,7 +214,6 @@ div#ltColumn div.voteBox button.votedBtn { padding-top: 15px; }
 div#ltColumn p{ padding-right: 30px;}
 div#ltColumn p.tip, div#rtColumn p.tip { font-style: oblique; line-height: 18px; font-size: 95%; margin-bottom: 30px;}
 div#rtColumn p.tip{ margin-bottom: 20px;}
-strong { font-weight: bold;}
 
 div.idea, div.project, dd.endEvent_list{ margin-bottom: 20px; background: url(../images/line_space2.png) left bottom no-repeat; padding-bottom: 30px; }
 
@@ -727,6 +726,9 @@ div#blog_detail ul#FCCPost>li { list-style-type: none; margin-bottom: 5px; margi
 div#blog_detail ul#FCCPost>li { font-size: 110%; font-weight: bold;}
 div#blog_detail ul.subnav li { margin-bottom: 10px;}
 /*ul.subnav { display: none;}*/
+
+strong, b { font-weight: bold;}
+em, i { font-style: oblique;}
 
 a.googleGroup { color: #fff; font-size: 120%; text-decoration: none; background: url(../images/continue_arrow.png) right 3px no-repeat; padding-right: 20px;}
 
