@@ -15,10 +15,11 @@
 	<div class="AuthorName">
             <a name="c{{comment.id}}"></a>
             <span class="commentMetaAuthor">
-                {% if comment.user_url or comment.user %}
-                <a href="{% firstof comment.user_url comment.user.get_absolute_url %}">
+                {% if comment.user %}
+                    <a href="{{comment.user.get_absolute_url }}">
                 {% endif %}
-                    {% firstof comment.user_name comment.user.first_name comment.user %}{% if comment.user_url or comment.user %}</a>{% endif %}
+                {% firstof comment.user_name comment.user.first_name comment.user %}
+                {% if comment.user %}</a>{% endif %}
             </span>
             <span class="commentMetaDate">{{comment.submit_date|date:"m/d/Y P"}}</span>
             <span class="commentPermalink"><a href="{{comment_obj.get_absolute_url}}#c{{comment.id}}">(permalink)</a>
@@ -55,7 +56,7 @@
                         {% if field.name == "honeypot" %}
                             <p style="display:none;">{{ field.label_tag }} {{ field }}</p>
                         {% else %}
-                            {% if not user.is_authenticated and field.name != "comment" %}
+                            {% if not user.is_authenticated and field.name != "comment" and field.name != "url" %}
                                 {{ field.label_tag }} {{ field }}
                             {% endif %}
                         {% endif %}
@@ -65,12 +66,6 @@
                 <label>Comment</label>
                 {% endif %}
                 <textarea id="text" {% if not user.is_authenticated %}class="nonuser_textarea"{% endif %} class="textarea" name="comment" cols="32" rows="5"></textarea>
-                <!--
-                <div id="subscribe">
-                    <input type="checkbox" name="subscribe"/>
-                    <label>Subscribe to this stream</label>
-                </div>
-                -->
                 <button class="postBtn" {% if not user.is_authenticated %}id="nonuser_postBtn"{% endif %} name="submit" type="submit">
                     <span>Post!</span>
                 </button>

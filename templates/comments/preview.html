@@ -24,8 +24,11 @@
     {% if field.is_hidden %}
         {{ field }}
     {% else %}
-          {% if field.errors %}<p class="error">{{ field.errors }}</p>{% endif %}
-          <p{% if field.name == "honeypot" %} style="display:none;"{% endif %}>{{ field.label_tag }} {{ field }}</p>
+          {% if field.name != "url" %}
+              {% if field.errors %}<p class="error">{{ field.errors }}</p>{% endif %}
+
+              <p{% if field.name == "honeypot" %} style="display:none;"{% endif %}>{{ field.label_tag }} {{ field }}</p>
+          {% endif %}
     {% endif %}
 {% endfor %}
     <button class="postBtn" id="nonuser_postBtn" name="post" type="submit"><span>Post</span></button>
