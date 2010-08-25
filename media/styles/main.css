@@ -651,21 +651,22 @@ ul.iframeLogo a#adobeLogo { background: url(../images/logoSponsor_adobeSm.png) t
 ul.iframeLogo a#sunlightLogo { background: url(../images/logoSponsor_sunlight.png) top center no-repeat; width: 134px; height: 61px; }
 
 div.labsMembers { background: url(../images/gear_bg.png) top left no-repeat; width: 220px; }
-ul#labsMembers li{ width: 105px; height: 100px; float: left; margin-top: -20px;}
-ul#labsMembers li a { width: 105px; height: 100px; text-indent: -9999em; display: block;}
+ul#labsMembers li{ width: 110px; height: 100px; float: left; margin-top: -20px;}
+ul#labsMembers li a { width: 110px; height: 100px; text-indent: -9999em; display: block;}
 ul#labsMembers li#tom { margin: 20px auto 0; float: none; height: 115px;}
-li#ali a{ background: url(../images/bot_ali.png) top left no-repeat;}
+li#aaron a{ background: url(../images/bot_aaron.png) top left no-repeat;}
+li#ali a{ background: url(../images/bot_ali_right.png) top left no-repeat;}
+li#alison a{ background: url(../images/bot_alison.png) top left no-repeat;}
 li#david a{ background: url(../images/bot_david.png) top left no-repeat;}
 li#eric a{ background: url(../images/bot_eric.png) top left no-repeat;}
-li#greg a{ background: url(../images/bot_greg.png) top left no-repeat;}
-li#james a{ background: url(../images/bot_james.png) top left no-repeat;}
-li#jeremy a{ background: url(../images/bot_jeremy.png) top left no-repeat;}
-li#josh a{ background: url(../images/bot_josh.png) top left no-repeat;}
-li#kevin a{ background: url(../images/bot_kevin.png) top left no-repeat;}
-li#luigi a{ background: url(../images/bot_luigi.png) top left no-repeat;}
-li#tim a{ background: url(../images/bot_tim_right.png) top left no-repeat;}
-li#tom a{ background: url(../images/bot_tom_left.png) top left no-repeat;}
-li#kaitlin a{ background: url(../images/bot_kaitlin.png) top left no-repeat;}
+li#james a{ background: url(../images/bot_james_left.png) top left no-repeat;}
+li#jeremy a{ background: url(../images/bot_jeremy_right.png) top left no-repeat;}
+li#josh a{ background: url(../images/bot_josh_left.png) top left no-repeat;}
+li#kevin a{ background: url(../images/bot_kevin_left.png) top left no-repeat;}
+li#luigi a{ background: url(../images/bot_luigi_right.png) top left no-repeat;}
+li#tim a{ background: url(../images/bot_tim.png) top left no-repeat;}
+li#tom a{ background: url(../images/bot_tom_left.png) 20px top no-repeat;}
+li#kaitlin a{ background: url(../images/bot_kaitlin_right.png) top left no-repeat;}
 li#ethan a{ background: url(../images/bot_ethan.png) top left no-repeat;}
 
 ul#labsMembers li.memberRight{ margin-top: 30px;}
