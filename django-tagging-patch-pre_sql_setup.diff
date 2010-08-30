@@ -1,0 +1,12 @@
+Index: tagging/models.py
+===================================================================
+--- tagging/models.py	(revision 186)
++++ tagging/models.py	(working copy)
+@@ -165,6 +165,7 @@
+         if getattr(queryset.query, 'get_compiler', None):
+             # Django 1.2+
+             compiler = queryset.query.get_compiler(using='default')
++            compiler.pre_sql_setup()
+             extra_joins = ' '.join(compiler.get_from_clause()[0][1:])
+             where, params = queryset.query.where.as_sql(
+                 compiler.quote_name_unless_alias, compiler.connection
