@@ -94,7 +94,6 @@ INSTALLED_APPS = (
     'newsfeed',
     'popular',
     'meritbadges',
-    'brainstorm',
     'labssite.labs',
     'anthill.people',
     'anthill.projects',
@@ -130,8 +129,6 @@ AKISMET_KEY = '54f2d2830563'
 
 ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda o: "/people/%s/" % o.username,
-    'brainstorm.idea': lambda o: "/ideas/%s/" % o.id,
-    'brainstorm.subsite': lambda o: '/ideas/',
 }
 
 GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','tlee@sunlightfoundation.com',

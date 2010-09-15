@@ -7,13 +7,11 @@ from newsfeed.models import Feed
 from anthill.events.models import Event
 from anthill.projects.models import Project, Role, Ask
 from anthill.people.signals import message_sent
-from brainstorm.models import Idea
 from meritbadges.models import award_badge
 import gatekeeper
 import popular
 
 
-gatekeeper.register(Idea, auto_moderator=lambda o: True)
 gatekeeper.register(Project, auto_moderator=lambda o: True)
 
 def url_to_post(url):
@@ -41,13 +39,6 @@ def event_callback(sender, instance, created, **kwargs):
                           body=instance.title, link=instance.get_absolute_url())
 post_save.connect(event_callback, sender=Event)
 
-def idea_callback(sender, instance, created, **kwargs):
-    if created:
-        feed.items.create(user=instance.user, item_type='idea',
-                          body=unicode(instance),
-                          link=instance.get_absolute_url())
-post_save.connect(idea_callback, sender=Idea)
-
 def project_callback(sender, instance, created, **kwargs):
     if created:
         feed.items.create(user=instance.lead, item_type='project',
@@ -58,7 +49,6 @@ def project_callback(sender, instance, created, **kwargs):
         # assign badge to lead
         award_badge(instance.lead, 'lead-project')
 post_save.connect(project_callback, sender=Project)
-
 
 def user_callback(sender, instance, created, **kwargs):
     if created:

@@ -4,7 +4,6 @@ from django.contrib.gis import admin
 from labs.feeds import LabsLatestComments, LabsLatestPosts, LabsLatestForTag, LabsLatestForAuthor
 from labs.forms import LabsContactForm
 from labs.registration import registration_consumer
-from brainstorm.feeds import SubsiteFeed
 
 admin.autodiscover()
 
@@ -50,19 +49,6 @@ urlpatterns = patterns('',
     url(r'^$', 'labssite.labs.views.index', name='index'),
 
     url(r'^d4a_entry/$', 'labssite.labs.views.sponsor_iframe'),
-)
-
-# brainstorm - custom urls so slug isn't needed
-urlpatterns += patterns('brainstorm.views',
-    url(r'^ideas/$', 'idea_list', {'ordering': 'most_popular', 'slug':'ideas'}, name='ideas_popular'),
-    url(r'^ideas/latest/$', 'idea_list', {'ordering': 'latest', 'slug': 'ideas'}, name='ideas_latest'),
-    url(r'^ideas/(?P<id>\d+)/$', 'idea_detail', {'slug': 'ideas'}, name='idea_detail'),
-    url(r'^ideas/new_idea/$', 'new_idea', {'slug': 'ideas'}, name='new_idea'),
-    url(r'^ideas/vote/$', 'vote', name='idea_vote'),
-)
-urlpatterns += patterns('',
-    url(r'^ideas/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
-        {'feed_dict': {'latest': SubsiteFeed}}),
 )
 
 if settings.DEBUG:
