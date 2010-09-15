@@ -43,7 +43,8 @@ urlpatterns = patterns('',
     # anthill
     url(r'^people/', include('anthill.people.urls')),
     url(r'^projects/', include('anthill.projects.urls')),
-    url(r'^events/', include('anthill.events.urls')),
+    url(r'^events/', 'django.views.generic.simple.redirect_to',
+        {'url': 'http://meetup.com/sunlightfoundation/'}),
 
     # labs specific
     url(r'^$', 'labssite.labs.views.index', name='index'),

@@ -4,7 +4,6 @@ from django.contrib.comments.models import Comment
 from feedinator.models import FeedEntry
 from blogdor.models import Post
 from newsfeed.models import Feed
-from anthill.events.models import Event
 from anthill.projects.models import Project, Role, Ask
 from anthill.people.signals import message_sent
 from meritbadges.models import award_badge
@@ -32,12 +31,6 @@ post_save.connect(feedentry_callback, sender=FeedEntry)
 
 feed, created = Feed.objects.get_or_create(slug='main', defaults={'title':'main feed'})
 noisy, created = Feed.objects.get_or_create(slug='noisy', defaults={'title':'noisy feed'})
-
-def event_callback(sender, instance, created, **kwargs):
-    if created:
-        feed.items.create(user=instance.creator, item_type='event',
-                          body=instance.title, link=instance.get_absolute_url())
-post_save.connect(event_callback, sender=Event)
 
 def project_callback(sender, instance, created, **kwargs):
     if created:

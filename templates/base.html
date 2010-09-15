@@ -3,7 +3,7 @@
 {% load media %}
 {% load twitter_tags %}
 {% load people %}
-{% load events %}
+
 <html xmlns="http://www.w3.org/1999/xhtml" >
     <head>
         <meta name="keywords" content="sunlight labs, sunlight foundation, government, transparency, washington dc, developers, designers" />
@@ -56,7 +56,7 @@
                             <li id="nav_blog"><a href="{% url blogdor_archive %}">Blog</a></li>
                             <li id="nav_people"><a href="{% url user_search %}">People</a></li>
                             <li id="nav_projects"><a href="{% url projects %}">Projects</a></li>
-                            <li id="nav_events"><a href="{% url event_search %}">Events</a></li>
+                            <li id="nav_events"><a href="http://meetup.com/sunlightfoundation/">Events</a></li>
                             <li id="nav_wiki"><a href="http://wiki.sunlightlabs.com/">Wiki</a></li>
                             <li id="nav_about"><a href="/about/">About</a></li>
                             <li id="nav_contact"><a href="{% url contact_form %}">Contact</a></li>
@@ -91,18 +91,7 @@
             <div id="footerMain_top">
                 <div id="footerMain">
                     <div id="labsEvents">
-                        <h4 id="labsEvents_header"><a href="{% url event_search %}">Track Us Down</a></h4>
-                        <ul>
-                            {% cache 1800 events %}
-                            {% get_official_events 3 as events %}
-                            {% for event in events %}
-                            <li>
-                            <a class="labsEvent" href="{{event.get_absolute_url }}">{{event.title}}</a>
-                            <span class="labsEvent_date">{{event.start_date|date:"M d"}}</span>
-                            </li>
-                            {% endfor %}
-                            {% endcache %}
-                        </ul>
+                        <h4 id="labsEvents_header"><a href="http://meetup.com/sunlightfoundation/">Track Us Down</a></h4> 
                         <a class="googleGroup" href="http://groups.google.com/group/sunlightlabs">Join the Sunlight Labs Google Group</a>
                     </div>
                     <div id="labsTwitter">
