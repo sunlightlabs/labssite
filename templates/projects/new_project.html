@@ -11,21 +11,13 @@ Sunlight Labs: Create Project
 {% block content %}
 <div id="join_project" class="module">
     <div id="createHeader"class="contentHeader">
-        <h2 class="space">Create A Project</h2>
+        <h2 class="space">Project Creation Disabled</h2>
     </div>
 
     <div class="module">
-        <h3>Design for America Entrants</h3>
-    <p>To compete in Design for America, please use this form. To have a valid entry, you must do take two steps. First, fill out the form below to create a new project, and give the project the tag "D4A". Once you hit submit, an expanded form will appear. Please add the links to your original artwork in the links section of that form, and then click on "Update your Project".</p>
-
-        <form id="projectForm" method="POST" action=".">
-            {% csrf_token %}
-            {% include "projects/base_form.html" %}
-
-            <button type="submit" class="submitBtn">
-                <span>Submit</span>
-            </button>
-        </form>
+        <p>We have disabled project creation as we re-evaluate how best to encourage community collaboration around projects.
+        If you have a project that you'd like to share with the community please consider sharing it <a href="http://groups.google.com/group/sunlightlabs"> with the Sunlight Labs Google Group</a>.
+        </p>
     </div>
 </div>
 {% endblock %}
