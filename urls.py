@@ -46,6 +46,9 @@ urlpatterns = patterns('',
     url(r'^events/', 'django.views.generic.simple.redirect_to',
         {'url': 'http://meetup.com/sunlightfoundation/'}),
 
+    # markupwiki
+    url(r'^wiki/', include('markupwiki.urls')),
+
     # labs specific
     url(r'^photobooth/$', 'django.views.generic.simple.redirect_to',
         {'url': 'http://www.flickr.com/photos/sunlightfoundation/sets/72157624999270674/'}),
