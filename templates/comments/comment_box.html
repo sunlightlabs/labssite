@@ -25,7 +25,7 @@
             <span class="commentMetaDate">{{comment.submit_date|date:"m/d/Y P"}}</span>
             <span class="commentPermalink"><a href="{{comment_obj.get_absolute_url}}#c{{comment.id}}">(permalink)</a>
 	</div>
-            <p>{{comment.comment|markdown|nofollow}}</p>
+            <p>{{comment.comment|markdown|nofollow|safe}}</p>
             </li>
         {% endfor %}
     </ol>
