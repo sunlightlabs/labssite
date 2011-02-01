@@ -15,7 +15,7 @@ class CustomRegistrationConsumer(RegistrationConsumer):
     RegistrationForm = RegistrationForm
     trust_root = settings.TRUST_ROOT
     on_complete_url = '/accounts/complete/'
-    after_registration_url = '/people/edit_profile/'
+    after_registration_url = '/'
     recovery_email_subject = 'Recover Your SunlightLabs.com Account'
 
     def redirect_if_valid_next(self, request):

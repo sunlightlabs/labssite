@@ -74,3 +74,6 @@ def image_wrapper(request, image_path):
 
 def sponsor_iframe(request):
     return render_to_response("labs/sponsor_iframe.html", {'url': request.GET['url']})
+
+def profile_redirect(request, username):
+    return redirect('/blog/author/%s/' % username)

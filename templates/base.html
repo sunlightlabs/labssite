@@ -31,7 +31,7 @@
                     <div id="pageNav">
                         <ul>
                             {% if user.is_authenticated %}
-                            <li>Hi, <a href="{% url edit_profile %}">{% display_name user %}</a>.</li>
+                            <li>Hi, {% display_name user %}</a>.</li>
                             <li class="second_pageNav"><a href="{% url openid-logout %}">Logout?</a></li>
                             {% if user.is_staff %}
                             <li><a href="/admin/">Admin</a></li>
@@ -54,7 +54,6 @@
                     <div id="nav">
                         <ul>
                             <li id="nav_blog"><a href="{% url blogdor_archive %}">Blog</a></li>
-                            <li id="nav_people"><a href="{% url user_search %}">People</a></li>
                             <li id="nav_projects"><a href="{% url projects %}">Projects</a></li>
                             <li id="nav_events"><a href="http://meetup.com/sunlightfoundation/">Events</a></li>
                             <li id="nav_wiki"><a href="http://wiki.sunlightlabs.com/">Wiki</a></li>
