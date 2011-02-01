@@ -53,6 +53,12 @@ urlpatterns = patterns('',
         {'url': 'http://services.sunlightlabs.com/api/'}),
     url(r'^people/', 'django.views.generic.simple.redirect_to',
         {'url': '/about/'}),
+    url(r'^projects/all/', 'django.views.generic.simple.redirect_to',
+        {'url': '/projects/'}),
+    url(r'^projects/official/', 'django.views.generic.simple.redirect_to',
+        {'url': '/projects/'}),
+    url(r'^projects/community/', 'django.views.generic.simple.redirect_to',
+        {'url': '/projects/'}),
 
     # labs specific
     url(r'^photobooth/$', 'django.views.generic.simple.redirect_to',
