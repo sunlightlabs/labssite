@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load markup %}
+
+{% block title %}{{ flatpage.title }}{% endblock %}
+
+{% block bodyclass %}about{% endblock %}
+
+{% block content %}
+    <div class="contentHeader">
+        <h2>Our Open Source Projects</h2>
+    </div>
+    <div class="module">
+        {{ flatpage.content|markdown }}
+    </div>
+{% endblock %}
+

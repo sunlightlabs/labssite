@@ -61,7 +61,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django_openid.consumer.SessionConsumer',
-    'gatekeeper.middleware.GatekeeperMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.csrf.CsrfResponseMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
@@ -89,20 +88,14 @@ INSTALLED_APPS = (
     'tagging',
     'mediasync',
     'feedinator',
-    'gatekeeper',
     'blogdor',
     'newsfeed',
-    'popular',
-    'meritbadges',
     'labssite.labs',
-    'anthill.people',
     'anthill.projects',
     'markupwiki',
 )
 
 DATE_FORMAT = 'F j, Y'
-
-AUTH_PROFILE_MODULE = 'people.Profile'
 
 EMAIL_HOST = "smtp.sunlightlabs.com"
 EMAIL_PORT = "25"
@@ -128,7 +121,7 @@ BLOGDOR_ENABLE_FEEDS = False
 AKISMET_KEY = '54f2d2830563'
 
 ABSOLUTE_URL_OVERRIDES = {
-    'auth.user': lambda o: "/people/%s/" % o.username,
+    'auth.user': lambda o: "/blog/author/%s/" % o.username,
 }
 
 GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','tlee@sunlightfoundation.com',
@@ -142,13 +135,6 @@ ANTHILL_GMAPS_KEY = '***REMOVED***'
 GOOGLE_ANALYTICS_EMAIL = 'sunlightlabs@gmail.com'
 GOOGLE_ANALYTICS_PASSWORD = '***REMOVED***'
 GOOGLE_ANALYTICS_ID = '***REMOVED***'
-
-ANTHILL_ROLES = (
-    ('other', 'Community Member'),
-    ('des', 'Designer'),
-    ('dev', 'Developer'),
-    ('both', 'Developer/Designer'),
-)
 
 RESTRUCTUREDTEXT_FILTER_SETTINGS = {'initial_header_level': 3}
 LOGIN_URL = '/accounts/login/'

@@ -1,35 +1,35 @@
 {% load people %}
 
 {% if obj.item_type == "ask" %}
-<a href="{{obj.user.get_absolute_url}}">{% display_name obj.user %}</a> added a help request on <a href="{{obj.link}}">{{obj.body}}</a>
+{% display_name obj.user %} added a help request on <a href="{{obj.link}}">{{obj.body}}</a>
 {% endif %}
 
 {% if obj.item_type == "comment" %}
-<a href="{{obj.user.get_absolute_url}}">{% display_name obj.user %}</a> commented on <a href="{{obj.link}}">{{obj.body}}</a>
+{% display_name obj.user %} commented on <a href="{{obj.link}}">{{obj.body}}</a>
 {% endif %}
 
 {% if obj.item_type == "event" %}
-<a href="{{obj.user.get_absolute_url}}">{% display_name obj.user %}</a> created the event <a href="{{obj.link}}">{{obj.body}}</a>
+{% display_name obj.user %} created the event <a href="{{obj.link}}">{{obj.body}}</a>
 {% endif %}
 
 {% if obj.item_type == "idea" %}
-<a href="{{obj.user.get_absolute_url}}">{% display_name obj.user %}</a> submitted the idea <a href="{{obj.link}}">{{obj.body}}</a>
+{% display_name obj.user %} submitted the idea <a href="{{obj.link}}">{{obj.body}}</a>
 {% endif %}
 
 {% if obj.item_type == "message" %}
-<a href="{{obj.user.get_absolute_url}}">{% display_name obj.user %}</a> sent a message to <a href="{{obj.link}}">{{obj.body}}</a>
+{% display_name obj.user %} sent a message to <a href="{{obj.link}}">{{obj.body}}</a>
 {% endif %}
 
 {% if obj.item_type == "person" %}
-<a href="{{obj.user.get_absolute_url}}">{% display_name obj.user %}</a> registered for an account.
+{% display_name obj.user %} registered for an account.
 {% endif %}
 
 {% if obj.item_type == "project" %}
-<a href="{{obj.user.get_absolute_url}}">{% display_name obj.user %}</a> created the project <a href="{{obj.link}}">{{obj.body}}</a>
+{% display_name obj.user %} created the project <a href="{{obj.link}}">{{obj.body}}</a>
 {% endif %}
 
 {% if obj.item_type == "role" %}
-<a href="{{obj.user.get_absolute_url}}">{% display_name obj.user %}</a> made a request to join <a href="{{obj.link}}">{{obj.body}}</a>
+{% display_name obj.user %} made a request to join <a href="{{obj.link}}">{{obj.body}}</a>
 {% endif %}
 
 {% if obj.item_type == "rss" %}

@@ -6,16 +6,16 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,optgroup,button,p,blockquote,th,td{margin:0;padding:0;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}table{border-collapse:collapse;border-spacing:0;}caption,th{text-align:left;}ol,ul{list-style:none;}fieldset,img{border:0;}input,textarea,select,optgroup,option,button{font-family:inherit;font-size:100%;}button,input {width: auto;overflow: visible;}optgroup,address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;}
 dl li{list-style: none;}
 
-a:link{outline: none; color: #184259;}
-a:visited{outline: none; color: #184259}
-a:hover{outline: none; color: #184259}
-a:active{outline: none; color: #184259}
+a:link{outline: none; color: #184259; }
+a:visited{outline: none; color: #184259; }
+a:hover{outline: none; color: #184259; }
+a:active{outline: none; color: #184259; }
 
 body{
 	color:#4f4d4d;
 	background: url(../images/bg_grid.jpg) top left repeat;
-	font-size: 76%;
-  	line-height: 21px;
+	font-size: 82%;
+  	line-height: 23px;
   	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -97,8 +97,8 @@ li#nav_projects a:hover, body.projects li#nav_projects a{ width: 113px; backgrou
 li#nav_events a { width: 94px; background: url(../images/nav_events.png) left top no-repeat;}
 li#nav_events a:hover, body.events li#nav_events a{ width: 94px; background: url(../images/nav_events.png) left -24px no-repeat;}
 
-li#nav_wiki a { width: 88px; background: url(../images/nav_wiki.png) left top no-repeat;}
-li#nav_wiki a:hover{ width: 88px; background: url(../images/nav_wiki.png) left -24px no-repeat;}
+li#nav_services a { width: 100px; background: url(../images/nav_keys.png) left top no-repeat;}
+li#nav_services a:hover{ width: 100px; background: url(../images/nav_keys.png) left -24px no-repeat;}
 
 li#nav_about a { width: 88px; background: url(../images/nav_about.png) left top no-repeat;}
 li#nav_about a:hover, body.about li#nav_about a { width: 88px; background: url(../images/nav_about.png) left -24px no-repeat;}
@@ -130,7 +130,7 @@ span#communityMembers { font-size: 160%;}
 
 dl.entryMetadata dt { float: left; margin-right: 5px;}
 dl.entryMetadata dd a.seperationBlock, dl.entryMetadata dd.seperationBlock{ float: left; border-right: 1px solid #808285; padding-right: 10px; margin-right: 10px;}
-dl.entryMetadata, dl.eventAuthorMetadata { margin-bottom: 15px; font-size: 90%; font-style: oblique; color: #808285; line-height: 14px; margin-top: 5px;}
+dl.entryMetadata, dl.eventAuthorMetadata { margin-bottom: 15px; font-size: 90%; font-style: oblique; color: #808285; line-height: 14px; margin-top: 5px; font-family: Georgia, "Times New Roman", Times, serif;}
 /*dd a{ border-right: 1px solid #808285; padding-right: 10px; margin-right: 10px; }*/
 dt.blogComment_icon { background: url(../images/icon_blogComment.png) top left no-repeat; padding-left: 25px;}
 
@@ -533,10 +533,9 @@ div#ltColumn form.nonuser_comment { width: 600px;}
 
 /*table*/
 div#users_results { margin-top: 40px; margin-bottom: 25px;}
-table { width: 605px; line-height: 18px; }
+table { width: 605px; line-height: 18px; margin-bottom: 20px;}
 table#users_table, table#events_table { width: 620px;}
-table#users_table tbody td, table#events_table tbody td { padding-top:5px; padding-bottom:5px;}
-tr { height: 25px;}
+tr { height: 25px; }
 tr.odd { background-color: #fff; padding: 5px; }
 tr.even { padding: 5px;  }
 tr#titles th { color: #403030; text-transform: uppercase; font-weight: bold; padding-bottom: 10px;}
@@ -544,6 +543,7 @@ tr#titles th { color: #403030; text-transform: uppercase; font-weight: bold; pad
 .table_left { width: 120px; padding-right: 15px; padding-left: 10px;}
 .table_center { text-align: left;}
 .table_position { width: 120px; padding-right: 15px;}
+td { padding-top: 10px; padding-bottom: 10px;}
 
 table#linksTable input.name, table#linksTable input.url{ width: 175px; display: block; margin-right: 15px;}
 table#linksTable { width: 608px;}
@@ -657,17 +657,20 @@ ul#labsMembers li#tom { margin: 20px auto 0; float: none; height: 115px;}
 li#aaron a{ background: url(../images/bot_aaron.png) top left no-repeat;}
 li#ali a{ background: url(../images/bot_ali_right.png) top left no-repeat;}
 li#alison a{ background: url(../images/bot_alison.png) top left no-repeat;}
-li#david a{ background: url(../images/bot_david.png) top left no-repeat;}
-li#eric a{ background: url(../images/bot_eric.png) top left no-repeat;}
-li#james a{ background: url(../images/bot_james_left.png) top left no-repeat;}
-li#jeremy a{ background: url(../images/bot_jeremy_right.png) top left no-repeat;}
-li#josh a{ background: url(../images/bot_josh_left.png) top left no-repeat;}
-li#kevin a{ background: url(../images/bot_kevin_left.png) top left no-repeat;}
-li#luigi a{ background: url(../images/bot_luigi_right.png) top left no-repeat;}
-li#tim a{ background: url(../images/bot_tim.png) top left no-repeat;}
+li#david a{ background: url(../images/bot_david_left.png) top left no-repeat;}
+li#eric a{ background: url(../images/bot_eric_right.png) top left no-repeat;}
+li#james a{ background: url(../images/bot_james.png) top left no-repeat;}
+li#jeremy a{ background: url(../images/bot_jeremy.png) top left no-repeat;}
+li#josh a{ background: url(../images/bot_josh.png) top left no-repeat;}
+li#kevin a{ background: url(../images/bot_kevin.png) top left no-repeat;}
+li#luigi a{ background: url(../images/bot_luigi.png) top left no-repeat;}
+li#tim a{ background: url(../images/bot_tim_right.png) top left no-repeat;}
 li#tom a{ background: url(../images/bot_tom_left.png) 20px top no-repeat;}
-li#kaitlin a{ background: url(../images/bot_kaitlin_right.png) top left no-repeat;}
-li#ethan a{ background: url(../images/bot_ethan.png) top left no-repeat;}
+li#kaitlin a{ background: url(../images/bot_kaitlin.png) top left no-repeat;}
+li#ethan a{ background: url(../images/bot_ethan_left.png) top left no-repeat;}
+li#andrew a{ background: url(../images/bot_andrew_right.png) top left no-repeat;}
+li#caitlin a{ background: url(../images/bot_caitlin.png) top left no-repeat;}
+li#chris a{ background: url(../images/bot_chris_right.png) top left no-repeat;}
 
 ul#labsMembers li.memberRight{ margin-top: 30px;}
 
@@ -693,7 +696,7 @@ ul#attendeeList img{ width: 40px; height: 40px; }
 ul#attendeeList dd { line-height: 20px;}
 div#ltColumn form#eventForm input, div#ltColumn form#eventForm textarea { width: 350px;}
 
-a.tip { font-size: 80%; font-style: oblique; margin-bottom:20px; line-height:18px; display: block;}
+a.tip { font-size: 80%; font-style: oblique; margin-bottom:20px; line-height:18px; display: block; font-family: Georgia, "Times New Roman", Times, serif;}
 a.rss { background: url(../images/feed-icon-14x14.png) left 4px no-repeat; padding-left: 23px; padding-top: 3px;}
 body.projects a.rss { float: left; background: url(../images/feed-icon-14x14.png) left 11px no-repeat; padding-top: 10px;}
 body.projects a.tip { margin-bottom: 0px;}

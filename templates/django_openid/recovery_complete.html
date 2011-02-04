@@ -1,4 +1,4 @@
-{% extends "people/base.html" %}
+{% extends "django_openid/base.html" %}
 
 {% block title %}Recovery Complete{% endblock %}
 
@@ -7,6 +7,6 @@
     <h2>Account Recovered</h2>
 </div>
 <div class="module">
-    <p> You have been logged in.  It is highly recommended you <a href="{% url edit_profile %}">edit your profile</a> to set a new password.</p>
+    <p> You have been logged in.</p>
 </div>
 {% endblock %}

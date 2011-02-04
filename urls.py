@@ -40,11 +40,25 @@ urlpatterns = patterns('',
 
     url(r'^accounts/', include(registration_consumer.urls)),
 
+    url(r'^people/(?P<username>\w+)/$', 'labssite.labs.views.profile_redirect',
+        name='user_profile'),
+
     # anthill
-    url(r'^people/', include('anthill.people.urls')),
     url(r'^projects/', include('anthill.projects.urls')),
+
+    # redirects
     url(r'^events/', 'django.views.generic.simple.redirect_to',
         {'url': 'http://meetup.com/sunlightfoundation/'}),
+    url(r'^api/', 'django.views.generic.simple.redirect_to',
+        {'url': 'http://services.sunlightlabs.com/api/'}),
+    url(r'^people/', 'django.views.generic.simple.redirect_to',
+        {'url': '/about/'}),
+    url(r'^projects/all/', 'django.views.generic.simple.redirect_to',
+        {'url': '/projects/'}),
+    url(r'^projects/official/', 'django.views.generic.simple.redirect_to',
+        {'url': '/projects/'}),
+    url(r'^projects/community/', 'django.views.generic.simple.redirect_to',
+        {'url': '/projects/'}),
 
     # markupwiki
     url(r'^wiki/', include('markupwiki.urls')),

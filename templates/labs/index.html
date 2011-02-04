@@ -19,7 +19,7 @@
 
 {% if not user.is_authenticated %}
         <h2>We're Opening America's Government</h2>
-        <a id="joinBtn" href="{% url openid-register %}">Join Us</a>
+        <a id="joinBtn" href="http://groups.google.com/group/sunlightlabs/">Join Us</a>
         <p>We're a community of open source developers and designers dedicated to opening up our government to make it more transparent, accountable and responsible. We need your help.</p>
 {% endif %}
     <div class="clear"></div>
@@ -48,31 +48,9 @@
 {% endblock content %}
 
 {% block sidebar %}
-<h3 class="space">How You Can Help</h3>
-<div class="module">
-    <ol id="helpList">
-        <li>
-            <span id="create">Create</span>
-            <p>an <a href="{% url openid-register %}">Account</a></p>
-        </li>
-        <li>
-            <span id="find">Find</span>
-            <p>a <a href="{% url all_projects %}">Project</a></p>
-        </li>
-        <li>
-            <span id="fill">Fill</span>
-            <p>a <a href="{% url all_project_asks %}">need</a></p>
-        </li>
-        <li>
-            <span id="contribute">Contribute</span>
-            <p>your skills</p>
-        </li>
-    </ol>
-</div>
 
 {% get_active_projects 3 as active_projects %}
 {% if active_projects %}
-<hr></hr>
 <h3 class="space">Active Projects</h3>
 <div id="activeProject_list" class="module">
     <ul>
@@ -88,19 +66,15 @@
     </ul>
     <a class="center_viewall" href="/projects/all/">View All Active Projects »</a>
 </div>
+<hr></hr>
 {% endif %}
 
-
-<hr></hr>
-<h3>What's Happening In The Labs Community</h3>
+<h3>What's Happening in the Community</h3>
 <div id="timeline" class="module labsHappenings">
     <a class="tip rss" href="/newsfeed/newsfeed/main/">Subscribe to this feed</a>
     <ul>
         {% render_feed "main" 5 %}
     </ul>
 </div>
-
-<!-- added at Scott Stadum's request -->
-<img src="http://ad.doubleclick.net/activity;src=1379696;dcnet=4155;boom=41134;sz=1x1;ord=1?"width="1" height="1" border="0" alt="" />
 
 {% endblock %}
