@@ -14,8 +14,8 @@ a:active{outline: none; color: #184259; }
 body{
 	color:#4f4d4d;
 	background: url(../images/bg_grid.jpg) top left repeat;
-	font-size: 76%;
-  	line-height: 21px;
+	font-size: 82%;
+  	line-height: 23px;
   	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -97,8 +97,8 @@ li#nav_projects a:hover, body.projects li#nav_projects a{ width: 113px; backgrou
 li#nav_events a { width: 94px; background: url(../images/nav_events.png) left top no-repeat;}
 li#nav_events a:hover, body.events li#nav_events a{ width: 94px; background: url(../images/nav_events.png) left -24px no-repeat;}
 
-li#nav_wiki a { width: 88px; background: url(../images/nav_wiki.png) left top no-repeat;}
-li#nav_wiki a:hover{ width: 88px; background: url(../images/nav_wiki.png) left -24px no-repeat;}
+li#nav_services a { width: 100px; background: url(../images/nav_keys.png) left top no-repeat;}
+li#nav_services a:hover{ width: 100px; background: url(../images/nav_keys.png) left -24px no-repeat;}
 
 li#nav_about a { width: 88px; background: url(../images/nav_about.png) left top no-repeat;}
 li#nav_about a:hover, body.about li#nav_about a { width: 88px; background: url(../images/nav_about.png) left -24px no-repeat;}
@@ -130,7 +130,7 @@ span#communityMembers { font-size: 160%;}
 
 dl.entryMetadata dt { float: left; margin-right: 5px;}
 dl.entryMetadata dd a.seperationBlock, dl.entryMetadata dd.seperationBlock{ float: left; border-right: 1px solid #808285; padding-right: 10px; margin-right: 10px;}
-dl.entryMetadata, dl.eventAuthorMetadata { margin-bottom: 15px; font-size: 90%; font-style: oblique; color: #808285; line-height: 14px; margin-top: 5px;}
+dl.entryMetadata, dl.eventAuthorMetadata { margin-bottom: 15px; font-size: 90%; font-style: oblique; color: #808285; line-height: 14px; margin-top: 5px; font-family: Georgia, "Times New Roman", Times, serif;}
 /*dd a{ border-right: 1px solid #808285; padding-right: 10px; margin-right: 10px; }*/
 dt.blogComment_icon { background: url(../images/icon_blogComment.png) top left no-repeat; padding-left: 25px;}
 
@@ -696,7 +696,7 @@ ul#attendeeList img{ width: 40px; height: 40px; }
 ul#attendeeList dd { line-height: 20px;}
 div#ltColumn form#eventForm input, div#ltColumn form#eventForm textarea { width: 350px;}
 
-a.tip { font-size: 80%; font-style: oblique; margin-bottom:20px; line-height:18px; display: block;}
+a.tip { font-size: 80%; font-style: oblique; margin-bottom:20px; line-height:18px; display: block; font-family: Georgia, "Times New Roman", Times, serif;}
 a.rss { background: url(../images/feed-icon-14x14.png) left 4px no-repeat; padding-left: 23px; padding-top: 3px;}
 body.projects a.rss { float: left; background: url(../images/feed-icon-14x14.png) left 11px no-repeat; padding-top: 10px;}
 body.projects a.tip { margin-bottom: 0px;}

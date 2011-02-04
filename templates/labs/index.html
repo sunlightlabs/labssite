@@ -48,31 +48,9 @@
 {% endblock content %}
 
 {% block sidebar %}
-<h3 class="space">How You Can Help</h3>
-<div class="module">
-    <ol id="helpList">
-        <li>
-            <span id="create">Create</span>
-            <p>an <a href="{% url openid-register %}">Account</a></p>
-        </li>
-        <li>
-            <span id="find">Find</span>
-            <p>a <a href="{% url all_projects %}">Project</a></p>
-        </li>
-        <li>
-            <span id="fill">Fill</span>
-            <p>a <a href="{% url all_project_asks %}">need</a></p>
-        </li>
-        <li>
-            <span id="contribute">Contribute</span>
-            <p>your skills</p>
-        </li>
-    </ol>
-</div>
 
 {% get_active_projects 3 as active_projects %}
 {% if active_projects %}
-<hr></hr>
 <h3 class="space">Active Projects</h3>
 <div id="activeProject_list" class="module">
     <ul>
@@ -88,11 +66,10 @@
     </ul>
     <a class="center_viewall" href="/projects/all/">View All Active Projects »</a>
 </div>
+<hr></hr>
 {% endif %}
 
-
-<hr></hr>
-<h3>What's Happening In The Labs Community</h3>
+<h3>What's Happening in the Community</h3>
 <div id="timeline" class="module labsHappenings">
     <a class="tip rss" href="/newsfeed/newsfeed/main/">Subscribe to this feed</a>
     <ul>
