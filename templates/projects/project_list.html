@@ -23,13 +23,7 @@ Projects
     <div id="projectNav" class="projectList_nav">
         <ul>
             <li id="allProjects">
-            <a {% if projects == "all" %}class="active"{% endif %} href="{% url all_projects %}">All Projects</a>
-            </li>
-            <li id="labsProjects">
-                <a {% if projects == "official" %}class="active"{% endif %} href="{% url official_projects %}">Labs Projects</a>
-            </li>
-            <li id="communityProjects">
-                <a {% if projects == "community" %}class="active"{% endif %} href="{% url community_projects %}">Community Projects</a>
+            <a {% if projects == "all" %}class="active"{% endif %} href="/projects/">All Projects</a>
             </li>
         </ul>
     </div>
