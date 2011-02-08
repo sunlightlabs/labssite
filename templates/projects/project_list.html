@@ -20,13 +20,6 @@ Projects
     <div class="clear"></div>
 </div>
 <div id="projects" class="module">
-    <div id="projectNav" class="projectList_nav">
-        <ul>
-            <li id="allProjects">
-            <a {% if projects == "all" %}class="active"{% endif %} href="/projects/">All Projects</a>
-            </li>
-        </ul>
-    </div>
     {% for project in project_list %}
         {% include "projects/project_summary.html" %}
     {% endfor %}
