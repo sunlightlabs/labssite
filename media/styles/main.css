@@ -97,8 +97,8 @@ li#nav_projects a:hover, body.projects li#nav_projects a{ width: 113px; backgrou
 li#nav_events a { width: 94px; background: url(../images/nav_events.png) left top no-repeat;}
 li#nav_events a:hover, body.events li#nav_events a{ width: 94px; background: url(../images/nav_events.png) left -24px no-repeat;}
 
-li#nav_services a { width: 100px; background: url(../images/nav_keys.png) left top no-repeat;}
-li#nav_services a:hover{ width: 100px; background: url(../images/nav_keys.png) left -24px no-repeat;}
+li#nav_services a { width: 61px; background: url(../images/nav_keys.png) left top no-repeat;}
+li#nav_services a:hover{ width: 61px; background: url(../images/nav_keys.png) left -24px no-repeat;}
 
 li#nav_about a { width: 88px; background: url(../images/nav_about.png) left top no-repeat;}
 li#nav_about a:hover, body.about li#nav_about a { width: 88px; background: url(../images/nav_about.png) left -24px no-repeat;}
