@@ -2,7 +2,6 @@
 {% load people %}
 {% load blog %}
 {% load tagging_tags %}
-{% load newsfeed_tags %}
 
 {% block title %}
 Sunlight Labs: Projects - {{project.name}}
@@ -72,15 +71,6 @@ Sunlight Labs: Projects - {{project.name}}
                 </li>
                 {% endfor %}
             </ul>
-        </div>
-
-        <div id="timeline">
-            {% if project.subscriptions.count %}
-            <h3>News</h3>
-            <ul id="projectTimeline" class="leftTimeline">
-                {% render_feed project.slug 10 %}
-            </ul>
-            {% endif %}
         </div>
     </div>
 </div>

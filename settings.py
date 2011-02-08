@@ -89,7 +89,6 @@ INSTALLED_APPS = (
     'mediasync',
     'feedinator',
     'blogdor',
-    'newsfeed',
     'labssite.labs',
     'anthill.projects',
 )

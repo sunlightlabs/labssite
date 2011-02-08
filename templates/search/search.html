@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load newsfeed_tags %}
 
 {% block title %}
 Sunlight Labs Search
@@ -41,14 +40,4 @@ Sunlight Labs Search
 </div>
 </div>
 
-{% endblock %}
-
-{% block sidebar %}
-<h3>What's Happening In The Labs Community</h3>
-<div id="timeline" class="module labsHappenings">
-    <a class="tip rss" href="/newsfeed/newsfeed/main/">Subscribe to this feed</a>
-    <ul>
-        {% render_feed "main" 10 %}
-    </ul>
-</div>
 {% endblock %}

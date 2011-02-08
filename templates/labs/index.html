@@ -1,11 +1,8 @@
 {% extends "base.html" %}
 {% load blog %}
-{% load project_tags %}
-{% load newsfeed_tags %}
 
 {% block extrahead %}
 <link rel="alternate" type="application/rss+xml" title="Sunlight Labs' latest blog posts" href="http://feeds.feedburner.com/sunlightlabs/blog" />
-<link rel="alternate" type="application/rss+xml" title="Latest Sunlight Labs Activity" href="/newsfeed/newsfeed/main/" />
 {% endblock %}
 
 {% block content %}
@@ -49,32 +46,6 @@
 
 {% block sidebar %}
 
-{% get_active_projects 3 as active_projects %}
-{% if active_projects %}
-<h3 class="space">Active Projects</h3>
-<div id="activeProject_list" class="module">
-    <ul>
-        {% for project in active_projects %}
-            {% if project.official %}
-                <li class="sunlightProject"> 
-            {% else %}
-                <li> 
-            {% endif %}
-                <a href="{{ project.get_absolute_url }}"> {{project}} </a>
-            </li>
-        {% endfor %}
-    </ul>
-    <a class="center_viewall" href="/projects/all/">View All Active Projects »</a>
-</div>
-<hr></hr>
-{% endif %}
-
-<h3>What's Happening in the Community</h3>
-<div id="timeline" class="module labsHappenings">
-    <a class="tip rss" href="/newsfeed/newsfeed/main/">Subscribe to this feed</a>
-    <ul>
-        {% render_feed "main" 5 %}
-    </ul>
-</div>
+{% include "robots.html" %}
 
 {% endblock %}

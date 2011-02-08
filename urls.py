@@ -14,11 +14,6 @@ blog_feeds = {
     'author': LabsLatestForAuthor,
 }
 
-from newsfeed.feeds import NewsFeed
-news_feed = {
-    'newsfeed': NewsFeed
-}
-
 urlpatterns = patterns('',
     # admin
     url(r'^admin/', include(admin.site.urls)),
@@ -35,8 +30,6 @@ urlpatterns = patterns('',
 
     # contact form
     url(r'^contact/$', 'labssite.labs.views.contact_form', name='contact_form'),
-
-    url(r'^newsfeed/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': news_feed}, name="newsfeed_feeds"),
 
     url(r'^accounts/', include(registration_consumer.urls)),
 
