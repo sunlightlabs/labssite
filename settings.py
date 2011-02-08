@@ -111,7 +111,7 @@ AWS_BUCKET = 'assets.sunlightlabs.com'
 MEDIASYNC_AWS_KEY = AWS_KEY
 MEDIASYNC_AWS_SECRET = AWS_SECRET
 MEDIASYNC_AWS_BUCKET = 'assets.sunlightlabs.com'
-MEDIASYNC_AWS_PREFIX = 'site3'
+MEDIASYNC_AWS_PREFIX = 'site3.1'
 MEDIASYNC_JS_PATH = 'scripts'
 MEDIASYNC_CSS_PATH = 'styles'
 
@@ -126,7 +126,7 @@ ABSOLUTE_URL_OVERRIDES = {
 GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','tlee@sunlightfoundation.com',
                             'jturk@sunlightfoundation.com']
 
-GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site3/images/avatar.jpg"
+GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site3.1/images/avatar.jpg"
 GRAVATAR_SIZE = 60
 FORCE_LOWERCASE_TAGS = True
 
