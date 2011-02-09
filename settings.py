@@ -91,6 +91,7 @@ INSTALLED_APPS = (
     'blogdor',
     'labssite.labs',
     'anthill.projects',
+    'markupwiki',
 )
 
 DATE_FORMAT = 'F j, Y'
@@ -139,6 +140,9 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 ANTHILL_DEFAULT_MARKUP = 'markdown'
+
+MARKUPWIKI_DEFAULT_MARKUP_TYPE = 'markdown'
+MARKUPWIKI_MARKUP_TYPE_EDITABLE = False
 
 BLOGDOR_AUTHOR_GROUP = 'Bloggers'
 BLOGDOR_MODERATOR = 'labs.BlogdorAkismetModerator'
