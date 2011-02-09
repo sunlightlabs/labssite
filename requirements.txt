@@ -29,3 +29,4 @@ django-debug-toolbar
 django-mediasync==1.0
 -e git://github.com/sunlightlabs/django-blogdor.git#egg=django-blogdor
 -e git://github.com/sunlightlabs/django-feedinator.git#egg=django-feedinator
+-e git://github.com/sunlightlabs/django-markupwiki.git#egg=django-markupwiki
