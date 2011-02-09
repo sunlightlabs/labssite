@@ -379,8 +379,8 @@ div#blog_detail img.fullimage, div.entry-summary img.fullimage { margin: 0 auto 
 div#blog_detail img.detailimage, div.entry-summary img.detailimage{ float: left; margin-right: 20px;}
 div#blog_detail img.detailimage_right, div.entry-summary img.detailimage_right { float: right; margin-right: 30px; margin-left: 0px;}
 div#blog_detail p img.detailimage_right, div.entry-summary p img.detailimage_right { margin-right: 0px; margin-left: 20px; }
-div#blog_detail ul, div.ideaContent ul, div.projectContent ul, div#eventDetails ul, div#event_howtohold ul, div#projectDescription ul, div#apps_content ul, div#ltColumn ul { list-style-type: disc; padding-left:40px;}
-div#blog_detail ul li, div.ideaContent ul li, div.projectContent ul li, div#eventDetails ul li, div#event_howtohold ul li, div#projectDescription ul li, div#apps_content ul li, body.about div#ltColumn ul li { margin-bottom: 15px;}
+div#blog_detail ul, div.ideaContent ul, div.projectContent ul, div#eventDetails ul, div#event_howtohold ul, div#projectDescription ul, div#apps_content ul, body.about div#ltColumn ul, body.projects div#ltColumn ul { list-style-type: disc; padding-left:40px;}
+div#blog_detail ul li, div.ideaContent ul li, div.projectContent ul li, div#eventDetails ul li, div#event_howtohold ul li, div#projectDescription ul li, div#apps_content ul li, body.about div#ltColumn ul li, body.projects div#ltColumn ul li { margin-bottom: 15px;}
 
 textarea#id_message { width: 600px;}
 
