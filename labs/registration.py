@@ -46,11 +46,11 @@ class CustomRegistrationConsumer(RegistrationConsumer):
             })
         return response
 
-    def on_registration_complete(self, request):
-        if request.POST.get('email_opt_in'):
-            request.user.profile.allow_org_emails = True
-            request.user.profile.save()
-        return super(CustomRegistrationConsumer, self).on_registration_complete(request)
+    #def on_registration_complete(self, request):
+    #    if request.POST.get('email_opt_in'):
+    #        request.user.profile.allow_org_emails = True
+    #        request.user.profile.save()
+    #    return super(CustomRegistrationConsumer, self).on_registration_complete(request)
 
     def show_unknown_openid(self, request, openid):
         return redirect('/accounts/register/')
