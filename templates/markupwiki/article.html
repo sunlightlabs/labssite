@@ -8,7 +8,7 @@
 
 {% block content %}
 
-<div class="module"> 
+<div class="contentHeader">
     <h2 class="article_title">
     {% block article_title %}
     {% if article.section_name %}<a href="{% url view_article article.section_name %}">{{article.section_name}}</a> / {% endif %}
@@ -17,7 +17,9 @@
         {% if not version.is_latest %} [revision {{version.number}}] {% endif %}
     {% endblock %}
     </h2>
+</div>
 
+<div class="module"> 
     <div class="article_body">
     {% block article_body %}
     {% if article.is_deleted %}
