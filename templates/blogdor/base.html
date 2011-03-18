@@ -51,7 +51,7 @@
 <h3 class="space">Categories</h3>
 <div class="module">
     <ul id="blogCategories">
-        {% get_tag_counts announcements,design,development,interview,policy,technology,transparency as tags %}
+        {% get_popular_tags 15 as tags %}
         {% for tag in tags %}
         <li>
             <a href="{% url blogdor_tag tag %}"><span class="category">{{tag}}</span></a>
