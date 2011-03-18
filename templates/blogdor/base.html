@@ -54,7 +54,7 @@
         {% get_popular_tags 15 as tags %}
         {% for tag in tags %}
         <li>
-            <a href="{% url blogdor_tag tag %}"><span class="category">{{tag}}</span></a>
+            <a href="{% url blogdor_tag tag %}"><span class="category">{{tag|slice:":19"}}</span></a>
             <a href="{% url blogdor_tag tag %}"><span class="categoryTotal">[ {{tag.count}} ]</span></a>
         </li>
         {% endfor %}
