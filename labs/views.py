@@ -16,6 +16,12 @@ from blogdor.views import archive
 from anthill.projects.models import Project
 
 def index(request):
+
+    if 'aprilfool2011' not in request.COOKIES:
+        response = redirect('http://sunlightlabs94.angelfire.com')
+        response.set_cookie('aprilfool2011', 'sunlightlabs94!')
+        return response
+
     try:
         fpage = FlatPage.objects.get(url='alertbox-content')
         box = fpage.content.strip()
