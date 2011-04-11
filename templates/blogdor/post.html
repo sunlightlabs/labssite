@@ -18,8 +18,7 @@
         {% get_comment_count for post as comment_count %}
         <dd>{{ comment_count }}</dd>
     </dl>
-    <div class="entry-summary">{{post.excerpt}}
-    </div>
+    <div class="entry-summary postBody">{{post.excerpt}}</div>
     {% if post.excerpt.raw|length < post.content.raw|length %}
         <p class="continueLink"><a rel="bookmark" href="{{post.get_absolute_url}}">Continue Reading</a></p>
     {% endif %}

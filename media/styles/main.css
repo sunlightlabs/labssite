@@ -346,6 +346,16 @@ div#ltColumn div.smPost h3, div#ltColumn div.post h3, div#projects h3, div#ideas
 div#ltColumn div#blog_detail h3, div#ltColumn div.entry-summary h3, div#ltColumn div#blog_detail ul, div#ltColumn div.entry-summary ul, div#ltColumn div#blog_detail ol, div#ltColumn div.entry-summary ol, div#ltColumn div#blog_detail ol li, div#ltColumn div.entry-summary ol li{ margin-bottom: 15px;}
 div.smPost img{ max-width: 285px; }
 
+div.postBody figure {
+	float: right;
+	margin: 0 1em 0 2em;
+}
+div.postBody figure figcaption {
+	color: #666;
+	font-size: 80%;
+	text-align: center;
+}
+
 div#ltColumn div#commentBox h3#blogH3 { margin-bottom: 15px;}
 
 div#projectModule li { margin-bottom: 5px;}
