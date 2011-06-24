@@ -1,6 +1,0 @@
-{{object.user}}  {{object.user.first_name}}
-
-{{object.about}}
-
-{{object.role}}
-{{object.skills}}
