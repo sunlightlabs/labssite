@@ -60,7 +60,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django_openid.consumer.SessionConsumer',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.csrf.CsrfResponseMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
@@ -82,7 +81,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'debug_toolbar',
-    'django_openid',
     'haystack',
     'tagging',
     'mediasync',
@@ -113,16 +111,11 @@ MEDIASYNC_AWS_PREFIX = 'site3.1'
 MEDIASYNC_JS_PATH = 'scripts'
 MEDIASYNC_CSS_PATH = 'styles'
 
-BLOGDOR_NOTIFY_ON_COMMENT = True
 BLOGDOR_ENABLE_FEEDS = False
-AKISMET_KEY = '54f2d2830563'
 
 ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda o: "/blog/author/%s/" % o.username,
 }
-
-GATEKEEPER_MODERATOR_LIST = ['jcarbaugh@sunlightfoundation.com','tlee@sunlightfoundation.com',
-                            'jturk@sunlightfoundation.com']
 
 GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site3.1/images/avatar.jpg"
 GRAVATAR_SIZE = 60
@@ -134,8 +127,6 @@ GOOGLE_ANALYTICS_PASSWORD = '***REMOVED***'
 GOOGLE_ANALYTICS_ID = '***REMOVED***'
 
 RESTRUCTUREDTEXT_FILTER_SETTINGS = {'initial_header_level': 3}
-LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/'
 
 ANTHILL_DEFAULT_MARKUP = 'markdown'
 

@@ -3,7 +3,6 @@ from django.conf.urls.defaults import *
 from django.contrib.gis import admin
 from labs.feeds import LabsLatestPosts, LabsLatestForTag, LabsLatestForAuthor
 from labs.forms import LabsContactForm
-from labs.registration import registration_consumer
 
 admin.autodiscover()
 
@@ -27,8 +26,6 @@ urlpatterns = patterns('',
 
     # contact form
     url(r'^contact/$', 'labssite.labs.views.contact_form', name='contact_form'),
-
-    url(r'^accounts/', include(registration_consumer.urls)),
 
     url(r'^people/(?P<username>\w+)/$', 'labssite.labs.views.profile_redirect',
         name='user_profile'),

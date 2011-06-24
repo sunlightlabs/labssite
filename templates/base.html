@@ -29,16 +29,6 @@
                 <div id="header">
                     <h1><a href="/" rel="home"><big>Sunlight Labs</big></a></h1>
                     <div id="pageNav">
-                        <ul>
-                            {% if user.is_authenticated %}
-                            <li>Hi, {% display_name user %}</a>.</li>
-                            <li class="second_pageNav"><a href="{% url openid-logout %}">Logout?</a></li>
-                            {% if user.is_staff %}
-                            <li><a href="/admin/">Admin</a></li>
-                            {% endif %}
-                            {% else %}
-                            {% endif %}
-                        </ul>
                         <div id="searchBox">
                             <form id="siteSearch" method="GET" action="/search/">
                             <button class="siteSearchBtn" type="submit">
