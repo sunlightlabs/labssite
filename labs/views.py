@@ -1,19 +1,10 @@
-import urllib2
 from django.core.mail import send_mail
-from django.http import HttpResponse
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from django.template.loader import render_to_string
-from django.utils.safestring import mark_safe
-from django.contrib.auth.decorators import login_required
 from django.contrib.flatpages.models import FlatPage
 from django.contrib import messages
-from django.views.decorators.cache import cache_control
-from django.core.cache import cache
 from labs.forms import LabsContactForm
-from blogdor.models import Post
-from blogdor.views import archive
-from anthill.projects.models import Project
 
 def index(request):
     try:
@@ -54,9 +45,6 @@ def image_wrapper(request, image_path):
     image_path = "images/%s" % image_path
     data = {"image_path": image_path}
     return render_to_response("labs/image_wrapper.html", data)
-
-def sponsor_iframe(request):
-    return render_to_response("labs/sponsor_iframe.html", {'url': request.GET['url']})
 
 def profile_redirect(request, username):
     return redirect('/blog/author/%s/' % username)

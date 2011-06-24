@@ -57,8 +57,6 @@ urlpatterns = patterns('',
     url(r'^photobooth/$', 'django.views.generic.simple.redirect_to',
         {'url': 'http://www.flickr.com/photos/sunlightfoundation/sets/72157624999270674/'}),
     url(r'^$', 'labssite.labs.views.index', name='index'),
-
-    url(r'^d4a_entry/$', 'labssite.labs.views.sponsor_iframe'),
 )
 
 if settings.DEBUG:
