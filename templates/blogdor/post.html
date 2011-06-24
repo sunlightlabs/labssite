@@ -13,9 +13,9 @@
         <dt>Date</dt>
         <dd class="seperationBlock"><abbr class="published" title="{{ post.date_published.isoformat }}">{{post.date_published|date:"m/d/Y P"}}</abbr></dd>
 
-        <dt class="blogComment_icon">Comments:</dt>
+        <dt class="blogComment_icon">&nbsp;</dt>
         <dd>
-        <a class="entry-title" href="{{post.get_absolute_url}}#disqus_thread" data-disqus-identifier="{{post.id}}"></a>
+        <a class="entry-title" href="{{post.get_absolute_url}}#disqus_thread" data-disqus-identifier="{{post.id}}">&nbsp;</a>
         </dd>
     </dl>
     <div class="entry-summary postBody">{{post.excerpt}}</div>
