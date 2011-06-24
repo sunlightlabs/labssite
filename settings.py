@@ -74,7 +74,6 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.flatpages',
-    'django.contrib.gis',
     'django.contrib.markup',
     'django.contrib.messages',
     'django.contrib.redirects',
