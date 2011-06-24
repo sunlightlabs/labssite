@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-
-{% block content %}
-    <h2>Thanks for your comment!</h2>
-    <div class="module">
-        <a href="{{ comment.content_object.get_absolute_url }}">Return to the original post</a> or
-        <a href="{{ comment.content_object.get_absolute_url }}#c{{ comment.pk }}">view your comment</a>.
-    </div>
-{% endblock %}

@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib.gis import admin
-from labs.feeds import LabsLatestComments, LabsLatestPosts, LabsLatestForTag, LabsLatestForAuthor
+from labs.feeds import LabsLatestPosts, LabsLatestForTag, LabsLatestForAuthor
 from labs.forms import LabsContactForm
 from labs.registration import registration_consumer
 
@@ -9,7 +9,6 @@ admin.autodiscover()
 
 blog_feeds = {
     'latest_fburner': LabsLatestPosts,
-    'comments': LabsLatestComments,
     'tag': LabsLatestForTag,
     'author': LabsLatestForAuthor,
 }
@@ -20,7 +19,6 @@ urlpatterns = patterns('',
 
     url(r'^search/', include('haystack.urls')),
 
-    url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^images/(?P<image_path>.*)$', 'labssite.labs.views.image_wrapper', name="image_wrapper"),
 
     # blog/blogdor

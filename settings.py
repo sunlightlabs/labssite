@@ -73,7 +73,6 @@ ROOT_URLCONF = 'labssite.urls'
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.comments',
     'django.contrib.contenttypes',
     'django.contrib.flatpages',
     'django.contrib.gis',
@@ -146,7 +145,6 @@ MARKUPWIKI_MARKUP_TYPE_EDITABLE = False
 MARKUPWIKI_EDITOR_TEST_FUNC = lambda u: u.is_staff
 
 BLOGDOR_AUTHOR_GROUP = 'Bloggers'
-BLOGDOR_MODERATOR = 'labs.BlogdorAkismetModerator'
 
 HAYSTACK_SITECONF = 'labs.search_sites'
 HAYSTACK_SEARCH_ENGINE = 'whoosh'
