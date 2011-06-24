@@ -4,46 +4,12 @@
 
 {% block extrahead %}
 <link rel="alternate" type="application/rss+xml" title="Sunlight Labs' latest blog posts" href="http://feeds.feedburner.com/sunlightlabs/blog" />
-<link rel="alternate" type="application/rss+xml" title="Recent comments to the Sunlight Labs blog" href="/blog/feeds/comments/" />
 {% endblock %}
 
 {% block title %}Sunlight Labs: Blog{% endblock %}
 {% block bodyclass %}blog{% endblock %}
 
 {% block sidebar %}
-
-{% comment %}
-<div id="popularNav">
-    <ul>
-        <!--        <li id ="popular"><a class="active" href="#">Most Popular</li> -->
-        <li id ="favorites"><a href="#">Our Favorites</li>
-    </ul>
-</div>
-
-<div class="module">
-{% cache 3600 pop_posts %}
-{% get_recently_popular blogdor.Post 5 14 as popular_posts %}
-    <div id="popularPosts">
-        <ul>
-            {% for post in popular_posts %}
-            <li><a href="{{post.get_absolute_url}}">{{post.title}}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
-{% endcache %}
-    <div id="favoritePosts">
-        {% get_favorite_posts as favorite_posts %}
-        <ul>
-            {% for post in favorite_posts %}
-                <li><a href="{{post.get_absolute_url}}">{{post.title}}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
-
-<hr></hr>
-
-{% endcomment %}
 
 {% include "robots.html" %}
 

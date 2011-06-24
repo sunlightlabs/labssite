@@ -14,7 +14,6 @@
     <link rel="alternate" type="application/rss+xml" title="Sunlight Labs' posts by {{user}}" href="/blog/feeds/author/{{author}}/" />
     {% endif %}
     <link rel="alternate" type="application/rss+xml" title="Sunlight Labs' latest blog posts" href="http://feeds.feedburner.com/sunlightlabs/blog" />
-    <link rel="alternate" type="application/rss+xml" title="Recent comments to the Sunlight Labs blog" href="/blog/feeds/comments/" />
 {% endblock %}
 
 {% block content %}
@@ -28,7 +27,18 @@
         {% for post in post_list %}
             {% include "blogdor/post.html" %}
         {% endfor %}
-        <!--<a id="centered" href="#">« Older Posts</a>-->
     </div>
     {% include "pagination_div.html" %}
+
+    <script type="text/javascript">
+    var disqus_shortname = 'sunlightlabs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
 {% endblock %}

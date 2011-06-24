@@ -1,5 +1,4 @@
 {% load people %}
-{% load comments %}
 
 <div class="post hentry">
     <h3><a class="entry-title" href="{{post.get_absolute_url}}">{{post.title}}</a></h3>
@@ -15,8 +14,9 @@
         <dd class="seperationBlock"><abbr class="published" title="{{ post.date_published.isoformat }}">{{post.date_published|date:"m/d/Y P"}}</abbr></dd>
 
         <dt class="blogComment_icon">Comments:</dt>
-        {% get_comment_count for post as comment_count %}
-        <dd>{{ comment_count }}</dd>
+        <dd>
+        <a class="entry-title" href="{{post.get_absolute_url}}#disqus_thread" data-disqus-identifier="{{post.id}}"></a>
+        </dd>
     </dl>
     <div class="entry-summary postBody">{{post.excerpt}}</div>
     {% if post.excerpt.raw|length < post.content.raw|length %}
