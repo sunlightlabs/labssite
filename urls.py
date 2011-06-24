@@ -23,7 +23,6 @@ urlpatterns = patterns('',
 
     # blog/blogdor
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': blog_feeds}, name="blogdor_feeds"),
-    url(r'^blog/$', 'labssite.labs.views.blog_wrapper'),
     url(r'^blog/', include('blogdor.urls')),
 
     # contact form

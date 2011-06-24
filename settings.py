@@ -86,7 +86,6 @@ INSTALLED_APPS = (
     'haystack',
     'tagging',
     'mediasync',
-    'feedinator',
     'blogdor',
     'labssite.labs',
     'anthill.projects',

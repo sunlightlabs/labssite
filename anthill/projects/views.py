@@ -8,7 +8,6 @@ from django.template import RequestContext
 from django.template.loader import render_to_string
 from tagging.views import tagged_object_list
 from anthill.projects.models import Project, Role, Ask
-from feedinator.models import Feed
 
 def projects(request):
     """

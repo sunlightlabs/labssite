@@ -25,23 +25,6 @@ def index(request):
                              context_instance=RequestContext(request))
 
 
-def blog_wrapper(request):
-    if 'feed' in request.GET:
-        # hack to get people to stop using this
-        return HttpResponse('''<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-<channel><title>Sunlight Labs blog</title><link>http://sunlightlabs.com/blog/</link><description>Latest blog updates from the nerds at Sunlight Labs</description><language>en-us</language><lastBuildDate>Fri, 19 Feb 2010 13:39:08 -0500</lastBuildDate><ttl>3600</ttl>
-<item>
-    <title>Sunlight Labs Feed Has Moved</title>
-    <link>http://feeds.feedburner.com/sunlightlabs/blog</link>
-    <description> This feed has moved to &lt;a href="http://feeds.feedburner.com/sunlightlabs/blog"&gt;http://feeds.feedburner.com/sunlightlabs/blog&lt;/a&gt;
-    </description>
-    <pubDate>Fri, 19 Feb 2010 13:39:08 -0500</pubDate>
-    <guid isPermaLink="true">http://feeds.feedburner.com/sunlightlabs/blog</guid>
-</item></channel></rss>''')
-
-    return archive(request)
-
 def contact_form(request):
 
     recipient_list = ['swells@sunlightfoundation.com','tlee@sunlightfoundation.com','jcarbaugh@sunlightfoundation.com', 'jturk@sunlightfoundation.com']
