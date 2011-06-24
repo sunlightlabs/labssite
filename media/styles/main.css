@@ -772,3 +772,7 @@ span.redacted a { color: #000000; }
 
 .postBody ol { margin-left: 25px; list-style-type: decimal;}
 .postBody ul { margin-left: 25px; list-style-type: disc;}
+
+button.dsq-button {
+    text-indent: 0em;
+}
