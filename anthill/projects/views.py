@@ -1,13 +1,6 @@
-from django.views.generic.list_detail import object_list, object_detail
-from django.shortcuts import render_to_response, redirect, get_object_or_404
-from django.contrib.auth.decorators import login_required
-from django.contrib import messages
-from django.views.decorators.http import require_POST
-from django.http import HttpResponseForbidden
-from django.template import RequestContext
-from django.template.loader import render_to_string
+from django.views.generic.list_detail import object_detail
 from tagging.views import tagged_object_list
-from anthill.projects.models import Project, Role, Ask
+from anthill.projects.models import Project
 
 def tag_archive(request, tag):
     """

@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.contrib.contenttypes import generic
 from anthill.projects.models import Project, Role, Link
 
 class RoleInline(admin.TabularInline):
