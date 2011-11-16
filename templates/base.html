@@ -18,19 +18,22 @@
             a#stop-censorship {
                 background-color: #000;
                 color: #fff;
+                display: block;
                 font-size: 90%;
                 font-weight: normal;
+                margin-left: -10px;
                 padding: 0.3em 0;
-                position: absolute;
+                position: relative;
                 text-align: center;
                 text-decoration: none;
                 text-transform: uppercase;
                 width: 300px;
-                top: 64px;
-                left: 50px;
+                top: 95px;
+                left: 0px;
                 z-index: 1000;
             }
             a#stop-censorship:after { content: ' >'; }
+            div#header { margin-top: -40px; }
         </style>
         <!--[if IE 6]>{% css "buggy.css" %}<![endif]-->
         <!--[if IE 7]>{% css "buggy7.css" %}<![endif]-->
@@ -142,7 +145,7 @@
                         .attr('href', 'http://americancensorship.org')
                         .attr('id', 'stop-censorship')
                         .text('Stop Censorship')
-                        .prependTo($('body'));
+                        .prependTo($('div#header'));
                 }
             });
         </script>
