@@ -378,7 +378,7 @@ li#favorites a.active{ background: url(../images/ourFavorites.png) bottom left n
 
 div#popularPosts li, div#favoritePosts li{ margin-bottom: 10px;}
 
-div#ltColumn p, div.rtColumnSpaces p{ margin-bottom: 1em;}
+div#ltColumn p, div.rtColumnSpaces p{ margin-bottom: 1.3em;}
 
 div#blog_detail div#tags { margin: 30px 0; }
 div#blog_detail div#tags ul { list-style-type: none;}
@@ -391,7 +391,7 @@ div#blog_detail img.detailimage, div.entry-summary img.detailimage, .detailimage
 div#blog_detail img.detailimage_right, div.entry-summary img.detailimage_right { float: right; margin-right: 0px; margin-left: 20px;}
 div#blog_detail p img.detailimage_right, div.entry-summary p img.detailimage_right, .detailimage_right { margin-right: 0px; margin-left: 20px; }
 div#blog_detail ul, div.ideaContent ul, div.projectContent ul, div#eventDetails ul, div#event_howtohold ul, div#projectDescription ul, div#apps_content ul, body.about div#ltColumn ul, body.projects div#ltColumn ul, body.wiki div#ltColumn ul { list-style-type: disc; padding-left:40px;}
-div#blog_detail ul li, div.ideaContent ul li, div.projectContent ul li, div#eventDetails ul li, div#event_howtohold ul li, div#projectDescription ul li, div#apps_content ul li, body.about div#ltColumn ul li, body.projects div#ltColumn ul li, body.wiki div#ltColumn ul li { margin-bottom: 15px;}
+div#blog_detail ul li, div.ideaContent ul li, div.projectContent ul li, div#eventDetails ul li, div#event_howtohold ul li, div#projectDescription ul li, div#apps_content ul li, body.about div#ltColumn ul li, body.projects div#ltColumn ul li, body.wiki div#ltColumn ul li { margin-bottom: 10px;}
 
 textarea#id_message { width: 600px;}
 
@@ -741,6 +741,8 @@ div#blog_detail ul#FCCPost>li { list-style-type: none; margin-bottom: 5px; margi
 div#blog_detail ul#FCCPost>li { font-size: 110%; font-weight: bold;}
 div#blog_detail ul.subnav li { margin-bottom: 10px;}
 /*ul.subnav { display: none;}*/
+
+pre { margin: 0 0 25px 40px;}
 
 strong, b { font-weight: bold;}
 em, i { font-style: oblique;}
