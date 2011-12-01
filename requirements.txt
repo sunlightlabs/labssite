@@ -6,6 +6,7 @@ python-twitter
 # markupfield
 docutils
 markdown
+markdown2
 textile
 pygments
 

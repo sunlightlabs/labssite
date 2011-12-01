@@ -1,6 +1,10 @@
 # Django settings for sunlightlabs project.
 import os
 
+from django.utils.html import urlize
+import markdown
+import markdown2
+
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
@@ -128,6 +132,16 @@ GOOGLE_ANALYTICS_ID = '***REMOVED***'
 RESTRUCTUREDTEXT_FILTER_SETTINGS = {'initial_header_level': 3}
 
 ANTHILL_DEFAULT_MARKUP = 'markdown'
+
+def custom_markdown(*args, **kwargs):
+    kwargs['extras'] = ("footnotes",)
+    return markdown2.markdown(*args, **kwargs)
+
+MARKUP_FIELD_TYPES = (
+    ('markdown', custom_markdown),
+    ('html', lambda markup: markup),
+    ('plain', lambda markup: urlize(linebreaks(markup))),
+)
 
 MARKUPWIKI_DEFAULT_MARKUP_TYPE = 'markdown'
 MARKUPWIKI_MARKUP_TYPE_EDITABLE = False
