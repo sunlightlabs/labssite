@@ -253,6 +253,7 @@ span#fill{ background: url(../images/iconSm_fill.png) right bottom no-repeat; pa
 span#contribute{ background: url(../images/iconSm_contribute.png) right bottom no-repeat; padding-right:50px; padding-top:10px; width: 100px;}
 
 hr{ background: url(../images/rtmodule_bar.png) bottom left no-repeat; border: none; height: 10px; margin-left:9px; margin-bottom: 30px;}
+#ltColumn hr { background: none; height: 1px; border: 1px solid #cdccc5; margin-top: 50px;}
 
 div#leadBox{ -moz-border-radius: 3px; -moz-border-radius: 3px; background: #F0F0E5 none repeat scroll 0 0; border: 1px solid #D5D2C6; padding: 20px; width: 620px; margin-top: 20px;}
 
@@ -742,7 +743,8 @@ div#blog_detail ul#FCCPost>li { font-size: 110%; font-weight: bold;}
 div#blog_detail ul.subnav li { margin-bottom: 10px;}
 /*ul.subnav { display: none;}*/
 
-pre { margin: 0 0 25px 40px;}
+pre { margin: 0 0 25px 40px; background-color: #f6f5ef;}
+.footnotes { margin-bottom: 50px; font-size: 90%;}
 
 strong, b { font-weight: bold;}
 em, i { font-style: oblique;}
