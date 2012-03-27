@@ -1,4 +1,4 @@
-Django==1.2.4
+Django==1.3.1
 
 # used by labssite.labs
 python-twitter
@@ -10,12 +10,6 @@ markdown2
 textile
 pygments
 
-# feedinator
-feedparser
-
-# django-blogdor
-akismet
-
 # django-haystack
 Whoosh
 
@@ -24,10 +18,8 @@ django-tagging==0.3.1
 django-haystack==1.0.1-final
 django-markupfield
 django-debug-toolbar
--e git://github.com/jamesturk/django-openid.git#egg=django-openid       # a fork of simonw's work
 
 # sunlight apps
 django-mediasync==1.0
 -e git://github.com/sunlightlabs/django-blogdor.git#egg=django-blogdor
--e git://github.com/sunlightlabs/django-feedinator.git#egg=django-feedinator
 -e git://github.com/sunlightlabs/django-markupwiki.git#egg=django-markupwiki
