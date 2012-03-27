@@ -71,7 +71,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
 )
 
-ROOT_URLCONF = 'labssite.urls'
+ROOT_URLCONF = 'urls'
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -88,7 +88,7 @@ INSTALLED_APPS = (
     'tagging',
     'mediasync',
     'blogdor',
-    'labssite.labs',
+    'labs',
     'anthill.projects',
     'markupwiki',
 )
