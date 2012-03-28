@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
-from django.contrib.gis import admin
+from django.contrib import admin
 from labs.feeds import LabsLatestPosts, LabsLatestForTag, LabsLatestForAuthor
 from labs.forms import LabsContactForm
 
