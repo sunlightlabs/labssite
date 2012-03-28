@@ -25,7 +25,7 @@ urlpatterns = patterns('',
     url(r'^blog/', include('blogdor.urls')),
 
     # contact form
-    url(r'^contact/$', 'labssite.labs.views.contact_form', name='contact_form'),
+    url(r'^contact/$', 'labs.views.contact_form', name='contact_form'),
 
     # redirects
     url(r'^events/', 'django.views.generic.simple.redirect_to',
@@ -42,13 +42,13 @@ urlpatterns = patterns('',
         {'url': '/projects/'}),
 
     # labs specific
-    url(r'^images/(?P<image_path>.*)$', 'labssite.labs.views.image_wrapper',
+    url(r'^images/(?P<image_path>.*)$', 'labs.views.image_wrapper',
         name="image_wrapper"),
     url(r'^photobooth/$', 'django.views.generic.simple.redirect_to',
         {'url': 'http://www.flickr.com/photos/sunlightfoundation/sets/72157624999270674/'}),
-    url(r'^people/(?P<username>\w+)/$', 'labssite.labs.views.profile_redirect',
+    url(r'^people/(?P<username>\w+)/$', 'labs.views.profile_redirect',
         name='user_profile'),
-    url(r'^$', 'labssite.labs.views.index', name='index'),
+    url(r'^$', 'labs.views.index', name='index'),
 )
 
 if settings.DEBUG:
