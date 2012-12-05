@@ -19,6 +19,23 @@ body{
   	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+#sunlightHeader {
+    background: url(../images/sfapp_bg_header.jpg) center bottom repeat-x;
+    background-color: #b7d2ef;
+    height: 53px;
+    border-bottom: 3px solid #7f8988;
+}
+#sunHeaderInterior { width: 940px; margin: 0 auto; padding: 0 10px; }
+#sunlightHeader a {
+    background: url(../images/sfapp_logo.png) top right no-repeat;
+    display: block;
+    float: right;
+    height: 40px;
+    text-indent: -9999px;
+    width: 128px;
+    margin-top: 5px;
+}
+
 body.home #brandingbar, body.blog #brandingbar, body.people #brandingbar, body.projects #brandingbar, body.events #brandingbar, body.about #brandingbar, body.contact #brandingbar { border-bottom:1px solid #184259;}
 
 blockquote p { font-size: 130%; line-height: 22px; padding-left: 50px; font-style: oblique; color: #919090;}
@@ -310,7 +327,7 @@ div#labsTwitter li { width: 210px; float: left; margin-right: 20px;}
 span.tweetMetaAuthor { text-transform: uppercase; color: #535631; font-size: 110%;}
 p.tweetContent { color: #d8ddd3;}
 
-div.foundationLogo { background: url(../images/foundationLogo.png) top left no-repeat; text-indent: -9999em; display: block; float: left; width: 83px; height: 38px; margin-left: 15px; margin-right: 20px;}
+div.foundationLogo { background: url(../images/sfapp_logo.png) top left no-repeat; text-indent: -9999em; display: block; float: left; width: 128px; height: 40px; margin-left: 15px; margin-right: 20px;}
 div#foundationDetails { padding-top: 8px; color: #a7a9ac;}
 div.adr{ display: block; margin-right: 15px; }
 div.street-address { float: left; margin-right: 15px;}
@@ -666,23 +683,25 @@ div.labsMembers { background: url(../images/gear_bg.png) top left no-repeat; wid
 ul#labsMembers li{ width: 110px; height: 100px; float: left; margin-top: -20px;}
 ul#labsMembers li a { width: 110px; height: 100px; text-indent: -9999em; display: block;}
 ul#labsMembers li#tom { margin: 20px auto 0; float: none; height: 115px;}
-li#aaron a{ background: url(../images/bot_aaron.png) top left no-repeat;}
-li#ali a{ background: url(../images/bot_ali_right.png) top left no-repeat;}
-li#alison a{ background: url(../images/bot_alison.png) top left no-repeat;}
+li#ali a{ background: url(../images/bot_ali.png) top left no-repeat;}
+li#alison a{ background: url(../images/bot_alison_right.png) top left no-repeat;}
+li#dan a{ background: url(../images/bot_dan.png) top left no-repeat;}
+li#daniel a{ background: url(../images/bot_daniel.png) top left no-repeat;}
 li#david a{ background: url(../images/bot_david_left.png) top left no-repeat;}
-li#eric a{ background: url(../images/bot_eric.png) top left no-repeat;}
-li#james a{ background: url(../images/bot_james_left.png) top left no-repeat;}
-li#jeremy a{ background: url(../images/bot_jeremy_right.png) top left no-repeat;}
+li#eric a{ background: url(../images/bot_eric_right.png) top left no-repeat;}
+li#james a{ background: url(../images/bot_james.png) top left no-repeat;}
+li#jeremy a{ background: url(../images/bot_jeremy.png) top left no-repeat;}
 li#josh a{ background: url(../images/bot_josh.png) top left no-repeat;}
 li#kevin a{ background: url(../images/bot_kevin.png) top left no-repeat;}
 li#luigi a{ background: url(../images/bot_luigi_right.png) top left no-repeat;}
-li#tim a{ background: url(../images/bot_tim.png) top left no-repeat;}
+li#tim a{ background: url(../images/bot_tim_right.png) top left no-repeat;}
 li#tom a{ background: url(../images/bot_tom_left.png) 20px top no-repeat;}
-li#kaitlin a{ background: url(../images/bot_kaitlin.png) top left no-repeat;}
-li#ethan a{ background: url(../images/bot_ethan.png) top left no-repeat;}
-li#andrew a{ background: url(../images/bot_andrew_right.png) top left no-repeat;}
-li#caitlin a{ background: url(../images/bot_caitlin.png) top left no-repeat;}
-li#chris a{ background: url(../images/bot_chris_right.png) top left no-repeat;}
+li#kaitlin a{ background: url(../images/bot_kaitlin_right.png) top left no-repeat;}
+li#ethan a{ background: url(../images/bot_ethan_left.png) top left no-repeat;}
+li#andrew a{ background: url(../images/bot_andrew.png) top left no-repeat;}
+li#caitlin a{ background: url(../images/bot_caitlin_right.png) top left no-repeat;}
+li#drew a{ background: url(../images/bot_drew.png) top left no-repeat;}
+li#lee a{ background: url(../images/bot_lee.png) top left no-repeat;}
 
 ul#labsMembers li.memberRight{ margin-top: 30px;}
 
