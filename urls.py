@@ -1,6 +1,9 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
+from django.http import HttpResponsePermanentRedirect
+from django.shortcuts import get_object_or_404
+from blogdor.models import Post
 from labs.feeds import LabsLatestPosts, LabsLatestForTag, LabsLatestForAuthor
 from labs.forms import LabsContactForm
 
@@ -12,6 +15,14 @@ blog_feeds = {
     'author': LabsLatestForAuthor,
 }
 
+
+def thegreatredirector(request, year, slug):
+    post = get_object_or_404(Post.objects.published(), date_published__year=year, slug=slug)
+    date_str = post.date_published.strftime("%Y/%m/%d")
+    url = "http://sunlightfoundation.com/blog/%s/%s" % (date_str, post.slug)
+    return HttpResponsePermanentRedirect(url)
+
+
 urlpatterns = patterns('',
     # apps
     url(r'^admin/', include(admin.site.urls)),
@@ -22,6 +33,7 @@ urlpatterns = patterns('',
     # blog/blogdor
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
         {'feed_dict': blog_feeds}, name="blogdor_feeds"),
+    # url(r'^blog/(?P<year>\d{4})/(?P<slug>[\w-]+)/$', thegreatredirector),
     url(r'^blog/', include('blogdor.urls')),
 
     # contact form
