@@ -33,7 +33,7 @@ urlpatterns = patterns('',
     # blog/blogdor
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
         {'feed_dict': blog_feeds}, name="blogdor_feeds"),
-    # url(r'^blog/(?P<year>\d{4})/(?P<slug>[\w-]+)/$', thegreatredirector),
+    url(r'^blog/(?P<year>\d{4})/(?P<slug>[\w-]+)/$', thegreatredirector),
     url(r'^blog/', include('blogdor.urls')),
 
     # contact form
