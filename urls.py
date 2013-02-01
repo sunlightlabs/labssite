@@ -19,7 +19,7 @@ blog_feeds = {
 def thegreatredirector(request, year, slug):
     post = get_object_or_404(Post.objects.published(), date_published__year=year, slug=slug)
     date_str = post.date_published.strftime("%Y/%m/%d")
-    url = "http://sunlightfoundation.com/blog/%s/%s" % (date_str, post.slug)
+    url = "http://sunlightfoundation.com/blog/%s/%s/" % (date_str, post.slug)
     return HttpResponsePermanentRedirect(url)
 
 
