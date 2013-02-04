@@ -54,6 +54,7 @@ urlpatterns = patterns('',
 # shutdown redirects
 
 urlpatterns += patterns('',
+    url(r'^about/', redirect_to, {'url': 'http://sunlightfoundation.com/labs/'}),
     url(r'^blog/(?P<year>\d{4})/(?P<slug>[\w-]+)/$', thegreatredirector),
     url(r'^blog/', redirect_to, {'url': 'http://sunlightfoundation.com/blog/'}),
     url(r'^contact/', redirect_to, {'url': 'http://sunlightfoundation.com/contact/'}),
