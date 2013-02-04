@@ -58,6 +58,7 @@ urlpatterns += patterns('',
     url(r'^blog/(?P<year>\d{4})/(?P<slug>[\w-]+)/$', thegreatredirector),
     url(r'^blog/', redirect_to, {'url': 'http://sunlightfoundation.com/blog/'}),
     url(r'^contact/', redirect_to, {'url': 'http://sunlightfoundation.com/contact/'}),
+    url(r'^join/', redirect_to, {'url': 'http://sunlightfoundation.com/join/'}),
     url(r'^people/', redirect_to, {'url': 'http://sunlightfoundation.com/people/'}),
     url(r'^projects/', redirect_to, {'url': 'http://sunlightfoundation.com/projects/'}),
 
