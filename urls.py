@@ -34,7 +34,6 @@ urlpatterns = patterns('',
     # blog/blogdor
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
         {'feed_dict': blog_feeds}, name="blogdor_feeds"),
-    # url(r'^blog/', include('blogdor.urls')),
 
     # contact form
     # url(r'^contact/$', 'labs.views.contact_form', name='contact_form'),
@@ -65,6 +64,9 @@ urlpatterns += patterns('',
     url(r'^contact/', redirect_to, {'url': 'http://sunlightfoundation.com/contact/'}),
     url(r'^people/', redirect_to, {'url': 'http://sunlightfoundation.com/people/'}),
     url(r'^projects/', redirect_to, {'url': 'http://sunlightfoundation.com/projects/'}),
+
+    # keep these for reverse url
+    url(r'^blog/', include('blogdor.urls')),
 )
 
 
