@@ -3,6 +3,36 @@
 
 {% block extrahead %}
 <link rel="alternate" type="application/rss+xml" title="Sunlight Labs' latest blog posts" href="http://feeds.feedburner.com/sunlightlabs/blog" />
+<style>
+	a.btnish {
+		background: #3d797e;
+		border: 3px solid #8ba5a7;
+		color: #f9f8f8;
+		display: block;
+		font-size: 140%;
+		font-weight: normal;
+		margin-left: 20px;
+		padding: 1em;
+		text-align: center;
+		text-decoration: none;
+		background-image: -webkit-linear-gradient(top, #3d848b, #3c696d);
+		background-image:    -moz-linear-gradient(top, #3d848b, #3c696d);
+		background-image:         linear-gradient(top, #3d848b, #3c696d);
+		-webkit-border-radius: 5px;
+		   -moz-border-radius: 5px;
+		    -ms-border-radius: 5px;
+		     -o-border-radius: 5px;
+		        border-radius: 5px;
+	}
+	#twitter-widget-0 {
+		border: 1px solid #ccc !important;
+		-webkit-border-radius: 5px;
+		   -moz-border-radius: 5px;
+		    -ms-border-radius: 5px;
+		     -o-border-radius: 5px;
+		        border-radius: 5px;
+	}
+</style>
 {% endblock %}
 
 {% block content %}
@@ -20,6 +50,7 @@
         <p>We're a community of open source developers and designers dedicated to opening up our government to make it more transparent, accountable and responsible. We need your help.</p>
 {% endif %}
     <div class="clear"></div>
+
         {% if alertbox %}
         <div id="alertBox_wrapper">
             <div id="alertBox">
@@ -29,8 +60,17 @@
         </div>
         {% endif %}
     </div>
+
+    	<div style="margin-top: -10px; margin-left: 16px; width: 600px;">
+
+    		<h3>We've moved!</h3>
+
+    		<p>Looking for the Sunlight Labs blog? We are now contributing to the main <a href="http://sunlightfoundation.com/blog/">Sunlight Foundation blog</a>. All of our new and archived posts can be found there.</p>
+
+    	</div>
 {% endif %} {# endif -- user signed in and no alerts #}
 
+{% comment %}
 <div class="contentHeader">
     <h2 class="post">Recent Posts</h2>
 </div>
@@ -53,11 +93,13 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     </script>
+{% endcomment %}
 
 {% endblock content %}
 
 {% block sidebar %}
 
-{% include "robots.html" %}
+<a class="twitter-timeline" href="https://twitter.com/sunlightlabs" data-widget-id="298475718944366592">Tweets by @sunlightlabs</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 {% endblock %}

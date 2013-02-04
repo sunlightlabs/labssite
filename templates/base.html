@@ -17,13 +17,12 @@
         <!--[if IE 7]>{% css "buggy7.css" %}<![endif]-->
         {% js "jquery-1.3.2.min.js" %}
         {% js "labs.js" %}
-        <script src="http://services.sunlightlabs.com/brandingbar/hat_js/sunlightlabs/" type="text/javascript"></script>
         {% block extrahead %} {% endblock %}
     </head>
     <body class="{% block bodyclass %}home{% endblock %}">
           <!--[if lt IE 7]>  <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>    <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>    <div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>      <div style='width: 75px; float: left;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-warning.jpg' alt='Warning!'/></div>      <div style='width: 275px; float: left; font-family: Arial, sans-serif;'>        <div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>You are using an outdated browser</div>        <div style='font-size: 12px; margin-top: 6px; line-height: 12px;'>For a better experience using this site, please upgrade to a modern web browser.</div>      </div>      <div style='width: 75px; float: left;'><a href='http://www.firefox.com' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-firefox.jpg' style='border: none;' alt='Get Firefox 3.5'/></a></div>      <div style='width: 75px; float: left;'><a href='http://www.browserforthebetter.com/download.html' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div>      <div style='width: 73px; float: left;'><a href='http://www.apple.com/safari/download/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-safari.jpg' style='border: none;' alt='Get Safari 4'/></a></div>      <div style='float: left;'><a href='http://www.google.com/chrome' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div>    </div>  </div>  <![endif]-->
         <div id="sunlightHeader">
-            <div id="sunHeaderInterior">  
+            <div id="sunHeaderInterior">
             <a href="http://sunlightfoundation.com">Sunlight Foundation</a>
             </div>
         </div>
@@ -33,6 +32,7 @@
                 <div id="header">
                     <h1><a href="/" rel="home"><big>Sunlight Labs</big></a></h1>
                     <div id="pageNav">
+                    	<!--
                         <div id="searchBox">
                             <form id="siteSearch" method="GET" action="/search/">
                             <button class="siteSearchBtn" type="submit">
@@ -41,21 +41,24 @@
                             <input id="siteSearch_box" type="text" name="q" />
                             </form>
                         </div>
+                    	-->
                     </div>
                     <div class="clear"></div>
                     <div id="nav">
                         <ul>
+                        	{% comment %}
                             <li id="nav_blog"><a href="{% url blogdor_archive %}">Blog</a></li>
                             <li id="nav_projects"><a href="/projects/">Projects</a></li>
                             <li id="nav_events"><a href="http://meetup.com/sunlightfoundation/">Events</a></li>
-                            <li id="nav_about"><a href="/about/">About</a></li>
+                            <li id="nav_contact"><a href="{% url contact_form %}">Contact</a>
+                            {% endcomment %}
                             <li id="nav_services"><a href="http://services.sunlightlabs.com">APIs</a></li>
-                            <li id="nav_contact"><a href="{% url contact_form %}">Contact</a></li>
+                            <li id="nav_about"><a href="/about/">About</a></li></li>
                         </ul>
-                    </div>  
+                    </div>
                     <div class="clear"></div>
                 </div>
-                <div id="mainContent">
+                <div id="mainContent" style="background-image: none; margin-top: 35px;">
                     <div id="ltColumn">
 
                         {% if messages %}
@@ -79,10 +82,11 @@
             </div>
         </div>
         <div id="footerWrapper">
+            	{% comment %}
             <div id="footerMain_top">
-                <div id="footerMain">
+                <div id="footerMain" style="background-image: none;">
                     <div id="labsEvents">
-                        <h4 id="labsEvents_header"><a href="http://meetup.com/sunlightfoundation/">Track Us Down</a></h4> 
+                        <h4 id="labsEvents_header"><a href="http://meetup.com/sunlightfoundation/">Track Us Down</a></h4>
                         <a class="googleGroup" href="http://groups.google.com/group/sunlightlabs">Join the Sunlight Labs Google Group</a>
                     </div>
                     <div id="labsTwitter">
@@ -98,22 +102,29 @@
                             {% endcache %}
                         </ul>
                     </div>
-                    <div id="foundationDetails">
-                        <div class="vcard">
-                            <a href="http://sunlightfoundation.com"><div class="foundationLogo fn org">Sunlight Foundation</div></a>
-                            <div class="adr">
-                                <div class="street-address">1818 N Street NW, Suite 300</div>
-                                <span class="locality">Washington,</span>
-                                <abbr class="region" title="District of Columbia">DC</abbr>
-                                <span class="postal-code">20036</span>
-                            </div>
-                            <div class="phone">
-                            <span class="tel">202.742.1520</span>
-                            </div>
-                        </div>  
-                    </div>  
                 </div>
             </div>
+                {% endcomment %}
+            <div style="width: 980px; margin: 0 auto;">
+                <div style="padding-top: 360px;">
+                    <div class="vcard">
+                        <a href="http://sunlightfoundation.com"><div class="foundationLogo fn org">Sunlight Foundation</div></a>
+                        <div class="adr">
+                            <div class="street-address">1818 N Street NW, Suite 300</div>
+                            &middot;&nbsp;&nbsp;
+                            <span class="locality">Washington,</span>
+                            <abbr class="region" title="District of Columbia">DC</abbr>
+                            <span class="postal-code">20036</span>
+                        <div class="phone">
+                        <span class="tel">202-742-1520</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height: 150px; background-color: #120e02;">
+        	&nbsp;
         </div>
 
         <!-- analytics scripts -->
