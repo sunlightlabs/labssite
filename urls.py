@@ -28,15 +28,11 @@ urlpatterns = patterns('',
     # apps
     url(r'^admin/', include(admin.site.urls)),
     url(r'^search/', include('haystack.urls')),
-    # url(r'^projects/', include('anthill.projects.urls')),
     url(r'^wiki/', include('markupwiki.urls')),
 
     # blog/blogdor
     url(r'^blog/feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
         {'feed_dict': blog_feeds}, name="blogdor_feeds"),
-
-    # contact form
-    # url(r'^contact/$', 'labs.views.contact_form', name='contact_form'),
 
     # redirects
     url(r'^events/', redirect_to, {'url': 'http://meetup.com/sunlightfoundation/'}),
@@ -51,8 +47,7 @@ urlpatterns = patterns('',
         name="image_wrapper"),
     url(r'^photobooth/$', redirect_to,
         {'url': 'http://www.flickr.com/photos/sunlightfoundation/sets/72157632180391380/'}),
-    # url(r'^people/(?P<username>\w+)/$', 'labs.views.profile_redirect',
-    #     name='user_profile'),
+
     url(r'^$', 'labs.views.index', name='index'),
 )
 
@@ -67,6 +62,10 @@ urlpatterns += patterns('',
 
     # keep these for reverse url
     url(r'^blog/', include('blogdor.urls')),
+    url(r'^contact/$', 'labs.views.contact_form', name='contact_form'),
+    url(r'^people/(?P<username>\w+)/$', 'labs.views.profile_redirect',
+        name='user_profile'),
+    url(r'^projects/', include('anthill.projects.urls')),
 )
 
 
