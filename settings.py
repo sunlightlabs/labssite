@@ -8,18 +8,14 @@ import markdown2
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
-    ('Jeremy Carbaugh', 'jcarbaugh@sunlightfoundation.com'),
-    ('James Turk', 'jturk@sunlightfoundation.com'),
-    ('timball', 'timball@sunlightfoundation.com'),
-)
+ADMINS = ()
 
 MANAGERS = ADMINS
 INTERNAL_IPS = ('127.0.0.1',)
 DEBUG_TOOLBAR_CONFIG = {'INTERCEPT_REDIRECTS': False}
 
 EMAIL_SUBJECT_PREFIX = '[sunlightlabs.com] '
-DEFAULT_FROM_EMAIL = 'bounce@sunlightfoundation.com'
+DEFAULT_FROM_EMAIL = ''
 
 TIME_ZONE = 'America/New_York'
 
@@ -48,10 +44,10 @@ MEDIA_URL = '/media/'
 if DEBUG:
     ADMIN_MEDIA_PREFIX = '/media/admin/'
 else:
-    ADMIN_MEDIA_PREFIX = '***REMOVED***'
+    ADMIN_MEDIA_PREFIX = ''
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '***REMOVED***'
+SECRET_KEY = ''
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -95,19 +91,19 @@ INSTALLED_APPS = (
 
 DATE_FORMAT = 'F j, Y'
 
-EMAIL_HOST = "smtp.sunlightlabs.com"
+EMAIL_HOST = ""
 EMAIL_PORT = "25"
-EMAIL_HOST_USER = "***REMOVED***"
-EMAIL_HOST_PASSWORD = "***REMOVED***"
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
 EMAIL_USE_TLS = True
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 TEMPLATE_DIRS = ( PROJECT_ROOT + '/templates', )
 
-AWS_KEY = '***REMOVED***'
-AWS_SECRET = '***REMOVED***'
-AWS_BUCKET = 'assets.sunlightlabs.com'
+AWS_KEY = ''
+AWS_SECRET = ''
+AWS_BUCKET = ''
 
 MEDIASYNC_AWS_KEY = AWS_KEY
 MEDIASYNC_AWS_SECRET = AWS_SECRET
@@ -126,10 +122,10 @@ GRAVATAR_DEFAULT = "http://assets.sunlightlabs.com/site3.1/images/avatar.jpg"
 GRAVATAR_SIZE = 60
 FORCE_LOWERCASE_TAGS = True
 
-ANTHILL_GMAPS_KEY = '***REMOVED***'
-GOOGLE_ANALYTICS_EMAIL = 'sunlightlabs@gmail.com'
-GOOGLE_ANALYTICS_PASSWORD = '***REMOVED***'
-GOOGLE_ANALYTICS_ID = '***REMOVED***'
+ANTHILL_GMAPS_KEY = ''
+GOOGLE_ANALYTICS_EMAIL = ''
+GOOGLE_ANALYTICS_PASSWORD = ''
+GOOGLE_ANALYTICS_ID = ''
 
 RESTRUCTUREDTEXT_FILTER_SETTINGS = {'initial_header_level': 3}
 
